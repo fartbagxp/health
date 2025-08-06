@@ -10,7 +10,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 
 ### CDC WONDER
 
-[CDC WONDER - Wide-ranging ONline Data for Epidemiologic Research](https://wonder.cdc.gov/) includes an Application Programmatic Interface (API) for birth (natality), death, and cancer statistics. The [Wonder API](https://wonder.cdc.gov/wonder/help/wonder-api.html) is a non-standard custom XML on HTTPS API with non-standard headers like sending `accept_datause_restrictions` with a value of "true" as a XML parameter via a HTTP POST to accept an agreement.
+[CDC WONDER - Wide-ranging ONline Data for Epidemiologic Research](https://wonder.cdc.gov/) includes an unauthenticated Application Programmatic Interface (API) for birth (natality), death, and cancer statistics. The [Wonder API](https://wonder.cdc.gov/wonder/help/wonder-api.html) is a non-standard custom XML on HTTPS API with non-standard headers like sending `accept_datause_restrictions` with a value of "true" as a XML parameter via a HTTP POST to accept an agreement.
 
 The XML parameters it supports is similar to querying a database, with these examples.
 

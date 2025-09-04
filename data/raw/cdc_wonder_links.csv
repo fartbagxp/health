@@ -1,0 +1,443 @@
+url,page_name,title,years,source_url
+https://wonder.cdc.gov/wonder/help/faq.html,faq.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/wonder/help/main.html,main.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/welcomet.html,welcomet.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/welcomea.html,welcomea.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/aidspublic.html,aidspublic.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/natality.html,natality.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/cancer.html,cancer.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/deaths-by-underlying-cause.html,deaths-by-underlying-cause.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/mcd.html,mcd.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/ucd-border.html,ucd-border.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/mortsql.html,mortsql.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/fetal.html,fetal.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/lbd.html,lbd.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/nca-heatwavedays-historic.html,nca-heatwavedays-historic.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/nasa-nldas.html,nasa-nldas.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/nasa-lst.html,nasa-lst.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/nasa-pm.html,nasa-pm.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/nasa-insolar.html,nasa-insolar.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/nasa-precipitation.html,nasa-precipitation.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/tb.html,tb.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/bridged-race-population.html,bridged-race-population.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/single-race-population.html,single-race-population.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/population.html,population.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/std.html,std.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/vaers.html,vaers.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/nndss-annual-summary.html,nndss-annual-summary.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/wonder/outside/nndss-tables.html,nndss-tables.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/wonder/outside/data2010.html,data2010.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/wonder/help/main.html#What is WONDER,main.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/datause.html,datause.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/datasets.html,datasets.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/wonder/help/faq.html#8,faq.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/wonder/help/faq.html#10,faq.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/whatsnew.html,whatsnew.html,CDC WONDER,,https://wonder.cdc.gov/
+https://wonder.cdc.gov/wonder/help/main.html#Services,main.html,Frequently Asked Questions,,https://wonder.cdc.gov/wonder/help/faq.html
+https://wonder.cdc.gov/wonder/help/quickstart.html,quickstart.html,Frequently Asked Questions,,https://wonder.cdc.gov/wonder/help/faq.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Extracts,quickstart.html,Frequently Asked Questions,,https://wonder.cdc.gov/wonder/help/faq.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Save,quickstart.html,Frequently Asked Questions,,https://wonder.cdc.gov/wonder/help/faq.html
+https://wonder.cdc.gov/wonder/help/wonder-api.html,wonder-api.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/main.html#DataSets,main.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Request,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Finder,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Tables,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Charts,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Maps,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/contactus.html,contactus.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/main.html#Contact,main.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/wonder/help/dataexport.html,dataexport.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
+https://wonder.cdc.gov/welcome.html,welcome.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/historic-mortality.html,historic-mortality.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/wisqars1.html,wisqars1.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/noms.html,noms.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/mortality-tables.html,mortality-tables.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/monthly-provisional-mortality-tables.html,monthly-provisional-mortality-tables.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/quarterly-mortality.html,quarterly-mortality.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/weekly-provisional-mortality-tables.html,weekly-provisional-mortality-tables.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/wisqars-provisional-mortality.html,wisqars-provisional-mortality.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/saha.html,saha.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/brfss1.html,brfss1.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/cancerincidence.html,cancerincidence.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/dia.html,dia.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/diabetes.html,diabetes.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/disabilities.html,disabilities.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/heartdiseaseandstrokeatlas.html,heartdiseaseandstrokeatlas.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/cdi.html,cdi.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/chronicdata.html,chronicdata.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/brfss.html,brfss.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/fluview.html,fluview.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/foodborne.html,foodborne.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nchhstp-atlas.html,nchhstp-atlas.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/hepatitis.html,hepatitis.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/food.html,food.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nrevss.html,nrevss.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/std.html,std.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/tb.html,tb.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/waterborne.html,waterborne.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/epht.html,epht.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/ables.html,ables.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/child-lead.html,child-lead.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/asthallerg.html,asthallerg.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/medtest.html,medtest.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/pesticide.html,pesticide.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/npg.html,npg.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/silicosis-state.html,silicosis-state.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/oshdata.html,oshdata.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/sammec.html,sammec.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/arts.html,arts.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/birth-defects.html,birth-defects.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/peristats.html,peristats.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/pednss.html,pednss.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/cponder.html,cponder.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/brfss.html,brfss.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nhanes.html,nhanes.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/youthonline.html,youthonline.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/yrbss.html,yrbss.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/hus.html,hus.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/mmwr.html,mmwr.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/drug-overdose-dashboards.html,drug-overdose-dashboards.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/opioids.html,opioids.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/provisional-drug-overdose-deaths.html,provisional-drug-overdose-deaths.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/fars.html,fars.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/wisqars.html,wisqars.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nasd.html,nasd.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/safety.html,safety.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nioshtic2.html,nioshtic2.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/work-risqs.html,work-risqs.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nndss-site.html,nndss-site.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nndss-list.html,nndss-list.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/carbon-monoxide.html,carbon-monoxide.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nndss-mmwr-weekly-tables.html,nndss-mmwr-weekly-tables.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/weekly-mortality.html,weekly-mortality.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/whc.html,whc.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/ohs-nhis.html,ohs-nhis.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/data-cdc-gov.html,data-cdc-gov.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nchs-dvg.html,nchs-dvg.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/fastats.html,fastats.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/hcup.html,hcup.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/hhs-health-information-gateway.html,hhs-health-information-gateway.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/health-system-tracker.html,health-system-tracker.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/hhs-protect.html,hhs-protect.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/leep.html,leep.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/countyhealthrankingsmatch.html,countyhealthrankingsmatch.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/meps.html,meps.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/place-and-health.html,place-and-health.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/places.html,places.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/publicdataexplorer.html,publicdataexplorer.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/reportcards.html,reportcards.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/sahie.html,sahie.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/socialvulnerabilityindex.html,socialvulnerabilityindex.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/codekit.html,codekit.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/statehealthfactsorg.html,statehealthfactsorg.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/stats-states.html,stats-states.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/samhda.html,samhda.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nvss-vsrr.html,nvss-vsrr.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/fetal-deaths-current.html,fetal-deaths-current.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/ucd-icd10.html,ucd-icd10.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder.cdc.gov/mcd.html,mcd.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/catalog.html,catalog.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/epi-info.html,epi-info.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/linkplus.html,linkplus.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/nioccs.html,nioccs.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/npcr-tools.html,npcr-tools.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/ohsn.html,ohsn.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/phin.html,phin.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/open.html,open.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/medialibrarytools.html,medialibrarytools.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/amd/flu/label/index.html,index.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/amd/flu/irma/index.html,index.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/joinpoint.html,joinpoint.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/matchpro.html,matchpro.html,CDC WONDER,,https://wonder.cdc.gov/welcomet.html
+https://wonder.cdc.gov/wonder/outside/niosh.html,niosh.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/nccdphp.html,nccdphp.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/nceh.html,nceh.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/nvss.html,nvss.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/cancerquerysystems.html,cancerquerysystems.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/nci.html,nci.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/cdc.html,cdc.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/environmentaldata.html,environmentaldata.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/nchs.html,nchs.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/ncsa.html,ncsa.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/ahrq.html,ahrq.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/owh.html,owh.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/hhs.html,hhs.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/ncipc.html,ncipc.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/mmwr.html,mmwr.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/usda.html,usda.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/welcomet.html#NNDSS,welcomet.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/ncid.html,ncid.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/nchhstp.html,nchhstp.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/mod.html,mod.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/atsdr.html,atsdr.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/nchstp.html,nchstp.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/census.html,census.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/brfss2.html,brfss2.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/sortablestats.html,sortablestats.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/wonder/outside/samhsa.html,samhsa.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/welcomet.html#Tools,welcomet.html,CDC WONDER,,https://wonder.cdc.gov/welcomea.html
+https://wonder.cdc.gov/aids-v2002.html,aids-v2002.html,AIDS Public Information,,https://wonder.cdc.gov/aidspublic.html
+https://wonder.cdc.gov/wonder/help/aids.html,aids.html,AIDS Public Information,,https://wonder.cdc.gov/aidspublic.html
+https://wonder.cdc.gov/aids-v2001.html,aids-v2001.html,AIDS Public Information,,https://wonder.cdc.gov/aidspublic.html
+https://wonder.cdc.gov/aids-v1999.html,aids-v1999.html,AIDS Public Information,,https://wonder.cdc.gov/aidspublic.html
+https://wonder.cdc.gov/wonder/help/natality.html,natality.html,Natality Information,,https://wonder.cdc.gov/natality.html
+https://wonder.cdc.gov/natality-expanded-provisional.html,natality-expanded-provisional.html,Natality Information,,https://wonder.cdc.gov/natality.html
+https://wonder.cdc.gov/natality-expanded-current.html,natality-expanded-current.html,Natality Information,,https://wonder.cdc.gov/natality.html
+https://wonder.cdc.gov/natality-current.html,natality-current.html,Natality Information,,https://wonder.cdc.gov/natality.html
+https://wonder.cdc.gov/natality-v2006.html,natality-v2006.html,Natality Information,,https://wonder.cdc.gov/natality.html
+https://wonder.cdc.gov/natality-v2002.html,natality-v2002.html,Natality Information,,https://wonder.cdc.gov/natality.html
+https://wonder.cdc.gov/cancer-v2022.html,cancer-v2022.html,United States Cancer Statistics Public Information Data,,https://wonder.cdc.gov/cancer.html
+https://wonder.cdc.gov/wonder/help/cancer-v2022.html,cancer-v2022.html,United States Cancer Statistics Public Information Data,,https://wonder.cdc.gov/cancer.html
+https://wonder.cdc.gov/cancermort-v2022_SR.html,cancermort-v2022_SR.html,United States Cancer Statistics Public Information Data,,https://wonder.cdc.gov/cancer.html
+https://wonder.cdc.gov/wonder/help/cancermort-v2023.html,cancermort-v2023.html,United States Cancer Statistics Public Information Data,,https://wonder.cdc.gov/cancer.html
+https://wonder.cdc.gov/cancermort-v2021.html,cancermort-v2021.html,United States Cancer Statistics Public Information Data,,https://wonder.cdc.gov/cancer.html
+https://wonder.cdc.gov/wonder/help/cancermort-v2021.html,cancermort-v2021.html,United States Cancer Statistics Public Information Data,,https://wonder.cdc.gov/cancer.html
+https://wonder.cdc.gov/cancer-archives.html,cancer-archives.html,United States Cancer Statistics Public Information Data,,https://wonder.cdc.gov/cancer.html
+https://wonder.cdc.gov/ucd-icd10-expanded.html,ucd-icd10-expanded.html,Deaths,,https://wonder.cdc.gov/deaths-by-underlying-cause.html
+https://wonder.cdc.gov/mcd-icd10-provisional.html,mcd-icd10-provisional.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/wonder/help/mcd-provisional.html,mcd-provisional.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/mcd-icd10-expanded.html,mcd-icd10-expanded.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/wonder/help/mcd-expanded.html,mcd-expanded.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/mcd-icd10.html,mcd-icd10.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/wonder/help/mcd.html,mcd.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/mcd-icd10-archive2006.html,mcd-icd10-archive2006.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/mcd-v2004.html,mcd-v2004.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html,us-mexico-border-area-mortality.html,"Multiple Cause of Death with U.S. - Mexico Border Regions, 1999-2020",1999-2020,https://wonder.cdc.gov/ucd-border.html
+https://wonder.cdc.gov/wonder/help/cmf.html,cmf.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
+https://wonder.cdc.gov/cmf-icd10.html,cmf-icd10.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
+https://wonder.cdc.gov/cmf-icd9.html,cmf-icd9.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
+https://wonder.cdc.gov/cmf-icd8.html,cmf-icd8.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
+https://wonder.cdc.gov/mortarchives.html,mortarchives.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
+https://wonder.cdc.gov/wonder/help/cmf.html#Compressed Mortality File: ICD Revision,cmf.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
+https://wonder.cdc.gov/wonder/help/fetal-deaths.html,fetal-deaths.html,Fetal Deaths Information,,https://wonder.cdc.gov/fetal.html
+https://wonder.cdc.gov/fetal-deaths-expanded-current.html,fetal-deaths-expanded-current.html,Fetal Deaths Information,,https://wonder.cdc.gov/fetal.html
+https://wonder.cdc.gov/wonder/help/lbd.html,lbd.html,Infant Deaths - Linked Birth / Infant Death Records,,https://wonder.cdc.gov/lbd.html
+https://wonder.cdc.gov/lbd-current-expanded.html,lbd-current-expanded.html,Infant Deaths - Linked Birth / Infant Death Records,,https://wonder.cdc.gov/lbd.html
+https://wonder.cdc.gov/lbd-current.html,lbd-current.html,Infant Deaths - Linked Birth / Infant Death Records,,https://wonder.cdc.gov/lbd.html
+https://wonder.cdc.gov/lbd-v2006.html,lbd-v2006.html,Infant Deaths - Linked Birth / Infant Death Records,,https://wonder.cdc.gov/lbd.html
+https://wonder.cdc.gov/lbd-v2002.html,lbd-v2002.html,Infant Deaths - Linked Birth / Infant Death Records,,https://wonder.cdc.gov/lbd.html
+https://wonder.cdc.gov/lbd-icd9.html,lbd-icd9.html,Infant Deaths - Linked Birth / Infant Death Records,,https://wonder.cdc.gov/lbd.html
+https://wonder.cdc.gov/wonder/help/heatwavedays.html,heatwavedays.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/heatwavedays.html#contact,heatwavedays.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/heatwavedays.html#Step1,heatwavedays.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/heatwavedays.html#Step2,heatwavedays.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/finder.html,finder.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/heatwavedays.html#States,heatwavedays.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/heatwavedays.html#Year,heatwavedays.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/heatwavedays.html#Step3,heatwavedays.html,Number of Heat Wave Days in May-September (1981-2010),1981-2010,https://wonder.cdc.gov/nca-heatwavedays-historic.html
+https://wonder.cdc.gov/wonder/help/nldas.html,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#contact,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Step1,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Step2,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#States,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Regions,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Step3,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Dates,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Year,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Month,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Day of Month,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Day of Year,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Step4,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Daily Max Air Temperature (F),nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Daily Min Air Temperature (F),nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Daily Max Heat Index (F),nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Daily Max Air Temperature (C),nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Daily Min Air Temperature (C),nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Daily Max Heat Index (C),nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/nldas.html#Step5,nldas.html,North America Land Data Assimilation System (NLDAS) Daily Air Temperatures and Heat Index (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-nldas.html
+https://wonder.cdc.gov/wonder/help/modis.html,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#contact,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Step1,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Step2,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#States,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Regions,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Step3,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Dates,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Year,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Month,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Day of Month,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Day of Year,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Step4,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Day Land Surface Temperature (F),modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Night Land Surface Temperature (F),modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Day Land Surface Temperature (C),modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Night Land Surface Temperature (C),modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/modis.html#Step5,modis.html,Moderate Resolution Imaging Spectroradiometer (MODIS) Land Surface Temperature (LST) (2003-2008),2003-2008,https://wonder.cdc.gov/nasa-lst.html
+https://wonder.cdc.gov/wonder/help/pm.html,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#contact,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Step1,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Step2,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#States,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Regions,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Step3,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Dates,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Year,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Month,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Day of Month,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Day of Year,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Step4,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/PM.html#PM2.5,PM.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/PM.html#65+,PM.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/pm.html#Step5,pm.html,Fine Particulate Matter (PM2.5) (µg/m³) (2003-2011),2003-2011,https://wonder.cdc.gov/nasa-pm.html
+https://wonder.cdc.gov/wonder/help/insolation.html,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#contact,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Step1,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Step2,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#States,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Regions,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Step3,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Dates,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Year,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Month,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Day of Month,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Day of Year,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Step4,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/Insolation.html#DailySunlight,Insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/insolation.html#Step5,insolation.html,North America Land Data Assimilation System (NLDAS) Daily Sunlight (KJ/m²) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-insolar.html
+https://wonder.cdc.gov/wonder/help/precipitation.html,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#contact,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Step1,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Step2,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#States,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Regions,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Step3,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Dates,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Year,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Month,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Day of Month,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Day of Year,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Step4,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Daily Precipitation (mm),precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/wonder/help/precipitation.html#Step5,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
+https://wonder.cdc.gov/tb-v2023.html,tb-v2023.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/wonder/help/tb.html,tb.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2022.html,tb-v2022.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2021.html,tb-v2021.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2020.html,tb-v2020.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2019.html,tb-v2019.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2018.html,tb-v2018.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2017.html,tb-v2017.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2016.html,tb-v2016.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2015.html,tb-v2015.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2014.html,tb-v2014.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2013.html,tb-v2013.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2012.html,tb-v2012.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2010.html,tb-v2010.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2009.html,tb-v2009.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2008.html,tb-v2008.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2007.html,tb-v2007.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2006.html,tb-v2006.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2005.html,tb-v2005.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2004.html,tb-v2004.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/tb-v2003.html,tb-v2003.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/wonder/help/tb/otistechnicalreference.html,otistechnicalreference.html,Online Tuberculosis Information System (OTIS) Data,,https://wonder.cdc.gov/tb.html
+https://wonder.cdc.gov/bridged-race-v2020.html,bridged-race-v2020.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2020,bridged-race.html,Bridged-Race Population Estimates,1990-2020,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2019.html,bridged-race-v2019.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2019,bridged-race.html,Bridged-Race Population Estimates,1990-2019,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2018.html,bridged-race-v2018.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2018,bridged-race.html,Bridged-Race Population Estimates,1990-2018,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2017.html,bridged-race-v2017.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2017,bridged-race.html,Bridged-Race Population Estimates,1990-2017,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2016.html,bridged-race-v2016.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2016,bridged-race.html,Bridged-Race Population Estimates,1990-2016,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2015.html,bridged-race-v2015.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2015,bridged-race.html,Bridged-Race Population Estimates,1990-2015,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2014.html,bridged-race-v2014.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2014,bridged-race.html,Bridged-Race Population Estimates,1990-2014,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2013.html,bridged-race-v2013.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2013,bridged-race.html,Bridged-Race Population Estimates,1990-2013,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2012.html,bridged-race-v2012.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2012,bridged-race.html,Bridged-Race Population Estimates,1990-2012,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2011.html,bridged-race-v2011.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2011,bridged-race.html,Bridged-Race Population Estimates,1990-2011,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2009.html,bridged-race-v2009.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2009,bridged-race.html,Bridged-Race Population Estimates,1990-2009,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2008.html,bridged-race-v2008.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2008,bridged-race.html,Bridged-Race Population Estimates,1990-2008,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2007.html,bridged-race-v2007.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2007,bridged-race.html,Bridged-Race Population Estimates,1990-2007,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2006.html,bridged-race-v2006.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2006,bridged-race.html,Bridged-Race Population Estimates,1990-2006,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2005.html,bridged-race-v2005.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2005,bridged-race.html,Bridged-Race Population Estimates,1990-2005,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2004.html,bridged-race-v2004.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2004,bridged-race.html,Bridged-Race Population Estimates,1990-2004,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2003.html,bridged-race-v2003.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2003,bridged-race.html,Bridged-Race Population Estimates,1990-2003,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/bridged-race-v2002.html,bridged-race-v2002.html,Bridged-Race Population Estimates,,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/wonder/help/bridged-race.html#About 1990-2002,bridged-race.html,Bridged-Race Population Estimates,1990-2002,https://wonder.cdc.gov/bridged-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2023.html,single-race-single-year-v2023.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2020-2023,single-race.html,Single-Race Population Estimates,2020-2023,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2022.html,single-race-single-year-v2022.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2020-2022,single-race.html,Single-Race Population Estimates,2020-2022,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2021.html,single-race-single-year-v2021.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2020-2021,single-race.html,Single-Race Population Estimates,2020-2021,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2020.html,single-race-single-year-v2020.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2010-2020,single-race.html,Single-Race Population Estimates,2010-2020,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2019.html,single-race-single-year-v2019.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2010-2019,single-race.html,Single-Race Population Estimates,2010-2019,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2018.html,single-race-single-year-v2018.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2010-2018,single-race.html,Single-Race Population Estimates,2010-2018,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2017.html,single-race-single-year-v2017.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2010-2017,single-race.html,Single-Race Population Estimates,2010-2017,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-single-year-v2016.html,single-race-single-year-v2016.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/help/single-race.html#About 2010-2016,single-race.html,Single-Race Population Estimates,2010-2016,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2023.html,single-race-v2023.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2022.html,single-race-v2022.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2021.html,single-race-v2021.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2020.html,single-race-v2020.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2019.html,single-race-v2019.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2018.html,single-race-v2018.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2017.html,single-race-v2017.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/single-race-v2016.html,single-race-v2016.html,Single-Race Population Estimates,,https://wonder.cdc.gov/single-race-population.html
+https://wonder.cdc.gov/wonder/outside/censusinteractivedataaccesstools.html,censusinteractivedataaccesstools.html,Census Population Projections,,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/population-projections-2014-2060.html,population-projections-2014-2060.html,Census Population Projections,2014-2060,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/wonder/help/populationprojections-2060.html,populationprojections-2060.html,Census Population Projections,,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/birth-death-migration-race-projections-2014-2060.html,birth-death-migration-race-projections-2014-2060.html,Census Population Projections,2014-2060,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/wonder/help/populationchangesbyrace-2060.html,populationchangesbyrace-2060.html,Census Population Projections,,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/birth-death-migration-ethnicity-projections-2014-2060.html,birth-death-migration-ethnicity-projections-2014-2060.html,Census Population Projections,2014-2060,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/wonder/help/populationchangesbyethnicity-2060.html,populationchangesbyethnicity-2060.html,Census Population Projections,,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/population-projections.html,population-projections.html,Census Population Projections,,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/wonder/help/populationprojections.html,populationprojections.html,Census Population Projections,,https://wonder.cdc.gov/population.html
+https://wonder.cdc.gov/std-sex.html,std-sex.html,Sexually Transmitted Disease Morbidity,,https://wonder.cdc.gov/std.html
+https://wonder.cdc.gov/wonder/help/stdm.html,stdm.html,Sexually Transmitted Disease Morbidity,,https://wonder.cdc.gov/std.html
+https://wonder.cdc.gov/std-race-age.html,std-race-age.html,Sexually Transmitted Disease Morbidity,,https://wonder.cdc.gov/std.html
+https://wonder.cdc.gov/wonder/help/std-race-age-frame.html,std-race-age-frame.html,Sexually Transmitted Disease Morbidity,,https://wonder.cdc.gov/std.html
+https://wonder.cdc.gov/stdmarchives.html,stdmarchives.html,Sexually Transmitted Disease Morbidity,,https://wonder.cdc.gov/std.html
+https://wonder.cdc.gov/wonder/help/vaers.html,vaers.html,The Vaccine Adverse Event Reporting System (VAERS),,https://wonder.cdc.gov/vaers.html
+https://wonder.cdc.gov/NNDSS.html,NNDSS.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Step1,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#None,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Regions/States,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Regions,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#States,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Month,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Age,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Sex,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Race,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Ethnicity,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Step2,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Disease,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Year,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/wonder/help/nndss.html#Step3,nndss.html,NNDSS Annual Summary Data 2016-2022,2016-2022,https://wonder.cdc.gov/nndss-annual-summary.html
+https://wonder.cdc.gov/amd/flu/flu.html,flu.html,Data Summary Descriptions,,https://wonder.cdc.gov/datasets.html
+https://wonder.cdc.gov/wonder/help/vaers.html#Additional,vaers.html,What's New in CDC WONDER,,https://wonder.cdc.gov/whatsnew.html
+https://wonder.cdc.gov/nndss.html,nndss.html,What's New in CDC WONDER,,https://wonder.cdc.gov/whatsnew.html
+https://wonder.cdc.gov/wonder/help/main.html#services,main.html,What's New in CDC WONDER,,https://wonder.cdc.gov/whatsnew.html
+https://wonder.cdc.gov/wonder/help/map_response.html,map_response.html,WONDER Quick Start Guide,,https://wonder.cdc.gov/wonder/help/quickstart.html
+https://wonder.cdc.gov/wonder/help/chart_response.html,chart_response.html,WONDER Quick Start Guide,,https://wonder.cdc.gov/wonder/help/quickstart.html
+https://wonder.cdc.gov/wonder/help/table_response.html,table_response.html,WONDER Quick Start Guide,,https://wonder.cdc.gov/wonder/help/quickstart.html
+https://wonder.cdc.gov/wonder/help/api-utility/api-utility.html,api-utility.html,CDC WONDER API for Data Query Web Service,,https://wonder.cdc.gov/wonder/help/wonder-api.html
+https://wonder.cdc.gov/wonder/help/ucd.html#Assurance of Confidentiality,ucd.html,CDC WONDER API for Data Query Web Service,,https://wonder.cdc.gov/wonder/help/wonder-api.html
+https://wonder.cdc.gov/wonder/outside/brfss3.html,brfss3.html,Behavioral Risk Factor Surveillance System,,https://wonder.cdc.gov/brfss.html
+https://wonder.cdc.gov/wonder/outside/brfss-weat.html,brfss-weat.html,Behavioral Risk Factor Surveillance System,,https://wonder.cdc.gov/brfss.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#CheckBox,quickstart.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Selections,quickstart.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Checkbox,quickstart.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
+https://wonder.cdc.gov/wonder/help/cmf/hurricaneskatrinaandritamethodology.html,hurricaneskatrinaandritamethodology.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
+https://wonder.cdc.gov/Deaths-by-Underlying-Cause.html,Deaths-by-Underlying-Cause.html,"Underlying Cause of Death, 1999-2020",1999-2020,https://wonder.cdc.gov/ucd-icd10.html
+https://wonder.cdc.gov/wonder/help/ucd.html,ucd.html,"Underlying Cause of Death, 1999-2020",1999-2020,https://wonder.cdc.gov/ucd-icd10.html
+https://wonder.cdc.gov/wonder/help/table_response.html#results_info,table_response.html,CDC WONDER Mapping Service,,https://wonder.cdc.gov/wonder/help/map_response.html
+https://wonder.cdc.gov/wonder/help/table_response.html#print,table_response.html,CDC WONDER Mapping Service,,https://wonder.cdc.gov/wonder/help/map_response.html

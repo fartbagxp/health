@@ -136,17 +136,21 @@ def write_csv(rows: list[dict], out_path: str = "cdc_wonder_links.csv") -> None:
   if not rows:
     log.warning("No rows to write.")
     return
+  # Sort rows by URL before writing
+  sorted_rows = sorted(rows, key=lambda x: x.get("url", ""))
   cols = ["url", "page_name", "title", "years", "source_url"]
   with open(out_path, "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=cols)
     w.writeheader()
-    for r in rows:
+    for r in sorted_rows:
       w.writerow({k: r.get(k, "") for k in cols})
   log.info(f"Wrote {len(rows)} rows to {out_path}")
 
 def main():
   seeds = [
     BASE + "/",                     # homepage
+    BASE + "/welcomet.html",        # topics
+    BASE + "/welcomea.html",        # A-Z index
     BASE + "/about.html",           # common hub
     BASE + "/data.html",            # data hub
     BASE + "/mortSQL.html",         # example entry

@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import csv
-from email.mime import text
 import logging
 import requests
 import re

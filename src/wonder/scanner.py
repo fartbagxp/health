@@ -12,7 +12,10 @@ from urllib.parse import urlparse, urljoin
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.StreamHandler(), logging.FileHandler("cdc_wonder_dmap.log")],
+    handlers=[
+        logging.StreamHandler(),
+        logging.FileHandler("data/raw/cdc_wonder_dmap.log"),
+    ],
 )
 log = logging.getLogger("wonder-dmap")
 
@@ -230,7 +233,7 @@ def probe_d_id(
 
 
 def map_d_range(
-    start: int = 1, end: int = 200, out_csv: str = "cdc_wonder_dmap.csv"
+    start: int = 1, end: int = 250, out_csv: str = "data/raw/cdc_wonder_dmap.csv"
 ) -> list[dict]:
     sess = requests.Session()
     sess.headers.update(HEADERS)
@@ -264,4 +267,4 @@ def map_d_range(
 
 
 if __name__ == "__main__":
-    map_d_range(1, 200)
+    map_d_range(1, 250)

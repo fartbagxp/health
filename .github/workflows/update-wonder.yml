@@ -27,10 +27,9 @@ jobs:
           version: "latest"
 
       - name: Running update script
-        working-directory: src/wonder
         run: |
-          uv run python crawl.py
-          uv run python scanner.py
+          uv run python src/wonder/crawl.py
+          uv run python src/wonder/scanner.py
 
       - name: Commit and push changes
         if: github.ref == 'refs/heads/main'

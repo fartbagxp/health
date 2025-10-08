@@ -16,7 +16,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("cdc_wonder_link_harvest.log"),
+        logging.FileHandler("data/raw/cdc_wonder_link_harvest.log"),
     ],
 )
 log = logging.getLogger("wonder-harvest")
@@ -147,7 +147,9 @@ def crawl(
     return list(results.values())
 
 
-def write_csv(rows: list[dict], out_path: str = "cdc_wonder_links.csv") -> None:
+def write_csv(
+    rows: list[dict], out_path: str = "data/raw/cdc_wonder_links.csv"
+) -> None:
     if not rows:
         log.warning("No rows to write.")
         return
@@ -172,7 +174,7 @@ def main():
         BASE + "/mortSQL.html",  # example entry
     ]
     rows = crawl(seeds=seeds, max_pages=120, same_host_only=True, delay_sec=0.25)
-    write_csv(rows, "cdc_wonder_links.csv")
+    write_csv(rows, "data/raw/cdc_wonder_links.csv")
 
 
 if __name__ == "__main__":

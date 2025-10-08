@@ -56,7 +56,7 @@ https://wonder.cdc.gov/lbd-v2006.html,lbd-v2006.html,Infant Deaths - Linked Birt
 https://wonder.cdc.gov/lbd.html,lbd.html,CDC WONDER,,https://wonder.cdc.gov/
 https://wonder.cdc.gov/mcd-icd10-archive2006.html,mcd-icd10-archive2006.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
 https://wonder.cdc.gov/mcd-icd10-expanded.html,mcd-icd10-expanded.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
-https://wonder.cdc.gov/mcd-icd10-provisional.html,mcd-icd10-provisional.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
+https://wonder.cdc.gov/mcd-icd10-provisional.html,mcd-icd10-provisional.html,What's New in CDC WONDER,,https://wonder.cdc.gov/whatsnew.html
 https://wonder.cdc.gov/mcd-icd10.html,mcd-icd10.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
 https://wonder.cdc.gov/mcd-v2004.html,mcd-v2004.html,Multiple Cause of Death Data,,https://wonder.cdc.gov/mcd.html
 https://wonder.cdc.gov/mcd.html,mcd.html,CDC WONDER,,https://wonder.cdc.gov/
@@ -191,7 +191,6 @@ https://wonder.cdc.gov/wonder/help/cancermort-v2023.html,cancermort-v2023.html,U
 https://wonder.cdc.gov/wonder/help/chart_response.html,chart_response.html,WONDER Quick Start Guide,,https://wonder.cdc.gov/wonder/help/quickstart.html
 https://wonder.cdc.gov/wonder/help/cmf.html,cmf.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
 https://wonder.cdc.gov/wonder/help/cmf.html#Compressed Mortality File: ICD Revision,cmf.html,Compressed Mortality File,,https://wonder.cdc.gov/mortsql.html
-https://wonder.cdc.gov/wonder/help/cmf/hurricaneskatrinaandritamethodology.html,hurricaneskatrinaandritamethodology.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
 https://wonder.cdc.gov/wonder/help/dataexport.html,dataexport.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
 https://wonder.cdc.gov/wonder/help/faq.html,faq.html,CDC WONDER,,https://wonder.cdc.gov/
 https://wonder.cdc.gov/wonder/help/faq.html#10,faq.html,CDC WONDER,,https://wonder.cdc.gov/
@@ -319,14 +318,13 @@ https://wonder.cdc.gov/wonder/help/precipitation.html#Year,precipitation.html,No
 https://wonder.cdc.gov/wonder/help/precipitation.html#contact,precipitation.html,North America Land Data Assimilation System (NLDAS) Daily Precipitation (mm) (1979-2011),1979-2011,https://wonder.cdc.gov/nasa-precipitation.html
 https://wonder.cdc.gov/wonder/help/quickstart.html,quickstart.html,Frequently Asked Questions,,https://wonder.cdc.gov/wonder/help/faq.html
 https://wonder.cdc.gov/wonder/help/quickstart.html#Charts,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
-https://wonder.cdc.gov/wonder/help/quickstart.html#CheckBox,quickstart.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
-https://wonder.cdc.gov/wonder/help/quickstart.html#Checkbox,quickstart.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#CheckBox,quickstart.html,AIDS Public Information Data 1981 - 2002,1981-2002,https://wonder.cdc.gov/wonder/help/aids.html
 https://wonder.cdc.gov/wonder/help/quickstart.html#Extracts,quickstart.html,Frequently Asked Questions,,https://wonder.cdc.gov/wonder/help/faq.html
 https://wonder.cdc.gov/wonder/help/quickstart.html#Finder,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
 https://wonder.cdc.gov/wonder/help/quickstart.html#Maps,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
 https://wonder.cdc.gov/wonder/help/quickstart.html#Request,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
 https://wonder.cdc.gov/wonder/help/quickstart.html#Save,quickstart.html,Frequently Asked Questions,,https://wonder.cdc.gov/wonder/help/faq.html
-https://wonder.cdc.gov/wonder/help/quickstart.html#Selections,quickstart.html,U.S. - Mexico Border Area Mortality - 1999-2020,1999-2020,https://wonder.cdc.gov/wonder/help/us-mexico-border-area-mortality.html
+https://wonder.cdc.gov/wonder/help/quickstart.html#Selections,quickstart.html,AIDS Public Information Data 1981 - 2002,1981-2002,https://wonder.cdc.gov/wonder/help/aids.html
 https://wonder.cdc.gov/wonder/help/quickstart.html#Tables,quickstart.html,General Help for CDC WONDER,,https://wonder.cdc.gov/wonder/help/main.html
 https://wonder.cdc.gov/wonder/help/single-race.html#About 2010-2016,single-race.html,Single-Race Population Estimates,2010-2016,https://wonder.cdc.gov/single-race-population.html
 https://wonder.cdc.gov/wonder/help/single-race.html#About 2010-2017,single-race.html,Single-Race Population Estimates,2010-2017,https://wonder.cdc.gov/single-race-population.html

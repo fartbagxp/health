@@ -1,0 +1,2021 @@
+{
+  "url": "http://wonder.cdc.gov/bridged-race-v2015.html",
+  "final_url": "https://wonder.cdc.gov/bridged-race-v2015.html",
+  "page_title": "Bridged-Race Population Estimates 1990-2015 Request",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D129",
+      "method": "POST"
+    }
+  ],
+  "parameters": {
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D129.V3",
+            "text": "Age",
+            "selected": false
+          },
+          {
+            "value": "D129.V8",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D129.V6",
+            "text": "Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D129.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D129.V4",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D129.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D129.V3",
+            "text": "Age",
+            "selected": false
+          },
+          {
+            "value": "D129.V8",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D129.V6",
+            "text": "Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D129.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D129.V4",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D129.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D129.V3",
+            "text": "Age",
+            "selected": false
+          },
+          {
+            "value": "D129.V8",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D129.V6",
+            "text": "Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D129.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D129.V4",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D129.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D129.V3",
+            "text": "Age",
+            "selected": false
+          },
+          {
+            "value": "D129.V8",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D129.V6",
+            "text": "Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D129.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D129.V4",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D129.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "B_5",
+        "id": "SB_5",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D129.V3",
+            "text": "Age",
+            "selected": false
+          },
+          {
+            "value": "D129.V8",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D129.V9-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D129.V2-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D129.V6",
+            "text": "Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D129.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D129.V4",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D129.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "F_D129.V2",
+        "id": "codes-D129.V2",
+        "label": "States",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": "+ 01  (Alabama)  ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "+ 02  (Alaska)  ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "+ 04  (Arizona)  ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "+ 05  (Arkansas)  ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "+ 06  (California)  ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "+ 08  (Colorado)  ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "+ 09  (Connecticut)  ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "+ 10  (Delaware)  ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "+ 11  (District of Columbia)  ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "+ 12  (Florida)  ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "+ 13  (Georgia)  ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "+ 15  (Hawaii)  ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "+ 16  (Idaho)  ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "+ 17  (Illinois)  ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "+ 18  (Indiana)  ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "+ 19  (Iowa)  ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "+ 20  (Kansas)  ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "+ 21  (Kentucky)  ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "+ 22  (Louisiana)  ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "+ 23  (Maine)  ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "+ 24  (Maryland)  ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "+ 25  (Massachusetts)  ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "+ 26  (Michigan)  ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "+ 27  (Minnesota)  ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "+ 28  (Mississippi)  ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "+ 29  (Missouri)  ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "+ 30  (Montana)  ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "+ 31  (Nebraska)  ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "+ 32  (Nevada)  ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "+ 33  (New Hampshire)  ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "+ 34  (New Jersey)  ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "+ 35  (New Mexico)  ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": "+ 36  (New York)  ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "+ 37  (North Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "+ 38  (North Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "+ 39  (Ohio)  ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "+ 40  (Oklahoma)  ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "+ 41  (Oregon)  ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "+ 42  (Pennsylvania)  ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "+ 44  (Rhode Island)  ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "+ 45  (South Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "+ 46  (South Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "+ 47  (Tennessee)  ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "+ 48  (Texas)  ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "+ 49  (Utah)  ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "+ 50  (Vermont)  ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "+ 51  (Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "+ 53  (Washington)  ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "+ 54  (West Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "+ 55  (Wisconsin)  ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "+ 56  (Wyoming)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 52
+      },
+      {
+        "type": "select",
+        "name": "F_D129.V9",
+        "id": "codes-D129.V9",
+        "label": "Regions",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "CENS-R1",
+            "text": "+ CENS-R1  (Census Region 1: Northeast)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R2",
+            "text": "+ CENS-R2  (Census Region 2: Midwest)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R3",
+            "text": "+ CENS-R3  (Census Region 3: South)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R4",
+            "text": "+ CENS-R4  (Census Region 4: West)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D129.V3",
+        "id": "SD129.V3",
+        "label": "Age",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 year ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 2 years ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " 3 years ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 4 years ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 5 years ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 6 years ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 7 years ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 8 years ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 9 years ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " 10 years ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " 11 years ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": " 12 years ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": " 13 years ",
+            "selected": false
+          },
+          {
+            "value": "14",
+            "text": " 14 years ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": " 15 years ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": " 16 years ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": " 17 years ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": " 18 years ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": " 19 years ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": " 20 years ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": " 21 years ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": " 22 years ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": " 23 years ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": " 24 years ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": " 25 years ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": " 26 years ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": " 27 years ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": " 28 years ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": " 29 years ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": " 30 years ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": " 31 years ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": " 32 years ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": " 33 years ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": " 34 years ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": " 35 years ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": " 36 years ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": " 37 years ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": " 38 years ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": " 39 years ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": " 40 years ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": " 41 years ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": " 42 years ",
+            "selected": false
+          },
+          {
+            "value": "43",
+            "text": " 43 years ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": " 44 years ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": " 45 years ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": " 46 years ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": " 47 years ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": " 48 years ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": " 49 years ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": " 50 years ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": " 51 years ",
+            "selected": false
+          },
+          {
+            "value": "52",
+            "text": " 52 years ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": " 53 years ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": " 54 years ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": " 55 years ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": " 56 years ",
+            "selected": false
+          },
+          {
+            "value": "57",
+            "text": " 57 years ",
+            "selected": false
+          },
+          {
+            "value": "58",
+            "text": " 58 years ",
+            "selected": false
+          },
+          {
+            "value": "59",
+            "text": " 59 years ",
+            "selected": false
+          },
+          {
+            "value": "60",
+            "text": " 60 years ",
+            "selected": false
+          },
+          {
+            "value": "61",
+            "text": " 61 years ",
+            "selected": false
+          },
+          {
+            "value": "62",
+            "text": " 62 years ",
+            "selected": false
+          },
+          {
+            "value": "63",
+            "text": " 63 years ",
+            "selected": false
+          },
+          {
+            "value": "64",
+            "text": " 64 years ",
+            "selected": false
+          },
+          {
+            "value": "65",
+            "text": " 65 years ",
+            "selected": false
+          },
+          {
+            "value": "66",
+            "text": " 66 years ",
+            "selected": false
+          },
+          {
+            "value": "67",
+            "text": " 67 years ",
+            "selected": false
+          },
+          {
+            "value": "68",
+            "text": " 68 years ",
+            "selected": false
+          },
+          {
+            "value": "69",
+            "text": " 69 years ",
+            "selected": false
+          },
+          {
+            "value": "70",
+            "text": " 70 years ",
+            "selected": false
+          },
+          {
+            "value": "71",
+            "text": " 71 years ",
+            "selected": false
+          },
+          {
+            "value": "72",
+            "text": " 72 years ",
+            "selected": false
+          },
+          {
+            "value": "73",
+            "text": " 73 years ",
+            "selected": false
+          },
+          {
+            "value": "74",
+            "text": " 74 years ",
+            "selected": false
+          },
+          {
+            "value": "75",
+            "text": " 75 years ",
+            "selected": false
+          },
+          {
+            "value": "76",
+            "text": " 76 years ",
+            "selected": false
+          },
+          {
+            "value": "77",
+            "text": " 77 years ",
+            "selected": false
+          },
+          {
+            "value": "78",
+            "text": " 78 years ",
+            "selected": false
+          },
+          {
+            "value": "79",
+            "text": " 79 years ",
+            "selected": false
+          },
+          {
+            "value": "80",
+            "text": " 80 years ",
+            "selected": false
+          },
+          {
+            "value": "81",
+            "text": " 81 years ",
+            "selected": false
+          },
+          {
+            "value": "82",
+            "text": " 82 years ",
+            "selected": false
+          },
+          {
+            "value": "83",
+            "text": " 83 years ",
+            "selected": false
+          },
+          {
+            "value": "84",
+            "text": " 84 years ",
+            "selected": false
+          },
+          {
+            "value": "85+",
+            "text": " 85+ years ",
+            "selected": false
+          }
+        ],
+        "option_count": 87
+      },
+      {
+        "type": "select",
+        "name": "V_D129.V8",
+        "id": "SD129.V8",
+        "label": "Age Group",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1-4",
+            "text": " 1-4 years ",
+            "selected": false
+          },
+          {
+            "value": "5-9",
+            "text": " 5-9 years ",
+            "selected": false
+          },
+          {
+            "value": "10-14",
+            "text": " 10-14 years ",
+            "selected": false
+          },
+          {
+            "value": "15-19",
+            "text": " 15-19 years ",
+            "selected": false
+          },
+          {
+            "value": "20-24",
+            "text": " 20-24 years ",
+            "selected": false
+          },
+          {
+            "value": "25-29",
+            "text": " 25-29 years ",
+            "selected": false
+          },
+          {
+            "value": "30-34",
+            "text": " 30-34 years ",
+            "selected": false
+          },
+          {
+            "value": "35-39",
+            "text": " 35-39 years ",
+            "selected": false
+          },
+          {
+            "value": "40-44",
+            "text": " 40-44 years ",
+            "selected": false
+          },
+          {
+            "value": "45-49",
+            "text": " 45-49 years ",
+            "selected": false
+          },
+          {
+            "value": "50-54",
+            "text": " 50-54 years ",
+            "selected": false
+          },
+          {
+            "value": "55-59",
+            "text": " 55-59 years ",
+            "selected": false
+          },
+          {
+            "value": "60-64",
+            "text": " 60-64 years  ",
+            "selected": false
+          },
+          {
+            "value": "65-69",
+            "text": " 65-69 years ",
+            "selected": false
+          },
+          {
+            "value": "70-74",
+            "text": " 70-74 years ",
+            "selected": false
+          },
+          {
+            "value": "75-79",
+            "text": " 75-79 years ",
+            "selected": false
+          },
+          {
+            "value": "80-84",
+            "text": " 80-84 years ",
+            "selected": false
+          },
+          {
+            "value": "85+",
+            "text": " 85+ years ",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "V_D129.V4",
+        "id": "SD129.V4",
+        "label": "Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "1002-5",
+            "text": " American Indian or Alaska Native ",
+            "selected": false
+          },
+          {
+            "value": "A-PI",
+            "text": " Asian or Pacific Islander ",
+            "selected": false
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D129.V6",
+        "id": "SD129.V6",
+        "label": "Ethnicity",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ethnicities ",
+            "selected": true
+          },
+          {
+            "value": "2135-2",
+            "text": " Hispanic or Latino ",
+            "selected": false
+          },
+          {
+            "value": "2186-5",
+            "text": " Not Hispanic or Latino ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "V_D129.V1",
+        "id": "SD129.V1",
+        "label": "Yearly July 1st Estimates",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": true
+          },
+          {
+            "value": "1990",
+            "text": " 1990 ",
+            "selected": false
+          },
+          {
+            "value": "1991",
+            "text": " 1991 ",
+            "selected": false
+          },
+          {
+            "value": "1992",
+            "text": " 1992 ",
+            "selected": false
+          },
+          {
+            "value": "1993",
+            "text": " 1993 ",
+            "selected": false
+          },
+          {
+            "value": "1994",
+            "text": " 1994 ",
+            "selected": false
+          },
+          {
+            "value": "1995",
+            "text": " 1995 ",
+            "selected": false
+          },
+          {
+            "value": "1996",
+            "text": " 1996 ",
+            "selected": false
+          },
+          {
+            "value": "1997",
+            "text": " 1997 ",
+            "selected": false
+          },
+          {
+            "value": "1998",
+            "text": " 1998 ",
+            "selected": false
+          },
+          {
+            "value": "1999",
+            "text": " 1999 ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": " 2000 ",
+            "selected": false
+          },
+          {
+            "value": "2001",
+            "text": " 2001 ",
+            "selected": false
+          },
+          {
+            "value": "2002",
+            "text": " 2002 ",
+            "selected": false
+          },
+          {
+            "value": "2003",
+            "text": " 2003 ",
+            "selected": false
+          },
+          {
+            "value": "2004",
+            "text": " 2004 ",
+            "selected": false
+          },
+          {
+            "value": "2005",
+            "text": " 2005 ",
+            "selected": false
+          },
+          {
+            "value": "2006",
+            "text": " 2006 ",
+            "selected": false
+          },
+          {
+            "value": "2007",
+            "text": " 2007 ",
+            "selected": false
+          },
+          {
+            "value": "2008",
+            "text": " 2008 ",
+            "selected": false
+          },
+          {
+            "value": "2009",
+            "text": " 2009 ",
+            "selected": false
+          },
+          {
+            "value": "2010",
+            "text": " 2010 ",
+            "selected": false
+          },
+          {
+            "value": "2011",
+            "text": " 2011 ",
+            "selected": false
+          },
+          {
+            "value": "2012",
+            "text": " 2012 ",
+            "selected": false
+          },
+          {
+            "value": "2013",
+            "text": " 2013 ",
+            "selected": false
+          },
+          {
+            "value": "2014",
+            "text": " 2014 ",
+            "selected": false
+          },
+          {
+            "value": "2015",
+            "text": " 2015 ",
+            "selected": false
+          }
+        ],
+        "option_count": 27
+      },
+      {
+        "type": "select",
+        "name": "V_D129.V5",
+        "id": "SD129.V5",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": "0",
+            "selected": false
+          }
+        ],
+        "option_count": 1
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D129",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "Bridged-Race Population Estimates 1990-2015",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D129.M1",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_9",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD129.V2",
+        "label": "States",
+        "value": "D129.V2",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD129.V9",
+        "label": "Regions",
+        "value": "D129.V9",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D129.V2",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V2_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_23",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_24",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V2-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V2-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V2-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V2-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V2-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D129.V9",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V9_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_32",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_33",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V9-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V9-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V9-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V9-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V9-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D129.V9-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD129.V3",
+        "label": "Age",
+        "value": "D129.V3",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD129.V8",
+        "label": "Age Group",
+        "value": "D129.V8",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_precision",
+        "id": "",
+        "label": "",
+        "value": "0",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_datatable",
+        "id": "RO_datatabledefault",
+        "label": "Use the Default table",
+        "value": "default",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_datatable",
+        "id": "RO_datatablestate",
+        "label": "State Level",
+        "value": "state",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_datatable",
+        "id": "RO_datatablecounty",
+        "label": "County Level",
+        "value": "county",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
+    "textareas": [
+      {
+        "type": "textarea",
+        "name": "V_D129.V2",
+        "id": "TD129.V2",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D129.V2",
+        "id": "D129.V2-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D129.V9",
+        "id": "TD129.V9",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D129.V9",
+        "id": "D129.V9-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      }
+    ]
+  },
+  "summary": {
+    "total_selects": 16,
+    "total_inputs": 53,
+    "total_textareas": 4,
+    "total_parameters": 73
+  },
+  "dataset_id": "D129"
+}

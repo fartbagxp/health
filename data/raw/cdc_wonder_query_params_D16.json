@@ -1,0 +1,3216 @@
+{
+  "url": "http://wonder.cdc.gov/cmf-icd9.html",
+  "final_url": "https://wonder.cdc.gov/controller/datarequest/D16",
+  "page_title": "Compressed Mortality, 1979-1998 Request Form",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D16;jsessionid=CA4A526778B99D972493E4CD7FF7",
+      "method": "POST"
+    }
+  ],
+  "parameters": {
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D16.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D16.V6",
+            "text": "Infant Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D16.V4-level1",
+            "text": "ICD 72 Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V12",
+            "text": "Injury Intent",
+            "selected": false
+          },
+          {
+            "value": "D16.V13",
+            "text": "Injury Mechanism & All Other Leading Causes",
+            "selected": false
+          },
+          {
+            "value": "D16.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D16.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D16.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D16.V6",
+            "text": "Infant Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D16.V4-level1",
+            "text": "ICD 72 Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V12",
+            "text": "Injury Intent",
+            "selected": false
+          },
+          {
+            "value": "D16.V13",
+            "text": "Injury Mechanism & All Other Leading Causes",
+            "selected": false
+          },
+          {
+            "value": "D16.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D16.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 16
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D16.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D16.V6",
+            "text": "Infant Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D16.V4-level1",
+            "text": "ICD 72 Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V12",
+            "text": "Injury Intent",
+            "selected": false
+          },
+          {
+            "value": "D16.V13",
+            "text": "Injury Mechanism & All Other Leading Causes",
+            "selected": false
+          },
+          {
+            "value": "D16.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D16.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 16
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D16.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D16.V6",
+            "text": "Infant Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D16.V4-level1",
+            "text": "ICD 72 Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V12",
+            "text": "Injury Intent",
+            "selected": false
+          },
+          {
+            "value": "D16.V13",
+            "text": "Injury Mechanism & All Other Leading Causes",
+            "selected": false
+          },
+          {
+            "value": "D16.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D16.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 16
+      },
+      {
+        "type": "select",
+        "name": "B_5",
+        "id": "SB_5",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D16.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D16.V6",
+            "text": "Infant Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D16.V2-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D16.V4-level1",
+            "text": "ICD 72 Groups",
+            "selected": false
+          },
+          {
+            "value": "D16.V12",
+            "text": "Injury Intent",
+            "selected": false
+          },
+          {
+            "value": "D16.V13",
+            "text": "Injury Mechanism & All Other Leading Causes",
+            "selected": false
+          },
+          {
+            "value": "D16.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D16.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D16.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D16.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 16
+      },
+      {
+        "type": "select",
+        "name": "O_rate_per",
+        "id": "SO_rate_per",
+        "label": "Calculate Rates Per",
+        "multiple": false,
+        "options": [
+          {
+            "value": "1000",
+            "text": " 1,000 ",
+            "selected": false
+          },
+          {
+            "value": "10000",
+            "text": " 10,000 ",
+            "selected": false
+          },
+          {
+            "value": "100000",
+            "text": " 100,000 ",
+            "selected": true
+          },
+          {
+            "value": "1000000",
+            "text": " 1,000,000 ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "O_aar_pop",
+        "id": "SO_aar_pop",
+        "label": "Standard Population",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0000",
+            "text": " 2000 U.S. Std. Population ",
+            "selected": true
+          },
+          {
+            "value": "1940",
+            "text": " 1940 U.S. Std. Million ",
+            "selected": false
+          },
+          {
+            "value": "1970",
+            "text": " 1970 U.S. Std. Million ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": " 2000 U.S. Std. Million ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "VM_D16.M6_D16.V1",
+        "id": "SD16.M6D16.V1",
+        "label": "Year",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": true
+          },
+          {
+            "value": "1979",
+            "text": " 1979 ",
+            "selected": false
+          },
+          {
+            "value": "1980",
+            "text": " 1980 ",
+            "selected": false
+          },
+          {
+            "value": "1981",
+            "text": " 1981 ",
+            "selected": false
+          },
+          {
+            "value": "1982",
+            "text": " 1982 ",
+            "selected": false
+          },
+          {
+            "value": "1983",
+            "text": " 1983 ",
+            "selected": false
+          },
+          {
+            "value": "1984",
+            "text": " 1984 ",
+            "selected": false
+          },
+          {
+            "value": "1985",
+            "text": " 1985 ",
+            "selected": false
+          },
+          {
+            "value": "1986",
+            "text": " 1986 ",
+            "selected": false
+          },
+          {
+            "value": "1987",
+            "text": " 1987 ",
+            "selected": false
+          },
+          {
+            "value": "1988",
+            "text": " 1988 ",
+            "selected": false
+          },
+          {
+            "value": "1989",
+            "text": " 1989 ",
+            "selected": false
+          },
+          {
+            "value": "1990",
+            "text": " 1990 ",
+            "selected": false
+          },
+          {
+            "value": "1991",
+            "text": " 1991 ",
+            "selected": false
+          },
+          {
+            "value": "1992",
+            "text": " 1992 ",
+            "selected": false
+          },
+          {
+            "value": "1993",
+            "text": " 1993 ",
+            "selected": false
+          },
+          {
+            "value": "1994",
+            "text": " 1994 ",
+            "selected": false
+          },
+          {
+            "value": "1995",
+            "text": " 1995 ",
+            "selected": false
+          },
+          {
+            "value": "1996",
+            "text": " 1996 ",
+            "selected": false
+          },
+          {
+            "value": "1997",
+            "text": " 1997 ",
+            "selected": false
+          },
+          {
+            "value": "1998",
+            "text": " 1998 ",
+            "selected": false
+          }
+        ],
+        "option_count": 21
+      },
+      {
+        "type": "select",
+        "name": "VM_D16.M6_D16.V7",
+        "id": "SD16.M6D16.V7",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "VM_D16.M6_D16.V8",
+        "id": "SD16.M6D16.V8",
+        "label": "Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "2131-1",
+            "text": " Other Race ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "F_D16.V9",
+        "id": "codes-D16.V9",
+        "label": "States",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": "+ 01  (Alabama)  ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "+ 02  (Alaska)  ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "+ 04  (Arizona)  ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "+ 05  (Arkansas)  ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "+ 06  (California)  ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "+ 08  (Colorado)  ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "+ 09  (Connecticut)  ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "+ 10  (Delaware)  ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "+ 11  (District of Columbia)  ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "+ 12  (Florida)  ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "+ 13  (Georgia)  ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "+ 15  (Hawaii)  ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "+ 16  (Idaho)  ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "+ 17  (Illinois)  ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "+ 18  (Indiana)  ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "+ 19  (Iowa)  ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "+ 20  (Kansas)  ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "+ 21  (Kentucky)  ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "+ 22  (Louisiana)  ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "+ 23  (Maine)  ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "+ 24  (Maryland)  ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "+ 25  (Massachusetts)  ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "+ 26  (Michigan)  ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "+ 27  (Minnesota)  ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "+ 28  (Mississippi)  ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "+ 29  (Missouri)  ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "+ 30  (Montana)  ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "+ 31  (Nebraska)  ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "+ 32  (Nevada)  ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "+ 33  (New Hampshire)  ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "+ 34  (New Jersey)  ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "+ 35  (New Mexico)  ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": "+ 36  (New York)  ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "+ 37  (North Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "+ 38  (North Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "+ 39  (Ohio)  ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "+ 40  (Oklahoma)  ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "+ 41  (Oregon)  ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "+ 42  (Pennsylvania)  ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "+ 44  (Rhode Island)  ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "+ 45  (South Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "+ 46  (South Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "+ 47  (Tennessee)  ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "+ 48  (Texas)  ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "+ 49  (Utah)  ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "+ 50  (Vermont)  ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "+ 51  (Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "+ 53  (Washington)  ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "+ 54  (West Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "+ 55  (Wisconsin)  ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "+ 56  (Wyoming)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 52
+      },
+      {
+        "type": "select",
+        "name": "F_D16.V10",
+        "id": "codes-D16.V10",
+        "label": "Regions",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "CENS-R1",
+            "text": "+ CENS-R1  (Census Region 1: Northeast)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R2",
+            "text": "+ CENS-R2  (Census Region 2: Midwest)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R3",
+            "text": "+ CENS-R3  (Census Region 3: South)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R4",
+            "text": "+ CENS-R4  (Census Region 4: West)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D16.V5",
+        "id": "SD16.V5",
+        "label": "Age Group",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1-4",
+            "text": " 1-4 years ",
+            "selected": false
+          },
+          {
+            "value": "5-9",
+            "text": " 5-9 years ",
+            "selected": false
+          },
+          {
+            "value": "10-14",
+            "text": " 10-14 years ",
+            "selected": false
+          },
+          {
+            "value": "15-19",
+            "text": " 15-19 years ",
+            "selected": false
+          },
+          {
+            "value": "20-24",
+            "text": " 20-24 years ",
+            "selected": false
+          },
+          {
+            "value": "25-34",
+            "text": " 25-34 years ",
+            "selected": false
+          },
+          {
+            "value": "35-44",
+            "text": " 35-44 years ",
+            "selected": false
+          },
+          {
+            "value": "45-54",
+            "text": " 45-54 years ",
+            "selected": false
+          },
+          {
+            "value": "55-64",
+            "text": " 55-64 years ",
+            "selected": false
+          },
+          {
+            "value": "65-74",
+            "text": " 65-74 years ",
+            "selected": false
+          },
+          {
+            "value": "75-84",
+            "text": " 75-84 years ",
+            "selected": false
+          },
+          {
+            "value": "85+",
+            "text": " 85+ years ",
+            "selected": false
+          },
+          {
+            "value": "NS",
+            "text": " Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      },
+      {
+        "type": "select",
+        "name": "V_D16.V6",
+        "id": "SD16.V6",
+        "label": "Infant Age Groups",
+        "multiple": true,
+        "options": [
+          {
+            "value": "00",
+            "text": " All Infant Ages ",
+            "selected": true
+          },
+          {
+            "value": "1d",
+            "text": " < 1 day ",
+            "selected": false
+          },
+          {
+            "value": "1-6d",
+            "text": " 1-6 days ",
+            "selected": false
+          },
+          {
+            "value": "7-27d",
+            "text": " 7-27 days ",
+            "selected": false
+          },
+          {
+            "value": "28-364d",
+            "text": " 28-364 days ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D16.V1",
+        "id": "SD16.V1",
+        "label": "Year",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": true
+          },
+          {
+            "value": "1979",
+            "text": " 1979 ",
+            "selected": false
+          },
+          {
+            "value": "1980",
+            "text": " 1980 ",
+            "selected": false
+          },
+          {
+            "value": "1981",
+            "text": " 1981 ",
+            "selected": false
+          },
+          {
+            "value": "1982",
+            "text": " 1982 ",
+            "selected": false
+          },
+          {
+            "value": "1983",
+            "text": " 1983 ",
+            "selected": false
+          },
+          {
+            "value": "1984",
+            "text": " 1984 ",
+            "selected": false
+          },
+          {
+            "value": "1985",
+            "text": " 1985 ",
+            "selected": false
+          },
+          {
+            "value": "1986",
+            "text": " 1986 ",
+            "selected": false
+          },
+          {
+            "value": "1987",
+            "text": " 1987 ",
+            "selected": false
+          },
+          {
+            "value": "1988",
+            "text": " 1988 ",
+            "selected": false
+          },
+          {
+            "value": "1989",
+            "text": " 1989 ",
+            "selected": false
+          },
+          {
+            "value": "1990",
+            "text": " 1990 ",
+            "selected": false
+          },
+          {
+            "value": "1991",
+            "text": " 1991 ",
+            "selected": false
+          },
+          {
+            "value": "1992",
+            "text": " 1992 ",
+            "selected": false
+          },
+          {
+            "value": "1993",
+            "text": " 1993 ",
+            "selected": false
+          },
+          {
+            "value": "1994",
+            "text": " 1994 ",
+            "selected": false
+          },
+          {
+            "value": "1995",
+            "text": " 1995 ",
+            "selected": false
+          },
+          {
+            "value": "1996",
+            "text": " 1996 ",
+            "selected": false
+          },
+          {
+            "value": "1997",
+            "text": " 1997 ",
+            "selected": false
+          },
+          {
+            "value": "1998",
+            "text": " 1998 ",
+            "selected": false
+          }
+        ],
+        "option_count": 21
+      },
+      {
+        "type": "select",
+        "name": "V_D16.V7",
+        "id": "SD16.V7",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "V_D16.V8",
+        "id": "SD16.V8",
+        "label": "Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "2131-1",
+            "text": " Other Race ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "F_D16.V2",
+        "id": "codes-D16.V2",
+        "label": "ICD-9 Codes",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "001-139",
+            "text": "+ 001-139  (Infectious and parasitic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "140-239",
+            "text": "+ 140-239  (Neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "240-279",
+            "text": "+ 240-279  (Endocrine, nutritional and metabolic diseases, and immunity disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "280-289",
+            "text": "+ 280-289  (Diseases of the blood and blood-forming organs)  ",
+            "selected": false
+          },
+          {
+            "value": "290-319",
+            "text": "+ 290-319  (Mental disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "320-389",
+            "text": "+ 320-389  (Diseases of the nervous system and sense organs)  ",
+            "selected": false
+          },
+          {
+            "value": "390-459",
+            "text": "+ 390-459  (Diseases of the circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "460-519",
+            "text": "+ 460-519  (Diseases of the respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "520-579",
+            "text": "+ 520-579  (Diseases of the digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "580-629",
+            "text": "+ 580-629  (Diseases of the genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "630-676",
+            "text": "+ 630-676  (Complications of pregnancy, childbirth, and the puerperium)  ",
+            "selected": false
+          },
+          {
+            "value": "680-709",
+            "text": "+ 680-709  (Diseases of the skin and subcutaneous tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "710-739",
+            "text": "+ 710-739  (Diseases of the musculoskeletal system and connective tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "740-759",
+            "text": "+ 740-759  (Congenital anomalies)  ",
+            "selected": false
+          },
+          {
+            "value": "760-779",
+            "text": "+ 760-779  (Certain conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "780-799",
+            "text": "+ 780-799  (Symptoms, signs, and ill-defined conditions)  ",
+            "selected": false
+          },
+          {
+            "value": "E800-E999",
+            "text": "+ E800-E999  (External causes of injury and poisoning)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 18
+      },
+      {
+        "type": "select",
+        "name": "F_D16.V4",
+        "id": "codes-D16.V4",
+        "label": "ICD-9 72 Groups",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "GR72-010",
+            "text": "+ GR72-010  (Shigellosis and amebiasis  (004, 006))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-020",
+            "text": "+ GR72-020  (Certain other intestinal infections  (007-009))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-040",
+            "text": "+ GR72-040  (Tuberculosis of respiratory system  (010-012))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-050",
+            "text": "+ GR72-050  (Other tuberculosis  (013-018))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-060",
+            "text": "+ GR72-060  (Whooping cough  (033))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-070",
+            "text": "+ GR72-070  (Streptococcal sore throat, scarlatina, and erysipelas  (034-035))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-080",
+            "text": "+ GR72-080  (Meningococcal infection  (036))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-090",
+            "text": "+ GR72-090  (Septicemia  (038))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-100",
+            "text": "+ GR72-100  (Acute poliomyelitis  (045))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-110",
+            "text": "+ GR72-110  (Measles  (055))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-120",
+            "text": "+ GR72-120  (Viral hepatitis  (070))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-130",
+            "text": "+ GR72-130  (Syphilis  (090-097))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-140",
+            "text": "+ GR72-140  (All other infectious and parasitic diseases  (001-003, 005, 020-032, 037, 039-044, 046-054, 056-066, 071-088, 098-139))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-160",
+            "text": "+ GR72-160  (Malignant neoplasms of lip, oral cavity, and pharynx  (140-149))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-170",
+            "text": "+ GR72-170  (Malignant neoplasms of digestive organs and peritoneum  (150-159))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-180",
+            "text": "+ GR72-180  (Malignant neoplasms of respiratory and intrathoracic organs  (160-165))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-190",
+            "text": "+ GR72-190  (Malignant neoplasm of breast  (174-175))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-200",
+            "text": "+ GR72-200  (Malignant neoplasms of genital organs  (179-187))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-210",
+            "text": "+ GR72-210  (Malignant neoplasms of urinary organs  (188-189))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-220",
+            "text": "+ GR72-220  (Malignant neoplasms of all other and unspecified sites  (170-173, 190-199))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-230",
+            "text": "+ GR72-230  (Leukemia  (204-208))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-240",
+            "text": "+ GR72-240  (Other malignant neoplasms of lymphatic and hematopoietic tissues  (200-203))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-250",
+            "text": "+ GR72-250  (Benign neoplasms, carcinoma in situ, and neoplasms of uncertain behavior and unspecified nature  (210-239))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-260",
+            "text": "+ GR72-260  (Diabetes mellitus  (250))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-270",
+            "text": "+ GR72-270  (Nutritional deficiencies  (260-269))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-280",
+            "text": "+ GR72-280  (Anemias  (280-285))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-290",
+            "text": "+ GR72-290  (Meningitis  (320-322))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-320",
+            "text": "+ GR72-320  (Rheumatic fever and rheumatic heart disease  (390-398))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-330",
+            "text": "+ GR72-330  (Hypertensive heart disease  (402))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-340",
+            "text": "+ GR72-340  (Hypertensive heart and renal disease  (404))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-360",
+            "text": "+ GR72-360  (Acute myocardial infarction  (410))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-370",
+            "text": "+ GR72-370  (Other acute and subacute forms of ischemic heart disease  (411))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-380",
+            "text": "+ GR72-380  (Angina pectoris  (413))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-390",
+            "text": "+ GR72-390  (Old myocardial infarction and other forms of chronic ischemic heart disease  (412, 414))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-400",
+            "text": "+ GR72-400  (Other diseases of endocardium  (424))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-410",
+            "text": "+ GR72-410  (All other forms of heart disease  (415-423, 425-429))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-420",
+            "text": "+ GR72-420  (Hypertension with or without renal disease  (401, 403))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-440",
+            "text": "+ GR72-440  (Intracerebral and other intracranial hemorrhage  (431-432))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-450",
+            "text": "+ GR72-450  (Cerebal thrombosis and unspecified occlusion of cerebral arteries  (434.0, 434.9))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-460",
+            "text": "+ GR72-460  (Cerebral embolism  (434.1))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-470",
+            "text": "+ GR72-470  (All other and late effects of cerebrovascular diseases  (430, 433, 435-438))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-480",
+            "text": "+ GR72-480  (Artherosclerosis  (440))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-490",
+            "text": "+ GR72-490  (Other diseases of arteries, arterioles, and capillaries  (441-448))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-500",
+            "text": "+ GR72-500  (Acute bronchitis and bronchiolitis  (466))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-520",
+            "text": "+ GR72-520  (Pneumonia  (480-486))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-530",
+            "text": "+ GR72-530  (Influenza  (487))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-550",
+            "text": "+ GR72-550  (Bronchitis, chronic and unspecified  (490-491))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-560",
+            "text": "+ GR72-560  (Emphysema  (492))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-570",
+            "text": "+ GR72-570  (Asthma  (493))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-580",
+            "text": "+ GR72-580  (Other chronic obstructive pulmonary diseases and allied conditions  (494-496))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-590",
+            "text": "+ GR72-590  (Ulcer of stomach and duodenum  (531-533))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-600",
+            "text": "+ GR72-600  (Appendicitis  (540-543))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-610",
+            "text": "+ GR72-610  (Hernia of abdominal cavity and intestinal obstruction without mention of hernia  (550-553, 560))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-620",
+            "text": "+ GR72-620  (Chronic liver disease and cirrhosis  (571))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-630",
+            "text": "+ GR72-630  (Cholelithiasis and other disorders of gallbladder  (574-575))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-650",
+            "text": "+ GR72-650  (Acute glomerulonephritis and nephrotic syndrome  (580-581))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-660",
+            "text": "+ GR72-660  (Chronic glomerulonephritis, nephritis and nephropathy, not specified as acute or chronic, and renal sclerosis, unspecified  (582-583, 587))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-670",
+            "text": "+ GR72-670  (Renal failure, disorders resulting from impaired renal function, and small kidney of unknown cause  (584-586, 588-589))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-680",
+            "text": "+ GR72-680  (Infections of kidney  (590))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-690",
+            "text": "+ GR72-690  (Hyperplasia of prostate  (600))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-710",
+            "text": "+ GR72-710  (Pregnancy with abortive outcome  (630-638))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-720",
+            "text": "+ GR72-720  (Other complications of pregnancy, childbirth, and the puerperium  (640-676))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-730",
+            "text": "+ GR72-730  (Congenital anomalies  (740-759))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-750",
+            "text": "+ GR72-750  (Birth trauma, intrauterine hypoxia, birth asphyxia, and respiratory distress syndrome  (767-769))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-760",
+            "text": "+ GR72-760  (Other conditions originating in the perinatal period  (760-766, 770-779))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-770",
+            "text": "+ GR72-770  (Symptoms, signs, and ill-defined conditions  (780-799))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-780",
+            "text": "+ GR72-780  (All other diseases (Residual))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-800",
+            "text": "+ GR72-800  (Motor vehicle accidents  (E810-E825))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-810",
+            "text": "+ GR72-810  (All other accidents and adverse effects  (E800-E807, E826-949))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-820",
+            "text": "+ GR72-820  (Suicide  (E950-E959))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-830",
+            "text": "+ GR72-830  (Homicide and legal intervention  (E960-E978))  ",
+            "selected": false
+          },
+          {
+            "value": "GR72-840",
+            "text": "+ GR72-840  (All other external causes  (E980-E999))  ",
+            "selected": false
+          }
+        ],
+        "option_count": 73
+      },
+      {
+        "type": "select",
+        "name": "V_D16.V12",
+        "id": "SD16.V12",
+        "label": "Injury Intent",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Causes of Death ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Unintentional  ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Suicide ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Homicide ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Undetermined  ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Legal Intervention / Operations of War ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Non-Injury, no intent classified ",
+            "selected": false
+          }
+        ],
+        "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D16.V13",
+        "id": "SD16.V13",
+        "label": "Injury Mechanism & All Other Leading Causes",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Causes of Death ",
+            "selected": true
+          },
+          {
+            "value": "GRINJ-001",
+            "text": " Cut/Pierce ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-002",
+            "text": " Drowning ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-003",
+            "text": " Fall ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-004",
+            "text": " Fire/Flame ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-005",
+            "text": " Hot object/Substance ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-006",
+            "text": " Firearm ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-007",
+            "text": " Machinery ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-008",
+            "text": " Motor Vehicle Traffic ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-009",
+            "text": " Other Pedal cyclist ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-010",
+            "text": " Other Pedestrian ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-011",
+            "text": " Other land transport ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-012",
+            "text": " Other transport ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-013",
+            "text": " Natural/Environmental ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-014",
+            "text": " Overexertion ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-015",
+            "text": " Poisoning ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-016",
+            "text": " Struck by or against ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-017",
+            "text": " Suffocation ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-018",
+            "text": " Other specified, classifiable Injury ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-019",
+            "text": " Other specified, not elsewhere classified Injury ",
+            "selected": false
+          },
+          {
+            "value": "GRINJ-020",
+            "text": " Unspecified Injury ",
+            "selected": false
+          },
+          {
+            "value": "GR72-010",
+            "text": " Non Injury: Shigellosis and amebiasis  (004, 006) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-020",
+            "text": " Non Injury: Certain other intestinal infections  (007-009) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-040",
+            "text": " Non Injury: Tuberculosis of respiratory system  (010-012) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-050",
+            "text": " Non Injury: Other tuberculosis  (013-018) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-060",
+            "text": " Non Injury: Whooping cough  (033) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-070",
+            "text": " Non Injury: Streptococcal sore throat, scarlatina, and erysipelas  (034-035) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-080",
+            "text": " Non Injury: Meningococcal infection  (036) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-090",
+            "text": " Non Injury: Septicemia  (038) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-100",
+            "text": " Non Injury: Acute poliomyelitis  (045) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-110",
+            "text": " Non Injury: Measles  (055) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-120",
+            "text": " Non Injury: Viral hepatitis  (070) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-130",
+            "text": " Non Injury: Syphilis  (090-097) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-140",
+            "text": " Non Injury: All other infectious and parasitic diseases  (001-003, 005, 020-032, 037, 039-044, 046-054, 056-066, 071-088, 098-139) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-160",
+            "text": " Non Injury: Malignant neoplasms of lip, oral cavity, and pharynx  (140-149) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-170",
+            "text": " Non Injury: Malignant neoplasms of digestive organs and peritoneum  (150-159) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-180",
+            "text": " Non Injury: Malignant neoplasms of respiratory and intrathoracic organs  (160-165) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-190",
+            "text": " Non Injury: Malignant neoplasm of breast  (174-175) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-200",
+            "text": " Non Injury: Malignant neoplasms of genital organs  (179-187) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-210",
+            "text": " Non Injury: Malignant neoplasms of urinary organs  (188-189) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-220",
+            "text": " Non Injury: Malignant neoplasms of all other and unspecified sites  (170-173, 190-199) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-230",
+            "text": " Non Injury: Leukemia  (204-208) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-240",
+            "text": " Non Injury: Other malignant neoplasms of lymphatic and hematopoietic tissues  (200-203) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-250",
+            "text": " Non Injury: Benign neoplasms, carcinoma in situ, and neoplasms of uncertain behavior and unspecified nature  (210-239) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-260",
+            "text": " Non Injury: Diabetes mellitus  (250) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-270",
+            "text": " Non Injury: Nutritional deficiencies  (260-269) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-280",
+            "text": " Non Injury: Anemias  (280-285) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-290",
+            "text": " Non Injury: Meningitis  (320-322) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-320",
+            "text": " Non Injury: Rheumatic fever and rheumatic heart disease  (390-398) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-330",
+            "text": " Non Injury: Hypertensive heart disease  (402) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-340",
+            "text": " Non Injury: Hypertensive heart and renal disease  (404) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-360",
+            "text": " Non Injury: Acute myocardial infarction  (410) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-370",
+            "text": " Non Injury: Other acute and subacute forms of ischemic heart disease  (411) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-380",
+            "text": " Non Injury: Angina pectoris  (413) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-390",
+            "text": " Non Injury: Old myocardial infarction and other forms of chronic ischemic heart disease  (412, 414) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-400",
+            "text": " Non Injury: Other diseases of endocardium  (424) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-410",
+            "text": " Non Injury: All other forms of heart disease  (415-423, 425-429) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-420",
+            "text": " Non Injury: Hypertension with or without renal disease  (401, 403) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-440",
+            "text": " Non Injury: Intracerebral and other intracranial hemorrhage  (431-432) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-450",
+            "text": " Non Injury: Cerebal thrombosis and unspecified occlusion of cerebral arteries  (434.0, 434.9) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-460",
+            "text": " Non Injury: Cerebral embolism  (434.1) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-470",
+            "text": " Non Injury: All other and late effects of cerebrovascular diseases  (430, 433, 435-438) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-480",
+            "text": " Non Injury: Artherosclerosis  (440) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-490",
+            "text": " Non Injury: Other diseases of arteries, arterioles, and capillaries  (441-448) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-500",
+            "text": " Non Injury: Acute bronchitis and bronchiolitis  (466) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-520",
+            "text": " Non Injury: Pneumonia  (480-486) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-530",
+            "text": " Non Injury: Influenza  (487) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-550",
+            "text": " Non Injury: Bronchitis, chronic and unspecified  (490-491) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-560",
+            "text": " Non Injury: Emphysema  (492) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-570",
+            "text": " Non Injury: Asthma  (493) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-580",
+            "text": " Non Injury: Other chronic obstructive pulmonary diseases and allied conditions  (494-496) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-590",
+            "text": " Non Injury: Ulcer of stomach and duodenum  (531-533) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-600",
+            "text": " Non Injury: Appendicitis  (540-543) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-610",
+            "text": " Non Injury: Hernia of abdominal cavity and intestinal obstruction without mention of hernia  (550-553, 560) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-620",
+            "text": " Non Injury: Chronic liver disease and cirrhosis  (571) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-630",
+            "text": " Non Injury: Cholelithiasis and other disorders of gallbladder  (574-575) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-650",
+            "text": " Non Injury: Acute glomerulonephritis and nephrotic syndrome  (580-581) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-660",
+            "text": " Non Injury: Chronic glomerulonephritis, nephritis and nephropathy, not specified as acute or chronic, and renal sclerosis, unspecified  (582-583, 587) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-670",
+            "text": " Non Injury: Renal failure, disorders resulting from impaired renal function, and small kidney of unknown cause  (584-586, 588-589) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-680",
+            "text": " Non Injury: Infections of kidney  (590) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-690",
+            "text": " Non Injury: Hyperplasia of prostate  (600) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-710",
+            "text": " Non Injury: Pregnancy with abortive outcome  (630-638) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-720",
+            "text": " Non Injury: Other complications of pregnancy, childbirth, and the puerperium  (640-676) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-730",
+            "text": " Non Injury: Congenital anomalies  (740-759) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-750",
+            "text": " Non Injury: Birth trauma, intrauterine hypoxia, birth asphyxia, and respiratory distress syndrome  (767-769) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-760",
+            "text": " Non Injury: Other conditions originating in the perinatal period  (760-766, 770-779) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-770",
+            "text": " Non Injury: Symptoms, signs, and ill-defined conditions  (780-799) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-780",
+            "text": " Non Injury: All other diseases (Residual) ",
+            "selected": false
+          },
+          {
+            "value": "GR72-810",
+            "text": " Non Injury: All other accidents and adverse effects  (E800-E807, E826-949) ",
+            "selected": false
+          }
+        ],
+        "option_count": 89
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": " 0 ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 ",
+            "selected": true
+          },
+          {
+            "value": "2",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 9 ",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D16",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "Compressed Mortality, 1979-1998",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D16.M1",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_2",
+        "id": "",
+        "label": "",
+        "value": "D16.M2",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_3",
+        "id": "",
+        "label": "",
+        "value": "D16.M3",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_aar",
+        "id": "HO_aar",
+        "label": "",
+        "value": "aar_none",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_12",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_1",
+        "id": "CM_1",
+        "label": "Deaths",
+        "value": "D16.M1",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_2",
+        "id": "CM_2",
+        "label": "Population",
+        "value": "D16.M2",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_3",
+        "id": "CM_3",
+        "label": "Crude Rate",
+        "value": "D16.M3",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_32",
+        "id": "CM_32",
+        "label": "95% Confidence Interval",
+        "value": "D16.M32",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_31",
+        "id": "CM_31",
+        "label": "Standard Error",
+        "value": "D16.M31",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_aar_enable",
+        "id": "CO_aar_enable",
+        "label": "Age Adjusted Rate",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_aar_CI",
+        "id": "CO_aar_CI",
+        "label": "95% Confidence Interval",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_aar_SE",
+        "id": "CO_aar_SE",
+        "label": "Standard Error",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_9",
+        "id": "CM_9",
+        "label": "Percent of Total Deaths",
+        "value": "D16.M9",
+        "checked": false
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_oc-sect1-request",
+        "id": "oc-sect1",
+        "label": "",
+        "value": "close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_aar_nonstd",
+        "id": "CO_aar_nonstd",
+        "label": "Use non-standard rates",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD16.V9",
+        "label": "States",
+        "value": "D16.V9",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD16.V10",
+        "label": "Regions",
+        "value": "D16.V10",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D16.V9",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V9_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_38",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_39",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V9-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V9-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V9-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V9-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V9-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D16.V10",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V10_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_47",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_48",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V10-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V10-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V10-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V10-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V10-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V10-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD16.V5",
+        "label": "Age Group",
+        "value": "D16.V5",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD16.V6",
+        "label": "Infant Age Groups",
+        "value": "D16.V6",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_icd",
+        "id": "RO_icdD16.V2",
+        "label": "ICD-9 Codes",
+        "value": "D16.V2",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_icd",
+        "id": "RO_icdD16.V4",
+        "label": "ICD-9 72 Groups",
+        "value": "D16.V4",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_icd",
+        "id": "RO_icdD16.V12",
+        "label": "Injury Intent and Mechanism",
+        "value": "D16.V12",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D16.V2",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V2_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_64",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_65",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V2-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V2-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V2-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V2-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V2-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V2-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D16.V4",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V4_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_74",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_75",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V4-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V4-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V4-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V4-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D16.V4-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_suppressed",
+        "id": "CO_show_suppressed",
+        "label": "Show Suppressed Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
+    "textareas": [
+      {
+        "type": "textarea",
+        "name": "VM_D16.M6_D16.V10",
+        "id": "TD16.M6D16.V10",
+        "label": "Location",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "V_D16.V9",
+        "id": "TD16.V9",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D16.V9",
+        "id": "D16.V9-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D16.V10",
+        "id": "TD16.V10",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D16.V10",
+        "id": "D16.V10-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D16.V2",
+        "id": "TD16.V2",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D16.V2",
+        "id": "D16.V2-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Causes of Death)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D16.V4",
+        "id": "TD16.V4",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D16.V4",
+        "id": "D16.V4-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Causes of Death)\n"
+      }
+    ]
+  },
+  "summary": {
+    "total_selects": 24,
+    "total_inputs": 88,
+    "total_textareas": 9,
+    "total_parameters": 121
+  },
+  "dataset_id": "D16"
+}

@@ -1,0 +1,5284 @@
+{
+  "url": "http://wonder.cdc.gov/mcd-v2004.html",
+  "final_url": "https://wonder.cdc.gov/controller/datarequest/D33",
+  "page_title": "Multiple Cause of Death, 1999-2004 Archive Request Form",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D33;jsessionid=257734BBDC6E434401D9B2178B8A",
+      "method": "POST"
+    }
+  ],
+  "parameters": {
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D33.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D33.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level1",
+            "text": "MCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level2",
+            "text": "MCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level3",
+            "text": "Multiple Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V15-level1",
+            "text": "MCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V16-level1",
+            "text": "MCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level1",
+            "text": "UCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level2",
+            "text": "UCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level3",
+            "text": "Underlying Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V4-level1",
+            "text": "UCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V12-level1",
+            "text": "UCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V11",
+            "text": "Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D33.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 19
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D33.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D33.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level1",
+            "text": "MCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level2",
+            "text": "MCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level3",
+            "text": "Multiple Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V15-level1",
+            "text": "MCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V16-level1",
+            "text": "MCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level1",
+            "text": "UCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level2",
+            "text": "UCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level3",
+            "text": "Underlying Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V4-level1",
+            "text": "UCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V12-level1",
+            "text": "UCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V11",
+            "text": "Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D33.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D33.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D33.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level1",
+            "text": "MCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level2",
+            "text": "MCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level3",
+            "text": "Multiple Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V15-level1",
+            "text": "MCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V16-level1",
+            "text": "MCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level1",
+            "text": "UCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level2",
+            "text": "UCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level3",
+            "text": "Underlying Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V4-level1",
+            "text": "UCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V12-level1",
+            "text": "UCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V11",
+            "text": "Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D33.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D33.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D33.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level1",
+            "text": "MCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level2",
+            "text": "MCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level3",
+            "text": "Multiple Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V15-level1",
+            "text": "MCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V16-level1",
+            "text": "MCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level1",
+            "text": "UCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level2",
+            "text": "UCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level3",
+            "text": "Underlying Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V4-level1",
+            "text": "UCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V12-level1",
+            "text": "UCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V11",
+            "text": "Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D33.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "B_5",
+        "id": "SB_5",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D33.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D33.V7",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level1",
+            "text": "MCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level2",
+            "text": "MCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V13-level3",
+            "text": "Multiple Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V15-level1",
+            "text": "MCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V16-level1",
+            "text": "MCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V8",
+            "text": "Race",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level1",
+            "text": "Region",
+            "selected": false
+          },
+          {
+            "value": "D33.V10-level2",
+            "text": "Division",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D33.V9-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level1",
+            "text": "UCD - ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level2",
+            "text": "UCD - ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D33.V2-level3",
+            "text": "Underlying Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D33.V4-level1",
+            "text": "UCD - ICD 113 Groups",
+            "selected": false
+          },
+          {
+            "value": "D33.V12-level1",
+            "text": "UCD - ICD 130 Groups (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D33.V11",
+            "text": "Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D33.V1",
+            "text": "Year",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "O_rate_per",
+        "id": "SO_rate_per",
+        "label": "Calculate Rates Per",
+        "multiple": false,
+        "options": [
+          {
+            "value": "1000",
+            "text": " 1,000 ",
+            "selected": false
+          },
+          {
+            "value": "10000",
+            "text": " 10,000 ",
+            "selected": false
+          },
+          {
+            "value": "100000",
+            "text": " 100,000 ",
+            "selected": true
+          },
+          {
+            "value": "1000000",
+            "text": " 1,000,000 ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "O_aar_pop",
+        "id": "SO_aar_pop",
+        "label": "Standard Population",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0000",
+            "text": " 2000 U.S. Std. Population ",
+            "selected": true
+          },
+          {
+            "value": "1940",
+            "text": " 1940 U.S. Std. Million ",
+            "selected": false
+          },
+          {
+            "value": "1970",
+            "text": " 1970 U.S. Std. Million ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": " 2000 U.S. Std. Million ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V9",
+        "id": "codes-D33.V9",
+        "label": "States",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": "+ 01  (Alabama)  ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "+ 02  (Alaska)  ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "+ 04  (Arizona)  ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "+ 05  (Arkansas)  ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "+ 06  (California)  ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "+ 08  (Colorado)  ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "+ 09  (Connecticut)  ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "+ 10  (Delaware)  ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "+ 11  (District of Columbia)  ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "+ 12  (Florida)  ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "+ 13  (Georgia)  ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "+ 15  (Hawaii)  ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "+ 16  (Idaho)  ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "+ 17  (Illinois)  ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "+ 18  (Indiana)  ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "+ 19  (Iowa)  ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "+ 20  (Kansas)  ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "+ 21  (Kentucky)  ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "+ 22  (Louisiana)  ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "+ 23  (Maine)  ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "+ 24  (Maryland)  ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "+ 25  (Massachusetts)  ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "+ 26  (Michigan)  ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "+ 27  (Minnesota)  ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "+ 28  (Mississippi)  ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "+ 29  (Missouri)  ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "+ 30  (Montana)  ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "+ 31  (Nebraska)  ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "+ 32  (Nevada)  ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "+ 33  (New Hampshire)  ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "+ 34  (New Jersey)  ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "+ 35  (New Mexico)  ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": "+ 36  (New York)  ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "+ 37  (North Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "+ 38  (North Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "+ 39  (Ohio)  ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "+ 40  (Oklahoma)  ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "+ 41  (Oregon)  ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "+ 42  (Pennsylvania)  ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "+ 44  (Rhode Island)  ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "+ 45  (South Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "+ 46  (South Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "+ 47  (Tennessee)  ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "+ 48  (Texas)  ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "+ 49  (Utah)  ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "+ 50  (Vermont)  ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "+ 51  (Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "+ 53  (Washington)  ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "+ 54  (West Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "+ 55  (Wisconsin)  ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "+ 56  (Wyoming)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 52
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V10",
+        "id": "codes-D33.V10",
+        "label": "Regions",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "CENS-R1",
+            "text": "+ CENS-R1  (Census Region 1: Northeast)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R2",
+            "text": "+ CENS-R2  (Census Region 2: Midwest)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R3",
+            "text": "+ CENS-R3  (Census Region 3: South)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R4",
+            "text": "+ CENS-R4  (Census Region 4: West)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D33.V5",
+        "id": "SD33.V5",
+        "label": "Age Group",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1-4",
+            "text": " 1-4 years ",
+            "selected": false
+          },
+          {
+            "value": "5-9",
+            "text": " 5-9 years ",
+            "selected": false
+          },
+          {
+            "value": "10-14",
+            "text": " 10-14 years ",
+            "selected": false
+          },
+          {
+            "value": "15-19",
+            "text": " 15-19 years ",
+            "selected": false
+          },
+          {
+            "value": "20-24",
+            "text": " 20-24 years ",
+            "selected": false
+          },
+          {
+            "value": "25-34",
+            "text": " 25-34 years ",
+            "selected": false
+          },
+          {
+            "value": "35-44",
+            "text": " 35-44 years ",
+            "selected": false
+          },
+          {
+            "value": "45-54",
+            "text": " 45-54 years ",
+            "selected": false
+          },
+          {
+            "value": "55-64",
+            "text": " 55-64 years ",
+            "selected": false
+          },
+          {
+            "value": "65-74",
+            "text": " 65-74 years ",
+            "selected": false
+          },
+          {
+            "value": "75-84",
+            "text": " 75-84 years ",
+            "selected": false
+          },
+          {
+            "value": "85+",
+            "text": " 85+ years ",
+            "selected": false
+          },
+          {
+            "value": "NS",
+            "text": " Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      },
+      {
+        "type": "select",
+        "name": "V_D33.V6",
+        "id": "SD33.V6",
+        "label": "Infant Age Groups",
+        "multiple": true,
+        "options": [
+          {
+            "value": "00",
+            "text": " All Infant Ages ",
+            "selected": true
+          },
+          {
+            "value": "1d",
+            "text": " < 1 day ",
+            "selected": false
+          },
+          {
+            "value": "1-6d",
+            "text": " 1-6 days ",
+            "selected": false
+          },
+          {
+            "value": "7-27d",
+            "text": " 7-27 days ",
+            "selected": false
+          },
+          {
+            "value": "28-364d",
+            "text": " 28-364 days ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D33.V1",
+        "id": "SD33.V1",
+        "label": "Year",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": true
+          },
+          {
+            "value": "1999",
+            "text": " 1999 ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": " 2000 ",
+            "selected": false
+          },
+          {
+            "value": "2001",
+            "text": " 2001 ",
+            "selected": false
+          },
+          {
+            "value": "2002",
+            "text": " 2002 ",
+            "selected": false
+          },
+          {
+            "value": "2003",
+            "text": " 2003 ",
+            "selected": false
+          },
+          {
+            "value": "2004",
+            "text": " 2004 ",
+            "selected": false
+          }
+        ],
+        "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D33.V8",
+        "id": "SD33.V8",
+        "label": "Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "2131-1",
+            "text": " Other Race ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D33.V7",
+        "id": "SD33.V7",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "V_D33.V11",
+        "id": "SD33.V11",
+        "label": "Urbanization",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Large Central Metro ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Large Fringe Metro ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Medium Metro ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Small Metro ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Micropolitan (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " NonCore (Nonmetro) ",
+            "selected": false
+          }
+        ],
+        "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V2",
+        "id": "codes-D33.V2",
+        "label": "UCD - ICD-10 Codes",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "A00-B99",
+            "text": "+ A00-B99  (Certain infectious and parasitic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "C00-D48",
+            "text": "+ C00-D48  (Neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "D50-D89",
+            "text": "+ D50-D89  (Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism)  ",
+            "selected": false
+          },
+          {
+            "value": "E00-E88",
+            "text": "+ E00-E88  (Endocrine, nutritional and metabolic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "F01-F99",
+            "text": "+ F01-F99  (Mental and behavioural disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "G00-G98",
+            "text": "+ G00-G98  (Diseases of the nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "H00-H57",
+            "text": "+ H00-H57  (Diseases of the eye and adnexa)  ",
+            "selected": false
+          },
+          {
+            "value": "H60-H93",
+            "text": "+ H60-H93  (Diseases of the ear and mastoid process)  ",
+            "selected": false
+          },
+          {
+            "value": "I00-I99",
+            "text": "+ I00-I99  (Diseases of the circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "J00-J98",
+            "text": "+ J00-J98  (Diseases of the respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "K00-K92",
+            "text": "+ K00-K92  (Diseases of the digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "L00-L98",
+            "text": "+ L00-L98  (Diseases of the skin and subcutaneous tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "M00-M99",
+            "text": "+ M00-M99  (Diseases of the musculoskeletal system and connective tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "N00-N98",
+            "text": "+ N00-N98  (Diseases of the genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "O00-O99",
+            "text": "+ O00-O99  (Pregnancy, childbirth and the puerperium)  ",
+            "selected": false
+          },
+          {
+            "value": "P00-P96",
+            "text": "+ P00-P96  (Certain conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "Q00-Q99",
+            "text": "+ Q00-Q99  (Congenital malformations, deformations and chromosomal abnormalities)  ",
+            "selected": false
+          },
+          {
+            "value": "R00-R99",
+            "text": "+ R00-R99  (Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "U00-U99",
+            "text": "+ U00-U99  (Codes for special purposes)  ",
+            "selected": false
+          },
+          {
+            "value": "V01-Y89",
+            "text": "+ V01-Y89  (External causes of morbidity and mortality)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 21
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V4",
+        "id": "codes-D33.V4",
+        "label": "UCD - ICD-10 113 Groups",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "GR113-001",
+            "text": "+ GR113-001  (Salmonella infections)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-002",
+            "text": "+ GR113-002  (Shigellosis and amebiasis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-003",
+            "text": "+ GR113-003  (Certain other intestinal infections)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-005",
+            "text": "+ GR113-005  (Respiratory tuberculosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-006",
+            "text": "+ GR113-006  (Other tuberculosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-007",
+            "text": "+ GR113-007  (Whooping cough)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-008",
+            "text": "+ GR113-008  (Scarlet fever and erysipelas)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-009",
+            "text": "+ GR113-009  (Meningococcal infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-010",
+            "text": "+ GR113-010  (Septicemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-011",
+            "text": "+ GR113-011  (Syphilis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-012",
+            "text": "+ GR113-012  (Acute poliomyelitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-013",
+            "text": "+ GR113-013  (Arthropod-borne viral encephalitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-014",
+            "text": "+ GR113-014  (Measles)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-015",
+            "text": "+ GR113-015  (Viral hepatitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-016",
+            "text": "+ GR113-016  (Human immunodeficiency virus (HIV) disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-017",
+            "text": "+ GR113-017  (Malaria)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-018",
+            "text": "+ GR113-018  (Other and unspecified infectious and parasitic diseases and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-020",
+            "text": "+ GR113-020  (Malignant neoplasms of lip, oral cavity and pharynx)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-021",
+            "text": "+ GR113-021  (Malignant neoplasm of esophagus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-022",
+            "text": "+ GR113-022  (Malignant neoplasm of stomach)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-023",
+            "text": "+ GR113-023  (Malignant neoplasms of colon, rectum and anus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-024",
+            "text": "+ GR113-024  (Malignant neoplasms of liver and intrahepatic bile ducts)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-025",
+            "text": "+ GR113-025  (Malignant neoplasm of pancreas)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-026",
+            "text": "+ GR113-026  (Malignant neoplasm of larynx)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-027",
+            "text": "+ GR113-027  (Malignant neoplasms of trachea, bronchus and lung)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-028",
+            "text": "+ GR113-028  (Malignant melanoma of skin)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-029",
+            "text": "+ GR113-029  (Malignant neoplasm of breast)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-030",
+            "text": "+ GR113-030  (Malignant neoplasm of cervix uteri)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-031",
+            "text": "+ GR113-031  (Malignant neoplasms of corpus uteri and uterus, part unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-032",
+            "text": "+ GR113-032  (Malignant neoplasm of ovary)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-033",
+            "text": "+ GR113-033  (Malignant neoplasm of prostate)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-034",
+            "text": "+ GR113-034  (Malignant neoplasms of kidney and renal pelvis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-035",
+            "text": "+ GR113-035  (Malignant neoplasm of bladder)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-036",
+            "text": "+ GR113-036  (Malignant neoplasms of meninges, brain and other parts of central nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-038",
+            "text": "+ GR113-038  (Hodgkins disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-039",
+            "text": "+ GR113-039  (Non-Hodgkins lymphoma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-040",
+            "text": "+ GR113-040  (Leukemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-041",
+            "text": "+ GR113-041  (Multiple myeloma and immunoproliferative neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-042",
+            "text": "+ GR113-042  (Other and unspecified malignant neoplasms of lymphoid, hematopoietic and related tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-043",
+            "text": "+ GR113-043  (All other and unspecified malignant neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-044",
+            "text": "+ GR113-044  (In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-045",
+            "text": "+ GR113-045  (Anemias)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-046",
+            "text": "+ GR113-046  (Diabetes mellitus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-048",
+            "text": "+ GR113-048  (Malnutrition)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-049",
+            "text": "+ GR113-049  (Other nutritional deficiencies)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-050",
+            "text": "+ GR113-050  (Meningitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-051",
+            "text": "+ GR113-051  (Parkinsons disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-052",
+            "text": "+ GR113-052  (Alzheimers disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-055",
+            "text": "+ GR113-055  (Acute rheumatic fever and chronic rheumatic heart diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-056",
+            "text": "+ GR113-056  (Hypertensive heart disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-057",
+            "text": "+ GR113-057  (Hypertensive heart and renal disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-059",
+            "text": "+ GR113-059  (Acute myocardial infarction)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-060",
+            "text": "+ GR113-060  (Other acute ischemic heart diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-062",
+            "text": "+ GR113-062  (Atherosclerotic cardiovascular disease, so described)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-063",
+            "text": "+ GR113-063  (All other forms of chronic ischemic heart disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-065",
+            "text": "+ GR113-065  (Acute and subacute endocarditis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-066",
+            "text": "+ GR113-066  (Diseases of pericardium and acute myocarditis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-067",
+            "text": "+ GR113-067  (Heart failure)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-068",
+            "text": "+ GR113-068  (All other forms of heart disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-069",
+            "text": "+ GR113-069  (Essential (primary) hypertension and hypertensive renal disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-070",
+            "text": "+ GR113-070  (Cerebrovascular diseases, including stroke)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-071",
+            "text": "+ GR113-071  (Atherosclerosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-073",
+            "text": "+ GR113-073  (Aortic aneurysm and dissection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-074",
+            "text": "+ GR113-074  (Other diseases of arteries, arterioles and capillaries)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-075",
+            "text": "+ GR113-075  (Other disorders of circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-077",
+            "text": "+ GR113-077  (Influenza)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-078",
+            "text": "+ GR113-078  (Pneumonia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-080",
+            "text": "+ GR113-080  (Acute bronchitis and bronchiolitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-081",
+            "text": "+ GR113-081  (Unspecified acute lower respiratory infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-083",
+            "text": "+ GR113-083  (Bronchitis, chronic and unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-084",
+            "text": "+ GR113-084  (Emphysema)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-085",
+            "text": "+ GR113-085  (Asthma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-086",
+            "text": "+ GR113-086  (Other chronic lower respiratory diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-087",
+            "text": "+ GR113-087  (Pneumoconioses and chemical effects)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-088",
+            "text": "+ GR113-088  (Pneumonitis due to solids and liquids)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-089",
+            "text": "+ GR113-089  (Other diseases of respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-090",
+            "text": "+ GR113-090  (Peptic ulcer)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-091",
+            "text": "+ GR113-091  (Diseases of appendix)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-092",
+            "text": "+ GR113-092  (Hernia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-094",
+            "text": "+ GR113-094  (Alcoholic liver disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-095",
+            "text": "+ GR113-095  (Other chronic liver disease and cirrhosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-096",
+            "text": "+ GR113-096  (Cholelithiasis and other disorders of gallbladder)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-098",
+            "text": "+ GR113-098  (Acute and rapidly progressive nephritic and nephrotic syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-099",
+            "text": "+ GR113-099  (Chronic glomerulonephritis, nephritis and nephropathy not specified as acute or chronic,and renal sclerosis unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-100",
+            "text": "+ GR113-100  (Renal failure)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-101",
+            "text": "+ GR113-101  (Other disorders of kidney)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-102",
+            "text": "+ GR113-102  (Infections of kidney)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-103",
+            "text": "+ GR113-103  (Hyperplasia of prostate)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-104",
+            "text": "+ GR113-104  (Inflammatory diseases of female pelvic organs)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-106",
+            "text": "+ GR113-106  (Pregnancy with abortive outcome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-107",
+            "text": "+ GR113-107  (Other complications of pregnancy, childbirth and the puerperium)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-108",
+            "text": "+ GR113-108  (Certain conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-109",
+            "text": "+ GR113-109  (Congenital malformations, deformations and chromosomal abnormalities)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-110",
+            "text": "+ GR113-110  (Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-111",
+            "text": "+ GR113-111  (All other diseases (Residual))  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-114",
+            "text": "+ GR113-114  (Motor vehicle accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-115",
+            "text": "+ GR113-115  (Other land transport accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-116",
+            "text": "+ GR113-116  (Water, air and space, and other and unspecified transport accidents and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-118",
+            "text": "+ GR113-118  (Falls)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-119",
+            "text": "+ GR113-119  (Accidental discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-120",
+            "text": "+ GR113-120  (Accidental drowning and submersion)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-121",
+            "text": "+ GR113-121  (Accidental exposure to smoke, fire and flames)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-122",
+            "text": "+ GR113-122  (Accidental poisoning and exposure to noxious substances)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-123",
+            "text": "+ GR113-123  (Other and unspecified nontransport accidents and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-125",
+            "text": "+ GR113-125  (Intentional self-harm (suicide) by discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-126",
+            "text": "+ GR113-126  (Intentional self-harm (suicide) by other and unspecified means and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-128",
+            "text": "+ GR113-128  (Assault (homicide) by discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-129",
+            "text": "+ GR113-129  (Assault (homicide) by other and unspecified means and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-130",
+            "text": "+ GR113-130  (Legal intervention)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-132",
+            "text": "+ GR113-132  (Discharge of firearms, undetermined intent)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-133",
+            "text": "+ GR113-133  (Other and unspecified events of undetermined intent and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-134",
+            "text": "+ GR113-134  (Operations of war and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-135",
+            "text": "+ GR113-135  (Complications of medical and surgical care)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 114
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V12",
+        "id": "codes-D33.V12",
+        "label": "UCD - ICD-10 130 Groups (Infants)",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "GR130-002",
+            "text": "+ GR130-002  (Certain intestinal infectious diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-003",
+            "text": "+ GR130-003  (Diarrhea and gastroenteritis of infectious origin)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-004",
+            "text": "+ GR130-004  (Tuberculosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-005",
+            "text": "+ GR130-005  (Tetanus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-006",
+            "text": "+ GR130-006  (Diphtheria)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-007",
+            "text": "+ GR130-007  (Whooping cough)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-008",
+            "text": "+ GR130-008  (Meningococcal infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-009",
+            "text": "+ GR130-009  (Septicemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-010",
+            "text": "+ GR130-010  (Congenital syphilis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-011",
+            "text": "+ GR130-011  (Gonococcal infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-013",
+            "text": "+ GR130-013  (Acute poliomyelitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-014",
+            "text": "+ GR130-014  (Varicella (chickenpox))  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-015",
+            "text": "+ GR130-015  (Measles)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-016",
+            "text": "+ GR130-016  (Human immunodeficiency virus (HIV) disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-017",
+            "text": "+ GR130-017  (Mumps)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-018",
+            "text": "+ GR130-018  (Other and unspecified viral diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-019",
+            "text": "+ GR130-019  (Candidiasis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-020",
+            "text": "+ GR130-020  (Malaria)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-021",
+            "text": "+ GR130-021  (Pneumocystosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-022",
+            "text": "+ GR130-022  (All other and unspecified infectious and parasitic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-025",
+            "text": "+ GR130-025  (Hodgkin's disease and non-Hodgkin's lymphomas)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-026",
+            "text": "+ GR130-026  (Leukemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-027",
+            "text": "+ GR130-027  (Other and unspecified malignant neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-028",
+            "text": "+ GR130-028  (In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-030",
+            "text": "+ GR130-030  (Anemias)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-031",
+            "text": "+ GR130-031  (Hemorrhagic conditions and other diseases of blood and blood-forming organs)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-032",
+            "text": "+ GR130-032  (Certain disorders involving the immune mechanism)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-034",
+            "text": "+ GR130-034  (Short stature, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-035",
+            "text": "+ GR130-035  (Malnutrition and other nutritional deficiencies)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-036",
+            "text": "+ GR130-036  (Cystic fibrosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-037",
+            "text": "+ GR130-037  (Volume depletion, disorders of fluid, electrolyte and acid-base balance)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-038",
+            "text": "+ GR130-038  (All other endocrine, nutritional and metabolic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-040",
+            "text": "+ GR130-040  (Meningitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-041",
+            "text": "+ GR130-041  (Infantile spinal muscular atrophy, type I (Werdnig-Hoffman))  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-042",
+            "text": "+ GR130-042  (Infantile cerebral palsy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-043",
+            "text": "+ GR130-043  (Anoxic brain damage, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-044",
+            "text": "+ GR130-044  (Other diseases of nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-045",
+            "text": "+ GR130-045  (Diseases of the ear and mastoid process)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-047",
+            "text": "+ GR130-047  (Pulmonary heart disease and diseases of pulmonary circulation)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-048",
+            "text": "+ GR130-048  (Pericarditis, endocarditis and myocarditis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-049",
+            "text": "+ GR130-049  (Cardiomyopathy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-050",
+            "text": "+ GR130-050  (Cardiac arrest)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-051",
+            "text": "+ GR130-051  (Cerebrovascular diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-052",
+            "text": "+ GR130-052  (All other diseases of circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-054",
+            "text": "+ GR130-054  (Acute upper respiratory infections)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-056",
+            "text": "+ GR130-056  (Influenza)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-057",
+            "text": "+ GR130-057  (Pneumonia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-058",
+            "text": "+ GR130-058  (Acute bronchitis and acute bronchiolitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-059",
+            "text": "+ GR130-059  (Bronchitis, chronic and unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-060",
+            "text": "+ GR130-060  (Asthma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-061",
+            "text": "+ GR130-061  (Pneumonitis due to solids and liquids)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-062",
+            "text": "+ GR130-062  (Other and unspecified diseases of respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-064",
+            "text": "+ GR130-064  (Gastritis, duodenitis, and noninfective enteritis and colitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-065",
+            "text": "+ GR130-065  (Hernia of abdominal cavity and intestinal obstruction without hernia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-066",
+            "text": "+ GR130-066  (All other and unspecified diseases of digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-068",
+            "text": "+ GR130-068  (Renal failure and other disorders of kidney)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-069",
+            "text": "+ GR130-069  (Other and unspecified diseases of genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-072",
+            "text": "+ GR130-072  (Newborn affected by maternal hypertensive disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-073",
+            "text": "+ GR130-073  (Newborn affected by other maternal conditions which may be unrelated to present pregnancy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-075",
+            "text": "+ GR130-075  (Newborn affected by incompetent cervix)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-076",
+            "text": "+ GR130-076  (Newborn affected by premature rupture of membranes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-077",
+            "text": "+ GR130-077  (Newborn affected by multiple pregnancy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-078",
+            "text": "+ GR130-078  (Newborn affected by other maternal complications of pregnancy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-080",
+            "text": "+ GR130-080  (Newborn affected by complications involving placenta)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-081",
+            "text": "+ GR130-081  (Newborn affected by complications involving cord)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-082",
+            "text": "+ GR130-082  (Newborn affected by chorioamnionitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-083",
+            "text": "+ GR130-083  (Newborn affected by other and unspecified abnormalities of membranes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-084",
+            "text": "+ GR130-084  (Newborn affected by other complications of labor and delivery)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-085",
+            "text": "+ GR130-085  (Newborn affected by noxious influences transmitted via placenta or breast milk)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-087",
+            "text": "+ GR130-087  (Slow fetal growth and fetal malnutrition)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-089",
+            "text": "+ GR130-089  (Extremely low birth weight or extreme immaturity)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-090",
+            "text": "+ GR130-090  (Other low birth weight or preterm)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-091",
+            "text": "+ GR130-091  (Disorders related to long gestation and high birth weight)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-092",
+            "text": "+ GR130-092  (Birth trauma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-094",
+            "text": "+ GR130-094  (Intrauterine hypoxia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-095",
+            "text": "+ GR130-095  (Birth asphyxia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-096",
+            "text": "+ GR130-096  (Respiratory distress of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-098",
+            "text": "+ GR130-098  (Congenital pneumonia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-099",
+            "text": "+ GR130-099  (Neonatal aspiration syndromes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-100",
+            "text": "+ GR130-100  (Interstitial emphysema and related conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-101",
+            "text": "+ GR130-101  (Pulmonary hemorrhage originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-102",
+            "text": "+ GR130-102  (Chronic respiratory disease originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-103",
+            "text": "+ GR130-103  (Atelectasis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-104",
+            "text": "+ GR130-104  (All other respiratory conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-106",
+            "text": "+ GR130-106  (Bacterial sepsis of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-107",
+            "text": "+ GR130-107  (Omphalitis of newborn with or without mild hemorrhage)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-108",
+            "text": "+ GR130-108  (All other infections specific to the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-110",
+            "text": "+ GR130-110  (Neonatal hemorrhage)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-111",
+            "text": "+ GR130-111  (Hemorrhagic disease of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-112",
+            "text": "+ GR130-112  (Hemolytic disease of newborn due to isoimmunization and other perinatal jaundice)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-113",
+            "text": "+ GR130-113  (Hematological disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-114",
+            "text": "+ GR130-114  (Syndrome of infant of a diabetic mother and neonatal diabetes mellitus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-115",
+            "text": "+ GR130-115  (Necrotizing enterocolitis of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-116",
+            "text": "+ GR130-116  (Hydrops fetalis not due to hemolytic disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-117",
+            "text": "+ GR130-117  (Other perinatal conditions)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-119",
+            "text": "+ GR130-119  (Anencephaly and similar malformations)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-120",
+            "text": "+ GR130-120  (Congenital hydrocephalus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-121",
+            "text": "+ GR130-121  (Spina bifida)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-122",
+            "text": "+ GR130-122  (Other congenital malformations of nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-123",
+            "text": "+ GR130-123  (Congenital malformations of heart)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-124",
+            "text": "+ GR130-124  (Other congenital malformations of circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-125",
+            "text": "+ GR130-125  (Congenital malformations of respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-126",
+            "text": "+ GR130-126  (Congenital malformations of digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-127",
+            "text": "+ GR130-127  (Congenital malformations of genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-128",
+            "text": "+ GR130-128  (Congenital malformations and deformations of musculoskeletal system, limbs and integument)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-129",
+            "text": "+ GR130-129  (Down's syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-130",
+            "text": "+ GR130-130  (Edward's syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-131",
+            "text": "+ GR130-131  (Patau's syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-132",
+            "text": "+ GR130-132  (Other congenital malformations and deformations)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-133",
+            "text": "+ GR130-133  (Other chromosomal abnormalities, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-135",
+            "text": "+ GR130-135  (Sudden infant death syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-136",
+            "text": "+ GR130-136  (Other symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-137",
+            "text": "+ GR130-137  (All other diseases (Residual))  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-141",
+            "text": "+ GR130-141  (Motor vehicle accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-142",
+            "text": "+ GR130-142  (Other and unspecified transport accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-143",
+            "text": "+ GR130-143  (Falls)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-144",
+            "text": "+ GR130-144  (Accidental discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-145",
+            "text": "+ GR130-145  (Accidental drowning and submersion)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-146",
+            "text": "+ GR130-146  (Accidental suffocation and strangulation in bed)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-147",
+            "text": "+ GR130-147  (Other accidental suffocation and strangulation)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-148",
+            "text": "+ GR130-148  (Accidental inhalation and ingestion of food or other objects causing obstruction of respiratory tract)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-149",
+            "text": "+ GR130-149  (Accidents caused by exposure to smoke, fire and flames)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-150",
+            "text": "+ GR130-150  (Accidental poisoning and exposure to noxious substances)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-151",
+            "text": "+ GR130-151  (Other and unspecified accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-153",
+            "text": "+ GR130-153  (Assault (homicide) by hanging, strangulation and suffocation)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-154",
+            "text": "+ GR130-154  (Assault (homicide) by discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-155",
+            "text": "+ GR130-155  (Neglect, abandonment and other maltreatment syndromes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-156",
+            "text": "+ GR130-156  (Assault (homicide) by other and unspecified means)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-157",
+            "text": "+ GR130-157  (Complications of medical and surgical care)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-158",
+            "text": "+ GR130-158  (Other external causes and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-999",
+            "text": "+ GR130-999  (All unspecified codes)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 132
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V13",
+        "id": "codes-D33.V13",
+        "label": "MCD - ICD-10 Codes",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "A00-B99",
+            "text": "+ A00-B99  (Certain infectious and parasitic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "C00-D48",
+            "text": "+ C00-D48  (Neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "D50-D89",
+            "text": "+ D50-D89  (Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism)  ",
+            "selected": false
+          },
+          {
+            "value": "E00-E89",
+            "text": "+ E00-E89  (Endocrine, nutritional and metabolic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "F01-F99",
+            "text": "+ F01-F99  (Mental and behavioural disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "G00-G98",
+            "text": "+ G00-G98  (Diseases of the nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "H00-H59",
+            "text": "+ H00-H59  (Diseases of the eye and adnexa)  ",
+            "selected": false
+          },
+          {
+            "value": "H60-H95",
+            "text": "+ H60-H95  (Diseases of the ear and mastoid process)  ",
+            "selected": false
+          },
+          {
+            "value": "I00-I99",
+            "text": "+ I00-I99  (Diseases of the circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "J00-J98",
+            "text": "+ J00-J98  (Diseases of the respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "K00-K92",
+            "text": "+ K00-K92  (Diseases of the digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "L00-L98",
+            "text": "+ L00-L98  (Diseases of the skin and subcutaneous tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "M00-M99",
+            "text": "+ M00-M99  (Diseases of the musculoskeletal system and connective tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "N00-N99",
+            "text": "+ N00-N99  (Diseases of the genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "O00-O99",
+            "text": "+ O00-O99  (Pregnancy, childbirth and the puerperium)  ",
+            "selected": false
+          },
+          {
+            "value": "P00-P96",
+            "text": "+ P00-P96  (Certain conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "Q00-Q99",
+            "text": "+ Q00-Q99  (Congenital malformations, deformations and chromosomal abnormalities)  ",
+            "selected": false
+          },
+          {
+            "value": "R00-R99",
+            "text": "+ R00-R99  (Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "S00-T98",
+            "text": "+ S00-T98  (Injury, poisoning and certain other consequences of external causes)  ",
+            "selected": false
+          },
+          {
+            "value": "U00-U99",
+            "text": "+ U00-U99  (Codes for special purposes)  ",
+            "selected": false
+          },
+          {
+            "value": "V01-Y89",
+            "text": "+ V01-Y89  (External causes of morbidity and mortality)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 22
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V15",
+        "id": "codes-D33.V15",
+        "label": "MCD - ICD-10 113 Groups",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "GR113-001",
+            "text": "+ GR113-001  (Salmonella infections)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-002",
+            "text": "+ GR113-002  (Shigellosis and amebiasis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-003",
+            "text": "+ GR113-003  (Certain other intestinal infections)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-005",
+            "text": "+ GR113-005  (Respiratory tuberculosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-006",
+            "text": "+ GR113-006  (Other tuberculosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-007",
+            "text": "+ GR113-007  (Whooping cough)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-008",
+            "text": "+ GR113-008  (Scarlet fever and erysipelas)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-009",
+            "text": "+ GR113-009  (Meningococcal infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-010",
+            "text": "+ GR113-010  (Septicemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-011",
+            "text": "+ GR113-011  (Syphilis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-012",
+            "text": "+ GR113-012  (Acute poliomyelitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-013",
+            "text": "+ GR113-013  (Arthropod-borne viral encephalitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-014",
+            "text": "+ GR113-014  (Measles)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-015",
+            "text": "+ GR113-015  (Viral hepatitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-016",
+            "text": "+ GR113-016  (Human immunodeficiency virus (HIV) disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-017",
+            "text": "+ GR113-017  (Malaria)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-018",
+            "text": "+ GR113-018  (Other and unspecified infectious and parasitic diseases and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-020",
+            "text": "+ GR113-020  (Malignant neoplasms of lip, oral cavity and pharynx)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-021",
+            "text": "+ GR113-021  (Malignant neoplasm of esophagus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-022",
+            "text": "+ GR113-022  (Malignant neoplasm of stomach)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-023",
+            "text": "+ GR113-023  (Malignant neoplasms of colon, rectum and anus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-024",
+            "text": "+ GR113-024  (Malignant neoplasms of liver and intrahepatic bile ducts)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-025",
+            "text": "+ GR113-025  (Malignant neoplasm of pancreas)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-026",
+            "text": "+ GR113-026  (Malignant neoplasm of larynx)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-027",
+            "text": "+ GR113-027  (Malignant neoplasms of trachea, bronchus and lung)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-028",
+            "text": "+ GR113-028  (Malignant melanoma of skin)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-029",
+            "text": "+ GR113-029  (Malignant neoplasm of breast)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-030",
+            "text": "+ GR113-030  (Malignant neoplasm of cervix uteri)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-031",
+            "text": "+ GR113-031  (Malignant neoplasms of corpus uteri and uterus, part unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-032",
+            "text": "+ GR113-032  (Malignant neoplasm of ovary)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-033",
+            "text": "+ GR113-033  (Malignant neoplasm of prostate)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-034",
+            "text": "+ GR113-034  (Malignant neoplasms of kidney and renal pelvis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-035",
+            "text": "+ GR113-035  (Malignant neoplasm of bladder)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-036",
+            "text": "+ GR113-036  (Malignant neoplasms of meninges, brain and other parts of central nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-038",
+            "text": "+ GR113-038  (Hodgkins disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-039",
+            "text": "+ GR113-039  (Non-Hodgkins lymphoma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-040",
+            "text": "+ GR113-040  (Leukemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-041",
+            "text": "+ GR113-041  (Multiple myeloma and immunoproliferative neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-042",
+            "text": "+ GR113-042  (Other and unspecified malignant neoplasms of lymphoid, hematopoietic and related tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-043",
+            "text": "+ GR113-043  (All other and unspecified malignant neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-044",
+            "text": "+ GR113-044  (In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-045",
+            "text": "+ GR113-045  (Anemias)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-046",
+            "text": "+ GR113-046  (Diabetes mellitus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-048",
+            "text": "+ GR113-048  (Malnutrition)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-049",
+            "text": "+ GR113-049  (Other nutritional deficiencies)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-050",
+            "text": "+ GR113-050  (Meningitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-051",
+            "text": "+ GR113-051  (Parkinsons disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-052",
+            "text": "+ GR113-052  (Alzheimers disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-055",
+            "text": "+ GR113-055  (Acute rheumatic fever and chronic rheumatic heart diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-056",
+            "text": "+ GR113-056  (Hypertensive heart disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-057",
+            "text": "+ GR113-057  (Hypertensive heart and renal disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-059",
+            "text": "+ GR113-059  (Acute myocardial infarction)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-060",
+            "text": "+ GR113-060  (Other acute ischemic heart diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-062",
+            "text": "+ GR113-062  (Atherosclerotic cardiovascular disease, so described)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-063",
+            "text": "+ GR113-063  (All other forms of chronic ischemic heart disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-065",
+            "text": "+ GR113-065  (Acute and subacute endocarditis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-066",
+            "text": "+ GR113-066  (Diseases of pericardium and acute myocarditis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-067",
+            "text": "+ GR113-067  (Heart failure)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-068",
+            "text": "+ GR113-068  (All other forms of heart disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-069",
+            "text": "+ GR113-069  (Essential (primary) hypertension and hypertensive renal disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-070",
+            "text": "+ GR113-070  (Cerebrovascular diseases, including stroke)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-071",
+            "text": "+ GR113-071  (Atherosclerosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-073",
+            "text": "+ GR113-073  (Aortic aneurysm and dissection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-074",
+            "text": "+ GR113-074  (Other diseases of arteries, arterioles and capillaries)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-075",
+            "text": "+ GR113-075  (Other disorders of circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-077",
+            "text": "+ GR113-077  (Influenza)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-078",
+            "text": "+ GR113-078  (Pneumonia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-080",
+            "text": "+ GR113-080  (Acute bronchitis and bronchiolitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-081",
+            "text": "+ GR113-081  (Unspecified acute lower respiratory infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-083",
+            "text": "+ GR113-083  (Bronchitis, chronic and unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-084",
+            "text": "+ GR113-084  (Emphysema)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-085",
+            "text": "+ GR113-085  (Asthma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-086",
+            "text": "+ GR113-086  (Other chronic lower respiratory diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-087",
+            "text": "+ GR113-087  (Pneumoconioses and chemical effects)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-088",
+            "text": "+ GR113-088  (Pneumonitis due to solids and liquids)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-089",
+            "text": "+ GR113-089  (Other diseases of respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-090",
+            "text": "+ GR113-090  (Peptic ulcer)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-091",
+            "text": "+ GR113-091  (Diseases of appendix)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-092",
+            "text": "+ GR113-092  (Hernia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-094",
+            "text": "+ GR113-094  (Alcoholic liver disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-095",
+            "text": "+ GR113-095  (Other chronic liver disease and cirrhosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-096",
+            "text": "+ GR113-096  (Cholelithiasis and other disorders of gallbladder)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-098",
+            "text": "+ GR113-098  (Acute and rapidly progressive nephritic and nephrotic syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-099",
+            "text": "+ GR113-099  (Chronic glomerulonephritis, nephritis and nephropathy not specified as acute or chronic,and renal sclerosis unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-100",
+            "text": "+ GR113-100  (Renal failure)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-101",
+            "text": "+ GR113-101  (Other disorders of kidney)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-102",
+            "text": "+ GR113-102  (Infections of kidney)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-103",
+            "text": "+ GR113-103  (Hyperplasia of prostate)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-104",
+            "text": "+ GR113-104  (Inflammatory diseases of female pelvic organs)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-106",
+            "text": "+ GR113-106  (Pregnancy with abortive outcome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-107",
+            "text": "+ GR113-107  (Other complications of pregnancy, childbirth and the puerperium)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-108",
+            "text": "+ GR113-108  (Certain conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-109",
+            "text": "+ GR113-109  (Congenital malformations, deformations and chromosomal abnormalities)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-110",
+            "text": "+ GR113-110  (Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-111",
+            "text": "+ GR113-111  (All other diseases (Residual))  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-114",
+            "text": "+ GR113-114  (Motor vehicle accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-115",
+            "text": "+ GR113-115  (Other land transport accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-116",
+            "text": "+ GR113-116  (Water, air and space, and other and unspecified transport accidents and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-118",
+            "text": "+ GR113-118  (Falls)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-119",
+            "text": "+ GR113-119  (Accidental discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-120",
+            "text": "+ GR113-120  (Accidental drowning and submersion)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-121",
+            "text": "+ GR113-121  (Accidental exposure to smoke, fire and flames)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-122",
+            "text": "+ GR113-122  (Accidental poisoning and exposure to noxious substances)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-123",
+            "text": "+ GR113-123  (Other and unspecified nontransport accidents and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-125",
+            "text": "+ GR113-125  (Intentional self-harm (suicide) by discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-126",
+            "text": "+ GR113-126  (Intentional self-harm (suicide) by other and unspecified means and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-128",
+            "text": "+ GR113-128  (Assault (homicide) by discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-129",
+            "text": "+ GR113-129  (Assault (homicide) by other and unspecified means and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-130",
+            "text": "+ GR113-130  (Legal intervention)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-132",
+            "text": "+ GR113-132  (Discharge of firearms, undetermined intent)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-133",
+            "text": "+ GR113-133  (Other and unspecified events of undetermined intent and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-134",
+            "text": "+ GR113-134  (Operations of war and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-135",
+            "text": "+ GR113-135  (Complications of medical and surgical care)  ",
+            "selected": false
+          },
+          {
+            "value": "GR113-136",
+            "text": "+ GR113-136  (Other contributing conditions (O08,S,T))  ",
+            "selected": false
+          }
+        ],
+        "option_count": 115
+      },
+      {
+        "type": "select",
+        "name": "F_D33.V16",
+        "id": "codes-D33.V16",
+        "label": "MCD - ICD-10 130 Groups (Infants)",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "GR130-002",
+            "text": "+ GR130-002  (Certain intestinal infectious diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-003",
+            "text": "+ GR130-003  (Diarrhea and gastroenteritis of infectious origin)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-004",
+            "text": "+ GR130-004  (Tuberculosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-005",
+            "text": "+ GR130-005  (Tetanus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-006",
+            "text": "+ GR130-006  (Diphtheria)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-007",
+            "text": "+ GR130-007  (Whooping cough)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-008",
+            "text": "+ GR130-008  (Meningococcal infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-009",
+            "text": "+ GR130-009  (Septicemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-010",
+            "text": "+ GR130-010  (Congenital syphilis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-011",
+            "text": "+ GR130-011  (Gonococcal infection)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-013",
+            "text": "+ GR130-013  (Acute poliomyelitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-014",
+            "text": "+ GR130-014  (Varicella (chickenpox))  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-015",
+            "text": "+ GR130-015  (Measles)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-016",
+            "text": "+ GR130-016  (Human immunodeficiency virus (HIV) disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-017",
+            "text": "+ GR130-017  (Mumps)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-018",
+            "text": "+ GR130-018  (Other and unspecified viral diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-019",
+            "text": "+ GR130-019  (Candidiasis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-020",
+            "text": "+ GR130-020  (Malaria)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-021",
+            "text": "+ GR130-021  (Pneumocystosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-022",
+            "text": "+ GR130-022  (All other and unspecified infectious and parasitic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-025",
+            "text": "+ GR130-025  (Hodgkin's disease and non-Hodgkin's lymphomas)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-026",
+            "text": "+ GR130-026  (Leukemia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-027",
+            "text": "+ GR130-027  (Other and unspecified malignant neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-028",
+            "text": "+ GR130-028  (In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-030",
+            "text": "+ GR130-030  (Anemias)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-031",
+            "text": "+ GR130-031  (Hemorrhagic conditions and other diseases of blood and blood-forming organs)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-032",
+            "text": "+ GR130-032  (Certain disorders involving the immune mechanism)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-034",
+            "text": "+ GR130-034  (Short stature, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-035",
+            "text": "+ GR130-035  (Malnutrition and other nutritional deficiencies)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-036",
+            "text": "+ GR130-036  (Cystic fibrosis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-037",
+            "text": "+ GR130-037  (Volume depletion, disorders of fluid, electrolyte and acid-base balance)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-038",
+            "text": "+ GR130-038  (All other endocrine, nutritional and metabolic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-040",
+            "text": "+ GR130-040  (Meningitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-041",
+            "text": "+ GR130-041  (Infantile spinal muscular atrophy, type I (Werdnig-Hoffman))  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-042",
+            "text": "+ GR130-042  (Infantile cerebral palsy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-043",
+            "text": "+ GR130-043  (Anoxic brain damage, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-044",
+            "text": "+ GR130-044  (Other diseases of nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-045",
+            "text": "+ GR130-045  (Diseases of the ear and mastoid process)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-047",
+            "text": "+ GR130-047  (Pulmonary heart disease and diseases of pulmonary circulation)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-048",
+            "text": "+ GR130-048  (Pericarditis, endocarditis and myocarditis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-049",
+            "text": "+ GR130-049  (Cardiomyopathy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-050",
+            "text": "+ GR130-050  (Cardiac arrest)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-051",
+            "text": "+ GR130-051  (Cerebrovascular diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-052",
+            "text": "+ GR130-052  (All other diseases of circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-054",
+            "text": "+ GR130-054  (Acute upper respiratory infections)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-056",
+            "text": "+ GR130-056  (Influenza)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-057",
+            "text": "+ GR130-057  (Pneumonia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-058",
+            "text": "+ GR130-058  (Acute bronchitis and acute bronchiolitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-059",
+            "text": "+ GR130-059  (Bronchitis, chronic and unspecified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-060",
+            "text": "+ GR130-060  (Asthma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-061",
+            "text": "+ GR130-061  (Pneumonitis due to solids and liquids)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-062",
+            "text": "+ GR130-062  (Other and unspecified diseases of respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-064",
+            "text": "+ GR130-064  (Gastritis, duodenitis, and noninfective enteritis and colitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-065",
+            "text": "+ GR130-065  (Hernia of abdominal cavity and intestinal obstruction without hernia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-066",
+            "text": "+ GR130-066  (All other and unspecified diseases of digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-068",
+            "text": "+ GR130-068  (Renal failure and other disorders of kidney)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-069",
+            "text": "+ GR130-069  (Other and unspecified diseases of genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-072",
+            "text": "+ GR130-072  (Newborn affected by maternal hypertensive disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-073",
+            "text": "+ GR130-073  (Newborn affected by other maternal conditions which may be unrelated to present pregnancy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-075",
+            "text": "+ GR130-075  (Newborn affected by incompetent cervix)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-076",
+            "text": "+ GR130-076  (Newborn affected by premature rupture of membranes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-077",
+            "text": "+ GR130-077  (Newborn affected by multiple pregnancy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-078",
+            "text": "+ GR130-078  (Newborn affected by other maternal complications of pregnancy)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-080",
+            "text": "+ GR130-080  (Newborn affected by complications involving placenta)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-081",
+            "text": "+ GR130-081  (Newborn affected by complications involving cord)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-082",
+            "text": "+ GR130-082  (Newborn affected by chorioamnionitis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-083",
+            "text": "+ GR130-083  (Newborn affected by other and unspecified abnormalities of membranes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-084",
+            "text": "+ GR130-084  (Newborn affected by other complications of labor and delivery)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-085",
+            "text": "+ GR130-085  (Newborn affected by noxious influences transmitted via placenta or breast milk)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-087",
+            "text": "+ GR130-087  (Slow fetal growth and fetal malnutrition)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-089",
+            "text": "+ GR130-089  (Extremely low birth weight or extreme immaturity)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-090",
+            "text": "+ GR130-090  (Other low birth weight or preterm)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-091",
+            "text": "+ GR130-091  (Disorders related to long gestation and high birth weight)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-092",
+            "text": "+ GR130-092  (Birth trauma)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-094",
+            "text": "+ GR130-094  (Intrauterine hypoxia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-095",
+            "text": "+ GR130-095  (Birth asphyxia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-096",
+            "text": "+ GR130-096  (Respiratory distress of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-098",
+            "text": "+ GR130-098  (Congenital pneumonia)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-099",
+            "text": "+ GR130-099  (Neonatal aspiration syndromes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-100",
+            "text": "+ GR130-100  (Interstitial emphysema and related conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-101",
+            "text": "+ GR130-101  (Pulmonary hemorrhage originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-102",
+            "text": "+ GR130-102  (Chronic respiratory disease originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-103",
+            "text": "+ GR130-103  (Atelectasis)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-104",
+            "text": "+ GR130-104  (All other respiratory conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-106",
+            "text": "+ GR130-106  (Bacterial sepsis of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-107",
+            "text": "+ GR130-107  (Omphalitis of newborn with or without mild hemorrhage)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-108",
+            "text": "+ GR130-108  (All other infections specific to the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-110",
+            "text": "+ GR130-110  (Neonatal hemorrhage)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-111",
+            "text": "+ GR130-111  (Hemorrhagic disease of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-112",
+            "text": "+ GR130-112  (Hemolytic disease of newborn due to isoimmunization and other perinatal jaundice)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-113",
+            "text": "+ GR130-113  (Hematological disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-114",
+            "text": "+ GR130-114  (Syndrome of infant of a diabetic mother and neonatal diabetes mellitus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-115",
+            "text": "+ GR130-115  (Necrotizing enterocolitis of newborn)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-116",
+            "text": "+ GR130-116  (Hydrops fetalis not due to hemolytic disease)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-117",
+            "text": "+ GR130-117  (Other perinatal conditions)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-119",
+            "text": "+ GR130-119  (Anencephaly and similar malformations)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-120",
+            "text": "+ GR130-120  (Congenital hydrocephalus)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-121",
+            "text": "+ GR130-121  (Spina bifida)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-122",
+            "text": "+ GR130-122  (Other congenital malformations of nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-123",
+            "text": "+ GR130-123  (Congenital malformations of heart)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-124",
+            "text": "+ GR130-124  (Other congenital malformations of circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-125",
+            "text": "+ GR130-125  (Congenital malformations of respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-126",
+            "text": "+ GR130-126  (Congenital malformations of digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-127",
+            "text": "+ GR130-127  (Congenital malformations of genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-128",
+            "text": "+ GR130-128  (Congenital malformations and deformations of musculoskeletal system, limbs and integument)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-129",
+            "text": "+ GR130-129  (Down's syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-130",
+            "text": "+ GR130-130  (Edward's syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-131",
+            "text": "+ GR130-131  (Patau's syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-132",
+            "text": "+ GR130-132  (Other congenital malformations and deformations)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-133",
+            "text": "+ GR130-133  (Other chromosomal abnormalities, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-135",
+            "text": "+ GR130-135  (Sudden infant death syndrome)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-136",
+            "text": "+ GR130-136  (Other symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-137",
+            "text": "+ GR130-137  (All other diseases (Residual))  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-141",
+            "text": "+ GR130-141  (Motor vehicle accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-142",
+            "text": "+ GR130-142  (Other and unspecified transport accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-143",
+            "text": "+ GR130-143  (Falls)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-144",
+            "text": "+ GR130-144  (Accidental discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-145",
+            "text": "+ GR130-145  (Accidental drowning and submersion)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-146",
+            "text": "+ GR130-146  (Accidental suffocation and strangulation in bed)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-147",
+            "text": "+ GR130-147  (Other accidental suffocation and strangulation)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-148",
+            "text": "+ GR130-148  (Accidental inhalation and ingestion of food or other objects causing obstruction of respiratory tract)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-149",
+            "text": "+ GR130-149  (Accidents caused by exposure to smoke, fire and flames)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-150",
+            "text": "+ GR130-150  (Accidental poisoning and exposure to noxious substances)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-151",
+            "text": "+ GR130-151  (Other and unspecified accidents)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-153",
+            "text": "+ GR130-153  (Assault (homicide) by hanging, strangulation and suffocation)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-154",
+            "text": "+ GR130-154  (Assault (homicide) by discharge of firearms)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-155",
+            "text": "+ GR130-155  (Neglect, abandonment and other maltreatment syndromes)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-156",
+            "text": "+ GR130-156  (Assault (homicide) by other and unspecified means)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-157",
+            "text": "+ GR130-157  (Complications of medical and surgical care)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-158",
+            "text": "+ GR130-158  (Other external causes and their sequelae)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-999",
+            "text": "+ GR130-999  (All unspecified causes of death)  ",
+            "selected": false
+          },
+          {
+            "value": "GR130-000",
+            "text": "+ GR130-000  (All unspecified non-causes of death)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 133
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": " 0 ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 ",
+            "selected": true
+          },
+          {
+            "value": "2",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 9 ",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D33",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "Multiple Cause of Death, 1999-2004 Archive",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D33.M1",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_2",
+        "id": "",
+        "label": "",
+        "value": "D33.M2",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_3",
+        "id": "",
+        "label": "",
+        "value": "D33.M3",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_aar",
+        "id": "HO_aar",
+        "label": "",
+        "value": "aar_none",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_12",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_1",
+        "id": "CM_1",
+        "label": "Count",
+        "value": "D33.M1",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_2",
+        "id": "CM_2",
+        "label": "Population",
+        "value": "D33.M2",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_3",
+        "id": "CM_3",
+        "label": "Crude Rate",
+        "value": "D33.M3",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_32",
+        "id": "CM_32",
+        "label": "95% Confidence Interval",
+        "value": "D33.M32",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_31",
+        "id": "CM_31",
+        "label": "Standard Error",
+        "value": "D33.M31",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_aar_enable",
+        "id": "CO_aar_enable",
+        "label": "Age Adjusted Rate",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_aar_CI",
+        "id": "CO_aar_CI",
+        "label": "95% Confidence Interval",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_aar_SE",
+        "id": "CO_aar_SE",
+        "label": "Standard Error",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_5",
+        "id": "CM_5",
+        "label": "Percent of Total Deaths",
+        "value": "D33.M5",
+        "checked": false
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_oc-sect1-request",
+        "id": "oc-sect1",
+        "label": "",
+        "value": "close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD33.V9",
+        "label": "States",
+        "value": "D33.V9",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD33.V10",
+        "label": "Regions",
+        "value": "D33.V10",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V9",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V9_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_37",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_38",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V9-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V9-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V9-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V9-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V9-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V10",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V10_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_46",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_47",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V10-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V10-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V10-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V10-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V10-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V10-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD33.V5",
+        "label": "Age Group",
+        "value": "D33.V5",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD33.V6",
+        "label": "Infant Age Groups",
+        "value": "D33.V6",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_ucd",
+        "id": "RO_ucdD33.V2",
+        "label": "UCD - ICD-10 Codes",
+        "value": "D33.V2",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_ucd",
+        "id": "RO_ucdD33.V4",
+        "label": "UCD - ICD-10 113 Groups",
+        "value": "D33.V4",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_ucd",
+        "id": "RO_ucdD33.V12",
+        "label": "UCD - ICD-10 130 Groups (Infants)",
+        "value": "D33.V12",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V2",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V2_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_63",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_64",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V2-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V2-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V2-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V2-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V2-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V2-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V4",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V4_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_73",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_74",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V4-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V4-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V4-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V4-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V4-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V12",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V12_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_82",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_83",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V12-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V12-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V12-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V12-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V12-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_mcd",
+        "id": "RO_mcdD33.V13",
+        "label": "MCD - ICD-10 Codes",
+        "value": "D33.V13",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_mcd",
+        "id": "RO_mcdD33.V15",
+        "label": "MCD - ICD-10 113 Groups",
+        "value": "D33.V15",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_mcd",
+        "id": "RO_mcdD33.V16",
+        "label": "MCD - ICD-10 130 Groups (Infants)",
+        "value": "D33.V16",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V13",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V13_fmode",
+        "id": "",
+        "label": "",
+        "value": "fadv",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_95",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_96",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_97",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V13-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V13-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V13-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V13-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V13-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V13-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V15",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V15_fmode",
+        "id": "",
+        "label": "",
+        "value": "fadv",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_106",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_107",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_108",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V15-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V15-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V15-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V15-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V15-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D33.V16",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V16_fmode",
+        "id": "",
+        "label": "",
+        "value": "fadv",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_116",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_117",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_118",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V16-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V16-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V16-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V16-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D33.V16-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_suppressed",
+        "id": "CO_show_suppressed",
+        "label": "Show Suppressed Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
+    "textareas": [
+      {
+        "type": "textarea",
+        "name": "V_D33.V9",
+        "id": "TD33.V9",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D33.V9",
+        "id": "D33.V9-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V10",
+        "id": "TD33.V10",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D33.V10",
+        "id": "D33.V10-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V2",
+        "id": "TD33.V2",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D33.V2",
+        "id": "D33.V2-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Causes of Death)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V4",
+        "id": "TD33.V4",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D33.V4",
+        "id": "D33.V4-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Causes of Death)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V12",
+        "id": "TD33.V12",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D33.V12",
+        "id": "D33.V12-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Causes of Death)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V13",
+        "id": "TD33.V13-AND1",
+        "label": "Select Records\nwith any of these items:",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V13_AND",
+        "id": "TD33.V13-AND2",
+        "label": "AND any of these items:",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V15",
+        "id": "TD33.V15-AND1",
+        "label": "Select Records\n                                    \n\t\twith any of these items:",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V15_AND",
+        "id": "TD33.V15-AND2",
+        "label": "AND any of these items:",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V16",
+        "id": "TD33.V16-AND1",
+        "label": "Select Records\n                                    \n\t\twith any of these items:",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "V_D33.V16_AND",
+        "id": "TD33.V16-AND2",
+        "label": "AND any of these items:",
+        "default_value": ""
+      }
+    ]
+  },
+  "summary": {
+    "total_selects": 24,
+    "total_inputs": 131,
+    "total_textareas": 16,
+    "total_parameters": 171
+  },
+  "dataset_id": "D33"
+}

@@ -1,0 +1,634 @@
+{
+  "url": "http://wonder.cdc.gov/cancer-survival-v2011.html",
+  "final_url": "https://wonder.cdc.gov/cancer-survival-v2011.html",
+  "page_title": "National Program of Cancer Registries 5 Year Relative Survival Analysis 2001-2011 Request",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D120",
+      "method": "POST"
+    }
+  ],
+  "parameters": {
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D120.V8",
+            "text": "Cancer Sites",
+            "selected": false
+          },
+          {
+            "value": "D120.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D120.V9",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D120.V4",
+            "text": "Race",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D120.V8",
+            "text": "Cancer Sites",
+            "selected": false
+          },
+          {
+            "value": "D120.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D120.V9",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D120.V4",
+            "text": "Race",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D120.V8",
+            "text": "Cancer Sites",
+            "selected": false
+          },
+          {
+            "value": "D120.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D120.V9",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D120.V4",
+            "text": "Race",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D120.V8",
+            "text": "Cancer Sites",
+            "selected": false
+          },
+          {
+            "value": "D120.V5",
+            "text": "Age Group",
+            "selected": false
+          },
+          {
+            "value": "D120.V9",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D120.V4",
+            "text": "Race",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D120.V5",
+        "id": "SD120.V5",
+        "label": "Age Group",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "00",
+            "text": " All Ages Combined ",
+            "selected": false
+          },
+          {
+            "value": "0-45",
+            "text": " <45 years ",
+            "selected": false
+          },
+          {
+            "value": "45-54",
+            "text": " 45-54 years ",
+            "selected": false
+          },
+          {
+            "value": "55-64",
+            "text": " 55-64 years ",
+            "selected": false
+          },
+          {
+            "value": "65-74",
+            "text": " 65-74 years ",
+            "selected": false
+          },
+          {
+            "value": "75+",
+            "text": " 75-99 years ",
+            "selected": false
+          },
+          {
+            "value": "<65",
+            "text": " <65 years ",
+            "selected": false
+          },
+          {
+            "value": "65+",
+            "text": " 65-99 years ",
+            "selected": false
+          }
+        ],
+        "option_count": 9
+      },
+      {
+        "type": "select",
+        "name": "V_D120.V4",
+        "id": "SD120.V4",
+        "label": "Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "00",
+            "text": " All Races Combined ",
+            "selected": false
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D120.V9",
+        "id": "SD120.V9",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "00",
+            "text": " Both Sexes Combined ",
+            "selected": false
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D120.V8",
+        "id": "SD120.V8",
+        "label": "Cancer Sites",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "00",
+            "text": " All Cancer Sites Combined ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " Oral Cavity and Pharynx ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": " Esophagus ",
+            "selected": false
+          },
+          {
+            "value": "14",
+            "text": " Stomach ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": " Colon and Rectum ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": " Liver and IBD ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": " Pancreas ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": " Larynx ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": " Lung and Bronchus ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": " Melanoma of the Skin ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": " Breast ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": " Cervix Uteri ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": " Corpus and Uterus, NOS ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": " Ovary ",
+            "selected": false
+          },
+          {
+            "value": "52",
+            "text": " Prostate ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": " Testis ",
+            "selected": false
+          },
+          {
+            "value": "57",
+            "text": " Urinary Bladder ",
+            "selected": false
+          },
+          {
+            "value": "58",
+            "text": " Kidney and Renal Pelvis ",
+            "selected": false
+          },
+          {
+            "value": "62",
+            "text": " Brain and Other Nervous System ",
+            "selected": false
+          },
+          {
+            "value": "64",
+            "text": " Thyroid ",
+            "selected": false
+          },
+          {
+            "value": "67",
+            "text": " Hodgkin Lymphoma ",
+            "selected": false
+          },
+          {
+            "value": "68",
+            "text": " Non-Hodgkin Lymphoma ",
+            "selected": false
+          },
+          {
+            "value": "69",
+            "text": " Myeloma ",
+            "selected": false
+          },
+          {
+            "value": "78",
+            "text": " Leukemia ",
+            "selected": false
+          }
+        ],
+        "option_count": 25
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D120",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "National Program of Cancer Registries 5 Year Relative Survival Analysis 2001-2011",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_vintage_latest",
+        "id": "",
+        "label": "",
+        "value": "Cancer Survival",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D120.M1",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_rate_per",
+        "id": "",
+        "label": "",
+        "value": "100000",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_11",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_1",
+        "id": "CM_1",
+        "label": "5-Year Relative Survival (percent)",
+        "value": "D120.M1",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_11",
+        "id": "CM_11",
+        "label": "95% Confidence Interval",
+        "value": "D120.M11",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_2",
+        "id": "CM_2",
+        "label": "Incidence Count",
+        "value": "D120.M2",
+        "checked": false
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
+    "textareas": []
+  },
+  "summary": {
+    "total_selects": 8,
+    "total_inputs": 27,
+    "total_textareas": 0,
+    "total_parameters": 35
+  },
+  "dataset_id": "D120"
+}

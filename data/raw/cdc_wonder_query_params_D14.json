@@ -1,0 +1,2435 @@
+{
+  "url": "http://wonder.cdc.gov/aids-v2002.html",
+  "final_url": "https://wonder.cdc.gov/aids-v2002.html",
+  "page_title": "AIDS Public Use (Vintage 2002) Request",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D14",
+      "method": "POST"
+    }
+  ],
+  "parameters": {
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D14.V13",
+            "text": "Location",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level1",
+            "text": "Year Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level2",
+            "text": "Quarter Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level3",
+            "text": "Month Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level1",
+            "text": "Year Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level2",
+            "text": "Quarter Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level3",
+            "text": "Month Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V1",
+            "text": "Age at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D14.V4",
+            "text": "Case Definition",
+            "selected": false
+          },
+          {
+            "value": "D14.V8",
+            "text": "Country of birth",
+            "selected": false
+          },
+          {
+            "value": "D14.V9",
+            "text": "Heterosexual Partner is Bisexual Male",
+            "selected": false
+          },
+          {
+            "value": "D14.V10",
+            "text": "Heterosexual Partner is an IV Drug User",
+            "selected": false
+          },
+          {
+            "value": "D14.V11",
+            "text": "Heterosexual Partner has Other Risks",
+            "selected": false
+          },
+          {
+            "value": "D14.V12",
+            "text": "Heterosexual Partner is HIV Positive",
+            "selected": false
+          },
+          {
+            "value": "D14.V6",
+            "text": "HIV Exposure Category",
+            "selected": false
+          },
+          {
+            "value": "D14.V7",
+            "text": "Multiple modes of Exposure",
+            "selected": false
+          },
+          {
+            "value": "D14.V3",
+            "text": "Race or Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D14.V2",
+            "text": "Sex and Sexual Orientation",
+            "selected": false
+          },
+          {
+            "value": "D14.V5",
+            "text": "Vital Status",
+            "selected": false
+          }
+        ],
+        "option_count": 19
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D14.V13",
+            "text": "Location",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level1",
+            "text": "Year Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level2",
+            "text": "Quarter Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level3",
+            "text": "Month Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level1",
+            "text": "Year Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level2",
+            "text": "Quarter Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level3",
+            "text": "Month Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V1",
+            "text": "Age at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D14.V4",
+            "text": "Case Definition",
+            "selected": false
+          },
+          {
+            "value": "D14.V8",
+            "text": "Country of birth",
+            "selected": false
+          },
+          {
+            "value": "D14.V9",
+            "text": "Heterosexual Partner is Bisexual Male",
+            "selected": false
+          },
+          {
+            "value": "D14.V10",
+            "text": "Heterosexual Partner is an IV Drug User",
+            "selected": false
+          },
+          {
+            "value": "D14.V11",
+            "text": "Heterosexual Partner has Other Risks",
+            "selected": false
+          },
+          {
+            "value": "D14.V12",
+            "text": "Heterosexual Partner is HIV Positive",
+            "selected": false
+          },
+          {
+            "value": "D14.V6",
+            "text": "HIV Exposure Category",
+            "selected": false
+          },
+          {
+            "value": "D14.V7",
+            "text": "Multiple modes of Exposure",
+            "selected": false
+          },
+          {
+            "value": "D14.V3",
+            "text": "Race or Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D14.V2",
+            "text": "Sex and Sexual Orientation",
+            "selected": false
+          },
+          {
+            "value": "D14.V5",
+            "text": "Vital Status",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D14.V13",
+            "text": "Location",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level1",
+            "text": "Year Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level2",
+            "text": "Quarter Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level3",
+            "text": "Month Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level1",
+            "text": "Year Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level2",
+            "text": "Quarter Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level3",
+            "text": "Month Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V1",
+            "text": "Age at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D14.V4",
+            "text": "Case Definition",
+            "selected": false
+          },
+          {
+            "value": "D14.V8",
+            "text": "Country of birth",
+            "selected": false
+          },
+          {
+            "value": "D14.V9",
+            "text": "Heterosexual Partner is Bisexual Male",
+            "selected": false
+          },
+          {
+            "value": "D14.V10",
+            "text": "Heterosexual Partner is an IV Drug User",
+            "selected": false
+          },
+          {
+            "value": "D14.V11",
+            "text": "Heterosexual Partner has Other Risks",
+            "selected": false
+          },
+          {
+            "value": "D14.V12",
+            "text": "Heterosexual Partner is HIV Positive",
+            "selected": false
+          },
+          {
+            "value": "D14.V6",
+            "text": "HIV Exposure Category",
+            "selected": false
+          },
+          {
+            "value": "D14.V7",
+            "text": "Multiple modes of Exposure",
+            "selected": false
+          },
+          {
+            "value": "D14.V3",
+            "text": "Race or Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D14.V2",
+            "text": "Sex and Sexual Orientation",
+            "selected": false
+          },
+          {
+            "value": "D14.V5",
+            "text": "Vital Status",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D14.V13",
+            "text": "Location",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level1",
+            "text": "Year Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level2",
+            "text": "Quarter Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level3",
+            "text": "Month Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level1",
+            "text": "Year Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level2",
+            "text": "Quarter Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level3",
+            "text": "Month Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V1",
+            "text": "Age at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D14.V4",
+            "text": "Case Definition",
+            "selected": false
+          },
+          {
+            "value": "D14.V8",
+            "text": "Country of birth",
+            "selected": false
+          },
+          {
+            "value": "D14.V9",
+            "text": "Heterosexual Partner is Bisexual Male",
+            "selected": false
+          },
+          {
+            "value": "D14.V10",
+            "text": "Heterosexual Partner is an IV Drug User",
+            "selected": false
+          },
+          {
+            "value": "D14.V11",
+            "text": "Heterosexual Partner has Other Risks",
+            "selected": false
+          },
+          {
+            "value": "D14.V12",
+            "text": "Heterosexual Partner is HIV Positive",
+            "selected": false
+          },
+          {
+            "value": "D14.V6",
+            "text": "HIV Exposure Category",
+            "selected": false
+          },
+          {
+            "value": "D14.V7",
+            "text": "Multiple modes of Exposure",
+            "selected": false
+          },
+          {
+            "value": "D14.V3",
+            "text": "Race or Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D14.V2",
+            "text": "Sex and Sexual Orientation",
+            "selected": false
+          },
+          {
+            "value": "D14.V5",
+            "text": "Vital Status",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "B_5",
+        "id": "SB_5",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D14.V13",
+            "text": "Location",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level1",
+            "text": "Year Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level2",
+            "text": "Quarter Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V14-level3",
+            "text": "Month Reported",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level1",
+            "text": "Year Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level2",
+            "text": "Quarter Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V17-level3",
+            "text": "Month Diagnosed",
+            "selected": false
+          },
+          {
+            "value": "D14.V1",
+            "text": "Age at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D14.V4",
+            "text": "Case Definition",
+            "selected": false
+          },
+          {
+            "value": "D14.V8",
+            "text": "Country of birth",
+            "selected": false
+          },
+          {
+            "value": "D14.V9",
+            "text": "Heterosexual Partner is Bisexual Male",
+            "selected": false
+          },
+          {
+            "value": "D14.V10",
+            "text": "Heterosexual Partner is an IV Drug User",
+            "selected": false
+          },
+          {
+            "value": "D14.V11",
+            "text": "Heterosexual Partner has Other Risks",
+            "selected": false
+          },
+          {
+            "value": "D14.V12",
+            "text": "Heterosexual Partner is HIV Positive",
+            "selected": false
+          },
+          {
+            "value": "D14.V6",
+            "text": "HIV Exposure Category",
+            "selected": false
+          },
+          {
+            "value": "D14.V7",
+            "text": "Multiple modes of Exposure",
+            "selected": false
+          },
+          {
+            "value": "D14.V3",
+            "text": "Race or Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D14.V2",
+            "text": "Sex and Sexual Orientation",
+            "selected": false
+          },
+          {
+            "value": "D14.V5",
+            "text": "Vital Status",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V13",
+        "id": "SD14.V13",
+        "label": "Location",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " The United States ",
+            "selected": true
+          },
+          {
+            "value": "AIDS6",
+            "text": " Northeast, pediatric or not in MSA ",
+            "selected": false
+          },
+          {
+            "value": "AIDS7",
+            "text": " Midwest, pediatric or not in MSA ",
+            "selected": false
+          },
+          {
+            "value": "AIDS8",
+            "text": " South, pediatric or not in MSA ",
+            "selected": false
+          },
+          {
+            "value": "AIDS9",
+            "text": " West, pediatric or not in MSA ",
+            "selected": false
+          },
+          {
+            "value": "AIDS10",
+            "text": " Territory, pediatric or not in MSA ",
+            "selected": false
+          },
+          {
+            "value": "0080",
+            "text": " Akron, OH ",
+            "selected": false
+          },
+          {
+            "value": "0160",
+            "text": " Albany-Schenectady, NY ",
+            "selected": false
+          },
+          {
+            "value": "0200",
+            "text": " Albuquerque, N.M. ",
+            "selected": false
+          },
+          {
+            "value": "0240",
+            "text": " Allentown, PA ",
+            "selected": false
+          },
+          {
+            "value": "0440",
+            "text": " Ann Arbor, MI ",
+            "selected": false
+          },
+          {
+            "value": "0520",
+            "text": " Atlanta, GA ",
+            "selected": false
+          },
+          {
+            "value": "0640",
+            "text": " Austin, TX ",
+            "selected": false
+          },
+          {
+            "value": "0680",
+            "text": " Bakersfield, CA ",
+            "selected": false
+          },
+          {
+            "value": "0720",
+            "text": " Baltimore, MD ",
+            "selected": false
+          },
+          {
+            "value": "0760",
+            "text": " Baton Rouge, LA ",
+            "selected": false
+          },
+          {
+            "value": "0875",
+            "text": " Bergen-Passaic, NJ ",
+            "selected": false
+          },
+          {
+            "value": "1000",
+            "text": " Birmingham, AL ",
+            "selected": false
+          },
+          {
+            "value": "1123",
+            "text": " Boston, MA ",
+            "selected": false
+          },
+          {
+            "value": "1280",
+            "text": " Buffalo, NY ",
+            "selected": false
+          },
+          {
+            "value": "1440",
+            "text": " Charleston, SC ",
+            "selected": false
+          },
+          {
+            "value": "1520",
+            "text": " Charlotte, NC ",
+            "selected": false
+          },
+          {
+            "value": "1600",
+            "text": " Chicago, IL ",
+            "selected": false
+          },
+          {
+            "value": "1640",
+            "text": " Cincinnati, OH ",
+            "selected": false
+          },
+          {
+            "value": "1680",
+            "text": " Cleveland, OH ",
+            "selected": false
+          },
+          {
+            "value": "1720",
+            "text": " Colorado Springs, CO ",
+            "selected": false
+          },
+          {
+            "value": "1760",
+            "text": " Columbia, SC ",
+            "selected": false
+          },
+          {
+            "value": "1840",
+            "text": " Columbus, OH ",
+            "selected": false
+          },
+          {
+            "value": "1920",
+            "text": " Dallas, TX ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": " Dayton, OH ",
+            "selected": false
+          },
+          {
+            "value": "2020",
+            "text": " Daytona Beach, FL ",
+            "selected": false
+          },
+          {
+            "value": "2080",
+            "text": " Denver, CO ",
+            "selected": false
+          },
+          {
+            "value": "2160",
+            "text": " Detroit, MI ",
+            "selected": false
+          },
+          {
+            "value": "2320",
+            "text": " El Paso, TX ",
+            "selected": false
+          },
+          {
+            "value": "2680",
+            "text": " Fort Lauderdale, FL ",
+            "selected": false
+          },
+          {
+            "value": "2760",
+            "text": " Fort Wayne, IN ",
+            "selected": false
+          },
+          {
+            "value": "2800",
+            "text": " Fort Worth, TX ",
+            "selected": false
+          },
+          {
+            "value": "2840",
+            "text": " Fresno, CA ",
+            "selected": false
+          },
+          {
+            "value": "2960",
+            "text": " Gary, IN ",
+            "selected": false
+          },
+          {
+            "value": "3000",
+            "text": " Grand Rapids, MI ",
+            "selected": false
+          },
+          {
+            "value": "3120",
+            "text": " Greensboro, NC ",
+            "selected": false
+          },
+          {
+            "value": "3160",
+            "text": " Greenvile, SC ",
+            "selected": false
+          },
+          {
+            "value": "3240",
+            "text": " Harrisburg, PA ",
+            "selected": false
+          },
+          {
+            "value": "3283",
+            "text": " Hartford, CT ",
+            "selected": false
+          },
+          {
+            "value": "3320",
+            "text": " Honolulu, HI ",
+            "selected": false
+          },
+          {
+            "value": "3360",
+            "text": " Houston, TX ",
+            "selected": false
+          },
+          {
+            "value": "3480",
+            "text": " Indianapolis, IN ",
+            "selected": false
+          },
+          {
+            "value": "3600",
+            "text": " Jacksonville, FL ",
+            "selected": false
+          },
+          {
+            "value": "3640",
+            "text": " Jersey City, NJ ",
+            "selected": false
+          },
+          {
+            "value": "3760",
+            "text": " Kansas City, MO ",
+            "selected": false
+          },
+          {
+            "value": "3840",
+            "text": " Knoxville, TN ",
+            "selected": false
+          },
+          {
+            "value": "4120",
+            "text": " Las Vegas, NV ",
+            "selected": false
+          },
+          {
+            "value": "4400",
+            "text": " Little Rock, AR ",
+            "selected": false
+          },
+          {
+            "value": "4480",
+            "text": " Los Angeles, CA ",
+            "selected": false
+          },
+          {
+            "value": "4520",
+            "text": " Louisville, KY ",
+            "selected": false
+          },
+          {
+            "value": "4880",
+            "text": " McAllen-Edinburg-Mission, TX ",
+            "selected": false
+          },
+          {
+            "value": "4920",
+            "text": " Memphis, TN ",
+            "selected": false
+          },
+          {
+            "value": "5000",
+            "text": " Miami, FL ",
+            "selected": false
+          },
+          {
+            "value": "5015",
+            "text": " Middlesex, NJ ",
+            "selected": false
+          },
+          {
+            "value": "5080",
+            "text": " Milwaukee, WI ",
+            "selected": false
+          },
+          {
+            "value": "5120",
+            "text": " Minneapolis-St Paul, MN ",
+            "selected": false
+          },
+          {
+            "value": "5160",
+            "text": " Mobile, Al ",
+            "selected": false
+          },
+          {
+            "value": "5190",
+            "text": " Monmouth-Ocean City, NJ ",
+            "selected": false
+          },
+          {
+            "value": "5360",
+            "text": " Nashville, TN ",
+            "selected": false
+          },
+          {
+            "value": "5380",
+            "text": " Nassau-Suffolk, NY ",
+            "selected": false
+          },
+          {
+            "value": "5483",
+            "text": " New Haven, CT ",
+            "selected": false
+          },
+          {
+            "value": "5560",
+            "text": " New Orleans, LA ",
+            "selected": false
+          },
+          {
+            "value": "5600",
+            "text": " New York, NY ",
+            "selected": false
+          },
+          {
+            "value": "5640",
+            "text": " Newark, NJ ",
+            "selected": false
+          },
+          {
+            "value": "5720",
+            "text": " Norfolk, VA ",
+            "selected": false
+          },
+          {
+            "value": "5775",
+            "text": " Oakland, CA ",
+            "selected": false
+          },
+          {
+            "value": "5880",
+            "text": " Oklahoma City, OK ",
+            "selected": false
+          },
+          {
+            "value": "5920",
+            "text": " Omaha, NE ",
+            "selected": false
+          },
+          {
+            "value": "5945",
+            "text": " Orange County, CA ",
+            "selected": false
+          },
+          {
+            "value": "5960",
+            "text": " Orlando, FL ",
+            "selected": false
+          },
+          {
+            "value": "6160",
+            "text": " Philadelphia, PA ",
+            "selected": false
+          },
+          {
+            "value": "6200",
+            "text": " Phoenix, AZ ",
+            "selected": false
+          },
+          {
+            "value": "6280",
+            "text": " Pittsburgh, PA ",
+            "selected": false
+          },
+          {
+            "value": "6440",
+            "text": " Portland, OR ",
+            "selected": false
+          },
+          {
+            "value": "6483",
+            "text": " Providence, RI ",
+            "selected": false
+          },
+          {
+            "value": "6640",
+            "text": " Raleigh-Durham, NC ",
+            "selected": false
+          },
+          {
+            "value": "6760",
+            "text": " Richmond, VA ",
+            "selected": false
+          },
+          {
+            "value": "6780",
+            "text": " Riverside-S Berndino, CA ",
+            "selected": false
+          },
+          {
+            "value": "6840",
+            "text": " Rochester, NY ",
+            "selected": false
+          },
+          {
+            "value": "6920",
+            "text": " Sacramento, CA ",
+            "selected": false
+          },
+          {
+            "value": "7040",
+            "text": " Saint Louis, MO ",
+            "selected": false
+          },
+          {
+            "value": "7160",
+            "text": " Salt Lake City, UT ",
+            "selected": false
+          },
+          {
+            "value": "7240",
+            "text": " San Antonio, TX ",
+            "selected": false
+          },
+          {
+            "value": "7320",
+            "text": " San Diego, CA ",
+            "selected": false
+          },
+          {
+            "value": "7360",
+            "text": " San Francisco, CA ",
+            "selected": false
+          },
+          {
+            "value": "7400",
+            "text": " San Jose, CA ",
+            "selected": false
+          },
+          {
+            "value": "7440",
+            "text": " San Juan, PR ",
+            "selected": false
+          },
+          {
+            "value": "7510",
+            "text": " Sarasota, FL ",
+            "selected": false
+          },
+          {
+            "value": "7560",
+            "text": " Scranton, PA ",
+            "selected": false
+          },
+          {
+            "value": "7600",
+            "text": " Seattle, WA ",
+            "selected": false
+          },
+          {
+            "value": "8003",
+            "text": " Springfield, MA ",
+            "selected": false
+          },
+          {
+            "value": "8120",
+            "text": " Stockton, CA ",
+            "selected": false
+          },
+          {
+            "value": "8160",
+            "text": " Syracuse, NY ",
+            "selected": false
+          },
+          {
+            "value": "8200",
+            "text": " Tacoma, WA ",
+            "selected": false
+          },
+          {
+            "value": "8280",
+            "text": " Tampa-Saint Petersburg, FL ",
+            "selected": false
+          },
+          {
+            "value": "8400",
+            "text": " Toledo, OH ",
+            "selected": false
+          },
+          {
+            "value": "8520",
+            "text": " Tucson, AZ ",
+            "selected": false
+          },
+          {
+            "value": "8560",
+            "text": " Tulsa, OK ",
+            "selected": false
+          },
+          {
+            "value": "8720",
+            "text": " Vallejo-Fairfield-Napa, CA ",
+            "selected": false
+          },
+          {
+            "value": "8735",
+            "text": " Ventura, CA ",
+            "selected": false
+          },
+          {
+            "value": "8840",
+            "text": " Washington, DC ",
+            "selected": false
+          },
+          {
+            "value": "8960",
+            "text": " West Palm Beach, FL ",
+            "selected": false
+          },
+          {
+            "value": "9040",
+            "text": " Wichita, KS ",
+            "selected": false
+          },
+          {
+            "value": "9160",
+            "text": " Wilmington, DE ",
+            "selected": false
+          },
+          {
+            "value": "9320",
+            "text": " Youngstown, OH ",
+            "selected": false
+          }
+        ],
+        "option_count": 110
+      },
+      {
+        "type": "select",
+        "name": "F_D14.V14",
+        "id": "codes-D14.V14",
+        "label": "Date Reported",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Report Dates)",
+            "selected": true
+          },
+          {
+            "value": "1981",
+            "text": "+ 1981  (Before 1982)  ",
+            "selected": false
+          },
+          {
+            "value": "1982",
+            "text": "+ 1982  (1982)  ",
+            "selected": false
+          },
+          {
+            "value": "1983",
+            "text": "+ 1983  (1983)  ",
+            "selected": false
+          },
+          {
+            "value": "1984",
+            "text": "+ 1984  (1984)  ",
+            "selected": false
+          },
+          {
+            "value": "1985",
+            "text": "+ 1985  (1985)  ",
+            "selected": false
+          },
+          {
+            "value": "1986",
+            "text": "+ 1986  (1986)  ",
+            "selected": false
+          },
+          {
+            "value": "1987",
+            "text": "+ 1987  (1987)  ",
+            "selected": false
+          },
+          {
+            "value": "1988",
+            "text": "+ 1988  (1988)  ",
+            "selected": false
+          },
+          {
+            "value": "1989",
+            "text": "+ 1989  (1989)  ",
+            "selected": false
+          },
+          {
+            "value": "1990",
+            "text": "+ 1990  (1990)  ",
+            "selected": false
+          },
+          {
+            "value": "1991",
+            "text": "+ 1991  (1991)  ",
+            "selected": false
+          },
+          {
+            "value": "1992",
+            "text": "+ 1992  (1992)  ",
+            "selected": false
+          },
+          {
+            "value": "1993",
+            "text": "+ 1993  (1993)  ",
+            "selected": false
+          },
+          {
+            "value": "1994",
+            "text": "+ 1994  (1994)  ",
+            "selected": false
+          },
+          {
+            "value": "1995",
+            "text": "+ 1995  (1995)  ",
+            "selected": false
+          },
+          {
+            "value": "1996",
+            "text": "+ 1996  (1996)  ",
+            "selected": false
+          },
+          {
+            "value": "1997",
+            "text": "+ 1997  (1997)  ",
+            "selected": false
+          },
+          {
+            "value": "1998",
+            "text": "+ 1998  (1998)  ",
+            "selected": false
+          },
+          {
+            "value": "1999",
+            "text": "+ 1999  (1999)  ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": "+ 2000  (2000)  ",
+            "selected": false
+          },
+          {
+            "value": "2001",
+            "text": "+ 2001  (2001)  ",
+            "selected": false
+          },
+          {
+            "value": "2002",
+            "text": "+ 2002  (2002)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 23
+      },
+      {
+        "type": "select",
+        "name": "F_D14.V17",
+        "id": "codes-D14.V17",
+        "label": "Date Diagnosed",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Diagnosis Dates)",
+            "selected": true
+          },
+          {
+            "value": "1981",
+            "text": "+ 1981  (Before 1982)  ",
+            "selected": false
+          },
+          {
+            "value": "1982",
+            "text": "+ 1982  (1982)  ",
+            "selected": false
+          },
+          {
+            "value": "1983",
+            "text": "+ 1983  (1983)  ",
+            "selected": false
+          },
+          {
+            "value": "1984",
+            "text": "+ 1984  (1984)  ",
+            "selected": false
+          },
+          {
+            "value": "1985",
+            "text": "+ 1985  (1985)  ",
+            "selected": false
+          },
+          {
+            "value": "1986",
+            "text": "+ 1986  (1986)  ",
+            "selected": false
+          },
+          {
+            "value": "1987",
+            "text": "+ 1987  (1987)  ",
+            "selected": false
+          },
+          {
+            "value": "1988",
+            "text": "+ 1988  (1988)  ",
+            "selected": false
+          },
+          {
+            "value": "1989",
+            "text": "+ 1989  (1989)  ",
+            "selected": false
+          },
+          {
+            "value": "1990",
+            "text": "+ 1990  (1990)  ",
+            "selected": false
+          },
+          {
+            "value": "1991",
+            "text": "+ 1991  (1991)  ",
+            "selected": false
+          },
+          {
+            "value": "1992",
+            "text": "+ 1992  (1992)  ",
+            "selected": false
+          },
+          {
+            "value": "1993",
+            "text": "+ 1993  (1993)  ",
+            "selected": false
+          },
+          {
+            "value": "1994",
+            "text": "+ 1994  (1994)  ",
+            "selected": false
+          },
+          {
+            "value": "1995",
+            "text": "+ 1995  (1995)  ",
+            "selected": false
+          },
+          {
+            "value": "1996",
+            "text": "+ 1996  (1996)  ",
+            "selected": false
+          },
+          {
+            "value": "1997",
+            "text": "+ 1997  (1997)  ",
+            "selected": false
+          },
+          {
+            "value": "1998",
+            "text": "+ 1998  (1998)  ",
+            "selected": false
+          },
+          {
+            "value": "1999",
+            "text": "+ 1999  (1999)  ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": "+ 2000  (2000)  ",
+            "selected": false
+          },
+          {
+            "value": "2001",
+            "text": "+ 2001  (2001)  ",
+            "selected": false
+          },
+          {
+            "value": "2002",
+            "text": "+ 2002  (2002)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 23
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V1",
+        "id": "SD14.V1",
+        "label": "Age at Diagnosis",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " Less than 1 Year ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 - 12 Years ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 13 - 19 Years ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " 20 - 24 Years ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 25 - 29 Years ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 30 - 34 Years ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 35 - 39 Years or age is missing ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 40 - 44 Years ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 45 - 49 Years ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 50 - 54 Years ",
+            "selected": false
+          },
+          {
+            "value": "A",
+            "text": " 55 - 59 Years ",
+            "selected": false
+          },
+          {
+            "value": "B",
+            "text": " 60 - 64 Years ",
+            "selected": false
+          },
+          {
+            "value": "C",
+            "text": " 65+ Years ",
+            "selected": false
+          }
+        ],
+        "option_count": 14
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V3",
+        "id": "SD14.V3",
+        "label": "Race or Ethnicity",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "1002-5",
+            "text": " American Indian /Alaskan Native ",
+            "selected": false
+          },
+          {
+            "value": "A-PI",
+            "text": " Asian / Pacific Islander ",
+            "selected": false
+          },
+          {
+            "value": "2054-5",
+            "text": " Black (and also not Hispanic) ",
+            "selected": false
+          },
+          {
+            "value": "2135-2",
+            "text": " Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White (and also not Hispanic) ",
+            "selected": false
+          },
+          {
+            "value": "U",
+            "text": " Unknown ",
+            "selected": false
+          }
+        ],
+        "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V8",
+        "id": "SD14.V8",
+        "label": "Country of birth",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Countries ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Born in U.S., possessions or territories, or not specified ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Foreign born  ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V2",
+        "id": "SD14.V2",
+        "label": "Sex and Sexual Orientation",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "4",
+            "text": " Female (any) ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Male (bisexual) ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Male (heterosexual or pediatric) ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " Male (homosexual) or Unknown Classification ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V7",
+        "id": "SD14.V7",
+        "label": "Multiple modes of Exposure",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Exposures ",
+            "selected": true
+          },
+          {
+            "value": " ",
+            "text": " Pediatric Cases - Multiple risks of exposure not assessed ",
+            "selected": false
+          },
+          {
+            "value": "0",
+            "text": " Patients only mode of exposure to HIV is indicated ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " Patient has additional risk(s) of exposure ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Patients mode of exposure is not reported or identified ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V6",
+        "id": "SD14.V6",
+        "label": "HIV Exposure Category",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "04",
+            "text": " Hemophilia/coagulation disorder ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " Heterosexual contact with HIV ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " IV drug use (female and hetero male) ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " Male homo/bisexual and IV drug use ",
+            "selected": false
+          },
+          {
+            "value": "01",
+            "text": " Male homosexual/bisexual contact ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Mother with HIV, or HIV risk ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " Pediatric hemophilia ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " Pediatric receipt of blood ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": " Pediatric risk not reported or identified ",
+            "selected": false
+          },
+          {
+            "value": "07",
+            "text": " Receipt of blood, blood components or tissue ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " Risk not reported or identified ",
+            "selected": false
+          }
+        ],
+        "option_count": 12
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V12",
+        "id": "SD14.V12",
+        "label": "Heterosexual Partner is HIV Positive",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Missing or Invalid ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V9",
+        "id": "SD14.V9",
+        "label": "Heterosexual Partner is Bisexual Male",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Missing or Invalid ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V10",
+        "id": "SD14.V10",
+        "label": "Heterosexual Partner is an IV Drug User",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Missing or Invalid ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V11",
+        "id": "SD14.V11",
+        "label": "Heterosexual Partner has Other Risks",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Missing or Invalid ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V4",
+        "id": "SD14.V4",
+        "label": "Case Definition",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Case Definitions ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Pre-1985 surveillance definition ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 1985 surveillance definition ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " 1987 definition and diagnosed definitively ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 1987 definition and diagnosed presumptively ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 1993 definition and diagnosed definitively ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 1993 definition and diagnosed presumptively ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 1993 definition and diagnosed immunologically ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D14.V5",
+        "id": "SD14.V5",
+        "label": "Vital Status",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Vital Status ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " Alive: Not reported dead before 2001 ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " Dead: Reported dead before 2001 ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": "0",
+            "selected": false
+          }
+        ],
+        "option_count": 1
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D14",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "AIDS Public Use (Vintage 2002)",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D14.M1",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_9",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D14.V14",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V14_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_22",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_23",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V14-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V14-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V14-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V14-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V14-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V14-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D14.V17",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V17_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_33",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_34",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V17-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V17-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V17-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V17-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V17-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D14.V17-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_precision",
+        "id": "",
+        "label": "",
+        "value": "0",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
+    "textareas": [
+      {
+        "type": "textarea",
+        "name": "V_D14.V14",
+        "id": "TD14.V14",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D14.V14",
+        "id": "D14.V14-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Report Dates)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D14.V17",
+        "id": "TD14.V17",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D14.V17",
+        "id": "D14.V17-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Diagnosis Dates)\n"
+      }
+    ]
+  },
+  "summary": {
+    "total_selects": 23,
+    "total_inputs": 51,
+    "total_textareas": 4,
+    "total_parameters": 78
+  },
+  "dataset_id": "D14"
+}

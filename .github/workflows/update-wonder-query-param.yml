@@ -26,6 +26,10 @@ jobs:
         with:
           version: "latest"
 
+      - name: Install Playwright browsers
+        run: |
+          uv run playwright install chromium --with-deps
+
       - name: Running update script
         run: |
           uv run python -m src.wonder.query --range 1-250

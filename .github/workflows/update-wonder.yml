@@ -37,7 +37,7 @@ jobs:
           git status
           git config --local user.email "noreply@github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/raw/
+          git add data/raw/wonder/
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update of raw health changes - $(date +'%Y-%m-%d')"
             git push -u origin main

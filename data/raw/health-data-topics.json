@@ -1,0 +1,89 @@
+{
+  "healthDataTopics": [
+    {
+      "category": "Core Life Events",
+      "topics": [
+        {
+          "name": "Birth & Natality",
+          "description": "birth rates, maternal health, prenatal care"
+        },
+        {
+          "name": "Mortality",
+          "description": "death rates, life expectancy, leading causes of death"
+        }
+      ]
+    },
+    {
+      "category": "Major Disease Categories",
+      "topics": [
+        {
+          "name": "Cancer",
+          "description": "incidence, mortality, survival rates by type"
+        },
+        {
+          "name": "Chronic Diseases",
+          "description": "diabetes, obesity, heart disease, hypertension"
+        },
+        {
+          "name": "Infectious Diseases",
+          "description": "HIV/AIDS, tuberculosis, STDs, hepatitis"
+        },
+        {
+          "name": "Respiratory Diseases",
+          "description": "flu, COVID-19, RSV, pneumonia, asthma"
+        }
+      ]
+    },
+    {
+      "category": "Public Health Concerns",
+      "topics": [
+        {
+          "name": "Vaccinations & Immunizations",
+          "description": "coverage rates, vaccine safety, adverse events"
+        },
+        {
+          "name": "Substance Use & Overdose",
+          "description": "opioid deaths, drug overdoses, addiction rates"
+        },
+        {
+          "name": "Injury & Violence",
+          "description": "accidents, homicides, suicides, firearm deaths"
+        },
+        {
+          "name": "Maternal & Child Health",
+          "description": "infant mortality, fetal deaths, prenatal care"
+        }
+      ]
+    },
+    {
+      "category": "Environmental & Social Determinants",
+      "topics": [
+        {
+          "name": "Environmental Health",
+          "description": "air quality, heat waves, climate impacts, pollution exposure"
+        },
+        {
+          "name": "Mental Health",
+          "description": "suicide rates, depression, anxiety prevalence"
+        },
+        {
+          "name": "Health Disparities",
+          "description": "differences by race, ethnicity, geography, socioeconomic status"
+        }
+      ]
+    },
+    {
+      "category": "Emerging Topics",
+      "topics": [
+        {
+          "name": "Youth Wellbeing",
+          "description": "adolescent health, school health, behavioral health"
+        },
+        {
+          "name": "Notifiable Conditions",
+          "description": "disease outbreaks, emerging threats, surveillance"
+        }
+      ]
+    }
+  ]
+}

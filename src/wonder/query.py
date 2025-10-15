@@ -31,14 +31,14 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("data/raw/cdc_wonder_query_scrape.log"),
+        logging.FileHandler("data/raw/wonder/query_scrape.log"),
     ],
 )
 log = logging.getLogger("wonder-query")
 
 
 def get_dataset_id_and_target_url(
-    url: str, dmap_csv_path: str = "data/raw/cdc_wonder_dmap.csv"
+    url: str, dmap_csv_path: str = "data/raw/wonder/dataset_map.csv"
 ) -> tuple[Optional[str], Optional[str]]:
     """
     Extract dataset ID from URL and get the target URL to scrape.
@@ -407,8 +407,8 @@ def save_results(
         # Auto-generate filename based on dataset ID
         if not dataset_id:
             raise ValueError("dataset_id is required when output_path is not specified")
-        filename = f"cdc_wonder_query_params_{dataset_id}.json"
-        output_path = f"data/raw/{filename}"
+        filename = f"query_params_{dataset_id}.json"
+        output_path = f"data/raw/wonder/{filename}"
 
     output_file = Path(output_path)
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -424,7 +424,7 @@ def scrape_dataset_range(
     start_id: int,
     end_id: int,
     headless: bool = True,
-    dmap_csv_path: str = "data/raw/cdc_wonder_dmap.csv",
+    dmap_csv_path: str = "data/raw/wonder/dataset_map.csv",
 ) -> dict[str, Any]:
     """
     Scrape query parameters for a range of dataset IDs.
@@ -490,7 +490,7 @@ def scrape_dataset_range(
             dataset_results["dataset_id"] = dataset_id
 
             # Save individual dataset file
-            output_path = f"data/raw/cdc_wonder_query_params_{dataset_id}.json"
+            output_path = f"data/raw/wonder/query_params_{dataset_id}.json"
             save_results(
                 dataset_results, output_path=output_path, dataset_id=dataset_id
             )
@@ -527,7 +527,7 @@ def main():
     parser.add_argument(
         "-o",
         "--output",
-        default="data/raw/cdc_wonder_query_params.json",
+        default="data/raw/wonder/query_params.json",
         help="Output JSON file path",
     )
     parser.add_argument(
@@ -570,9 +570,7 @@ def main():
             )
 
             # Save summary
-            summary_path = (
-                f"data/raw/cdc_wonder_scrape_summary_D{start_id}-D{end_id}.json"
-            )
+            summary_path = f"data/raw/wonder/scrape_summary_D{start_id}-D{end_id}.json"
             with open(summary_path, "w") as f:
                 json.dump(results, f, indent=2)
 
@@ -604,7 +602,7 @@ def main():
             error_msg = f"ERROR: Could not determine dataset ID from URL: {args.url}\n"
             error_msg += "The URL must either:\n"
             error_msg += "  1. Be a controller URL like https://wonder.cdc.gov/controller/datarequest/D192\n"
-            error_msg += "  2. Match an entry in data/raw/cdc_wonder_dmap.csv\n"
+            error_msg += "  2. Match an entry in data/raw/wonder/dataset_map.csv\n"
             log.error(error_msg)
             print(f"\n{'=' * 60}")
             print(error_msg)
@@ -631,9 +629,7 @@ def main():
 
         # Save with dataset ID in filename if output not explicitly specified
         output_path_used = (
-            args.output
-            if args.output != "data/raw/cdc_wonder_query_params.json"
-            else None
+            args.output if args.output != "data/raw/wonder/query_params.json" else None
         )
         saved_path = save_results(
             results, output_path=output_path_used, dataset_id=dataset_id

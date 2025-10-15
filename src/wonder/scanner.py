@@ -14,7 +14,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler("data/raw/cdc_wonder_dmap.log"),
+        logging.FileHandler("data/raw/wonder/dataset_map.log"),
     ],
 )
 log = logging.getLogger("wonder-dmap")
@@ -233,7 +233,7 @@ def probe_d_id(
 
 
 def map_d_range(
-    start: int = 1, end: int = 250, out_csv: str = "data/raw/cdc_wonder_dmap.csv"
+    start: int = 1, end: int = 250, out_csv: str = "data/raw/wonder/dataset_map.csv"
 ) -> list[dict]:
     sess = requests.Session()
     sess.headers.update(HEADERS)

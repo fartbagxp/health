@@ -19,6 +19,13 @@ class Handler:
             xml += "</parameter>\n"
         return xml
 
+    ## B - Group By Parameters
+    ## M - Measure Parameters
+    ## F/I/V - Standard parameters
+    ## O - Other Parameters
+    ## VM - Values for non-standard adjusted rates
+    ## V - Variable Values
+    ## Misc - Miscellaneous parameters
     def build_request_xml(self):
         b = {
             "B_1": "D76.V1-level1",

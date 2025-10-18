@@ -672,52 +672,52 @@
           },
           {
             "value": "HHS1",
-            "text": "+ HHS1  (HHS Region #1  CT, ME, MA, NH, RI, VT)  ",
+            "text": "+ HHS1  (HHS Region #1 CT, ME, MA, NH, RI, VT)  ",
             "selected": false
           },
           {
             "value": "HHS2",
-            "text": "+ HHS2  (HHS Region #2  NJ, NY, Puerto Rico, Virgin Islands)  ",
+            "text": "+ HHS2  (HHS Region #2 NJ, NY, Puerto Rico, Virgin Islands)  ",
             "selected": false
           },
           {
             "value": "HHS3",
-            "text": "+ HHS3  (HHS Region #3  DE, DC, MD, PA, VA, WV)  ",
+            "text": "+ HHS3  (HHS Region #3 DE, DC, MD, PA, VA, WV)  ",
             "selected": false
           },
           {
             "value": "HHS4",
-            "text": "+ HHS4  (HHS Region #4  AL, FL, GA, KY, MS, NC, SC, TN)  ",
+            "text": "+ HHS4  (HHS Region #4 AL, FL, GA, KY, MS, NC, SC, TN)  ",
             "selected": false
           },
           {
             "value": "HHS5",
-            "text": "+ HHS5  (HHS Region #5  IL, IN, MI, MN, OH, WI)  ",
+            "text": "+ HHS5  (HHS Region #5 IL, IN, MI, MN, OH, WI)  ",
             "selected": false
           },
           {
             "value": "HHS6",
-            "text": "+ HHS6  (HHS Region #6  AR, LA, NM, OK, TX)  ",
+            "text": "+ HHS6  (HHS Region #6 AR, LA, NM, OK, TX)  ",
             "selected": false
           },
           {
             "value": "HHS7",
-            "text": "+ HHS7  (HHS Region #7  IA, KS, MO, NE)  ",
+            "text": "+ HHS7  (HHS Region #7 IA, KS, MO, NE)  ",
             "selected": false
           },
           {
             "value": "HHS8",
-            "text": "+ HHS8  (HHS Region #8  CO, MT, ND, SD, UT, WY)  ",
+            "text": "+ HHS8  (HHS Region #8 CO, MT, ND, SD, UT, WY)  ",
             "selected": false
           },
           {
             "value": "HHS9",
-            "text": "+ HHS9  (HHS Region #9  AZ, CA, HI, NV, Guam)  ",
+            "text": "+ HHS9  (HHS Region #9 AZ, CA, HI, NV, Guam)  ",
             "selected": false
           },
           {
             "value": "HHS10",
-            "text": "+ HHS10  (HHS Region #10  AK, ID, OR, WA)  ",
+            "text": "+ HHS10  (HHS Region #10 AK, ID, OR, WA)  ",
             "selected": false
           }
         ],
@@ -1688,7 +1688,7 @@
         "name": "I_D59.V5",
         "id": "D59.V5-fhi",
         "label": "Currently selected:",
-        "default_value": "*All* (The United States)\n"
+        "default_value": ""
       },
       {
         "type": "textarea",
@@ -1702,7 +1702,7 @@
         "name": "I_D59.V6",
         "id": "D59.V6-fhi",
         "label": "Currently selected:",
-        "default_value": "*All* (The United States)\n"
+        "default_value": ""
       },
       {
         "type": "textarea",
@@ -1716,7 +1716,7 @@
         "name": "I_D59.V7",
         "id": "D59.V7-fhi",
         "label": "Currently selected:",
-        "default_value": "*All* (The United States)\n"
+        "default_value": ""
       }
     ]
   },

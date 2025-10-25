@@ -1,18 +1,3064 @@
 {
   "url": "http://wonder.cdc.gov/tb-v2005.html",
   "final_url": "https://wonder.cdc.gov/tb-v2005.html",
-  "page_title": "502 Bad Gateway",
-  "forms": [],
+  "page_title": "OTIS 2005 TB Data, Archive Request",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D26",
+      "method": "POST"
+    }
+  ],
   "parameters": {
-    "selects": [],
-    "inputs": [],
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D26.V1",
+            "text": "Age Groups, Broad",
+            "selected": false
+          },
+          {
+            "value": "D26.V2",
+            "text": "Age Groups, Standard",
+            "selected": false
+          },
+          {
+            "value": "D26.V3",
+            "text": "Alcohol Use",
+            "selected": false
+          },
+          {
+            "value": "D26.V25",
+            "text": "Completion of Therapy Within One Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V4",
+            "text": "Correctional Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V6",
+            "text": "Directly Observed Therapy",
+            "selected": false
+          },
+          {
+            "value": "D26.V5",
+            "text": "Disease Site",
+            "selected": false
+          },
+          {
+            "value": "D26.V26",
+            "text": "Tested for Isoniazid Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V27",
+            "text": "Tested for Isoniazid & Rifampin Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V9",
+            "text": "Drug Use, Injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V10",
+            "text": "Drug Use, Non-injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V7",
+            "text": "HIV Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V8",
+            "text": "Homeless in Past Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V11",
+            "text": "Long-term Care Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V23",
+            "text": "MSA",
+            "selected": false
+          },
+          {
+            "value": "D26.V12",
+            "text": "Multidrug-Resistant",
+            "selected": false
+          },
+          {
+            "value": "D26.V13",
+            "text": "Occupation",
+            "selected": false
+          },
+          {
+            "value": "D26.V15",
+            "text": "Previous TB",
+            "selected": false
+          },
+          {
+            "value": "D26.V16",
+            "text": "Race / Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D26.V24",
+            "text": "Residence at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D26.V17",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D26.V22",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D26.V14",
+            "text": "U.S. or Foreign Born",
+            "selected": false
+          },
+          {
+            "value": "D26.V19",
+            "text": "Verification Criteria",
+            "selected": false
+          },
+          {
+            "value": "D26.V18",
+            "text": "Vital Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V20",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V21",
+            "text": "Years in U.S.",
+            "selected": false
+          }
+        ],
+        "option_count": 27
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D26.V1",
+            "text": "Age Groups, Broad",
+            "selected": false
+          },
+          {
+            "value": "D26.V2",
+            "text": "Age Groups, Standard",
+            "selected": false
+          },
+          {
+            "value": "D26.V3",
+            "text": "Alcohol Use",
+            "selected": false
+          },
+          {
+            "value": "D26.V25",
+            "text": "Completion of Therapy Within One Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V4",
+            "text": "Correctional Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V6",
+            "text": "Directly Observed Therapy",
+            "selected": false
+          },
+          {
+            "value": "D26.V5",
+            "text": "Disease Site",
+            "selected": false
+          },
+          {
+            "value": "D26.V26",
+            "text": "Tested for Isoniazid Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V27",
+            "text": "Tested for Isoniazid & Rifampin Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V9",
+            "text": "Drug Use, Injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V10",
+            "text": "Drug Use, Non-injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V7",
+            "text": "HIV Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V8",
+            "text": "Homeless in Past Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V11",
+            "text": "Long-term Care Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V23",
+            "text": "MSA",
+            "selected": false
+          },
+          {
+            "value": "D26.V12",
+            "text": "Multidrug-Resistant",
+            "selected": false
+          },
+          {
+            "value": "D26.V13",
+            "text": "Occupation",
+            "selected": false
+          },
+          {
+            "value": "D26.V15",
+            "text": "Previous TB",
+            "selected": false
+          },
+          {
+            "value": "D26.V16",
+            "text": "Race / Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D26.V24",
+            "text": "Residence at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D26.V17",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D26.V22",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D26.V14",
+            "text": "U.S. or Foreign Born",
+            "selected": false
+          },
+          {
+            "value": "D26.V19",
+            "text": "Verification Criteria",
+            "selected": false
+          },
+          {
+            "value": "D26.V18",
+            "text": "Vital Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V20",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V21",
+            "text": "Years in U.S.",
+            "selected": false
+          }
+        ],
+        "option_count": 28
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D26.V1",
+            "text": "Age Groups, Broad",
+            "selected": false
+          },
+          {
+            "value": "D26.V2",
+            "text": "Age Groups, Standard",
+            "selected": false
+          },
+          {
+            "value": "D26.V3",
+            "text": "Alcohol Use",
+            "selected": false
+          },
+          {
+            "value": "D26.V25",
+            "text": "Completion of Therapy Within One Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V4",
+            "text": "Correctional Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V6",
+            "text": "Directly Observed Therapy",
+            "selected": false
+          },
+          {
+            "value": "D26.V5",
+            "text": "Disease Site",
+            "selected": false
+          },
+          {
+            "value": "D26.V26",
+            "text": "Tested for Isoniazid Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V27",
+            "text": "Tested for Isoniazid & Rifampin Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V9",
+            "text": "Drug Use, Injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V10",
+            "text": "Drug Use, Non-injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V7",
+            "text": "HIV Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V8",
+            "text": "Homeless in Past Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V11",
+            "text": "Long-term Care Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V23",
+            "text": "MSA",
+            "selected": false
+          },
+          {
+            "value": "D26.V12",
+            "text": "Multidrug-Resistant",
+            "selected": false
+          },
+          {
+            "value": "D26.V13",
+            "text": "Occupation",
+            "selected": false
+          },
+          {
+            "value": "D26.V15",
+            "text": "Previous TB",
+            "selected": false
+          },
+          {
+            "value": "D26.V16",
+            "text": "Race / Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D26.V24",
+            "text": "Residence at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D26.V17",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D26.V22",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D26.V14",
+            "text": "U.S. or Foreign Born",
+            "selected": false
+          },
+          {
+            "value": "D26.V19",
+            "text": "Verification Criteria",
+            "selected": false
+          },
+          {
+            "value": "D26.V18",
+            "text": "Vital Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V20",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V21",
+            "text": "Years in U.S.",
+            "selected": false
+          }
+        ],
+        "option_count": 28
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D26.V1",
+            "text": "Age Groups, Broad",
+            "selected": false
+          },
+          {
+            "value": "D26.V2",
+            "text": "Age Groups, Standard",
+            "selected": false
+          },
+          {
+            "value": "D26.V3",
+            "text": "Alcohol Use",
+            "selected": false
+          },
+          {
+            "value": "D26.V25",
+            "text": "Completion of Therapy Within One Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V4",
+            "text": "Correctional Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V6",
+            "text": "Directly Observed Therapy",
+            "selected": false
+          },
+          {
+            "value": "D26.V5",
+            "text": "Disease Site",
+            "selected": false
+          },
+          {
+            "value": "D26.V26",
+            "text": "Tested for Isoniazid Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V27",
+            "text": "Tested for Isoniazid & Rifampin Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V9",
+            "text": "Drug Use, Injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V10",
+            "text": "Drug Use, Non-injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V7",
+            "text": "HIV Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V8",
+            "text": "Homeless in Past Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V11",
+            "text": "Long-term Care Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V23",
+            "text": "MSA",
+            "selected": false
+          },
+          {
+            "value": "D26.V12",
+            "text": "Multidrug-Resistant",
+            "selected": false
+          },
+          {
+            "value": "D26.V13",
+            "text": "Occupation",
+            "selected": false
+          },
+          {
+            "value": "D26.V15",
+            "text": "Previous TB",
+            "selected": false
+          },
+          {
+            "value": "D26.V16",
+            "text": "Race / Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D26.V24",
+            "text": "Residence at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D26.V17",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D26.V22",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D26.V14",
+            "text": "U.S. or Foreign Born",
+            "selected": false
+          },
+          {
+            "value": "D26.V19",
+            "text": "Verification Criteria",
+            "selected": false
+          },
+          {
+            "value": "D26.V18",
+            "text": "Vital Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V20",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V21",
+            "text": "Years in U.S.",
+            "selected": false
+          }
+        ],
+        "option_count": 28
+      },
+      {
+        "type": "select",
+        "name": "B_5",
+        "id": "SB_5",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D26.V1",
+            "text": "Age Groups, Broad",
+            "selected": false
+          },
+          {
+            "value": "D26.V2",
+            "text": "Age Groups, Standard",
+            "selected": false
+          },
+          {
+            "value": "D26.V3",
+            "text": "Alcohol Use",
+            "selected": false
+          },
+          {
+            "value": "D26.V25",
+            "text": "Completion of Therapy Within One Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V4",
+            "text": "Correctional Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V6",
+            "text": "Directly Observed Therapy",
+            "selected": false
+          },
+          {
+            "value": "D26.V5",
+            "text": "Disease Site",
+            "selected": false
+          },
+          {
+            "value": "D26.V26",
+            "text": "Tested for Isoniazid Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V27",
+            "text": "Tested for Isoniazid & Rifampin Susceptibility",
+            "selected": false
+          },
+          {
+            "value": "D26.V9",
+            "text": "Drug Use, Injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V10",
+            "text": "Drug Use, Non-injecting",
+            "selected": false
+          },
+          {
+            "value": "D26.V7",
+            "text": "HIV Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V8",
+            "text": "Homeless in Past Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V11",
+            "text": "Long-term Care Facility",
+            "selected": false
+          },
+          {
+            "value": "D26.V23",
+            "text": "MSA",
+            "selected": false
+          },
+          {
+            "value": "D26.V12",
+            "text": "Multidrug-Resistant",
+            "selected": false
+          },
+          {
+            "value": "D26.V13",
+            "text": "Occupation",
+            "selected": false
+          },
+          {
+            "value": "D26.V15",
+            "text": "Previous TB",
+            "selected": false
+          },
+          {
+            "value": "D26.V16",
+            "text": "Race / Ethnicity",
+            "selected": false
+          },
+          {
+            "value": "D26.V24",
+            "text": "Residence at Diagnosis",
+            "selected": false
+          },
+          {
+            "value": "D26.V17",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D26.V22",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D26.V14",
+            "text": "U.S. or Foreign Born",
+            "selected": false
+          },
+          {
+            "value": "D26.V19",
+            "text": "Verification Criteria",
+            "selected": false
+          },
+          {
+            "value": "D26.V18",
+            "text": "Vital Status",
+            "selected": false
+          },
+          {
+            "value": "D26.V20",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "D26.V21",
+            "text": "Years in U.S.",
+            "selected": false
+          }
+        ],
+        "option_count": 28
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V22",
+        "id": "SD26.V22",
+        "label": "State",
+        "multiple": true,
+        "options": [
+          {
+            "value": "00",
+            "text": " The United States ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " Alabama ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " Alaska ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " Arizona ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " Arkansas ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " California ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " Colorado ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " Connecticut ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Delaware ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " District of Columbia ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": " Florida ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": " Georgia ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": " Hawaii ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": " Idaho ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": " Illinois ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": " Indiana ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": " Iowa ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": " Kansas ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": " Kentucky ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": " Louisiana ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": " Maine ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": " Maryland ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": " Massachusetts ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": " Michigan ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": " Minnesota ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": " Mississippi ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": " Missouri ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": " Montana ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": " Nebraska ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": " Nevada ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": " New Hampshire ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": " New Jersey ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": " New Mexico ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": " New York ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": " North Carolina ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": " North Dakota ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": " Ohio ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": " Oklahoma ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": " Oregon ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": " Pennsylvania ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": " Rhode Island ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": " South Carolina ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": " South Dakota ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": " Tennessee ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": " Texas ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": " Utah ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": " Vermont ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": " Virginia ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": " Washington ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": " West Virginia ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": " Wisconsin ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": " Wyoming ",
+            "selected": false
+          },
+          {
+            "value": "72",
+            "text": " Puerto Rico ",
+            "selected": false
+          }
+        ],
+        "option_count": 53
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V23",
+        "id": "SD26.V23",
+        "label": "MSA",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " The United States ",
+            "selected": true
+          },
+          {
+            "value": "0080",
+            "text": " Akron, Ohio ",
+            "selected": false
+          },
+          {
+            "value": "0160",
+            "text": " Albany-Schenectady, NY ",
+            "selected": false
+          },
+          {
+            "value": "0200",
+            "text": " Albuquerque, NM ",
+            "selected": false
+          },
+          {
+            "value": "0240",
+            "text": " Allentown, Pa ",
+            "selected": false
+          },
+          {
+            "value": "0440",
+            "text": " Ann Arbor, Mich ",
+            "selected": false
+          },
+          {
+            "value": "0520",
+            "text": " Atlanta, Ga ",
+            "selected": false
+          },
+          {
+            "value": "0640",
+            "text": " Austin, Tex ",
+            "selected": false
+          },
+          {
+            "value": "0680",
+            "text": " Bakersfield, Calif ",
+            "selected": false
+          },
+          {
+            "value": "0720",
+            "text": " Baltimore, Md ",
+            "selected": false
+          },
+          {
+            "value": "0760",
+            "text": " Baton Rouge, La ",
+            "selected": false
+          },
+          {
+            "value": "0875",
+            "text": " Bergen-Passaic, NJ ",
+            "selected": false
+          },
+          {
+            "value": "1000",
+            "text": " Birmingham, Ala ",
+            "selected": false
+          },
+          {
+            "value": "1123",
+            "text": " Boston, Mass ",
+            "selected": false
+          },
+          {
+            "value": "1280",
+            "text": " Buffalo, NY ",
+            "selected": false
+          },
+          {
+            "value": "1440",
+            "text": " Charleston, SC ",
+            "selected": false
+          },
+          {
+            "value": "1520",
+            "text": " Charlotte, NC ",
+            "selected": false
+          },
+          {
+            "value": "1600",
+            "text": " Chicago, Ill ",
+            "selected": false
+          },
+          {
+            "value": "1640",
+            "text": " Cincinnati, Ohio ",
+            "selected": false
+          },
+          {
+            "value": "1680",
+            "text": " Cleveland, Ohio ",
+            "selected": false
+          },
+          {
+            "value": "1720",
+            "text": " Colorado Springs, Colo ",
+            "selected": false
+          },
+          {
+            "value": "1760",
+            "text": " Columbia, SC ",
+            "selected": false
+          },
+          {
+            "value": "1840",
+            "text": " Columbus, Ohio ",
+            "selected": false
+          },
+          {
+            "value": "1920",
+            "text": " Dallas, Tex ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": " Dayton, Ohio ",
+            "selected": false
+          },
+          {
+            "value": "2020",
+            "text": " Daytona Beach, Fla ",
+            "selected": false
+          },
+          {
+            "value": "2080",
+            "text": " Denver, Colo ",
+            "selected": false
+          },
+          {
+            "value": "2160",
+            "text": " Detroit, Mich ",
+            "selected": false
+          },
+          {
+            "value": "2320",
+            "text": " El Paso, Tex ",
+            "selected": false
+          },
+          {
+            "value": "2680",
+            "text": " Fort Lauderdale, Fla ",
+            "selected": false
+          },
+          {
+            "value": "2700",
+            "text": " Fort Myers, Fla ",
+            "selected": false
+          },
+          {
+            "value": "2760",
+            "text": " Fort Wayne, Ind ",
+            "selected": false
+          },
+          {
+            "value": "2800",
+            "text": " Fort Worth, Tex ",
+            "selected": false
+          },
+          {
+            "value": "2840",
+            "text": " Fresno, Calif ",
+            "selected": false
+          },
+          {
+            "value": "2960",
+            "text": " Gary, Ind ",
+            "selected": false
+          },
+          {
+            "value": "3000",
+            "text": " Grand Rapids, Mich ",
+            "selected": false
+          },
+          {
+            "value": "3120",
+            "text": " Greensboro, NC ",
+            "selected": false
+          },
+          {
+            "value": "3160",
+            "text": " Greenville, SC ",
+            "selected": false
+          },
+          {
+            "value": "3240",
+            "text": " Harrrisburg, Pa ",
+            "selected": false
+          },
+          {
+            "value": "3283",
+            "text": " Hartford, Conn ",
+            "selected": false
+          },
+          {
+            "value": "3320",
+            "text": " Honolulu, Hawaii ",
+            "selected": false
+          },
+          {
+            "value": "3360",
+            "text": " Houston, Tex ",
+            "selected": false
+          },
+          {
+            "value": "3480",
+            "text": " Indianapolis, Ind ",
+            "selected": false
+          },
+          {
+            "value": "3600",
+            "text": " Jacksonville, Fla ",
+            "selected": false
+          },
+          {
+            "value": "3640",
+            "text": " Jersey City, NJ ",
+            "selected": false
+          },
+          {
+            "value": "3760",
+            "text": " Kansas City, Mo ",
+            "selected": false
+          },
+          {
+            "value": "3840",
+            "text": " Knoxville, Tenn ",
+            "selected": false
+          },
+          {
+            "value": "3980",
+            "text": " Lakeland, Fla ",
+            "selected": false
+          },
+          {
+            "value": "4120",
+            "text": " Las Vegas, Nev ",
+            "selected": false
+          },
+          {
+            "value": "4280",
+            "text": " Lexington, Ky ",
+            "selected": false
+          },
+          {
+            "value": "4400",
+            "text": " Little Rock, Ark ",
+            "selected": false
+          },
+          {
+            "value": "4480",
+            "text": " Los Angeles, Calif ",
+            "selected": false
+          },
+          {
+            "value": "4520",
+            "text": " Louisville, Ky ",
+            "selected": false
+          },
+          {
+            "value": "4880",
+            "text": " McAllen, Tex ",
+            "selected": false
+          },
+          {
+            "value": "4900",
+            "text": " Melbourne, Fla ",
+            "selected": false
+          },
+          {
+            "value": "4920",
+            "text": " Memphis, Tenn ",
+            "selected": false
+          },
+          {
+            "value": "5000",
+            "text": " Miami, Fla ",
+            "selected": false
+          },
+          {
+            "value": "5015",
+            "text": " Middlesex, NJ ",
+            "selected": false
+          },
+          {
+            "value": "5080",
+            "text": " Milwaukee, Wis ",
+            "selected": false
+          },
+          {
+            "value": "5120",
+            "text": " Minneapolis-St. Paul, Minn ",
+            "selected": false
+          },
+          {
+            "value": "5160",
+            "text": " Mobile, Ala ",
+            "selected": false
+          },
+          {
+            "value": "5190",
+            "text": " Monmouth-Ocean City, NJ ",
+            "selected": false
+          },
+          {
+            "value": "5360",
+            "text": " Nashville, Tenn ",
+            "selected": false
+          },
+          {
+            "value": "5380",
+            "text": " Nassau-Suffolk, NY ",
+            "selected": false
+          },
+          {
+            "value": "5483",
+            "text": " New Haven, Conn ",
+            "selected": false
+          },
+          {
+            "value": "5560",
+            "text": " New Orleans, La ",
+            "selected": false
+          },
+          {
+            "value": "5600",
+            "text": " New York, NY ",
+            "selected": false
+          },
+          {
+            "value": "5640",
+            "text": " Newark, NJ ",
+            "selected": false
+          },
+          {
+            "value": "5720",
+            "text": " Norfolk, Va ",
+            "selected": false
+          },
+          {
+            "value": "5775",
+            "text": " Oakland, Calif ",
+            "selected": false
+          },
+          {
+            "value": "5880",
+            "text": " Oklahoma City, Okla ",
+            "selected": false
+          },
+          {
+            "value": "5920",
+            "text": " Omaha, Neb ",
+            "selected": false
+          },
+          {
+            "value": "5945",
+            "text": " Orange County, Calif ",
+            "selected": false
+          },
+          {
+            "value": "5960",
+            "text": " Orlando, Fla ",
+            "selected": false
+          },
+          {
+            "value": "6160",
+            "text": " Philadelphia, Pa ",
+            "selected": false
+          },
+          {
+            "value": "6200",
+            "text": " Phoenix, Ariz ",
+            "selected": false
+          },
+          {
+            "value": "6280",
+            "text": " Pittsburgh, Pa ",
+            "selected": false
+          },
+          {
+            "value": "6440",
+            "text": " Portland, Ore ",
+            "selected": false
+          },
+          {
+            "value": "6483",
+            "text": " Providence, RI ",
+            "selected": false
+          },
+          {
+            "value": "6640",
+            "text": " Raleigh-Durham, NC ",
+            "selected": false
+          },
+          {
+            "value": "6760",
+            "text": " Richmond, Va ",
+            "selected": false
+          },
+          {
+            "value": "6780",
+            "text": " Riverside-San Bern., Calif ",
+            "selected": false
+          },
+          {
+            "value": "6840",
+            "text": " Rochester, NY ",
+            "selected": false
+          },
+          {
+            "value": "6920",
+            "text": " Sacramento, Calif ",
+            "selected": false
+          },
+          {
+            "value": "7040",
+            "text": " St. Louis, Mo ",
+            "selected": false
+          },
+          {
+            "value": "7160",
+            "text": " Salt Lake City, Utah ",
+            "selected": false
+          },
+          {
+            "value": "7240",
+            "text": " San Antonio, Tex ",
+            "selected": false
+          },
+          {
+            "value": "7320",
+            "text": " San Diego, Calif ",
+            "selected": false
+          },
+          {
+            "value": "7360",
+            "text": " San Francisco, Calif ",
+            "selected": false
+          },
+          {
+            "value": "7400",
+            "text": " San Jose, Calif ",
+            "selected": false
+          },
+          {
+            "value": "7440",
+            "text": " San Juan, Puerto Rico ",
+            "selected": false
+          },
+          {
+            "value": "7510",
+            "text": " Sarasota, Fla ",
+            "selected": false
+          },
+          {
+            "value": "7560",
+            "text": " Scranton, Pa ",
+            "selected": false
+          },
+          {
+            "value": "7600",
+            "text": " Seattle, Wash ",
+            "selected": false
+          },
+          {
+            "value": "8003",
+            "text": " Springfield, Mass ",
+            "selected": false
+          },
+          {
+            "value": "8120",
+            "text": " Stockton, Calif ",
+            "selected": false
+          },
+          {
+            "value": "8160",
+            "text": " Syracuse, NY ",
+            "selected": false
+          },
+          {
+            "value": "8200",
+            "text": " Tacoma, Wash ",
+            "selected": false
+          },
+          {
+            "value": "8280",
+            "text": " Tampa-St. Petersburg, Fla ",
+            "selected": false
+          },
+          {
+            "value": "8400",
+            "text": " Toledo, Ohio ",
+            "selected": false
+          },
+          {
+            "value": "8520",
+            "text": " Tucson, Ariz ",
+            "selected": false
+          },
+          {
+            "value": "8560",
+            "text": " Tulsa, Okla ",
+            "selected": false
+          },
+          {
+            "value": "8720",
+            "text": " Vallejo, Calif ",
+            "selected": false
+          },
+          {
+            "value": "8735",
+            "text": " Ventura, Calif ",
+            "selected": false
+          },
+          {
+            "value": "8840",
+            "text": " Washington, DC ",
+            "selected": false
+          },
+          {
+            "value": "8960",
+            "text": " West Palm Beach, Fla ",
+            "selected": false
+          },
+          {
+            "value": "9040",
+            "text": " Wichita, Kan ",
+            "selected": false
+          },
+          {
+            "value": "9160",
+            "text": " Wilmington, Del ",
+            "selected": false
+          },
+          {
+            "value": "9320",
+            "text": " Youngstown, Ohio ",
+            "selected": false
+          }
+        ],
+        "option_count": 109
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V20",
+        "id": "SD26.V20",
+        "label": "Year",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": true
+          },
+          {
+            "value": "2001-2005",
+            "text": " 2001-2005 ",
+            "selected": false
+          },
+          {
+            "value": "1993",
+            "text": " 1993 ",
+            "selected": false
+          },
+          {
+            "value": "1994",
+            "text": " 1994 ",
+            "selected": false
+          },
+          {
+            "value": "1995",
+            "text": " 1995 ",
+            "selected": false
+          },
+          {
+            "value": "1996",
+            "text": " 1996 ",
+            "selected": false
+          },
+          {
+            "value": "1997",
+            "text": " 1997 ",
+            "selected": false
+          },
+          {
+            "value": "1998",
+            "text": " 1998 ",
+            "selected": false
+          },
+          {
+            "value": "1999",
+            "text": " 1999 ",
+            "selected": false
+          },
+          {
+            "value": "2000",
+            "text": " 2000 ",
+            "selected": false
+          },
+          {
+            "value": "2001",
+            "text": " 2001 ",
+            "selected": false
+          },
+          {
+            "value": "2002",
+            "text": " 2002 ",
+            "selected": false
+          },
+          {
+            "value": "2003",
+            "text": " 2003 ",
+            "selected": false
+          },
+          {
+            "value": "2004",
+            "text": " 2004 ",
+            "selected": false
+          },
+          {
+            "value": "2005",
+            "text": " 2005 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V1",
+        "id": "SD26.V1",
+        "label": "Age Groups, Broad",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "0-4",
+            "text": " 0-4 years ",
+            "selected": false
+          },
+          {
+            "value": "5-14",
+            "text": " 5-14 years ",
+            "selected": false
+          },
+          {
+            "value": "15-24",
+            "text": " 15-24 years ",
+            "selected": false
+          },
+          {
+            "value": "25-44",
+            "text": " 25-44 years ",
+            "selected": false
+          },
+          {
+            "value": "45-64",
+            "text": " 45-64 years ",
+            "selected": false
+          },
+          {
+            "value": "65+",
+            "text": " 65+ years ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V2",
+        "id": "SD26.V2",
+        "label": "Age Groups, Standard",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1-4",
+            "text": " 1-4 years ",
+            "selected": false
+          },
+          {
+            "value": "5-14",
+            "text": " 5-14 years ",
+            "selected": false
+          },
+          {
+            "value": "15-24",
+            "text": " 15-24 years ",
+            "selected": false
+          },
+          {
+            "value": "25-34",
+            "text": " 25-34 years ",
+            "selected": false
+          },
+          {
+            "value": "35-44",
+            "text": " 35-44 years ",
+            "selected": false
+          },
+          {
+            "value": "45-54",
+            "text": " 45-54 years ",
+            "selected": false
+          },
+          {
+            "value": "55-64",
+            "text": " 55-64 years ",
+            "selected": false
+          },
+          {
+            "value": "65-74",
+            "text": " 65-74 years ",
+            "selected": false
+          },
+          {
+            "value": "75-84",
+            "text": " 75-84 years ",
+            "selected": false
+          },
+          {
+            "value": "85+",
+            "text": " 85+ years ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 13
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V13",
+        "id": "SD26.V13",
+        "label": "Occupation",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Health Care ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Correctional ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Migratory Agricultural ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Other ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Multiple ",
+            "selected": false
+          },
+          {
+            "value": "0",
+            "text": " Not Employed ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V16",
+        "id": "SD26.V16",
+        "label": "Race / Ethnicity",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1002-5",
+            "text": " American Indian or Alaska Native, Non-Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "A-PI",
+            "text": " Asian or Pacific Islander, Non-Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American, Non-Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White, Non-Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "2135-2",
+            "text": " Hispanic or Latino ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V17",
+        "id": "SD26.V17",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V14",
+        "id": "SD26.V14",
+        "label": "U.S. or Foreign Born",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " US - Born ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Foreign - Born ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V21",
+        "id": "SD26.V21",
+        "label": "Years in U.S.",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1-4",
+            "text": " 1-4 years ",
+            "selected": false
+          },
+          {
+            "value": "5-14",
+            "text": " 5-14 years ",
+            "selected": false
+          },
+          {
+            "value": "15+",
+            "text": " 15+ years ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Applicable ",
+            "selected": false
+          }
+        ],
+        "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V7",
+        "id": "SD26.V7",
+        "label": "HIV Status",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " Negative ",
+            "selected": false
+          },
+          {
+            "value": "P",
+            "text": " Positive ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V24",
+        "id": "SD26.V24",
+        "label": "Residence at Diagnosis",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Correctional Facility ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Long-term Care Facility ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Not in a Facility ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V4",
+        "id": "SD26.V4",
+        "label": "Correctional Facility",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V11",
+        "id": "SD26.V11",
+        "label": "Long-term Care Facility",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V8",
+        "id": "SD26.V8",
+        "label": "Homeless in Past Year",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V3",
+        "id": "SD26.V3",
+        "label": "Alcohol Use",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V9",
+        "id": "SD26.V9",
+        "label": "Drug Use, Injecting",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V10",
+        "id": "SD26.V10",
+        "label": "Drug Use, Non-injecting",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V5",
+        "id": "SD26.V5",
+        "label": "Disease Site",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Pulmonary ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Extrapulmonary ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Both ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V12",
+        "id": "SD26.V12",
+        "label": "Multidrug-Resistant",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Applicable ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V15",
+        "id": "SD26.V15",
+        "label": "Previous TB",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V19",
+        "id": "SD26.V19",
+        "label": "Verification Criteria",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Positive Culture ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Positive Smear ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Clinical Case Definition ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Provider Diagnosis ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V6",
+        "id": "SD26.V6",
+        "label": "Directly Observed Therapy",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Self Only ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Direct Only ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Both ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Applicable ",
+            "selected": false
+          }
+        ],
+        "option_count": 6
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V18",
+        "id": "SD26.V18",
+        "label": "Vital Status",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Alive ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Dead ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V25",
+        "id": "SD26.V25",
+        "label": "Completion of Therapy Within One Year",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Applicable ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V26",
+        "id": "SD26.V26",
+        "label": "Tested for Isoniazid Susceptibility",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Applicable ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D26.V27",
+        "id": "SD26.V27",
+        "label": "Tested for Isoniazid & Rifampin Susceptibility",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Values ",
+            "selected": true
+          },
+          {
+            "value": "N",
+            "text": " No ",
+            "selected": false
+          },
+          {
+            "value": "Y",
+            "text": " Yes ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Applicable ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": " 0 ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 2 ",
+            "selected": true
+          },
+          {
+            "value": "3",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 9 ",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D26",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "OTIS 2005 TB Data, Archive",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D26.M1",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_2",
+        "id": "",
+        "label": "",
+        "value": "D26.M2",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_rate_per",
+        "id": "",
+        "label": "",
+        "value": "100000",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_11",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_1",
+        "id": "CM_1",
+        "label": "Count",
+        "value": "D26.M1",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_2",
+        "id": "CM_2",
+        "label": "Percent of Total",
+        "value": "D26.M2",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_3",
+        "id": "CM_3",
+        "label": "Incidence Rate per 100,000 (Only allowed for Year, Age Groups, Sex, Race/Ethnicity, State)",
+        "value": "D26.M3",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_7",
+        "id": "CM_7",
+        "label": "Percent of Completion of Therapy Within One Year Among Those Eligible",
+        "value": "D26.M7",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_9",
+        "id": "CM_9",
+        "label": "Percentage Tested for Drug Susceptibility to Isoniazid",
+        "value": "D26.M9",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_A",
+        "id": "CM_A",
+        "label": "Percentage Tested for Drug Susceptibility to Isoniazid & Rifampin",
+        "value": "D26.MA",
+        "checked": false
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD26.V22",
+        "label": "State",
+        "value": "D26.V22",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD26.V23",
+        "label": "MSA",
+        "value": "D26.V23",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD26.V1",
+        "label": "Age Groups, Broad",
+        "value": "D26.V1",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD26.V2",
+        "label": "Age Groups, Standard",
+        "value": "D26.V2",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_suppressed",
+        "id": "CO_show_suppressed",
+        "label": "Show Suppressed Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
     "textareas": []
   },
   "summary": {
-    "total_selects": 0,
-    "total_inputs": 0,
+    "total_selects": 35,
+    "total_inputs": 42,
     "total_textareas": 0,
-    "total_parameters": 0
+    "total_parameters": 77
   },
   "dataset_id": "D26"
 }

@@ -1,18 +1,4629 @@
 {
   "url": "http://wonder.cdc.gov/lbd-current.html",
-  "final_url": "https://wonder.cdc.gov/lbd-current.html",
-  "page_title": "502 Bad Gateway",
-  "forms": [],
+  "final_url": "https://wonder.cdc.gov/controller/datarequest/D69",
+  "page_title": "Linked Birth / Infant Death Records, 2007-2023 Request Form",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D69;jsessionid=565DEABB99C653D172C81DD90502",
+      "method": "POST"
+    }
+  ],
   "parameters": {
-    "selects": [],
-    "inputs": [],
-    "textareas": []
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D69.V19-level1",
+            "text": "Census Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level2",
+            "text": "Census Division",
+            "selected": false
+          },
+          {
+            "value": "D69.V26-level1",
+            "text": "HHS Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D69.V4",
+            "text": "Mother's Bridged Race/Hispanic Origin",
+            "selected": false
+          },
+          {
+            "value": "D69.V2",
+            "text": "Mother's Bridged Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V42",
+            "text": "Mother's Single Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V11",
+            "text": "Mother's Marital Status",
+            "selected": false
+          },
+          {
+            "value": "D69.V1",
+            "text": "Age of Mother",
+            "selected": false
+          },
+          {
+            "value": "D69.V5",
+            "text": "Mother's Education",
+            "selected": false
+          },
+          {
+            "value": "D69.V24",
+            "text": "LMP Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V6",
+            "text": "LMP Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V25",
+            "text": "LMP Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V31",
+            "text": "OE Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V30",
+            "text": "OE Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V32",
+            "text": "OE Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V7",
+            "text": "Month Prenatal Care Began",
+            "selected": false
+          },
+          {
+            "value": "D69.V8",
+            "text": "Birth Weight",
+            "selected": false
+          },
+          {
+            "value": "D69.V15",
+            "text": "Plurality or Multiple Birth",
+            "selected": false
+          },
+          {
+            "value": "D69.V12",
+            "text": "Live Birth Order",
+            "selected": false
+          },
+          {
+            "value": "D69.V21",
+            "text": "Birthplace",
+            "selected": false
+          },
+          {
+            "value": "D69.V22",
+            "text": "Delivery Method",
+            "selected": false
+          },
+          {
+            "value": "D69.V20",
+            "text": "Medical Attendant",
+            "selected": false
+          },
+          {
+            "value": "D69.V29",
+            "text": "15 Leading Causes of Death (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D69.V18",
+            "text": "ICD-10 130 Cause List (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V13",
+            "text": "Age of Infant at Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V9",
+            "text": "Year of Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V3",
+            "text": "Sex",
+            "selected": false
+          }
+        ],
+        "option_count": 32
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level1",
+            "text": "Census Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level2",
+            "text": "Census Division",
+            "selected": false
+          },
+          {
+            "value": "D69.V26-level1",
+            "text": "HHS Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D69.V4",
+            "text": "Mother's Bridged Race/Hispanic Origin",
+            "selected": false
+          },
+          {
+            "value": "D69.V2",
+            "text": "Mother's Bridged Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V42",
+            "text": "Mother's Single Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V11",
+            "text": "Mother's Marital Status",
+            "selected": false
+          },
+          {
+            "value": "D69.V1",
+            "text": "Age of Mother",
+            "selected": false
+          },
+          {
+            "value": "D69.V5",
+            "text": "Mother's Education",
+            "selected": false
+          },
+          {
+            "value": "D69.V24",
+            "text": "LMP Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V6",
+            "text": "LMP Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V25",
+            "text": "LMP Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V31",
+            "text": "OE Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V30",
+            "text": "OE Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V32",
+            "text": "OE Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V7",
+            "text": "Month Prenatal Care Began",
+            "selected": false
+          },
+          {
+            "value": "D69.V8",
+            "text": "Birth Weight",
+            "selected": false
+          },
+          {
+            "value": "D69.V15",
+            "text": "Plurality or Multiple Birth",
+            "selected": false
+          },
+          {
+            "value": "D69.V12",
+            "text": "Live Birth Order",
+            "selected": false
+          },
+          {
+            "value": "D69.V21",
+            "text": "Birthplace",
+            "selected": false
+          },
+          {
+            "value": "D69.V22",
+            "text": "Delivery Method",
+            "selected": false
+          },
+          {
+            "value": "D69.V20",
+            "text": "Medical Attendant",
+            "selected": false
+          },
+          {
+            "value": "D69.V29",
+            "text": "15 Leading Causes of Death (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D69.V18",
+            "text": "ICD-10 130 Cause List (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V13",
+            "text": "Age of Infant at Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V9",
+            "text": "Year of Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V3",
+            "text": "Sex",
+            "selected": false
+          }
+        ],
+        "option_count": 33
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level1",
+            "text": "Census Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level2",
+            "text": "Census Division",
+            "selected": false
+          },
+          {
+            "value": "D69.V26-level1",
+            "text": "HHS Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D69.V4",
+            "text": "Mother's Bridged Race/Hispanic Origin",
+            "selected": false
+          },
+          {
+            "value": "D69.V2",
+            "text": "Mother's Bridged Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V42",
+            "text": "Mother's Single Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V11",
+            "text": "Mother's Marital Status",
+            "selected": false
+          },
+          {
+            "value": "D69.V1",
+            "text": "Age of Mother",
+            "selected": false
+          },
+          {
+            "value": "D69.V5",
+            "text": "Mother's Education",
+            "selected": false
+          },
+          {
+            "value": "D69.V24",
+            "text": "LMP Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V6",
+            "text": "LMP Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V25",
+            "text": "LMP Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V31",
+            "text": "OE Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V30",
+            "text": "OE Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V32",
+            "text": "OE Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V7",
+            "text": "Month Prenatal Care Began",
+            "selected": false
+          },
+          {
+            "value": "D69.V8",
+            "text": "Birth Weight",
+            "selected": false
+          },
+          {
+            "value": "D69.V15",
+            "text": "Plurality or Multiple Birth",
+            "selected": false
+          },
+          {
+            "value": "D69.V12",
+            "text": "Live Birth Order",
+            "selected": false
+          },
+          {
+            "value": "D69.V21",
+            "text": "Birthplace",
+            "selected": false
+          },
+          {
+            "value": "D69.V22",
+            "text": "Delivery Method",
+            "selected": false
+          },
+          {
+            "value": "D69.V20",
+            "text": "Medical Attendant",
+            "selected": false
+          },
+          {
+            "value": "D69.V29",
+            "text": "15 Leading Causes of Death (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D69.V18",
+            "text": "ICD-10 130 Cause List (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V13",
+            "text": "Age of Infant at Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V9",
+            "text": "Year of Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V3",
+            "text": "Sex",
+            "selected": false
+          }
+        ],
+        "option_count": 33
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level1",
+            "text": "Census Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level2",
+            "text": "Census Division",
+            "selected": false
+          },
+          {
+            "value": "D69.V26-level1",
+            "text": "HHS Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D69.V4",
+            "text": "Mother's Bridged Race/Hispanic Origin",
+            "selected": false
+          },
+          {
+            "value": "D69.V2",
+            "text": "Mother's Bridged Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V42",
+            "text": "Mother's Single Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V11",
+            "text": "Mother's Marital Status",
+            "selected": false
+          },
+          {
+            "value": "D69.V1",
+            "text": "Age of Mother",
+            "selected": false
+          },
+          {
+            "value": "D69.V5",
+            "text": "Mother's Education",
+            "selected": false
+          },
+          {
+            "value": "D69.V24",
+            "text": "LMP Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V6",
+            "text": "LMP Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V25",
+            "text": "LMP Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V31",
+            "text": "OE Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V30",
+            "text": "OE Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V32",
+            "text": "OE Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V7",
+            "text": "Month Prenatal Care Began",
+            "selected": false
+          },
+          {
+            "value": "D69.V8",
+            "text": "Birth Weight",
+            "selected": false
+          },
+          {
+            "value": "D69.V15",
+            "text": "Plurality or Multiple Birth",
+            "selected": false
+          },
+          {
+            "value": "D69.V12",
+            "text": "Live Birth Order",
+            "selected": false
+          },
+          {
+            "value": "D69.V21",
+            "text": "Birthplace",
+            "selected": false
+          },
+          {
+            "value": "D69.V22",
+            "text": "Delivery Method",
+            "selected": false
+          },
+          {
+            "value": "D69.V20",
+            "text": "Medical Attendant",
+            "selected": false
+          },
+          {
+            "value": "D69.V29",
+            "text": "15 Leading Causes of Death (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D69.V18",
+            "text": "ICD-10 130 Cause List (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V13",
+            "text": "Age of Infant at Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V9",
+            "text": "Year of Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V3",
+            "text": "Sex",
+            "selected": false
+          }
+        ],
+        "option_count": 33
+      },
+      {
+        "type": "select",
+        "name": "B_5",
+        "id": "SB_5",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level1",
+            "text": "Census Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V19-level2",
+            "text": "Census Division",
+            "selected": false
+          },
+          {
+            "value": "D69.V26-level1",
+            "text": "HHS Region",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level1",
+            "text": "State",
+            "selected": false
+          },
+          {
+            "value": "D69.V10-level2",
+            "text": "County",
+            "selected": false
+          },
+          {
+            "value": "D69.V4",
+            "text": "Mother's Bridged Race/Hispanic Origin",
+            "selected": false
+          },
+          {
+            "value": "D69.V2",
+            "text": "Mother's Bridged Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V42",
+            "text": "Mother's Single Race",
+            "selected": false
+          },
+          {
+            "value": "D69.V11",
+            "text": "Mother's Marital Status",
+            "selected": false
+          },
+          {
+            "value": "D69.V1",
+            "text": "Age of Mother",
+            "selected": false
+          },
+          {
+            "value": "D69.V5",
+            "text": "Mother's Education",
+            "selected": false
+          },
+          {
+            "value": "D69.V24",
+            "text": "LMP Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V6",
+            "text": "LMP Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V25",
+            "text": "LMP Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V31",
+            "text": "OE Gestational Age 11",
+            "selected": false
+          },
+          {
+            "value": "D69.V30",
+            "text": "OE Gestational Age 10",
+            "selected": false
+          },
+          {
+            "value": "D69.V32",
+            "text": "OE Gestational Age Weekly",
+            "selected": false
+          },
+          {
+            "value": "D69.V7",
+            "text": "Month Prenatal Care Began",
+            "selected": false
+          },
+          {
+            "value": "D69.V8",
+            "text": "Birth Weight",
+            "selected": false
+          },
+          {
+            "value": "D69.V15",
+            "text": "Plurality or Multiple Birth",
+            "selected": false
+          },
+          {
+            "value": "D69.V12",
+            "text": "Live Birth Order",
+            "selected": false
+          },
+          {
+            "value": "D69.V21",
+            "text": "Birthplace",
+            "selected": false
+          },
+          {
+            "value": "D69.V22",
+            "text": "Delivery Method",
+            "selected": false
+          },
+          {
+            "value": "D69.V20",
+            "text": "Medical Attendant",
+            "selected": false
+          },
+          {
+            "value": "D69.V29",
+            "text": "15 Leading Causes of Death (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level1",
+            "text": "ICD Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level2",
+            "text": "ICD Sub-Chapter",
+            "selected": false
+          },
+          {
+            "value": "D69.V16-level3",
+            "text": "Cause of death",
+            "selected": false
+          },
+          {
+            "value": "D69.V18",
+            "text": "ICD-10 130 Cause List (Infants)",
+            "selected": false
+          },
+          {
+            "value": "D69.V13",
+            "text": "Age of Infant at Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V9",
+            "text": "Year of Death",
+            "selected": false
+          },
+          {
+            "value": "D69.V3",
+            "text": "Sex",
+            "selected": false
+          }
+        ],
+        "option_count": 33
+      },
+      {
+        "type": "select",
+        "name": "O_rate_per",
+        "id": "SO_rate_per",
+        "label": "Calculate Rates Per",
+        "multiple": false,
+        "options": [
+          {
+            "value": "1000",
+            "text": " 1,000 ",
+            "selected": true
+          },
+          {
+            "value": "100000",
+            "text": " 100,000 ",
+            "selected": false
+          }
+        ],
+        "option_count": 2
+      },
+      {
+        "type": "select",
+        "name": "F_D69.V10",
+        "id": "codes-D69.V10",
+        "label": "States",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": "+ 01  (Alabama)  ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "+ 02  (Alaska)  ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "+ 04  (Arizona)  ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "+ 05  (Arkansas)  ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "+ 06  (California)  ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "+ 08  (Colorado)  ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "+ 09  (Connecticut)  ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "+ 10  (Delaware)  ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "+ 11  (District of Columbia)  ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "+ 12  (Florida)  ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "+ 13  (Georgia)  ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "+ 15  (Hawaii)  ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "+ 16  (Idaho)  ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "+ 17  (Illinois)  ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "+ 18  (Indiana)  ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "+ 19  (Iowa)  ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "+ 20  (Kansas)  ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "+ 21  (Kentucky)  ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "+ 22  (Louisiana)  ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "+ 23  (Maine)  ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "+ 24  (Maryland)  ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "+ 25  (Massachusetts)  ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "+ 26  (Michigan)  ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "+ 27  (Minnesota)  ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "+ 28  (Mississippi)  ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "+ 29  (Missouri)  ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "+ 30  (Montana)  ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "+ 31  (Nebraska)  ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "+ 32  (Nevada)  ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "+ 33  (New Hampshire)  ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "+ 34  (New Jersey)  ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "+ 35  (New Mexico)  ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": "+ 36  (New York)  ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "+ 37  (North Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "+ 38  (North Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "+ 39  (Ohio)  ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "+ 40  (Oklahoma)  ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "+ 41  (Oregon)  ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "+ 42  (Pennsylvania)  ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "+ 44  (Rhode Island)  ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "+ 45  (South Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "+ 46  (South Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "+ 47  (Tennessee)  ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "+ 48  (Texas)  ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "+ 49  (Utah)  ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "+ 50  (Vermont)  ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "+ 51  (Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "+ 53  (Washington)  ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "+ 54  (West Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "+ 55  (Wisconsin)  ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "+ 56  (Wyoming)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 52
+      },
+      {
+        "type": "select",
+        "name": "F_D69.V19",
+        "id": "codes-D69.V19",
+        "label": "Census Regions",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "CENS-R1",
+            "text": "+ CENS-R1  (Census Region 1: Northeast)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R2",
+            "text": "+ CENS-R2  (Census Region 2: Midwest)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R3",
+            "text": "+ CENS-R3  (Census Region 3: South)  ",
+            "selected": false
+          },
+          {
+            "value": "CENS-R4",
+            "text": "+ CENS-R4  (Census Region 4: West)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "F_D69.V26",
+        "id": "codes-D69.V26",
+        "label": "HHS Regions",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States)",
+            "selected": true
+          },
+          {
+            "value": "HHS1",
+            "text": "+ HHS1  (HHS Region #1  CT, ME, MA, NH, RI, VT)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS2",
+            "text": "+ HHS2  (HHS Region #2  NJ, NY)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS3",
+            "text": "+ HHS3  (HHS Region #3  DE, DC, MD, PA, VA, WV)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS4",
+            "text": "+ HHS4  (HHS Region #4  AL, FL, GA, KY, MS, NC, SC, TN)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS5",
+            "text": "+ HHS5  (HHS Region #5  IL, IN, MI, MN, OH, WI)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS6",
+            "text": "+ HHS6  (HHS Region #6  AR, LA, NM, OK, TX)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS7",
+            "text": "+ HHS7  (HHS Region #7  IA, KS, MO, NE)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS8",
+            "text": "+ HHS8  (HHS Region #8  CO, MT, ND, SD, UT, WY)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS9",
+            "text": "+ HHS9  (HHS Region #9  AZ, CA, HI, NV)  ",
+            "selected": false
+          },
+          {
+            "value": "HHS10",
+            "text": "+ HHS10  (HHS Region #10  AK, ID, OR, WA)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V4",
+        "id": "SD69.V4",
+        "label": "Mother's Bridged Race/Hispanic Origin",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Origins ",
+            "selected": true
+          },
+          {
+            "value": "2148-5",
+            "text": " Mexican ",
+            "selected": false
+          },
+          {
+            "value": "2180-8",
+            "text": " Puerto Rican ",
+            "selected": false
+          },
+          {
+            "value": "2182-4",
+            "text": " Cuban ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Central or South American ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Other and Unknown Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " Non-Hispanic White ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " Non-Hispanic Black ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " Non-Hispanic other races ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Origin unknown or not stated ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Not Available ",
+            "selected": false
+          },
+          {
+            "value": "100",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 12
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V11",
+        "id": "SD69.V11",
+        "label": "Mother's Marital Status",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Married ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Unmarried ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V1",
+        "id": "SD69.V1",
+        "label": "Age of Mother",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "15",
+            "text": " Under 15 years ",
+            "selected": false
+          },
+          {
+            "value": "15-19",
+            "text": " 15-19 years ",
+            "selected": false
+          },
+          {
+            "value": "20-24",
+            "text": " 20-24 years ",
+            "selected": false
+          },
+          {
+            "value": "25-29",
+            "text": " 25-29 years ",
+            "selected": false
+          },
+          {
+            "value": "30-34",
+            "text": " 30-34 years ",
+            "selected": false
+          },
+          {
+            "value": "35-39",
+            "text": " 35-39 years ",
+            "selected": false
+          },
+          {
+            "value": "40-44",
+            "text": " 40-44 years ",
+            "selected": false
+          },
+          {
+            "value": "45-49",
+            "text": " 45-49 years ",
+            "selected": false
+          },
+          {
+            "value": "50+",
+            "text": " 50 years and over ",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V5",
+        "id": "SD69.V5",
+        "label": "Mother's Education",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Groups ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " 8th grade or less ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 9th through 12th grade with no diploma ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " High school graduate or GED completed ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Some college credit, but not a degree ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Associate degree (AA, AS) ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " Bachelor's degree (BA, AB, BS) ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " Master's degree (MA, MS, MEng, MEd, MSW, MBA) ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " Doctorate (PhD, EdD) or Professional Degree (MD, DDS, DVM, LLB, JD) ",
+            "selected": false
+          },
+          {
+            "value": "Unk",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          },
+          {
+            "value": "Exc",
+            "text": " Excluded ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 12
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V42",
+        "id": "SD69.V42",
+        "label": "Mother's Single Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "1002-5",
+            "text": " American Indian or Alaska Native ",
+            "selected": false
+          },
+          {
+            "value": "A",
+            "text": " Asian ",
+            "selected": false
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "NHOPI",
+            "text": " Native Hawaiian or Other Pacific Islander ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " More than one race ",
+            "selected": false
+          },
+          {
+            "value": "UNK",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Available ",
+            "selected": false
+          },
+          {
+            "value": "NR",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V2",
+        "id": "SD69.V2",
+        "label": "Mother's Bridged Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "1002-5",
+            "text": " American Indian or Alaska Native ",
+            "selected": false
+          },
+          {
+            "value": "A-PI",
+            "text": " Asian or Pacific Islander ",
+            "selected": false
+          },
+          {
+            "value": "2054-5",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "2106-3",
+            "text": " White ",
+            "selected": false
+          },
+          {
+            "value": "100",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 6
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V7",
+        "id": "SD69.V7",
+        "label": "Month Prenatal Care Began",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Months ",
+            "selected": true
+          },
+          {
+            "value": "00",
+            "text": " No prenatal care ",
+            "selected": false
+          },
+          {
+            "value": "01",
+            "text": " 1st month ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 2nd month ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 3rd month ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 4th month ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 5th month ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " 6th month ",
+            "selected": false
+          },
+          {
+            "value": "07",
+            "text": " 7th month ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " 8th month ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " 9th month ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " 10th month ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          },
+          {
+            "value": "98",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 14
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V8",
+        "id": "SD69.V8",
+        "label": "Birth Weight",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Weights ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " 499 grams or less ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 500 - 999 grams ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 1000 - 1499 grams ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 1500 - 1999 grams ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 2000 - 2499 grams ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " 2500 - 2999 grams ",
+            "selected": false
+          },
+          {
+            "value": "07",
+            "text": " 3000 - 3499 grams ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " 3500 - 3999 grams ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " 4000 - 4499 grams ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " 4500 - 4999 grams ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " 5000 - 8165 grams ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 13
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V12",
+        "id": "SD69.V12",
+        "label": "Live Birth Order",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Orders ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " 1st child born alive to mother ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 2nd child born alive to mother ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 3rd child born alive to mother ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 4th child born alive to mother ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 5th child born alive to mother ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " 6th child and over born alive to mother ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown or not stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V15",
+        "id": "SD69.V15",
+        "label": "Plurality or Multiple Birth",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Pluralities ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Single ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Twin ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Triplet or higher ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V21",
+        "id": "SD69.V21",
+        "label": "Birthplace",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Locations ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " In Hospital ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Not in Hospital ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V22",
+        "id": "SD69.V22",
+        "label": "Delivery Method",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Methods ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Vaginal ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Cesarean ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V20",
+        "id": "SD69.V20",
+        "label": "Medical Attendant",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Attendants ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Doctor of Medicine(MD) ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Doctor of Osteopathy(DO) ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Certified Nurse Midwife(CNM/CM) ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Other Midwife ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Other ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Unknown or not stated ",
+            "selected": false
+          },
+          {
+            "value": "100",
+            "text": " Not Reported ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V24",
+        "id": "SD69.V24",
+        "label": "LMP Gestational Age 11",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Weeks ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " Under 20 weeks ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 20-27 weeks ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 28-31 weeks ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 32-33 weeks ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 34-36 weeks ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " 37-38 weeks ",
+            "selected": false
+          },
+          {
+            "value": "07",
+            "text": " 39 weeks ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " 40 weeks ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " 41 weeks ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " 42 weeks or more ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 12
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V6",
+        "id": "SD69.V6",
+        "label": "LMP Gestational Age 10",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Weeks ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " Under 20 weeks ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 20 - 27 weeks ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 28 - 31 weeks ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 32 - 35 weeks ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 36 weeks ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " 37 - 39 weeks ",
+            "selected": false
+          },
+          {
+            "value": "07",
+            "text": " 40 weeks ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " 41 weeks ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " 42 weeks or more ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V25",
+        "id": "SD69.V25",
+        "label": "LMP Gestational Age Weekly",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Weeks ",
+            "selected": true
+          },
+          {
+            "value": "17",
+            "text": " 17 weeks ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": " 18 weeks ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": " 19 weeks ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": " 20 weeks ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": " 21 weeks ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": " 22 weeks ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": " 23 weeks ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": " 24 weeks ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": " 25 weeks ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": " 26 weeks ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": " 27 weeks ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": " 28 weeks ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": " 29 weeks ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": " 30 weeks ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": " 31 weeks ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": " 32 weeks ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": " 33 weeks ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": " 34 weeks ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": " 35 weeks ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": " 36 weeks ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": " 37 weeks ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": " 38 weeks ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": " 39 weeks ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": " 40 weeks ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": " 41 weeks ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": " 42 weeks ",
+            "selected": false
+          },
+          {
+            "value": "43",
+            "text": " 43 weeks ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": " 44 weeks ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": " 45 weeks ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": " 46 weeks ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": " 47 weeks ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown or Not Stated ",
+            "selected": false
+          }
+        ],
+        "option_count": 33
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V31",
+        "id": "SD69.V31",
+        "label": "OE Gestational Age 11",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Weeks ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " Under 20 weeks ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 20-27 weeks ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 28-31 weeks ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 32-33 weeks ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 34-36 weeks ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " 37-38 weeks ",
+            "selected": false
+          },
+          {
+            "value": "07",
+            "text": " 39 weeks ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " 40 weeks ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " 41 weeks ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " 42 or more weeks ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " Unknown ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 13
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V30",
+        "id": "SD69.V30",
+        "label": "OE Gestational Age 10",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Weeks ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " Under 20 weeks ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 20 - 27 weeks ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 28 - 31 weeks ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 32 - 35 weeks ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 36 weeks ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": " 37 - 39 weeks ",
+            "selected": false
+          },
+          {
+            "value": "07",
+            "text": " 40 weeks ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": " 41 weeks ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": " 42 weeks or more ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Unknown ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 12
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V32",
+        "id": "SD69.V32",
+        "label": "OE Gestational Age Weekly",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Weeks ",
+            "selected": true
+          },
+          {
+            "value": "17",
+            "text": " 17 weeks ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": " 18 weeks ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": " 19 weeks ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": " 20 weeks ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": " 21 weeks ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": " 22 weeks ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": " 23 weeks ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": " 24 weeks ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": " 25 weeks ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": " 26 weeks ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": " 27 weeks ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": " 28 weeks ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": " 29 weeks ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": " 30 weeks ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": " 31 weeks ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": " 32 weeks ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": " 33 weeks ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": " 34 weeks ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": " 35 weeks ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": " 36 weeks ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": " 37 weeks ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": " 38 weeks ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": " 39 weeks ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": " 40 weeks ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": " 41 weeks ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": " 42 weeks ",
+            "selected": false
+          },
+          {
+            "value": "43",
+            "text": " 43 weeks ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": " 44 weeks ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": " 45 weeks ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": " 46 weeks ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": " 47 weeks ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown ",
+            "selected": false
+          },
+          {
+            "value": "NA",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 34
+      },
+      {
+        "type": "select",
+        "name": "F_D69.V16",
+        "id": "codes-D69.V16",
+        "label": "ICD-10 Codes",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (All Causes of Death)",
+            "selected": true
+          },
+          {
+            "value": "A00-B99",
+            "text": "+ A00-B99  (Certain infectious and parasitic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "C00-D48",
+            "text": "+ C00-D48  (Neoplasms)  ",
+            "selected": false
+          },
+          {
+            "value": "D50-D89",
+            "text": "+ D50-D89  (Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism)  ",
+            "selected": false
+          },
+          {
+            "value": "E00-E88",
+            "text": "+ E00-E88  (Endocrine, nutritional and metabolic diseases)  ",
+            "selected": false
+          },
+          {
+            "value": "F01-F99",
+            "text": "+ F01-F99  (Mental and behavioural disorders)  ",
+            "selected": false
+          },
+          {
+            "value": "G00-G98",
+            "text": "+ G00-G98  (Diseases of the nervous system)  ",
+            "selected": false
+          },
+          {
+            "value": "H00-H57",
+            "text": "+ H00-H57  (Diseases of the eye and adnexa)  ",
+            "selected": false
+          },
+          {
+            "value": "H60-H93",
+            "text": "+ H60-H93  (Diseases of the ear and mastoid process)  ",
+            "selected": false
+          },
+          {
+            "value": "I00-I99",
+            "text": "+ I00-I99  (Diseases of the circulatory system)  ",
+            "selected": false
+          },
+          {
+            "value": "J00-J98",
+            "text": "+ J00-J98  (Diseases of the respiratory system)  ",
+            "selected": false
+          },
+          {
+            "value": "K00-K92",
+            "text": "+ K00-K92  (Diseases of the digestive system)  ",
+            "selected": false
+          },
+          {
+            "value": "L00-L98",
+            "text": "+ L00-L98  (Diseases of the skin and subcutaneous tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "M00-M99",
+            "text": "+ M00-M99  (Diseases of the musculoskeletal system and connective tissue)  ",
+            "selected": false
+          },
+          {
+            "value": "N00-N98",
+            "text": "+ N00-N98  (Diseases of the genitourinary system)  ",
+            "selected": false
+          },
+          {
+            "value": "O00-O99",
+            "text": "+ O00-O99  (Pregnancy, childbirth and the puerperium)  ",
+            "selected": false
+          },
+          {
+            "value": "P00-P96",
+            "text": "+ P00-P96  (Certain conditions originating in the perinatal period)  ",
+            "selected": false
+          },
+          {
+            "value": "Q00-Q99",
+            "text": "+ Q00-Q99  (Congenital malformations, deformations and chromosomal abnormalities)  ",
+            "selected": false
+          },
+          {
+            "value": "R00-R99",
+            "text": "+ R00-R99  (Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified)  ",
+            "selected": false
+          },
+          {
+            "value": "U00-U99",
+            "text": "+ U00-U99  (Codes for special purposes)  ",
+            "selected": false
+          },
+          {
+            "value": "V01-Y89",
+            "text": "+ V01-Y89  (External causes of morbidity and mortality)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 21
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V18",
+        "id": "SD69.V18",
+        "label": "ICD-10 130 Cause List (Infants)",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Causes of Death ",
+            "selected": true
+          },
+          {
+            "value": "GR130-001",
+            "text": " Certain infectious and parasitic diseases (A00-B99,U07.1) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-002",
+            "text": "    Certain intestinal infectious diseases (A00-A08) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-003",
+            "text": "    #Diarrhea and gastroenteritis of infectious origin (A09) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-004",
+            "text": "    #Tuberculosis (A16-A19) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-005",
+            "text": "    #Tetanus (A33,A35) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-006",
+            "text": "    #Diphtheria (A36) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-007",
+            "text": "    #Whooping cough (A37) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-008",
+            "text": "    #Meningococcal infection (A39) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-009",
+            "text": "    #Septicemia (A40-A41) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-010",
+            "text": "    #Congenital syphilis (A50) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-011",
+            "text": "    #Gonococcal infection (A54) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-012",
+            "text": "    Viral diseases (A80-B34,U07.1) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-013",
+            "text": "       #Acute poliomyelitis (A80) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-014",
+            "text": "       #Varicella (chickenpox) (B01) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-015",
+            "text": "       #Measles (B05) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-016",
+            "text": "       #Human immunodeficiency virus (HIV) disease (B20-B24) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-017",
+            "text": "       #Mumps (B26) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-018",
+            "text": "       Other and unspecified viral diseases (A81-B00,B02-B04,B06-B19,B25,B27-B34,U07.1) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-019",
+            "text": "    #Candidiasis (B37) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-020",
+            "text": "    #Malaria (B50-B54) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-021",
+            "text": "    #Pneumocystosis (B59) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-022",
+            "text": "    All other and unspecified infectious and parasitic diseases (A20-A32,A38,A42-A49,A51-A53,A55-A79,B35-B36,B38-B49,B55-B58,B60-B99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-023",
+            "text": " Neoplasms (C00-D48) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-024",
+            "text": "    #Malignant neoplasms (C00-C97) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-025",
+            "text": "       Hodgkin disease and non-Hodgkin lymphomas (C81-C85) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-026",
+            "text": "       Leukemia (C91-C95) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-027",
+            "text": "       Other and unspecified malignant neoplasms (C00-C80,C88,C90,C96-C97) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-028",
+            "text": "    #In situ neoplasms, benign neoplasms and neoplasms of uncertain or unknown behavior (D00-D48) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-029",
+            "text": " #Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism (D50-D89) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-030",
+            "text": "    Anemias (D50-D64) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-031",
+            "text": "    Hemorrhagic conditions and other diseases of blood and blood-forming organs (D65-D76) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-032",
+            "text": "    Certain disorders involving the immune mechanism (D80-D89) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-033",
+            "text": " Endocrine, nutritional and metabolic diseases (E00-E88) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-034",
+            "text": "    #Short stature, not elsewhere classified (E34.3) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-035",
+            "text": "    #Nutritional deficiencies (E40-E64) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-036",
+            "text": "    #Cystic fibrosis (E84) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-037",
+            "text": "    #Volume depletion, disorders of fluid, electrolyte and acid-base balance (E86-E87) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-038",
+            "text": "    All other endocrine, nutritional and metabolic diseases (E00-E32,E34.0-E34.2,E34.4-E34.9,E65-E83,E85,E88) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-039",
+            "text": " Diseases of the nervous system (G00-G98) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-040",
+            "text": "    #Meningitis (G00,G03) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-041",
+            "text": "    #Infantile spinal muscular atrophy, type I (Werdnig-Hoffman) (G12.0) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-042",
+            "text": "    #Infantile cerebral palsy (G80) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-043",
+            "text": "    #Anoxic brain damage, not elsewhere classified (G93.1) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-044",
+            "text": "    Other diseases of nervous system (G04,G06-G11,G12.1-G12.9,G20-G72,G81-G92,G93.0,G93.2-G93.9,G95-G98) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-045",
+            "text": " #Diseases of the ear and mastoid process (H60-H93) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-046",
+            "text": " #Diseases of the circulatory system (I00-I99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-047",
+            "text": "    Pulmonary heart disease and diseases of pulmonary circulation (I26-I28) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-048",
+            "text": "    Pericarditis, endocarditis and myocarditis (I30,I33,I40) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-049",
+            "text": "    Cardiomyopathy (I42) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-050",
+            "text": "    Cardiac arrest (I46) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-051",
+            "text": "    Cerebrovascular diseases (I60-I69) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-052",
+            "text": "    All other diseases of circulatory system (I00-I25,I31,I34-I38,I44-I45,I47-I51,I70-I99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-053",
+            "text": " Diseases of the respiratory system (J00-J98,U04) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-054",
+            "text": "    #Acute upper respiratory infections (J00-J06) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-055",
+            "text": "    #Influenza and pneumonia (J09-J18) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-056",
+            "text": "       Influenza (J09-J11) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-057",
+            "text": "       Pneumonia (J12-J18) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-058",
+            "text": "    #Acute bronchitis and acute bronchiolitis (J20-J21) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-059",
+            "text": "    #Bronchitis, chronic and unspecified (J40-J42) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-060",
+            "text": "    #Asthma (J45-J46) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-061",
+            "text": "    #Pneumonitis due to solids and liquids (J69) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-062",
+            "text": "    Other and unspecified diseases of respiratory system (J22,J30-J39,J43-J44,J47-J68,J70-J98,U04) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-063",
+            "text": " Diseases of the digestive system (K00-K92) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-064",
+            "text": "    #Gastritis, duodenitis, and noninfective enteritis and colitis (K29,K50-K55) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-065",
+            "text": "    #Hernia of abdominal cavity and intestinal obstruction without hernia (K40-K46,K56) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-066",
+            "text": "    All other and unspecified diseases of digestive system (K00-K28,K30-K38,K57-K92) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-067",
+            "text": " Diseases of the genitourinary system (N00-N95) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-068",
+            "text": "    #Renal failure and other disorders of kidney (N17-N19,N25,N27) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-069",
+            "text": "    Other and unspecified diseases of genitourinary system (N00-N15,N20-N23,N26,N28-N95) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-070",
+            "text": " Certain conditions originating in the perinatal period (P00-P96) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-071",
+            "text": "    Newborn affected by maternal factors and by complications of pregnancy, labor and delivery (P00-P04) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-072",
+            "text": "       #Newborn affected by maternal hypertensive disorders (P00.0) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-073",
+            "text": "       #Newborn affected by other maternal conditions which may be unrelated to present pregnancy (P00.1-P00.9) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-074",
+            "text": "       #Newborn affected by maternal complications of pregnancy (P01) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-075",
+            "text": "          Newborn affected by incompetent cervix (P01.0) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-076",
+            "text": "          Newborn affected by premature rupture of membranes (P01.1) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-077",
+            "text": "          Newborn affected by multiple pregnancy (P01.5) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-078",
+            "text": "          Newborn affected by other maternal complications of pregnancy (P01.2-P01.4,P01.6-P01.9) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-079",
+            "text": "       #Newborn affected by complications of placenta, cord and membranes (P02) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-080",
+            "text": "          Newborn affected by complications involving placenta (P02.0-P02.3) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-081",
+            "text": "          Newborn affected by complications involving cord (P02.4-P02.6) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-082",
+            "text": "          Newborn affected by chorioamnionitis (P02.7) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-083",
+            "text": "          Newborn affected by other and unspecified abnormalities of membranes (P02.8-P02.9) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-084",
+            "text": "       #Newborn affected by other complications of labor and delivery (P03) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-085",
+            "text": "       #Newborn affected by noxious influences transmitted via placenta or breast milk (P04) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-086",
+            "text": "    Disorders related to length of gestation and fetal malnutrition (P05-P08) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-087",
+            "text": "       #Slow fetal growth and fetal malnutrition (P05) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-088",
+            "text": "       #Disorders related to short gestation and low birth weight, not elsewhere classified (P07) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-089",
+            "text": "          Extremely low birth weight or extreme immaturity (P07.0,P07.2) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-090",
+            "text": "          Other low birth weight or preterm (P07.1,P07.3) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-091",
+            "text": "       #Disorders related to long gestation and high birth weight (P08) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-092",
+            "text": "    #Birth trauma (P10-P15) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-093",
+            "text": "    #Intrauterine hypoxia and birth asphyxia (P20-P21) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-094",
+            "text": "       Intrauterine hypoxia (P20) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-095",
+            "text": "       Birth asphyxia (P21) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-096",
+            "text": "    #Respiratory distress of newborn (P22) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-097",
+            "text": "    Other respiratory conditions originating in the perinatal period (P23-P28) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-098",
+            "text": "       #Congenital pneumonia (P23) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-099",
+            "text": "       #Neonatal aspiration syndromes (P24) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-100",
+            "text": "       #Interstitial emphysema and related conditions originating in the perinatal period (P25) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-101",
+            "text": "       #Pulmonary hemorrhage originating in the perinatal period (P26) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-102",
+            "text": "       #Chronic respiratory disease originating in the perinatal period (P27) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-103",
+            "text": "       #Atelectasis (P28.0-P28.1) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-104",
+            "text": "       All other respiratory conditions originating in the perinatal period (P28.2-P28.9) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-105",
+            "text": "    Infections specific to the perinatal period (P35-P39) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-106",
+            "text": "       #Bacterial sepsis of newborn (P36) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-107",
+            "text": "       #Omphalitis of newborn with or without mild hemorrhage (P38) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-108",
+            "text": "       All other infections specific to the perinatal period (P35,P37,P39) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-109",
+            "text": "    Hemorrhagic and hematological disorders of newborn (P50-P61) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-110",
+            "text": "       #Neonatal hemorrhage (P50-P52,P54) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-111",
+            "text": "       #Hemorrhagic disease of newborn (P53) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-112",
+            "text": "       #Hemolytic disease of newborn due to isoimmunization and other perinatal jaundice (P55-P59) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-113",
+            "text": "       #Hematological disorders (P60-P61) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-114",
+            "text": "    #Syndrome of infant of a diabetic mother and neonatal diabetes mellitus (P70.0-P70.2) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-115",
+            "text": "    #Necrotizing enterocolitis of newborn (P77) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-116",
+            "text": "    #Hydrops fetalis not due to hemolytic disease (P83.2) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-117",
+            "text": "    Other perinatal conditions (P29,P70.3-P70.9,P71-P76,P78-P81,P83.0-P83.1,P83.3-P83.9,P90-P96) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-118",
+            "text": " #Congenital malformations, deformations and chromosomal abnormalities (Q00-Q99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-119",
+            "text": "    Anencephaly and similar malformations (Q00) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-120",
+            "text": "    Congenital hydrocephalus (Q03) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-121",
+            "text": "    Spina bifida (Q05) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-122",
+            "text": "    Other congenital malformations of nervous system (Q01-Q02,Q04,Q06-Q07) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-123",
+            "text": "    Congenital malformations of heart (Q20-Q24) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-124",
+            "text": "    Other congenital malformations of circulatory system (Q25-Q28) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-125",
+            "text": "    Congenital malformations of respiratory system (Q30-Q34) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-126",
+            "text": "    Congenital malformations of digestive system (Q35-Q45) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-127",
+            "text": "    Congenital malformations of genitourinary system (Q50-Q64) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-128",
+            "text": "    Congenital malformations and deformations of musculoskeletal system, limbs and integument (Q65-Q85) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-129",
+            "text": "    Down syndrome (Q90) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-130",
+            "text": "    Edward syndrome (Q91.0-Q91.3) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-131",
+            "text": "    Patau syndrome (Q91.4-Q91.7) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-132",
+            "text": "    Other congenital malformations and deformations (Q10-Q18,Q86-Q89) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-133",
+            "text": "    Other chromosomal abnormalities, not elsewhere classified (Q92-Q99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-134",
+            "text": " Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-135",
+            "text": "    #Sudden infant death syndrome (R95) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-136",
+            "text": "    Other symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified (R00-R53,R55-R94,R96-R99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-137",
+            "text": " All other diseases (F00-F99,H00-H57,L00-M99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-138",
+            "text": " External causes of mortality (*U01,V01-Y84) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-139",
+            "text": "    #Accidents (unintentional injuries) (V01-X59) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-140",
+            "text": "       Transport accidents (V01-V99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-141",
+            "text": "          Motor vehicle accidents (V02-V04,V09.0,V09.2,V12-V14,V19.0-V19.2,V19.4-V19.6,V20-V79,V80.3-V80.5,V81.0-V81.1,V82.0-V82.1,V83-V86,V87.0-V87.8,V88.0-V88.8,V89.0,V89.2) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-142",
+            "text": "          Other and unspecified transport accidents (V01,V05-V06,V09.1,V09.3-V09.9,V10-V11,V15-V18,V19.3,V19.8-V19.9,V80.0-V80.2,V80.6-V80.9,V81.2-V81.9,V82.2-V82.9,V87.9,V88.9,V89.1,V89.3,V89.9,V90-V99) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-143",
+            "text": "       Falls (W00-W19) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-144",
+            "text": "       Accidental discharge of firearms (W32-W34) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-145",
+            "text": "       Accidental drowning and submersion (W65-W74) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-146",
+            "text": "       Accidental suffocation and strangulation in bed (W75) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-147",
+            "text": "       Other accidental suffocation and strangulation (W76-W77,W81-W84) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-148",
+            "text": "       Accidental inhalation and ingestion of food or other objects causing obstruction of respiratory tract (W78-W80) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-149",
+            "text": "       Accidents caused by exposure to smoke, fire and flames (X00-X09) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-150",
+            "text": "       Accidental poisoning and exposure to noxious substances (X40-X49) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-151",
+            "text": "       Other and unspecified accidents (W20-W31,W35-W64,W85-W99,X10-X39,X50-X59) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-152",
+            "text": "    #Assault (homicide) (*U01,X85-Y09) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-153",
+            "text": "       Assault (homicide) by hanging, strangulation and suffocation (X91) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-154",
+            "text": "       Assault (homicide) by discharge of firearms (*U01.4,X93-X95) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-155",
+            "text": "       Neglect, abandonment and other maltreatment syndromes (Y06-Y07) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-156",
+            "text": "       Assault (homicide) by other and unspecified means (*U01.0-*U01.3,*U01.5-*U01.9,X85-X90,X92,X96-X99,Y00-Y05,Y08-Y09) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-157",
+            "text": "    #Complications of medical and surgical care (Y40-Y84) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-158",
+            "text": "    Other external causes (Y10-Y36) ",
+            "selected": false
+          },
+          {
+            "value": "GR130-999",
+            "text": " All unspecified codes ",
+            "selected": false
+          }
+        ],
+        "option_count": 160
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V13",
+        "id": "SD69.V13",
+        "label": "Age of Infant at Death",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": " Under 1 hour ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": " 1 - 23 hours ",
+            "selected": false
+          },
+          {
+            "value": "03",
+            "text": " 1 - 6 days ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": " 7 - 27 days ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": " 28 - 364 days ",
+            "selected": false
+          }
+        ],
+        "option_count": 6
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V9",
+        "id": "SD69.V9",
+        "label": "Year of Death",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": false
+          },
+          {
+            "value": "2007",
+            "text": " 2007 ",
+            "selected": false
+          },
+          {
+            "value": "2008",
+            "text": " 2008 ",
+            "selected": false
+          },
+          {
+            "value": "2009",
+            "text": " 2009 ",
+            "selected": false
+          },
+          {
+            "value": "2010",
+            "text": " 2010 ",
+            "selected": false
+          },
+          {
+            "value": "2011",
+            "text": " 2011 ",
+            "selected": false
+          },
+          {
+            "value": "2012",
+            "text": " 2012 ",
+            "selected": false
+          },
+          {
+            "value": "2013",
+            "text": " 2013 ",
+            "selected": false
+          },
+          {
+            "value": "2014",
+            "text": " 2014 ",
+            "selected": false
+          },
+          {
+            "value": "2015",
+            "text": " 2015 ",
+            "selected": false
+          },
+          {
+            "value": "2016",
+            "text": " 2016 ",
+            "selected": false
+          },
+          {
+            "value": "2017",
+            "text": " 2017 ",
+            "selected": false
+          },
+          {
+            "value": "2018",
+            "text": " 2018 ",
+            "selected": false
+          },
+          {
+            "value": "2019",
+            "text": " 2019 ",
+            "selected": false
+          },
+          {
+            "value": "2020",
+            "text": " 2020 ",
+            "selected": false
+          },
+          {
+            "value": "2021",
+            "text": " 2021 ",
+            "selected": false
+          },
+          {
+            "value": "2022",
+            "text": " 2022 ",
+            "selected": false
+          },
+          {
+            "value": "2023",
+            "text": " 2023 ",
+            "selected": true
+          }
+        ],
+        "option_count": 18
+      },
+      {
+        "type": "select",
+        "name": "V_D69.V3",
+        "id": "SD69.V3",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": " 0 ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 2 ",
+            "selected": true
+          },
+          {
+            "value": "3",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 9 ",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D69",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "Linked Birth / Infant Death Records, 2007-2023",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_vintage",
+        "id": "",
+        "label": "",
+        "value": "2023",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D69.M1",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_2",
+        "id": "",
+        "label": "",
+        "value": "D69.M2",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_3",
+        "id": "",
+        "label": "",
+        "value": "D69.M3",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_12",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_1",
+        "id": "CM_1",
+        "label": "Deaths",
+        "value": "D69.M1",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_2",
+        "id": "CM_2",
+        "label": "Births",
+        "value": "D69.M2",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_3",
+        "id": "CM_3",
+        "label": "Death Rate",
+        "value": "D69.M3",
+        "checked": true
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_oc-sect1-request",
+        "id": "oc-sect1",
+        "label": "",
+        "value": "close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD69.V10",
+        "label": "States",
+        "value": "D69.V10",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD69.V19",
+        "label": "Census Regions",
+        "value": "D69.V19",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD69.V26",
+        "label": "HHS Regions",
+        "value": "D69.V26",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D69.V10",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V10_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_32",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_33",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V10-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V10-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V10-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V10-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V10-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D69.V19",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V19_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_41",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_42",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V19-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V19-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V19-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V19-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V19-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V19-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D69.V26",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V26_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_51",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_52",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V26-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V26-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V26-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V26-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V26-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V26-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_gestation",
+        "id": "RO_gestationD69.V24",
+        "label": "LMP Gestational Age 11",
+        "value": "D69.V24",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_gestation",
+        "id": "RO_gestationD69.V6",
+        "label": "LMP Gestational Age 10",
+        "value": "D69.V6",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_gestation",
+        "id": "RO_gestationD69.V25",
+        "label": "LMP Gestational Age Weekly",
+        "value": "D69.V25",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_oe_gestation",
+        "id": "RO_oe_gestationD69.V31",
+        "label": "OE Gestational Age 11",
+        "value": "D69.V31",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_oe_gestation",
+        "id": "RO_oe_gestationD69.V30",
+        "label": "OE Gestational Age 10",
+        "value": "D69.V30",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_oe_gestation",
+        "id": "RO_oe_gestationD69.V32",
+        "label": "OE Gestational Age Weekly",
+        "value": "D69.V32",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_icd",
+        "id": "RO_icdD69.V16",
+        "label": "ICD-10 Codes",
+        "value": "D69.V16",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_icd",
+        "id": "RO_icdD69.V18",
+        "label": "ICD-10 130 Cause List (Infants)",
+        "value": "D69.V18",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D69.V16",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V16_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_72",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_73",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V16-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V16-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V16-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V16-Open Fully",
+        "id": "",
+        "label": "",
+        "value": "Open Fully",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V16-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D69.V16-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_suppressed",
+        "id": "CO_show_suppressed",
+        "label": "Show Suppressed Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
+    "textareas": [
+      {
+        "type": "textarea",
+        "name": "V_D69.V10",
+        "id": "TD69.V10",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D69.V10",
+        "id": "D69.V10-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D69.V19",
+        "id": "TD69.V19",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D69.V19",
+        "id": "D69.V19-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D69.V26",
+        "id": "TD69.V26",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D69.V26",
+        "id": "D69.V26-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D69.V16",
+        "id": "TD69.V16",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D69.V16",
+        "id": "D69.V16-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (All Causes of Death)\n"
+      }
+    ]
   },
   "summary": {
-    "total_selects": 0,
-    "total_inputs": 0,
-    "total_textareas": 0,
-    "total_parameters": 0
+    "total_selects": 36,
+    "total_inputs": 88,
+    "total_textareas": 8,
+    "total_parameters": 132
   },
   "dataset_id": "D69"
 }

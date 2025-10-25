@@ -3,240 +3,243 @@
   "total_attempted": 169,
   "datasets": {
     "D1": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/bridged-race-v2002.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 53,
+      "output_file": "data/raw/wonder/query_params_D1.json"
     },
     "D2": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/std-v2003.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 85,
+      "output_file": "data/raw/wonder/query_params_D2.json"
     },
     "D4": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/tb-v2003.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 73,
+      "output_file": "data/raw/wonder/query_params_D4.json"
     },
     "D5": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 58,
       "output_file": "data/raw/wonder/query_params_D5.json"
     },
     "D7": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 42,
       "output_file": "data/raw/wonder/query_params_D7.json"
     },
     "D8": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 14,
       "output_file": "data/raw/wonder/query_params_D8.json"
     },
     "D9": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 58,
       "output_file": "data/raw/wonder/query_params_D9.json"
     },
     "D10": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 100,
       "output_file": "data/raw/wonder/query_params_D10.json"
     },
     "D11": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 56,
       "output_file": "data/raw/wonder/query_params_D11.json"
     },
     "D12": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 78,
       "output_file": "data/raw/wonder/query_params_D12.json"
     },
     "D13": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 78,
       "output_file": "data/raw/wonder/query_params_D13.json"
     },
     "D14": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 78,
       "output_file": "data/raw/wonder/query_params_D14.json"
     },
     "D15": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D15.json"
     },
     "D16": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 121,
       "output_file": "data/raw/wonder/query_params_D16.json"
     },
     "D17": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 118,
       "output_file": "data/raw/wonder/query_params_D17.json"
     },
     "D18": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 124,
       "output_file": "data/raw/wonder/query_params_D18.json"
     },
     "D21": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 117,
       "output_file": "data/raw/wonder/query_params_D21.json"
     },
     "D22": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 117,
       "output_file": "data/raw/wonder/query_params_D22.json"
     },
     "D23": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 127,
       "output_file": "data/raw/wonder/query_params_D23.json"
     },
     "D24": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D24.json"
     },
     "D26": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D26.json"
     },
     "D27": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 136,
       "output_file": "data/raw/wonder/query_params_D27.json"
     },
     "D28": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 59,
       "output_file": "data/raw/wonder/query_params_D28.json"
     },
     "D29": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 56,
       "output_file": "data/raw/wonder/query_params_D29.json"
     },
     "D30": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 118,
       "output_file": "data/raw/wonder/query_params_D30.json"
     },
     "D31": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 124,
       "output_file": "data/raw/wonder/query_params_D31.json"
     },
     "D32": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D32.json"
     },
     "D33": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 171,
       "output_file": "data/raw/wonder/query_params_D33.json"
     },
     "D34": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D34.json"
     },
     "D35": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 118,
       "output_file": "data/raw/wonder/query_params_D35.json"
     },
     "D36": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 85,
       "output_file": "data/raw/wonder/query_params_D36.json"
     },
     "D37": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D37.json"
     },
     "D38": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D38.json"
     },
     "D40": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 59,
       "output_file": "data/raw/wonder/query_params_D40.json"
     },
     "D41": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 56,
       "output_file": "data/raw/wonder/query_params_D41.json"
     },
     "D42": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 85,
       "output_file": "data/raw/wonder/query_params_D42.json"
     },
     "D43": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 124,
       "output_file": "data/raw/wonder/query_params_D43.json"
     },
     "D44": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D44.json"
     },
     "D45": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 87,
       "output_file": "data/raw/wonder/query_params_D45.json"
     },
     "D47": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 85,
       "output_file": "data/raw/wonder/query_params_D47.json"
     },
     "D48": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 138,
       "output_file": "data/raw/wonder/query_params_D48.json"
     },
     "D49": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D49.json"
     },
     "D50": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 74,
       "output_file": "data/raw/wonder/query_params_D50.json"
     },
     "D51": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 71,
       "output_file": "data/raw/wonder/query_params_D51.json"
     },
     "D52": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D52.json"
     },
     "D53": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 124,
       "output_file": "data/raw/wonder/query_params_D53.json"
     },
     "D55": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D55.json"
     },
     "D57": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 87,
       "output_file": "data/raw/wonder/query_params_D57.json"
     },
     "D59": {
@@ -246,602 +249,607 @@
     },
     "D60": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 138,
       "output_file": "data/raw/wonder/query_params_D60.json"
     },
     "D61": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 128,
       "output_file": "data/raw/wonder/query_params_D61.json"
     },
     "D66": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/natality-current.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 153,
+      "output_file": "data/raw/wonder/query_params_D66.json"
     },
     "D69": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 132,
       "output_file": "data/raw/wonder/query_params_D69.json"
     },
     "D70": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 74,
       "output_file": "data/raw/wonder/query_params_D70.json"
     },
     "D71": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 71,
       "output_file": "data/raw/wonder/query_params_D71.json"
     },
     "D72": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 124,
       "output_file": "data/raw/wonder/query_params_D72.json"
     },
     "D73": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 100,
       "output_file": "data/raw/wonder/query_params_D73.json"
     },
     "D74": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 118,
       "output_file": "data/raw/wonder/query_params_D74.json"
     },
     "D75": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 72,
       "output_file": "data/raw/wonder/query_params_D75.json"
     },
     "D76": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 167,
       "output_file": "data/raw/wonder/query_params_D76.json"
     },
     "D77": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 213,
       "output_file": "data/raw/wonder/query_params_D77.json"
     },
     "D78": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 80,
       "output_file": "data/raw/wonder/query_params_D78.json"
     },
     "D79": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 124,
       "output_file": "data/raw/wonder/query_params_D79.json"
     },
     "D80": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 96,
       "output_file": "data/raw/wonder/query_params_D80.json"
     },
     "D81": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 99,
       "output_file": "data/raw/wonder/query_params_D81.json"
     },
     "D82": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D82.json"
     },
     "D84": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 87,
       "output_file": "data/raw/wonder/query_params_D84.json"
     },
     "D85": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 71,
       "output_file": "data/raw/wonder/query_params_D85.json"
     },
     "D86": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 85,
       "output_file": "data/raw/wonder/query_params_D86.json"
     },
     "D89": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 74,
       "output_file": "data/raw/wonder/query_params_D89.json"
     },
     "D90": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 71,
       "output_file": "data/raw/wonder/query_params_D90.json"
     },
     "D92": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D92.json"
     },
     "D94": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 76,
       "output_file": "data/raw/wonder/query_params_D94.json"
     },
     "D95": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D95.json"
     },
     "D96": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D96.json"
     },
     "D97": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 71,
       "output_file": "data/raw/wonder/query_params_D97.json"
     },
     "D99": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D99.json"
     },
     "D100": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 76,
       "output_file": "data/raw/wonder/query_params_D100.json"
     },
     "D101": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D101.json"
     },
     "D102": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 71,
       "output_file": "data/raw/wonder/query_params_D102.json"
     },
     "D104": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 56,
       "output_file": "data/raw/wonder/query_params_D104.json"
     },
     "D105": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 141,
       "output_file": "data/raw/wonder/query_params_D105.json"
     },
     "D106": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 85,
       "output_file": "data/raw/wonder/query_params_D106.json"
     },
     "D107": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 87,
       "output_file": "data/raw/wonder/query_params_D107.json"
     },
     "D108": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D108.json"
     },
     "D113": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 76,
       "output_file": "data/raw/wonder/query_params_D113.json"
     },
     "D114": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D114.json"
     },
     "D115": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 71,
       "output_file": "data/raw/wonder/query_params_D115.json"
     },
     "D116": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D116.json"
     },
     "D117": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 43,
       "output_file": "data/raw/wonder/query_params_D117.json"
     },
     "D118": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 43,
       "output_file": "data/raw/wonder/query_params_D118.json"
     },
     "D119": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 43,
       "output_file": "data/raw/wonder/query_params_D119.json"
     },
     "D120": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 35,
       "output_file": "data/raw/wonder/query_params_D120.json"
     },
     "D121": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 80,
       "output_file": "data/raw/wonder/query_params_D121.json"
     },
     "D123": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/tb-v2014.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 83,
+      "output_file": "data/raw/wonder/query_params_D123.json"
     },
     "D124": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/cmf-icd10-archive2014.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 141,
+      "output_file": "data/raw/wonder/query_params_D124.json"
     },
     "D125": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/cancermort-v2013.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 77,
+      "output_file": "data/raw/wonder/query_params_D125.json"
     },
     "D126": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/cancermir-v2013.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 75,
+      "output_file": "data/raw/wonder/query_params_D126.json"
     },
     "D127": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 86,
       "output_file": "data/raw/wonder/query_params_D127.json"
     },
     "D128": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 88,
       "output_file": "data/raw/wonder/query_params_D128.json"
     },
     "D129": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D129.json"
     },
     "D130": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 52,
       "output_file": "data/raw/wonder/query_params_D130.json"
     },
     "D131": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D131.json"
     },
     "D132": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 141,
       "output_file": "data/raw/wonder/query_params_D132.json"
     },
     "D133": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 149,
       "output_file": "data/raw/wonder/query_params_D133.json"
     },
     "D134": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D134.json"
     },
     "D135": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D135.json"
     },
     "D136": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 80,
       "output_file": "data/raw/wonder/query_params_D136.json"
     },
     "D137": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D137.json"
     },
     "D138": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 75,
       "output_file": "data/raw/wonder/query_params_D138.json"
     },
     "D140": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 150,
       "output_file": "data/raw/wonder/query_params_D140.json"
     },
     "D141": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 235,
       "output_file": "data/raw/wonder/query_params_D141.json"
     },
     "D142": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 67,
       "output_file": "data/raw/wonder/query_params_D142.json"
     },
     "D143": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D143.json"
     },
     "D144": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 80,
       "output_file": "data/raw/wonder/query_params_D144.json"
     },
     "D145": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D145.json"
     },
     "D146": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 75,
       "output_file": "data/raw/wonder/query_params_D146.json"
     },
     "D147": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D147.json"
     },
     "D148": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 67,
       "output_file": "data/raw/wonder/query_params_D148.json"
     },
     "D149": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 305,
       "output_file": "data/raw/wonder/query_params_D149.json"
     },
     "D150": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 227,
       "output_file": "data/raw/wonder/query_params_D150.json"
     },
     "D151": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 80,
       "output_file": "data/raw/wonder/query_params_D151.json"
     },
     "D152": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D152.json"
     },
     "D153": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 75,
       "output_file": "data/raw/wonder/query_params_D153.json"
     },
     "D154": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 74,
       "output_file": "data/raw/wonder/query_params_D154.json"
     },
     "D155": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 67,
       "output_file": "data/raw/wonder/query_params_D155.json"
     },
     "D156": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D156.json"
     },
     "D157": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 246,
       "output_file": "data/raw/wonder/query_params_D157.json"
     },
     "D158": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 200,
       "output_file": "data/raw/wonder/query_params_D158.json"
     },
     "D159": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 309,
       "output_file": "data/raw/wonder/query_params_D159.json"
     },
     "D160": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 80,
       "output_file": "data/raw/wonder/query_params_D160.json"
     },
     "D161": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D161.json"
     },
     "D162": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 75,
       "output_file": "data/raw/wonder/query_params_D162.json"
     },
     "D163": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 73,
       "output_file": "data/raw/wonder/query_params_D163.json"
     },
     "D164": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 67,
       "output_file": "data/raw/wonder/query_params_D164.json"
     },
     "D165": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D165.json"
     },
     "D166": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 61,
       "output_file": "data/raw/wonder/query_params_D166.json"
     },
     "D167": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 61,
       "output_file": "data/raw/wonder/query_params_D167.json"
     },
     "D168": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 61,
       "output_file": "data/raw/wonder/query_params_D168.json"
     },
     "D169": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 61,
       "output_file": "data/raw/wonder/query_params_D169.json"
     },
     "D170": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 61,
       "output_file": "data/raw/wonder/query_params_D170.json"
     },
     "D171": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 67,
       "output_file": "data/raw/wonder/query_params_D171.json"
     },
     "D172": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 81,
       "output_file": "data/raw/wonder/query_params_D172.json"
     },
     "D173": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 78,
       "output_file": "data/raw/wonder/query_params_D173.json"
     },
     "D174": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 76,
       "output_file": "data/raw/wonder/query_params_D174.json"
     },
     "D175": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D175.json"
     },
     "D176": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 277,
       "output_file": "data/raw/wonder/query_params_D176.json"
     },
     "D178": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 74,
       "output_file": "data/raw/wonder/query_params_D178.json"
     },
     "D181": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 81,
       "output_file": "data/raw/wonder/query_params_D181.json"
     },
     "D182": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 78,
       "output_file": "data/raw/wonder/query_params_D182.json"
     },
     "D183": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 76,
       "output_file": "data/raw/wonder/query_params_D183.json"
     },
     "D184": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 61,
       "output_file": "data/raw/wonder/query_params_D184.json"
     },
     "D185": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 67,
       "output_file": "data/raw/wonder/query_params_D185.json"
     },
     "D186": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 83,
       "output_file": "data/raw/wonder/query_params_D186.json"
     },
     "D187": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 80,
       "output_file": "data/raw/wonder/query_params_D187.json"
     },
     "D188": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D188.json"
     },
     "D189": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 75,
       "output_file": "data/raw/wonder/query_params_D189.json"
     },
     "D190": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 61,
       "output_file": "data/raw/wonder/query_params_D190.json"
     },
     "D191": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 67,
       "output_file": "data/raw/wonder/query_params_D191.json"
     },
     "D192": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 292,
       "output_file": "data/raw/wonder/query_params_D192.json"
     },
     "D193": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 77,
       "output_file": "data/raw/wonder/query_params_D193.json"
     },
     "D196": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 62,
       "output_file": "data/raw/wonder/query_params_D196.json"
     },
     "D197": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 68,
       "output_file": "data/raw/wonder/query_params_D197.json"
     },
     "D198": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 81,
       "output_file": "data/raw/wonder/query_params_D198.json"
     },
     "D199": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 78,
       "output_file": "data/raw/wonder/query_params_D199.json"
     },
     "D200": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 76,
       "output_file": "data/raw/wonder/query_params_D200.json"
     },
     "D202": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 79,
       "output_file": "data/raw/wonder/query_params_D202.json"
     },
     "D205": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 81,
       "output_file": "data/raw/wonder/query_params_D205.json"
     },
     "D207": {
       "status": "success",
-      "total_parameters": 0,
+      "total_parameters": 76,
       "output_file": "data/raw/wonder/query_params_D207.json"
     }
   },
   "summary": {
-    "successful": 161,
-    "failed": 8
+    "successful": 169,
+    "failed": 0
   }
 }

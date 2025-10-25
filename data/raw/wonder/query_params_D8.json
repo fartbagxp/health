@@ -1,18 +1,144 @@
 {
   "url": "http://wonder.cdc.gov/vaers.html",
-  "final_url": "https://wonder.cdc.gov/vaers.html",
-  "page_title": "502 Bad Gateway",
-  "forms": [],
+  "final_url": "https://wonder.cdc.gov/controller/datarequest/D8",
+  "page_title": "The Vaccine Adverse Event Reporting System (VAERS) About",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D8;jsessionid=3ABDEF5F4FEEC0C12B09B4761EB7",
+      "method": "POST"
+    }
+  ],
   "parameters": {
     "selects": [],
-    "inputs": [],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "about",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-request",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-report",
+        "id": "",
+        "label": "",
+        "value": "Report",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_10",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "tab-request",
+        "id": "",
+        "label": "",
+        "value": "VAERS Data Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-request",
+        "id": "",
+        "label": "",
+        "value": "VAERS Data Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-report",
+        "id": "",
+        "label": "",
+        "value": "VAERS Report Details",
+        "checked": null
+      }
+    ],
     "textareas": []
   },
   "summary": {
     "total_selects": 0,
-    "total_inputs": 0,
+    "total_inputs": 14,
     "total_textareas": 0,
-    "total_parameters": 0
+    "total_parameters": 14
   },
   "dataset_id": "D8"
 }

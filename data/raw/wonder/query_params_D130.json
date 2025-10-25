@@ -1,18 +1,2428 @@
 {
   "url": "http://wonder.cdc.gov/nndss-annual-summary.html",
   "final_url": "https://wonder.cdc.gov/nndss-annual-summary.html",
-  "page_title": "502 Bad Gateway",
-  "forms": [],
+  "page_title": "NNDSS Annual Summary Data 2016-2022 Request",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D130",
+      "method": "POST"
+    }
+  ],
   "parameters": {
-    "selects": [],
-    "inputs": [],
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D130.V3",
+            "text": "Disease",
+            "selected": false
+          },
+          {
+            "value": "D130.V1",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D130.V3",
+            "text": "Disease",
+            "selected": false
+          },
+          {
+            "value": "D130.V1",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D130.V3",
+            "text": "Disease",
+            "selected": false
+          },
+          {
+            "value": "D130.V1",
+            "text": "Year",
+            "selected": false
+          },
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V3",
+        "id": "SD130.V3",
+        "label": "Disease",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Diseases ",
+            "selected": true
+          },
+          {
+            "value": "10350",
+            "text": " Anthrax ",
+            "selected": false
+          },
+          {
+            "value": "10073",
+            "text": " Arboviral diseases, Chikungunya virus disease ",
+            "selected": false
+          },
+          {
+            "value": "10053",
+            "text": " Arboviral diseases, Eastern equine encephalitis virus disease, Neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10062",
+            "text": " Arboviral diseases, Eastern equine encephalitis virus disease, Non-neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10078",
+            "text": " Arboviral diseases, Jamestown Canyon virus disease, Neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10079",
+            "text": " Arboviral diseases, Jamestown Canyon virus disease, Non-neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10081",
+            "text": " Arboviral diseases, La Crosse virus disease, Neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10082",
+            "text": " Arboviral diseases, La Crosse virus disease, Non-neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10057",
+            "text": " Arboviral diseases, Powassan virus disease, Neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10063",
+            "text": " Arboviral diseases, Powassan virus disease, Non-neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10051",
+            "text": " Arboviral diseases, St. Louis encephalitis virus disease, Neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10064",
+            "text": " Arboviral diseases, St. Louis encephalitis virus disease, Non-neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10056",
+            "text": " Arboviral diseases, West Nile virus disease, Neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10049",
+            "text": " Arboviral diseases, West Nile virus disease, Non-neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10052",
+            "text": " Arboviral diseases, Western equine encephalitis virus disease, Neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "10065",
+            "text": " Arboviral diseases, Western equine encephalitis virus disease, Non-neuroinvasive ",
+            "selected": false
+          },
+          {
+            "value": "12010",
+            "text": " Babesiosis, Total ",
+            "selected": false
+          },
+          {
+            "value": "12011",
+            "text": " Babesiosis, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "12012",
+            "text": " Babesiosis, Probable ",
+            "selected": false
+          },
+          {
+            "value": "10360",
+            "text": " Botulism, Total ",
+            "selected": false
+          },
+          {
+            "value": "10530",
+            "text": " Botulism, Foodborne ",
+            "selected": false
+          },
+          {
+            "value": "10540",
+            "text": " Botulism, Infant ",
+            "selected": false
+          },
+          {
+            "value": "10550",
+            "text": " Botulism, Other (wound & unspecified) ",
+            "selected": false
+          },
+          {
+            "value": "10020",
+            "text": " Brucellosis ",
+            "selected": false
+          },
+          {
+            "value": "11020",
+            "text": " Campylobacteriosis ",
+            "selected": false
+          },
+          {
+            "value": "50263",
+            "text": " Candida auris, clinical ",
+            "selected": false
+          },
+          {
+            "value": "50264",
+            "text": " Candida auris, screening ",
+            "selected": false
+          },
+          {
+            "value": "50244",
+            "text": " Carbapenemase-producing carbapenem-resistant Enterobacteriaceae ",
+            "selected": false
+          },
+          {
+            "value": "50272",
+            "text": " Carbapenemase-Producing Organisms (CPO),Total ",
+            "selected": false
+          },
+          {
+            "value": "10273",
+            "text": " Chancroid ",
+            "selected": false
+          },
+          {
+            "value": "10274",
+            "text": " Chlamydia trachomatis infection ",
+            "selected": false
+          },
+          {
+            "value": "10470",
+            "text": " Cholera ",
+            "selected": false
+          },
+          {
+            "value": "11900",
+            "text": " Coccidioidomycosis ",
+            "selected": false
+          },
+          {
+            "value": "11901",
+            "text": " Coccidioidomycosis, confirmed ",
+            "selected": false
+          },
+          {
+            "value": "11902",
+            "text": " Coccidioidomycosis, probable ",
+            "selected": false
+          },
+          {
+            "value": "11065",
+            "text": " Coronavirus Disease 2019 (COVID-19), Total ",
+            "selected": false
+          },
+          {
+            "value": "11067",
+            "text": " Coronavirus Disease 2019 (COVID-19), Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "11068",
+            "text": " Coronavirus Disease 2019 (COVID-19), Probable ",
+            "selected": false
+          },
+          {
+            "value": "11580",
+            "text": " Cryptosporidiosis, Total ",
+            "selected": false
+          },
+          {
+            "value": "11582",
+            "text": " Cryptosporidiosis, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "11583",
+            "text": " Cryptosporidiosis, Probable ",
+            "selected": false
+          },
+          {
+            "value": "11575",
+            "text": " Cyclosporiasis ",
+            "selected": false
+          },
+          {
+            "value": "10680",
+            "text": " Dengue virus infections, Dengue ",
+            "selected": false
+          },
+          {
+            "value": "11704",
+            "text": " Dengue virus infections, Dengue-like illness ",
+            "selected": false
+          },
+          {
+            "value": "11705",
+            "text": " Dengue virus infections, Severe dengue ",
+            "selected": false
+          },
+          {
+            "value": "10040",
+            "text": " Diphtheria ",
+            "selected": false
+          },
+          {
+            "value": "11090",
+            "text": " Ehrlichiosis and Anaplasmosis, Anaplasma phagocytophilum infection ",
+            "selected": false
+          },
+          {
+            "value": "11088",
+            "text": " Ehrlichiosis and Anaplasmosis, Ehrlichia chaffeensis infection ",
+            "selected": false
+          },
+          {
+            "value": "11089",
+            "text": " Ehrlichiosis and Anaplasmosis, Ehrlichia ewingii infection ",
+            "selected": false
+          },
+          {
+            "value": "11091",
+            "text": " Ehrlichiosis and Anaplasmosis, Undetermined ehrlichiosis/anaplasmosis ",
+            "selected": false
+          },
+          {
+            "value": "11570",
+            "text": " Giardiasis ",
+            "selected": false
+          },
+          {
+            "value": "10280",
+            "text": " Gonorrhea ",
+            "selected": false
+          },
+          {
+            "value": "10590",
+            "text": " Haemophilus influenzae, invasive disease, All ages, all serotypes ",
+            "selected": false
+          },
+          {
+            "value": "10591",
+            "text": " Haemophilus influenzae, invasive disease, Age <5 years, Serotype b ",
+            "selected": false
+          },
+          {
+            "value": "10593",
+            "text": " Haemophilus influenzae, invasive disease, Age <5 years, Non-b serotype ",
+            "selected": false
+          },
+          {
+            "value": "10592",
+            "text": " Haemophilus influenzae, invasive disease, Age <5 years, Nontypeable ",
+            "selected": false
+          },
+          {
+            "value": "10597",
+            "text": " Haemophilus influenzae, invasive disease, Age <5 years, Unknown serotype ",
+            "selected": false
+          },
+          {
+            "value": "10380",
+            "text": " Hansen's disease ",
+            "selected": false
+          },
+          {
+            "value": "11610",
+            "text": " Hantavirus infection, non-hantavirus pulmonary syndrome ",
+            "selected": false
+          },
+          {
+            "value": "11590",
+            "text": " Hantavirus pulmonary syndrome ",
+            "selected": false
+          },
+          {
+            "value": "11550",
+            "text": " Hemolytic uremic syndrome post-diarrheal ",
+            "selected": false
+          },
+          {
+            "value": "10110",
+            "text": " Hepatitis, A ",
+            "selected": false
+          },
+          {
+            "value": "10100",
+            "text": " Hepatitis, B, acute ",
+            "selected": false
+          },
+          {
+            "value": "10104",
+            "text": " Hepatitis, B, perinatal infection ",
+            "selected": false
+          },
+          {
+            "value": "10101",
+            "text": " Hepatitis, C, acute ",
+            "selected": false
+          },
+          {
+            "value": "50228",
+            "text": " Hepatitis, C, acute, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "50229",
+            "text": " Hepatitis, C, acute, Probable ",
+            "selected": false
+          },
+          {
+            "value": "50248",
+            "text": " Hepatitis, C, perinatal infection ",
+            "selected": false
+          },
+          {
+            "value": "10560",
+            "text": " Human immunodeficiency virus diagnoses ",
+            "selected": false
+          },
+          {
+            "value": "11061",
+            "text": " Influenza-associated pediatric mortality ",
+            "selected": false
+          },
+          {
+            "value": "11723",
+            "text": " Invasive pneumococcal disease, All ages ",
+            "selected": false
+          },
+          {
+            "value": "50230",
+            "text": " Invasive pneumococcal disease, All ages, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "50231",
+            "text": " Invasive pneumococcal disease, All ages, Probable ",
+            "selected": false
+          },
+          {
+            "value": "11722",
+            "text": " Invasive pneumococcal disease, Age <5 years ",
+            "selected": false
+          },
+          {
+            "value": "50232",
+            "text": " Invasive pneumococcal disease, Age <5 years, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "50233",
+            "text": " Invasive pneumococcal disease, Age <5 years, Probable ",
+            "selected": false
+          },
+          {
+            "value": "10490",
+            "text": " Legionellosis ",
+            "selected": false
+          },
+          {
+            "value": "10390",
+            "text": " Leptospirosis ",
+            "selected": false
+          },
+          {
+            "value": "10640",
+            "text": " Listeriosis, Total ",
+            "selected": false
+          },
+          {
+            "value": "10641",
+            "text": " Listeriosis, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "10642",
+            "text": " Listeriosis, Probable ",
+            "selected": false
+          },
+          {
+            "value": "11080",
+            "text": " Lyme disease, Total ",
+            "selected": false
+          },
+          {
+            "value": "11081",
+            "text": " Lyme disease, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "11082",
+            "text": " Lyme disease, Probable ",
+            "selected": false
+          },
+          {
+            "value": "10130",
+            "text": " Malaria ",
+            "selected": false
+          },
+          {
+            "value": "10140",
+            "text": " Measles, Total ",
+            "selected": false
+          },
+          {
+            "value": "10500",
+            "text": " Measles, Indigenous ",
+            "selected": false
+          },
+          {
+            "value": "10510",
+            "text": " Measles, Imported ",
+            "selected": false
+          },
+          {
+            "value": "11585",
+            "text": " Melioidosis ",
+            "selected": false
+          },
+          {
+            "value": "10150",
+            "text": " Meningococcal disease, All serogroups ",
+            "selected": false
+          },
+          {
+            "value": "10151",
+            "text": " Meningococcal disease, Serogroups ACWY ",
+            "selected": false
+          },
+          {
+            "value": "10152",
+            "text": " Meningococcal disease, Serogroup B ",
+            "selected": false
+          },
+          {
+            "value": "10153",
+            "text": " Meningococcal disease, Other serogroups ",
+            "selected": false
+          },
+          {
+            "value": "10154",
+            "text": " Meningococcal disease, Unknown serogroup ",
+            "selected": false
+          },
+          {
+            "value": "11801",
+            "text": " Mpox ",
+            "selected": false
+          },
+          {
+            "value": "10180",
+            "text": " Mumps ",
+            "selected": false
+          },
+          {
+            "value": "11062",
+            "text": " Novel Influenza A virus infections ",
+            "selected": false
+          },
+          {
+            "value": "50236",
+            "text": " Paratyphoid fever ",
+            "selected": false
+          },
+          {
+            "value": "10190",
+            "text": " Pertussis ",
+            "selected": false
+          },
+          {
+            "value": "10440",
+            "text": " Plague ",
+            "selected": false
+          },
+          {
+            "value": "10410",
+            "text": " Poliomyelitis, paralytic ",
+            "selected": false
+          },
+          {
+            "value": "10405",
+            "text": " Poliovirus infection, nonparalytic ",
+            "selected": false
+          },
+          {
+            "value": "10450",
+            "text": " Psittacosis ",
+            "selected": false
+          },
+          {
+            "value": "10259",
+            "text": " Q fever, Total ",
+            "selected": false
+          },
+          {
+            "value": "10257",
+            "text": " Q fever, Acute ",
+            "selected": false
+          },
+          {
+            "value": "10258",
+            "text": " Q fever, Chronic ",
+            "selected": false
+          },
+          {
+            "value": "10340",
+            "text": " Rabies, Animal ",
+            "selected": false
+          },
+          {
+            "value": "10460",
+            "text": " Rabies, Human ",
+            "selected": false
+          },
+          {
+            "value": "10200",
+            "text": " Rubella ",
+            "selected": false
+          },
+          {
+            "value": "10370",
+            "text": " Rubella, congenital syndrome ",
+            "selected": false
+          },
+          {
+            "value": "50266",
+            "text": " Salmonella Paratyphi infection ",
+            "selected": false
+          },
+          {
+            "value": "50267",
+            "text": " Salmonella Typhi infection ",
+            "selected": false
+          },
+          {
+            "value": "11000",
+            "text": " Salmonellosis ",
+            "selected": false
+          },
+          {
+            "value": "50242",
+            "text": " Salmonellosis (excluding paratyphoid fever and typhoid fever) ",
+            "selected": false
+          },
+          {
+            "value": "50265",
+            "text": " Salmonellosis (excluding S. Typhi infection and S. Paratyphi infection) ",
+            "selected": false
+          },
+          {
+            "value": "10575",
+            "text": " Severe acute respiratory syndrome-associated coronavirus disease ",
+            "selected": false
+          },
+          {
+            "value": "11563",
+            "text": " Shiga toxin-producing Escherichia coli (STEC) ",
+            "selected": false
+          },
+          {
+            "value": "11010",
+            "text": " Shigellosis ",
+            "selected": false
+          },
+          {
+            "value": "11800",
+            "text": " Smallpox ",
+            "selected": false
+          },
+          {
+            "value": "10250",
+            "text": " Spotted fever rickettsiosis, Total ",
+            "selected": false
+          },
+          {
+            "value": "10253",
+            "text": " Spotted fever rickettsiosis, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "10254",
+            "text": " Spotted fever rickettsiosis, Probable ",
+            "selected": false
+          },
+          {
+            "value": "11700",
+            "text": " Streptococcal toxic shock syndrome ",
+            "selected": false
+          },
+          {
+            "value": "10399",
+            "text": " Syphilis, Total, all stages ",
+            "selected": false
+          },
+          {
+            "value": "10316",
+            "text": " Syphilis, Congenital ",
+            "selected": false
+          },
+          {
+            "value": "10310",
+            "text": " Syphilis, Primary and secondary ",
+            "selected": false
+          },
+          {
+            "value": "10210",
+            "text": " Tetanus ",
+            "selected": false
+          },
+          {
+            "value": "10520",
+            "text": " Toxic shock syndrome (other than Streptococcal) ",
+            "selected": false
+          },
+          {
+            "value": "10270",
+            "text": " Trichinellosis ",
+            "selected": false
+          },
+          {
+            "value": "10220",
+            "text": " Tuberculosis ",
+            "selected": false
+          },
+          {
+            "value": "10230",
+            "text": " Tularemia ",
+            "selected": false
+          },
+          {
+            "value": "10240",
+            "text": " Typhoid fever ",
+            "selected": false
+          },
+          {
+            "value": "11663",
+            "text": " Vancomycin-intermediate Staphylococcus aureus ",
+            "selected": false
+          },
+          {
+            "value": "11665",
+            "text": " Vancomycin-resistant Staphylococcus aureus ",
+            "selected": false
+          },
+          {
+            "value": "10030",
+            "text": " Varicella morbidity ",
+            "selected": false
+          },
+          {
+            "value": "10031",
+            "text": " Varicella mortality ",
+            "selected": false
+          },
+          {
+            "value": "11545",
+            "text": " Vibriosis, Total ",
+            "selected": false
+          },
+          {
+            "value": "50234",
+            "text": " Vibriosis, Confirmed ",
+            "selected": false
+          },
+          {
+            "value": "50235",
+            "text": " Vibriosis, Probable ",
+            "selected": false
+          },
+          {
+            "value": "11647",
+            "text": " Viral hemorrhagic fevers ",
+            "selected": false
+          },
+          {
+            "value": "11649",
+            "text": " Viral hemorrhagic fevers, Chapare virus ",
+            "selected": false
+          },
+          {
+            "value": "11640",
+            "text": " Viral hemorrhagic fevers, Crimean-Congo hemorrhagic fever virus ",
+            "selected": false
+          },
+          {
+            "value": "11630",
+            "text": " Viral hemorrhagic fevers, Ebola virus ",
+            "selected": false
+          },
+          {
+            "value": "11648",
+            "text": " Viral hemorrhagic fevers, Guanarito virus ",
+            "selected": false
+          },
+          {
+            "value": "11638",
+            "text": " Viral hemorrhagic fevers, Junin virus ",
+            "selected": false
+          },
+          {
+            "value": "11632",
+            "text": " Viral hemorrhagic fevers, Lassa virus ",
+            "selected": false
+          },
+          {
+            "value": "11644",
+            "text": " Viral hemorrhagic fevers, Lujo virus ",
+            "selected": false
+          },
+          {
+            "value": "11637",
+            "text": " Viral hemorrhagic fevers, Machupo virus ",
+            "selected": false
+          },
+          {
+            "value": "11631",
+            "text": " Viral hemorrhagic fevers, Marburg virus ",
+            "selected": false
+          },
+          {
+            "value": "11639",
+            "text": " Viral hemorrhagic fevers, Sabia virus ",
+            "selected": false
+          },
+          {
+            "value": "10660",
+            "text": " Yellow fever ",
+            "selected": false
+          },
+          {
+            "value": "50224",
+            "text": " Zika virus, Zika virus disease, congenital ",
+            "selected": false
+          },
+          {
+            "value": "50223",
+            "text": " Zika virus, Zika virus disease, non-congenital ",
+            "selected": false
+          },
+          {
+            "value": "50222",
+            "text": " Zika virus, Zika virus infection, congenital ",
+            "selected": false
+          },
+          {
+            "value": "50221",
+            "text": " Zika virus, Zika virus infection, non-congenital ",
+            "selected": false
+          }
+        ],
+        "option_count": 156
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V1",
+        "id": "SD130.V1",
+        "label": "Year",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": false
+          },
+          {
+            "value": "2016",
+            "text": " 2016 ",
+            "selected": false
+          },
+          {
+            "value": "2017",
+            "text": " 2017 ",
+            "selected": false
+          },
+          {
+            "value": "2018",
+            "text": " 2018 ",
+            "selected": false
+          },
+          {
+            "value": "2019",
+            "text": " 2019 ",
+            "selected": false
+          },
+          {
+            "value": "2020",
+            "text": " 2020 ",
+            "selected": false
+          },
+          {
+            "value": "2021",
+            "text": " 2021 ",
+            "selected": false
+          },
+          {
+            "value": "2022",
+            "text": " 2022 ",
+            "selected": true
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V6",
+        "id": "SD130.V6",
+        "label": "Regions/States",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Locations ",
+            "selected": true
+          },
+          {
+            "value": "U.S.",
+            "text": " United States ",
+            "selected": false
+          },
+          {
+            "value": "REGION1",
+            "text": "    New England ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "       Connecticut ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "       Maine ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "       Massachusetts ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "       New Hampshire ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "       Rhode Island ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "       Vermont ",
+            "selected": false
+          },
+          {
+            "value": "REGION2",
+            "text": "    Middle Atlantic ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "       New Jersey ",
+            "selected": false
+          },
+          {
+            "value": "36888",
+            "text": "       New York (excluding New York City) ",
+            "selected": false
+          },
+          {
+            "value": "75772",
+            "text": "       New York City ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "       Pennsylvania ",
+            "selected": false
+          },
+          {
+            "value": "REGION3",
+            "text": "    East North Central ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "       Illinois ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "       Indiana ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "       Michigan ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "       Ohio ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "       Wisconsin ",
+            "selected": false
+          },
+          {
+            "value": "REGION4",
+            "text": "    West North Central ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "       Iowa ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "       Kansas ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "       Minnesota ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "       Missouri ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "       Nebraska ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "       North Dakota ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "       South Dakota ",
+            "selected": false
+          },
+          {
+            "value": "REGION5",
+            "text": "    South Atlantic ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "       Delaware ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "       District of Columbia ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "       Florida ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "       Georgia ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "       Maryland ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "       North Carolina ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "       South Carolina ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "       Virginia ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "       West Virginia ",
+            "selected": false
+          },
+          {
+            "value": "REGION6",
+            "text": "    East South Central ",
+            "selected": false
+          },
+          {
+            "value": "01",
+            "text": "       Alabama ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "       Kentucky ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "       Mississippi ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "       Tennessee ",
+            "selected": false
+          },
+          {
+            "value": "REGION7",
+            "text": "    West South Central ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "       Arkansas ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "       Louisiana ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "       Oklahoma ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "       Texas ",
+            "selected": false
+          },
+          {
+            "value": "REGION8",
+            "text": "    Mountain ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "       Arizona ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "       Colorado ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "       Idaho ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "       Montana ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "       Nevada ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "       New Mexico ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "       Utah ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "       Wyoming ",
+            "selected": false
+          },
+          {
+            "value": "REGION9",
+            "text": "    Pacific ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "       Alaska ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "       California ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "       Hawaii ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "       Oregon ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "       Washington ",
+            "selected": false
+          },
+          {
+            "value": "REGION10",
+            "text": " Territories ",
+            "selected": false
+          },
+          {
+            "value": "60",
+            "text": "    American Samoa ",
+            "selected": false
+          },
+          {
+            "value": "69",
+            "text": "    Commonwealth of Northern Mariana Islands ",
+            "selected": false
+          },
+          {
+            "value": "66",
+            "text": "    Guam ",
+            "selected": false
+          },
+          {
+            "value": "72",
+            "text": "    Puerto Rico ",
+            "selected": false
+          },
+          {
+            "value": "78",
+            "text": "    U.S. Virgin Islands ",
+            "selected": false
+          },
+          {
+            "value": "REGION11",
+            "text": " Non-U.S. Residents ",
+            "selected": false
+          }
+        ],
+        "option_count": 70
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V2",
+        "id": "SD130.V2",
+        "label": "States",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Locations ",
+            "selected": true
+          },
+          {
+            "value": "U.S.",
+            "text": " United States ",
+            "selected": false
+          },
+          {
+            "value": "01",
+            "text": "    Alabama ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "    Alaska ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "    Arizona ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "    Arkansas ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "    California ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "    Colorado ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "    Connecticut ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "    Delaware ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "    District of Columbia ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "    Florida ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "    Georgia ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "    Hawaii ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "    Idaho ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "    Illinois ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "    Indiana ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "    Iowa ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "    Kansas ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "    Kentucky ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "    Louisiana ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "    Maine ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "    Maryland ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "    Massachusetts ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "    Michigan ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "    Minnesota ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "    Mississippi ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "    Missouri ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "    Montana ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "    Nebraska ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "    Nevada ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "    New Hampshire ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "    New Jersey ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "    New Mexico ",
+            "selected": false
+          },
+          {
+            "value": "36888",
+            "text": "    New York (excluding New York City) ",
+            "selected": false
+          },
+          {
+            "value": "75772",
+            "text": "    New York City ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "    North Carolina ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "    North Dakota ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "    Ohio ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "    Oklahoma ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "    Oregon ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "    Pennsylvania ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "    Rhode Island ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "    South Carolina ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "    South Dakota ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "    Tennessee ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "    Texas ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "    Utah ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "    Vermont ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "    Virginia ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "    Washington ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "    West Virginia ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "    Wisconsin ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "    Wyoming ",
+            "selected": false
+          },
+          {
+            "value": "REGION10",
+            "text": " Territories ",
+            "selected": false
+          },
+          {
+            "value": "60",
+            "text": "    American Samoa ",
+            "selected": false
+          },
+          {
+            "value": "69",
+            "text": "    Commonwealth of Northern Mariana Islands ",
+            "selected": false
+          },
+          {
+            "value": "66",
+            "text": "    Guam ",
+            "selected": false
+          },
+          {
+            "value": "72",
+            "text": "    Puerto Rico ",
+            "selected": false
+          },
+          {
+            "value": "78",
+            "text": "    U.S. Virgin Islands ",
+            "selected": false
+          },
+          {
+            "value": "REGION11",
+            "text": " Non-U.S. Residents ",
+            "selected": false
+          }
+        ],
+        "option_count": 61
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V10",
+        "id": "SD130.V10",
+        "label": "Regions",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Locations ",
+            "selected": true
+          },
+          {
+            "value": "U.S.",
+            "text": " United States ",
+            "selected": false
+          },
+          {
+            "value": "REGION1",
+            "text": "    New England ",
+            "selected": false
+          },
+          {
+            "value": "REGION2",
+            "text": "    Middle Atlantic ",
+            "selected": false
+          },
+          {
+            "value": "REGION3",
+            "text": "    East North Central ",
+            "selected": false
+          },
+          {
+            "value": "REGION4",
+            "text": "    West North Central ",
+            "selected": false
+          },
+          {
+            "value": "REGION5",
+            "text": "    South Atlantic ",
+            "selected": false
+          },
+          {
+            "value": "REGION6",
+            "text": "    East South Central ",
+            "selected": false
+          },
+          {
+            "value": "REGION7",
+            "text": "    West South Central ",
+            "selected": false
+          },
+          {
+            "value": "REGION8",
+            "text": "    Mountain ",
+            "selected": false
+          },
+          {
+            "value": "REGION9",
+            "text": "    Pacific ",
+            "selected": false
+          },
+          {
+            "value": "REGION10",
+            "text": " Territories ",
+            "selected": false
+          },
+          {
+            "value": "REGION11",
+            "text": " Non-U.S. Residents ",
+            "selected": false
+          }
+        ],
+        "option_count": 13
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V9",
+        "id": "SD130.V9",
+        "label": "Month",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Months ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " January ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " February ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " March ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " April ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " May ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " June ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " July ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " August ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " September ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " October ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " November ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": " December ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown ",
+            "selected": false
+          }
+        ],
+        "option_count": 14
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V8",
+        "id": "SD130.V8",
+        "label": "Age",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " <1  year          ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 1-4 years ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " 5-14 years ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 15-24 years ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 25-39 years ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 40-64 years ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 65+ years ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown ",
+            "selected": false
+          }
+        ],
+        "option_count": 9
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V4",
+        "id": "SD130.V4",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Male ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V5",
+        "id": "SD130.V5",
+        "label": "Race",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Races ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " American Indian or Alaska Native ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Asian or Pacific Islander ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Black or African American ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " White ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Other or Multi-Race ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown ",
+            "selected": false
+          },
+          {
+            "value": "98",
+            "text": " Suppressed ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D130.V7",
+        "id": "SD130.V7",
+        "label": "Ethnicity",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ethnicities ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "non-",
+            "text": " Non-Hispanic ",
+            "selected": false
+          },
+          {
+            "value": "99",
+            "text": " Unknown ",
+            "selected": false
+          },
+          {
+            "value": "98",
+            "text": " Suppressed ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "O_precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": " 0 ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 2 ",
+            "selected": true
+          },
+          {
+            "value": "3",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 9 ",
+            "selected": false
+          }
+        ],
+        "option_count": 10
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      },
+      {
+        "type": "select",
+        "name": "O_rate_per",
+        "id": "SO_rate_per",
+        "label": "Calculate Rates Per",
+        "multiple": false,
+        "options": [
+          {
+            "value": "1000",
+            "text": " 1,000 ",
+            "selected": false
+          },
+          {
+            "value": "10000",
+            "text": " 10,000 ",
+            "selected": false
+          },
+          {
+            "value": "100000",
+            "text": " 100,000 ",
+            "selected": true
+          },
+          {
+            "value": "1000000",
+            "text": " 1,000,000 ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D130",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "NNDSS Annual Summary Data 2016-2022",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D130.M1",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_9",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V27",
+        "label": "None",
+        "value": "D130.V27",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V6",
+        "label": "Regions/States",
+        "value": "D130.V6",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V10",
+        "label": "Regions",
+        "value": "D130.V10",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V2",
+        "label": "States",
+        "value": "D130.V2",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V9",
+        "label": "Month",
+        "value": "D130.V9",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V8",
+        "label": "Age",
+        "value": "D130.V8",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V4",
+        "label": "Sex",
+        "value": "D130.V4",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V5",
+        "label": "Race",
+        "value": "D130.V5",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_tables",
+        "id": "RO_tablesD130.V7",
+        "label": "Ethnicity",
+        "value": "D130.V7",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "M_3",
+        "id": "CM_3",
+        "label": "",
+        "value": "D130.M3",
+        "checked": false
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
     "textareas": []
   },
   "summary": {
-    "total_selects": 0,
-    "total_inputs": 0,
+    "total_selects": 17,
+    "total_inputs": 35,
     "total_textareas": 0,
-    "total_parameters": 0
+    "total_parameters": 52
   },
   "dataset_id": "D130"
 }

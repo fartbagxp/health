@@ -196,7 +196,7 @@ D194,https://wonder.cdc.gov/controller/datarequest/D194,500,http_500,,,,
 D195,https://wonder.cdc.gov/controller/datarequest/D195,500,http_500,,,,
 D196,https://wonder.cdc.gov/controller/datarequest/D196,500,redirect,http://wonder.cdc.gov/single-race-single-year-v2023.html,single-race-single-year-v2023.html,2023,
 D197,https://wonder.cdc.gov/controller/datarequest/D197,500,redirect,http://wonder.cdc.gov/single-race-v2023.html,single-race-v2023.html,2023,
-D198,https://wonder.cdc.gov/controller/datarequest/D198,500,redirect,http://wonder.cdc.gov/cancer-v2021.html,cancer-v2021.html,2021,
+D198,https://wonder.cdc.gov/controller/datarequest/D198,error,error,,,,"HTTPSConnectionPool(host='wonder.cdc.gov', port=443): Read timed out. (read timeout=15)"
 D199,https://wonder.cdc.gov/controller/datarequest/D199,500,redirect,http://wonder.cdc.gov/cancermort-v2021.html,cancermort-v2021.html,2021,
 D200,https://wonder.cdc.gov/controller/datarequest/D200,500,redirect,http://wonder.cdc.gov/cancermir-v2021.html,cancermir-v2021.html,2021,
 D201,https://wonder.cdc.gov/controller/datarequest/D201,500,http_500,,,,

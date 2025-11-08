@@ -608,8 +608,9 @@
       "output_file": "data/raw/wonder/query_params_D150.json"
     },
     "D151": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/cancer-v2016.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 80,
+      "output_file": "data/raw/wonder/query_params_D151.json"
     },
     "D152": {
       "status": "success",
@@ -848,7 +849,7 @@
     }
   },
   "summary": {
-    "successful": 168,
-    "failed": 1
+    "successful": 169,
+    "failed": 0
   }
 }

@@ -26,10 +26,25 @@ jobs:
         with:
           version: "latest"
 
-      - name: Running update script
+      - name: Install Playwright browsers
+        run: |
+          uv run playwright install chromium --with-deps
+
+      - name: Crawl and scan CDC WONDER website for new datasets
+        continue-on-error: true # best effort, we already have most datasets
         run: |
           uv run python src/wonder/crawl.py
           uv run python src/wonder/scanner.py
+
+      - name: Crawl CDC WONDER datasets for new query parameters
+        continue-on-error: true # best effort, we can use the previous query parameters
+        run: |
+          uv run python -m src.wonder.query --range 1-250
+
+      - name: Catalog CDC WONDER into health topics
+        continue-on-error: true # best effort, we can use the previous catalog data
+        run: |
+          uv run python -m src.wonder.catalog
 
       - name: Commit and push changes
         if: github.ref == 'refs/heads/main'
@@ -39,6 +54,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add data/raw/wonder/
           if ! git diff-index --quiet HEAD; then
-            git commit -m "Update of raw health changes - $(date +'%Y-%m-%d')"
+            git commit -m "Update of CDC WONDER data, topics, and query parameters on $(date +'%Y-%m-%d')"
             git push -u origin main
           fi

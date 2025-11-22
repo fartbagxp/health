@@ -84,6 +84,15 @@
           "description": "disease outbreaks, emerging threats, surveillance"
         }
       ]
+    },
+    {
+      "category": "Demographics & Population",
+      "topics": [
+        {
+          "name": "Population Estimates",
+          "description": "census data, bridged-race estimates, population projections"
+        }
+      ]
     }
   ]
 }

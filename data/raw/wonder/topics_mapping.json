@@ -1,0 +1,1530 @@
+{
+  "description": "CDC Wonder dataset to health topic mappings",
+  "generated_by": "src/wonder/catalog.py",
+  "total_mapped": 169,
+  "total_unmapped": 0,
+  "mappings": [
+    {
+      "dataset_id": "D1",
+      "page_name": "bridged-race-v2002.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2002.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D1' maps to 'Population Estimates' because its page name 'bridged-race-v2002.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2002"
+    },
+    {
+      "dataset_id": "D2",
+      "page_name": "std-v2003.html",
+      "final_url": "http://wonder.cdc.gov/std-v2003.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D2' maps to 'Infectious Diseases' because its page name 'std-v2003.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2003"
+    },
+    {
+      "dataset_id": "D4",
+      "page_name": "tb-v2003.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2003.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D4' maps to 'Infectious Diseases' because its page name 'tb-v2003.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2003"
+    },
+    {
+      "dataset_id": "D5",
+      "page_name": "bridged-race-v2003.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2003.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D5' maps to 'Population Estimates' because its page name 'bridged-race-v2003.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2003"
+    },
+    {
+      "dataset_id": "D7",
+      "page_name": "population-projections.html",
+      "final_url": "http://wonder.cdc.gov/population-projections.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D7' maps to 'Population Estimates' because its page name 'population-projections.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D8",
+      "page_name": "vaers.html",
+      "final_url": "http://wonder.cdc.gov/vaers.html",
+      "topic": "Vaccinations & Immunizations",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D8' maps to 'Vaccinations & Immunizations' because its page name 'vaers.html' contains VAERS or vaccine-related keywords. VAERS (Vaccine Adverse Event Reporting System) tracks reported adverse events following vaccination.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D9",
+      "page_name": "bridged-race-v2004.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2004.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D9' maps to 'Population Estimates' because its page name 'bridged-race-v2004.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2004"
+    },
+    {
+      "dataset_id": "D10",
+      "page_name": "natality-v2002.html",
+      "final_url": "http://wonder.cdc.gov/natality-v2002.html",
+      "topic": "Birth & Natality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D10' maps to 'Birth & Natality' because its page name 'natality-v2002.html' contains natality/birth-related keywords. Natality datasets provide birth statistics including birth rates, birth weights, maternal characteristics, and prenatal care information.",
+      "years": "2002"
+    },
+    {
+      "dataset_id": "D11",
+      "page_name": "cancer-v2002.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2002.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D11' maps to 'Cancer' because its page name 'cancer-v2002.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2002"
+    },
+    {
+      "dataset_id": "D12",
+      "page_name": "aids-v1999.html",
+      "final_url": "http://wonder.cdc.gov/aids-v1999.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D12' maps to 'Infectious Diseases' because its page name 'aids-v1999.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "1999"
+    },
+    {
+      "dataset_id": "D13",
+      "page_name": "aids-v2001.html",
+      "final_url": "http://wonder.cdc.gov/aids-v2001.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D13' maps to 'Infectious Diseases' because its page name 'aids-v2001.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2001"
+    },
+    {
+      "dataset_id": "D14",
+      "page_name": "aids-v2002.html",
+      "final_url": "http://wonder.cdc.gov/aids-v2002.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D14' maps to 'Infectious Diseases' because its page name 'aids-v2002.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2002"
+    },
+    {
+      "dataset_id": "D15",
+      "page_name": "tb-v2004.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2004.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D15' maps to 'Infectious Diseases' because its page name 'tb-v2004.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2004"
+    },
+    {
+      "dataset_id": "D16",
+      "page_name": "cmf-icd9.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd9.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D16' maps to 'Mortality' because its page name 'cmf-icd9.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D17",
+      "page_name": "cmf-icd10-archive2003.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2003.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D17' maps to 'Mortality' because its page name 'cmf-icd10-archive2003.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2003"
+    },
+    {
+      "dataset_id": "D18",
+      "page_name": "lbd-v2002.html",
+      "final_url": "http://wonder.cdc.gov/lbd-v2002.html",
+      "topic": "Maternal & Child Health",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D18' maps to 'Maternal & Child Health' because its page name 'lbd-v2002.html' contains fetal death or linked birth/infant death (LBD) patterns. LBD datasets link infant death records to corresponding birth certificates for analysis of infant mortality risk factors.",
+      "years": "2002"
+    },
+    {
+      "dataset_id": "D21",
+      "page_name": "cmf-icd10-archive1999.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive1999.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D21' maps to 'Mortality' because its page name 'cmf-icd10-archive1999.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "1999"
+    },
+    {
+      "dataset_id": "D22",
+      "page_name": "cmf-icd9-archive1998.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd9-archive1998.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D22' maps to 'Mortality' because its page name 'cmf-icd9-archive1998.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "1998"
+    },
+    {
+      "dataset_id": "D23",
+      "page_name": "lbd-icd9.html",
+      "final_url": "http://wonder.cdc.gov/lbd-icd9.html",
+      "topic": "Maternal & Child Health",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D23' maps to 'Maternal & Child Health' because its page name 'lbd-icd9.html' contains fetal death or linked birth/infant death (LBD) patterns. LBD datasets link infant death records to corresponding birth certificates for analysis of infant mortality risk factors.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D24",
+      "page_name": "bridged-race-v2005.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2005.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D24' maps to 'Population Estimates' because its page name 'bridged-race-v2005.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2005"
+    },
+    {
+      "dataset_id": "D26",
+      "page_name": "tb-v2005.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2005.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D26' maps to 'Infectious Diseases' because its page name 'tb-v2005.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2005"
+    },
+    {
+      "dataset_id": "D27",
+      "page_name": "natality-v2006.html",
+      "final_url": "http://wonder.cdc.gov/natality-v2006.html",
+      "topic": "Birth & Natality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D27' maps to 'Birth & Natality' because its page name 'natality-v2006.html' contains natality/birth-related keywords. Natality datasets provide birth statistics including birth rates, birth weights, maternal characteristics, and prenatal care information.",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D28",
+      "page_name": "cancer-v2004.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2004.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D28' maps to 'Cancer' because its page name 'cancer-v2004.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2004"
+    },
+    {
+      "dataset_id": "D29",
+      "page_name": "cancermort-v2004.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2004.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D29' maps to 'Cancer' because its page name 'cancermort-v2004.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2004"
+    },
+    {
+      "dataset_id": "D30",
+      "page_name": "cmf-icd10-archive2004.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2004.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D30' maps to 'Mortality' because its page name 'cmf-icd10-archive2004.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2004"
+    },
+    {
+      "dataset_id": "D31",
+      "page_name": "lbd-v2006.html",
+      "final_url": "http://wonder.cdc.gov/lbd-v2006.html",
+      "topic": "Maternal & Child Health",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D31' maps to 'Maternal & Child Health' because its page name 'lbd-v2006.html' contains fetal death or linked birth/infant death (LBD) patterns. LBD datasets link infant death records to corresponding birth certificates for analysis of infant mortality risk factors.",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D32",
+      "page_name": "bridged-race-v2006.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2006.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D32' maps to 'Population Estimates' because its page name 'bridged-race-v2006.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D33",
+      "page_name": "mcd-v2004.html",
+      "final_url": "http://wonder.cdc.gov/mcd-v2004.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D33' maps to 'Mortality' because its page name 'mcd-v2004.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2004"
+    },
+    {
+      "dataset_id": "D34",
+      "page_name": "tb-v2006.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2006.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D34' maps to 'Infectious Diseases' because its page name 'tb-v2006.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D35",
+      "page_name": "cmf-icd10-archive2005.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2005.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D35' maps to 'Mortality' because its page name 'cmf-icd10-archive2005.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2005"
+    },
+    {
+      "dataset_id": "D36",
+      "page_name": "std-v2006.html",
+      "final_url": "http://wonder.cdc.gov/std-v2006.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D36' maps to 'Infectious Diseases' because its page name 'std-v2006.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D37",
+      "page_name": "bridged-race-v2007.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2007.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D37' maps to 'Population Estimates' because its page name 'bridged-race-v2007.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2007"
+    },
+    {
+      "dataset_id": "D38",
+      "page_name": "tb-v2007.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2007.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D38' maps to 'Infectious Diseases' because its page name 'tb-v2007.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2007"
+    },
+    {
+      "dataset_id": "D40",
+      "page_name": "cancer-v2005.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2005.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D40' maps to 'Cancer' because its page name 'cancer-v2005.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2005"
+    },
+    {
+      "dataset_id": "D41",
+      "page_name": "cancermort-v2005.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2005.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D41' maps to 'Cancer' because its page name 'cancermort-v2005.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2005"
+    },
+    {
+      "dataset_id": "D42",
+      "page_name": "std-v2007.html",
+      "final_url": "http://wonder.cdc.gov/std-v2007.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D42' maps to 'Infectious Diseases' because its page name 'std-v2007.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2007"
+    },
+    {
+      "dataset_id": "D43",
+      "page_name": "cmf-icd10-archive2006.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2006.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D43' maps to 'Mortality' because its page name 'cmf-icd10-archive2006.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D44",
+      "page_name": "bridged-race-v2008.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2008.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D44' maps to 'Population Estimates' because its page name 'bridged-race-v2008.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2008"
+    },
+    {
+      "dataset_id": "D45",
+      "page_name": "std-v2008-race-age.html",
+      "final_url": "http://wonder.cdc.gov/std-v2008-race-age.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D45' maps to 'Infectious Diseases' because its page name 'std-v2008-race-age.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2008"
+    },
+    {
+      "dataset_id": "D47",
+      "page_name": "std-v2008.html",
+      "final_url": "http://wonder.cdc.gov/std-v2008.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D47' maps to 'Infectious Diseases' because its page name 'std-v2008.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2008"
+    },
+    {
+      "dataset_id": "D48",
+      "page_name": "mcd-icd10-archive2006.html",
+      "final_url": "http://wonder.cdc.gov/mcd-icd10-archive2006.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D48' maps to 'Mortality' because its page name 'mcd-icd10-archive2006.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D49",
+      "page_name": "tb-v2008.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2008.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D49' maps to 'Infectious Diseases' because its page name 'tb-v2008.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2008"
+    },
+    {
+      "dataset_id": "D50",
+      "page_name": "cancer-v2006.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2006.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D50' maps to 'Cancer' because its page name 'cancer-v2006.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D51",
+      "page_name": "cancermort-v2006.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2006.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D51' maps to 'Cancer' because its page name 'cancermort-v2006.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2006"
+    },
+    {
+      "dataset_id": "D52",
+      "page_name": "bridged-race-v2009.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2009.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D52' maps to 'Population Estimates' because its page name 'bridged-race-v2009.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D53",
+      "page_name": "cmf-icd10-archive2007.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2007.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D53' maps to 'Mortality' because its page name 'cmf-icd10-archive2007.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2007"
+    },
+    {
+      "dataset_id": "D55",
+      "page_name": "tb-v2009.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2009.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D55' maps to 'Infectious Diseases' because its page name 'tb-v2009.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D57",
+      "page_name": "std-v2009-race-age.html",
+      "final_url": "http://wonder.cdc.gov/std-v2009-race-age.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D57' maps to 'Infectious Diseases' because its page name 'std-v2009-race-age.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D59",
+      "page_name": "std-v2009.html",
+      "final_url": "http://wonder.cdc.gov/std-v2009.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D59' maps to 'Infectious Diseases' because its page name 'std-v2009.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D60",
+      "page_name": "nasa-nldas.html",
+      "final_url": "http://wonder.cdc.gov/nasa-nldas.html",
+      "topic": "Environmental Health",
+      "category": "Environmental & Social Determinants",
+      "reason": "Dataset 'D60' maps to 'Environmental Health' because its page name 'nasa-nldas.html' contains environmental/climate data patterns. These datasets from NASA and NCA provide environmental exposure data including air quality (PM2.5), temperature, precipitation, and heat wave metrics.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D61",
+      "page_name": "nasa-lst.html",
+      "final_url": "http://wonder.cdc.gov/nasa-lst.html",
+      "topic": "Environmental Health",
+      "category": "Environmental & Social Determinants",
+      "reason": "Dataset 'D61' maps to 'Environmental Health' because its page name 'nasa-lst.html' contains environmental/climate data patterns. These datasets from NASA and NCA provide environmental exposure data including air quality (PM2.5), temperature, precipitation, and heat wave metrics.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D66",
+      "page_name": "natality-current.html",
+      "final_url": "http://wonder.cdc.gov/natality-current.html",
+      "topic": "Birth & Natality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D66' maps to 'Birth & Natality' because its page name 'natality-current.html' contains natality/birth-related keywords. Natality datasets provide birth statistics including birth rates, birth weights, maternal characteristics, and prenatal care information.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D69",
+      "page_name": "lbd-current.html",
+      "final_url": "http://wonder.cdc.gov/lbd-current.html",
+      "topic": "Maternal & Child Health",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D69' maps to 'Maternal & Child Health' because its page name 'lbd-current.html' contains fetal death or linked birth/infant death (LBD) patterns. LBD datasets link infant death records to corresponding birth certificates for analysis of infant mortality risk factors.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D70",
+      "page_name": "cancer-v2008.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2008.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D70' maps to 'Cancer' because its page name 'cancer-v2008.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2008"
+    },
+    {
+      "dataset_id": "D71",
+      "page_name": "cancermort-v2008.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2008.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D71' maps to 'Cancer' because its page name 'cancermort-v2008.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2008"
+    },
+    {
+      "dataset_id": "D72",
+      "page_name": "cmf-icd10-archive2008.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2008.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D72' maps to 'Mortality' because its page name 'cmf-icd10-archive2008.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2008"
+    },
+    {
+      "dataset_id": "D73",
+      "page_name": "nasa-pm.html",
+      "final_url": "http://wonder.cdc.gov/nasa-pm.html",
+      "topic": "Environmental Health",
+      "category": "Environmental & Social Determinants",
+      "reason": "Dataset 'D73' maps to 'Environmental Health' because its page name 'nasa-pm.html' contains environmental/climate data patterns. These datasets from NASA and NCA provide environmental exposure data including air quality (PM2.5), temperature, precipitation, and heat wave metrics.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D74",
+      "page_name": "cmf-icd8.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd8.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D74' maps to 'Mortality' because its page name 'cmf-icd8.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D75",
+      "page_name": "cancernpcr.html",
+      "final_url": "http://wonder.cdc.gov/cancernpcr.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D75' maps to 'Cancer' because its page name 'cancernpcr.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": ""
+    },
+    {
+      "dataset_id": "D76",
+      "page_name": "ucd-icd10.html",
+      "final_url": "http://wonder.cdc.gov/ucd-icd10.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D76' maps to 'Mortality' because its page name 'ucd-icd10.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D77",
+      "page_name": "mcd-icd10.html",
+      "final_url": "http://wonder.cdc.gov/mcd-icd10.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D77' maps to 'Mortality' because its page name 'mcd-icd10.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D78",
+      "page_name": "tb-v2010.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2010.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D78' maps to 'Infectious Diseases' because its page name 'tb-v2010.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2010"
+    },
+    {
+      "dataset_id": "D79",
+      "page_name": "cmf-icd10-archive2009.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2009.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D79' maps to 'Mortality' because its page name 'cmf-icd10-archive2009.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D80",
+      "page_name": "nasa-insolar.html",
+      "final_url": "http://wonder.cdc.gov/nasa-insolar.html",
+      "topic": "Environmental Health",
+      "category": "Environmental & Social Determinants",
+      "reason": "Dataset 'D80' maps to 'Environmental Health' because its page name 'nasa-insolar.html' contains environmental/climate data patterns. These datasets from NASA and NCA provide environmental exposure data including air quality (PM2.5), temperature, precipitation, and heat wave metrics.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D81",
+      "page_name": "nasa-precipitation.html",
+      "final_url": "http://wonder.cdc.gov/nasa-precipitation.html",
+      "topic": "Environmental Health",
+      "category": "Environmental & Social Determinants",
+      "reason": "Dataset 'D81' maps to 'Environmental Health' because its page name 'nasa-precipitation.html' contains environmental/climate data patterns. These datasets from NASA and NCA provide environmental exposure data including air quality (PM2.5), temperature, precipitation, and heat wave metrics.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D82",
+      "page_name": "bridged-race-v2011.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2011.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D82' maps to 'Population Estimates' because its page name 'bridged-race-v2011.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2011"
+    },
+    {
+      "dataset_id": "D84",
+      "page_name": "std-v2011-race-age.html",
+      "final_url": "http://wonder.cdc.gov/std-v2011-race-age.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D84' maps to 'Infectious Diseases' because its page name 'std-v2011-race-age.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2011"
+    },
+    {
+      "dataset_id": "D85",
+      "page_name": "cancernpcr-v2009.html",
+      "final_url": "http://wonder.cdc.gov/cancernpcr-v2009.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D85' maps to 'Cancer' because its page name 'cancernpcr-v2009.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D86",
+      "page_name": "std-v2011.html",
+      "final_url": "http://wonder.cdc.gov/std-v2011.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D86' maps to 'Infectious Diseases' because its page name 'std-v2011.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2011"
+    },
+    {
+      "dataset_id": "D89",
+      "page_name": "cancer-v2009.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2009.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D89' maps to 'Cancer' because its page name 'cancer-v2009.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D90",
+      "page_name": "cancermort-v2009.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2009.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D90' maps to 'Cancer' because its page name 'cancermort-v2009.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2009"
+    },
+    {
+      "dataset_id": "D92",
+      "page_name": "bridged-race-v2012.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2012.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D92' maps to 'Population Estimates' because its page name 'bridged-race-v2012.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2012"
+    },
+    {
+      "dataset_id": "D94",
+      "page_name": "cancer-v2010.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2010.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D94' maps to 'Cancer' because its page name 'cancer-v2010.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2010"
+    },
+    {
+      "dataset_id": "D95",
+      "page_name": "cancermort-v2010.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2010.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D95' maps to 'Cancer' because its page name 'cancermort-v2010.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2010"
+    },
+    {
+      "dataset_id": "D96",
+      "page_name": "tb-v2012.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2012.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D96' maps to 'Infectious Diseases' because its page name 'tb-v2012.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2012"
+    },
+    {
+      "dataset_id": "D97",
+      "page_name": "cancermir-v2010.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2010.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D97' maps to 'Cancer' because its page name 'cancermir-v2010.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2010"
+    },
+    {
+      "dataset_id": "D99",
+      "page_name": "bridged-race-v2013.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2013.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D99' maps to 'Population Estimates' because its page name 'bridged-race-v2013.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D100",
+      "page_name": "cancer-v2011.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2011.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D100' maps to 'Cancer' because its page name 'cancer-v2011.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2011"
+    },
+    {
+      "dataset_id": "D101",
+      "page_name": "cancermort-v2011.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2011.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D101' maps to 'Cancer' because its page name 'cancermort-v2011.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2011"
+    },
+    {
+      "dataset_id": "D102",
+      "page_name": "cancermir-v2011.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2011.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D102' maps to 'Cancer' because its page name 'cancermir-v2011.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2011"
+    },
+    {
+      "dataset_id": "D104",
+      "page_name": "nca-heatwavedays-historic.html",
+      "final_url": "http://wonder.cdc.gov/nca-heatwavedays-historic.html",
+      "topic": "Environmental Health",
+      "category": "Environmental & Social Determinants",
+      "reason": "Dataset 'D104' maps to 'Environmental Health' because its page name 'nca-heatwavedays-historic.html' contains environmental/climate data patterns. These datasets from NASA and NCA provide environmental exposure data including air quality (PM2.5), temperature, precipitation, and heat wave metrics.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D105",
+      "page_name": "cmf-icd10-archive2013.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2013.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D105' maps to 'Mortality' because its page name 'cmf-icd10-archive2013.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D106",
+      "page_name": "std-v2013-sex.html",
+      "final_url": "http://wonder.cdc.gov/std-v2013-sex.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D106' maps to 'Infectious Diseases' because its page name 'std-v2013-sex.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D107",
+      "page_name": "std-v2013-race-age.html",
+      "final_url": "http://wonder.cdc.gov/std-v2013-race-age.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D107' maps to 'Infectious Diseases' because its page name 'std-v2013-race-age.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D108",
+      "page_name": "tb-v2013.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2013.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D108' maps to 'Infectious Diseases' because its page name 'tb-v2013.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D113",
+      "page_name": "cancer-v2012.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2012.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D113' maps to 'Cancer' because its page name 'cancer-v2012.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2012"
+    },
+    {
+      "dataset_id": "D114",
+      "page_name": "cancermort-v2012.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2012.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D114' maps to 'Cancer' because its page name 'cancermort-v2012.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2012"
+    },
+    {
+      "dataset_id": "D115",
+      "page_name": "cancermir-v2012.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2012.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D115' maps to 'Cancer' because its page name 'cancermir-v2012.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2012"
+    },
+    {
+      "dataset_id": "D116",
+      "page_name": "bridged-race-v2014.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2014.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D116' maps to 'Population Estimates' because its page name 'bridged-race-v2014.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2014"
+    },
+    {
+      "dataset_id": "D117",
+      "page_name": "population-projections-2014-2060.html",
+      "final_url": "http://wonder.cdc.gov/population-projections-2014-2060.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D117' maps to 'Population Estimates' because its page name 'population-projections-2014-2060.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2014-2060"
+    },
+    {
+      "dataset_id": "D118",
+      "page_name": "birth-death-migration-race-projections-2014-2060.html",
+      "final_url": "http://wonder.cdc.gov/birth-death-migration-race-projections-2014-2060.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D118' maps to 'Population Estimates' because its page name 'birth-death-migration-race-projections-2014-2060.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2014-2060"
+    },
+    {
+      "dataset_id": "D119",
+      "page_name": "birth-death-migration-ethnicity-projections-2014-2060.html",
+      "final_url": "http://wonder.cdc.gov/birth-death-migration-ethnicity-projections-2014-2060.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D119' maps to 'Population Estimates' because its page name 'birth-death-migration-ethnicity-projections-2014-2060.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2014-2060"
+    },
+    {
+      "dataset_id": "D120",
+      "page_name": "cancer-survival-v2011.html",
+      "final_url": "http://wonder.cdc.gov/cancer-survival-v2011.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D120' maps to 'Cancer' because its page name 'cancer-survival-v2011.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2011"
+    },
+    {
+      "dataset_id": "D121",
+      "page_name": "cancer-v2013.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2013.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D121' maps to 'Cancer' because its page name 'cancer-v2013.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D123",
+      "page_name": "tb-v2014.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2014.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D123' maps to 'Infectious Diseases' because its page name 'tb-v2014.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2014"
+    },
+    {
+      "dataset_id": "D124",
+      "page_name": "cmf-icd10-archive2014.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2014.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D124' maps to 'Mortality' because its page name 'cmf-icd10-archive2014.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2014"
+    },
+    {
+      "dataset_id": "D125",
+      "page_name": "cancermort-v2013.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2013.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D125' maps to 'Cancer' because its page name 'cancermort-v2013.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D126",
+      "page_name": "cancermir-v2013.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2013.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D126' maps to 'Cancer' because its page name 'cancermir-v2013.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2013"
+    },
+    {
+      "dataset_id": "D127",
+      "page_name": "std-sex.html",
+      "final_url": "http://wonder.cdc.gov/std-sex.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D127' maps to 'Infectious Diseases' because its page name 'std-sex.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D128",
+      "page_name": "std-race-age.html",
+      "final_url": "http://wonder.cdc.gov/std-race-age.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D128' maps to 'Infectious Diseases' because its page name 'std-race-age.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D129",
+      "page_name": "bridged-race-v2015.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2015.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D129' maps to 'Population Estimates' because its page name 'bridged-race-v2015.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2015"
+    },
+    {
+      "dataset_id": "D130",
+      "page_name": "nndss-annual-summary.html",
+      "final_url": "http://wonder.cdc.gov/nndss-annual-summary.html",
+      "topic": "Notifiable Conditions",
+      "category": "Emerging Topics",
+      "reason": "Dataset 'D130' maps to 'Notifiable Conditions' because its page name 'nndss-annual-summary.html' contains NNDSS (National Notifiable Diseases Surveillance System). This system tracks diseases required by law to be reported to public health authorities.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D131",
+      "page_name": "tb-v2015.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2015.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D131' maps to 'Infectious Diseases' because its page name 'tb-v2015.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2015"
+    },
+    {
+      "dataset_id": "D132",
+      "page_name": "cmf-icd10-archive2015.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10-archive2015.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D132' maps to 'Mortality' because its page name 'cmf-icd10-archive2015.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": "2015"
+    },
+    {
+      "dataset_id": "D133",
+      "page_name": "fetal-deaths-current.html",
+      "final_url": "http://wonder.cdc.gov/fetal-deaths-current.html",
+      "topic": "Maternal & Child Health",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D133' maps to 'Maternal & Child Health' because its page name 'fetal-deaths-current.html' contains fetal death or linked birth/infant death (LBD) patterns. LBD datasets link infant death records to corresponding birth certificates for analysis of infant mortality risk factors.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D134",
+      "page_name": "bridged-race-v2016.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2016.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D134' maps to 'Population Estimates' because its page name 'bridged-race-v2016.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2016"
+    },
+    {
+      "dataset_id": "D135",
+      "page_name": "tb-v2016.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2016.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D135' maps to 'Infectious Diseases' because its page name 'tb-v2016.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2016"
+    },
+    {
+      "dataset_id": "D136",
+      "page_name": "cancer-v2014.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2014.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D136' maps to 'Cancer' because its page name 'cancer-v2014.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2014"
+    },
+    {
+      "dataset_id": "D137",
+      "page_name": "cancermort-v2014.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2014.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D137' maps to 'Cancer' because its page name 'cancermort-v2014.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2014"
+    },
+    {
+      "dataset_id": "D138",
+      "page_name": "cancermir-v2014.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2014.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D138' maps to 'Cancer' because its page name 'cancermir-v2014.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2014"
+    },
+    {
+      "dataset_id": "D140",
+      "page_name": "cmf-icd10.html",
+      "final_url": "http://wonder.cdc.gov/cmf-icd10.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D140' maps to 'Mortality' because its page name 'cmf-icd10.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D141",
+      "page_name": "ucd-border.html",
+      "final_url": "http://wonder.cdc.gov/ucd-border.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D141' maps to 'Mortality' because its page name 'ucd-border.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D142",
+      "page_name": "single-race-v2016.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2016.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D142' maps to 'Population Estimates' because its page name 'single-race-v2016.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2016"
+    },
+    {
+      "dataset_id": "D143",
+      "page_name": "bridged-race-v2017.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2017.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D143' maps to 'Population Estimates' because its page name 'bridged-race-v2017.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2017"
+    },
+    {
+      "dataset_id": "D144",
+      "page_name": "cancer-v2015.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2015.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D144' maps to 'Cancer' because its page name 'cancer-v2015.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2015"
+    },
+    {
+      "dataset_id": "D145",
+      "page_name": "cancermort-v2015.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2015.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D145' maps to 'Cancer' because its page name 'cancermort-v2015.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2015"
+    },
+    {
+      "dataset_id": "D146",
+      "page_name": "cancermir-v2015.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2015.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D146' maps to 'Cancer' because its page name 'cancermir-v2015.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2015"
+    },
+    {
+      "dataset_id": "D147",
+      "page_name": "tb-v2017.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2017.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D147' maps to 'Infectious Diseases' because its page name 'tb-v2017.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2017"
+    },
+    {
+      "dataset_id": "D148",
+      "page_name": "single-race-v2017.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2017.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D148' maps to 'Population Estimates' because its page name 'single-race-v2017.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2017"
+    },
+    {
+      "dataset_id": "D149",
+      "page_name": "natality-expanded-current.html",
+      "final_url": "http://wonder.cdc.gov/natality-expanded-current.html",
+      "topic": "Birth & Natality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D149' maps to 'Birth & Natality' because its page name 'natality-expanded-current.html' contains natality/birth-related keywords. Natality datasets provide birth statistics including birth rates, birth weights, maternal characteristics, and prenatal care information.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D150",
+      "page_name": "fetal-deaths-expanded-current.html",
+      "final_url": "http://wonder.cdc.gov/fetal-deaths-expanded-current.html",
+      "topic": "Maternal & Child Health",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D150' maps to 'Maternal & Child Health' because its page name 'fetal-deaths-expanded-current.html' contains fetal death or linked birth/infant death (LBD) patterns. LBD datasets link infant death records to corresponding birth certificates for analysis of infant mortality risk factors.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D151",
+      "page_name": "cancer-v2016.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2016.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D151' maps to 'Cancer' because its page name 'cancer-v2016.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2016"
+    },
+    {
+      "dataset_id": "D152",
+      "page_name": "cancermort-v2016.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2016.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D152' maps to 'Cancer' because its page name 'cancermort-v2016.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2016"
+    },
+    {
+      "dataset_id": "D153",
+      "page_name": "cancermir-v2016.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2016.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D153' maps to 'Cancer' because its page name 'cancermir-v2016.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2016"
+    },
+    {
+      "dataset_id": "D154",
+      "page_name": "bridged-race-v2018.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2018.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D154' maps to 'Population Estimates' because its page name 'bridged-race-v2018.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2018"
+    },
+    {
+      "dataset_id": "D155",
+      "page_name": "single-race-v2018.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2018.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D155' maps to 'Population Estimates' because its page name 'single-race-v2018.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2018"
+    },
+    {
+      "dataset_id": "D156",
+      "page_name": "tb-v2018.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2018.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D156' maps to 'Infectious Diseases' because its page name 'tb-v2018.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2018"
+    },
+    {
+      "dataset_id": "D157",
+      "page_name": "mcd-icd10-expanded.html",
+      "final_url": "http://wonder.cdc.gov/mcd-icd10-expanded.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D157' maps to 'Mortality' because its page name 'mcd-icd10-expanded.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D158",
+      "page_name": "ucd-icd10-expanded.html",
+      "final_url": "http://wonder.cdc.gov/ucd-icd10-expanded.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D158' maps to 'Mortality' because its page name 'ucd-icd10-expanded.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D159",
+      "page_name": "lbd-current-expanded.html",
+      "final_url": "http://wonder.cdc.gov/lbd-current-expanded.html",
+      "topic": "Maternal & Child Health",
+      "category": "Public Health Concerns",
+      "reason": "Dataset 'D159' maps to 'Maternal & Child Health' because its page name 'lbd-current-expanded.html' contains fetal death or linked birth/infant death (LBD) patterns. LBD datasets link infant death records to corresponding birth certificates for analysis of infant mortality risk factors.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D160",
+      "page_name": "cancer-v2017.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2017.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D160' maps to 'Cancer' because its page name 'cancer-v2017.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2017"
+    },
+    {
+      "dataset_id": "D161",
+      "page_name": "cancermort-v2017.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2017.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D161' maps to 'Cancer' because its page name 'cancermort-v2017.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2017"
+    },
+    {
+      "dataset_id": "D162",
+      "page_name": "cancermir-v2017.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2017.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D162' maps to 'Cancer' because its page name 'cancermir-v2017.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2017"
+    },
+    {
+      "dataset_id": "D163",
+      "page_name": "bridged-race-v2019.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2019.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D163' maps to 'Population Estimates' because its page name 'bridged-race-v2019.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2019"
+    },
+    {
+      "dataset_id": "D164",
+      "page_name": "single-race-v2019.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2019.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D164' maps to 'Population Estimates' because its page name 'single-race-v2019.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2019"
+    },
+    {
+      "dataset_id": "D165",
+      "page_name": "tb-v2019.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2019.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D165' maps to 'Infectious Diseases' because its page name 'tb-v2019.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2019"
+    },
+    {
+      "dataset_id": "D166",
+      "page_name": "single-race-single-year-v2016.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2016.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D166' maps to 'Population Estimates' because its page name 'single-race-single-year-v2016.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2016"
+    },
+    {
+      "dataset_id": "D167",
+      "page_name": "single-race-single-year-v2017.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2017.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D167' maps to 'Population Estimates' because its page name 'single-race-single-year-v2017.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2017"
+    },
+    {
+      "dataset_id": "D168",
+      "page_name": "single-race-single-year-v2018.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2018.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D168' maps to 'Population Estimates' because its page name 'single-race-single-year-v2018.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2018"
+    },
+    {
+      "dataset_id": "D169",
+      "page_name": "single-race-single-year-v2019.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2019.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D169' maps to 'Population Estimates' because its page name 'single-race-single-year-v2019.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2019"
+    },
+    {
+      "dataset_id": "D170",
+      "page_name": "single-race-single-year-v2020.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2020.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D170' maps to 'Population Estimates' because its page name 'single-race-single-year-v2020.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2020"
+    },
+    {
+      "dataset_id": "D171",
+      "page_name": "single-race-v2020.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2020.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D171' maps to 'Population Estimates' because its page name 'single-race-v2020.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2020"
+    },
+    {
+      "dataset_id": "D172",
+      "page_name": "cancer-v2018.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2018.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D172' maps to 'Cancer' because its page name 'cancer-v2018.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2018"
+    },
+    {
+      "dataset_id": "D173",
+      "page_name": "cancermort-v2018.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2018.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D173' maps to 'Cancer' because its page name 'cancermort-v2018.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2018"
+    },
+    {
+      "dataset_id": "D174",
+      "page_name": "cancermir-v2018.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2018.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D174' maps to 'Cancer' because its page name 'cancermir-v2018.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2018"
+    },
+    {
+      "dataset_id": "D175",
+      "page_name": "tb-v2020.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2020.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D175' maps to 'Infectious Diseases' because its page name 'tb-v2020.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2020"
+    },
+    {
+      "dataset_id": "D176",
+      "page_name": "mcd-icd10-provisional.html",
+      "final_url": "http://wonder.cdc.gov/mcd-icd10-provisional.html",
+      "topic": "Mortality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D176' maps to 'Mortality' because its page name 'mcd-icd10-provisional.html' matches mortality-related patterns (CMF=Compressed Mortality File, UCD=Underlying Cause of Death, MCD=Multiple Cause of Death). These datasets track death rates and causes of death across populations.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D178",
+      "page_name": "bridged-race-v2020.html",
+      "final_url": "http://wonder.cdc.gov/bridged-race-v2020.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D178' maps to 'Population Estimates' because its page name 'bridged-race-v2020.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2020"
+    },
+    {
+      "dataset_id": "D181",
+      "page_name": "cancer-v2019.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2019.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D181' maps to 'Cancer' because its page name 'cancer-v2019.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2019"
+    },
+    {
+      "dataset_id": "D182",
+      "page_name": "cancermort-v2019.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2019.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D182' maps to 'Cancer' because its page name 'cancermort-v2019.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2019"
+    },
+    {
+      "dataset_id": "D183",
+      "page_name": "cancermir-v2019.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2019.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D183' maps to 'Cancer' because its page name 'cancermir-v2019.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2019"
+    },
+    {
+      "dataset_id": "D184",
+      "page_name": "single-race-single-year-v2021.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2021.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D184' maps to 'Population Estimates' because its page name 'single-race-single-year-v2021.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2021"
+    },
+    {
+      "dataset_id": "D185",
+      "page_name": "single-race-v2021.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2021.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D185' maps to 'Population Estimates' because its page name 'single-race-v2021.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2021"
+    },
+    {
+      "dataset_id": "D186",
+      "page_name": "tb-v2021.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2021.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D186' maps to 'Infectious Diseases' because its page name 'tb-v2021.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2021"
+    },
+    {
+      "dataset_id": "D187",
+      "page_name": "cancer-v2020.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2020.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D187' maps to 'Cancer' because its page name 'cancer-v2020.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2020"
+    },
+    {
+      "dataset_id": "D188",
+      "page_name": "cancermort-v2020.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2020.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D188' maps to 'Cancer' because its page name 'cancermort-v2020.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2020"
+    },
+    {
+      "dataset_id": "D189",
+      "page_name": "cancermir-v2020.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2020.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D189' maps to 'Cancer' because its page name 'cancermir-v2020.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2020"
+    },
+    {
+      "dataset_id": "D190",
+      "page_name": "single-race-single-year-v2022.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2022.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D190' maps to 'Population Estimates' because its page name 'single-race-single-year-v2022.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2022"
+    },
+    {
+      "dataset_id": "D191",
+      "page_name": "single-race-v2022.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2022.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D191' maps to 'Population Estimates' because its page name 'single-race-v2022.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2022"
+    },
+    {
+      "dataset_id": "D192",
+      "page_name": "natality-expanded-provisional.html",
+      "final_url": "http://wonder.cdc.gov/natality-expanded-provisional.html",
+      "topic": "Birth & Natality",
+      "category": "Core Life Events",
+      "reason": "Dataset 'D192' maps to 'Birth & Natality' because its page name 'natality-expanded-provisional.html' contains natality/birth-related keywords. Natality datasets provide birth statistics including birth rates, birth weights, maternal characteristics, and prenatal care information.",
+      "years": ""
+    },
+    {
+      "dataset_id": "D193",
+      "page_name": "tb-v2022.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2022.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D193' maps to 'Infectious Diseases' because its page name 'tb-v2022.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2022"
+    },
+    {
+      "dataset_id": "D196",
+      "page_name": "single-race-single-year-v2023.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2023.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D196' maps to 'Population Estimates' because its page name 'single-race-single-year-v2023.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2023"
+    },
+    {
+      "dataset_id": "D197",
+      "page_name": "single-race-v2023.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2023.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D197' maps to 'Population Estimates' because its page name 'single-race-v2023.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2023"
+    },
+    {
+      "dataset_id": "D198",
+      "page_name": "cancer-v2021.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2021.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D198' maps to 'Cancer' because its page name 'cancer-v2021.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2021"
+    },
+    {
+      "dataset_id": "D199",
+      "page_name": "cancermort-v2021.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2021.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D199' maps to 'Cancer' because its page name 'cancermort-v2021.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2021"
+    },
+    {
+      "dataset_id": "D200",
+      "page_name": "cancermir-v2021.html",
+      "final_url": "http://wonder.cdc.gov/cancermir-v2021.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D200' maps to 'Cancer' because its page name 'cancermir-v2021.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2021"
+    },
+    {
+      "dataset_id": "D202",
+      "page_name": "tb-v2023.html",
+      "final_url": "http://wonder.cdc.gov/tb-v2023.html",
+      "topic": "Infectious Diseases",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D202' maps to 'Infectious Diseases' because its page name 'tb-v2023.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
+      "years": "2023"
+    },
+    {
+      "dataset_id": "D205",
+      "page_name": "cancer-v2022.html",
+      "final_url": "http://wonder.cdc.gov/cancer-v2022.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D205' maps to 'Cancer' because its page name 'cancer-v2022.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2022"
+    },
+    {
+      "dataset_id": "D207",
+      "page_name": "cancermort-v2022_SR.html",
+      "final_url": "http://wonder.cdc.gov/cancermort-v2022_SR.html",
+      "topic": "Cancer",
+      "category": "Major Disease Categories",
+      "reason": "Dataset 'D207' maps to 'Cancer' because its page name 'cancermort-v2022_SR.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
+      "years": "2022"
+    }
+  ],
+  "unmapped": []
+}

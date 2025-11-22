@@ -5,11 +5,11 @@ import re
 import csv
 import time
 import logging
-from collections import deque
-from urllib.parse import urljoin, urlparse
-
 import requests
+
+from collections import deque
 from bs4 import BeautifulSoup
+from urllib.parse import urljoin, urlparse
 
 logging.basicConfig(
     level=logging.INFO,

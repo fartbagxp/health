@@ -2,7 +2,7 @@
   "description": "CDC Wonder dataset to health topic mappings",
   "generated_by": "src/wonder/catalog.py",
   "total_mapped": 169,
-  "total_unmapped": 0,
+  "total_unmapped": 1,
   "mappings": [
     {
       "dataset_id": "D1",
@@ -1526,5 +1526,12 @@
       "years": "2022"
     }
   ],
-  "unmapped": []
+  "unmapped": [
+    {
+      "dataset_id": "D201",
+      "page_name": "puerto-rico-v2023.html",
+      "final_url": "http://wonder.cdc.gov/puerto-rico-v2023.html",
+      "reason": "Dataset 'D201' with page 'puerto-rico-v2023.html' could not be mapped to any topic. None of the defined search patterns matched the page name. Consider adding a new pattern to TOPIC_SEARCH_TERMS if this dataset belongs to an existing topic, or create a new topic category."
+    }
+  ]
 }

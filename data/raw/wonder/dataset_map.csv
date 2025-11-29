@@ -199,7 +199,7 @@ D197,https://wonder.cdc.gov/controller/datarequest/D197,500,redirect,http://wond
 D198,https://wonder.cdc.gov/controller/datarequest/D198,500,redirect,http://wonder.cdc.gov/cancer-v2021.html,cancer-v2021.html,2021,
 D199,https://wonder.cdc.gov/controller/datarequest/D199,500,redirect,http://wonder.cdc.gov/cancermort-v2021.html,cancermort-v2021.html,2021,
 D200,https://wonder.cdc.gov/controller/datarequest/D200,500,redirect,http://wonder.cdc.gov/cancermir-v2021.html,cancermir-v2021.html,2021,
-D201,https://wonder.cdc.gov/controller/datarequest/D201,500,http_500,,,,
+D201,https://wonder.cdc.gov/controller/datarequest/D201,500,redirect,http://wonder.cdc.gov/puerto-rico-v2023.html,puerto-rico-v2023.html,2023,
 D202,https://wonder.cdc.gov/controller/datarequest/D202,500,redirect,http://wonder.cdc.gov/tb-v2023.html,tb-v2023.html,2023,
 D203,https://wonder.cdc.gov/controller/datarequest/D203,500,http_500,,,,
 D204,https://wonder.cdc.gov/controller/datarequest/D204,500,http_500,,,,

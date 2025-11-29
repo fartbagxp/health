@@ -1,0 +1,1613 @@
+{
+  "url": "http://wonder.cdc.gov/puerto-rico-v2023.html",
+  "final_url": "https://wonder.cdc.gov/puerto-rico-v2023.html",
+  "page_title": "Puerto Rico Population Estimates for years 2020-2023 Request",
+  "forms": [
+    {
+      "id": "form_0",
+      "name": "",
+      "action": "https://search.cdc.gov/search/",
+      "method": "GET"
+    },
+    {
+      "id": "wonderform",
+      "name": "form",
+      "action": "/controller/datarequest/D201",
+      "method": "POST"
+    }
+  ],
+  "parameters": {
+    "selects": [
+      {
+        "type": "select",
+        "name": "B_1",
+        "id": "SB_1",
+        "label": "Group Results By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "D201.V2",
+            "text": "Municipios",
+            "selected": false
+          },
+          {
+            "value": "D201.V8",
+            "text": "Five-Year Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D201.V7",
+            "text": "Single-Year Ages",
+            "selected": false
+          },
+          {
+            "value": "D201.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D201.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "B_2",
+        "id": "SB_2",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D201.V2",
+            "text": "Municipios",
+            "selected": false
+          },
+          {
+            "value": "D201.V8",
+            "text": "Five-Year Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D201.V7",
+            "text": "Single-Year Ages",
+            "selected": false
+          },
+          {
+            "value": "D201.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D201.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 6
+      },
+      {
+        "type": "select",
+        "name": "B_3",
+        "id": "SB_3",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D201.V2",
+            "text": "Municipios",
+            "selected": false
+          },
+          {
+            "value": "D201.V8",
+            "text": "Five-Year Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D201.V7",
+            "text": "Single-Year Ages",
+            "selected": false
+          },
+          {
+            "value": "D201.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D201.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 6
+      },
+      {
+        "type": "select",
+        "name": "B_4",
+        "id": "SB_4",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D201.V2",
+            "text": "Municipios",
+            "selected": false
+          },
+          {
+            "value": "D201.V8",
+            "text": "Five-Year Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D201.V7",
+            "text": "Single-Year Ages",
+            "selected": false
+          },
+          {
+            "value": "D201.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D201.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 6
+      },
+      {
+        "type": "select",
+        "name": "B_5",
+        "id": "SB_5",
+        "label": "And By",
+        "multiple": false,
+        "options": [
+          {
+            "value": "*None*",
+            "text": "None",
+            "selected": false
+          },
+          {
+            "value": "D201.V2",
+            "text": "Municipios",
+            "selected": false
+          },
+          {
+            "value": "D201.V8",
+            "text": "Five-Year Age Groups",
+            "selected": false
+          },
+          {
+            "value": "D201.V7",
+            "text": "Single-Year Ages",
+            "selected": false
+          },
+          {
+            "value": "D201.V5",
+            "text": "Sex",
+            "selected": false
+          },
+          {
+            "value": "D201.V1",
+            "text": "Yearly July 1st Estimates",
+            "selected": false
+          }
+        ],
+        "option_count": 6
+      },
+      {
+        "type": "select",
+        "name": "V_D201.V2",
+        "id": "SD201.V2",
+        "label": "Municipios",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Municipios ",
+            "selected": true
+          },
+          {
+            "value": "72001",
+            "text": " Adjuntas ",
+            "selected": false
+          },
+          {
+            "value": "72003",
+            "text": " Aguada ",
+            "selected": false
+          },
+          {
+            "value": "72005",
+            "text": " Aguadilla ",
+            "selected": false
+          },
+          {
+            "value": "72007",
+            "text": " Aguas Buenas ",
+            "selected": false
+          },
+          {
+            "value": "72009",
+            "text": " Aibonito ",
+            "selected": false
+          },
+          {
+            "value": "72011",
+            "text": " Añasco ",
+            "selected": false
+          },
+          {
+            "value": "72013",
+            "text": " Arecibo ",
+            "selected": false
+          },
+          {
+            "value": "72015",
+            "text": " Arroyo ",
+            "selected": false
+          },
+          {
+            "value": "72017",
+            "text": " Barceloneta ",
+            "selected": false
+          },
+          {
+            "value": "72019",
+            "text": " Barranquitas ",
+            "selected": false
+          },
+          {
+            "value": "72021",
+            "text": " Bayamón ",
+            "selected": false
+          },
+          {
+            "value": "72023",
+            "text": " Cabo Rojo ",
+            "selected": false
+          },
+          {
+            "value": "72025",
+            "text": " Caguas ",
+            "selected": false
+          },
+          {
+            "value": "72027",
+            "text": " Camuy ",
+            "selected": false
+          },
+          {
+            "value": "72029",
+            "text": " Canovanas ",
+            "selected": false
+          },
+          {
+            "value": "72031",
+            "text": " Carolina ",
+            "selected": false
+          },
+          {
+            "value": "72033",
+            "text": " Cataño ",
+            "selected": false
+          },
+          {
+            "value": "72035",
+            "text": " Cayey ",
+            "selected": false
+          },
+          {
+            "value": "72037",
+            "text": " Ceiba ",
+            "selected": false
+          },
+          {
+            "value": "72039",
+            "text": " Ciales ",
+            "selected": false
+          },
+          {
+            "value": "72041",
+            "text": " Cidra ",
+            "selected": false
+          },
+          {
+            "value": "72043",
+            "text": " Coamo ",
+            "selected": false
+          },
+          {
+            "value": "72045",
+            "text": " Comerío ",
+            "selected": false
+          },
+          {
+            "value": "72047",
+            "text": " Corozal ",
+            "selected": false
+          },
+          {
+            "value": "72049",
+            "text": " Culebra ",
+            "selected": false
+          },
+          {
+            "value": "72051",
+            "text": " Dorado ",
+            "selected": false
+          },
+          {
+            "value": "72053",
+            "text": " Fajardo ",
+            "selected": false
+          },
+          {
+            "value": "72054",
+            "text": " Florida ",
+            "selected": false
+          },
+          {
+            "value": "72055",
+            "text": " Guánica ",
+            "selected": false
+          },
+          {
+            "value": "72057",
+            "text": " Guayama ",
+            "selected": false
+          },
+          {
+            "value": "72059",
+            "text": " Guayanilla ",
+            "selected": false
+          },
+          {
+            "value": "72061",
+            "text": " Guaynabo ",
+            "selected": false
+          },
+          {
+            "value": "72063",
+            "text": " Gurabo ",
+            "selected": false
+          },
+          {
+            "value": "72065",
+            "text": " Hatillo ",
+            "selected": false
+          },
+          {
+            "value": "72067",
+            "text": " Hormigueros ",
+            "selected": false
+          },
+          {
+            "value": "72069",
+            "text": " Humacao ",
+            "selected": false
+          },
+          {
+            "value": "72071",
+            "text": " Isabela ",
+            "selected": false
+          },
+          {
+            "value": "72073",
+            "text": " Jayuya ",
+            "selected": false
+          },
+          {
+            "value": "72075",
+            "text": " Juana Díaz ",
+            "selected": false
+          },
+          {
+            "value": "72077",
+            "text": " Juncos ",
+            "selected": false
+          },
+          {
+            "value": "72079",
+            "text": " Lajas ",
+            "selected": false
+          },
+          {
+            "value": "72081",
+            "text": " Lares ",
+            "selected": false
+          },
+          {
+            "value": "72083",
+            "text": " Las Marías ",
+            "selected": false
+          },
+          {
+            "value": "72085",
+            "text": " Las Piedras ",
+            "selected": false
+          },
+          {
+            "value": "72087",
+            "text": " Loíza ",
+            "selected": false
+          },
+          {
+            "value": "72089",
+            "text": " Luquillo ",
+            "selected": false
+          },
+          {
+            "value": "72091",
+            "text": " Manatí ",
+            "selected": false
+          },
+          {
+            "value": "72093",
+            "text": " Maricao ",
+            "selected": false
+          },
+          {
+            "value": "72095",
+            "text": " Maunabo ",
+            "selected": false
+          },
+          {
+            "value": "72097",
+            "text": " Mayaguez ",
+            "selected": false
+          },
+          {
+            "value": "72099",
+            "text": " Moca ",
+            "selected": false
+          },
+          {
+            "value": "72101",
+            "text": " Morovis ",
+            "selected": false
+          },
+          {
+            "value": "72103",
+            "text": " Naguabo ",
+            "selected": false
+          },
+          {
+            "value": "72105",
+            "text": " Naranjito ",
+            "selected": false
+          },
+          {
+            "value": "72107",
+            "text": " Orocovis ",
+            "selected": false
+          },
+          {
+            "value": "72109",
+            "text": " Patillas ",
+            "selected": false
+          },
+          {
+            "value": "72111",
+            "text": " Peñuelas ",
+            "selected": false
+          },
+          {
+            "value": "72113",
+            "text": " Ponce ",
+            "selected": false
+          },
+          {
+            "value": "72115",
+            "text": " Quebradillas ",
+            "selected": false
+          },
+          {
+            "value": "72117",
+            "text": " Rincón ",
+            "selected": false
+          },
+          {
+            "value": "72119",
+            "text": " Río Grande ",
+            "selected": false
+          },
+          {
+            "value": "72121",
+            "text": " Sabana Grande ",
+            "selected": false
+          },
+          {
+            "value": "72123",
+            "text": " Salinas ",
+            "selected": false
+          },
+          {
+            "value": "72125",
+            "text": " San Germán ",
+            "selected": false
+          },
+          {
+            "value": "72127",
+            "text": " San Juan ",
+            "selected": false
+          },
+          {
+            "value": "72129",
+            "text": " San Lorenzo ",
+            "selected": false
+          },
+          {
+            "value": "72131",
+            "text": " San Sebastián ",
+            "selected": false
+          },
+          {
+            "value": "72133",
+            "text": " Santa Isabel ",
+            "selected": false
+          },
+          {
+            "value": "72135",
+            "text": " Toa Alta ",
+            "selected": false
+          },
+          {
+            "value": "72137",
+            "text": " Toa Baja ",
+            "selected": false
+          },
+          {
+            "value": "72139",
+            "text": " Trujillo Alto ",
+            "selected": false
+          },
+          {
+            "value": "72141",
+            "text": " Utuado ",
+            "selected": false
+          },
+          {
+            "value": "72143",
+            "text": " Vega Alta ",
+            "selected": false
+          },
+          {
+            "value": "72145",
+            "text": " Vega Baja ",
+            "selected": false
+          },
+          {
+            "value": "72147",
+            "text": " Vieques ",
+            "selected": false
+          },
+          {
+            "value": "72149",
+            "text": " Villalba ",
+            "selected": false
+          },
+          {
+            "value": "72151",
+            "text": " Yabucoa ",
+            "selected": false
+          },
+          {
+            "value": "72153",
+            "text": " Yauco ",
+            "selected": false
+          }
+        ],
+        "option_count": 79
+      },
+      {
+        "type": "select",
+        "name": "V_D201.V8",
+        "id": "SD201.V8",
+        "label": "Five-Year Age Groups",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1-4",
+            "text": " 1-4 years ",
+            "selected": false
+          },
+          {
+            "value": "5-9",
+            "text": " 5-9 years ",
+            "selected": false
+          },
+          {
+            "value": "10-14",
+            "text": " 10-14 years ",
+            "selected": false
+          },
+          {
+            "value": "15-19",
+            "text": " 15-19 years ",
+            "selected": false
+          },
+          {
+            "value": "20-24",
+            "text": " 20-24 years ",
+            "selected": false
+          },
+          {
+            "value": "25-29",
+            "text": " 25-29 years ",
+            "selected": false
+          },
+          {
+            "value": "30-34",
+            "text": " 30-34 years ",
+            "selected": false
+          },
+          {
+            "value": "35-39",
+            "text": " 35-39 years ",
+            "selected": false
+          },
+          {
+            "value": "40-44",
+            "text": " 40-44 years ",
+            "selected": false
+          },
+          {
+            "value": "45-49",
+            "text": " 45-49 years ",
+            "selected": false
+          },
+          {
+            "value": "50-54",
+            "text": " 50-54 years ",
+            "selected": false
+          },
+          {
+            "value": "55-59",
+            "text": " 55-59 years ",
+            "selected": false
+          },
+          {
+            "value": "60-64",
+            "text": " 60-64 years  ",
+            "selected": false
+          },
+          {
+            "value": "65-69",
+            "text": " 65-69 years ",
+            "selected": false
+          },
+          {
+            "value": "70-74",
+            "text": " 70-74 years ",
+            "selected": false
+          },
+          {
+            "value": "75-79",
+            "text": " 75-79 years ",
+            "selected": false
+          },
+          {
+            "value": "80-84",
+            "text": " 80-84 years ",
+            "selected": false
+          },
+          {
+            "value": "85+",
+            "text": " 85+ years ",
+            "selected": false
+          }
+        ],
+        "option_count": 20
+      },
+      {
+        "type": "select",
+        "name": "V_D201.V7",
+        "id": "SD201.V7",
+        "label": "Single-Year Ages",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Ages ",
+            "selected": true
+          },
+          {
+            "value": "0",
+            "text": " < 1 year ",
+            "selected": false
+          },
+          {
+            "value": "1",
+            "text": " 1 year ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " 2 years ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " 3 years ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " 4 years ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " 5 years ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " 6 years ",
+            "selected": false
+          },
+          {
+            "value": "7",
+            "text": " 7 years ",
+            "selected": false
+          },
+          {
+            "value": "8",
+            "text": " 8 years ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " 9 years ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": " 10 years ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": " 11 years ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": " 12 years ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": " 13 years ",
+            "selected": false
+          },
+          {
+            "value": "14",
+            "text": " 14 years ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": " 15 years ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": " 16 years ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": " 17 years ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": " 18 years ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": " 19 years ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": " 20 years ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": " 21 years ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": " 22 years ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": " 23 years ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": " 24 years ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": " 25 years ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": " 26 years ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": " 27 years ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": " 28 years ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": " 29 years ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": " 30 years ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": " 31 years ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": " 32 years ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": " 33 years ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": " 34 years ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": " 35 years ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": " 36 years ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": " 37 years ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": " 38 years ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": " 39 years ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": " 40 years ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": " 41 years ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": " 42 years ",
+            "selected": false
+          },
+          {
+            "value": "43",
+            "text": " 43 years ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": " 44 years ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": " 45 years ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": " 46 years ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": " 47 years ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": " 48 years ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": " 49 years ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": " 50 years ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": " 51 years ",
+            "selected": false
+          },
+          {
+            "value": "52",
+            "text": " 52 years ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": " 53 years ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": " 54 years ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": " 55 years ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": " 56 years ",
+            "selected": false
+          },
+          {
+            "value": "57",
+            "text": " 57 years ",
+            "selected": false
+          },
+          {
+            "value": "58",
+            "text": " 58 years ",
+            "selected": false
+          },
+          {
+            "value": "59",
+            "text": " 59 years ",
+            "selected": false
+          },
+          {
+            "value": "60",
+            "text": " 60 years ",
+            "selected": false
+          },
+          {
+            "value": "61",
+            "text": " 61 years ",
+            "selected": false
+          },
+          {
+            "value": "62",
+            "text": " 62 years ",
+            "selected": false
+          },
+          {
+            "value": "63",
+            "text": " 63 years ",
+            "selected": false
+          },
+          {
+            "value": "64",
+            "text": " 64 years ",
+            "selected": false
+          },
+          {
+            "value": "65",
+            "text": " 65 years ",
+            "selected": false
+          },
+          {
+            "value": "66",
+            "text": " 66 years ",
+            "selected": false
+          },
+          {
+            "value": "67",
+            "text": " 67 years ",
+            "selected": false
+          },
+          {
+            "value": "68",
+            "text": " 68 years ",
+            "selected": false
+          },
+          {
+            "value": "69",
+            "text": " 69 years ",
+            "selected": false
+          },
+          {
+            "value": "70",
+            "text": " 70 years ",
+            "selected": false
+          },
+          {
+            "value": "71",
+            "text": " 71 years ",
+            "selected": false
+          },
+          {
+            "value": "72",
+            "text": " 72 years ",
+            "selected": false
+          },
+          {
+            "value": "73",
+            "text": " 73 years ",
+            "selected": false
+          },
+          {
+            "value": "74",
+            "text": " 74 years ",
+            "selected": false
+          },
+          {
+            "value": "75",
+            "text": " 75 years ",
+            "selected": false
+          },
+          {
+            "value": "76",
+            "text": " 76 years ",
+            "selected": false
+          },
+          {
+            "value": "77",
+            "text": " 77 years ",
+            "selected": false
+          },
+          {
+            "value": "78",
+            "text": " 78 years ",
+            "selected": false
+          },
+          {
+            "value": "79",
+            "text": " 79 years ",
+            "selected": false
+          },
+          {
+            "value": "80",
+            "text": " 80 years ",
+            "selected": false
+          },
+          {
+            "value": "81",
+            "text": " 81 years ",
+            "selected": false
+          },
+          {
+            "value": "82",
+            "text": " 82 years ",
+            "selected": false
+          },
+          {
+            "value": "83",
+            "text": " 83 years ",
+            "selected": false
+          },
+          {
+            "value": "84",
+            "text": " 84 years ",
+            "selected": false
+          },
+          {
+            "value": "85+",
+            "text": " 85+ years ",
+            "selected": false
+          }
+        ],
+        "option_count": 87
+      },
+      {
+        "type": "select",
+        "name": "V_D201.V5",
+        "id": "SD201.V5",
+        "label": "Sex",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All ",
+            "selected": true
+          },
+          {
+            "value": "F",
+            "text": " Female ",
+            "selected": false
+          },
+          {
+            "value": "M",
+            "text": " Male ",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "V_D201.V1",
+        "id": "SD201.V1",
+        "label": "Yearly July 1st Estimates",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Years ",
+            "selected": true
+          },
+          {
+            "value": "2020",
+            "text": " 2020 ",
+            "selected": false
+          },
+          {
+            "value": "2021",
+            "text": " 2021 ",
+            "selected": false
+          },
+          {
+            "value": "2022",
+            "text": " 2022 ",
+            "selected": false
+          },
+          {
+            "value": "2023",
+            "text": " 2023 ",
+            "selected": false
+          }
+        ],
+        "option_count": 5
+      },
+      {
+        "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
+        "name": "precision",
+        "id": "SO_precision",
+        "label": "Precision",
+        "multiple": false,
+        "options": [
+          {
+            "value": "0",
+            "text": "0",
+            "selected": false
+          }
+        ],
+        "option_count": 1
+      },
+      {
+        "type": "select",
+        "name": "O_timeout",
+        "id": "SO_timeout",
+        "label": "Data Access Timeout",
+        "multiple": false,
+        "options": [
+          {
+            "value": "60",
+            "text": " 1 ",
+            "selected": false
+          },
+          {
+            "value": "120",
+            "text": " 2 ",
+            "selected": false
+          },
+          {
+            "value": "180",
+            "text": " 3 ",
+            "selected": false
+          },
+          {
+            "value": "240",
+            "text": " 4 ",
+            "selected": false
+          },
+          {
+            "value": "300",
+            "text": " 5 ",
+            "selected": false
+          },
+          {
+            "value": "360",
+            "text": " 6 ",
+            "selected": false
+          },
+          {
+            "value": "420",
+            "text": " 7 ",
+            "selected": false
+          },
+          {
+            "value": "480",
+            "text": " 8 ",
+            "selected": false
+          },
+          {
+            "value": "540",
+            "text": " 9 ",
+            "selected": false
+          },
+          {
+            "value": "600",
+            "text": " 10 ",
+            "selected": true
+          },
+          {
+            "value": "660",
+            "text": " 11 ",
+            "selected": false
+          },
+          {
+            "value": "720",
+            "text": " 12 ",
+            "selected": false
+          },
+          {
+            "value": "780",
+            "text": " 13 ",
+            "selected": false
+          },
+          {
+            "value": "840",
+            "text": " 14 ",
+            "selected": false
+          },
+          {
+            "value": "900",
+            "text": " 15 ",
+            "selected": false
+          }
+        ],
+        "option_count": 15
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input_text",
+        "name": "query",
+        "id": "headerSearch",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "affiliate",
+        "id": "",
+        "label": "",
+        "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "saved_id",
+        "id": "saved-id",
+        "label": "",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_code",
+        "id": "",
+        "label": "",
+        "value": "D201",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_label",
+        "id": "",
+        "label": "",
+        "value": "Puerto Rico Population Estimates for years 2020-2023",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "dataset_vintage_latest",
+        "id": "",
+        "label": "",
+        "value": "PR-Pops",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "stage",
+        "id": "",
+        "label": "",
+        "value": "request",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_javascript",
+        "id": "",
+        "label": "",
+        "value": "on",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "M_1",
+        "id": "",
+        "label": "",
+        "value": "D201.M1",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_10",
+        "id": "",
+        "label": "",
+        "value": "Request Form",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-results",
+        "id": "",
+        "label": "",
+        "value": "Results",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-map",
+        "id": "",
+        "label": "",
+        "value": "Map",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-chart",
+        "id": "",
+        "label": "",
+        "value": "Chart",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "tab-about",
+        "id": "",
+        "label": "",
+        "value": "About",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Save",
+        "id": "",
+        "label": "",
+        "value": "Save",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "submit-button1",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_text",
+        "name": "O_title",
+        "id": "TO_title",
+        "label": "Title",
+        "value": "",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD201.V8",
+        "label": "Five-Year Age Groups",
+        "value": "D201.V8",
+        "checked": true
+      },
+      {
+        "type": "input_radio",
+        "name": "O_age",
+        "id": "RO_ageD201.V7",
+        "label": "Single-Year Ages",
+        "value": "D201.V7",
+        "checked": false
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_change_action-Send-Export Results",
+        "id": "export-option",
+        "label": "Export Results",
+        "value": "Export Results",
+        "checked": false
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_totals",
+        "id": "CO_show_totals",
+        "label": "Show Totals",
+        "value": "true",
+        "checked": true
+      },
+      {
+        "type": "input_checkbox",
+        "name": "O_show_zeros",
+        "id": "CO_show_zeros",
+        "label": "Show Zero Values",
+        "value": "true",
+        "checked": false
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_precision",
+        "id": "",
+        "label": "",
+        "value": "0",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Send",
+        "id": "",
+        "label": "",
+        "value": "Send",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "action-Reset",
+        "id": "",
+        "label": "",
+        "value": "Reset",
+        "checked": null
+      }
+    ],
+    "textareas": []
+  },
+  "summary": {
+    "total_selects": 13,
+    "total_inputs": 30,
+    "total_textareas": 0,
+    "total_parameters": 43
+  },
+  "dataset_id": "D201"
+}

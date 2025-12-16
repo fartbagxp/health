@@ -33,8 +33,8 @@ jobs:
       - name: Crawl and scan CDC WONDER website for new datasets
         continue-on-error: true # best effort, we already have most datasets
         run: |
-          uv run python src/wonder/crawl.py
-          uv run python src/wonder/scanner.py
+          uv run python -m src.wonder.crawl.py
+          uv run python -m src.wonder.scanner.py
 
       - name: Crawl CDC WONDER datasets for new query parameters
         continue-on-error: true # best effort, we can use the previous query parameters

@@ -1,7 +1,7 @@
 {
   "description": "CDC Wonder dataset to health topic mappings",
   "generated_by": "src/wonder/catalog.py",
-  "total_mapped": 169,
+  "total_mapped": 171,
   "total_unmapped": 1,
   "mappings": [
     {
@@ -1506,6 +1506,24 @@
       "category": "Major Disease Categories",
       "reason": "Dataset 'D202' maps to 'Infectious Diseases' because its page name 'tb-v2023.html' contains patterns for AIDS, tuberculosis (TB), or sexually transmitted diseases (STD). These are key infectious disease surveillance datasets tracking reportable conditions.",
       "years": "2023"
+    },
+    {
+      "dataset_id": "D203",
+      "page_name": "single-race-single-year-v2024.html",
+      "final_url": "http://wonder.cdc.gov/single-race-single-year-v2024.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D203' maps to 'Population Estimates' because its page name 'single-race-single-year-v2024.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2024"
+    },
+    {
+      "dataset_id": "D204",
+      "page_name": "single-race-v2024.html",
+      "final_url": "http://wonder.cdc.gov/single-race-v2024.html",
+      "topic": "Population Estimates",
+      "category": "Demographics & Population",
+      "reason": "Dataset 'D204' maps to 'Population Estimates' because its page name 'single-race-v2024.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
+      "years": "2024"
     },
     {
       "dataset_id": "D205",

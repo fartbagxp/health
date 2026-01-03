@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/nndss-annual-summary.html",
   "final_url": "https://wonder.cdc.gov/nndss-annual-summary.html",
-  "page_title": "NNDSS Annual Summary Data 2016-2022 Request",
+  "page_title": "NNDSS Annual Summary Data 2016-2023 Request",
   "forms": [
     {
       "id": "form_0",
@@ -928,10 +928,15 @@
           {
             "value": "2022",
             "text": " 2022 ",
+            "selected": false
+          },
+          {
+            "value": "2023",
+            "text": " 2023 ",
             "selected": true
           }
         ],
-        "option_count": 8
+        "option_count": 9
       },
       {
         "type": "select",
@@ -2180,7 +2185,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "NNDSS Annual Summary Data 2016-2022",
+        "value": "NNDSS Annual Summary Data 2016-2023",
         "checked": null
       },
       {

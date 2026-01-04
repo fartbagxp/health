@@ -5,12 +5,14 @@ description = "To collect various health API around the US"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "anthropic>=0.43.0",
     "beautifulsoup4>=4.14.3",
     "curl-cffi>=0.14.0",
     "lxml>=6.0.2",
     "matplotlib>=3.10.8",
     "pandas>=2.3.3",
     "playwright>=1.57.0",
+    "pydantic>=2.10.6",
     "python-dotenv>=1.2.1",
     "requests>=2.32.5",
 ]

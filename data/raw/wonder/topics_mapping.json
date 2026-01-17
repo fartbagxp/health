@@ -1,7 +1,7 @@
 {
   "description": "CDC Wonder dataset to health topic mappings",
   "generated_by": "src/wonder/catalog.py",
-  "total_mapped": 171,
+  "total_mapped": 170,
   "total_unmapped": 1,
   "mappings": [
     {
@@ -1524,15 +1524,6 @@
       "category": "Demographics & Population",
       "reason": "Dataset 'D204' maps to 'Population Estimates' because its page name 'single-race-v2024.html' contains population estimation patterns. Bridged-race and single-race datasets provide demographic population estimates used as denominators for calculating health rates.",
       "years": "2024"
-    },
-    {
-      "dataset_id": "D205",
-      "page_name": "cancer-v2022.html",
-      "final_url": "http://wonder.cdc.gov/cancer-v2022.html",
-      "topic": "Cancer",
-      "category": "Major Disease Categories",
-      "reason": "Dataset 'D205' maps to 'Cancer' because its page name 'cancer-v2022.html' contains cancer-related keywords. These datasets cover cancer incidence rates, cancer mortality, survival statistics, and data from the National Program of Cancer Registries (NPCR).",
-      "years": "2022"
     },
     {
       "dataset_id": "D207",

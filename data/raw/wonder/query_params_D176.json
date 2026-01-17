@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D176;jsessionid=8B049190A4D15FD3FCBE69E37E08",
+      "action": "/controller/datarequest/D176;jsessionid=C1811824533E46E9DDC6D5335FB1",
       "method": "POST"
     }
   ],
@@ -1384,9 +1384,14 @@
             "value": "2025",
             "text": " 2025 ",
             "selected": false
+          },
+          {
+            "value": "2026",
+            "text": " 2026 ",
+            "selected": false
           }
         ],
-        "option_count": 9
+        "option_count": 10
       },
       {
         "type": "select",
@@ -3604,9 +3609,14 @@
             "value": "2025",
             "text": "+ 2025  (2025 (provisional and partial))  ",
             "selected": false
+          },
+          {
+            "value": "2026",
+            "text": "+ 2026  (2026 (provisional and partial))  ",
+            "selected": false
           }
         ],
-        "option_count": 9
+        "option_count": 10
       },
       {
         "type": "select",
@@ -3659,9 +3669,14 @@
             "value": "2025",
             "text": "+ 2025  (2025 (provisional and partial))  ",
             "selected": false
+          },
+          {
+            "value": "2026",
+            "text": "+ 2026  (2026 (provisional and partial))  ",
+            "selected": false
           }
         ],
-        "option_count": 9
+        "option_count": 10
       },
       {
         "type": "select",
@@ -7801,7 +7816,7 @@
         "name": "dataset_vintage",
         "id": "",
         "label": "",
-        "value": "December 6, 2025 as of  December 14, 2025",
+        "value": "January 3, 2026 as of  January 11, 2026",
         "checked": null
       },
       {

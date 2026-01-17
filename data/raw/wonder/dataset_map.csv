@@ -203,7 +203,7 @@ D201,https://wonder.cdc.gov/controller/datarequest/D201,500,redirect,http://wond
 D202,https://wonder.cdc.gov/controller/datarequest/D202,500,redirect,http://wonder.cdc.gov/tb-v2023.html,tb-v2023.html,2023,
 D203,https://wonder.cdc.gov/controller/datarequest/D203,500,redirect,http://wonder.cdc.gov/single-race-single-year-v2024.html,single-race-single-year-v2024.html,2024,
 D204,https://wonder.cdc.gov/controller/datarequest/D204,500,redirect,http://wonder.cdc.gov/single-race-v2024.html,single-race-v2024.html,2024,
-D205,https://wonder.cdc.gov/controller/datarequest/D205,500,redirect,http://wonder.cdc.gov/cancer-v2022.html,cancer-v2022.html,2022,
+D205,https://wonder.cdc.gov/controller/datarequest/D205,500,http_500,,,,
 D206,https://wonder.cdc.gov/controller/datarequest/D206,500,http_500,,,,
 D207,https://wonder.cdc.gov/controller/datarequest/D207,500,redirect,http://wonder.cdc.gov/cancermort-v2022_SR.html,cancermort-v2022_SR.html,2022,
 D208,https://wonder.cdc.gov/controller/datarequest/D208,500,http_500,,,,

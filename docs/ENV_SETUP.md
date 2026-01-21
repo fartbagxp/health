@@ -40,7 +40,7 @@ python -c "from dotenv import load_dotenv; import os; load_dotenv(); print('API 
 
 ### Anthropic API Key
 
-1. Visit https://console.anthropic.com/
+1. Visit [Anthropic Console](https://console.anthropic.com/)
 2. Sign up or log in
 3. Navigate to API Keys section
 4. Create a new API key

@@ -11,13 +11,13 @@ Test cases are organized by:
 - Integration tests: Test actual LLM query building (requires API key)
 
 Run unit tests only:
-    pytest tests/test_llm_query_builder.py -m "not integration"
+    uv run pytest tests/test_llm_query_builder.py -m "not integration"
 
 Run integration tests only (requires API key):
-    pytest tests/test_llm_query_builder.py -m integration -v
+    uv run pytest tests/test_llm_query_builder.py -m integration -v
 
 Run all tests:
-    pytest tests/test_llm_query_builder.py
+    uv run pytest tests/test_llm_query_builder.py
 """
 
 import json
@@ -129,8 +129,8 @@ MORTALITY_TEST_CASES = [
         prompt="Deaths by age group and sex in California for 2019",
         expected_datasets=[
             # Multiple valid datasets for 2019 mortality data
-            ExpectedDataset(dataset_id="D76"),   # UCD 1999-2020
-            ExpectedDataset(dataset_id="D77"),   # MCD 1999-2020
+            ExpectedDataset(dataset_id="D76"),  # UCD 1999-2020
+            ExpectedDataset(dataset_id="D77"),  # MCD 1999-2020
             ExpectedDataset(dataset_id="D157"),  # MCD 2018-2023
             ExpectedDataset(dataset_id="D158"),  # UCD 2018-2023
             ExpectedDataset(dataset_id="D176"),  # Provisional (also has 2019)
@@ -248,10 +248,7 @@ def validate_param_patterns(
 
 def test_wonder_parameter():
     """Test WonderParameter model"""
-    param = WonderParameter(
-        name="B_1",
-        values=["D176.V1-level1"]
-    )
+    param = WonderParameter(name="B_1", values=["D176.V1-level1"])
     assert param.name == "B_1"
     assert param.values == ["D176.V1-level1"]
     print("✓ WonderParameter model works")
@@ -265,7 +262,7 @@ def test_wonder_request():
             WonderParameter(name="B_1", values=["D176.V1-level1"]),
             WonderParameter(name="F_D176.V1", values=["2020", "2021"]),
             WonderParameter(name="M_1", values=["D176.M1"]),
-        ]
+        ],
     )
 
     assert request.dataset_id == "D176"
@@ -281,7 +278,7 @@ def test_wonder_request_to_dict():
             WonderParameter(name="dataset_code", values=["D176"]),
             WonderParameter(name="F_D176.V1", values=["2020", "2021", "2022"]),
             WonderParameter(name="action-Send", values=["Send"]),
-        ]
+        ],
     )
 
     result = request.to_dict()
@@ -300,7 +297,9 @@ def test_llm_query_builder_initialization():
         assert builder.data_dir.exists()
         assert builder.topics_mapping is not None
         assert len(builder.topics_mapping) > 0
-        print(f"✓ LLMQueryBuilder initialization works ({len(builder.topics_mapping)} datasets)")
+        print(
+            f"✓ LLMQueryBuilder initialization works ({len(builder.topics_mapping)} datasets)"
+        )
     except Exception as e:
         print(f"⚠ LLMQueryBuilder initialization (expected if no API key): {e}")
 
@@ -330,7 +329,9 @@ def test_load_query_params():
         assert "parameters" in params
         assert "summary" in params
         assert params.get("dataset_id") == "D176"
-        print(f"✓ Query params loaded for D176 ({params['summary']['total_parameters']} params)")
+        print(
+            f"✓ Query params loaded for D176 ({params['summary']['total_parameters']} params)"
+        )
     except ValueError as e:
         print(f"⚠ Could not load D176 params: {e}")
 

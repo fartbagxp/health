@@ -2,6 +2,10 @@ version: 2
 updates:
   - package-ecosystem: uv
     directory: /
+    groups:
+      python-deps:
+        patterns:
+          - "*"
     schedule:
       interval: monthly
     cooldown:

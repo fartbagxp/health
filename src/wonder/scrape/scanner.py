@@ -1,5 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+CDC WONDER Dataset ID Scanner
+
+This script scans CDC WONDER dataset IDs (D1-D250) by probing each controller
+URL to discover the actual dataset page. It follows redirects and parses HTML
+to find the final .html page URL for each dataset.
+
+The scanner:
+1. Iterates through dataset IDs D1 to D250
+2. Probes each controller URL (e.g., https://wonder.cdc.gov/controller/datarequest/D192)
+3. Follows HTTP redirects and parses HTML for meta refresh/JS redirects
+4. Records the final .html URL, page name, and year range for each dataset
+
+Usage:
+    python -m src.wonder.scrape.scanner
+
+Output:
+    data/raw/wonder/dataset_map.csv - CSV with columns: id, controller_url,
+        http_status, discovery, final_url, page_name, years, error
+"""
 
 import csv
 import logging

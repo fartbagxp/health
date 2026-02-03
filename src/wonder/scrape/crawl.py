@@ -1,5 +1,24 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+CDC WONDER Link Crawler
+
+This script crawls CDC WONDER pages starting from seed URLs to discover
+and harvest links to dataset pages. It performs a breadth-first crawl,
+extracting links from each page and following them within the same host.
+
+The crawler:
+1. Starts from predefined seed URLs (homepage, topics, A-Z index, etc.)
+2. Fetches each page and extracts all links to .html pages on wonder.cdc.gov
+3. Extracts page titles and year ranges from URLs/titles
+4. Writes discovered links to a CSV file
+
+Usage:
+    python -m src.wonder.scrape.crawl
+
+Output:
+    data/raw/wonder/links.csv - CSV with columns: url, page_name, title, years, source_url
+"""
 
 import re
 import csv

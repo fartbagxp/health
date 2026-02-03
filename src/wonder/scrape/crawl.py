@@ -7,8 +7,8 @@ import time
 import logging
 import requests
 
-from collections import deque
 from bs4 import BeautifulSoup
+from collections import deque
 from urllib.parse import urljoin, urlparse
 
 logging.basicConfig(

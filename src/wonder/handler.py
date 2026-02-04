@@ -1,3 +1,12 @@
+"""
+Legacy CDC WONDER handler module.
+
+DEPRECATED: This module is deprecated. Use the new CLI instead:
+    uv run python -m wonder --help
+
+For programmatic access, use wonder.client.WonderClient directly.
+"""
+
 import bs4 as bs
 import warnings
 

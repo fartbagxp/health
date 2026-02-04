@@ -492,27 +492,3 @@ class QueryBuilder:
             Parameters dictionary ready for use with WonderClient.query()
         """
         return self.params.copy()
-
-
-# Backwards compatibility with old Client class
-class Client:
-    """Legacy client interface (backwards compatible)"""
-
-    def __init__(self):
-        self._client = WonderClient()
-
-    def post_cdc_wonder(self, data):
-        """Legacy method for posting to CDC WONDER"""
-        # Extract dataset_id from request_xml
-        request_xml = data.get("request_xml", "")
-        dataset_id = self._client._extract_dataset_id(request_xml)
-
-        if not dataset_id:
-            # Try D176 as default
-            dataset_id = "D176"
-
-        url = f"https://wonder.cdc.gov/controller/datarequest/{dataset_id}"
-        r = requests.post(url, data=data)
-        if r.status_code != 200:
-            raise RuntimeError("CDC WONDER request failed")
-        return r.text

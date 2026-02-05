@@ -20,7 +20,6 @@ This is a repository to collect and run fun experiments on various publicly avai
 The XML parameters it supports is similar to querying a database, with these examples.
 
 - U.S. national cancer deaths (ICD-10 codes C00-D48) by year and by race, for the 5 year time period 2009-2013. Number of deaths, population estimates, crude death rates and age-adjusted death rates per 100,000 persons, 95% confidence intervals and standard errors for age-adjusted death rates.
-
   - [Request for Cancer Death Rate](https://wonder.cdc.gov/wonder/help/api-examples/D76_Example1-req.xml)
   - [Response for Cancer Death Rate](https://wonder.cdc.gov/wonder/help/api-examples/D76_Example1-resp.xml)
 
@@ -31,6 +30,8 @@ The XML parameters it supports is similar to querying a database, with these exa
 We can find better explanation of the parameters via an [open source repository by alipphardt](https://github.com/alipphardt/cdc-wonder-api?tab=readme-ov-file#reference-for-all-request-parameters).
 
 The soft rate limit is a query every two minutes to let the WONDER database recover.
+
+Refer to [WONDER README](src/wonder/README.md) for more information.
 
 [CDC]: https://www.cdc.gov
 [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]: https://wonder.cdc.gov/wonder/help/wonder-api.html

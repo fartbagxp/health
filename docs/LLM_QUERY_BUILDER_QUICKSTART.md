@@ -103,12 +103,14 @@ for row in rows[:10]:
 
 ## Example Queries
 
-```
+```bash
 "Show me opioid overdose deaths by year from 2018 to 2024"
 "Compare infant mortality rates by state for 2020-2023"
 "Birth rates by age of mother in California 2015-2020"
 "Cancer mortality by age group and sex in 2022"
+"Cancer mortality by state for 2020"
 "COVID-19 deaths by month for 2020-2021"
+"Birth rates by age of mother in California 2015-2020"
 ```
 
 ## Architecture

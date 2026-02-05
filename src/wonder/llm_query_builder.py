@@ -21,6 +21,7 @@ load_dotenv()
 
 class WonderParameter(BaseModel):
     """Single query parameter with one or more values"""
+
     name: str = Field(..., description="Parameter name (e.g., B_1, F_D176.V1, M_1)")
     values: List[str] = Field(..., description="List of values for this parameter")
 
@@ -30,10 +31,10 @@ class WonderRequest(BaseModel):
     Structured WONDER API request matching the XML schema.
     This represents the complete set of parameters sent to CDC WONDER.
     """
+
     dataset_id: str = Field(..., description="CDC WONDER dataset ID (e.g., D176)")
     parameters: List[WonderParameter] = Field(
-        default_factory=list,
-        description="List of all query parameters"
+        default_factory=list, description="List of all query parameters"
     )
 
     def to_dict(self) -> Dict[str, Union[str, List[str]]]:
@@ -46,15 +47,39 @@ class WonderRequest(BaseModel):
                 result[param.name] = param.values
         return result
 
+    def to_xml(self) -> str:
+        """Convert WonderRequest to CDC WONDER XML format"""
+        lines = ['<?xml version="1.0" encoding="UTF-8"?><request-parameters>']
+        for param in self.parameters:
+            lines.append("\t<parameter>")
+            lines.append(f"\t\t<name>{param.name}</name>")
+            for value in param.values:
+                if value:
+                    lines.append(f"\t\t<value>{value}</value>")
+                else:
+                    lines.append("\t\t<value/>")
+            lines.append("\t</parameter>")
+        lines.append("</request-parameters>")
+        return "\n".join(lines)
+
 
 class QueryIntent(BaseModel):
     """User's query intent parsed by the LLM"""
-    description: str = Field(..., description="Natural language description of what data is requested")
-    health_topics: List[str] = Field(default_factory=list, description="Identified health topics")
+
+    description: str = Field(
+        ..., description="Natural language description of what data is requested"
+    )
+    health_topics: List[str] = Field(
+        default_factory=list, description="Identified health topics"
+    )
     time_period: Optional[str] = Field(None, description="Time period if specified")
     geography: Optional[str] = Field(None, description="Geographic scope if specified")
-    grouping_dimensions: List[str] = Field(default_factory=list, description="How to group the results")
-    filters: Dict[str, List[str]] = Field(default_factory=dict, description="Specific filters to apply")
+    grouping_dimensions: List[str] = Field(
+        default_factory=list, description="How to group the results"
+    )
+    filters: Dict[str, List[str]] = Field(
+        default_factory=dict, description="Specific filters to apply"
+    )
 
 
 class LLMQueryBuilder:
@@ -74,8 +99,12 @@ class LLMQueryBuilder:
             api_key: Anthropic API key (defaults to ANTHROPIC_API_KEY env var)
             data_dir: Path to data/raw/wonder directory
         """
-        self.client = anthropic.Anthropic(api_key=api_key or os.getenv("ANTHROPIC_API_KEY"))
-        self.data_dir = data_dir or Path(__file__).parent.parent.parent / "data" / "raw" / "wonder"
+        self.client = anthropic.Anthropic(
+            api_key=api_key or os.getenv("ANTHROPIC_API_KEY")
+        )
+        self.data_dir = (
+            data_dir or Path(__file__).parent.parent.parent / "data" / "raw" / "wonder"
+        )
 
         # Load topics mapping
         topics_path = self.data_dir / "topics_mapping.json"
@@ -141,7 +170,9 @@ class LLMQueryBuilder:
                 for opt in select["options"][:10]:  # Limit options shown
                     lines.append(f"  - {opt['value']}: {opt['text']}")
                 if len(select["options"]) > 10:
-                    lines.append(f"  ... and {len(select['options']) - 10} more options")
+                    lines.append(
+                        f"  ... and {len(select['options']) - 10} more options"
+                    )
 
         # Show Measures (M_*)
         lines.append("\n### Measures (M_*):")
@@ -180,7 +211,7 @@ class LLMQueryBuilder:
                 "properties": {
                     "dataset_id": {
                         "type": "string",
-                        "description": "The CDC WONDER dataset ID (e.g., 'D176' for Mortality)"
+                        "description": "The CDC WONDER dataset ID (e.g., 'D176' for Mortality)",
                     },
                     "parameters": {
                         "type": "array",
@@ -194,7 +225,7 @@ class LLMQueryBuilder:
                                         "Parameter name following WONDER conventions: "
                                         "B_* for grouping, M_* for measures, F_* for filters, "
                                         "V_* for variable values, O_* for output options"
-                                    )
+                                    ),
                                 },
                                 "values": {
                                     "type": "array",
@@ -202,15 +233,15 @@ class LLMQueryBuilder:
                                     "description": (
                                         "List of values for this parameter. "
                                         "Use '*All*' for all values, '*None*' for empty grouping slots."
-                                    )
-                                }
+                                    ),
+                                },
                             },
-                            "required": ["name", "values"]
-                        }
-                    }
+                            "required": ["name", "values"],
+                        },
+                    },
                 },
-                "required": ["dataset_id", "parameters"]
-            }
+                "required": ["dataset_id", "parameters"],
+            },
         }
 
     def build_query(self, intent_text: str, max_tokens: int = 4096) -> WonderRequest:
@@ -267,7 +298,7 @@ When you need parameter details for a specific dataset, just ask and I'll provid
                 max_tokens=max_tokens,
                 system=system_prompt,
                 tools=[self._create_build_query_tool_schema()],
-                messages=messages
+                messages=messages,
             )
 
             # Add assistant response to conversation
@@ -295,15 +326,13 @@ When you need parameter details for a specific dataset, just ask and I'll provid
                 # LLM might be asking for dataset parameters
                 # Check if it mentions a dataset ID
                 import re
-                dataset_matches = re.findall(r'\b(D\d+)\b', text_response)
+
+                dataset_matches = re.findall(r"\b(D\d+)\b", text_response)
                 if dataset_matches:
                     # Provide parameters for the first mentioned dataset
                     dataset_id = dataset_matches[0]
                     params_summary = self._get_dataset_params_summary(dataset_id)
-                    messages.append({
-                        "role": "user",
-                        "content": params_summary
-                    })
+                    messages.append({"role": "user", "content": params_summary})
                     continue
                 else:
                     # LLM responded but didn't use tool or request info
@@ -313,32 +342,3 @@ When you need parameter details for a specific dataset, just ask and I'll provid
 
             # If we get here, something unexpected happened
             raise ValueError(f"Unexpected response from LLM: {response}")
-
-
-def main():
-    """Example usage of the LLM query builder"""
-    builder = LLMQueryBuilder()
-
-    # Example queries
-    examples = [
-        "Show me opioid overdose deaths by year from 2018 to 2024",
-        "I want to see birth rates by state for 2020-2023",
-        "Cancer mortality by age group and sex in California",
-    ]
-
-    for example in examples:
-        print(f"\nQuery: {example}")
-        print("-" * 80)
-        try:
-            request = builder.build_query(example)
-            print(f"Dataset: {request.dataset_id}")
-            print(f"Parameters ({len(request.parameters)}):")
-            for param in request.parameters[:10]:  # Show first 10
-                values_str = param.values if len(param.values) <= 3 else param.values[:3] + ["..."]
-                print(f"  {param.name}: {values_str}")
-        except Exception as e:
-            print(f"Error: {e}")
-
-
-if __name__ == "__main__":
-    main()

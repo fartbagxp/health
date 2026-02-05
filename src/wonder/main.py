@@ -10,11 +10,16 @@ Usage:
     # Run an existing query XML file
     uv run python -m wonder run queries/opioid-overdose-deaths-2018-2024-req.xml
 
+    # Run an existing query XML file, output CSV
+    uv run python -m wonder run queries/opioid-overdose-deaths-2018-2024-req.xml -f csv
+
     # Build and execute in one step
     uv run python -m wonder query "opioid deaths by year 2018-2024" --save-xml query.xml
 """
 
 import argparse
+import csv
+import io
 import json
 import sys
 from pathlib import Path
@@ -93,6 +98,14 @@ def _output_response(
     elif format == "array":
         rows = client.parse_response_to_arrays(response_xml)
         print(json.dumps(rows, indent=2))
+    elif format == "csv":
+        headers = client.get_column_headers(response_xml)
+        rows = client.parse_response_to_arrays(response_xml)
+        output = io.StringIO()
+        writer = csv.writer(output)
+        writer.writerow(headers)
+        writer.writerows(rows)
+        print(output.getvalue(), end="")
     else:
         print(f"Error: Unknown format: {format}", file=sys.stderr)
         sys.exit(1)
@@ -144,7 +157,7 @@ def main():
     run_parser.add_argument(
         "-f",
         "--format",
-        choices=["json", "array", "xml"],
+        choices=["json", "array", "xml", "csv"],
         default="json",
         help="Output format (default: json)",
     )
@@ -170,7 +183,7 @@ def main():
     query_parser.add_argument(
         "-f",
         "--format",
-        choices=["json", "array", "xml"],
+        choices=["json", "array", "xml", "csv"],
         default="json",
         help="Output format (default: json)",
     )

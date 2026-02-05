@@ -20,6 +20,7 @@ Key Concepts:
 - Response Format: XML with data tables containing rows and cells
 """
 
+import re
 import requests
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Any, Optional, Union
@@ -30,12 +31,13 @@ from pathlib import Path
 @dataclass
 class QueryParameter:
     """Represents a single query parameter"""
+
     name: str
     values: List[str]
 
     def to_xml(self) -> str:
         """Convert parameter to XML format"""
-        lines = [f"    <parameter>", f"        <name>{self.name}</name>"]
+        lines = ["    <parameter>", f"        <name>{self.name}</name>"]
         for value in self.values:
             lines.append(f"        <value>{value}</value>")
         lines.append("    </parameter>")
@@ -45,6 +47,7 @@ class QueryParameter:
 @dataclass
 class ResponseCell:
     """Represents a cell in the response data table"""
+
     label: Optional[str] = None  # l attribute
     value: Optional[str] = None  # v attribute
     column: Optional[str] = None  # c attribute
@@ -59,7 +62,7 @@ class ResponseCell:
             return None
         try:
             # Remove commas and convert to float
-            return float(val.replace(',', ''))
+            return float(val.replace(",", ""))
         except (ValueError, AttributeError):
             return None
 
@@ -67,23 +70,24 @@ class ResponseCell:
 @dataclass
 class ResponseRow:
     """Represents a row in the response data table"""
+
     cells: List[ResponseCell]
     is_total: bool = False
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert row to dictionary format"""
         return {
-            'cells': [
+            "cells": [
                 {
-                    'label': c.label,
-                    'value': c.value,
-                    'data_total': c.data_total,
-                    'sub_label': c.sub_label,
-                    'numeric_value': c.get_numeric_value()
+                    "label": c.label,
+                    "value": c.value,
+                    "data_total": c.data_total,
+                    "sub_label": c.sub_label,
+                    "numeric_value": c.get_numeric_value(),
                 }
                 for c in self.cells
             ],
-            'is_total': self.is_total
+            "is_total": self.is_total,
         }
 
 
@@ -212,7 +216,7 @@ class WonderClient:
         if not path.exists():
             raise FileNotFoundError(f"Query file not found: {file_path}")
 
-        with open(path, 'r', encoding='utf-8') as f:
+        with open(path, "r", encoding="utf-8") as f:
             request_xml = f.read()
 
         # Extract dataset_id from XML
@@ -243,22 +247,22 @@ class WonderClient:
         Returns:
             Complete XML request string
         """
-        lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<request-parameters>']
+        lines = ['<?xml version="1.0" encoding="UTF-8"?>', "<request-parameters>"]
 
         for name, value in parameters.items():
-            lines.append('    <parameter>')
-            lines.append(f'        <name>{name}</name>')
+            lines.append("    <parameter>")
+            lines.append(f"        <name>{name}</name>")
 
             if isinstance(value, list):
                 for v in value:
-                    lines.append(f'        <value>{v}</value>')
+                    lines.append(f"        <value>{v}</value>")
             else:
-                lines.append(f'        <value>{value}</value>')
+                lines.append(f"        <value>{value}</value>")
 
-            lines.append('    </parameter>')
+            lines.append("    </parameter>")
 
-        lines.append('</request-parameters>')
-        return '\n'.join(lines)
+        lines.append("</request-parameters>")
+        return "\n".join(lines)
 
     def parse_response_table(self, response_xml: str) -> List[ResponseRow]:
         """
@@ -278,26 +282,28 @@ class WonderClient:
         except ET.ParseError as e:
             raise ValueError(f"Failed to parse response XML: {e}")
 
-        data_table = root.find('.//data-table')
+        data_table = root.find(".//data-table")
         if data_table is None:
             raise ValueError("No data-table found in response")
 
         rows = []
-        for row_elem in data_table.findall('r'):
+        for row_elem in data_table.findall("r"):
             cells = []
             is_total = False
 
-            for cell_elem in row_elem.findall('c'):
+            for cell_elem in row_elem.findall("c"):
                 # Extract all cell attributes
-                label = cell_elem.get('l')
-                value = cell_elem.get('v')
-                column = cell_elem.get('c')
-                data_total = cell_elem.get('dt')
-                attribute = cell_elem.get('a')
+                label = cell_elem.get("l")
+                value = cell_elem.get("v")
+                column = cell_elem.get("c")
+                data_total = cell_elem.get("dt")
+                attribute = cell_elem.get("a")
 
                 # Check for nested <l> element
-                sub_label_elem = cell_elem.find('l')
-                sub_label = sub_label_elem.get('v') if sub_label_elem is not None else None
+                sub_label_elem = cell_elem.find("l")
+                sub_label = (
+                    sub_label_elem.get("v") if sub_label_elem is not None else None
+                )
 
                 # If we see data_total, this is a totals row
                 if data_total is not None:
@@ -309,7 +315,7 @@ class WonderClient:
                     column=column,
                     data_total=data_total,
                     attribute=attribute,
-                    sub_label=sub_label
+                    sub_label=sub_label,
                 )
                 cells.append(cell)
 
@@ -363,6 +369,82 @@ class WonderClient:
 
         return result
 
+    def get_column_headers(self, response_xml: str) -> List[str]:
+        """
+        Extract column headers from response XML based on groupby and measure selections
+
+        Args:
+            response_xml: XML response string
+
+        Returns:
+            List of column header strings matching the data columns
+        """
+        try:
+            root = ET.fromstring(response_xml)
+        except ET.ParseError as e:
+            raise ValueError(f"Failed to parse response XML: {e}")
+
+        headers = []
+
+        # Build a map of variable/hier-level codes to labels
+        var_labels = {}
+        for var in root.findall(".//variable[@code]"):
+            code = var.get("code")
+            label = var.get("label")
+            if code and label:
+                var_labels[code] = label
+            # Also get hier-level labels
+            for hier in var.findall("hier-level"):
+                h_code = hier.get("code")
+                h_label = hier.get("label")
+                if h_code and h_label:
+                    var_labels[h_code] = h_label
+
+        # Get group-by variable labels first (these become the first columns)
+        byvariables = root.find(".//byvariables")
+        if byvariables is not None:
+            for byvar in byvariables.findall("variable"):
+                code = byvar.get("code")
+                if code and code in var_labels:
+                    headers.append(var_labels[code])
+                elif code:
+                    headers.append(code)
+
+        # Build a map of measure codes to labels
+        measure_labels = {}
+        for measure in root.findall(".//measure[@code]"):
+            code = measure.get("code")
+            label = measure.get("label")
+            if code and label:
+                measure_labels[code] = label
+
+        # Get selected measures - but filter out CI/SE variants that are merged into parent
+        # CI/SE measures have codes like D176.M41, D176.M42 (two digits after M)
+        # Base measures have codes like D176.M1, D176.M4, D176.M9 (one digit after M)
+        measure_selections = root.find(".//response//measure-selections")
+        if measure_selections is not None:
+            for measure in measure_selections.findall("measure"):
+                code = measure.get("code")
+                # Skip derived measures (SE, CI) - they have 2+ digits after M
+                if code and not re.search(r"\.M\d{2,}$", code):
+                    if code in measure_labels:
+                        headers.append(measure_labels[code])
+                    else:
+                        headers.append(code)
+
+        # Fallback if we couldn't extract headers
+        if not headers:
+            return [
+                "Column 1",
+                "Column 2",
+                "Column 3",
+                "Column 4",
+                "Column 5",
+                "Column 6",
+            ]
+
+        return headers
+
     def get_dataset_metadata(self, response_xml: str) -> Dict[str, Any]:
         """
         Extract dataset metadata from response
@@ -378,17 +460,17 @@ class WonderClient:
         except ET.ParseError as e:
             raise ValueError(f"Failed to parse response XML: {e}")
 
-        dataset = root.find('.//dataset')
+        dataset = root.find(".//dataset")
         if dataset is None:
             return {}
 
         metadata = {
-            'code': dataset.get('code'),
-            'label': dataset.get('label'),
-            'family': dataset.get('family'),
-            'vintage': dataset.get('vintage'),
-            'suppress_counts': dataset.get('suppress-counts') == 'true',
-            'suppress_zeros': dataset.get('suppress-zeros') == 'true',
+            "code": dataset.get("code"),
+            "label": dataset.get("label"),
+            "family": dataset.get("family"),
+            "vintage": dataset.get("vintage"),
+            "suppress_counts": dataset.get("suppress-counts") == "true",
+            "suppress_zeros": dataset.get("suppress-zeros") == "true",
         }
 
         return {k: v for k, v in metadata.items() if v is not None}
@@ -452,11 +534,7 @@ class QueryBuilder:
             self.params[f"M_{i}"] = measure
         return self
 
-    def filter(
-        self,
-        parameter: str,
-        values: Union[str, List[str]]
-    ) -> "QueryBuilder":
+    def filter(self, parameter: str, values: Union[str, List[str]]) -> "QueryBuilder":
         """
         Add a filter parameter
 

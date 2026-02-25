@@ -3,21 +3,21 @@ repos:
     rev: v6.0.0
     hooks:
       - id: check-yaml
-        exclude: ^data/raw/
+        exclude: ^data/raw/,^src/wonder/templates/
       - id: end-of-file-fixer
-        exclude: ^data/raw/
+        exclude: ^data/raw/,^src/wonder/templates/
       - id: trailing-whitespace
-        exclude: ^data/raw/
+        exclude: ^data/raw/,^src/wonder/templates/
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.0
+    rev: v0.15.1
     hooks:
       - id: ruff
         args: [--fix]
-        exclude: ^data/raw/
+        exclude: ^data/raw/,^src/wonder/templates/
       - id: ruff-format
-        exclude: ^data/raw/
+        exclude: ^data/raw/,^src/wonder/templates/
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.30.0
     hooks:
       - id: gitleaks
-        exclude: ^data/raw/
+        exclude: ^data/raw/,^src/wonder/templates/

@@ -39,11 +39,8 @@ uv run python -m wonder run src/wonder/queries/covid-deaths-by-race-2020-2023-re
 | 2022 |                47.2 |             44.0 | 1.07× |
 | 2023 |                 9.2 |             12.2 | 0.75× |
 
-The age-adjusted rate (AAR) corrects for the fact that the Hispanic population skews
-younger — revealing that in 2020 and 2021 Hispanic/Latino Americans died from COVID-19
-at **twice the rate** of non-Hispanic Americans once age is accounted for.
-By 2023, the gap had not only closed but reversed, with non-Hispanic Americans
-carrying a slightly higher AAR (12.2 vs 9.2).
+The age-adjusted rate (AAR) corrects for the fact that the Hispanic population skews younger — revealing that in 2020 and 2021 Hispanic/Latino Americans died from COVID-19 at **twice the rate** of non-Hispanic Americans once age is accounted for.
+By 2023, the gap had not only closed but reversed, with non-Hispanic Americans carrying a slightly higher AAR (12.2 vs 9.2).
 
 ---
 

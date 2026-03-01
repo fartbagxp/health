@@ -64,7 +64,7 @@ Neoplasms (C00-D48) and Diseases of the circulatory system (I00-I99).
 uv run python -m wonder run src/wonder/queries/heart-vs-cancer-by-sex-2018-2023-req.xml -f csv
 ```
 
-**Key findings (age-adjusted rates per 100,000):**
+**Key Findings (age-adjusted rates per 100,000):**
 
 | Year | Men — Heart | Men — Cancer | Women — Heart | Women — Cancer |
 | ---- | ----------: | -----------: | ------------: | -------------: |
@@ -210,7 +210,7 @@ Ideas to try with `uv run python -m wonder query "..."`. Grouped by theme and da
 
 **6. The Opioid Wave vs. the Stimulant Wave**
 
-```
+```bash
 Drug-induced deaths by drug category (D1=all drug-induced) from 2018 to 2024,
 grouped by year and drug/alcohol cause category using F_D176.V25, showing
 age-adjusted rate. Set O_ucd to D176.V25.
@@ -224,7 +224,7 @@ these populations.
 
 **7. Fentanyl vs. Heroin: MCD Code Breakdown**
 
-```
+```bash
 Opioid overdose deaths 2018–2024 grouped by year, filtering multiple cause
 of death to T40.1 (heroin), T40.3 (methadone), T40.4 (synthetic narcotics
 excluding methadone — i.e. fentanyl), showing death counts.
@@ -236,7 +236,7 @@ _What to look for:_ Heroin deaths (T40.1) declining as fentanyl (T40.4) dominate
 
 **8. Alcohol-Induced Deaths During COVID**
 
-```
+```bash
 Alcohol-induced deaths from 2018 to 2023, grouped by year and sex,
 showing age-adjusted rate per 100,000. Set O_ucd to D176.V25 and
 filter F_D176.V25 to A1 (all alcohol-induced causes).
@@ -251,7 +251,7 @@ middle-aged adults, as bar closures shifted drinking home.
 
 **9. Suicide Rates by Sex and Method, 2018–2024**
 
-```
+```bash
 Suicide deaths 2018–2024 (ICD chapter X60-X84, Y87.0 — Intentional self-harm)
 grouped by year and sex, showing age-adjusted rate. Filter to ICD chapter
 X00-Y89 (External causes) and use the injury intent filter.
@@ -264,7 +264,7 @@ been rising faster. The gun-vs-other-method breakdown changes by sex.
 
 **10. Suicide Among Young Adults vs. Older Adults**
 
-```
+```bash
 Intentional self-harm deaths (X60-X84) from 2018 to 2024, grouped by
 ten-year age group and year, showing crude rate per 100,000.
 ```
@@ -279,7 +279,7 @@ more stable.
 
 **11. Maternal Mortality by Race, 2018–2023**
 
-```
+```bash
 Maternal mortality deaths (ICD chapter O00-O99 — Pregnancy, childbirth
 and the puerperium) from 2018 to 2023, grouped by year and race,
 showing age-adjusted rate per 100,000.
@@ -295,7 +295,7 @@ number that exceeds most peer nations.
 
 **12. Alzheimer's & Dementia Surge by Age**
 
-```
+```bash
 Alzheimer's disease deaths (ICD chapter G30) from 2018 to 2024,
 grouped by ten-year age group and year, showing crude death rate.
 Disable age-adjusted rates since we're grouping by age.
@@ -308,7 +308,7 @@ isolation and care disruption spike dementia deaths?
 
 **13. Diabetes Mortality by Race**
 
-```
+```bash
 Diabetes deaths (ICD chapter E10-E14) from 2018 to 2023, grouped by
 year and race, showing age-adjusted death rate per 100,000.
 ```
@@ -322,7 +322,7 @@ disproportionate diabetes mortality. Did COVID worsen disparities?
 
 **14. Firearm Deaths by State**
 
-```
+```bash
 Firearm deaths (ICD chapter W32-W34, X72-X74, X93-X95, Y22-Y24 — all
 firearm causes) from 2020 to 2023 grouped by state, showing crude rate.
 ```
@@ -334,7 +334,7 @@ urban/rural composition and gun ownership rates.
 
 **15. Drug Overdose Hotspots by HHS Region**
 
-```
+```bash
 Drug-induced deaths 2018–2024 grouped by HHS region and year,
 age-adjusted rate per 100,000, O_ucd = D176.V25.
 ```
@@ -348,7 +348,7 @@ has historically carried elevated overdose burden.
 
 **16. Cancer Progress: 1999–2023**
 
-```
+```bash
 Cancer deaths (ICD chapter C00-D48) from 1999 to 2023 using dataset D157,
 grouped by year, showing age-adjusted rate per 100,000.
 ```
@@ -361,7 +361,7 @@ improved treatment. COVID briefly interrupted the trend.
 
 **17. HIV/AIDS: Epidemic Arc, 1999–2023**
 
-```
+```bash
 HIV disease deaths (ICD chapter B20-B24) from 1999 to 2023 using dataset
 D157, grouped by year and race, showing age-adjusted rate.
 ```
@@ -373,7 +373,7 @@ Black Americans still carry a disproportionate burden in more recent years.
 
 **18. Flu & Pneumonia: A Baseline to Judge COVID**
 
-```
+```bash
 Influenza and pneumonia deaths (ICD chapter J09-J18) from 1999 to 2023
 using dataset D157, grouped by year, showing age-adjusted rate.
 ```
@@ -386,7 +386,7 @@ resurgence in 2022. Gives context for how unusual COVID mortality was.
 
 **19. The Diabetes Epidemic in Long View**
 
-```
+```bash
 Diabetes deaths (ICD chapter E10-E14) from 1999 to 2023 using dataset D157,
 grouped by year and sex, showing age-adjusted rate.
 ```
@@ -398,7 +398,7 @@ then plateaued or modestly declined post-2010. Men consistently higher.
 
 **20. Stroke Mortality Long-Term Decline**
 
-```
+```bash
 Cerebrovascular disease deaths (ICD chapter I60-I69) from 1999 to 2023
 using dataset D157, grouped by year and race, showing age-adjusted rate.
 ```
@@ -412,7 +412,7 @@ _What to look for:_ A long-run success story — stroke AAR fell ~35% between
 
 **21. The HIV/AIDS Emergence**
 
-```
+```bash
 HIV disease deaths (ICD chapter 042-044 using ICD-9 codes) from 1987 to
 1998 using dataset D77, grouped by year and sex, showing age-adjusted rate.
 ```
@@ -425,7 +425,7 @@ with few historical parallels.
 
 **22. Homicide Rates During the Crack Epidemic**
 
-```
+```bash
 Homicide deaths (ICD chapter E960-E969) from 1979 to 1998 using dataset D77,
 grouped by year and race, showing age-adjusted rate.
 ```
@@ -438,7 +438,7 @@ dramatically through the 1990s.
 
 **23. Motor Vehicle Deaths Before Modern Safety Mandates**
 
-```
+```bash
 Motor vehicle accident deaths from 1979 to 1998 using dataset D77,
 grouped by year and age, showing crude rate per 100,000.
 ```
@@ -451,7 +451,7 @@ _What to look for:_ Steady decline through the era of seat belt laws
 
 **24. Lung Cancer Mortality: The Smoking Cohort**
 
-```
+```bash
 Lung cancer deaths (ICD-9 162) from 1979 to 1998 using dataset D77,
 grouped by year and sex, showing age-adjusted rate.
 ```
@@ -574,7 +574,7 @@ Normalizing by doses administered would be needed for fair comparison.
 
 **32. All-Cause VAERS Trend: 1990–Present**
 
-```
+```bash
 VAERS reports using dataset D8, grouped by year received (D8.V2-level1)
 only, all vaccines, all event types. Show total event counts.
 ```
@@ -587,7 +587,7 @@ current numbers in historical context.
 
 **33. Flu Vaccine 30-Year Trend**
 
-```
+```bash
 VAERS reports for flu vaccines only (F_D8.V14 = FLU) from 1990 to 2024
 using dataset D8, grouped by year received and event category, showing
 event counts. Compare serious vs. non-serious over time.

@@ -1,57 +1,24 @@
-# LLM-Powered CDC WONDER Query Builder
+# Wonder Query Builder
 
-Convert natural language queries into structured CDC WONDER API requests using an LLM with tool calling.
+The query builder calls Claude to turn plain English into a CDC WONDER API request. It picks the right dataset, maps your intent to grouping variables and filters, merges overrides onto a validated base template, and enforces WONDER constraint rules before sending.
 
-## Overview
-
-The LLM Query Builder uses Claude (via Anthropic API) to convert plain English questions into CDC WONDER queries. It:
-
-- Selects the appropriate dataset based on your health topic
-- Identifies group-by variables, filters, and measures
-- Merges LLM-generated overrides onto a validated base template
-- Enforces CDC WONDER constraint rules automatically
-
-Queries execute directly against the API without manual post-processing.
-
-## Quick Start
-
-### Configuration
-
-Set your Anthropic API key in `.env` file (recommended):
-
-```bash
-cp .env.sample .env
-# Edit .env and add: ANTHROPIC_API_KEY='your-anthropic-api-key'
-```
+See [wonder.md](wonder.md) for setup and usage. This document covers architecture, parameter details, and troubleshooting.
 
 ## Architecture
 
-### Core Components
+### Components
 
-1. **WonderRequest Model** (`src/wonder/llm_query_builder.py`)
-   - Pydantic model representing a structured WONDER query
-   - Contains dataset ID and list of parameters
-   - Serializes to the XML format expected by CDC WONDER
+**`WonderRequest`** (`src/wonder/llm_query_builder.py`) — Pydantic model representing a WONDER query. Serializes to the XML format CDC WONDER expects.
 
-2. **LLMQueryBuilder Class** (`src/wonder/llm_query_builder.py`)
-   - Converts natural language to a `WonderRequest` via LLM tool calling
-   - Loads `topics_mapping.json` to select a dataset
-   - Loads `query_params_D*.json` for the selected dataset on demand
-   - Merges LLM overrides onto a base template
-   - Enforces post-merge constraint rules
+**`LLMQueryBuilder`** (`src/wonder/llm_query_builder.py`) — Converts natural language to a `WonderRequest` via LLM tool calling. Loads `topics_mapping.json` to pick a dataset, loads the matching `query_params_D*.json`, merges LLM overrides onto the base template, and enforces post-merge constraints.
 
-3. **Base Templates** (`src/wonder/templates/`)
-   - Validated neutral XML for each supported dataset
-   - All boilerplate intact; query-specific values set to `*All*` / `*None*`
-   - Datasets: D176, D157, D77, D8
+**Base templates** (`src/wonder/templates/`) — Neutral XML for each supported dataset. All boilerplate intact; query-specific values set to `*All*` / `*None*`. Covers D176, D157, D77, D8.
 
-4. **Tool Schema: `build_wonder_query`**
-   - LLM tool that produces only _overrides_ (B*\*, F*\*, mode selectors)
-   - Code merges these onto the base template to produce a complete request
+**`build_wonder_query` tool** — The LLM tool schema. Produces only overrides (`B_*`, `F_*`, mode selectors); the code merges them onto the template.
 
 ### How It Works
 
-```
+```bash
 User Query (Natural Language)
     ↓
 LLM Analyzes Intent
@@ -71,32 +38,6 @@ Overrides merged onto base template (all boilerplate preserved)
 Returns complete WonderRequest (ready to execute)
     ↓
 Execute via WonderClient
-```
-
-## Usage
-
-### Python API
-
-```python
-from wonder.llm_query_builder import LLMQueryBuilder
-from wonder.client import WonderClient
-
-builder = LLMQueryBuilder()
-request = builder.build_query("opioid overdose deaths by year from 2018 to 2024")
-
-client = WonderClient()
-response = client.query(request.dataset_id, request.to_dict())
-rows = client.parse_response_table(response)
-```
-
-### CLI
-
-```bash
-# Build query XML only (does not execute)
-uv run python -m wonder build "opioid deaths by year 2018-2024" -o query.xml
-
-# Build and execute in one step
-uv run python -m wonder query "opioid deaths by year 2018-2024" --save-xml query.xml -f csv
 ```
 
 ## Supported Datasets
@@ -131,7 +72,7 @@ The LLM only needs to produce `B_*`, `F_*`, and key `O_*` overrides.
 | `action-Send`    | Request action                             | `action-Send = Send`             | Template                          |
 | `stage`          | Request stage                              | `stage = request`                | Template                          |
 
-### Mode Selectors (critical)
+### Mode Selectors
 
 Several `O_*` parameters are **mode selectors** that tell CDC WONDER which filter sub-section
 is active. Getting these wrong causes your `F_*` filter to be silently ignored and you get
@@ -139,7 +80,7 @@ back all-cause / all-group data instead of an error.
 
 The LLM is instructed to set these correctly; the table below is a reference.
 
-#### D176 / D157 mode selectors
+#### D176 / D157
 
 | Parameter    | Controls                                | Valid values                                                                                               |
 | ------------ | --------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -157,12 +98,9 @@ where `{DS}` is `D176` or `D157`.
 `O_ucd = D176.V2`. If `O_ucd` points at a different sub-section, the ICD filter is silently
 ignored and all causes are returned.
 
-### Age-Adjusted Rate (AAR) Constraints
+### AAR Constraints
 
-- **Cannot** use AAR (`O_aar_enable = true`) when any `B_*` slot contains an age variable
-  (`D176.V5`, `D176.V51`, `D176.V52`, `D176.V6`). The builder enforces this automatically
-  and sets `O_aar_enable = false` / `O_aar = aar_none` regardless of what the LLM requests.
-- AAR requires `VM_*` population parameters to be set correctly (handled by template).
+AAR can't be used when any `B_*` slot contains an age variable (`D176.V5`, `D176.V51`, `D176.V52`, `D176.V6`). The builder enforces this automatically — sets `O_aar_enable = false` / `O_aar = aar_none` regardless of what the LLM requests. The `VM_*` population parameters required for AAR are handled by the template.
 
 ### `F_D176.V25` Values
 
@@ -170,7 +108,7 @@ ignored and all causes are returned.
 like `D1`, `D2`, `D3`, `D4` — **not** ICD-10 codes. Using ICD codes (e.g., `T40.0`) here is
 invalid and will produce a 500 error or silently incorrect results.
 
-```
+```bash
 D1  = All drug-induced causes
 D2  = Drug-induced: Dependent use
 D3  = Drug-induced: Non-dependent use
@@ -197,23 +135,22 @@ Do not interpret VAERS counts as incidence or causation rates.
 
 ## Special Values
 
-- `*All*` — Include all values for this parameter
-- `*None*` — Empty slot (for unused Group By positions B_2 through B_5)
+- `*All*` — include all values for this parameter
+- `*None*` — empty slot (for unused group-by positions B_2 through B_5)
 
 ## Data Sources
 
-1. **`data/raw/wonder/topics_mapping.json`** — 169 datasets mapped to health topics, used for dataset selection
-2. **`data/raw/wonder/query_params_D*.json`** — Parameter definitions for each dataset (selects, inputs, option lists)
-3. **`src/wonder/templates/`** — Validated base XML templates (D176, D157, D77, D8)
+- `data/raw/wonder/topics_mapping.json` — 169 datasets mapped to health topics, used for dataset selection
+- `data/raw/wonder/query_params_D*.json` — parameter definitions for each dataset (selects, inputs, option lists)
+- `src/wonder/templates/` — base XML templates (D176, D157, D77, D8)
 
 ## Limitations
 
-1. **No parameter validation** — Generated override parameters are not checked against `query_params_D*.json`
-   before merging; the API call is the final validation.
-2. **D8 XML API bug** — VAERS queries cannot be executed programmatically; see [D8 VAERS Limitations](#d8-vaers-limitations).
-3. **API costs** — Each `build` or `query` call makes 1–2 LLM API calls.
-4. **Rate limits** — CDC WONDER requires ≥15 seconds between API requests.
-5. **Non-template datasets** — Datasets other than D176, D157, D77, and D8 fall back to unmerged LLM output, which may need manual adjustment.
+1. Parameters aren't validated against `query_params_D*.json` before merging; the API call is the final check.
+2. VAERS queries (D8) can't be executed via the XML API — see [D8 VAERS limitations](#d8-vaers-limitations).
+3. Each `build` or `query` call makes 1–2 LLM API calls.
+4. CDC WONDER requires ≥15 seconds between API requests.
+5. Datasets outside D176, D157, D77, and D8 fall back to unmerged LLM output, which may need manual review.
 
 ## Troubleshooting
 
@@ -248,6 +185,8 @@ Do not interpret VAERS counts as incidence or causation rates.
 - `src/wonder/templates/` — Base XML templates
 - `src/wonder/client.py` — WonderClient for execution
 - `src/wonder/queries/` — Verified working query XML files
-- `src/wonder/README.md` — Query catalog with example natural language prompts
+- `src/wonder/README.md` — Module layout and CLI reference
+- `docs/wonder.md` — User guide (setup, datasets, prompt tips, parameter reference)
+- `docs/wonder-examples.md` — 33 worked examples with real results
 - `data/raw/wonder/topics_mapping.json` — Dataset mappings
 - `data/raw/wonder/query_params_D*.json` — Parameter definitions (169 files)

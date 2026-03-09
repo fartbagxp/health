@@ -472,7 +472,7 @@ def print_datasets_by_topic(mapping_path: Path) -> None:
 def main() -> None:
     """Main entry point for the cataloger."""
     # Paths relative to project root
-    project_root = Path(__file__).parent.parent.parent
+    project_root = Path(__file__).parent.parent.parent.parent
     dataset_map_path = project_root / "data" / "raw" / "wonder" / "dataset_map.csv"
     topics_path = project_root / "data" / "raw" / "health-data-topics.json"
     output_path = project_root / "data" / "raw" / "wonder" / "topics_mapping.json"

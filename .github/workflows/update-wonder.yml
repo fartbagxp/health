@@ -33,18 +33,18 @@ jobs:
       - name: Crawl and scan CDC WONDER website for new datasets
         continue-on-error: true # best effort, we already have most datasets
         run: |
-          uv run python -m src.wonder.scrape.crawl
-          uv run python -m src.wonder.scrape.scan
+          uv run python -m wonder.scrape.crawl
+          uv run python -m wonder.scrape.scanner
 
       - name: Crawl CDC WONDER datasets for new query parameters
         continue-on-error: true # best effort, we can use the previous query parameters
         run: |
-          uv run python -m src.wonder.query --range 1-250
+          uv run python -m wonder.scrape.query --range 1-250
 
       - name: Catalog CDC WONDER into health topics
         continue-on-error: true # best effort, we can use the previous catalog data
         run: |
-          uv run python -m src.wonder.catalog
+          uv run python -m wonder.scrape.catalog
 
       - name: Commit and push changes
         if: github.ref == 'refs/heads/main'

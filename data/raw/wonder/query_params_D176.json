@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D176;jsessionid=BDAAB98A72BD9D41AF25A12A7746",
+      "action": "/controller/datarequest/D176;jsessionid=3D309E9933C473850E912D2B5F76",
       "method": "POST"
     }
   ],
@@ -61,6 +61,11 @@
             "selected": false
           },
           {
+            "value": "D176.V18",
+            "text": "Residence 2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D176.V80-level1",
             "text": "Occurrence Census Region",
             "selected": false
@@ -93,6 +98,11 @@
           {
             "value": "D176.V81",
             "text": "Occurrence 2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D176.V82",
+            "text": "Occurrence 2023 Urbanization",
             "selected": false
           },
           {
@@ -261,7 +271,7 @@
             "selected": false
           }
         ],
-        "option_count": 47
+        "option_count": 49
       },
       {
         "type": "select",
@@ -311,6 +321,11 @@
             "selected": false
           },
           {
+            "value": "D176.V18",
+            "text": "Residence 2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D176.V80-level1",
             "text": "Occurrence Census Region",
             "selected": false
@@ -343,6 +358,11 @@
           {
             "value": "D176.V81",
             "text": "Occurrence 2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D176.V82",
+            "text": "Occurrence 2023 Urbanization",
             "selected": false
           },
           {
@@ -511,7 +531,7 @@
             "selected": false
           }
         ],
-        "option_count": 48
+        "option_count": 50
       },
       {
         "type": "select",
@@ -561,6 +581,11 @@
             "selected": false
           },
           {
+            "value": "D176.V18",
+            "text": "Residence 2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D176.V80-level1",
             "text": "Occurrence Census Region",
             "selected": false
@@ -593,6 +618,11 @@
           {
             "value": "D176.V81",
             "text": "Occurrence 2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D176.V82",
+            "text": "Occurrence 2023 Urbanization",
             "selected": false
           },
           {
@@ -761,7 +791,7 @@
             "selected": false
           }
         ],
-        "option_count": 48
+        "option_count": 50
       },
       {
         "type": "select",
@@ -811,6 +841,11 @@
             "selected": false
           },
           {
+            "value": "D176.V18",
+            "text": "Residence 2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D176.V80-level1",
             "text": "Occurrence Census Region",
             "selected": false
@@ -843,6 +878,11 @@
           {
             "value": "D176.V81",
             "text": "Occurrence 2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D176.V82",
+            "text": "Occurrence 2023 Urbanization",
             "selected": false
           },
           {
@@ -1011,7 +1051,7 @@
             "selected": false
           }
         ],
-        "option_count": 48
+        "option_count": 50
       },
       {
         "type": "select",
@@ -1061,6 +1101,11 @@
             "selected": false
           },
           {
+            "value": "D176.V18",
+            "text": "Residence 2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D176.V80-level1",
             "text": "Occurrence Census Region",
             "selected": false
@@ -1093,6 +1138,11 @@
           {
             "value": "D176.V81",
             "text": "Occurrence 2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D176.V82",
+            "text": "Occurrence 2023 Urbanization",
             "selected": false
           },
           {
@@ -1261,7 +1311,7 @@
             "selected": false
           }
         ],
-        "option_count": 48
+        "option_count": 50
       },
       {
         "type": "select",
@@ -1960,6 +2010,56 @@
       },
       {
         "type": "select",
+        "name": "V_D176.V18",
+        "id": "SD176.V18",
+        "label": "Residence 2023 Urbanization",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Large Central Metro ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Large Fringe Metro ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Medium Metro ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Small Metro ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Micropolitan (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " NonCore (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
         "name": "F_D176.V79",
         "id": "codes-D176.V79",
         "label": "Occurrence States",
@@ -2417,6 +2517,56 @@
           }
         ],
         "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D176.V82",
+        "id": "SD176.V82",
+        "label": "Occurrence 2023 Urbanization",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Large Central Metro ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Large Fringe Metro ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Medium Metro ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Small Metro ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Micropolitan (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " NonCore (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
       },
       {
         "type": "select",
@@ -3602,12 +3752,12 @@
           },
           {
             "value": "2024",
-            "text": "+ 2024  (2024 (provisional))  ",
+            "text": "+ 2024  (2024)  ",
             "selected": false
           },
           {
             "value": "2025",
-            "text": "+ 2025  (2025 (provisional and partial))  ",
+            "text": "+ 2025  (2025 (provisional))  ",
             "selected": false
           },
           {
@@ -3662,12 +3812,12 @@
           },
           {
             "value": "2024",
-            "text": "+ 2024  (2024 (provisional))  ",
+            "text": "+ 2024  (2024)  ",
             "selected": false
           },
           {
             "value": "2025",
-            "text": "+ 2025  (2025 (provisional and partial))  ",
+            "text": "+ 2025  (2025 (provisional))  ",
             "selected": false
           },
           {
@@ -7816,7 +7966,7 @@
         "name": "dataset_vintage",
         "id": "",
         "label": "",
-        "value": "January 17, 2026 as of  January 25, 2026",
+        "value": "February 21, 2026 as of  March 01, 2026",
         "checked": null
       },
       {
@@ -8325,6 +8475,14 @@
       },
       {
         "type": "input_radio",
+        "name": "O_urban",
+        "id": "RO_urbanD176.V18",
+        "label": "Residence 2023 Urbanization",
+        "value": "D176.V18",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
         "name": "O_death_location",
         "id": "RO_death_locationD176.V79",
         "label": "Occurrence States",
@@ -8365,7 +8523,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_76",
+        "name": "input_77",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8373,7 +8531,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_77",
+        "name": "input_78",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8437,7 +8595,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_85",
+        "name": "input_86",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8445,7 +8603,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_86",
+        "name": "input_87",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8517,7 +8675,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_95",
+        "name": "input_96",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8525,7 +8683,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_96",
+        "name": "input_97",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8593,6 +8751,14 @@
         "id": "RO_death_urbanD176.V81",
         "label": "Occurrence 2006 Urbanization",
         "value": "D176.V81",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_death_urban",
+        "id": "RO_death_urbanD176.V82",
+        "label": "Occurrence 2023 Urbanization",
+        "value": "D176.V82",
         "checked": false
       },
       {
@@ -8701,7 +8867,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_118",
+        "name": "input_120",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8709,7 +8875,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_119",
+        "name": "input_121",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8773,7 +8939,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_127",
+        "name": "input_129",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8781,7 +8947,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_128",
+        "name": "input_130",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8901,7 +9067,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_143",
+        "name": "input_145",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8909,7 +9075,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_144",
+        "name": "input_146",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8981,7 +9147,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_153",
+        "name": "input_155",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8989,7 +9155,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_154",
+        "name": "input_156",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9093,23 +9259,23 @@
       },
       {
         "type": "input_button",
-        "name": "input_167",
-        "id": "",
-        "label": "",
-        "value": "Clear",
-        "checked": null
-      },
-      {
-        "type": "input_button",
-        "name": "input_168",
-        "id": "",
-        "label": "",
-        "value": "Clear",
-        "checked": null
-      },
-      {
-        "type": "input_button",
         "name": "input_169",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_170",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_171",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9181,7 +9347,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_178",
+        "name": "input_180",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9189,7 +9355,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_179",
+        "name": "input_181",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9213,7 +9379,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_182",
+        "name": "input_184",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9221,7 +9387,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_183",
+        "name": "input_185",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9245,23 +9411,23 @@
       },
       {
         "type": "input_button",
-        "name": "input_186",
-        "id": "",
-        "label": "",
-        "value": "Clear",
-        "checked": null
-      },
-      {
-        "type": "input_button",
-        "name": "input_187",
-        "id": "",
-        "label": "",
-        "value": "Clear",
-        "checked": null
-      },
-      {
-        "type": "input_button",
         "name": "input_188",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_189",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_190",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9571,10 +9737,10 @@
     ]
   },
   "summary": {
-    "total_selects": 47,
-    "total_inputs": 201,
+    "total_selects": 49,
+    "total_inputs": 203,
     "total_textareas": 29,
-    "total_parameters": 277
+    "total_parameters": 281
   },
   "dataset_id": "D176"
 }

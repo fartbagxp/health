@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/mcd-icd10-expanded.html",
   "final_url": "https://wonder.cdc.gov/controller/datarequest/D157",
-  "page_title": "Multiple Cause of Death, 2018-2023, Single Race Request Form",
+  "page_title": "Multiple Cause of Death, 2018-2024, Single Race Request Form",
   "forms": [
     {
       "id": "form_0",
@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D157;jsessionid=4FEB6A6C9909D67BE6C3CB4B4356",
+      "action": "/controller/datarequest/D157;jsessionid=9D3E83D8332A761F5189689FE1AB",
       "method": "POST"
     }
   ],
@@ -73,6 +73,11 @@
           {
             "value": "D157.V11",
             "text": "2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D157.V18",
+            "text": "2023 Urbanization",
             "selected": false
           },
           {
@@ -241,7 +246,7 @@
             "selected": false
           }
         ],
-        "option_count": 43
+        "option_count": 44
       },
       {
         "type": "select",
@@ -306,6 +311,11 @@
             "selected": false
           },
           {
+            "value": "D157.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D157.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -471,7 +481,7 @@
             "selected": false
           }
         ],
-        "option_count": 44
+        "option_count": 45
       },
       {
         "type": "select",
@@ -536,6 +546,11 @@
             "selected": false
           },
           {
+            "value": "D157.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D157.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -701,7 +716,7 @@
             "selected": false
           }
         ],
-        "option_count": 44
+        "option_count": 45
       },
       {
         "type": "select",
@@ -766,6 +781,11 @@
             "selected": false
           },
           {
+            "value": "D157.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D157.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -931,7 +951,7 @@
             "selected": false
           }
         ],
-        "option_count": 44
+        "option_count": 45
       },
       {
         "type": "select",
@@ -996,6 +1016,11 @@
             "selected": false
           },
           {
+            "value": "D157.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D157.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -1161,7 +1186,7 @@
             "selected": false
           }
         ],
-        "option_count": 44
+        "option_count": 45
       },
       {
         "type": "select",
@@ -1274,9 +1299,14 @@
             "value": "2023",
             "text": " 2023 ",
             "selected": false
+          },
+          {
+            "value": "2024",
+            "text": " 2024 ",
+            "selected": false
           }
         ],
-        "option_count": 7
+        "option_count": 8
       },
       {
         "type": "select",
@@ -2157,6 +2187,56 @@
           }
         ],
         "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D157.V18",
+        "id": "SD157.V18",
+        "label": "2023 Urbanization",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Large Central Metro ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Large Fringe Metro ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Medium Metro ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Small Metro ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Micropolitan (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " NonCore (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
       },
       {
         "type": "select",
@@ -3402,11 +3482,16 @@
           },
           {
             "value": "2023",
-            "text": "+ 2023  (2023 )  ",
+            "text": "+ 2023  (2023)  ",
+            "selected": false
+          },
+          {
+            "value": "2024",
+            "text": "+ 2024  (2024 )  ",
             "selected": false
           }
         ],
-        "option_count": 7
+        "option_count": 8
       },
       {
         "type": "select",
@@ -5862,7 +5947,7 @@
           },
           {
             "value": "GR113-018",
-            "text": " Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1) ",
+            "text": " Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1,U09) ",
             "selected": false
           },
           {
@@ -7555,7 +7640,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "Multiple Cause of Death, 2018-2023, Single Race",
+        "value": "Multiple Cause of Death, 2018-2024, Single Race",
         "checked": null
       },
       {
@@ -7563,7 +7648,7 @@
         "name": "dataset_vintage",
         "id": "",
         "label": "",
-        "value": "2023",
+        "value": "2024",
         "checked": null
       },
       {
@@ -8239,6 +8324,14 @@
         "checked": false
       },
       {
+        "type": "input_radio",
+        "name": "O_urban",
+        "id": "RO_urbanD157.V18",
+        "label": "2023 Urbanization",
+        "value": "D157.V18",
+        "checked": false
+      },
+      {
         "type": "input_submit",
         "name": "action-Send",
         "id": "",
@@ -8328,7 +8421,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_102",
+        "name": "input_103",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8336,7 +8429,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_103",
+        "name": "input_104",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8456,7 +8549,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_118",
+        "name": "input_119",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8464,7 +8557,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_119",
+        "name": "input_120",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8536,7 +8629,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_128",
+        "name": "input_129",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8544,7 +8637,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_129",
+        "name": "input_130",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8648,14 +8741,6 @@
       },
       {
         "type": "input_button",
-        "name": "input_142",
-        "id": "",
-        "label": "",
-        "value": "Clear",
-        "checked": null
-      },
-      {
-        "type": "input_button",
         "name": "input_143",
         "id": "",
         "label": "",
@@ -8665,6 +8750,14 @@
       {
         "type": "input_button",
         "name": "input_144",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_145",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8736,7 +8829,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_153",
+        "name": "input_154",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8744,7 +8837,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_154",
+        "name": "input_155",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8768,7 +8861,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_157",
+        "name": "input_158",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8776,7 +8869,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_158",
+        "name": "input_159",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8800,14 +8893,6 @@
       },
       {
         "type": "input_button",
-        "name": "input_161",
-        "id": "",
-        "label": "",
-        "value": "Clear",
-        "checked": null
-      },
-      {
-        "type": "input_button",
         "name": "input_162",
         "id": "",
         "label": "",
@@ -8817,6 +8902,14 @@
       {
         "type": "input_button",
         "name": "input_163",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_164",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9098,10 +9191,10 @@
     ]
   },
   "summary": {
-    "total_selects": 45,
-    "total_inputs": 176,
+    "total_selects": 46,
+    "total_inputs": 177,
     "total_textareas": 25,
-    "total_parameters": 246
+    "total_parameters": 248
   },
   "dataset_id": "D157"
 }

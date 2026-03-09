@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D141;jsessionid=86079434AD97F9E5E2279240316D",
+      "action": "/controller/datarequest/D141;jsessionid=5D6975BD9C832B1844D20FA8D9B9",
       "method": "POST"
     }
   ],
@@ -5367,7 +5367,7 @@
           },
           {
             "value": "GR113-018",
-            "text": " Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1) ",
+            "text": " Other and unspecified infectious and parasitic diseases and their sequelae (A00,A05,A20-A36,A42-A44,A48-A49,A54-A79,A81-A82,A85.0-A85.1,A85.8,A86-B04,B06-B09,B25-B49,B55-B99,U07.1,U09) ",
             "selected": false
           },
           {

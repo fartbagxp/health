@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/ucd-icd10-expanded.html",
   "final_url": "https://wonder.cdc.gov/controller/datarequest/D158",
-  "page_title": "Underlying Cause of Death, 2018-2023, Single Race Request Form",
+  "page_title": "Underlying Cause of Death, 2018-2024, Single Race Request Form",
   "forms": [
     {
       "id": "form_0",
@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D158;jsessionid=B056452E07FBB843B5C8588B884B",
+      "action": "/controller/datarequest/D158;jsessionid=C12735FFA65AFC3DBBC13FCF0747",
       "method": "POST"
     }
   ],
@@ -73,6 +73,11 @@
           {
             "value": "D158.V11",
             "text": "2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D158.V18",
+            "text": "2023 Urbanization",
             "selected": false
           },
           {
@@ -206,7 +211,7 @@
             "selected": false
           }
         ],
-        "option_count": 36
+        "option_count": 37
       },
       {
         "type": "select",
@@ -271,6 +276,11 @@
             "selected": false
           },
           {
+            "value": "D158.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D158.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -401,7 +411,7 @@
             "selected": false
           }
         ],
-        "option_count": 37
+        "option_count": 38
       },
       {
         "type": "select",
@@ -466,6 +476,11 @@
             "selected": false
           },
           {
+            "value": "D158.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D158.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -596,7 +611,7 @@
             "selected": false
           }
         ],
-        "option_count": 37
+        "option_count": 38
       },
       {
         "type": "select",
@@ -661,6 +676,11 @@
             "selected": false
           },
           {
+            "value": "D158.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D158.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -791,7 +811,7 @@
             "selected": false
           }
         ],
-        "option_count": 37
+        "option_count": 38
       },
       {
         "type": "select",
@@ -856,6 +876,11 @@
             "selected": false
           },
           {
+            "value": "D158.V18",
+            "text": "2023 Urbanization",
+            "selected": false
+          },
+          {
             "value": "D158.V5",
             "text": "Ten-Year Age Groups",
             "selected": false
@@ -986,7 +1011,7 @@
             "selected": false
           }
         ],
-        "option_count": 37
+        "option_count": 38
       },
       {
         "type": "select",
@@ -1099,9 +1124,14 @@
             "value": "2023",
             "text": " 2023 ",
             "selected": false
+          },
+          {
+            "value": "2024",
+            "text": " 2024 ",
+            "selected": false
           }
         ],
-        "option_count": 7
+        "option_count": 8
       },
       {
         "type": "select",
@@ -1982,6 +2012,56 @@
           }
         ],
         "option_count": 7
+      },
+      {
+        "type": "select",
+        "name": "V_D158.V18",
+        "id": "SD158.V18",
+        "label": "2023 Urbanization",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Large Central Metro ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Large Fringe Metro ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Medium Metro ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Small Metro ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Micropolitan (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " NonCore (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
       },
       {
         "type": "select",
@@ -3227,11 +3307,16 @@
           },
           {
             "value": "2023",
-            "text": "+ 2023  (2023 )  ",
+            "text": "+ 2023  (2023)  ",
+            "selected": false
+          },
+          {
+            "value": "2024",
+            "text": "+ 2024  (2024 )  ",
             "selected": false
           }
         ],
-        "option_count": 7
+        "option_count": 8
       },
       {
         "type": "select",
@@ -5685,7 +5770,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "Underlying Cause of Death, 2018-2023, Single Race",
+        "value": "Underlying Cause of Death, 2018-2024, Single Race",
         "checked": null
       },
       {
@@ -5693,7 +5778,7 @@
         "name": "dataset_vintage",
         "id": "",
         "label": "",
-        "value": "2023",
+        "value": "2024",
         "checked": null
       },
       {
@@ -6369,6 +6454,14 @@
         "checked": false
       },
       {
+        "type": "input_radio",
+        "name": "O_urban",
+        "id": "RO_urbanD158.V18",
+        "label": "2023 Urbanization",
+        "value": "D158.V18",
+        "checked": false
+      },
+      {
         "type": "input_submit",
         "name": "action-Send",
         "id": "",
@@ -6458,7 +6551,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_102",
+        "name": "input_103",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -6466,7 +6559,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_103",
+        "name": "input_104",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -6586,7 +6679,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_118",
+        "name": "input_119",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -6594,7 +6687,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_119",
+        "name": "input_120",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -6666,7 +6759,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_128",
+        "name": "input_129",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -6674,7 +6767,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_129",
+        "name": "input_130",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -6900,10 +6993,10 @@
     ]
   },
   "summary": {
-    "total_selects": 41,
-    "total_inputs": 142,
+    "total_selects": 42,
+    "total_inputs": 143,
     "total_textareas": 17,
-    "total_parameters": 200
+    "total_parameters": 202
   },
   "dataset_id": "D158"
 }

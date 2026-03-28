@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/fetal-deaths-expanded-current.html",
   "final_url": "https://wonder.cdc.gov/controller/datarequest/D150",
-  "page_title": "Fetal Deaths, 2014-2023 expanded Request Form",
+  "page_title": "Fetal Deaths, 2014-2024 expanded Request Form",
   "forms": [
     {
       "id": "form_0",
@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D150;jsessionid=C736A816EB8A190EDBEE30400275",
+      "action": "/controller/datarequest/D150;jsessionid=DEF21EA30BA9A3839637FC1533D4",
       "method": "POST"
     }
   ],
@@ -56,6 +56,11 @@
             "selected": false
           },
           {
+            "value": "D150.V119",
+            "text": "2023 Metro/Nonmetro",
+            "selected": false
+          },
+          {
             "value": "D150.V117",
             "text": "2013 Urbanization",
             "selected": false
@@ -63,6 +68,11 @@
           {
             "value": "D150.V118",
             "text": "2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D150.V120",
+            "text": "2023 Urbanization",
             "selected": false
           },
           {
@@ -471,7 +481,7 @@
             "selected": false
           }
         ],
-        "option_count": 89
+        "option_count": 91
       },
       {
         "type": "select",
@@ -516,6 +526,11 @@
             "selected": false
           },
           {
+            "value": "D150.V119",
+            "text": "2023 Metro/Nonmetro",
+            "selected": false
+          },
+          {
             "value": "D150.V117",
             "text": "2013 Urbanization",
             "selected": false
@@ -523,6 +538,11 @@
           {
             "value": "D150.V118",
             "text": "2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D150.V120",
+            "text": "2023 Urbanization",
             "selected": false
           },
           {
@@ -931,7 +951,7 @@
             "selected": false
           }
         ],
-        "option_count": 90
+        "option_count": 92
       },
       {
         "type": "select",
@@ -976,6 +996,11 @@
             "selected": false
           },
           {
+            "value": "D150.V119",
+            "text": "2023 Metro/Nonmetro",
+            "selected": false
+          },
+          {
             "value": "D150.V117",
             "text": "2013 Urbanization",
             "selected": false
@@ -983,6 +1008,11 @@
           {
             "value": "D150.V118",
             "text": "2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D150.V120",
+            "text": "2023 Urbanization",
             "selected": false
           },
           {
@@ -1391,7 +1421,7 @@
             "selected": false
           }
         ],
-        "option_count": 90
+        "option_count": 92
       },
       {
         "type": "select",
@@ -1436,6 +1466,11 @@
             "selected": false
           },
           {
+            "value": "D150.V119",
+            "text": "2023 Metro/Nonmetro",
+            "selected": false
+          },
+          {
             "value": "D150.V117",
             "text": "2013 Urbanization",
             "selected": false
@@ -1443,6 +1478,11 @@
           {
             "value": "D150.V118",
             "text": "2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D150.V120",
+            "text": "2023 Urbanization",
             "selected": false
           },
           {
@@ -1851,7 +1891,7 @@
             "selected": false
           }
         ],
-        "option_count": 90
+        "option_count": 92
       },
       {
         "type": "select",
@@ -1896,6 +1936,11 @@
             "selected": false
           },
           {
+            "value": "D150.V119",
+            "text": "2023 Metro/Nonmetro",
+            "selected": false
+          },
+          {
             "value": "D150.V117",
             "text": "2013 Urbanization",
             "selected": false
@@ -1903,6 +1948,11 @@
           {
             "value": "D150.V118",
             "text": "2006 Urbanization",
+            "selected": false
+          },
+          {
+            "value": "D150.V120",
+            "text": "2023 Urbanization",
             "selected": false
           },
           {
@@ -2311,7 +2361,7 @@
             "selected": false
           }
         ],
-        "option_count": 90
+        "option_count": 92
       },
       {
         "type": "select",
@@ -3120,6 +3170,36 @@
       },
       {
         "type": "select",
+        "name": "V_D150.V119",
+        "id": "SD150.V119",
+        "label": "2023 Metro/Nonmetro",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "Metro",
+            "text": " Metro ",
+            "selected": false
+          },
+          {
+            "value": "Nonmetro",
+            "text": " Nonmetro ",
+            "selected": false
+          },
+          {
+            "value": "Not Available",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 4
+      },
+      {
+        "type": "select",
         "name": "V_D150.V117",
         "id": "SD150.V117",
         "label": "2013 Urbanization",
@@ -3173,6 +3253,56 @@
         "name": "V_D150.V118",
         "id": "SD150.V118",
         "label": "2006 Urbanization",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": " All Categories ",
+            "selected": true
+          },
+          {
+            "value": "1",
+            "text": " Large Central Metro ",
+            "selected": false
+          },
+          {
+            "value": "2",
+            "text": " Large Fringe Metro ",
+            "selected": false
+          },
+          {
+            "value": "3",
+            "text": " Medium Metro ",
+            "selected": false
+          },
+          {
+            "value": "4",
+            "text": " Small Metro ",
+            "selected": false
+          },
+          {
+            "value": "5",
+            "text": " Micropolitan (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "6",
+            "text": " NonCore (Nonmetro) ",
+            "selected": false
+          },
+          {
+            "value": "9",
+            "text": " Not Available ",
+            "selected": false
+          }
+        ],
+        "option_count": 8
+      },
+      {
+        "type": "select",
+        "name": "V_D150.V120",
+        "id": "SD150.V120",
+        "label": "2023 Urbanization",
         "multiple": true,
         "options": [
           {
@@ -9399,9 +9529,14 @@
             "value": "2023",
             "text": " 2023 ",
             "selected": false
+          },
+          {
+            "value": "2024",
+            "text": " 2024 ",
+            "selected": false
           }
         ],
-        "option_count": 11
+        "option_count": 12
       },
       {
         "type": "select",
@@ -9669,9 +9804,14 @@
             "value": "9",
             "text": " Unknown or Not Stated ",
             "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Not Reported ",
+            "selected": false
           }
         ],
-        "option_count": 7
+        "option_count": 8
       },
       {
         "type": "select",
@@ -9699,9 +9839,14 @@
             "value": "3",
             "text": " Unknown or Not Stated ",
             "selected": false
+          },
+          {
+            "value": "100",
+            "text": " Not Reported ",
+            "selected": false
           }
         ],
-        "option_count": 4
+        "option_count": 5
       },
       {
         "type": "select",
@@ -12400,7 +12545,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "Fetal Deaths, 2014-2023 expanded",
+        "value": "Fetal Deaths, 2014-2024 expanded",
         "checked": null
       },
       {
@@ -12918,6 +13063,14 @@
       {
         "type": "input_radio",
         "name": "O_urban",
+        "id": "RO_urbanD150.V119",
+        "label": "2023 Metro/Nonmetro",
+        "value": "D150.V119",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_urban",
         "id": "RO_urbanD150.V117",
         "label": "2013 Urbanization",
         "value": "D150.V117",
@@ -12929,6 +13082,14 @@
         "id": "RO_urbanD150.V118",
         "label": "2006 Urbanization",
         "value": "D150.V118",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_urban",
+        "id": "RO_urbanD150.V120",
+        "label": "2023 Urbanization",
+        "value": "D150.V120",
         "checked": false
       },
       {
@@ -13229,7 +13390,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_109",
+        "name": "input_111",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -13237,7 +13398,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_110",
+        "name": "input_112",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -13422,10 +13583,10 @@
     ]
   },
   "summary": {
-    "total_selects": 93,
-    "total_inputs": 124,
+    "total_selects": 95,
+    "total_inputs": 126,
     "total_textareas": 10,
-    "total_parameters": 227
+    "total_parameters": 231
   },
   "dataset_id": "D150"
 }

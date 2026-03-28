@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/fetal-deaths-current.html",
   "final_url": "https://wonder.cdc.gov/controller/datarequest/D133",
-  "page_title": "Fetal Deaths, 2005-2023 Request Form",
+  "page_title": "Fetal Deaths, 2005-2024 Request Form",
   "forms": [
     {
       "id": "form_0",
@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D133;jsessionid=68CE7182D5B125C65BDD86517335",
+      "action": "/controller/datarequest/D133;jsessionid=64FCB80F76144EAB3F651989AB0B",
       "method": "POST"
     }
   ],
@@ -2614,9 +2614,14 @@
             "value": "2023",
             "text": " 2023 ",
             "selected": false
+          },
+          {
+            "value": "2024",
+            "text": " 2024 ",
+            "selected": false
           }
         ],
-        "option_count": 20
+        "option_count": 21
       },
       {
         "type": "select",
@@ -3079,9 +3084,14 @@
             "value": "9",
             "text": " Unknown or Not Stated ",
             "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Not Reported ",
+            "selected": false
           }
         ],
-        "option_count": 7
+        "option_count": 8
       },
       {
         "type": "select",
@@ -3109,9 +3119,14 @@
             "value": "3",
             "text": " Unknown or Not Stated ",
             "selected": false
+          },
+          {
+            "value": "100",
+            "text": " Not Reported ",
+            "selected": false
           }
         ],
-        "option_count": 4
+        "option_count": 5
       },
       {
         "type": "select",
@@ -4150,7 +4165,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "Fetal Deaths, 2005-2023",
+        "value": "Fetal Deaths, 2005-2024",
         "checked": null
       },
       {

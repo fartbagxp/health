@@ -6,7 +6,7 @@
     {
       "id": "form_0",
       "name": "",
-      "action": "https://search.cdc.gov/search",
+      "action": "https://search.cdc.gov/search/",
       "method": "GET"
     },
     {
@@ -1170,6 +1170,31 @@
       },
       {
         "type": "select",
+        "name": "O_export-format",
+        "id": "export-format",
+        "label": "Export Type",
+        "multiple": false,
+        "options": [
+          {
+            "value": "xls",
+            "text": "XLS (Export as Excel compatible)",
+            "selected": false
+          },
+          {
+            "value": "tsv",
+            "text": "TSV (Export as Tab Separated Values)",
+            "selected": false
+          },
+          {
+            "value": "csv",
+            "text": "CSV (Export as Comma Separated Values)",
+            "selected": false
+          }
+        ],
+        "option_count": 3
+      },
+      {
+        "type": "select",
         "name": "precision",
         "id": "SO_precision",
         "label": "Precision",
@@ -1280,26 +1305,18 @@
       },
       {
         "type": "input_hidden",
-        "name": "sitelimit",
-        "id": "",
-        "label": "",
-        "value": "",
-        "checked": null
-      },
-      {
-        "type": "input_hidden",
-        "name": "utf8",
-        "id": "",
-        "label": "",
-        "value": "✓",
-        "checked": null
-      },
-      {
-        "type": "input_hidden",
         "name": "affiliate",
         "id": "",
         "label": "",
         "value": "cdc-main",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "sitelimit",
+        "id": "",
+        "label": "",
+        "value": "",
         "checked": null
       },
       {
@@ -1360,7 +1377,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_11",
+        "name": "input_10",
         "id": "",
         "label": "",
         "value": "Request Form",
@@ -1522,8 +1539,8 @@
     "textareas": []
   },
   "summary": {
-    "total_selects": 11,
-    "total_inputs": 31,
+    "total_selects": 12,
+    "total_inputs": 30,
     "total_textareas": 0,
     "total_parameters": 42
   },

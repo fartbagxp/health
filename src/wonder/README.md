@@ -20,9 +20,9 @@ Scraped parameter definitions: `data/raw/wonder/query_params_D*.json`
 ## Docs
 
 - [User guide](../../docs/wonder.md) — setup, datasets, prompt tips, parameter reference
-- [Architecture & troubleshooting](../../docs/wonder-llm-query-builder.md) — how the LLM builder works, mode selectors, known issues
-- [Examples](../../docs/wonder-examples.md) — worked examples with real results
-- [Adding a dataset template](../../docs/wonder-api-template.md) — how to scrape and wire up a new dataset
+- [Architecture & troubleshooting](../../docs/wonder_llm_query_builder.md) — how the LLM builder works, mode selectors, known issues
+- [Examples](../../docs/wonder_examples.md) — worked examples with real results
+- [Adding a dataset template](../../docs/wonder_api_template.md) — how to scrape and wire up a new dataset
 
 ## CLI usage
 

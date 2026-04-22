@@ -5,8 +5,8 @@
 This repo's primary interface is an LLM query builder: describe what you want in plain English, and Claude picks the right dataset, generates the XML, and enforces constraint rules automatically.
 
 - [CLI reference](../src/wonder/README.md)
-- [Architecture & troubleshooting](wonder-llm-query-builder.md)
-- [Worked examples](wonder-examples.md)
+- [Architecture & troubleshooting](wonder_llm_query_builder.md)
+- [Worked examples](wonder_examples.md)
 - [Official API docs](https://wonder.cdc.gov/wonder/help/wonder-api.html)
 
 ## Setup
@@ -54,7 +54,7 @@ uv run python -m wonder query "cancer death rates 1999 to 2023, group by year an
 uv run python -m wonder query "HIV/AIDS deaths by year 1982-1998, dataset D77" -f csv
 ```
 
-See [wonder-examples.md](wonder-examples.md) for 33 worked examples with real results.
+See [wonder_examples.md](wonder_examples.md) for 33 worked examples with real results.
 
 ## Gotchas
 
@@ -64,7 +64,7 @@ At least 15 seconds between API requests.
 
 ### Mode selectors
 
-Several `O_*` parameters tell WONDER which filter sub-section is active. If they don't match your `F_*` filter, the filter is silently ignored and you get all-cause data back with no error. The builder sets these automatically, but if results look wrong, verify that `O_ucd`, `O_age`, `O_race` match your query intent. See [wonder-llm-query-builder.md](wonder-llm-query-builder.md#mode-selectors) for the full table.
+Several `O_*` parameters tell WONDER which filter sub-section is active. If they don't match your `F_*` filter, the filter is silently ignored and you get all-cause data back with no error. The builder sets these automatically, but if results look wrong, verify that `O_ucd`, `O_age`, `O_race` match your query intent. See [wonder_llm_query_builder.md](wonder_llm_query_builder.md#mode-selectors) for the full table.
 
 ### D8 VAERS Bug
 

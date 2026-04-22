@@ -4,7 +4,7 @@
 CDC Wonder Dataset Topic Cataloger
 
 This script catalogs CDC Wonder datasets (D1-D250) into health topics defined
-in health-data-topics.json. It uses keyword-based matching to automatically
+in health_data_topics.json. It uses keyword-based matching to automatically
 classify datasets based on their page names and URLs.
 
 Designed for periodic (e.g., weekly) execution to re-catalog as new datasets
@@ -199,7 +199,7 @@ def load_dataset_map(path: Path) -> list[dict[str, str]]:
 
 
 def load_topics(path: Path) -> dict[str, Any]:
-    """Load the health-data-topics.json file."""
+    """Load the health_data_topics.json file."""
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
@@ -474,7 +474,7 @@ def main() -> None:
     # Paths relative to project root
     project_root = Path(__file__).parent.parent.parent.parent
     dataset_map_path = project_root / "data" / "raw" / "wonder" / "dataset_map.csv"
-    topics_path = project_root / "data" / "raw" / "health-data-topics.json"
+    topics_path = project_root / "data" / "raw" / "health_data_topics.json"
     output_path = project_root / "data" / "raw" / "wonder" / "topics_mapping.json"
 
     # Catalog datasets

@@ -1,0 +1,7493 @@
+[
+  {
+    "year": "1900",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "47.3",
+    "mortality": "2518.0"
+  },
+  {
+    "year": "1901",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "49.1",
+    "mortality": "2473.1"
+  },
+  {
+    "year": "1902",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "51.5",
+    "mortality": "2301.3"
+  },
+  {
+    "year": "1903",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "50.5",
+    "mortality": "2379.0"
+  },
+  {
+    "year": "1904",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "47.6",
+    "mortality": "2502.5"
+  },
+  {
+    "year": "1905",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "48.7",
+    "mortality": "2423.7"
+  },
+  {
+    "year": "1906",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "48.7",
+    "mortality": "2399.0"
+  },
+  {
+    "year": "1907",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "47.6",
+    "mortality": "2494.4"
+  },
+  {
+    "year": "1908",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "51.1",
+    "mortality": "2298.9"
+  },
+  {
+    "year": "1909",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52.1",
+    "mortality": "2249.2"
+  },
+  {
+    "year": "1910",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "50",
+    "mortality": "2317.2"
+  },
+  {
+    "year": "1911",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52.6",
+    "mortality": "2245.4"
+  },
+  {
+    "year": "1912",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53.5",
+    "mortality": "2211.7"
+  },
+  {
+    "year": "1913",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52.5",
+    "mortality": "2206.5"
+  },
+  {
+    "year": "1914",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.2",
+    "mortality": "2149.3"
+  },
+  {
+    "year": "1915",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.5",
+    "mortality": "2174.8"
+  },
+  {
+    "year": "1916",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "51.7",
+    "mortality": "2266.6"
+  },
+  {
+    "year": "1917",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "50.9",
+    "mortality": "2275.9"
+  },
+  {
+    "year": "1918",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "39.1",
+    "mortality": "2541.6"
+  },
+  {
+    "year": "1919",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.7",
+    "mortality": "2057.2"
+  },
+  {
+    "year": "1920",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.1",
+    "mortality": "2147.1"
+  },
+  {
+    "year": "1921",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60.8",
+    "mortality": "1958.2"
+  },
+  {
+    "year": "1922",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "59.6",
+    "mortality": "2049.5"
+  },
+  {
+    "year": "1923",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "57.2",
+    "mortality": "2141.4"
+  },
+  {
+    "year": "1924",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "59.7",
+    "mortality": "2038.0"
+  },
+  {
+    "year": "1925",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "59",
+    "mortality": "2068.7"
+  },
+  {
+    "year": "1926",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "56.7",
+    "mortality": "2146.2"
+  },
+  {
+    "year": "1927",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60.4",
+    "mortality": "1989.5"
+  },
+  {
+    "year": "1928",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "56.8",
+    "mortality": "2124.6"
+  },
+  {
+    "year": "1929",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "57.1",
+    "mortality": "2081.2"
+  },
+  {
+    "year": "1930",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "59.7",
+    "mortality": "1943.8"
+  },
+  {
+    "year": "1931",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.1",
+    "mortality": "1895.1"
+  },
+  {
+    "year": "1932",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "62.1",
+    "mortality": "1897.1"
+  },
+  {
+    "year": "1933",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.3",
+    "mortality": "1850.1"
+  },
+  {
+    "year": "1934",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.1",
+    "mortality": "1888.2"
+  },
+  {
+    "year": "1935",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.7",
+    "mortality": "1860.1"
+  },
+  {
+    "year": "1936",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "58.5",
+    "mortality": "1963.7"
+  },
+  {
+    "year": "1937",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60",
+    "mortality": "1882.6"
+  },
+  {
+    "year": "1938",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.5",
+    "mortality": "1764.3"
+  },
+  {
+    "year": "1939",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.7",
+    "mortality": "1766.9"
+  },
+  {
+    "year": "1940",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "62.9",
+    "mortality": "1785.0"
+  },
+  {
+    "year": "1941",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.8",
+    "mortality": "1694.6"
+  },
+  {
+    "year": "1942",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66.2",
+    "mortality": "1635.8"
+  },
+  {
+    "year": "1943",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.3",
+    "mortality": "1702.4"
+  },
+  {
+    "year": "1944",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "65.2",
+    "mortality": "1618.5"
+  },
+  {
+    "year": "1945",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "65.9",
+    "mortality": "1575.4"
+  },
+  {
+    "year": "1946",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66.7",
+    "mortality": "1529.7"
+  },
+  {
+    "year": "1947",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66.8",
+    "mortality": "1532.0"
+  },
+  {
+    "year": "1948",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "67.2",
+    "mortality": "1501.7"
+  },
+  {
+    "year": "1949",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68",
+    "mortality": "1457.3"
+  },
+  {
+    "year": "1950",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.2",
+    "mortality": "1446.0"
+  },
+  {
+    "year": "1951",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.4",
+    "mortality": "1423.5"
+  },
+  {
+    "year": "1952",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.6",
+    "mortality": "1394.6"
+  },
+  {
+    "year": "1953",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.8",
+    "mortality": "1385.6"
+  },
+  {
+    "year": "1954",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.6",
+    "mortality": "1314.8"
+  },
+  {
+    "year": "1955",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.6",
+    "mortality": "1332.3"
+  },
+  {
+    "year": "1956",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.7",
+    "mortality": "1333.7"
+  },
+  {
+    "year": "1957",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.5",
+    "mortality": "1356.7"
+  },
+  {
+    "year": "1958",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.6",
+    "mortality": "1343.4"
+  },
+  {
+    "year": "1959",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.9",
+    "mortality": "1317.3"
+  },
+  {
+    "year": "1960",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.7",
+    "mortality": "1339.2"
+  },
+  {
+    "year": "1961",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.2",
+    "mortality": "1298.8"
+  },
+  {
+    "year": "1962",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.1",
+    "mortality": "1323.6"
+  },
+  {
+    "year": "1963",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.9",
+    "mortality": "1346.3"
+  },
+  {
+    "year": "1964",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.2",
+    "mortality": "1303.8"
+  },
+  {
+    "year": "1965",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.2",
+    "mortality": "1306.5"
+  },
+  {
+    "year": "1966",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.2",
+    "mortality": "1309.0"
+  },
+  {
+    "year": "1967",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.5",
+    "mortality": "1274.0"
+  },
+  {
+    "year": "1968",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.2",
+    "mortality": "1304.5"
+  },
+  {
+    "year": "1969",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.5",
+    "mortality": "1271.8"
+  },
+  {
+    "year": "1970",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.8",
+    "mortality": "1222.6"
+  },
+  {
+    "year": "1971",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.1",
+    "mortality": "1213.1"
+  },
+  {
+    "year": "1972",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.2",
+    "mortality": "1214.8"
+  },
+  {
+    "year": "1973",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.4",
+    "mortality": "1201.2"
+  },
+  {
+    "year": "1974",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72",
+    "mortality": "1151.8"
+  },
+  {
+    "year": "1975",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72.6",
+    "mortality": "1094.4"
+  },
+  {
+    "year": "1976",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72.9",
+    "mortality": "1084.1"
+  },
+  {
+    "year": "1977",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.3",
+    "mortality": "1051.6"
+  },
+  {
+    "year": "1978",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.5",
+    "mortality": "1043.7"
+  },
+  {
+    "year": "1979",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.9",
+    "mortality": "1010.6"
+  },
+  {
+    "year": "1980",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.7",
+    "mortality": "1038.7"
+  },
+  {
+    "year": "1981",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.1",
+    "mortality": "1007.0"
+  },
+  {
+    "year": "1982",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.5",
+    "mortality": "984.9"
+  },
+  {
+    "year": "1983",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.6",
+    "mortality": "990.0"
+  },
+  {
+    "year": "1984",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.7",
+    "mortality": "982.1"
+  },
+  {
+    "year": "1985",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.7",
+    "mortality": "987.8"
+  },
+  {
+    "year": "1986",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.7",
+    "mortality": "978.4"
+  },
+  {
+    "year": "1987",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.9",
+    "mortality": "969.6"
+  },
+  {
+    "year": "1988",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.9",
+    "mortality": "975.1"
+  },
+  {
+    "year": "1989",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.1",
+    "mortality": "949.9"
+  },
+  {
+    "year": "1990",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.4",
+    "mortality": "938.0"
+  },
+  {
+    "year": "1991",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.5",
+    "mortality": "921.9"
+  },
+  {
+    "year": "1992",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.8",
+    "mortality": "905.3"
+  },
+  {
+    "year": "1993",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.5",
+    "mortality": "925.8"
+  },
+  {
+    "year": "1994",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.7",
+    "mortality": "913.2"
+  },
+  {
+    "year": "1995",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.8",
+    "mortality": "909.5"
+  },
+  {
+    "year": "1996",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.1",
+    "mortality": "893.7"
+  },
+  {
+    "year": "1997",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.5",
+    "mortality": "877.7"
+  },
+  {
+    "year": "1998",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.7",
+    "mortality": "870.1"
+  },
+  {
+    "year": "1999",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.7",
+    "mortality": "875.6"
+  },
+  {
+    "year": "2000",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.8",
+    "mortality": "869.0"
+  },
+  {
+    "year": "2001",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77",
+    "mortality": "858.8"
+  },
+  {
+    "year": "2002",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77",
+    "mortality": "855.9"
+  },
+  {
+    "year": "2003",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.6",
+    "mortality": "843.5"
+  },
+  {
+    "year": "2004",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.5",
+    "mortality": "813.7"
+  },
+  {
+    "year": "2005",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.6",
+    "mortality": "815.0"
+  },
+  {
+    "year": "2006",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.8",
+    "mortality": "791.8"
+  },
+  {
+    "year": "2007",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.1",
+    "mortality": "775.3"
+  },
+  {
+    "year": "2008",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.2",
+    "mortality": "774.9"
+  },
+  {
+    "year": "2009",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.5",
+    "mortality": "749.6"
+  },
+  {
+    "year": "2010",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.7",
+    "mortality": "747.0"
+  },
+  {
+    "year": "2011",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.7",
+    "mortality": "741.3"
+  },
+  {
+    "year": "2012",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.8",
+    "mortality": "732.8"
+  },
+  {
+    "year": "2013",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.8",
+    "mortality": "731.9"
+  },
+  {
+    "year": "2014",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.9",
+    "mortality": "724.6"
+  },
+  {
+    "year": "2015",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.7",
+    "mortality": "733.1"
+  },
+  {
+    "year": "2016",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.7",
+    "mortality": "728.8"
+  },
+  {
+    "year": "2017",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.6",
+    "mortality": "731.9"
+  },
+  {
+    "year": "2018",
+    "race": "All Races",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.7",
+    "mortality": "723.6"
+  },
+  {
+    "year": "1900",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "48.3",
+    "mortality": "2410.4"
+  },
+  {
+    "year": "1901",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "50.6",
+    "mortality": "2350.5"
+  },
+  {
+    "year": "1902",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "53.4",
+    "mortality": "2162.8"
+  },
+  {
+    "year": "1903",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "52",
+    "mortality": "2250.6"
+  },
+  {
+    "year": "1904",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "49.1",
+    "mortality": "2358.8"
+  },
+  {
+    "year": "1905",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "50.2",
+    "mortality": "2287.7"
+  },
+  {
+    "year": "1906",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "50.8",
+    "mortality": "2244.6"
+  },
+  {
+    "year": "1907",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "49.9",
+    "mortality": "2327.3"
+  },
+  {
+    "year": "1908",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "52.8",
+    "mortality": "2162.3"
+  },
+  {
+    "year": "1909",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "53.8",
+    "mortality": "2111.5"
+  },
+  {
+    "year": "1910",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "51.8",
+    "mortality": "2171.3"
+  },
+  {
+    "year": "1911",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "54.4",
+    "mortality": "2112.1"
+  },
+  {
+    "year": "1912",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "55.9",
+    "mortality": "2067.2"
+  },
+  {
+    "year": "1913",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "55",
+    "mortality": "2058.1"
+  },
+  {
+    "year": "1914",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "56.8",
+    "mortality": "2009.0"
+  },
+  {
+    "year": "1915",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "56.8",
+    "mortality": "2044.3"
+  },
+  {
+    "year": "1916",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "54.3",
+    "mortality": "2123.3"
+  },
+  {
+    "year": "1917",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "54",
+    "mortality": "2119.9"
+  },
+  {
+    "year": "1918",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "42.2",
+    "mortality": "2342.8"
+  },
+  {
+    "year": "1919",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "56",
+    "mortality": "1973.1"
+  },
+  {
+    "year": "1920",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "54.6",
+    "mortality": "2081.3"
+  },
+  {
+    "year": "1921",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "61.8",
+    "mortality": "1890.4"
+  },
+  {
+    "year": "1922",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "61",
+    "mortality": "1965.1"
+  },
+  {
+    "year": "1923",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "58.5",
+    "mortality": "2050.5"
+  },
+  {
+    "year": "1924",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "61.5",
+    "mortality": "1927.2"
+  },
+  {
+    "year": "1925",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "60.6",
+    "mortality": "1957.1"
+  },
+  {
+    "year": "1926",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "58",
+    "mortality": "2028.0"
+  },
+  {
+    "year": "1927",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "62.1",
+    "mortality": "1863.8"
+  },
+  {
+    "year": "1928",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "58.3",
+    "mortality": "1990.5"
+  },
+  {
+    "year": "1929",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "58.7",
+    "mortality": "1940.9"
+  },
+  {
+    "year": "1930",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "61.6",
+    "mortality": "1798.3"
+  },
+  {
+    "year": "1931",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "63.1",
+    "mortality": "1743.6"
+  },
+  {
+    "year": "1932",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "63.5",
+    "mortality": "1758.4"
+  },
+  {
+    "year": "1933",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "65.1",
+    "mortality": "1699.1"
+  },
+  {
+    "year": "1934",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "63.3",
+    "mortality": "1720.7"
+  },
+  {
+    "year": "1935",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "63.9",
+    "mortality": "1690.6"
+  },
+  {
+    "year": "1936",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "60.6",
+    "mortality": "1780.6"
+  },
+  {
+    "year": "1937",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "62.4",
+    "mortality": "1695.1"
+  },
+  {
+    "year": "1938",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "65.3",
+    "mortality": "1599.1"
+  },
+  {
+    "year": "1939",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "65.4",
+    "mortality": "1599.8"
+  },
+  {
+    "year": "1940",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "65.2",
+    "mortality": "1599.4"
+  },
+  {
+    "year": "1941",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "66.8",
+    "mortality": "1502.4"
+  },
+  {
+    "year": "1942",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "67.9",
+    "mortality": "1444.7"
+  },
+  {
+    "year": "1943",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "64.4",
+    "mortality": "1507.8"
+  },
+  {
+    "year": "1944",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "66.8",
+    "mortality": "1428.4"
+  },
+  {
+    "year": "1945",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "67.9",
+    "mortality": "1376.8"
+  },
+  {
+    "year": "1946",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "69.4",
+    "mortality": "1342.8"
+  },
+  {
+    "year": "1947",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "69.7",
+    "mortality": "1332.5"
+  },
+  {
+    "year": "1948",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "69.9",
+    "mortality": "1296.4"
+  },
+  {
+    "year": "1949",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "70.7",
+    "mortality": "1252.6"
+  },
+  {
+    "year": "1950",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "71.1",
+    "mortality": "1236.0"
+  },
+  {
+    "year": "1951",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "71.4",
+    "mortality": "1213.4"
+  },
+  {
+    "year": "1952",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "71.6",
+    "mortality": "1186.7"
+  },
+  {
+    "year": "1953",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "72",
+    "mortality": "1172.6"
+  },
+  {
+    "year": "1954",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "72.8",
+    "mortality": "1109.7"
+  },
+  {
+    "year": "1955",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "72.8",
+    "mortality": "1121.9"
+  },
+  {
+    "year": "1956",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "72.9",
+    "mortality": "1117.5"
+  },
+  {
+    "year": "1957",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "72.7",
+    "mortality": "1134.5"
+  },
+  {
+    "year": "1958",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "72.9",
+    "mortality": "1120.9"
+  },
+  {
+    "year": "1959",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.2",
+    "mortality": "1093.5"
+  },
+  {
+    "year": "1960",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.1",
+    "mortality": "1105.3"
+  },
+  {
+    "year": "1961",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.6",
+    "mortality": "1068.5"
+  },
+  {
+    "year": "1962",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.5",
+    "mortality": "1087.1"
+  },
+  {
+    "year": "1963",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.4",
+    "mortality": "1098.5"
+  },
+  {
+    "year": "1964",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.7",
+    "mortality": "1061.5"
+  },
+  {
+    "year": "1965",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.8",
+    "mortality": "1056.1"
+  },
+  {
+    "year": "1966",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "73.9",
+    "mortality": "1055.3"
+  },
+  {
+    "year": "1967",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "74.3",
+    "mortality": "1020.5"
+  },
+  {
+    "year": "1968",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "74.1",
+    "mortality": "1043.5"
+  },
+  {
+    "year": "1969",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "74.4",
+    "mortality": "1013.4"
+  },
+  {
+    "year": "1970",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "74.7",
+    "mortality": "971.4"
+  },
+  {
+    "year": "1971",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "75",
+    "mortality": "960.6"
+  },
+  {
+    "year": "1972",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "75.1",
+    "mortality": "958.7"
+  },
+  {
+    "year": "1973",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "75.3",
+    "mortality": "947.8"
+  },
+  {
+    "year": "1974",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "75.9",
+    "mortality": "907.5"
+  },
+  {
+    "year": "1975",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "76.6",
+    "mortality": "855.1"
+  },
+  {
+    "year": "1976",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "76.8",
+    "mortality": "849.4"
+  },
+  {
+    "year": "1977",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "77.2",
+    "mortality": "820.7"
+  },
+  {
+    "year": "1978",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "77.3",
+    "mortality": "816.4"
+  },
+  {
+    "year": "1979",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "77.8",
+    "mortality": "789.9"
+  },
+  {
+    "year": "1980",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "77.4",
+    "mortality": "817.7"
+  },
+  {
+    "year": "1981",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "77.8",
+    "mortality": "792.7"
+  },
+  {
+    "year": "1982",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.1",
+    "mortality": "776.4"
+  },
+  {
+    "year": "1983",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.1",
+    "mortality": "783.3"
+  },
+  {
+    "year": "1984",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.2",
+    "mortality": "779.4"
+  },
+  {
+    "year": "1985",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.2",
+    "mortality": "784.2"
+  },
+  {
+    "year": "1986",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.2",
+    "mortality": "778.5"
+  },
+  {
+    "year": "1987",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.3",
+    "mortality": "773.8"
+  },
+  {
+    "year": "1988",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.3",
+    "mortality": "780.5"
+  },
+  {
+    "year": "1989",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.5",
+    "mortality": "761.3"
+  },
+  {
+    "year": "1990",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.8",
+    "mortality": "750.3"
+  },
+  {
+    "year": "1991",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.9",
+    "mortality": "737.9"
+  },
+  {
+    "year": "1992",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.1",
+    "mortality": "725.3"
+  },
+  {
+    "year": "1993",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.8",
+    "mortality": "745.6"
+  },
+  {
+    "year": "1994",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79",
+    "mortality": "738.3"
+  },
+  {
+    "year": "1995",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "78.9",
+    "mortality": "739.2"
+  },
+  {
+    "year": "1996",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.1",
+    "mortality": "732.7"
+  },
+  {
+    "year": "1997",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.4",
+    "mortality": "725.3"
+  },
+  {
+    "year": "1998",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.5",
+    "mortality": "724.2"
+  },
+  {
+    "year": "1999",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.4",
+    "mortality": "734.0"
+  },
+  {
+    "year": "2000",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.7",
+    "mortality": "731.4"
+  },
+  {
+    "year": "2001",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.5",
+    "mortality": "725.6"
+  },
+  {
+    "year": "2002",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.6",
+    "mortality": "723.6"
+  },
+  {
+    "year": "2003",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "79.7",
+    "mortality": "715.2"
+  },
+  {
+    "year": "2004",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "80.1",
+    "mortality": "690.5"
+  },
+  {
+    "year": "2005",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "80.1",
+    "mortality": "692.3"
+  },
+  {
+    "year": "2006",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "80.3",
+    "mortality": "672.2"
+  },
+  {
+    "year": "2007",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "80.6",
+    "mortality": "658.1"
+  },
+  {
+    "year": "2008",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "80.6",
+    "mortality": "660.0"
+  },
+  {
+    "year": "2009",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "80.9",
+    "mortality": "636.8"
+  },
+  {
+    "year": "2010",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81",
+    "mortality": "634.9"
+  },
+  {
+    "year": "2011",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.1",
+    "mortality": "632.4"
+  },
+  {
+    "year": "2012",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.2",
+    "mortality": "624.7"
+  },
+  {
+    "year": "2013",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.2",
+    "mortality": "623.5"
+  },
+  {
+    "year": "2014",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.3",
+    "mortality": "616.7"
+  },
+  {
+    "year": "2015",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.1",
+    "mortality": "624.2"
+  },
+  {
+    "year": "2016",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.1",
+    "mortality": "617.5"
+  },
+  {
+    "year": "2017",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.1",
+    "mortality": "619.7"
+  },
+  {
+    "year": "2018",
+    "race": "All Races",
+    "sex": "Female",
+    "average_life_expectancy": "81.2",
+    "mortality": "611.3"
+  },
+  {
+    "year": "1900",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "46.3",
+    "mortality": "2630.8"
+  },
+  {
+    "year": "1901",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "47.6",
+    "mortality": "2600.5"
+  },
+  {
+    "year": "1902",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "49.8",
+    "mortality": "2447.9"
+  },
+  {
+    "year": "1903",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "49.1",
+    "mortality": "2513.5"
+  },
+  {
+    "year": "1904",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "46.2",
+    "mortality": "2652.9"
+  },
+  {
+    "year": "1905",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "47.3",
+    "mortality": "2565.5"
+  },
+  {
+    "year": "1906",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "46.9",
+    "mortality": "2553.6"
+  },
+  {
+    "year": "1907",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "45.6",
+    "mortality": "2660.3"
+  },
+  {
+    "year": "1908",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "49.5",
+    "mortality": "2433.4"
+  },
+  {
+    "year": "1909",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "50.5",
+    "mortality": "2385.7"
+  },
+  {
+    "year": "1910",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "48.4",
+    "mortality": "2459.9"
+  },
+  {
+    "year": "1911",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "50.9",
+    "mortality": "2374.5"
+  },
+  {
+    "year": "1912",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "51.5",
+    "mortality": "2352.8"
+  },
+  {
+    "year": "1913",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "50.3",
+    "mortality": "2351.2"
+  },
+  {
+    "year": "1914",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "52",
+    "mortality": "2286.1"
+  },
+  {
+    "year": "1915",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "52.5",
+    "mortality": "2302.6"
+  },
+  {
+    "year": "1916",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "49.6",
+    "mortality": "2406.2"
+  },
+  {
+    "year": "1917",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "48.4",
+    "mortality": "2427.8"
+  },
+  {
+    "year": "1918",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "36.6",
+    "mortality": "2740.5"
+  },
+  {
+    "year": "1919",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "53.5",
+    "mortality": "2141.5"
+  },
+  {
+    "year": "1920",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "53.6",
+    "mortality": "2213.2"
+  },
+  {
+    "year": "1921",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "60",
+    "mortality": "2025.0"
+  },
+  {
+    "year": "1922",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "58.4",
+    "mortality": "2131.8"
+  },
+  {
+    "year": "1923",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "56.1",
+    "mortality": "2229.5"
+  },
+  {
+    "year": "1924",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "58.1",
+    "mortality": "2146.9"
+  },
+  {
+    "year": "1925",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "57.6",
+    "mortality": "2178.0"
+  },
+  {
+    "year": "1926",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "55.5",
+    "mortality": "2262.2"
+  },
+  {
+    "year": "1927",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "59",
+    "mortality": "2113.8"
+  },
+  {
+    "year": "1928",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "55.6",
+    "mortality": "2256.3"
+  },
+  {
+    "year": "1929",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "55.8",
+    "mortality": "2219.7"
+  },
+  {
+    "year": "1930",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "58.1",
+    "mortality": "2088.8"
+  },
+  {
+    "year": "1931",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "59.4",
+    "mortality": "2047.4"
+  },
+  {
+    "year": "1932",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "61",
+    "mortality": "2036.4"
+  },
+  {
+    "year": "1933",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "61.7",
+    "mortality": "2002.0"
+  },
+  {
+    "year": "1934",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "59.3",
+    "mortality": "2056.7"
+  },
+  {
+    "year": "1935",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "59.9",
+    "mortality": "2031.2"
+  },
+  {
+    "year": "1936",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "56.6",
+    "mortality": "2148.5"
+  },
+  {
+    "year": "1937",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "58",
+    "mortality": "2072.8"
+  },
+  {
+    "year": "1938",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "61.9",
+    "mortality": "1932.4"
+  },
+  {
+    "year": "1939",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "62.1",
+    "mortality": "1937.2"
+  },
+  {
+    "year": "1940",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "60.8",
+    "mortality": "1976.0"
+  },
+  {
+    "year": "1941",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "63.1",
+    "mortality": "1894.3"
+  },
+  {
+    "year": "1942",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "64.7",
+    "mortality": "1835.1"
+  },
+  {
+    "year": "1943",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "62.4",
+    "mortality": "1907.7"
+  },
+  {
+    "year": "1944",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "63.6",
+    "mortality": "1821.6"
+  },
+  {
+    "year": "1945",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "63.6",
+    "mortality": "1791.6"
+  },
+  {
+    "year": "1946",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "64.4",
+    "mortality": "1727.6"
+  },
+  {
+    "year": "1947",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "64.4",
+    "mortality": "1743.0"
+  },
+  {
+    "year": "1948",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "64.6",
+    "mortality": "1720.5"
+  },
+  {
+    "year": "1949",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "65.2",
+    "mortality": "1676.7"
+  },
+  {
+    "year": "1950",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "65.6",
+    "mortality": "1674.2"
+  },
+  {
+    "year": "1951",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "65.6",
+    "mortality": "1651.7"
+  },
+  {
+    "year": "1952",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "65.8",
+    "mortality": "1620.8"
+  },
+  {
+    "year": "1953",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66",
+    "mortality": "1619.0"
+  },
+  {
+    "year": "1954",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.7",
+    "mortality": "1540.7"
+  },
+  {
+    "year": "1955",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.7",
+    "mortality": "1565.2"
+  },
+  {
+    "year": "1956",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.7",
+    "mortality": "1575.5"
+  },
+  {
+    "year": "1957",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.4",
+    "mortality": "1606.7"
+  },
+  {
+    "year": "1958",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.6",
+    "mortality": "1596.3"
+  },
+  {
+    "year": "1959",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.8",
+    "mortality": "1573.4"
+  },
+  {
+    "year": "1960",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.6",
+    "mortality": "1609.0"
+  },
+  {
+    "year": "1961",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "67.1",
+    "mortality": "1567.6"
+  },
+  {
+    "year": "1962",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.9",
+    "mortality": "1604.4"
+  },
+  {
+    "year": "1963",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.6",
+    "mortality": "1644.0"
+  },
+  {
+    "year": "1964",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.8",
+    "mortality": "1597.0"
+  },
+  {
+    "year": "1965",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.8",
+    "mortality": "1614.3"
+  },
+  {
+    "year": "1966",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.7",
+    "mortality": "1624.2"
+  },
+  {
+    "year": "1967",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "67",
+    "mortality": "1591.8"
+  },
+  {
+    "year": "1968",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.6",
+    "mortality": "1635.2"
+  },
+  {
+    "year": "1969",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "66.8",
+    "mortality": "1601.4"
+  },
+  {
+    "year": "1970",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "67.1",
+    "mortality": "1542.1"
+  },
+  {
+    "year": "1971",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "67.4",
+    "mortality": "1542.5"
+  },
+  {
+    "year": "1972",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "67.4",
+    "mortality": "1551.1"
+  },
+  {
+    "year": "1973",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "67.6",
+    "mortality": "1537.5"
+  },
+  {
+    "year": "1974",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "68.2",
+    "mortality": "1478.5"
+  },
+  {
+    "year": "1975",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "68.8",
+    "mortality": "1417.4"
+  },
+  {
+    "year": "1976",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "69.1",
+    "mortality": "1404.3"
+  },
+  {
+    "year": "1977",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "69.5",
+    "mortality": "1369.3"
+  },
+  {
+    "year": "1978",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "69.6",
+    "mortality": "1358.1"
+  },
+  {
+    "year": "1979",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "70",
+    "mortality": "1316.2"
+  },
+  {
+    "year": "1980",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "70",
+    "mortality": "1347.6"
+  },
+  {
+    "year": "1981",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "70.4",
+    "mortality": "1308.2"
+  },
+  {
+    "year": "1982",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "70.8",
+    "mortality": "1279.9"
+  },
+  {
+    "year": "1983",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71",
+    "mortality": "1284.4"
+  },
+  {
+    "year": "1984",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71.1",
+    "mortality": "1271.0"
+  },
+  {
+    "year": "1985",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71.1",
+    "mortality": "1277.6"
+  },
+  {
+    "year": "1986",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71.2",
+    "mortality": "1261.5"
+  },
+  {
+    "year": "1987",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71.4",
+    "mortality": "1245.7"
+  },
+  {
+    "year": "1988",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71.4",
+    "mortality": "1250.0"
+  },
+  {
+    "year": "1989",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71.7",
+    "mortality": "1214.2"
+  },
+  {
+    "year": "1990",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "71.8",
+    "mortality": "1202.0"
+  },
+  {
+    "year": "1991",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "72",
+    "mortality": "1180.2"
+  },
+  {
+    "year": "1992",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "72.3",
+    "mortality": "1158.0"
+  },
+  {
+    "year": "1993",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "72.2",
+    "mortality": "1177.0"
+  },
+  {
+    "year": "1994",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "72.4",
+    "mortality": "1155.1"
+  },
+  {
+    "year": "1995",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "72.5",
+    "mortality": "1143.6"
+  },
+  {
+    "year": "1996",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "73.1",
+    "mortality": "1115.2"
+  },
+  {
+    "year": "1997",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "73.6",
+    "mortality": "1087.7"
+  },
+  {
+    "year": "1998",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "73.8",
+    "mortality": "1068.9"
+  },
+  {
+    "year": "1999",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "73.9",
+    "mortality": "1067.0"
+  },
+  {
+    "year": "2000",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "74.3",
+    "mortality": "1053.8"
+  },
+  {
+    "year": "2001",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "74.3",
+    "mortality": "1035.3"
+  },
+  {
+    "year": "2002",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "74.4",
+    "mortality": "1030.6"
+  },
+  {
+    "year": "2003",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "74.5",
+    "mortality": "1010.3"
+  },
+  {
+    "year": "2004",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "75",
+    "mortality": "973.3"
+  },
+  {
+    "year": "2005",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "75",
+    "mortality": "971.9"
+  },
+  {
+    "year": "2006",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "75.2",
+    "mortality": "943.4"
+  },
+  {
+    "year": "2007",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "75.5",
+    "mortality": "922.9"
+  },
+  {
+    "year": "2008",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "75.6",
+    "mortality": "918.8"
+  },
+  {
+    "year": "2009",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76",
+    "mortality": "890.9"
+  },
+  {
+    "year": "2010",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.2",
+    "mortality": "887.1"
+  },
+  {
+    "year": "2011",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.3",
+    "mortality": "875.3"
+  },
+  {
+    "year": "2012",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.4",
+    "mortality": "865.1"
+  },
+  {
+    "year": "2013",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.4",
+    "mortality": "863.6"
+  },
+  {
+    "year": "2014",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.5",
+    "mortality": "855.1"
+  },
+  {
+    "year": "2015",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.3",
+    "mortality": "863.2"
+  },
+  {
+    "year": "2016",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.2",
+    "mortality": "861.0"
+  },
+  {
+    "year": "2017",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.1",
+    "mortality": "864.5"
+  },
+  {
+    "year": "2018",
+    "race": "All Races",
+    "sex": "Male",
+    "average_life_expectancy": "76.2",
+    "mortality": "855.5"
+  },
+  {
+    "year": "1900",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "33",
+    "mortality": "3423.3"
+  },
+  {
+    "year": "1901",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "33.7",
+    "mortality": "3338.4"
+  },
+  {
+    "year": "1902",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "34.6",
+    "mortality": "3190.4"
+  },
+  {
+    "year": "1903",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "33.1",
+    "mortality": "3373.7"
+  },
+  {
+    "year": "1904",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "30.8",
+    "mortality": "3586.2"
+  },
+  {
+    "year": "1905",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "31.3",
+    "mortality": "3440.1"
+  },
+  {
+    "year": "1906",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "32.9",
+    "mortality": "3223.4"
+  },
+  {
+    "year": "1907",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "32.5",
+    "mortality": "3295.1"
+  },
+  {
+    "year": "1908",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "34.9",
+    "mortality": "3048.2"
+  },
+  {
+    "year": "1909",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "35.7",
+    "mortality": "3006.9"
+  },
+  {
+    "year": "1910",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "35.6",
+    "mortality": "2983.5"
+  },
+  {
+    "year": "1911",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "36.4",
+    "mortality": "3000.6"
+  },
+  {
+    "year": "1912",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "37.9",
+    "mortality": "2959.2"
+  },
+  {
+    "year": "1913",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "38.4",
+    "mortality": "2906.6"
+  },
+  {
+    "year": "1914",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "38.9",
+    "mortality": "2914.6"
+  },
+  {
+    "year": "1915",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "38.9",
+    "mortality": "3021.8"
+  },
+  {
+    "year": "1916",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "41.3",
+    "mortality": "2940.3"
+  },
+  {
+    "year": "1917",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "38.8",
+    "mortality": "3069.6"
+  },
+  {
+    "year": "1918",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "31.1",
+    "mortality": "3411.9"
+  },
+  {
+    "year": "1919",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "44.5",
+    "mortality": "2648.5"
+  },
+  {
+    "year": "1920",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "45.3",
+    "mortality": "2743.3"
+  },
+  {
+    "year": "1921",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "51.5",
+    "mortality": "2459.8"
+  },
+  {
+    "year": "1922",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52.4",
+    "mortality": "2507.8"
+  },
+  {
+    "year": "1923",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "48.3",
+    "mortality": "2717.8"
+  },
+  {
+    "year": "1924",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "46.6",
+    "mortality": "2806.5"
+  },
+  {
+    "year": "1925",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "45.7",
+    "mortality": "2858.7"
+  },
+  {
+    "year": "1926",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "44.6",
+    "mortality": "2906.0"
+  },
+  {
+    "year": "1927",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "48.2",
+    "mortality": "2676.2"
+  },
+  {
+    "year": "1928",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "46.3",
+    "mortality": "2835.5"
+  },
+  {
+    "year": "1929",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "46.7",
+    "mortality": "2832.6"
+  },
+  {
+    "year": "1930",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "48.1",
+    "mortality": "2682.9"
+  },
+  {
+    "year": "1931",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "50.4",
+    "mortality": "2516.0"
+  },
+  {
+    "year": "1932",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53.7",
+    "mortality": "2397.3"
+  },
+  {
+    "year": "1933",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.7",
+    "mortality": "2307.9"
+  },
+  {
+    "year": "1934",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "51.8",
+    "mortality": "2386.5"
+  },
+  {
+    "year": "1935",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53.1",
+    "mortality": "2316.0"
+  },
+  {
+    "year": "1936",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "49",
+    "mortality": "2496.6"
+  },
+  {
+    "year": "1937",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "50.3",
+    "mortality": "2374.0"
+  },
+  {
+    "year": "1938",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52.9",
+    "mortality": "2217.2"
+  },
+  {
+    "year": "1939",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.5",
+    "mortality": "2157.0"
+  },
+  {
+    "year": "1940",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53.1",
+    "mortality": "2254.1"
+  },
+  {
+    "year": "1941",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53.8",
+    "mortality": "2142.8"
+  },
+  {
+    "year": "1942",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "56.6",
+    "mortality": "1988.9"
+  },
+  {
+    "year": "1943",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "55.6",
+    "mortality": "2006.9"
+  },
+  {
+    "year": "1944",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "56.6",
+    "mortality": "1904.5"
+  },
+  {
+    "year": "1945",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "57.7",
+    "mortality": "1808.8"
+  },
+  {
+    "year": "1946",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "59.1",
+    "mortality": "1711.7"
+  },
+  {
+    "year": "1947",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "59.7",
+    "mortality": "1749.7"
+  },
+  {
+    "year": "1948",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60",
+    "mortality": "1766.9"
+  },
+  {
+    "year": "1949",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60.6",
+    "mortality": "1739.9"
+  },
+  {
+    "year": "1950",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60.8",
+    "mortality": "1757.6"
+  },
+  {
+    "year": "1951",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.2",
+    "mortality": "1698.2"
+  },
+  {
+    "year": "1952",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.4",
+    "mortality": "1671.3"
+  },
+  {
+    "year": "1953",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "62",
+    "mortality": "1641.2"
+  },
+  {
+    "year": "1954",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.4",
+    "mortality": "1514.8"
+  },
+  {
+    "year": "1955",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.7",
+    "mortality": "1510.2"
+  },
+  {
+    "year": "1956",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.6",
+    "mortality": "1519.2"
+  },
+  {
+    "year": "1957",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63",
+    "mortality": "1571.7"
+  },
+  {
+    "year": "1958",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.4",
+    "mortality": "1552.1"
+  },
+  {
+    "year": "1959",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.9",
+    "mortality": "1504.4"
+  },
+  {
+    "year": "1960",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.6",
+    "mortality": "1549.0"
+  },
+  {
+    "year": "1961",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.5",
+    "mortality": "1492.2"
+  },
+  {
+    "year": "1962",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.2",
+    "mortality": "1532.0"
+  },
+  {
+    "year": "1963",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.7",
+    "mortality": "1581.5"
+  },
+  {
+    "year": "1964",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.2",
+    "mortality": "1507.1"
+  },
+  {
+    "year": "1965",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.3",
+    "mortality": "1508.9"
+  },
+  {
+    "year": "1966",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.2",
+    "mortality": "1529.7"
+  },
+  {
+    "year": "1967",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.9",
+    "mortality": "1466.9"
+  },
+  {
+    "year": "1968",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.1",
+    "mortality": "1615.6"
+  },
+  {
+    "year": "1969",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.5",
+    "mortality": "1570.4"
+  },
+  {
+    "year": "1970",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.1",
+    "mortality": "1518.1"
+  },
+  {
+    "year": "1971",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.6",
+    "mortality": "1481.3"
+  },
+  {
+    "year": "1972",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.7",
+    "mortality": "1486.3"
+  },
+  {
+    "year": "1973",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "65",
+    "mortality": "1473.3"
+  },
+  {
+    "year": "1974",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66",
+    "mortality": "1397.7"
+  },
+  {
+    "year": "1975",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66.8",
+    "mortality": "1327.5"
+  },
+  {
+    "year": "1976",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "67.2",
+    "mortality": "1311.2"
+  },
+  {
+    "year": "1977",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "67.7",
+    "mortality": "1286.0"
+  },
+  {
+    "year": "1978",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.1",
+    "mortality": "1267.7"
+  },
+  {
+    "year": "1979",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.5",
+    "mortality": "1238.5"
+  },
+  {
+    "year": "1980",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.1",
+    "mortality": "1312.9"
+  },
+  {
+    "year": "1981",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.9",
+    "mortality": "1256.5"
+  },
+  {
+    "year": "1982",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.4",
+    "mortality": "1220.1"
+  },
+  {
+    "year": "1983",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.4",
+    "mortality": "1239.8"
+  },
+  {
+    "year": "1984",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.5",
+    "mortality": "1234.5"
+  },
+  {
+    "year": "1985",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.3",
+    "mortality": "1259.1"
+  },
+  {
+    "year": "1986",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.1",
+    "mortality": "1264.6"
+  },
+  {
+    "year": "1987",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.1",
+    "mortality": "1260.9"
+  },
+  {
+    "year": "1988",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.9",
+    "mortality": "1281.9"
+  },
+  {
+    "year": "1989",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.8",
+    "mortality": "1273.5"
+  },
+  {
+    "year": "1990",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.1",
+    "mortality": "1248.5"
+  },
+  {
+    "year": "1991",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.3",
+    "mortality": "1233.6"
+  },
+  {
+    "year": "1992",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.6",
+    "mortality": "1205.3"
+  },
+  {
+    "year": "1993",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.2",
+    "mortality": "1240.2"
+  },
+  {
+    "year": "1994",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.5",
+    "mortality": "1216.2"
+  },
+  {
+    "year": "1995",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.6",
+    "mortality": "1213.6"
+  },
+  {
+    "year": "1996",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.2",
+    "mortality": "1177.6"
+  },
+  {
+    "year": "1997",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.1",
+    "mortality": "1139.2"
+  },
+  {
+    "year": "1998",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.3",
+    "mortality": "1127.1"
+  },
+  {
+    "year": "1999",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.4",
+    "mortality": "1135.7"
+  },
+  {
+    "year": "2000",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.8",
+    "mortality": "1121.4"
+  },
+  {
+    "year": "2001",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72",
+    "mortality": "1106.2"
+  },
+  {
+    "year": "2002",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72.2",
+    "mortality": "1097.3"
+  },
+  {
+    "year": "2003",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72.4",
+    "mortality": "1080.5"
+  },
+  {
+    "year": "2004",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72.9",
+    "mortality": "1043.8"
+  },
+  {
+    "year": "2005",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73",
+    "mortality": "1035.1"
+  },
+  {
+    "year": "2006",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.4",
+    "mortality": "997.9"
+  },
+  {
+    "year": "2007",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.8",
+    "mortality": "972.0"
+  },
+  {
+    "year": "2008",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.3",
+    "mortality": "947.6"
+  },
+  {
+    "year": "2009",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.7",
+    "mortality": "912.8"
+  },
+  {
+    "year": "2010",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.1",
+    "mortality": "898.2"
+  },
+  {
+    "year": "2011",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.3",
+    "mortality": "877.1"
+  },
+  {
+    "year": "2012",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.5",
+    "mortality": "864.8"
+  },
+  {
+    "year": "2013",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.5",
+    "mortality": "860.8"
+  },
+  {
+    "year": "2014",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.6",
+    "mortality": "849.3"
+  },
+  {
+    "year": "2015",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.5",
+    "mortality": "851.9"
+  },
+  {
+    "year": "2016",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.3",
+    "mortality": "857.2"
+  },
+  {
+    "year": "2017",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.3",
+    "mortality": "854.1"
+  },
+  {
+    "year": "2018",
+    "race": "Black",
+    "sex": "Both Sexes",
+    "mortality": "852.9"
+  },
+  {
+    "year": "1900",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "33.5",
+    "mortality": "3308.0"
+  },
+  {
+    "year": "1901",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "35.3",
+    "mortality": "3167.2"
+  },
+  {
+    "year": "1902",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "36.4",
+    "mortality": "3003.4"
+  },
+  {
+    "year": "1903",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "34.6",
+    "mortality": "3210.9"
+  },
+  {
+    "year": "1904",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "32.7",
+    "mortality": "3362.4"
+  },
+  {
+    "year": "1905",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "33.1",
+    "mortality": "3247.5"
+  },
+  {
+    "year": "1906",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "33.9",
+    "mortality": "3115.4"
+  },
+  {
+    "year": "1907",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "34",
+    "mortality": "3179.3"
+  },
+  {
+    "year": "1908",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "36",
+    "mortality": "2963.6"
+  },
+  {
+    "year": "1909",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "37.3",
+    "mortality": "2875.6"
+  },
+  {
+    "year": "1910",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "37.5",
+    "mortality": "2875.3"
+  },
+  {
+    "year": "1911",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "38.2",
+    "mortality": "2899.8"
+  },
+  {
+    "year": "1912",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "40",
+    "mortality": "2807.7"
+  },
+  {
+    "year": "1913",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "40.3",
+    "mortality": "2802.7"
+  },
+  {
+    "year": "1914",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "40.8",
+    "mortality": "2810.1"
+  },
+  {
+    "year": "1915",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "40.5",
+    "mortality": "2948.8"
+  },
+  {
+    "year": "1916",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "43.1",
+    "mortality": "2853.6"
+  },
+  {
+    "year": "1917",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "40.8",
+    "mortality": "2970.6"
+  },
+  {
+    "year": "1918",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "32.5",
+    "mortality": "3304.3"
+  },
+  {
+    "year": "1919",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "44.4",
+    "mortality": "2663.2"
+  },
+  {
+    "year": "1920",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "45.2",
+    "mortality": "2756.2"
+  },
+  {
+    "year": "1921",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "51.3",
+    "mortality": "2475.0"
+  },
+  {
+    "year": "1922",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "53",
+    "mortality": "2476.1"
+  },
+  {
+    "year": "1923",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "48.9",
+    "mortality": "2657.8"
+  },
+  {
+    "year": "1924",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "47.8",
+    "mortality": "2693.2"
+  },
+  {
+    "year": "1925",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "46.7",
+    "mortality": "2741.9"
+  },
+  {
+    "year": "1926",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "45.6",
+    "mortality": "2778.0"
+  },
+  {
+    "year": "1927",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "48.9",
+    "mortality": "2565.5"
+  },
+  {
+    "year": "1928",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "47",
+    "mortality": "2703.1"
+  },
+  {
+    "year": "1929",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "47.8",
+    "mortality": "2664.8"
+  },
+  {
+    "year": "1930",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "49.2",
+    "mortality": "2530.1"
+  },
+  {
+    "year": "1931",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "51.5",
+    "mortality": "2362.8"
+  },
+  {
+    "year": "1932",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "54.6",
+    "mortality": "2256.1"
+  },
+  {
+    "year": "1933",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "56",
+    "mortality": "2174.1"
+  },
+  {
+    "year": "1934",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "53.7",
+    "mortality": "2213.4"
+  },
+  {
+    "year": "1935",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "55.2",
+    "mortality": "2136.5"
+  },
+  {
+    "year": "1936",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "51.4",
+    "mortality": "2278.7"
+  },
+  {
+    "year": "1937",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "52.5",
+    "mortality": "2158.5"
+  },
+  {
+    "year": "1938",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "54.3",
+    "mortality": "2057.1"
+  },
+  {
+    "year": "1939",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "56",
+    "mortality": "1992.4"
+  },
+  {
+    "year": "1940",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "54.9",
+    "mortality": "2057.5"
+  },
+  {
+    "year": "1941",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "55.3",
+    "mortality": "1945.9"
+  },
+  {
+    "year": "1942",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "58.2",
+    "mortality": "1803.7"
+  },
+  {
+    "year": "1943",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "56.1",
+    "mortality": "1837.6"
+  },
+  {
+    "year": "1944",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "57.7",
+    "mortality": "1733.6"
+  },
+  {
+    "year": "1945",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "59.6",
+    "mortality": "1634.8"
+  },
+  {
+    "year": "1946",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "61",
+    "mortality": "1556.8"
+  },
+  {
+    "year": "1947",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "61.9",
+    "mortality": "1586.1"
+  },
+  {
+    "year": "1948",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "62.5",
+    "mortality": "1580.0"
+  },
+  {
+    "year": "1949",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "62.7",
+    "mortality": "1572.2"
+  },
+  {
+    "year": "1950",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "62.9",
+    "mortality": "1574.1"
+  },
+  {
+    "year": "1951",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "63.4",
+    "mortality": "1508.3"
+  },
+  {
+    "year": "1952",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "63.8",
+    "mortality": "1465.0"
+  },
+  {
+    "year": "1953",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "64.5",
+    "mortality": "1434.3"
+  },
+  {
+    "year": "1954",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "65.9",
+    "mortality": "1326.3"
+  },
+  {
+    "year": "1955",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "66.1",
+    "mortality": "1326.7"
+  },
+  {
+    "year": "1956",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "66.1",
+    "mortality": "1331.9"
+  },
+  {
+    "year": "1957",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "65.5",
+    "mortality": "1374.6"
+  },
+  {
+    "year": "1958",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "65.8",
+    "mortality": "1354.6"
+  },
+  {
+    "year": "1959",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "66.5",
+    "mortality": "1305.0"
+  },
+  {
+    "year": "1960",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "66.3",
+    "mortality": "1340.5"
+  },
+  {
+    "year": "1961",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "67.1",
+    "mortality": "1295.9"
+  },
+  {
+    "year": "1962",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "66.9",
+    "mortality": "1324.5"
+  },
+  {
+    "year": "1963",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "66.6",
+    "mortality": "1347.8"
+  },
+  {
+    "year": "1964",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "67.3",
+    "mortality": "1284.1"
+  },
+  {
+    "year": "1965",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "67.6",
+    "mortality": "1266.0"
+  },
+  {
+    "year": "1966",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "67.6",
+    "mortality": "1274.6"
+  },
+  {
+    "year": "1967",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "68.5",
+    "mortality": "1209.7"
+  },
+  {
+    "year": "1968",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "67.9",
+    "mortality": "1325.6"
+  },
+  {
+    "year": "1969",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "68.6",
+    "mortality": "1274.9"
+  },
+  {
+    "year": "1970",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "68.3",
+    "mortality": "1228.7"
+  },
+  {
+    "year": "1971",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "68.9",
+    "mortality": "1196.8"
+  },
+  {
+    "year": "1972",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "69.1",
+    "mortality": "1181.2"
+  },
+  {
+    "year": "1973",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "69.3",
+    "mortality": "1179.7"
+  },
+  {
+    "year": "1974",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "70.3",
+    "mortality": "1109.7"
+  },
+  {
+    "year": "1975",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "71.3",
+    "mortality": "1042.4"
+  },
+  {
+    "year": "1976",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "71.6",
+    "mortality": "1031.2"
+  },
+  {
+    "year": "1977",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "72",
+    "mortality": "1012.2"
+  },
+  {
+    "year": "1978",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "72.4",
+    "mortality": "995.1"
+  },
+  {
+    "year": "1979",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "72.9",
+    "mortality": "967.1"
+  },
+  {
+    "year": "1980",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "72.5",
+    "mortality": "1031.8"
+  },
+  {
+    "year": "1981",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.2",
+    "mortality": "985.7"
+  },
+  {
+    "year": "1982",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.6",
+    "mortality": "958.8"
+  },
+  {
+    "year": "1983",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.5",
+    "mortality": "980.2"
+  },
+  {
+    "year": "1984",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.6",
+    "mortality": "974.9"
+  },
+  {
+    "year": "1985",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.4",
+    "mortality": "992.2"
+  },
+  {
+    "year": "1986",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.4",
+    "mortality": "992.7"
+  },
+  {
+    "year": "1987",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.4",
+    "mortality": "988.4"
+  },
+  {
+    "year": "1988",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.2",
+    "mortality": "1005.4"
+  },
+  {
+    "year": "1989",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.3",
+    "mortality": "995.8"
+  },
+  {
+    "year": "1990",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.6",
+    "mortality": "973.6"
+  },
+  {
+    "year": "1991",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.8",
+    "mortality": "961.8"
+  },
+  {
+    "year": "1992",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.9",
+    "mortality": "941.4"
+  },
+  {
+    "year": "1993",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.7",
+    "mortality": "968.6"
+  },
+  {
+    "year": "1994",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.9",
+    "mortality": "954.0"
+  },
+  {
+    "year": "1995",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "73.9",
+    "mortality": "955.7"
+  },
+  {
+    "year": "1996",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "74.2",
+    "mortality": "939.6"
+  },
+  {
+    "year": "1997",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "74.7",
+    "mortality": "921.6"
+  },
+  {
+    "year": "1998",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "74.8",
+    "mortality": "921.0"
+  },
+  {
+    "year": "1999",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "74.7",
+    "mortality": "933.6"
+  },
+  {
+    "year": "2000",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "75.1",
+    "mortality": "927.6"
+  },
+  {
+    "year": "2001",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "75.3",
+    "mortality": "917.9"
+  },
+  {
+    "year": "2002",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "75.4",
+    "mortality": "913.5"
+  },
+  {
+    "year": "2003",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "75.7",
+    "mortality": "898.3"
+  },
+  {
+    "year": "2004",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "76.1",
+    "mortality": "869.8"
+  },
+  {
+    "year": "2005",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "76.2",
+    "mortality": "862.7"
+  },
+  {
+    "year": "2006",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "76.7",
+    "mortality": "828.4"
+  },
+  {
+    "year": "2007",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "77",
+    "mortality": "808.1"
+  },
+  {
+    "year": "2008",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "77.3",
+    "mortality": "792.0"
+  },
+  {
+    "year": "2009",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "77.7",
+    "mortality": "763.3"
+  },
+  {
+    "year": "2010",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78",
+    "mortality": "752.5"
+  },
+  {
+    "year": "2011",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78.2",
+    "mortality": "739.8"
+  },
+  {
+    "year": "2012",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78.4",
+    "mortality": "723.9"
+  },
+  {
+    "year": "2013",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78.4",
+    "mortality": "720.6"
+  },
+  {
+    "year": "2014",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78.5",
+    "mortality": "713.3"
+  },
+  {
+    "year": "2015",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78.5",
+    "mortality": "710.8"
+  },
+  {
+    "year": "2016",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78.3",
+    "mortality": "712.9"
+  },
+  {
+    "year": "2017",
+    "race": "Black",
+    "sex": "Female",
+    "average_life_expectancy": "78.5",
+    "mortality": "706.1"
+  },
+  {
+    "year": "2018",
+    "race": "Black",
+    "sex": "Female",
+    "mortality": "702.6"
+  },
+  {
+    "year": "1900",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "32.5",
+    "mortality": "3576.5"
+  },
+  {
+    "year": "1901",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "32.2",
+    "mortality": "3524.8"
+  },
+  {
+    "year": "1902",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "32.9",
+    "mortality": "3399.8"
+  },
+  {
+    "year": "1903",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "31.7",
+    "mortality": "3546.5"
+  },
+  {
+    "year": "1904",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "29.1",
+    "mortality": "3845.7"
+  },
+  {
+    "year": "1905",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "29.6",
+    "mortality": "3654.7"
+  },
+  {
+    "year": "1906",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "31.8",
+    "mortality": "3341.0"
+  },
+  {
+    "year": "1907",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "31.1",
+    "mortality": "3408.1"
+  },
+  {
+    "year": "1908",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "33.8",
+    "mortality": "3140.0"
+  },
+  {
+    "year": "1909",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "34.2",
+    "mortality": "3149.0"
+  },
+  {
+    "year": "1910",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "33.8",
+    "mortality": "3087.5"
+  },
+  {
+    "year": "1911",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "34.6",
+    "mortality": "3094.2"
+  },
+  {
+    "year": "1912",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "35.9",
+    "mortality": "3114.2"
+  },
+  {
+    "year": "1913",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "36.7",
+    "mortality": "3011.9"
+  },
+  {
+    "year": "1914",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "37.1",
+    "mortality": "3017.4"
+  },
+  {
+    "year": "1915",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "37.5",
+    "mortality": "3104.1"
+  },
+  {
+    "year": "1916",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "39.6",
+    "mortality": "3035.1"
+  },
+  {
+    "year": "1917",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "37",
+    "mortality": "3172.8"
+  },
+  {
+    "year": "1918",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "29.9",
+    "mortality": "3532.5"
+  },
+  {
+    "year": "1919",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "44.5",
+    "mortality": "2650.0"
+  },
+  {
+    "year": "1920",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "45.5",
+    "mortality": "2748.4"
+  },
+  {
+    "year": "1921",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "51.6",
+    "mortality": "2461.2"
+  },
+  {
+    "year": "1922",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "51.8",
+    "mortality": "2560.4"
+  },
+  {
+    "year": "1923",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "47.7",
+    "mortality": "2803.9"
+  },
+  {
+    "year": "1924",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "45.5",
+    "mortality": "2947.0"
+  },
+  {
+    "year": "1925",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "44.9",
+    "mortality": "3000.7"
+  },
+  {
+    "year": "1926",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "43.7",
+    "mortality": "3054.7"
+  },
+  {
+    "year": "1927",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "47.6",
+    "mortality": "2801.1"
+  },
+  {
+    "year": "1928",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "45.6",
+    "mortality": "2980.3"
+  },
+  {
+    "year": "1929",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "45.7",
+    "mortality": "3012.6"
+  },
+  {
+    "year": "1930",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "47.3",
+    "mortality": "2845.5"
+  },
+  {
+    "year": "1931",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "49.5",
+    "mortality": "2680.3"
+  },
+  {
+    "year": "1932",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "52.8",
+    "mortality": "2550.0"
+  },
+  {
+    "year": "1933",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "53.5",
+    "mortality": "2452.1"
+  },
+  {
+    "year": "1934",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "50.2",
+    "mortality": "2567.5"
+  },
+  {
+    "year": "1935",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "51.3",
+    "mortality": "2502.9"
+  },
+  {
+    "year": "1936",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "47",
+    "mortality": "2722.4"
+  },
+  {
+    "year": "1937",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "48.3",
+    "mortality": "2596.1"
+  },
+  {
+    "year": "1938",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "51.7",
+    "mortality": "2384.3"
+  },
+  {
+    "year": "1939",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "53.2",
+    "mortality": "2328.1"
+  },
+  {
+    "year": "1940",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "51.5",
+    "mortality": "2458.9"
+  },
+  {
+    "year": "1941",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "52.5",
+    "mortality": "2351.1"
+  },
+  {
+    "year": "1942",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "55.4",
+    "mortality": "2187.8"
+  },
+  {
+    "year": "1943",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "55.4",
+    "mortality": "2189.9"
+  },
+  {
+    "year": "1944",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "55.8",
+    "mortality": "2084.9"
+  },
+  {
+    "year": "1945",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "56.1",
+    "mortality": "2002.7"
+  },
+  {
+    "year": "1946",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "57.5",
+    "mortality": "1878.6"
+  },
+  {
+    "year": "1947",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "57.9",
+    "mortality": "1922.8"
+  },
+  {
+    "year": "1948",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "58.1",
+    "mortality": "1954.3"
+  },
+  {
+    "year": "1949",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "58.9",
+    "mortality": "1915.4"
+  },
+  {
+    "year": "1950",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "59.1",
+    "mortality": "1949.5"
+  },
+  {
+    "year": "1951",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "59.2",
+    "mortality": "1903.4"
+  },
+  {
+    "year": "1952",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "59.1",
+    "mortality": "1894.1"
+  },
+  {
+    "year": "1953",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "59.7",
+    "mortality": "1863.1"
+  },
+  {
+    "year": "1954",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.1",
+    "mortality": "1726.6"
+  },
+  {
+    "year": "1955",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.4",
+    "mortality": "1707.5"
+  },
+  {
+    "year": "1956",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.3",
+    "mortality": "1724.1"
+  },
+  {
+    "year": "1957",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60.7",
+    "mortality": "1797.0"
+  },
+  {
+    "year": "1958",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61",
+    "mortality": "1779.2"
+  },
+  {
+    "year": "1959",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.3",
+    "mortality": "1724.7"
+  },
+  {
+    "year": "1960",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.1",
+    "mortality": "1777.6"
+  },
+  {
+    "year": "1961",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "62",
+    "mortality": "1713.3"
+  },
+  {
+    "year": "1962",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.6",
+    "mortality": "1775.4"
+  },
+  {
+    "year": "1963",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61",
+    "mortality": "1859.0"
+  },
+  {
+    "year": "1964",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.3",
+    "mortality": "1768.1"
+  },
+  {
+    "year": "1965",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.2",
+    "mortality": "1791.0"
+  },
+  {
+    "year": "1966",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60.9",
+    "mortality": "1832.4"
+  },
+  {
+    "year": "1967",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.4",
+    "mortality": "1767.2"
+  },
+  {
+    "year": "1968",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60.4",
+    "mortality": "1976.8"
+  },
+  {
+    "year": "1969",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60.6",
+    "mortality": "1934.4"
+  },
+  {
+    "year": "1970",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60",
+    "mortality": "1873.9"
+  },
+  {
+    "year": "1971",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60.5",
+    "mortality": "1836.1"
+  },
+  {
+    "year": "1972",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60.4",
+    "mortality": "1871.8"
+  },
+  {
+    "year": "1973",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "60.9",
+    "mortality": "1849.5"
+  },
+  {
+    "year": "1974",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "61.7",
+    "mortality": "1769.5"
+  },
+  {
+    "year": "1975",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "62.4",
+    "mortality": "1697.0"
+  },
+  {
+    "year": "1976",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "62.9",
+    "mortality": "1676.0"
+  },
+  {
+    "year": "1977",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "63.4",
+    "mortality": "1647.9"
+  },
+  {
+    "year": "1978",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "63.7",
+    "mortality": "1626.9"
+  },
+  {
+    "year": "1979",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64",
+    "mortality": "1601.5"
+  },
+  {
+    "year": "1980",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "63.8",
+    "mortality": "1695.5"
+  },
+  {
+    "year": "1981",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.5",
+    "mortality": "1626.6"
+  },
+  {
+    "year": "1982",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "65.1",
+    "mortality": "1580.0"
+  },
+  {
+    "year": "1983",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "65.2",
+    "mortality": "1600.5"
+  },
+  {
+    "year": "1984",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "65.3",
+    "mortality": "1597.1"
+  },
+  {
+    "year": "1985",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "65",
+    "mortality": "1632.9"
+  },
+  {
+    "year": "1986",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.8",
+    "mortality": "1648.4"
+  },
+  {
+    "year": "1987",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.7",
+    "mortality": "1646.3"
+  },
+  {
+    "year": "1988",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.4",
+    "mortality": "1673.1"
+  },
+  {
+    "year": "1989",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.3",
+    "mortality": "1666.1"
+  },
+  {
+    "year": "1990",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.5",
+    "mortality": "1642.4"
+  },
+  {
+    "year": "1991",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.6",
+    "mortality": "1624.1"
+  },
+  {
+    "year": "1992",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "65",
+    "mortality": "1586.2"
+  },
+  {
+    "year": "1993",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.6",
+    "mortality": "1631.1"
+  },
+  {
+    "year": "1994",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "64.9",
+    "mortality": "1591.9"
+  },
+  {
+    "year": "1995",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "65.2",
+    "mortality": "1585.2"
+  },
+  {
+    "year": "1996",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "66.1",
+    "mortality": "1523.2"
+  },
+  {
+    "year": "1997",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "67.2",
+    "mortality": "1458.2"
+  },
+  {
+    "year": "1998",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "67.6",
+    "mortality": "1429.8"
+  },
+  {
+    "year": "1999",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "67.8",
+    "mortality": "1432.6"
+  },
+  {
+    "year": "2000",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "68.2",
+    "mortality": "1403.5"
+  },
+  {
+    "year": "2001",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "68.5",
+    "mortality": "1380.5"
+  },
+  {
+    "year": "2002",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "68.7",
+    "mortality": "1364.8"
+  },
+  {
+    "year": "2003",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "68.9",
+    "mortality": "1343.5"
+  },
+  {
+    "year": "2004",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "69.4",
+    "mortality": "1296.9"
+  },
+  {
+    "year": "2005",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "69.5",
+    "mortality": "1281.3"
+  },
+  {
+    "year": "2006",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "69.9",
+    "mortality": "1239.5"
+  },
+  {
+    "year": "2007",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "70.3",
+    "mortality": "1204.8"
+  },
+  {
+    "year": "2008",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "70.9",
+    "mortality": "1168.0"
+  },
+  {
+    "year": "2009",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "71.4",
+    "mortality": "1123.1"
+  },
+  {
+    "year": "2010",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "71.8",
+    "mortality": "1104.0"
+  },
+  {
+    "year": "2011",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "72.2",
+    "mortality": "1067.1"
+  },
+  {
+    "year": "2012",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "72.3",
+    "mortality": "1058.6"
+  },
+  {
+    "year": "2013",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "72.3",
+    "mortality": "1052.8"
+  },
+  {
+    "year": "2014",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "72.5",
+    "mortality": "1034.0"
+  },
+  {
+    "year": "2015",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "72.2",
+    "mortality": "1040.3"
+  },
+  {
+    "year": "2016",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "72",
+    "mortality": "1049.5"
+  },
+  {
+    "year": "2017",
+    "race": "Black",
+    "sex": "Male",
+    "average_life_expectancy": "71.9",
+    "mortality": "1049.5"
+  },
+  {
+    "year": "2018",
+    "race": "Black",
+    "sex": "Male",
+    "mortality": "1051.5"
+  },
+  {
+    "year": "1900",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "47.6",
+    "mortality": "2501.2"
+  },
+  {
+    "year": "1901",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "49.4",
+    "mortality": "2456.2"
+  },
+  {
+    "year": "1902",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "51.9",
+    "mortality": "2284.3"
+  },
+  {
+    "year": "1903",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "50.9",
+    "mortality": "2359.8"
+  },
+  {
+    "year": "1904",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "48",
+    "mortality": "2481.9"
+  },
+  {
+    "year": "1905",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "49.1",
+    "mortality": "2404.1"
+  },
+  {
+    "year": "1906",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "49.3",
+    "mortality": "2374.8"
+  },
+  {
+    "year": "1907",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "48.1",
+    "mortality": "2470.8"
+  },
+  {
+    "year": "1908",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "51.5",
+    "mortality": "2278.1"
+  },
+  {
+    "year": "1909",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52.5",
+    "mortality": "2228.5"
+  },
+  {
+    "year": "1910",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "50.3",
+    "mortality": "2299.4"
+  },
+  {
+    "year": "1911",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53",
+    "mortality": "2221.3"
+  },
+  {
+    "year": "1912",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53.9",
+    "mortality": "2187.9"
+  },
+  {
+    "year": "1913",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "53",
+    "mortality": "2176.7"
+  },
+  {
+    "year": "1914",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.9",
+    "mortality": "2116.8"
+  },
+  {
+    "year": "1915",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "55.1",
+    "mortality": "2139.4"
+  },
+  {
+    "year": "1916",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52.5",
+    "mortality": "2223.9"
+  },
+  {
+    "year": "1917",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "52",
+    "mortality": "2221.5"
+  },
+  {
+    "year": "1918",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "39.8",
+    "mortality": "2477.7"
+  },
+  {
+    "year": "1919",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "55.8",
+    "mortality": "2005.6"
+  },
+  {
+    "year": "1920",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "54.9",
+    "mortality": "2096.3"
+  },
+  {
+    "year": "1921",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.8",
+    "mortality": "1914.9"
+  },
+  {
+    "year": "1922",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60.4",
+    "mortality": "2004.4"
+  },
+  {
+    "year": "1923",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "58.3",
+    "mortality": "2087.0"
+  },
+  {
+    "year": "1924",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.4",
+    "mortality": "1968.7"
+  },
+  {
+    "year": "1925",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "60.7",
+    "mortality": "1999.1"
+  },
+  {
+    "year": "1926",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "58.2",
+    "mortality": "2078.8"
+  },
+  {
+    "year": "1927",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "62",
+    "mortality": "1925.6"
+  },
+  {
+    "year": "1928",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "58.4",
+    "mortality": "2053.0"
+  },
+  {
+    "year": "1929",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "58.6",
+    "mortality": "2006.8"
+  },
+  {
+    "year": "1930",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.4",
+    "mortality": "1870.7"
+  },
+  {
+    "year": "1931",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "62.6",
+    "mortality": "1832.5"
+  },
+  {
+    "year": "1932",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "63.2",
+    "mortality": "1845.1"
+  },
+  {
+    "year": "1933",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.3",
+    "mortality": "1800.5"
+  },
+  {
+    "year": "1934",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "62.4",
+    "mortality": "1834.0"
+  },
+  {
+    "year": "1935",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "62.9",
+    "mortality": "1809.9"
+  },
+  {
+    "year": "1936",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "59.8",
+    "mortality": "1906.6"
+  },
+  {
+    "year": "1937",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "61.4",
+    "mortality": "1829.1"
+  },
+  {
+    "year": "1938",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "65",
+    "mortality": "1714.8"
+  },
+  {
+    "year": "1939",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.9",
+    "mortality": "1724.0"
+  },
+  {
+    "year": "1940",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.2",
+    "mortality": "1735.3"
+  },
+  {
+    "year": "1941",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66.2",
+    "mortality": "1645.0"
+  },
+  {
+    "year": "1942",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "67.3",
+    "mortality": "1594.8"
+  },
+  {
+    "year": "1943",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "64.2",
+    "mortality": "1665.8"
+  },
+  {
+    "year": "1944",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66.2",
+    "mortality": "1582.8"
+  },
+  {
+    "year": "1945",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "66.8",
+    "mortality": "1544.3"
+  },
+  {
+    "year": "1946",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "67.5",
+    "mortality": "1505.0"
+  },
+  {
+    "year": "1947",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "67.6",
+    "mortality": "1503.5"
+  },
+  {
+    "year": "1948",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68",
+    "mortality": "1469.9"
+  },
+  {
+    "year": "1949",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "68.8",
+    "mortality": "1424.3"
+  },
+  {
+    "year": "1950",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.1",
+    "mortality": "1410.8"
+  },
+  {
+    "year": "1951",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.3",
+    "mortality": "1391.0"
+  },
+  {
+    "year": "1952",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.5",
+    "mortality": "1361.7"
+  },
+  {
+    "year": "1953",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "69.7",
+    "mortality": "1354.6"
+  },
+  {
+    "year": "1954",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.5",
+    "mortality": "1288.6"
+  },
+  {
+    "year": "1955",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.5",
+    "mortality": "1308.3"
+  },
+  {
+    "year": "1956",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.5",
+    "mortality": "1309.0"
+  },
+  {
+    "year": "1957",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.3",
+    "mortality": "1328.7"
+  },
+  {
+    "year": "1958",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.5",
+    "mortality": "1316.3"
+  },
+  {
+    "year": "1959",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.7",
+    "mortality": "1291.9"
+  },
+  {
+    "year": "1960",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.6",
+    "mortality": "1311.3"
+  },
+  {
+    "year": "1961",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71",
+    "mortality": "1272.2"
+  },
+  {
+    "year": "1962",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.9",
+    "mortality": "1292.4"
+  },
+  {
+    "year": "1963",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "70.8",
+    "mortality": "1312.5"
+  },
+  {
+    "year": "1964",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71",
+    "mortality": "1275.2"
+  },
+  {
+    "year": "1965",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.1",
+    "mortality": "1278.3"
+  },
+  {
+    "year": "1966",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.1",
+    "mortality": "1278.7"
+  },
+  {
+    "year": "1967",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.4",
+    "mortality": "1246.4"
+  },
+  {
+    "year": "1968",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.1",
+    "mortality": "1271.4"
+  },
+  {
+    "year": "1969",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.4",
+    "mortality": "1240.2"
+  },
+  {
+    "year": "1970",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "71.7",
+    "mortality": "1193.3"
+  },
+  {
+    "year": "1971",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72",
+    "mortality": "1183.8"
+  },
+  {
+    "year": "1972",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72",
+    "mortality": "1185.3"
+  },
+  {
+    "year": "1973",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72.2",
+    "mortality": "1171.5"
+  },
+  {
+    "year": "1974",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "72.8",
+    "mortality": "1125.2"
+  },
+  {
+    "year": "1975",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.4",
+    "mortality": "1069.4"
+  },
+  {
+    "year": "1976",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "73.6",
+    "mortality": "1060.0"
+  },
+  {
+    "year": "1977",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74",
+    "mortality": "1027.1"
+  },
+  {
+    "year": "1978",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.1",
+    "mortality": "1020.1"
+  },
+  {
+    "year": "1979",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.6",
+    "mortality": "986.8"
+  },
+  {
+    "year": "1980",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.4",
+    "mortality": "1012.5"
+  },
+  {
+    "year": "1981",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "74.8",
+    "mortality": "984.0"
+  },
+  {
+    "year": "1982",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.1",
+    "mortality": "963.5"
+  },
+  {
+    "year": "1983",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.2",
+    "mortality": "967.4"
+  },
+  {
+    "year": "1984",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.3",
+    "mortality": "959.4"
+  },
+  {
+    "year": "1985",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.3",
+    "mortality": "963.4"
+  },
+  {
+    "year": "1986",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.4",
+    "mortality": "952.8"
+  },
+  {
+    "year": "1987",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.6",
+    "mortality": "943.2"
+  },
+  {
+    "year": "1988",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.6",
+    "mortality": "947.2"
+  },
+  {
+    "year": "1989",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "75.9",
+    "mortality": "919.8"
+  },
+  {
+    "year": "1990",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.1",
+    "mortality": "909.2"
+  },
+  {
+    "year": "1991",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.3",
+    "mortality": "893.0"
+  },
+  {
+    "year": "1992",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.5",
+    "mortality": "877.5"
+  },
+  {
+    "year": "1993",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.3",
+    "mortality": "896.8"
+  },
+  {
+    "year": "1994",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.5",
+    "mortality": "885.3"
+  },
+  {
+    "year": "1995",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.5",
+    "mortality": "882.0"
+  },
+  {
+    "year": "1996",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "76.8",
+    "mortality": "868.7"
+  },
+  {
+    "year": "1997",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.1",
+    "mortality": "855.4"
+  },
+  {
+    "year": "1998",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.3",
+    "mortality": "848.9"
+  },
+  {
+    "year": "1999",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.3",
+    "mortality": "854.6"
+  },
+  {
+    "year": "2000",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.3",
+    "mortality": "849.8"
+  },
+  {
+    "year": "2001",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.5",
+    "mortality": "840.7"
+  },
+  {
+    "year": "2002",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.5",
+    "mortality": "839.0"
+  },
+  {
+    "year": "2003",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "77.7",
+    "mortality": "827.1"
+  },
+  {
+    "year": "2004",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.1",
+    "mortality": "798.5"
+  },
+  {
+    "year": "2005",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78",
+    "mortality": "801.1"
+  },
+  {
+    "year": "2006",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.3",
+    "mortality": "779.3"
+  },
+  {
+    "year": "2007",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.5",
+    "mortality": "764.3"
+  },
+  {
+    "year": "2008",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.5",
+    "mortality": "767.2"
+  },
+  {
+    "year": "2009",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.8",
+    "mortality": "742.8"
+  },
+  {
+    "year": "2010",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.9",
+    "mortality": "741.8"
+  },
+  {
+    "year": "2011",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "79",
+    "mortality": "738.8"
+  },
+  {
+    "year": "2012",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "79.1",
+    "mortality": "730.9"
+  },
+  {
+    "year": "2013",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "79.1",
+    "mortality": "731.0"
+  },
+  {
+    "year": "2014",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "79.1",
+    "mortality": "725.4"
+  },
+  {
+    "year": "2015",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.9",
+    "mortality": "735.0"
+  },
+  {
+    "year": "2016",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.9",
+    "mortality": "729.9"
+  },
+  {
+    "year": "2017",
+    "race": "White",
+    "sex": "Both Sexes",
+    "average_life_expectancy": "78.8",
+    "mortality": "734.5"
+  },
+  {
+    "year": "2018",
+    "race": "White",
+    "sex": "Both Sexes",
+    "mortality": "725.4"
+  },
+  {
+    "year": "1900",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "48.7",
+    "mortality": "2394.0"
+  },
+  {
+    "year": "1901",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "51",
+    "mortality": "2334.7"
+  },
+  {
+    "year": "1902",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "53.8",
+    "mortality": "2146.4"
+  },
+  {
+    "year": "1903",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "52.5",
+    "mortality": "2231.5"
+  },
+  {
+    "year": "1904",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "49.5",
+    "mortality": "2339.7"
+  },
+  {
+    "year": "1905",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "50.6",
+    "mortality": "2269.0"
+  },
+  {
+    "year": "1906",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "51.4",
+    "mortality": "2220.8"
+  },
+  {
+    "year": "1907",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "50.4",
+    "mortality": "2303.8"
+  },
+  {
+    "year": "1908",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "53.3",
+    "mortality": "2141.8"
+  },
+  {
+    "year": "1909",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "54.2",
+    "mortality": "2092.1"
+  },
+  {
+    "year": "1910",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "52",
+    "mortality": "2154.0"
+  },
+  {
+    "year": "1911",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "54.9",
+    "mortality": "2088.3"
+  },
+  {
+    "year": "1912",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "56.2",
+    "mortality": "2045.1"
+  },
+  {
+    "year": "1913",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "55.7",
+    "mortality": "2027.6"
+  },
+  {
+    "year": "1914",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "57.5",
+    "mortality": "1976.1"
+  },
+  {
+    "year": "1915",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "57.5",
+    "mortality": "2008.4"
+  },
+  {
+    "year": "1916",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "55.2",
+    "mortality": "2078.3"
+  },
+  {
+    "year": "1917",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "55.3",
+    "mortality": "2063.3"
+  },
+  {
+    "year": "1918",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "43.2",
+    "mortality": "2274.9"
+  },
+  {
+    "year": "1919",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "57.4",
+    "mortality": "1915.1"
+  },
+  {
+    "year": "1920",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "55.6",
+    "mortality": "2025.9"
+  },
+  {
+    "year": "1921",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "62.9",
+    "mortality": "1842.3"
+  },
+  {
+    "year": "1922",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "61.9",
+    "mortality": "1917.7"
+  },
+  {
+    "year": "1923",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "59.6",
+    "mortality": "1995.9"
+  },
+  {
+    "year": "1924",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "63.4",
+    "mortality": "1860.6"
+  },
+  {
+    "year": "1925",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "62.4",
+    "mortality": "1890.5"
+  },
+  {
+    "year": "1926",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "59.6",
+    "mortality": "1963.8"
+  },
+  {
+    "year": "1927",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "63.9",
+    "mortality": "1800.4"
+  },
+  {
+    "year": "1928",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "60",
+    "mortality": "1920.2"
+  },
+  {
+    "year": "1929",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "60.3",
+    "mortality": "1869.9"
+  },
+  {
+    "year": "1930",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "63.5",
+    "mortality": "1726.6"
+  },
+  {
+    "year": "1931",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "64.7",
+    "mortality": "1681.8"
+  },
+  {
+    "year": "1932",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "64.5",
+    "mortality": "1707.3"
+  },
+  {
+    "year": "1933",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "66.3",
+    "mortality": "1649.4"
+  },
+  {
+    "year": "1934",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "64.6",
+    "mortality": "1668.1"
+  },
+  {
+    "year": "1935",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "65",
+    "mortality": "1642.0"
+  },
+  {
+    "year": "1936",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "61.9",
+    "mortality": "1727.4"
+  },
+  {
+    "year": "1937",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "63.8",
+    "mortality": "1644.3"
+  },
+  {
+    "year": "1938",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "66.8",
+    "mortality": "1549.4"
+  },
+  {
+    "year": "1939",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "66.6",
+    "mortality": "1556.8"
+  },
+  {
+    "year": "1940",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "66.6",
+    "mortality": "1550.4"
+  },
+  {
+    "year": "1941",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "68.5",
+    "mortality": "1453.2"
+  },
+  {
+    "year": "1942",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "69.4",
+    "mortality": "1403.6"
+  },
+  {
+    "year": "1943",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "65.7",
+    "mortality": "1469.1"
+  },
+  {
+    "year": "1944",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "68.4",
+    "mortality": "1391.1"
+  },
+  {
+    "year": "1945",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "69.5",
+    "mortality": "1344.7"
+  },
+  {
+    "year": "1946",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "70.3",
+    "mortality": "1315.2"
+  },
+  {
+    "year": "1947",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "70.5",
+    "mortality": "1301.6"
+  },
+  {
+    "year": "1948",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "71",
+    "mortality": "1263.7"
+  },
+  {
+    "year": "1949",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "71.9",
+    "mortality": "1217.3"
+  },
+  {
+    "year": "1950",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "72.2",
+    "mortality": "1198.0"
+  },
+  {
+    "year": "1951",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "72.4",
+    "mortality": "1179.1"
+  },
+  {
+    "year": "1952",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "72.6",
+    "mortality": "1153.3"
+  },
+  {
+    "year": "1953",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "73",
+    "mortality": "1141.0"
+  },
+  {
+    "year": "1954",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "73.7",
+    "mortality": "1081.8"
+  },
+  {
+    "year": "1955",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "73.7",
+    "mortality": "1095.4"
+  },
+  {
+    "year": "1956",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "73.9",
+    "mortality": "1089.9"
+  },
+  {
+    "year": "1957",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "73.7",
+    "mortality": "1104.1"
+  },
+  {
+    "year": "1958",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "73.9",
+    "mortality": "1090.8"
+  },
+  {
+    "year": "1959",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.2",
+    "mortality": "1065.3"
+  },
+  {
+    "year": "1960",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.1",
+    "mortality": "1074.4"
+  },
+  {
+    "year": "1961",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.6",
+    "mortality": "1038.8"
+  },
+  {
+    "year": "1962",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.5",
+    "mortality": "1052.6"
+  },
+  {
+    "year": "1963",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.4",
+    "mortality": "1062.6"
+  },
+  {
+    "year": "1964",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.7",
+    "mortality": "1030.9"
+  },
+  {
+    "year": "1965",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.8",
+    "mortality": "1026.7"
+  },
+  {
+    "year": "1966",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "74.8",
+    "mortality": "1024.7"
+  },
+  {
+    "year": "1967",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "75.2",
+    "mortality": "992.9"
+  },
+  {
+    "year": "1968",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "75",
+    "mortality": "1012.2"
+  },
+  {
+    "year": "1969",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "75.3",
+    "mortality": "984.2"
+  },
+  {
+    "year": "1970",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "75.6",
+    "mortality": "944.0"
+  },
+  {
+    "year": "1971",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "75.8",
+    "mortality": "933.4"
+  },
+  {
+    "year": "1972",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "75.9",
+    "mortality": "932.9"
+  },
+  {
+    "year": "1973",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "76.1",
+    "mortality": "921.4"
+  },
+  {
+    "year": "1974",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "76.7",
+    "mortality": "884.2"
+  },
+  {
+    "year": "1975",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "77.3",
+    "mortality": "834.1"
+  },
+  {
+    "year": "1976",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "77.5",
+    "mortality": "828.9"
+  },
+  {
+    "year": "1977",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "77.9",
+    "mortality": "799.7"
+  },
+  {
+    "year": "1978",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78",
+    "mortality": "796.6"
+  },
+  {
+    "year": "1979",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.4",
+    "mortality": "770.1"
+  },
+  {
+    "year": "1980",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.1",
+    "mortality": "796.0"
+  },
+  {
+    "year": "1981",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.4",
+    "mortality": "773.6"
+  },
+  {
+    "year": "1982",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.7",
+    "mortality": "758.6"
+  },
+  {
+    "year": "1983",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.7",
+    "mortality": "764.1"
+  },
+  {
+    "year": "1984",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.7",
+    "mortality": "760.5"
+  },
+  {
+    "year": "1985",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.7",
+    "mortality": "764.2"
+  },
+  {
+    "year": "1986",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.8",
+    "mortality": "758.0"
+  },
+  {
+    "year": "1987",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.9",
+    "mortality": "753.2"
+  },
+  {
+    "year": "1988",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "78.9",
+    "mortality": "758.7"
+  },
+  {
+    "year": "1989",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.2",
+    "mortality": "738.3"
+  },
+  {
+    "year": "1990",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.4",
+    "mortality": "728.3"
+  },
+  {
+    "year": "1991",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.6",
+    "mortality": "715.9"
+  },
+  {
+    "year": "1992",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.8",
+    "mortality": "703.9"
+  },
+  {
+    "year": "1993",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.5",
+    "mortality": "723.9"
+  },
+  {
+    "year": "1994",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.6",
+    "mortality": "717.3"
+  },
+  {
+    "year": "1995",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.6",
+    "mortality": "718.4"
+  },
+  {
+    "year": "1996",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.7",
+    "mortality": "713.3"
+  },
+  {
+    "year": "1997",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.9",
+    "mortality": "707.5"
+  },
+  {
+    "year": "1998",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80",
+    "mortality": "706.9"
+  },
+  {
+    "year": "1999",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.9",
+    "mortality": "716.6"
+  },
+  {
+    "year": "2000",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "79.9",
+    "mortality": "715.3"
+  },
+  {
+    "year": "2001",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80",
+    "mortality": "710.4"
+  },
+  {
+    "year": "2002",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80.1",
+    "mortality": "709.3"
+  },
+  {
+    "year": "2003",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80.2",
+    "mortality": "701.6"
+  },
+  {
+    "year": "2004",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80.5",
+    "mortality": "677.7"
+  },
+  {
+    "year": "2005",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80.5",
+    "mortality": "680.9"
+  },
+  {
+    "year": "2006",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80.7",
+    "mortality": "662.3"
+  },
+  {
+    "year": "2007",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80.9",
+    "mortality": "649.4"
+  },
+  {
+    "year": "2008",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "80.9",
+    "mortality": "653.7"
+  },
+  {
+    "year": "2009",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.2",
+    "mortality": "631.3"
+  },
+  {
+    "year": "2010",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.3",
+    "mortality": "630.8"
+  },
+  {
+    "year": "2011",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.3",
+    "mortality": "630.3"
+  },
+  {
+    "year": "2012",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.4",
+    "mortality": "623.8"
+  },
+  {
+    "year": "2013",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.4",
+    "mortality": "623.6"
+  },
+  {
+    "year": "2014",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.4",
+    "mortality": "617.6"
+  },
+  {
+    "year": "2015",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.3",
+    "mortality": "627.0"
+  },
+  {
+    "year": "2016",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.3",
+    "mortality": "619.4"
+  },
+  {
+    "year": "2017",
+    "race": "White",
+    "sex": "Female",
+    "average_life_expectancy": "81.2",
+    "mortality": "623.5"
+  },
+  {
+    "year": "2018",
+    "race": "White",
+    "sex": "Female",
+    "mortality": "614.6"
+  },
+  {
+    "year": "1900",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "46.6",
+    "mortality": "2613.2"
+  },
+  {
+    "year": "1901",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "48",
+    "mortality": "2582.3"
+  },
+  {
+    "year": "1902",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "50.2",
+    "mortality": "2430.1"
+  },
+  {
+    "year": "1903",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "49.5",
+    "mortality": "2494.2"
+  },
+  {
+    "year": "1904",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "46.6",
+    "mortality": "2630.5"
+  },
+  {
+    "year": "1905",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "47.6",
+    "mortality": "2544.7"
+  },
+  {
+    "year": "1906",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "47.3",
+    "mortality": "2529.3"
+  },
+  {
+    "year": "1907",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "46",
+    "mortality": "2637.0"
+  },
+  {
+    "year": "1908",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "49.9",
+    "mortality": "2412.3"
+  },
+  {
+    "year": "1909",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "50.9",
+    "mortality": "2363.8"
+  },
+  {
+    "year": "1910",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "48.6",
+    "mortality": "2441.9"
+  },
+  {
+    "year": "1911",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "51.3",
+    "mortality": "2350.3"
+  },
+  {
+    "year": "1912",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "51.9",
+    "mortality": "2327.5"
+  },
+  {
+    "year": "1913",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "50.8",
+    "mortality": "2322.1"
+  },
+  {
+    "year": "1914",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "52.7",
+    "mortality": "2254.1"
+  },
+  {
+    "year": "1915",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "53.1",
+    "mortality": "2267.8"
+  },
+  {
+    "year": "1916",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "50.2",
+    "mortality": "2365.6"
+  },
+  {
+    "year": "1917",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "49.3",
+    "mortality": "2375.9"
+  },
+  {
+    "year": "1918",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "37.1",
+    "mortality": "2680.7"
+  },
+  {
+    "year": "1919",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "54.5",
+    "mortality": "2096.0"
+  },
+  {
+    "year": "1920",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "54.4",
+    "mortality": "2166.6"
+  },
+  {
+    "year": "1921",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "60.8",
+    "mortality": "1986.2"
+  },
+  {
+    "year": "1922",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "59.1",
+    "mortality": "2088.2"
+  },
+  {
+    "year": "1923",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "57.1",
+    "mortality": "2174.2"
+  },
+  {
+    "year": "1924",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "59.8",
+    "mortality": "2073.7"
+  },
+  {
+    "year": "1925",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "59.3",
+    "mortality": "2104.4"
+  },
+  {
+    "year": "1926",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "57",
+    "mortality": "2190.6"
+  },
+  {
+    "year": "1927",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "60.5",
+    "mortality": "2048.6"
+  },
+  {
+    "year": "1928",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "57",
+    "mortality": "2182.8"
+  },
+  {
+    "year": "1929",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "57.2",
+    "mortality": "2141.2"
+  },
+  {
+    "year": "1930",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "59.7",
+    "mortality": "2013.8"
+  },
+  {
+    "year": "1931",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "60.8",
+    "mortality": "1983.6"
+  },
+  {
+    "year": "1932",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "62",
+    "mortality": "1982.9"
+  },
+  {
+    "year": "1933",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "62.7",
+    "mortality": "1952.2"
+  },
+  {
+    "year": "1934",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "60.5",
+    "mortality": "2000.7"
+  },
+  {
+    "year": "1935",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "61",
+    "mortality": "1979.3"
+  },
+  {
+    "year": "1936",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "58",
+    "mortality": "2087.0"
+  },
+  {
+    "year": "1937",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "59.3",
+    "mortality": "2016.5"
+  },
+  {
+    "year": "1938",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "63.2",
+    "mortality": "1882.7"
+  },
+  {
+    "year": "1939",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "63.3",
+    "mortality": "1894.4"
+  },
+  {
+    "year": "1940",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "62.1",
+    "mortality": "1925.2"
+  },
+  {
+    "year": "1941",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "64.4",
+    "mortality": "1844.1"
+  },
+  {
+    "year": "1942",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "65.9",
+    "mortality": "1793.7"
+  },
+  {
+    "year": "1943",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "63.2",
+    "mortality": "1872.9"
+  },
+  {
+    "year": "1944",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "64.5",
+    "mortality": "1788.0"
+  },
+  {
+    "year": "1945",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "64.4",
+    "mortality": "1761.6"
+  },
+  {
+    "year": "1946",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "65.1",
+    "mortality": "1706.1"
+  },
+  {
+    "year": "1947",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "65.2",
+    "mortality": "1718.6"
+  },
+  {
+    "year": "1948",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "65.5",
+    "mortality": "1691.2"
+  },
+  {
+    "year": "1949",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "66.2",
+    "mortality": "1647.8"
+  },
+  {
+    "year": "1950",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "66.5",
+    "mortality": "1642.5"
+  },
+  {
+    "year": "1951",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "66.5",
+    "mortality": "1621.7"
+  },
+  {
+    "year": "1952",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "66.6",
+    "mortality": "1588.5"
+  },
+  {
+    "year": "1953",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "66.8",
+    "mortality": "1589.0"
+  },
+  {
+    "year": "1954",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.5",
+    "mortality": "1516.3"
+  },
+  {
+    "year": "1955",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.4",
+    "mortality": "1544.7"
+  },
+  {
+    "year": "1956",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.5",
+    "mortality": "1554.4"
+  },
+  {
+    "year": "1957",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.2",
+    "mortality": "1581.7"
+  },
+  {
+    "year": "1958",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.4",
+    "mortality": "1573.1"
+  },
+  {
+    "year": "1959",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.5",
+    "mortality": "1552.1"
+  },
+  {
+    "year": "1960",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.4",
+    "mortality": "1586.0"
+  },
+  {
+    "year": "1961",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.8",
+    "mortality": "1547.3"
+  },
+  {
+    "year": "1962",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.7",
+    "mortality": "1579.1"
+  },
+  {
+    "year": "1963",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.4",
+    "mortality": "1614.7"
+  },
+  {
+    "year": "1964",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.7",
+    "mortality": "1572.0"
+  },
+  {
+    "year": "1965",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.6",
+    "mortality": "1589.9"
+  },
+  {
+    "year": "1966",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.5",
+    "mortality": "1595.7"
+  },
+  {
+    "year": "1967",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.8",
+    "mortality": "1566.9"
+  },
+  {
+    "year": "1968",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.5",
+    "mortality": "1602.7"
+  },
+  {
+    "year": "1969",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "67.7",
+    "mortality": "1570.4"
+  },
+  {
+    "year": "1970",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "68",
+    "mortality": "1513.7"
+  },
+  {
+    "year": "1971",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "68.3",
+    "mortality": "1514.4"
+  },
+  {
+    "year": "1972",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "68.3",
+    "mortality": "1520.2"
+  },
+  {
+    "year": "1973",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "68.5",
+    "mortality": "1507.2"
+  },
+  {
+    "year": "1974",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "69",
+    "mortality": "1450.8"
+  },
+  {
+    "year": "1975",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "69.5",
+    "mortality": "1391.1"
+  },
+  {
+    "year": "1976",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "69.9",
+    "mortality": "1379.5"
+  },
+  {
+    "year": "1977",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "70.2",
+    "mortality": "1343.5"
+  },
+  {
+    "year": "1978",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "70.4",
+    "mortality": "1332.5"
+  },
+  {
+    "year": "1979",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "70.8",
+    "mortality": "1289.5"
+  },
+  {
+    "year": "1980",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "70.7",
+    "mortality": "1317.4"
+  },
+  {
+    "year": "1981",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "71.1",
+    "mortality": "1282.4"
+  },
+  {
+    "year": "1982",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "71.5",
+    "mortality": "1255.9"
+  },
+  {
+    "year": "1983",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "71.6",
+    "mortality": "1259.8"
+  },
+  {
+    "year": "1984",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "71.8",
+    "mortality": "1245.5"
+  },
+  {
+    "year": "1985",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "71.8",
+    "mortality": "1249.5"
+  },
+  {
+    "year": "1986",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "71.9",
+    "mortality": "1230.5"
+  },
+  {
+    "year": "1987",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "72.1",
+    "mortality": "1213.1"
+  },
+  {
+    "year": "1988",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "72.2",
+    "mortality": "1215.5"
+  },
+  {
+    "year": "1989",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "72.5",
+    "mortality": "1176.0"
+  },
+  {
+    "year": "1990",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "72.7",
+    "mortality": "1165.3"
+  },
+  {
+    "year": "1991",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "72.9",
+    "mortality": "1142.8"
+  },
+  {
+    "year": "1992",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "73.2",
+    "mortality": "1122.2"
+  },
+  {
+    "year": "1993",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "73.1",
+    "mortality": "1138.7"
+  },
+  {
+    "year": "1994",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "73.3",
+    "mortality": "1118.4"
+  },
+  {
+    "year": "1995",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "73.4",
+    "mortality": "1107.2"
+  },
+  {
+    "year": "1996",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "73.9",
+    "mortality": "1082.5"
+  },
+  {
+    "year": "1997",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "74.3",
+    "mortality": "1058.7"
+  },
+  {
+    "year": "1998",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "74.5",
+    "mortality": "1041.6"
+  },
+  {
+    "year": "1999",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "74.6",
+    "mortality": "1040.1"
+  },
+  {
+    "year": "2000",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "74.7",
+    "mortality": "1029.4"
+  },
+  {
+    "year": "2001",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "74.9",
+    "mortality": "1012.1"
+  },
+  {
+    "year": "2002",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "74.9",
+    "mortality": "1009.0"
+  },
+  {
+    "year": "2003",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "75.1",
+    "mortality": "988.8"
+  },
+  {
+    "year": "2004",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "75.5",
+    "mortality": "953.2"
+  },
+  {
+    "year": "2005",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "75.5",
+    "mortality": "952.9"
+  },
+  {
+    "year": "2006",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "75.8",
+    "mortality": "925.8"
+  },
+  {
+    "year": "2007",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76",
+    "mortality": "907.1"
+  },
+  {
+    "year": "2008",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.1",
+    "mortality": "907.1"
+  },
+  {
+    "year": "2009",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.4",
+    "mortality": "880.5"
+  },
+  {
+    "year": "2010",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.5",
+    "mortality": "878.5"
+  },
+  {
+    "year": "2011",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.6",
+    "mortality": "870.2"
+  },
+  {
+    "year": "2012",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.7",
+    "mortality": "860.0"
+  },
+  {
+    "year": "2013",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.7",
+    "mortality": "859.2"
+  },
+  {
+    "year": "2014",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.7",
+    "mortality": "853.4"
+  },
+  {
+    "year": "2015",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.6",
+    "mortality": "861.9"
+  },
+  {
+    "year": "2016",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.4",
+    "mortality": "858.9"
+  },
+  {
+    "year": "2017",
+    "race": "White",
+    "sex": "Male",
+    "average_life_expectancy": "76.4",
+    "mortality": "863.4"
+  },
+  {
+    "year": "2018",
+    "race": "White",
+    "sex": "Male",
+    "mortality": "853.1"
+  }
+]

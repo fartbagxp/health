@@ -335,6 +335,370 @@ TOOLS: list[dict] = [
             },
         },
     },
+    # ── Respiratory surveillance ──────────────────────────────────────────────
+    {
+        "name": "get_resp_net_hospitalizations",
+        "description": (
+            "Get weekly lab-confirmed hospitalization rates for RSV, COVID-19, and Influenza from RESP-NET (2017–present). "
+            "Population-based surveillance across US sites. Rates per 100,000 population by age, sex, race/ethnicity. "
+            "network: 'FluSurv-NET', 'COVID-NET', 'RSV-NET'. Omit to get all three in one call."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "network": {
+                    "type": "string",
+                    "enum": ["FluSurv-NET", "COVID-NET", "RSV-NET"],
+                    "description": "Surveillance network. Omit for all three.",
+                },
+                "season": {
+                    "type": "string",
+                    "description": "Flu season: '2024-25', '2023-24'. Omit for all seasons.",
+                },
+                "age_group": {
+                    "type": "string",
+                    "description": "'Overall', '0-4 years', '5-17 years', '18-49 years', '50-64 years', '65+ years'.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_rsv_hospitalizations",
+        "description": (
+            "Get weekly RSV hospitalization rates from RSV-NET surveillance (2018–present). "
+            "Population-based, covers children and adults. By state/age/sex/race."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "season": {"type": "string", "description": "'2024-25', '2023-24'."},
+                "age_category": {
+                    "type": "string",
+                    "description": "'Overall', '0-5 months', '6-11 months', '1-4 years', '5-17 years', '18-49 years', '65-74 years', '75+ years'.",
+                },
+                "state": {
+                    "type": "string",
+                    "description": "Surveillance site state name e.g. 'California'.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_covid_net_hospitalizations",
+        "description": (
+            "Get weekly COVID-19 hospitalization rates from COVID-NET surveillance (2020–present). "
+            "Population-based, covers all ages. By state/age/sex/race."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "season": {"type": "string", "description": "'2024-25', '2023-24'."},
+                "age_category": {
+                    "type": "string",
+                    "description": "'Overall', '0-4 years', '5-17 years', '18-49 years', '50-64 years', '65-74 years', '75+ years'.",
+                },
+                "state": {
+                    "type": "string",
+                    "description": "Surveillance site state name e.g. 'New York'.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_resp_deaths_pct",
+        "description": (
+            "Get provisional weekly percentage of total US deaths from COVID-19, Influenza, and RSV (2020–present). "
+            "Simple national-level time series — good for tracking respiratory burden over time."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "pathogen": {
+                    "type": "string",
+                    "enum": ["COVID-19", "Influenza", "RSV"],
+                    "description": "Pathogen to filter. Omit for all three.",
+                },
+                "start_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "end_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_resp_deaths_pct_demo",
+        "description": (
+            "Get provisional weekly % deaths for COVID-19/Flu/RSV stratified by age, sex, race/ethnicity, and state (2020–present). "
+            "Use this to compare demographic disparities in respiratory mortality."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "pathogen": {
+                    "type": "string",
+                    "enum": ["COVID-19", "Flu", "RSV", "Combined"],
+                    "description": "Pathogen. Omit for all.",
+                },
+                "demographic_type": {
+                    "type": "string",
+                    "enum": ["Age", "Sex", "Race/Ethnicity"],
+                    "description": "Stratification variable.",
+                },
+                "state": {
+                    "type": "string",
+                    "description": "Full state name or 'United States'. Omit for all.",
+                },
+                "start_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "end_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_rsv_positivity",
+        "description": (
+            "Get weekly RSV NAAT test positivity rates from NREVSS participating labs (2020–present). "
+            "Key metric: pcr_percent_positive (3-week centered moving average). "
+            "Covers national level and 10 HHS regions."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "level": {
+                    "type": "string",
+                    "description": "'National', 'HHS Region 1' through 'HHS Region 10'. Omit for all.",
+                },
+                "start_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "end_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_nursing_home_resp",
+        "description": (
+            "Get weekly COVID-19, Influenza, and RSV case counts, hospitalizations, and vaccination rates "
+            "for nursing home residents by state from NHSN (September 2024–present). "
+            "Useful for tracking vulnerable-population outcomes and vaccine effectiveness."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "jurisdiction": {
+                    "type": "string",
+                    "description": "Full state name e.g. 'California', or 'National'. Omit for all.",
+                },
+                "start_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "end_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    # ── Vaccination ───────────────────────────────────────────────────────────
+    {
+        "name": "get_resp_vaccination",
+        "description": (
+            "Get weekly flu, COVID-19, and RSV vaccination coverage from National Immunization Survey (2023–present). "
+            "By state, HHS region, age group, sex, race/ethnicity. "
+            "Use to track uptake trends and compare demographics."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "vaccine": {
+                    "type": "string",
+                    "enum": ["Influenza", "COVID-19", "RSV"],
+                    "description": "Vaccine type. Omit for all.",
+                },
+                "geographic_level": {
+                    "type": "string",
+                    "enum": ["National", "State", "Region"],
+                    "description": "Geographic aggregation.",
+                },
+                "geographic_name": {
+                    "type": "string",
+                    "description": "State name 'California', region 'HHS Region 1', or 'United States'.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_flu_vaccine_doses",
+        "description": (
+            "Get weekly cumulative influenza vaccine doses distributed nationally by flu season (2009–present). "
+            "Tracks vaccine supply rollout week by week."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "season": {
+                    "type": "string",
+                    "description": "Flu season: '2024-2025', '2023-2024'. Omit for all seasons.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 200).",
+                },
+            },
+        },
+    },
+    # ── Drug overdose ─────────────────────────────────────────────────────────
+    {
+        "name": "get_drug_overdose_counts",
+        "description": (
+            "Get monthly provisional drug overdose death counts by state and drug type (2015–present). "
+            "MOST CURRENT overdose data — updated monthly via VSRR. "
+            "Indicators: 'Drug Overdose Deaths', 'All Opioids', 'Natural & Semi-Synthetic Opioids', "
+            "'Methadone', 'Synthetic Opioids' (fentanyl), 'Heroin', 'Cocaine', 'Psychostimulants' (meth). "
+            "Includes 12-month rolling totals and predicted values for reporting lag."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "state": {
+                    "type": "string",
+                    "description": "Two-letter state code: 'OH', 'WV', 'KY'. Omit for all states.",
+                },
+                "year": {
+                    "type": "integer",
+                    "description": "Year e.g. 2023. Omit for all.",
+                },
+                "indicator": {
+                    "type": "string",
+                    "description": "'Drug Overdose Deaths', 'All Opioids', 'Synthetic Opioids', 'Heroin', 'Cocaine', 'Psychostimulants'.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_drug_overdose_county",
+        "description": (
+            "Get quarterly provisional county-level drug overdose death counts (2020–present). "
+            "12-month rolling totals by county FIPS. "
+            "Use for geographic hotspot analysis."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "state": {
+                    "type": "string",
+                    "description": "Two-letter state code: 'OH', 'WV'. Omit for all states.",
+                },
+                "year": {
+                    "type": "string",
+                    "description": "Year e.g. '2023'. Omit for all.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    # ── Notifiable diseases ───────────────────────────────────────────────────
+    {
+        "name": "get_nndss_weekly",
+        "description": (
+            "Get NNDSS provisional weekly case counts for ~100 nationally notifiable diseases (2014–present). "
+            "Diseases include: Measles, Mumps, Pertussis (whooping cough), Hepatitis A/B/C, "
+            "Lyme Disease, Tuberculosis, Salmonellosis, Gonorrhea, Syphilis, Dengue, West Nile, Mpox. "
+            "m1 = cases for current week; m2 = cases for same week prior year. "
+            "m1_flag/m2_flag: 'U'=unavailable, 'N'=not reportable, '-'=no cases."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "disease": {
+                    "type": "string",
+                    "description": "Disease label (partial match): 'Measles', 'Pertussis', 'Hepatitis A', 'Lyme Disease', 'Tuberculosis', 'Salmonellosis', 'Gonorrhea', 'Mpox'.",
+                },
+                "state": {
+                    "type": "string",
+                    "description": "Full state name: 'New York', 'California'. Omit for all.",
+                },
+                "year": {
+                    "type": "string",
+                    "description": "Year: '2024'. Omit for all.",
+                },
+                "week": {"type": "integer", "description": "MMWR week 1–53."},
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_wastewater_data",
+        "description": (
+            "Get NWSS wastewater surveillance data: RNA concentrations from US sampling sites, updated weekly. "
+            "Tracks SARS-CoV-2 (COVID-19), Influenza A, and Measles viral signal in sewage as early-warning. "
+            "Pathogens: 'sars_cov2' (2020–present), 'flu_a' (2022–present), 'measles' (2024–present). "
+            "Key metric: pcr_target_flowpop_lin — flow-population-normalized concentration, comparable across sites. "
+            "pcr_target_detect: 'yes' or 'no' — whether pathogen was detected at that site."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "pathogen": {
+                    "type": "string",
+                    "enum": ["sars_cov2", "flu_a", "measles"],
+                    "description": "'sars_cov2' (COVID-19, 2020+), 'flu_a' (Influenza A, 2022+), 'measles' (2024+).",
+                },
+                "state": {
+                    "type": "string",
+                    "description": "Two-letter state code: 'NY', 'CA', 'TX'. Omit for all states.",
+                },
+                "start_date": {
+                    "type": "string",
+                    "description": "Start date inclusive: 'YYYY-MM-DD'.",
+                },
+                "end_date": {
+                    "type": "string",
+                    "description": "End date inclusive: 'YYYY-MM-DD'.",
+                },
+                "detected_only": {
+                    "type": "boolean",
+                    "description": "If true, only return samples where pathogen was detected (pcr_target_detect='yes').",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
     {
         "name": "query_dataset",
         "description": (
@@ -345,7 +709,9 @@ TOOLS: list[dict] = [
             "pwn4-m3yp (COVID), r8kw-7aab (weekly deaths), s2qv-b27b (disability), "
             "xbxb-epbu (drug overdose 1999–2016), hn4x-zwk7 (nutrition/obesity), "
             "6rkc-nb2q (historical death rates since 1900), 76vv-a7x8 (birth indicators), "
-            "hk9y-quqm (COVID conditions), muzy-jte6 (weekly deaths by cause)."
+            "hk9y-quqm (COVID conditions), muzy-jte6 (weekly deaths by cause), "
+            "j9g8-acpt (wastewater SARS-CoV-2), ymmh-divb (wastewater Influenza A), "
+            "akvg-8vrb (wastewater Measles)."
         ),
         "input_schema": {
             "type": "object",
@@ -395,6 +761,19 @@ _DISPATCH: dict[str, Any] = {
     "get_nutrition_obesity_data": sdk.get_nutrition_obesity_data,
     "get_historical_death_rates": sdk.get_historical_death_rates,
     "get_birth_indicators": sdk.get_birth_indicators,
+    "get_wastewater_data": sdk.get_wastewater_data,
+    "get_resp_net_hospitalizations": sdk.get_resp_net_hospitalizations,
+    "get_rsv_hospitalizations": sdk.get_rsv_hospitalizations,
+    "get_covid_net_hospitalizations": sdk.get_covid_net_hospitalizations,
+    "get_resp_deaths_pct": sdk.get_resp_deaths_pct,
+    "get_resp_deaths_pct_demo": sdk.get_resp_deaths_pct_demo,
+    "get_rsv_positivity": sdk.get_rsv_positivity,
+    "get_nursing_home_resp": sdk.get_nursing_home_resp,
+    "get_resp_vaccination": sdk.get_resp_vaccination,
+    "get_flu_vaccine_doses": sdk.get_flu_vaccine_doses,
+    "get_drug_overdose_counts": sdk.get_drug_overdose_counts,
+    "get_drug_overdose_county": sdk.get_drug_overdose_county,
+    "get_nndss_weekly": sdk.get_nndss_weekly,
     "query_dataset": sdk.query_dataset,
 }
 

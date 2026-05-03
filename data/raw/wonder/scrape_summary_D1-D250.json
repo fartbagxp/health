@@ -438,9 +438,8 @@
       "output_file": "data/raw/wonder/query_params_D114.json"
     },
     "D115": {
-      "status": "success",
-      "total_parameters": 71,
-      "output_file": "data/raw/wonder/query_params_D115.json"
+      "status": "failed",
+      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/cancermir-v2012.html\", waiting until \"domcontentloaded\"\n"
     },
     "D116": {
       "status": "success",
@@ -864,7 +863,7 @@
     }
   },
   "summary": {
-    "successful": 172,
-    "failed": 0
+    "successful": 171,
+    "failed": 1
   }
 }

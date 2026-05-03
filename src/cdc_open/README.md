@@ -127,6 +127,19 @@ from cdc_open.sdk import (
     get_historical_death_rates,
     get_birth_indicators,
     get_covid_data,
+    get_wastewater_data,
+    get_resp_net_hospitalizations,
+    get_rsv_hospitalizations,
+    get_covid_net_hospitalizations,
+    get_resp_deaths_pct,
+    get_resp_deaths_pct_demo,
+    get_rsv_positivity,
+    get_nursing_home_resp,
+    get_resp_vaccination,
+    get_flu_vaccine_doses,
+    get_drug_overdose_counts,
+    get_drug_overdose_county,
+    get_nndss_weekly,
     query_dataset,
 )
 
@@ -147,6 +160,54 @@ rows = get_drug_overdose_data(sex="Both Sexes")
 
 # Historical heart disease death rates since 1950
 rows = get_historical_death_rates(cause="Heart Disease", start_year=1950)
+
+# Wastewater surveillance — SARS-CoV-2 signal in New York, last 30 samples
+rows = get_wastewater_data(pathogen="sars_cov2", state="NY", limit=30)
+
+# Influenza A wastewater detections nationally since Oct 2024
+rows = get_wastewater_data(pathogen="flu_a", start_date="2024-10-01", detected_only=True)
+
+# Measles wastewater signal (2024–present)
+rows = get_wastewater_data(pathogen="measles", limit=200)
+
+# RESP-NET: all three networks, current season
+rows = get_resp_net_hospitalizations(season="2024-25", age_group="Overall")
+
+# RSV hospitalization rates by age group
+rows = get_rsv_hospitalizations(season="2024-25", age_category="0-5 months")
+
+# COVID-NET hospitalization rates — 65+ age group, all states
+rows = get_covid_net_hospitalizations(age_category="65-74 years")
+
+# Weekly % of deaths from flu nationally
+rows = get_resp_deaths_pct(pathogen="Influenza")
+
+# COVID-19 death % by race/ethnicity in a state
+rows = get_resp_deaths_pct_demo(pathogen="COVID-19", demographic_type="Race/Ethnicity", state="California")
+
+# RSV test positivity nationally since Sept 2024
+rows = get_rsv_positivity(level="National", start_date="2024-09-01")
+
+# Nursing home RSV cases and vaccination rates
+rows = get_nursing_home_resp(jurisdiction="National")
+
+# COVID-19 vaccination coverage by state
+rows = get_resp_vaccination(vaccine="COVID-19", geographic_level="State")
+
+# Flu vaccine supply rollout for current season
+rows = get_flu_vaccine_doses(season="2024-2025")
+
+# Monthly fentanyl/synthetic opioid deaths in Ohio
+rows = get_drug_overdose_counts(state="OH", indicator="Synthetic Opioids")
+
+# County-level overdose deaths in West Virginia
+rows = get_drug_overdose_county(state="WV", year="2023")
+
+# Weekly measles cases by state (NNDSS)
+rows = get_nndss_weekly(disease="Measles", year="2024")
+
+# Pertussis outbreak tracking
+rows = get_nndss_weekly(disease="Pertussis", state="California")
 
 # Raw SODA query — full flexibility
 rows = query_dataset(
@@ -195,22 +256,53 @@ for block in response.content:
 
 ## Available datasets
 
-| Key                      | Dataset ID  | Coverage     | Description                               |
-| ------------------------ | ----------- | ------------ | ----------------------------------------- |
-| `leading_death`          | `bi63-dtpu` | 1999–2017    | Leading causes of death by state          |
-| `life_expectancy`        | `w9j2-ggv5` | 1900–2018    | Life expectancy by race and sex           |
-| `mortality_rates`        | `489q-934x` | 2020–present | Provisional quarterly death rates         |
-| `places_county`          | `swc5-untb` | Current      | County health indicators (30+ measures)   |
-| `places_city`            | `dxpw-cm5u` | Current      | City health indicators (pop. > 50k)       |
-| `covid_cases`            | `pwn4-m3yp` | 2020–2023    | Weekly COVID-19 cases and deaths          |
-| `covid_conditions`       | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition |
-| `weekly_deaths`          | `r8kw-7aab` | 2020–present | Weekly deaths by state (updated weekly)   |
-| `disability`             | `s2qv-b27b` | Current      | Disability prevalence by type and state   |
-| `weekly_deaths_by_cause` | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                    |
-| `drug_overdose_state`    | `xbxb-epbu` | 1999–2016    | Drug overdose mortality by state          |
-| `nutrition_obesity`      | `hn4x-zwk7` | Current      | Obesity, inactivity, nutrition by state   |
-| `death_rates_historical` | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes   |
-| `birth_indicators`       | `76vv-a7x8` | Current      | Quarterly birth indicators by race        |
+| Key                      | Dataset ID  | Coverage     | Description                                             |
+| ------------------------ | ----------- | ------------ | ------------------------------------------------------- |
+| `leading_death`          | `bi63-dtpu` | 1999–2017    | Leading causes of death by state                        |
+| `life_expectancy`        | `w9j2-ggv5` | 1900–2018    | Life expectancy by race and sex                         |
+| `mortality_rates`        | `489q-934x` | 2020–present | Provisional quarterly death rates                       |
+| `places_county`          | `swc5-untb` | Current      | County health indicators (30+ measures)                 |
+| `places_city`            | `dxpw-cm5u` | Current      | City health indicators (pop. > 50k)                     |
+| `covid_cases`            | `pwn4-m3yp` | 2020–2023    | Weekly COVID-19 cases and deaths                        |
+| `covid_conditions`       | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition               |
+| `weekly_deaths`          | `r8kw-7aab` | 2020–present | Weekly deaths by state (updated weekly)                 |
+| `disability`             | `s2qv-b27b` | Current      | Disability prevalence by type and state                 |
+| `weekly_deaths_by_cause` | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                                  |
+| `drug_overdose_state`    | `xbxb-epbu` | 1999–2016    | Drug overdose mortality by state                        |
+| `nutrition_obesity`      | `hn4x-zwk7` | Current      | Obesity, inactivity, nutrition by state                 |
+| `death_rates_historical` | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes                 |
+| `birth_indicators`       | `76vv-a7x8` | Current      | Quarterly birth indicators by race                      |
+| `wastewater_covid`       | `j9g8-acpt` | 2020–present | NWSS wastewater: SARS-CoV-2 (weekly)                    |
+| `wastewater_flu`         | `ymmh-divb` | 2022–present | NWSS wastewater: Influenza A (weekly)                   |
+| `wastewater_measles`     | `akvg-8vrb` | 2024–present | NWSS wastewater: Measles (weekly)                       |
+| `resp_net`               | `kvib-3txy` | 2017–present | RESP-NET hospitalization rates: RSV/COVID/Flu (weekly)  |
+| `rsv_net`                | `29hc-w46k` | 2018–present | RSV-NET RSV hospitalization rates (weekly)              |
+| `covid_net`              | `6jg4-xsqq` | 2020–present | COVID-NET COVID-19 hospitalization rates (weekly)       |
+| `resp_deaths_pct`        | `4bc2-bbpq` | 2020–present | Provisional % deaths: COVID/Flu/RSV (weekly)            |
+| `resp_deaths_pct_demo`   | `53g5-jf7x` | 2020–present | Provisional % deaths by age/sex/race (weekly)           |
+| `rsv_positivity`         | `3cxc-4k8q` | 2020–present | RSV NAAT test positivity by HHS region (weekly)         |
+| `nursing_home_resp`      | `tscn-ryh9` | 2024–present | Nursing home COVID/Flu/RSV cases + vaccination (weekly) |
+| `resp_vaccination`       | `5c6r-xi2t` | 2023–present | Flu/COVID-19/RSV vaccination coverage (weekly)          |
+| `flu_vaccine_doses`      | `k87d-gv3u` | 2009–present | Cumulative flu vaccine doses distributed (weekly)       |
+| `drug_overdose_vsrr`     | `xkb8-kh2a` | 2015–present | VSRR provisional OD deaths by state/drug (monthly)      |
+| `drug_overdose_county`   | `gb4e-yj24` | 2020–present | VSRR county-level OD death counts (quarterly)           |
+| `nndss_weekly`           | `x9gk-5huc` | 2014–present | NNDSS weekly notifiable disease cases (weekly)          |
+
+## Wastewater surveillance (NWSS)
+
+Three datasets from the [National Wastewater Surveillance System (NWSS)](https://www.cdc.gov/nwss/) track RNA concentrations of pathogens at US wastewater treatment plants. All are updated every Friday.
+
+| Key column                        | Description                                                                          |
+| --------------------------------- | ------------------------------------------------------------------------------------ |
+| `state_territory`                 | Two-letter state/territory abbreviation                                              |
+| `sample_collect_date`             | Date sample was collected at the treatment plant                                     |
+| `counties_served` / `county_fips` | County(-ies) whose sewage flows to this site                                         |
+| `population_served`               | Estimated persons contributing to the sample                                         |
+| `pcr_target_detect`               | `yes` / `no` — whether pathogen RNA was detected                                     |
+| `pcr_target_avg_conc`             | Concentration back-calculated to pre-concentration basis                             |
+| `pcr_target_flowpop_lin`          | Flow-population-normalized concentration — **best metric for cross-site comparison** |
+
+Use `get_wastewater_data(pathogen=...)` with `pathogen` set to `"sars_cov2"`, `"flu_a"`, or `"measles"`.
 
 ## PLACES measure IDs
 

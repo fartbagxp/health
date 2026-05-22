@@ -253,9 +253,8 @@
       "output_file": "data/raw/wonder/query_params_D60.json"
     },
     "D61": {
-      "status": "success",
-      "total_parameters": 128,
-      "output_file": "data/raw/wonder/query_params_D61.json"
+      "status": "failed",
+      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/nasa-lst.html\", waiting until \"domcontentloaded\"\n"
     },
     "D66": {
       "status": "success",
@@ -864,7 +863,7 @@
     }
   },
   "summary": {
-    "successful": 172,
-    "failed": 0
+    "successful": 171,
+    "failed": 1
   }
 }

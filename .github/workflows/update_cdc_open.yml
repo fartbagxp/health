@@ -37,5 +37,6 @@ jobs:
           git add data/raw/cdc_open/
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update of CDC Open Data on $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
             git push -u origin main
           fi

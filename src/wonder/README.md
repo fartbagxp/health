@@ -6,7 +6,7 @@ This module adds a natural-language front end. You describe what you want; an LL
 
 ## Module layout
 
-```
+```bash
 src/wonder/
 ├── llm_query_builder.py  — LLM-backed query builder (primary interface)
 ├── client.py             — WonderClient + low-level QueryBuilder

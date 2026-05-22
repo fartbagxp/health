@@ -18,14 +18,60 @@ cp .env.sample .env
 
 ## Supported Datasets
 
-| Dataset | Label                         | Years        | Notes                       |
-| ------- | ----------------------------- | ------------ | --------------------------- |
-| D176    | Provisional Mortality         | 2018–present | Most recent; updates weekly |
-| D157    | Final Mortality (Single Race) | 2018–2023    | Confirmed statistics        |
-| D77     | Multiple Cause of Death       | 1999–2020    | Historical; bridged race    |
-| D8      | VAERS                         | 1990–present | See D8 note below           |
+All 26 datasets below have base templates and work with both the LLM builder and `QueryBuilder` directly.
 
-For topics outside these four, the builder attempts a query without template merging — manual review may be needed. Full dataset catalog: `data/raw/wonder/topics_mapping.json`.
+### Mortality
+
+| Dataset | Label                                    | Years        | Notes                                        |
+| ------- | ---------------------------------------- | ------------ | -------------------------------------------- |
+| D176    | Provisional Mortality                    | 2018–present | Most recent; updates weekly                  |
+| D157    | Final Mortality, Single Race (MCD + UCD) | 2018–2023    | Confirmed; has V30/V31 extra filters         |
+| D158    | Final Mortality, Single Race (UCD only)  | 2018–2023    | Like D157 but no MCD filters                 |
+| D141    | MCD + US–Mexico Border Regions           | 1999–2020    | Like D77 plus border/metro geography         |
+| D77     | Multiple Cause of Death                  | 1999–2020    | ICD-10, bridged race; historical trends      |
+| D76     | Underlying Cause of Death                | 1999–2020    | Like D77 but UCD only                        |
+| D140    | Compressed Mortality                     | 1999–2016    | ICD-10, bridged race, fewer variables        |
+| D16     | Compressed Mortality                     | 1979–1998    | ICD-9                                        |
+| D74     | Compressed Mortality                     | 1968–1978    | ICD-8; O_rate_per=1000; no O_ucd             |
+
+### Infant / Birth
+
+| Dataset | Label                                      | Years     | Notes                                      |
+| ------- | ------------------------------------------ | --------- | ------------------------------------------ |
+| D69     | Linked Birth / Infant Death                | 2007–2023 | Default for infant mortality               |
+| D159    | Linked Birth / Infant Death, Expanded      | 2017–2023 | More variables: race detail, demographics  |
+| D31     | Linked Birth / Infant Death                | 2003–2006 |                                            |
+| D18     | Linked Birth / Infant Death                | 1999–2002 |                                            |
+| D23     | Linked Birth / Infant Death                | 1995–1998 |                                            |
+
+### Natality
+
+| Dataset | Label                  | Years        | Notes                               |
+| ------- | ---------------------- | ------------ | ----------------------------------- |
+| D66     | Natality               | 2007–2024    | Default for recent birth data       |
+| D149    | Natality, Expanded     | 2016–2024    | Race detail and more measures       |
+| D192    | Provisional Natality   | 2023–present | Most recent; updates monthly        |
+| D27     | Natality               | 2003–2006    |                                     |
+| D10     | Natality               | 1995–2002    |                                     |
+
+### Environmental
+
+| Dataset | Label                                         | Years     | Notes                          |
+| ------- | --------------------------------------------- | --------- | ------------------------------ |
+| D104    | Heat Wave Days, May–Sep                       | 1981–2010 | Annual county-level counts     |
+| D60     | NLDAS Daily Air Temperatures & Heat Index     | 1979–2011 | Min/mean/max temp + heat index |
+| D80     | NLDAS Daily Sunlight KJ/m²                    | 1979–2011 | Solar radiation                |
+| D81     | NLDAS Daily Precipitation mm                  | 1979–2011 | Rainfall                       |
+| D61     | MODIS Land Surface Temperature                | 2003–2008 | Satellite-derived              |
+| D73     | Fine Particulate Matter PM2.5 µg/m³           | 2003–2011 | Air quality                    |
+
+### Other
+
+| Dataset | Label | Years        | Notes                    |
+| ------- | ----- | ------------ | ------------------------ |
+| D8      | VAERS | 1990–present | XML API broken; see note |
+
+For datasets not listed here, the builder attempts a query without template merging — manual review may be needed. Full dataset catalog: `data/raw/wonder/topics_mapping.json`.
 
 ## Writing Effective Prompts
 

@@ -506,7 +506,7 @@ TOOLS: list[dict] = [
             "properties": {
                 "jurisdiction": {
                     "type": "string",
-                    "description": "Full state name e.g. 'California', or 'National'. Omit for all.",
+                    "description": "Two-letter state code e.g. 'CA', 'TX', or 'USA' for national, 'Region 1'–'Region 10' for HHS regions. Omit for all.",
                 },
                 "start_date": {"type": "string", "description": "'YYYY-MM-DD'."},
                 "end_date": {"type": "string", "description": "'YYYY-MM-DD'."},
@@ -618,6 +618,98 @@ TOOLS: list[dict] = [
                 "year": {
                     "type": "string",
                     "description": "Year e.g. '2023'. Omit for all.",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    # ── ED surveillance & lab data ────────────────────────────────────────────
+    {
+        "name": "get_nssp_ed_visits",
+        "description": (
+            "Get weekly % of emergency department visits for COVID-19, influenza, and RSV by state/county from NSSP (2022–present). "
+            "Includes trend direction per pathogen: 'Increasing', 'Decreasing', or 'Stable'. "
+            "Key metrics: percent_visits_covid, percent_visits_influenza, percent_visits_rsv, percent_visits_combined."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "geography": {
+                    "type": "string",
+                    "description": "State name e.g. 'California', or 'United States' for national. Omit for all.",
+                },
+                "start_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "end_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    {
+        "name": "get_nrevss_rsv_historic",
+        "description": (
+            "Get historical weekly RSV test counts and positivity from NREVSS participating labs by HHS region (2010–2020). "
+            "Covers antigen detection and PCR test types. "
+            "For 2020–present RSV positivity, use get_rsv_positivity() instead."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "hhs_region": {
+                    "type": "integer",
+                    "description": "HHS region 1–10. Omit for all regions.",
+                },
+                "test_type": {
+                    "type": "string",
+                    "enum": ["Antigen Detection", "PCR"],
+                    "description": "Diagnostic test type. Omit for both.",
+                },
+                "start_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "end_date": {"type": "string", "description": "'YYYY-MM-DD'."},
+                "limit": {
+                    "type": "integer",
+                    "description": "Max records (default 500).",
+                },
+            },
+        },
+    },
+    # ── Child vaccination ─────────────────────────────────────────────────────
+    {
+        "name": "get_children_vaccination",
+        "description": (
+            "Get vaccination coverage for children 0–35 months from NIS-Child survey (2011–2022). "
+            "Vaccines: DTaP, MMR, Polio, Hib, PCV, Rotavirus, Hep A, Hep B, Varicella, Influenza. "
+            "Stratified by state, race/ethnicity, insurance coverage, poverty level, and urbanicity. "
+            "Returns coverage estimate (%) with confidence interval and sample size."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "vaccine": {
+                    "type": "string",
+                    "description": "Vaccine name (partial match): 'DTaP', 'MMR', 'Polio', 'Hib', 'PCV', 'Rotavirus', 'Hep A', 'Hep B', 'Varicella', 'Influenza'.",
+                },
+                "geography": {
+                    "type": "string",
+                    "description": "State name e.g. 'California', or 'United States'. Omit for all.",
+                },
+                "geography_type": {
+                    "type": "string",
+                    "enum": ["National", "HHS Region", "States", "Local Area"],
+                    "description": "Geographic level. Omit for all.",
+                },
+                "birth_cohort": {
+                    "type": "string",
+                    "description": "Birth year or range e.g. '2020', '2019-2020'. Omit for all.",
+                },
+                "dimension_type": {
+                    "type": "string",
+                    "description": "'Overall', 'Race/Hispanic Origin', 'Insurance Coverage', 'Poverty Level', 'Urbanicity'. Omit for all.",
                 },
                 "limit": {
                     "type": "integer",
@@ -774,6 +866,9 @@ _DISPATCH: dict[str, Any] = {
     "get_drug_overdose_counts": sdk.get_drug_overdose_counts,
     "get_drug_overdose_county": sdk.get_drug_overdose_county,
     "get_nndss_weekly": sdk.get_nndss_weekly,
+    "get_nssp_ed_visits": sdk.get_nssp_ed_visits,
+    "get_nrevss_rsv_historic": sdk.get_nrevss_rsv_historic,
+    "get_children_vaccination": sdk.get_children_vaccination,
     "query_dataset": sdk.query_dataset,
 }
 

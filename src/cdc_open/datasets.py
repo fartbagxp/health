@@ -434,6 +434,58 @@ DATASETS: dict[str, Dataset] = {
             "percentage_of_records_pending",
         ],
     ),
+    # ── Surveillance: ED visits & lab positivity ────────────────────────────
+    "nssp_ed_visits": Dataset(
+        id="rdmq-nq56",
+        name="NSSP Emergency Department Visit Trajectories",
+        description="Weekly % of ED visits for COVID-19, influenza, and RSV by state and county from NSSP sentinel emergency departments, with trend direction (increasing/stable/decreasing)",
+        years="2022–present",
+        key_columns=[
+            "week_end",
+            "geography",
+            "county",
+            "percent_visits_covid",
+            "percent_visits_influenza",
+            "percent_visits_rsv",
+            "percent_visits_combined",
+            "ed_trends_covid",
+            "ed_trends_influenza",
+            "ed_trends_rsv",
+            "hsa",
+            "fips",
+        ],
+    ),
+    "nrevss_rsv_historic": Dataset(
+        id="52kb-ccu2",
+        name="NREVSS RSV Laboratory Data (Historical)",
+        description="Weekly RSV antigen and PCR test counts and positivity from NREVSS participating labs by HHS region (historical; for 2020–present use rsv_positivity instead)",
+        years="2010–2020",
+        key_columns=[
+            "diagnostic_test_type",
+            "week_ending_date",
+            "hhs_region",
+            "rsv_detections",
+            "rsv_tests",
+        ],
+    ),
+    # ── Child vaccination ────────────────────────────────────────────────────
+    "children_vaccination": Dataset(
+        id="fhky-rtsk",
+        name="Vaccination Coverage: Young Children (0–35 months)",
+        description="National Immunization Survey (NIS-Child) vaccination coverage for DTaP, MMR, polio, Hib, PCV, rotavirus, Hep A/B, varicella, and influenza — by state, race/ethnicity, insurance status, and birth cohort",
+        years="2011–2022",
+        key_columns=[
+            "vaccine",
+            "dose",
+            "geography_type",
+            "geography",
+            "birth_year_birth_cohort",
+            "dimension_type",
+            "dimension",
+            "estimate",
+            "sample_size",
+        ],
+    ),
     # ── Notifiable diseases (weekly) ─────────────────────────────────────────
     "nndss_weekly": Dataset(
         id="x9gk-5huc",

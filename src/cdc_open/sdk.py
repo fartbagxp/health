@@ -531,7 +531,7 @@ def get_nursing_home_resp(
     limit: int = 500,
 ) -> list[dict[str, Any]]:
     """Weekly COVID-19/Flu/RSV cases, hospitalizations, and vaccination rates for nursing home residents (2024–present).
-    jurisdiction: full state name e.g. 'California', or 'National'
+    jurisdiction: two-letter state code e.g. 'CA', 'TX', or 'USA' for national, 'Region 1'-'Region 10' for HHS regions
     start_date / end_date: 'YYYY-MM-DD'
     """
     clauses = []
@@ -638,6 +638,97 @@ def get_drug_overdose_county(
         DATASETS["drug_overdose_county"].id,
         where=" AND ".join(clauses) if clauses else None,
         order="monthendingdate DESC",
+        limit=limit,
+    )
+
+
+def get_nssp_ed_visits(
+    geography: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly % of ED visits for COVID-19, influenza, and RSV by state/county from NSSP (2022–present).
+    geography: state name e.g. 'California', or 'United States' for national
+    start_date / end_date: 'YYYY-MM-DD'
+    Key metrics: percent_visits_covid, percent_visits_influenza, percent_visits_rsv
+    Trend fields: ed_trends_covid, ed_trends_influenza, ed_trends_rsv ('Increasing', 'Decreasing', 'Stable')
+    """
+    clauses = []
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if start_date:
+        clauses.append(f"week_end >= '{start_date}'")
+    if end_date:
+        clauses.append(f"week_end <= '{end_date}'")
+    return query_dataset(
+        DATASETS["nssp_ed_visits"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week_end DESC",
+        limit=limit,
+    )
+
+
+def get_nrevss_rsv_historic(
+    hhs_region: int | None = None,
+    test_type: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Historical weekly RSV test counts and positivity from NREVSS labs by HHS region (2010–2020).
+    For 2020–present RSV data, use get_rsv_positivity() instead.
+    hhs_region: 1–10
+    test_type: 'Antigen Detection' or 'PCR'
+    start_date / end_date: 'YYYY-MM-DD'
+    """
+    clauses = []
+    if hhs_region is not None:
+        clauses.append(f"hhs_region = {hhs_region}")
+    if test_type:
+        clauses.append(f"diagnostic_test_type = '{test_type}'")
+    if start_date:
+        clauses.append(f"week_ending_date >= '{start_date}'")
+    if end_date:
+        clauses.append(f"week_ending_date <= '{end_date}'")
+    return query_dataset(
+        DATASETS["nrevss_rsv_historic"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week_ending_date DESC",
+        limit=limit,
+    )
+
+
+def get_children_vaccination(
+    vaccine: str | None = None,
+    geography: str | None = None,
+    geography_type: str | None = None,
+    birth_cohort: str | None = None,
+    dimension_type: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Vaccination coverage for children 0–35 months from NIS-Child survey (2011–2022).
+    vaccine: 'DTaP', 'MMR', 'Polio', 'Hib', 'PCV', 'Rotavirus', 'Hep A', 'Hep B', 'Varicella', 'Influenza'
+    geography: state name or 'United States'
+    geography_type: 'National', 'HHS Region', 'States', 'Local Area'
+    birth_cohort: '2020', '2019-2020', etc.
+    dimension_type: 'Overall', 'Race/Hispanic Origin', 'Insurance Coverage', 'Poverty Level', 'Urbanicity'
+    """
+    clauses = []
+    if vaccine:
+        clauses.append(f"upper(vaccine) LIKE '%{vaccine.upper()}%'")
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if geography_type:
+        clauses.append(f"geography_type = '{geography_type}'")
+    if birth_cohort:
+        clauses.append(f"birth_year_birth_cohort = '{birth_cohort}'")
+    if dimension_type:
+        clauses.append(f"dimension_type = '{dimension_type}'")
+    return query_dataset(
+        DATASETS["children_vaccination"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="birth_year_birth_cohort DESC",
         limit=limit,
     )
 

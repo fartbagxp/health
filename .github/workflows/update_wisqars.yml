@@ -1,0 +1,42 @@
+name: Update WISQARS Data
+
+on:
+  schedule:
+    - cron: "0 15 * * 6" # At 15:00 UTC on Saturday (between cdc_open at 14:00 and wonder at 16:00)
+  workflow_dispatch:
+
+jobs:
+  update-wisqars-data:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          version: "latest"
+
+      - name: Download all WISQARS datasets
+        env:
+          CDC_DATA_APP_TOKEN: ${{ secrets.CDC_DATA_APP_TOKEN }}
+        run: |
+          uv run python -m wisqars.download
+
+      - name: Commit and push changes
+        run: |
+          git status
+          git config --local user.email "noreply@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/raw/wisqars/
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update of WISQARS data on $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push -u origin main
+          fi

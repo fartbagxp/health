@@ -486,6 +486,40 @@ DATASETS: dict[str, Dataset] = {
             "sample_size",
         ],
     ),
+    # ── COVID / flu / RSV hospitalization (NHSN / archived) ─────────────────
+    "covid_hosp_archived": Dataset(
+        id="7dk4-g6vg",
+        name="Weekly COVID-19 Hospitalization Metrics by Jurisdiction (Archived)",
+        description="Archived weekly COVID-19 hospital admissions, inpatient bed utilization, and staff ICU bed occupancy by state and national (USA) — data through May 2024 when mandatory reporting ended",
+        years="2020–2024",
+        key_columns=[
+            "week_ending_date",
+            "state",
+            "total_adm_all_covid_confirmed",
+            "avg_adm_all_covid_confirmed",
+            "avg_percent_inpatient_beds",
+            "avg_percent_staff_icu_beds",
+        ],
+    ),
+    "nhsn_hrd": Dataset(
+        id="ua7e-t2fy",
+        name="Weekly Hospital Respiratory Data (NHSN)",
+        description="Weekly hospital-reported COVID-19, influenza, and RSV new admissions, current inpatient/ICU patients, and bed occupancy by state/territory and nationally (jurisdiction='USA'), from NHSN (2020–present)",
+        years="2020–present",
+        key_columns=[
+            "weekendingdate",
+            "jurisdiction",
+            "totalconfc19newadm",
+            "totalconfflunewadm",
+            "totalconfrsvnewadm",
+            "totalconfc19hosppats",
+            "totalconffluhosppats",
+            "totalconfrsvhosppats",
+            "totalconfc19icupats",
+            "totalconffluicupats",
+            "totalconfrsvicupats",
+        ],
+    ),
     # ── Notifiable diseases (weekly) ─────────────────────────────────────────
     "nndss_weekly": Dataset(
         id="x9gk-5huc",

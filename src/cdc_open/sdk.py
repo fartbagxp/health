@@ -733,6 +733,59 @@ def get_children_vaccination(
     )
 
 
+def get_covid_hosp_archived(
+    state: str | None = "USA",
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Archived weekly COVID-19 hospital admissions and bed utilization (2020–May 2024).
+    state: two-letter code e.g. 'CA', 'TX', or 'USA' for national aggregate
+    start_date / end_date: 'YYYY-MM-DD'
+    Key metrics: total_adm_all_covid_confirmed (weekly admissions), avg_percent_inpatient_beds
+    """
+    clauses = []
+    if state:
+        clauses.append(f"state = '{state.upper()}'")
+    if start_date:
+        clauses.append(f"week_ending_date >= '{start_date}'")
+    if end_date:
+        clauses.append(f"week_ending_date <= '{end_date}'")
+    return query_dataset(
+        DATASETS["covid_hosp_archived"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week_ending_date ASC",
+        limit=limit,
+    )
+
+
+def get_nhsn_hrd(
+    jurisdiction: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly hospital COVID-19, flu, and RSV admissions and inpatient counts from NHSN (2020–present).
+    jurisdiction: two-letter state code e.g. 'CA', 'TX', or 'USA' for national
+    start_date / end_date: 'YYYY-MM-DD'
+    Key metrics: totalconfc19newadm, totalconfflunewadm, totalconfrsvnewadm (weekly new admissions)
+                 totalconfc19hosppats, totalconffluhosppats, totalconfrsvhosppats (current inpatients)
+    """
+    clauses = []
+    if jurisdiction:
+        clauses.append(f"jurisdiction = '{jurisdiction.upper()}'")
+    if start_date:
+        clauses.append(f"weekendingdate >= '{start_date}'")
+    if end_date:
+        clauses.append(f"weekendingdate <= '{end_date}'")
+    return query_dataset(
+        DATASETS["nhsn_hrd"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="weekendingdate DESC",
+        limit=limit,
+    )
+
+
 def get_nndss_weekly(
     state: str | None = None,
     year: str | None = None,

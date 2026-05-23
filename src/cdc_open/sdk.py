@@ -324,6 +324,70 @@ _WASTEWATER_SELECT = (
 )
 
 
+def get_wastewater_activity(
+    pathogen: str | None = None,
+    state: str | None = None,
+    category: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """CDC wastewater viral activity level (scored/categorized) for SARS-CoV-2, Flu A, and RSV (2023–present).
+    pathogen: 'SARS-CoV-2', 'Influenza A virus', 'Respiratory syncytial virus'
+    state: full state/territory name e.g. 'California'
+    category: 'Very Low', 'Low', 'Moderate', 'High', 'Very High'
+    start_date / end_date: 'YYYY-MM-DD'
+    Key metric: site_wval (score), site_wval_category (level label)
+    """
+    clauses = []
+    if pathogen:
+        clauses.append(f"pathogen_target = '{pathogen}'")
+    if state:
+        clauses.append(f"state_territory = '{state}'")
+    if category:
+        clauses.append(f"site_wval_category = '{category}'")
+    if start_date:
+        clauses.append(f"week_end >= '{start_date}'")
+    if end_date:
+        clauses.append(f"week_end <= '{end_date}'")
+    return query_dataset(
+        DATASETS["wastewater_activity"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week_end DESC",
+        limit=limit,
+    )
+
+
+def get_wastewater_h5(
+    state: str | None = None,
+    detected_only: bool = False,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Avian Influenza A (H5) wastewater sample data from US sampling sites (2024–present).
+    state: two-letter state abbreviation e.g. 'ca', 'tx' (lowercase in this dataset)
+    detected_only: only return samples where pcr_target_detect='yes'
+    start_date / end_date: 'YYYY-MM-DD'
+    Key metric: pcr_target_flowpop_lin (flow-population-normalized concentration)
+    """
+    clauses = []
+    if state:
+        clauses.append(f"state_territory = '{state.lower()}'")
+    if detected_only:
+        clauses.append("pcr_target_detect = 'yes'")
+    if start_date:
+        clauses.append(f"sample_collect_date >= '{start_date}'")
+    if end_date:
+        clauses.append(f"sample_collect_date <= '{end_date}'")
+    return query_dataset(
+        DATASETS["wastewater_h5"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="sample_collect_date DESC",
+        limit=limit,
+    )
+
+
 def get_wastewater_data(
     pathogen: str = "sars_cov2",
     state: str | None = None,
@@ -729,6 +793,192 @@ def get_children_vaccination(
         DATASETS["children_vaccination"].id,
         where=" AND ".join(clauses) if clauses else None,
         order="birth_year_birth_cohort DESC",
+        limit=limit,
+    )
+
+
+def get_ari_activity_state(
+    state: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly ARI activity level by state (2024–present) — FluView ILI activity map equivalent.
+    state: full state name e.g. 'California', or 'United States' for national
+    label: 'Minimal', 'Low', 'Moderate', 'High', 'Very High'
+    start_date / end_date: 'YYYY-MM-DD'
+    """
+    clauses = []
+    if state:
+        clauses.append(f"geography = '{state}'")
+    if start_date:
+        clauses.append(f"week_end >= '{start_date}'")
+    if end_date:
+        clauses.append(f"week_end <= '{end_date}'")
+    return query_dataset(
+        DATASETS["ari_activity_state"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week_end DESC",
+        limit=limit,
+    )
+
+
+def get_resp_ed_conditions(
+    condition: str | None = None,
+    age_group: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly % of ED visits for respiratory conditions by age group from NSSP (2023–present).
+    condition: 'Influenza', 'COVID-19', 'RSV', 'Pneumonia', 'Bronchiolitis',
+               'Acute upper respiratory infection', 'Bronchitis', 'Sore throat (including strep throat)'
+    age_group: 'Infants 0-1', 'Children 2-4', 'Children 5-17', 'Adults 18-64', 'Adults 65+', 'All ages'
+    start_date / end_date: 'YYYY-MM-DD'
+    """
+    clauses = []
+    if condition:
+        clauses.append(f"upper(condition) LIKE '%{condition.upper()}%'")
+    if age_group:
+        clauses.append(f"age_group = '{age_group}'")
+    if start_date:
+        clauses.append(f"week_end >= '{start_date}'")
+    if end_date:
+        clauses.append(f"week_end <= '{end_date}'")
+    return query_dataset(
+        DATASETS["resp_ed_conditions"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week_end DESC",
+        limit=limit,
+    )
+
+
+def get_resp_lens(
+    virus: str | None = None,
+    region: str | None = None,
+    season: str | None = None,
+    age_group: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """RESP-LENS weekly % positivity for 9 respiratory viruses from ED labs, by HHS region/age (2021–2024).
+    virus: 'Influenza A', 'Influenza B', 'RSV', 'SARS-CoV-2', 'Rhinovirus/Enterovirus',
+           'Adenovirus', 'Human Metapneumovirus', 'Parainfluenza'
+    region: 'Region 1' through 'Region 10', or 'National'
+    season: '2021-22', '2022-23', '2023-24'
+    age_group: '0-4 years', '5-17 years', '18-49 years', '50-64 years', '65+ years', 'All ages'
+    """
+    clauses = []
+    if virus:
+        clauses.append(f"upper(virus) LIKE '%{virus.upper()}%'")
+    if region:
+        clauses.append(f"region = '{region}'")
+    if season:
+        clauses.append(f"season = '{season}'")
+    if age_group:
+        clauses.append(f"age_gp = '{age_group}'")
+    return query_dataset(
+        DATASETS["resp_lens"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week DESC",
+        limit=limit,
+    )
+
+
+def get_epidemic_trends_rt(
+    disease: str | None = None,
+    state: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly estimated Rt and epidemic trend category for COVID-19 and influenza by state (2020–present).
+    disease: 'COVID-19', 'Influenza'
+    state: full state name e.g. 'California', or 'United States'
+    start_date / end_date: 'YYYY-MM-DD' (filters on `date` field)
+    Key metrics: median/lower/upper (Rt estimate + CI), p_growing (probability of growth),
+                 category ('Growing', 'Likely Growing', 'Stable', 'Likely Declining', 'Declining')
+    """
+    clauses = []
+    if disease:
+        clauses.append(f"disease = '{disease}'")
+    if state:
+        clauses.append(f"state = '{state}'")
+    if start_date:
+        clauses.append(f"date >= '{start_date}'")
+    if end_date:
+        clauses.append(f"date <= '{end_date}'")
+    return query_dataset(
+        DATASETS["epidemic_trends_rt"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="date DESC",
+        limit=limit,
+    )
+
+
+def get_nvsn_pathogen_positivity(
+    pathogen: str | None = None,
+    age_group: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly % positivity for 9 viral pathogens in children with ARI from NVSN (2017–present).
+    pathogen: 'Influenza A', 'Influenza B', 'RSV', 'SARS-CoV-2', 'Rhinovirus/Enterovirus',
+              'Adenovirus', 'Human Metapneumovirus', 'Parainfluenza'
+    age_group: '--- 0-2 months', '--- 2-6 months', '--- 6-24 months', '--- 2-4 years', '--- 5-17 years'
+    start_date / end_date: 'YYYY-MM-DD'
+    """
+    clauses = []
+    if pathogen:
+        clauses.append(f"upper(pathogen) LIKE '%{pathogen.upper()}%'")
+    if age_group:
+        clauses.append(f"age_group = '{age_group}'")
+    if start_date:
+        clauses.append(f"mmwr_week_end >= '{start_date}'")
+    if end_date:
+        clauses.append(f"mmwr_week_end <= '{end_date}'")
+    return query_dataset(
+        DATASETS["nvsn_pathogen_positivity"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="mmwr_week_end DESC",
+        limit=limit,
+    )
+
+
+def get_cumulative_rsv_hosp(
+    season: str | None = None,
+    limit: int = 200,
+) -> list[dict[str, Any]]:
+    """Preliminary weekly estimates of cumulative US RSV hospitalizations (2024–present).
+    season: '2024-2025'
+    Key columns: date, burden (always 'Hospitalizations'), low/high (95% CI)
+    """
+    clauses = []
+    if season:
+        clauses.append(f"season = '{season}'")
+    return query_dataset(
+        DATASETS["cumulative_rsv_hosp"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="date DESC",
+        limit=limit,
+    )
+
+
+def get_cumulative_covid_hosp(
+    season: str | None = None,
+    limit: int = 200,
+) -> list[dict[str, Any]]:
+    """Preliminary weekly estimates of cumulative US COVID-19 hospitalizations (2024–present).
+    season: '2024-2025'
+    Key columns: date, burden (always 'Hospitalizations'), low/high (95% CI)
+    """
+    clauses = []
+    if season:
+        clauses.append(f"season = '{season}'")
+    return query_dataset(
+        DATASETS["cumulative_covid_hosp"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="date DESC",
         limit=limit,
     )
 

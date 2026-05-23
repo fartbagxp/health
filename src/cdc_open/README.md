@@ -2,7 +2,7 @@
 
 Python SDK and CLI for [data.cdc.gov](https://data.cdc.gov) — U.S. public health statistics via the Socrata SODA API.
 
-14 datasets covering mortality, birth, COVID-19, disability, nutrition, and county/city health indicators.
+43 datasets covering mortality, birth, COVID-19, flu, RSV, wastewater surveillance, injury, disability, nutrition, and county/city health indicators.
 
 ## Setup
 
@@ -256,37 +256,103 @@ for block in response.content:
 
 ## Available datasets
 
-| Key                      | Dataset ID  | Coverage     | Description                                             |
-| ------------------------ | ----------- | ------------ | ------------------------------------------------------- |
-| `leading_death`          | `bi63-dtpu` | 1999–2017    | Leading causes of death by state                        |
-| `life_expectancy`        | `w9j2-ggv5` | 1900–2018    | Life expectancy by race and sex                         |
-| `mortality_rates`        | `489q-934x` | 2020–present | Provisional quarterly death rates                       |
-| `places_county`          | `swc5-untb` | Current      | County health indicators (30+ measures)                 |
-| `places_city`            | `dxpw-cm5u` | Current      | City health indicators (pop. > 50k)                     |
-| `covid_cases`            | `pwn4-m3yp` | 2020–2023    | Weekly COVID-19 cases and deaths                        |
-| `covid_conditions`       | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition               |
-| `weekly_deaths`          | `r8kw-7aab` | 2020–present | Weekly deaths by state (updated weekly)                 |
-| `disability`             | `s2qv-b27b` | Current      | Disability prevalence by type and state                 |
-| `weekly_deaths_by_cause` | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                                  |
-| `drug_overdose_state`    | `xbxb-epbu` | 1999–2016    | Drug overdose mortality by state                        |
-| `nutrition_obesity`      | `hn4x-zwk7` | Current      | Obesity, inactivity, nutrition by state                 |
-| `death_rates_historical` | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes                 |
-| `birth_indicators`       | `76vv-a7x8` | Current      | Quarterly birth indicators by race                      |
-| `wastewater_covid`       | `j9g8-acpt` | 2020–present | NWSS wastewater: SARS-CoV-2 (weekly)                    |
-| `wastewater_flu`         | `ymmh-divb` | 2022–present | NWSS wastewater: Influenza A (weekly)                   |
-| `wastewater_measles`     | `akvg-8vrb` | 2024–present | NWSS wastewater: Measles (weekly)                       |
-| `resp_net`               | `kvib-3txy` | 2017–present | RESP-NET hospitalization rates: RSV/COVID/Flu (weekly)  |
-| `rsv_net`                | `29hc-w46k` | 2018–present | RSV-NET RSV hospitalization rates (weekly)              |
-| `covid_net`              | `6jg4-xsqq` | 2020–present | COVID-NET COVID-19 hospitalization rates (weekly)       |
-| `resp_deaths_pct`        | `4bc2-bbpq` | 2020–present | Provisional % deaths: COVID/Flu/RSV (weekly)            |
-| `resp_deaths_pct_demo`   | `53g5-jf7x` | 2020–present | Provisional % deaths by age/sex/race (weekly)           |
-| `rsv_positivity`         | `3cxc-4k8q` | 2020–present | RSV NAAT test positivity by HHS region (weekly)         |
-| `nursing_home_resp`      | `tscn-ryh9` | 2024–present | Nursing home COVID/Flu/RSV cases + vaccination (weekly) |
-| `resp_vaccination`       | `5c6r-xi2t` | 2023–present | Flu/COVID-19/RSV vaccination coverage (weekly)          |
-| `flu_vaccine_doses`      | `k87d-gv3u` | 2009–present | Cumulative flu vaccine doses distributed (weekly)       |
-| `drug_overdose_vsrr`     | `xkb8-kh2a` | 2015–present | VSRR provisional OD deaths by state/drug (monthly)      |
-| `drug_overdose_county`   | `gb4e-yj24` | 2020–present | VSRR county-level OD death counts (quarterly)           |
-| `nndss_weekly`           | `x9gk-5huc` | 2014–present | NNDSS weekly notifiable disease cases (weekly)          |
+### Mortality & chronic disease
+
+| Key                      | Dataset ID  | Coverage     | Description                                          |
+| ------------------------ | ----------- | ------------ | ---------------------------------------------------- |
+| `leading_death`          | `bi63-dtpu` | 1999–2017    | Leading causes of death by state                     |
+| `life_expectancy`        | `w9j2-ggv5` | 1900–2018    | Life expectancy by race and sex                      |
+| `mortality_rates`        | `489q-934x` | 2020–present | Provisional quarterly death rates                    |
+| `death_rates_historical` | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes              |
+| `weekly_deaths`          | `r8kw-7aab` | 2020–present | Weekly deaths by state: COVID/flu/pneumonia (weekly) |
+| `weekly_deaths_by_cause` | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                               |
+| `covid_conditions`       | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition            |
+
+### County / city health
+
+| Key                 | Dataset ID  | Coverage | Description                             |
+| ------------------- | ----------- | -------- | --------------------------------------- |
+| `places_county`     | `swc5-untb` | Current  | County health indicators (30+ measures) |
+| `places_city`       | `dxpw-cm5u` | Current  | City health indicators (pop. > 50k)     |
+| `disability`        | `s2qv-b27b` | Current  | Disability prevalence by type and state |
+| `nutrition_obesity` | `hn4x-zwk7` | Current  | Obesity, inactivity, nutrition by state |
+
+### COVID-19
+
+| Key                     | Dataset ID  | Coverage     | Description                                               |
+| ----------------------- | ----------- | ------------ | --------------------------------------------------------- |
+| `covid_cases`           | `pwn4-m3yp` | 2020–2023    | Weekly COVID-19 cases and deaths by state                 |
+| `covid_hosp_archived`   | `7dk4-g6vg` | 2020–2024    | Weekly hospital admissions and bed utilization (archived) |
+| `cumulative_covid_hosp` | `xnjn-rdmd` | 2024–present | Preliminary cumulative COVID-19 hospitalization estimates |
+| `covid_net`             | `6jg4-xsqq` | 2020–present | COVID-NET hospitalization rates by state/age (weekly)     |
+| `epidemic_trends_rt`    | `5dqz-y4ea` | 2020–present | Estimated Rt and epidemic trend category for COVID/flu    |
+
+### Flu & RSV surveillance
+
+| Key                        | Dataset ID  | Coverage     | Description                                                     |
+| -------------------------- | ----------- | ------------ | --------------------------------------------------------------- |
+| `ari_activity_state`       | `f3zz-zga5` | 2024–present | State-level ARI activity labels — FluView ILI map equivalent    |
+| `resp_ed_conditions`       | `v58w-vynu` | 2023–present | Weekly % ED visits by respiratory condition + age group         |
+| `resp_lens`                | `ch5i-63ve` | 2021–2024    | RESP-LENS % positivity for 9 viruses by HHS region (ED network) |
+| `nvsn_pathogen_positivity` | `kipu-qxy8` | 2017–present | % positivity for 9 pathogens in children with ARI (NVSN)        |
+| `resp_net`                 | `kvib-3txy` | 2017–present | RESP-NET hospitalization rates: RSV/COVID/Flu (weekly)          |
+| `rsv_net`                  | `29hc-w46k` | 2018–present | RSV-NET RSV hospitalization rates (weekly)                      |
+| `rsv_positivity`           | `3cxc-4k8q` | 2020–present | RSV NAAT test positivity by HHS region (NREVSS, weekly)         |
+| `nrevss_rsv_historic`      | `52kb-ccu2` | 2010–2020    | Historical RSV lab data by HHS region (NREVSS)                  |
+| `cumulative_rsv_hosp`      | `hmye-mqgq` | 2024–present | Preliminary cumulative RSV hospitalization estimates            |
+
+### NHSN hospital data
+
+| Key                 | Dataset ID  | Coverage     | Description                                                          |
+| ------------------- | ----------- | ------------ | -------------------------------------------------------------------- |
+| `nhsn_hrd`          | `ua7e-t2fy` | 2020–present | Weekly COVID/flu/RSV new admissions, inpatients, ICU by jurisdiction |
+| `nursing_home_resp` | `tscn-ryh9` | 2024–present | Nursing home COVID/Flu/RSV cases + vaccination (weekly)              |
+
+### Deaths by pathogen
+
+| Key                    | Dataset ID  | Coverage     | Description                                             |
+| ---------------------- | ----------- | ------------ | ------------------------------------------------------- |
+| `resp_deaths_pct`      | `4bc2-bbpq` | 2020–present | Provisional % deaths: COVID/Flu/RSV nationally (weekly) |
+| `resp_deaths_pct_demo` | `53g5-jf7x` | 2020–present | Provisional % deaths by age/sex/race/state (weekly)     |
+
+### Vaccination
+
+| Key                    | Dataset ID  | Coverage     | Description                                             |
+| ---------------------- | ----------- | ------------ | ------------------------------------------------------- |
+| `resp_vaccination`     | `5c6r-xi2t` | 2023–present | Flu/COVID-19/RSV vaccination coverage (weekly)          |
+| `flu_vaccine_doses`    | `k87d-gv3u` | 2009–present | Cumulative flu vaccine doses distributed (weekly)       |
+| `children_vaccination` | `fhky-rtsk` | 2011–2022    | NIS-Child vaccination coverage for children 0–35 months |
+
+### Wastewater surveillance (NWSS / NHSN)
+
+| Key                   | Dataset ID  | Coverage     | Description                                                                    |
+| --------------------- | ----------- | ------------ | ------------------------------------------------------------------------------ |
+| `wastewater_covid`    | `j9g8-acpt` | 2020–present | NWSS raw RNA concentrations: SARS-CoV-2 (weekly)                               |
+| `wastewater_flu`      | `ymmh-divb` | 2022–present | NWSS raw RNA concentrations: Influenza A (weekly)                              |
+| `wastewater_measles`  | `akvg-8vrb` | 2024–present | NWSS raw RNA concentrations: Measles (weekly)                                  |
+| `wastewater_activity` | `atcp-73re` | 2023–present | NWSS viral activity level scores (Very Low→Very High) for SARS-CoV-2/Flu A/RSV |
+| `wastewater_h5`       | `mtpu-urpp` | 2024–present | Avian Influenza A (H5) wastewater concentrations (weekly)                      |
+
+### Drug overdose
+
+| Key                    | Dataset ID  | Coverage     | Description                                        |
+| ---------------------- | ----------- | ------------ | -------------------------------------------------- |
+| `drug_overdose_vsrr`   | `xkb8-kh2a` | 2015–present | VSRR provisional OD deaths by state/drug (monthly) |
+| `drug_overdose_county` | `gb4e-yj24` | 2020–present | VSRR county-level OD death counts (quarterly)      |
+| `drug_overdose_state`  | `xbxb-epbu` | 1999–2016    | Drug overdose mortality rates by state/race/sex    |
+
+### ED & surveillance
+
+| Key              | Dataset ID  | Coverage     | Description                                                    |
+| ---------------- | ----------- | ------------ | -------------------------------------------------------------- |
+| `nssp_ed_visits` | `rdmq-nq56` | 2022–present | NSSP weekly % ED visits for COVID/flu/RSV with trend direction |
+| `nndss_weekly`   | `x9gk-5huc` | 2014–present | NNDSS weekly notifiable disease cases (~100 diseases)          |
+
+### Birth & demographics
+
+| Key                | Dataset ID  | Coverage | Description                        |
+| ------------------ | ----------- | -------- | ---------------------------------- |
+| `birth_indicators` | `76vv-a7x8` | Current  | Quarterly birth indicators by race |
 
 ## Wastewater surveillance (NWSS)
 

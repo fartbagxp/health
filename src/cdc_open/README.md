@@ -2,7 +2,7 @@
 
 Python SDK and CLI for [data.cdc.gov](https://data.cdc.gov) — U.S. public health statistics via the Socrata SODA API.
 
-43 datasets covering mortality, birth, COVID-19, flu, RSV, wastewater surveillance, injury, disability, nutrition, and county/city health indicators.
+51 datasets covering mortality, birth, COVID-19, flu, RSV, vaccination coverage, wastewater surveillance, injury, disability, nutrition, and county/city health indicators.
 
 ## Setup
 
@@ -317,11 +317,19 @@ for block in response.content:
 
 ### Vaccination
 
-| Key                    | Dataset ID  | Coverage     | Description                                             |
-| ---------------------- | ----------- | ------------ | ------------------------------------------------------- |
-| `resp_vaccination`     | `5c6r-xi2t` | 2023–present | Flu/COVID-19/RSV vaccination coverage (weekly)          |
-| `flu_vaccine_doses`    | `k87d-gv3u` | 2009–present | Cumulative flu vaccine doses distributed (weekly)       |
-| `children_vaccination` | `fhky-rtsk` | 2011–2022    | NIS-Child vaccination coverage for children 0–35 months |
+| Key                                 | Dataset ID  | Coverage     | Description                                                    |
+| ----------------------------------- | ----------- | ------------ | -------------------------------------------------------------- |
+| `resp_vaccination`                  | `5c6r-xi2t` | 2023–present | Weekly flu/COVID-19/RSV coverage, children + adults, by state  |
+| `flu_vaccine_doses`                 | `k87d-gv3u` | 2009–present | Cumulative flu vaccine doses distributed nationally (weekly)   |
+| `flu_coverage_all_ages`             | `vh55-3he6` | 2009–present | NIS-Flu monthly flu coverage, all ages 6+, by state/age/race   |
+| `resp_coverage_adults`              | `ee83-ukst` | 2024–present | NIS-FRVM monthly COVID/flu/RSV coverage among adults, by state |
+| `covid_coverage_adults`             | `si7g-c2bs` | 2021–present | NIS-ACM monthly COVID-19 coverage + vaccine confidence, adults |
+| `rsv_coverage_adults_60plus`        | `qve4-fp9c` | 2023–present | Weekly cumulative RSV coverage, adults 60+, by jurisdiction    |
+| `adult_vaccination_coverage`        | `aetd-68ew` | 2008–present | BRFSS annual coverage: pneumococcal, shingles, tetanus, adults |
+| `pregnant_vaccination_coverage`     | `h7pm-wmjc` | 2012–present | Annual flu + Tdap coverage among pregnant women, by state      |
+| `nursing_home_vaccination_coverage` | `8w4j-reb4` | 2005–2021    | Annual flu + pneumococcal coverage, nursing home residents     |
+| `hcp_vaccination_coverage`          | `xerk-pcm8` | 2013–2021    | Annual flu coverage among health care personnel, by state      |
+| `children_vaccination`              | `fhky-rtsk` | 2011–2022    | NIS-Child coverage for children 0–35 months (DTaP, MMR, flu…)  |
 
 ### Wastewater surveillance (NWSS / NHSN)
 

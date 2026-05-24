@@ -706,6 +706,240 @@ def get_drug_overdose_county(
     )
 
 
+def get_flu_coverage_all_ages(
+    geography: str | None = None,
+    geography_type: str | None = None,
+    season: str | None = None,
+    dimension_type: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Monthly cumulative influenza vaccination coverage for all ages 6+ months by state (NIS-Flu, 2009–present).
+    geography: county/state name e.g. 'California' — for national use geography_type='HHS Regions/National'
+    geography_type: 'States/Local Areas', 'HHS Regions/National'
+    season: '2024-25', '2023-24'
+    dimension_type: 'Age', 'Race/Ethnicity', 'Poverty', 'Overall'
+    Key metric: coverage_estimate (%)
+    """
+    clauses = []
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if geography_type:
+        clauses.append(f"geography_type = '{geography_type}'")
+    if season:
+        clauses.append(f"year_season = '{season}'")
+    if dimension_type:
+        clauses.append(f"dimension_type = '{dimension_type}'")
+    return query_dataset(
+        DATASETS["flu_coverage_all_ages"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="year_season DESC, month DESC",
+        limit=limit,
+    )
+
+
+def get_resp_coverage_adults(
+    geography: str | None = None,
+    vaccine: str | None = None,
+    year: int | None = None,
+    dimension: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Monthly COVID-19, flu, and RSV vaccination coverage among adults from NIS-FRVM (2024–present).
+    geography: state name e.g. 'California', or 'National'
+    vaccine: 'COVID-19', 'Influenza', 'RSV'  (filters on new_vax_group)
+    year: 2024, 2025
+    dimension: demographic group e.g. 'Black, Non-Hispanic', 'Age 65+'
+    Key metric: dsss_value (% vaccinated), dsss_confidenceinterval
+    """
+    clauses = []
+    if geography:
+        clauses.append(f"geographic_label = '{geography}'")
+    if vaccine:
+        clauses.append(f"new_vax_group = '{vaccine}'")
+    if year:
+        clauses.append(f"dsss_year = '{year}'")
+    if dimension:
+        clauses.append(
+            f"upper(dsss_group_variable_category) LIKE '%{dimension.upper()}%'"
+        )
+    return query_dataset(
+        DATASETS["resp_coverage_adults"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="dsss_year DESC",
+        limit=limit,
+    )
+
+
+def get_covid_coverage_adults(
+    geography: str | None = None,
+    year: int | None = None,
+    indicator: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Monthly COVID-19 vaccination coverage and vaccine confidence among adults from NIS-ACM.
+    geography: state name e.g. 'California', or 'National'
+    year: 2021–present
+    indicator: partial match on indicator_name e.g. 'Up to date', 'Received a 2024'
+    Key metric: estimate (%), _95_ci
+    """
+    clauses = []
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if year:
+        clauses.append(f"year = '{year}'")
+    if indicator:
+        clauses.append(f"upper(indicator_name) LIKE '%{indicator.upper()}%'")
+    return query_dataset(
+        DATASETS["covid_coverage_adults"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="year DESC",
+        limit=limit,
+    )
+
+
+def get_rsv_coverage_adults_60plus(
+    geography: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly cumulative RSV vaccination coverage among adults 60+ by state (2023–present).
+    geography: state name e.g. 'California', or 'National'
+    start_date / end_date: 'YYYY-MM-DD'
+    Key metric: estimate (% vaccinated), ci_half_width_95pct
+    """
+    clauses = []
+    if geography:
+        clauses.append(f"geographic_name = '{geography}'")
+    if start_date:
+        clauses.append(f"week_ending >= '{start_date}'")
+    if end_date:
+        clauses.append(f"week_ending <= '{end_date}'")
+    return query_dataset(
+        DATASETS["rsv_coverage_adults_60plus"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="week_ending DESC",
+        limit=limit,
+    )
+
+
+def get_adult_vaccination_coverage(
+    vaccine: str | None = None,
+    geography: str | None = None,
+    year: str | None = None,
+    dimension_type: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual vaccination coverage for adults 18+ from BRFSS by state/demographics (2008–present).
+    vaccine: 'Pneumococcal', 'Zoster (Shingles)', 'Tetanus'
+            (for flu use get_flu_coverage_all_ages; for COVID/RSV use get_resp_coverage_adults)
+    geography: state name e.g. 'California'
+    year: '2022', '2021' (through 2022 for most vaccines)
+    dimension_type: 'Age', 'Race/Ethnicity', 'Insurance', 'Poverty', 'Overall'
+    Key metric: coverage_estimate (%), _95_ci
+    """
+    clauses = []
+    if vaccine:
+        clauses.append(f"upper(vaccine) LIKE '%{vaccine.upper()}%'")
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if year:
+        clauses.append(f"year_season = '{year}'")
+    if dimension_type:
+        clauses.append(f"upper(dimension_type) LIKE '%{dimension_type.upper()}%'")
+    return query_dataset(
+        DATASETS["adult_vaccination_coverage"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="year_season DESC",
+        limit=limit,
+    )
+
+
+def get_pregnant_vaccination_coverage(
+    vaccine: str | None = None,
+    geography: str | None = None,
+    season: str | None = None,
+    dimension_type: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual flu and Tdap vaccination coverage among pregnant women by state (2012–present).
+    vaccine: 'Influenza', 'Tdap'
+    geography: state name e.g. 'California', or 'United States'
+    season: '2022', '2021'
+    dimension_type: 'Race and Ethnicity', 'Age', 'Insurance', 'Overall'
+    Key metric: coverage_estimate (%), _95_ci
+    """
+    clauses = []
+    if vaccine:
+        clauses.append(f"vaccine = '{vaccine}'")
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if season:
+        clauses.append(f"year_season = '{season}'")
+    if dimension_type:
+        clauses.append(f"dimension_type = '{dimension_type}'")
+    return query_dataset(
+        DATASETS["pregnant_vaccination_coverage"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="year_season DESC",
+        limit=limit,
+    )
+
+
+def get_nursing_home_vaccination_coverage(
+    vaccine: str | None = None,
+    geography: str | None = None,
+    season: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual flu and pneumococcal vaccination coverage among nursing home residents by state (2005–2021).
+    vaccine: 'Seasonal Influenza', 'Pneumococcal'
+    geography: state name, HHS region e.g. 'Region 1', or 'National'
+    season: '2020-21', '2019-20'
+    Key metric: coverage_estimate (%)
+    """
+    clauses = []
+    if vaccine:
+        clauses.append(f"vaccine = '{vaccine}'")
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if season:
+        clauses.append(f"year_season = '{season}'")
+    return query_dataset(
+        DATASETS["nursing_home_vaccination_coverage"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="year_season DESC",
+        limit=limit,
+    )
+
+
+def get_hcp_vaccination_coverage(
+    geography: str | None = None,
+    season: str | None = None,
+    personnel_type: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual influenza vaccination coverage among health care personnel by state (2013–2021).
+    geography: state name e.g. 'California', or 'National'
+    season: '2020-21', '2019-20'
+    personnel_type: partial match e.g. 'Nurse', 'Physician', 'Volunteer'
+    Key metric: coverage_estimate (%), _95_ci
+    """
+    clauses = []
+    if geography:
+        clauses.append(f"geography = '{geography}'")
+    if season:
+        clauses.append(f"year_season = '{season}'")
+    if personnel_type:
+        clauses.append(f"upper(dimension) LIKE '%{personnel_type.upper()}%'")
+    return query_dataset(
+        DATASETS["hcp_vaccination_coverage"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="year_season DESC",
+        limit=limit,
+    )
+
+
 def get_nssp_ed_visits(
     geography: str | None = None,
     start_date: str | None = None,

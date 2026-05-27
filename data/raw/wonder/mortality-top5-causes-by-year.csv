@@ -1,0 +1,231 @@
+year,rank,cause,deaths
+1979,1,Diseases of the circulatory system,963037
+1979,2,Neoplasms,409299
+1979,3,External causes of injury and poisoning,158945
+1979,4,Diseases of the respiratory system,111547
+1979,5,Diseases of the digestive system,72135
+1980,1,Diseases of the circulatory system,993348
+1980,2,Neoplasms,422702
+1980,3,External causes of injury and poisoning,160551
+1980,4,Diseases of the respiratory system,128828
+1980,5,Diseases of the digestive system,75202
+1981,1,Diseases of the circulatory system,977694
+1981,2,Neoplasms,428329
+1981,3,External causes of injury and poisoning,155576
+1981,4,Diseases of the respiratory system,131329
+1981,5,Diseases of the digestive system,74103
+1982,1,Diseases of the circulatory system,972552
+1982,2,Neoplasms,440255
+1982,3,External causes of injury and poisoning,147894
+1982,4,Diseases of the respiratory system,127754
+1982,5,Diseases of the digestive system,72642
+1983,1,Diseases of the circulatory system,986132
+1983,2,Neoplasms,449469
+1983,3,External causes of injury and poisoning,144091
+1983,4,Diseases of the respiratory system,142835
+1983,5,Diseases of the digestive system,72621
+1984,1,Diseases of the circulatory system,978171
+1984,2,Neoplasms,459928
+1984,3,Diseases of the respiratory system,149686
+1984,4,External causes of injury and poisoning,145012
+1984,5,Diseases of the digestive system,73813
+1985,1,Diseases of the circulatory system,982739
+1985,2,Neoplasms,468262
+1985,3,Diseases of the respiratory system,166189
+1985,4,External causes of injury and poisoning,145648
+1985,5,Diseases of the digestive system,74805
+1986,1,Diseases of the circulatory system,972917
+1986,2,Neoplasms,476106
+1986,3,Diseases of the respiratory system,170938
+1986,4,External causes of injury and poisoning,151032
+1986,5,Diseases of the digestive system,74348
+1987,1,Diseases of the circulatory system,968434
+1987,2,Neoplasms,483497
+1987,3,Diseases of the respiratory system,172834
+1987,4,External causes of injury and poisoning,149942
+1987,5,Diseases of the digestive system,75451
+1988,1,Diseases of the circulatory system,973969
+1988,2,Neoplasms,491783
+1988,3,Diseases of the respiratory system,187006
+1988,4,External causes of injury and poisoning,152572
+1988,5,Diseases of the digestive system,76355
+1989,1,Diseases of the circulatory system,936157
+1989,2,Neoplasms,502853
+1989,3,Diseases of the respiratory system,187008
+1989,4,External causes of injury and poisoning,150869
+1989,5,Diseases of the digestive system,76121
+1990,1,Diseases of the circulatory system,920245
+1990,2,Neoplasms,512074
+1990,3,Diseases of the respiratory system,192205
+1990,4,External causes of injury and poisoning,150211
+1990,5,Diseases of the digestive system,75177
+1991,1,Diseases of the circulatory system,920482
+1991,2,Neoplasms,521651
+1991,3,Diseases of the respiratory system,195433
+1991,4,External causes of injury and poisoning,149187
+1991,5,Diseases of the digestive system,75558
+1992,1,Diseases of the circulatory system,917908
+1992,2,Neoplasms,527648
+1992,3,Diseases of the respiratory system,194312
+1992,4,External causes of injury and poisoning,145655
+1992,5,Diseases of the digestive system,75996
+1993,1,Diseases of the circulatory system,952210
+1993,2,Neoplasms,537345
+1993,3,Diseases of the respiratory system,212020
+1993,4,External causes of injury and poisoning,151061
+1993,5,Diseases of the digestive system,76746
+1994,1,Diseases of the circulatory system,944775
+1994,2,Neoplasms,541827
+1994,3,Diseases of the respiratory system,211523
+1994,4,External causes of injury and poisoning,150940
+1994,5,Diseases of the digestive system,77432
+1995,1,Diseases of the circulatory system,955591
+1995,2,Neoplasms,546214
+1995,3,Diseases of the respiratory system,215081
+1995,4,External causes of injury and poisoning,150809
+1995,5,"Endocrine, nutritional and metabolic diseases, and immunity disorders",79620
+1996,1,Diseases of the circulatory system,954407
+1996,2,Neoplasms,547180
+1996,3,Diseases of the respiratory system,220368
+1996,4,External causes of injury and poisoning,150298
+1996,5,"Endocrine, nutritional and metabolic diseases, and immunity disorders",82767
+1997,1,Diseases of the circulatory system,948412
+1997,2,Neoplasms,547236
+1997,3,Diseases of the respiratory system,227942
+1997,4,External causes of injury and poisoning,149691
+1997,5,"Endocrine, nutritional and metabolic diseases, and immunity disorders",84967
+1998,1,Diseases of the circulatory system,944962
+1998,2,Neoplasms,549465
+1998,3,Diseases of the respiratory system,238999
+1998,4,External causes of injury and poisoning,150445
+1998,5,"Endocrine, nutritional and metabolic diseases, and immunity disorders",88158
+1999,1,Diseases of the circulatory system,954339
+1999,2,Neoplasms,563065
+1999,3,Diseases of the respiratory system,229863
+1999,4,External causes of morbidity and mortality,151109
+1999,5,"Endocrine, nutritional and metabolic diseases",92872
+2000,1,Diseases of the circulatory system,941526
+2000,2,Neoplasms,566637
+2000,3,Diseases of the respiratory system,231079
+2000,4,External causes of morbidity and mortality,151268
+2000,5,"Endocrine, nutritional and metabolic diseases",94345
+2001,1,Diseases of the circulatory system,926999
+2001,2,Neoplasms,567444
+2001,3,Diseases of the respiratory system,230009
+2001,4,External causes of morbidity and mortality,157173
+2001,5,"Endocrine, nutritional and metabolic diseases",96820
+2002,1,Diseases of the circulatory system,923339
+2002,2,Neoplasms,570570
+2002,3,Diseases of the respiratory system,234629
+2002,4,External causes of morbidity and mortality,164111
+2002,5,Diseases of the nervous system,103064
+2003,1,Diseases of the circulatory system,907180
+2003,2,Neoplasms,570465
+2003,3,Diseases of the respiratory system,235935
+2003,4,External causes of morbidity and mortality,166857
+2003,5,Diseases of the nervous system,109640
+2004,1,Diseases of the circulatory system,865863
+2004,2,Neoplasms,567468
+2004,3,Diseases of the respiratory system,227093
+2004,4,External causes of morbidity and mortality,170067
+2004,5,Diseases of the nervous system,111751
+2005,1,Diseases of the circulatory system,860843
+2005,2,Neoplasms,573022
+2005,3,Diseases of the respiratory system,239680
+2005,4,External causes of morbidity and mortality,176406
+2005,5,Diseases of the nervous system,120713
+2006,1,Diseases of the circulatory system,827741
+2006,2,Neoplasms,574010
+2006,3,Diseases of the respiratory system,226661
+2006,4,External causes of morbidity and mortality,181586
+2006,5,Diseases of the nervous system,122965
+2007,1,Diseases of the circulatory system,810257
+2007,2,Neoplasms,577079
+2007,3,Diseases of the respiratory system,227307
+2007,4,External causes of morbidity and mortality,185076
+2007,5,Diseases of the nervous system,126997
+2008,1,Diseases of the circulatory system,808525
+2008,2,Neoplasms,579939
+2008,3,Diseases of the respiratory system,245099
+2008,4,External causes of morbidity and mortality,183816
+2008,5,Diseases of the nervous system,136607
+2009,1,Diseases of the circulatory system,784742
+2009,2,Neoplasms,582233
+2009,3,Diseases of the respiratory system,238636
+2009,4,External causes of morbidity and mortality,179770
+2009,5,Diseases of the nervous system,134168
+2010,1,Diseases of the circulatory system,784454
+2010,2,Neoplasms,589660
+2010,3,Diseases of the respiratory system,237433
+2010,4,External causes of morbidity and mortality,183301
+2010,5,Diseases of the nervous system,141106
+2011,1,Diseases of the circulatory system,783475
+2011,2,Neoplasms,591688
+2011,3,Diseases of the respiratory system,248742
+2011,4,External causes of morbidity and mortality,190048
+2011,5,Diseases of the nervous system,144920
+2012,1,Diseases of the circulatory system,787431
+2012,2,Neoplasms,597679
+2012,3,Diseases of the respiratory system,246311
+2012,4,External causes of morbidity and mortality,192988
+2012,5,Mental and behavioural disorders,147917
+2013,1,Diseases of the circulatory system,800937
+2013,2,Neoplasms,600113
+2013,3,Diseases of the respiratory system,261071
+2013,4,External causes of morbidity and mortality,195710
+2013,5,Mental and behavioural disorders,156415
+2014,1,Diseases of the circulatory system,807775
+2014,2,Neoplasms,607739
+2014,3,Diseases of the respiratory system,258333
+2014,4,External causes of morbidity and mortality,202292
+2014,5,Diseases of the nervous system,165434
+2015,1,Diseases of the circulatory system,836546
+2015,2,Neoplasms,612207
+2015,3,Diseases of the respiratory system,271229
+2015,4,External causes of morbidity and mortality,216689
+2015,5,Diseases of the nervous system,190512
+2016,1,Diseases of the circulatory system,840678
+2016,2,Neoplasms,613832
+2016,3,Diseases of the respiratory system,266037
+2016,4,External causes of morbidity and mortality,235194
+2016,5,Diseases of the nervous system,202352
+2017,1,Diseases of the circulatory system,859125
+2017,2,Neoplasms,614932
+2017,3,Diseases of the respiratory system,278673
+2017,4,External causes of morbidity and mortality,247496
+2017,5,Diseases of the nervous system,216353
+2018,1,Diseases of the circulatory system,868662
+2018,2,Neoplasms,614914
+2018,3,Diseases of the respiratory system,282641
+2018,4,External causes of morbidity and mortality,245186
+2018,5,Diseases of the nervous system,224937
+2019,1,Diseases of the circulatory system,874613
+2019,2,Neoplasms,615191
+2019,3,Diseases of the respiratory system,271026
+2019,4,External causes of morbidity and mortality,251350
+2019,5,Diseases of the nervous system,233715
+2020,1,Diseases of the circulatory system,928741
+2020,2,Neoplasms,618579
+2020,3,Codes for special purposes,350921
+2020,4,External causes of morbidity and mortality,283705
+2020,5,Diseases of the respiratory system,270506
+2021,1,Diseases of the circulatory system,931578
+2021,2,Neoplasms,621450
+2021,3,Codes for special purposes,416927
+2021,4,External causes of morbidity and mortality,312137
+2021,5,Diseases of the nervous system,251546
+2022,1,Diseases of the circulatory system,941652
+2022,2,Neoplasms,624405
+2022,3,External causes of morbidity and mortality,311511
+2022,4,Diseases of the nervous system,264446
+2022,5,Diseases of the respiratory system,263381
+2023,1,Diseases of the circulatory system,915973
+2023,2,Neoplasms,629491
+2023,3,External causes of morbidity and mortality,303858
+2023,4,Diseases of the nervous system,263614
+2023,5,Diseases of the respiratory system,261113
+2024,1,Diseases of the circulatory system,922403
+2024,2,Neoplasms,636120
+2024,3,Diseases of the nervous system,277632
+2024,4,External causes of morbidity and mortality,275018
+2024,5,Diseases of the respiratory system,264752

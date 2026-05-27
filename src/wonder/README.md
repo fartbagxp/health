@@ -32,11 +32,11 @@ Pre-built XML queries in `queries/` that have been verified against the API.
 
 Three datasets are needed to cover the full range because WONDER splits natality into historical epochs:
 
-| Query file | Dataset | Years | API dataset ID |
-| --- | --- | --- | --- |
-| `births-by-year-1995-2002-req.xml` | Natality (historical) | 1995–2002 | D10 |
-| `births-by-year-2003-2006-req.xml` | Natality (historical) | 2003–2006 | D27 |
-| `births-by-year-2007-2024-req.xml` | Natality (current)   | 2007–2024 | D66 |
+| Query file                         | Dataset               | Years     | API dataset ID |
+| ---------------------------------- | --------------------- | --------- | -------------- |
+| `births-by-year-1995-2002-req.xml` | Natality (historical) | 1995–2002 | D10            |
+| `births-by-year-2003-2006-req.xml` | Natality (historical) | 2003–2006 | D27            |
+| `births-by-year-2007-2024-req.xml` | Natality (current)    | 2007–2024 | D66            |
 
 Each query groups by `Year` (`V20` in all three datasets) and returns the `Births` count measure (`M1`). All other filters are set to `*All*`.
 
@@ -52,13 +52,13 @@ Each query groups by `Year` (`V20` in all three datasets) and returns the `Birth
 
 ### Mortality
 
-| Query file | Topic | Years |
-| --- | --- | --- |
-| `opioid-overdose-deaths-2018-2024-req.xml` | Opioid overdose deaths | 2018–2024 |
-| `heart-vs-cancer-by-sex-2018-2023-req.xml` | Heart disease vs. cancer by sex | 2018–2023 |
-| `covid-deaths-by-race-2020-2023-req.xml` | COVID-19 deaths by race | 2020–2023 |
-| `racial-mortality-gap-2018-2023-req.xml` | Mortality gap by race | 2018–2023 |
-| `infant-mortality-2018-2023-req.xml` | Infant mortality | 2018–2023 |
+| Query file                                        | Topic                              | Years     |
+| ------------------------------------------------- | ---------------------------------- | --------- |
+| `opioid-overdose-deaths-2018-2024-req.xml`        | Opioid overdose deaths             | 2018–2024 |
+| `heart-vs-cancer-by-sex-2018-2023-req.xml`        | Heart disease vs. cancer by sex    | 2018–2023 |
+| `covid-deaths-by-race-2020-2023-req.xml`          | COVID-19 deaths by race            | 2020–2023 |
+| `racial-mortality-gap-2018-2023-req.xml`          | Mortality gap by race              | 2018–2023 |
+| `infant-mortality-2018-2023-req.xml`              | Infant mortality                   | 2018–2023 |
 | `unintentional-injuries-by-age-2018-2023-req.xml` | Unintentional injury deaths by age | 2018–2023 |
 
 ## CLI usage

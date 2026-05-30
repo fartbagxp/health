@@ -703,8 +703,9 @@
       "output_file": "data/raw/wonder/query_params_D169.json"
     },
     "D170": {
-      "status": "failed",
-      "error": "Page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"http://wonder.cdc.gov/single-race-single-year-v2020.html\", waiting until \"domcontentloaded\"\n"
+      "status": "success",
+      "total_parameters": 61,
+      "output_file": "data/raw/wonder/query_params_D170.json"
     },
     "D171": {
       "status": "success",
@@ -863,7 +864,7 @@
     }
   },
   "summary": {
-    "successful": 171,
-    "failed": 1
+    "successful": 172,
+    "failed": 0
   }
 }

@@ -315,6 +315,7 @@ _WASTEWATER_DATASETS = {
     "sars_cov2": "wastewater_covid",
     "flu_a": "wastewater_flu",
     "measles": "wastewater_measles",
+    "rsv": "wastewater_rsv",
 }
 
 _WASTEWATER_SELECT = (
@@ -397,7 +398,7 @@ def get_wastewater_data(
     limit: int = 500,
 ) -> list[dict[str, Any]]:
     """NWSS wastewater surveillance: RNA concentrations by pathogen (updated weekly).
-    pathogen: 'sars_cov2' (2020+), 'flu_a' (2022+), 'measles' (2024+)
+    pathogen: 'sars_cov2' (2020+), 'flu_a' (2022+), 'measles' (2024+), 'rsv' (2023+)
     state: two-letter code e.g. 'NY', 'CA'
     start_date / end_date: 'YYYY-MM-DD'
     detected_only: only return samples where pcr_target_detect='yes'
@@ -1298,6 +1299,264 @@ def get_nndss_weekly(
         DATASETS["nndss_weekly"].id,
         where=" AND ".join(clauses) if clauses else None,
         order="year DESC, week DESC",
+        limit=limit,
+    )
+
+
+def get_sti_chlamydia(
+    state: str | None = None,
+    year: int | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly provisional chlamydia case counts by state from NNDSS (2014–present).
+    state: uppercase state name e.g. 'CALIFORNIA', 'NEW YORK' (reporting_area column is all-caps)
+    year: MMWR year e.g. 2024
+    Key columns: chlamydia_trachomatis_4 (cum year), chlamydia_trachomatis_2 (prev 52-week max)
+    """
+    clauses = []
+    if state:
+        clauses.append(f"reporting_area = '{state.upper()}'")
+    if year:
+        clauses.append(f"mmwr_year = '{year}'")
+    return query_dataset(
+        DATASETS["nndss_sti_chlamydia"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="mmwr_year DESC, mmwr_week DESC",
+        limit=limit,
+    )
+
+
+def get_sti_gonorrhea(
+    state: str | None = None,
+    year: int | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly provisional gonorrhea case counts by state from NNDSS (2014–present).
+    state: uppercase state name e.g. 'CALIFORNIA', 'NEW YORK' (reporting_area column is all-caps)
+    year: MMWR year e.g. 2024
+    Key columns: gonorrhea_current_week, gonorrhea_previous_52_weeks_max
+    """
+    clauses = []
+    if state:
+        clauses.append(f"reporting_area = '{state.upper()}'")
+    if year:
+        clauses.append(f"mmwr_year = '{year}'")
+    return query_dataset(
+        DATASETS["nndss_sti_gonorrhea"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="mmwr_year DESC, mmwr_week DESC",
+        limit=limit,
+    )
+
+
+def get_sti_syphilis(
+    state: str | None = None,
+    year: int | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Weekly provisional syphilis case counts by state from NNDSS (2014–present).
+    state: uppercase state name e.g. 'CALIFORNIA', 'NEW YORK' (reporting_area column is all-caps)
+    year: MMWR year e.g. 2024
+    Key columns: syphilis_primary_and_secondary (current week + variants), syphilis_congenital_current_1
+    """
+    clauses = []
+    if state:
+        clauses.append(f"reporting_area = '{state.upper()}'")
+    if year:
+        clauses.append(f"mmwr_year = '{year}'")
+    return query_dataset(
+        DATASETS["nndss_sti_syphilis"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="mmwr_year DESC, mmwr_week DESC",
+        limit=limit,
+    )
+
+
+def get_chronic_disease_indicators(
+    topic: str | None = None,
+    state: str | None = None,
+    year_start: int | None = None,
+    year_end: int | None = None,
+    question_id: str | None = None,
+    stratification: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """U.S. Chronic Disease Indicators: state-level measures across 19 disease topics (2001–present).
+    topic: 'Alcohol', 'Arthritis', 'Asthma', 'Cancer', 'Cardiovascular Disease',
+           'Chronic Kidney Disease', 'COPD', 'Diabetes', 'Mental Health', 'Tobacco',
+           'Nutrition, Physical Activity, and Weight Status', 'Maternal Health', 'Sleep'
+    state: two-letter code e.g. 'CA', 'NY'
+    year_start / year_end: filter by yearstart / yearend
+    question_id: specific CDI question code e.g. 'AST01', 'DIA01'
+    stratification: demographic group e.g. 'Overall', 'Male', 'Female', 'Hispanic'
+    Key columns: datavalue (estimate), datavalueunit (%, per 100k, etc.), question, datasource
+    """
+    clauses = []
+    if topic:
+        clauses.append(f"upper(topic) LIKE '%{topic.upper()}%'")
+    if state:
+        clauses.append(f"locationabbr = '{state.upper()}'")
+    if year_start:
+        clauses.append(f"yearstart >= '{year_start}'")
+    if year_end:
+        clauses.append(f"yearend <= '{year_end}'")
+    if question_id:
+        clauses.append(f"questionid = '{question_id.upper()}'")
+    if stratification:
+        clauses.append(f"upper(stratification1) LIKE '%{stratification.upper()}%'")
+    return query_dataset(
+        DATASETS["chronic_disease_indicators"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        select=(
+            "yearstart, yearend, locationabbr, locationdesc, topic, question, "
+            "datavalue, datavalueunit, datavaluetype, stratificationcategory1, "
+            "stratification1, datasource, questionid, topicid"
+        ),
+        order="yearend DESC",
+        limit=limit,
+    )
+
+
+def get_monthly_deaths_by_cause(
+    jurisdiction: str | None = None,
+    year: int | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Monthly provisional US death counts for 20+ causes including cancer, heart disease, drug overdose (2020–present).
+    jurisdiction: 'United States' for national, or full state name e.g. 'California'
+    year: 2020–present
+    start_date / end_date: 'YYYY-MM-DD'
+    Key columns: malignant_neoplasms (cancer), diseases_of_heart, drug_overdose,
+                 intentional_self_harm_suicide, alzheimer_disease, covid_19_underlying_cause
+    """
+    clauses = []
+    if jurisdiction:
+        clauses.append(f"jurisdiction_of_occurrence = '{jurisdiction}'")
+    if year:
+        clauses.append(f"year = '{year}'")
+    if start_date:
+        clauses.append(f"start_date >= '{start_date}'")
+    if end_date:
+        clauses.append(f"end_date <= '{end_date}'")
+    return query_dataset(
+        DATASETS["monthly_deaths_by_cause"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="year DESC, month DESC",
+        limit=limit,
+    )
+
+
+def get_hai_mrsa(
+    topic: str | None = None,
+    viewby: str | None = None,
+    year: int | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual invasive Staphylococcus aureus (MRSA/MSSA) case rates from CDC EIP (2005–present).
+    topic: 'Case rates', 'Incidence trends', 'Proportion MRSA'
+    viewby: 'Age', 'Sex', 'Race', 'Dialysis', 'Exposure'
+    year: e.g. 2022
+    Key column: value (rate or proportion)
+    """
+    clauses = []
+    if topic:
+        clauses.append(f"upper(topic) LIKE '%{topic.upper()}%'")
+    if viewby:
+        clauses.append(f"upper(viewby) LIKE '%{viewby.upper()}%'")
+    if year:
+        clauses.append(f"yearname = '{year}'")
+    return query_dataset(
+        DATASETS["hai_mrsa"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="yearname DESC",
+        limit=limit,
+    )
+
+
+def get_hai_amr(
+    organism: str | None = None,
+    topic: str | None = None,
+    viewby: str | None = None,
+    year: int | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual antimicrobial resistance case rates for CRAB, CRE, ESBL from CDC MuGSI (2012–present).
+    organism: 'CRAB' (carbapenem-resistant Acinetobacter), 'CRE' (carbapenem-resistant Enterobacterales),
+              'ESBL' (extended-spectrum beta-lactamase producers)
+    topic: 'Case Rates', 'Proportion resistant'
+    viewby: 'Age', 'Exposure'
+    year: e.g. 2022
+    Key column: value (rate per 100,000)
+    """
+    clauses = []
+    if organism:
+        clauses.append(f"upper(organism) LIKE '%{organism.upper()}%'")
+    if topic:
+        clauses.append(f"upper(topic) LIKE '%{topic.upper()}%'")
+    if viewby:
+        clauses.append(f"upper(viewby) LIKE '%{viewby.upper()}%'")
+    if year:
+        clauses.append(f"yearname = '{year}'")
+    return query_dataset(
+        DATASETS["hai_amr"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="yearname DESC",
+        limit=limit,
+    )
+
+
+def get_hai_cdiff(
+    viewby: str | None = None,
+    grouping: str | None = None,
+    year: int | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual Clostridioides difficile (C. diff) infection case rates from CDC EIP (2011–present).
+    viewby: 'Age', 'Sex', 'Race'
+    grouping: 'All cases', 'Community-associated', 'Healthcare-associated', 'Recurrent'
+    year: e.g. 2022
+    Key column: value (cases per 100,000)
+    """
+    clauses = []
+    if viewby:
+        clauses.append(f"upper(viewby) LIKE '%{viewby.upper()}%'")
+    if grouping:
+        clauses.append(f"upper(grouping) LIKE '%{grouping.upper()}%'")
+    if year:
+        clauses.append(f"yearname = '{year}'")
+    return query_dataset(
+        DATASETS["hai_cdiff"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="yearname DESC",
+        limit=limit,
+    )
+
+
+def get_hai_candidemia(
+    viewby: str | None = None,
+    topic: str | None = None,
+    year: int | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Annual Candida bloodstream infection drug resistance rates from CDC surveillance (2009–present).
+    viewby: Candida species e.g. 'Candida albicans', 'Candida glabrata', 'Candida auris'
+    topic: 'Drug resistance', 'Incidence'
+    year: e.g. 2022
+    Key column: value (resistance proportion or rate)
+    """
+    clauses = []
+    if viewby:
+        clauses.append(f"upper(viewby) LIKE '%{viewby.upper()}%'")
+    if topic:
+        clauses.append(f"upper(topic) LIKE '%{topic.upper()}%'")
+    if year:
+        clauses.append(f"yearname = '{year}'")
+    return query_dataset(
+        DATASETS["hai_candidemia"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="yearname DESC",
         limit=limit,
     )
 

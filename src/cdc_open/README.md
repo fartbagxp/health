@@ -2,7 +2,7 @@
 
 Python SDK and CLI for [data.cdc.gov](https://data.cdc.gov) — U.S. public health statistics via the Socrata SODA API.
 
-51 datasets covering mortality, birth, COVID-19, flu, RSV, vaccination coverage, wastewater surveillance, injury, disability, nutrition, and county/city health indicators.
+52 datasets covering mortality, birth, COVID-19, flu, RSV, vaccination coverage, wastewater surveillance, injury, disability, nutrition, and county/city health indicators.
 
 ## Setup
 
@@ -338,6 +338,7 @@ for block in response.content:
 | `wastewater_covid`    | `j9g8-acpt` | 2020–present | NWSS raw RNA concentrations: SARS-CoV-2 (weekly)                               |
 | `wastewater_flu`      | `ymmh-divb` | 2022–present | NWSS raw RNA concentrations: Influenza A (weekly)                              |
 | `wastewater_measles`  | `akvg-8vrb` | 2024–present | NWSS raw RNA concentrations: Measles (weekly)                                  |
+| `wastewater_rsv`      | `45cq-cw4i` | 2023–present | NWSS raw RNA concentrations: RSV (weekly)                                      |
 | `wastewater_activity` | `atcp-73re` | 2023–present | NWSS viral activity level scores (Very Low→Very High) for SARS-CoV-2/Flu A/RSV |
 | `wastewater_h5`       | `mtpu-urpp` | 2024–present | Avian Influenza A (H5) wastewater concentrations (weekly)                      |
 
@@ -364,7 +365,7 @@ for block in response.content:
 
 ## Wastewater surveillance (NWSS)
 
-Three datasets from the [National Wastewater Surveillance System (NWSS)](https://www.cdc.gov/nwss/) track RNA concentrations of pathogens at US wastewater treatment plants. All are updated every Friday.
+Four datasets from the [National Wastewater Surveillance System (NWSS)](https://www.cdc.gov/nwss/) track RNA concentrations of pathogens at US wastewater treatment plants. All are updated every Friday.
 
 | Key column                        | Description                                                                          |
 | --------------------------------- | ------------------------------------------------------------------------------------ |
@@ -376,7 +377,7 @@ Three datasets from the [National Wastewater Surveillance System (NWSS)](https:/
 | `pcr_target_avg_conc`             | Concentration back-calculated to pre-concentration basis                             |
 | `pcr_target_flowpop_lin`          | Flow-population-normalized concentration — **best metric for cross-site comparison** |
 
-Use `get_wastewater_data(pathogen=...)` with `pathogen` set to `"sars_cov2"`, `"flu_a"`, or `"measles"`.
+Use `get_wastewater_data(pathogen=...)` with `pathogen` set to `"sars_cov2"`, `"flu_a"`, `"measles"`, or `"rsv"`.
 
 ## PLACES measure IDs
 

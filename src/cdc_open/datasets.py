@@ -278,6 +278,22 @@ DATASETS: dict[str, Dataset] = {
             "population_served",
         ],
     ),
+    "wastewater_rsv": Dataset(
+        id="45cq-cw4i",
+        name="NWSS Wastewater: RSV",
+        description="RSV RNA concentrations from US wastewater sampling sites via NWSS, updated weekly",
+        years="2023–present",
+        key_columns=[
+            "state_territory",
+            "sample_collect_date",
+            "counties_served",
+            "population_served",
+            "pcr_target_detect",
+            "pcr_target_avg_conc",
+            "pcr_target_flowpop_lin",
+            "date_updated",
+        ],
+    ),
     "wastewater_h5": Dataset(
         id="mtpu-urpp",
         name="CDC Wastewater Data for Avian Influenza A (H5)",
@@ -801,6 +817,179 @@ DATASETS: dict[str, Dataset] = {
             "m1_flag",
             "m2",
             "m2_flag",
+        ],
+    ),
+    # ── Sexually Transmitted Infections (NNDSS weekly tables) ────────────────
+    "nndss_sti_chlamydia": Dataset(
+        id="hwyy-s2tt",
+        name="NNDSS Table 1G: Chlamydia & Carbapenemase-Producing Organisms",
+        description="Weekly provisional case counts for chlamydia trachomatis, chancroid, and carbapenemase-producing organisms by state/territory from NNDSS",
+        years="2014–present",
+        key_columns=[
+            "reporting_area",
+            "mmwr_year",
+            "mmwr_week",
+            "chlamydia_trachomatis",
+            "chlamydia_trachomatis_2",
+            "chlamydia_trachomatis_4",
+            "chlamydia_trachomatis_6",
+            "chancroid_current_week",
+            "chancroid_cum_2021",
+        ],
+    ),
+    "nndss_sti_gonorrhea": Dataset(
+        id="vx8v-gfyf",
+        name="NNDSS Table 1M: Gonorrhea",
+        description="Weekly provisional gonorrhea case counts by state/territory from NNDSS (current week, 52-week max, cumulative)",
+        years="2014–present",
+        key_columns=[
+            "reporting_area",
+            "mmwr_year",
+            "mmwr_week",
+            "gonorrhea_current_week",
+            "gonorrhea_previous_52_weeks_max",
+        ],
+    ),
+    "nndss_sti_syphilis": Dataset(
+        id="6ie8-bpiy",
+        name="NNDSS Table 1HH: Syphilis",
+        description="Weekly provisional syphilis case counts (primary & secondary, congenital) by state/territory from NNDSS",
+        years="2014–present",
+        key_columns=[
+            "reporting_area",
+            "mmwr_year",
+            "mmwr_week",
+            "syphilis_primary_and_secondary",
+            "syphilis_primary_and_secondary_2",
+            "syphilis_primary_and_secondary_4",
+            "syphilis_congenital_current_1",
+            "syphilis_congenital_cum_2021_1",
+        ],
+    ),
+    # ── Chronic Disease Indicators ───────────────────────────────────────────
+    "chronic_disease_indicators": Dataset(
+        id="hksd-2xuw",
+        name="U.S. Chronic Disease Indicators (CDI)",
+        description=(
+            "State-level indicators across 19 chronic disease topics: alcohol, arthritis, asthma, cancer, "
+            "cardiovascular disease, COPD, diabetes, mental health, tobacco, and more. "
+            "Includes prevalence, mortality, and risk factor measures by state and demographics."
+        ),
+        years="2001–present",
+        key_columns=[
+            "yearstart",
+            "yearend",
+            "locationabbr",
+            "locationdesc",
+            "topic",
+            "question",
+            "datavalue",
+            "datavalueunit",
+            "datavaluetype",
+            "stratificationcategory1",
+            "stratification1",
+            "datasource",
+            "questionid",
+            "topicid",
+        ],
+    ),
+    # ── Cancer Deaths ────────────────────────────────────────────────────────
+    "monthly_deaths_by_cause": Dataset(
+        id="9dzk-mvmi",
+        name="Monthly Provisional Counts of Deaths by Select Causes",
+        description=(
+            "Monthly provisional US death counts for 20+ causes: cancer (malignant neoplasms), "
+            "heart disease, diabetes, Alzheimer's, influenza/pneumonia, CLRD, stroke, "
+            "drug overdose, suicide, COVID-19, and more. National and state-level."
+        ),
+        years="2020–present",
+        key_columns=[
+            "jurisdiction_of_occurrence",
+            "year",
+            "month",
+            "start_date",
+            "end_date",
+            "all_cause",
+            "malignant_neoplasms",
+            "diseases_of_heart",
+            "cerebrovascular_diseases",
+            "diabetes_mellitus",
+            "alzheimer_disease",
+            "chronic_lower_respiratory",
+            "drug_overdose",
+            "intentional_self_harm_suicide",
+            "assault_homicide",
+            "covid_19_underlying_cause",
+        ],
+    ),
+    # ── Healthcare-Associated Infections (HAI) / Antimicrobial Resistance ───
+    "hai_mrsa": Dataset(
+        id="ssz5-s49e",
+        name="HAICViz: Invasive Staphylococcus aureus (MRSA/MSSA)",
+        description=(
+            "Annual case rates for invasive Staphylococcus aureus (MRSA and MSSA) "
+            "from the CDC Emerging Infections Program (EIP) network. "
+            "Breakdowns by age, sex, race, dialysis status, and exposure type."
+        ),
+        years="2005–2021",
+        key_columns=[
+            "yearname",
+            "topic",
+            "viewby",
+            "series",
+            "value",
+        ],
+    ),
+    "hai_amr": Dataset(
+        id="v4tm-h8pe",
+        name="HAICViz: Antimicrobial Resistance (CRAB, CRE, ESBL)",
+        description=(
+            "Annual case rates for carbapenem-resistant Acinetobacter baumannii (CRAB), "
+            "carbapenem-resistant Enterobacterales (CRE), and ESBL-producing organisms "
+            "from the CDC MuGSI/EIP network. Breakdowns by age, organism, and exposure."
+        ),
+        years="2012–present",
+        key_columns=[
+            "yearname",
+            "organism",
+            "topic",
+            "viewby",
+            "series",
+            "value",
+        ],
+    ),
+    "hai_cdiff": Dataset(
+        id="abgz-qs4g",
+        name="HAICViz: Clostridioides difficile (C. diff)",
+        description=(
+            "Annual case rates for Clostridioides difficile infection (CDI) "
+            "from the CDC Emerging Infections Program (EIP) network. "
+            "Breakdowns by age, community vs. healthcare onset, and case severity."
+        ),
+        years="2011–present",
+        key_columns=[
+            "yearname",
+            "topic",
+            "viewby",
+            "grouping",
+            "series",
+            "value",
+        ],
+    ),
+    "hai_candidemia": Dataset(
+        id="34p9-h4us",
+        name="HAICViz: Candidemia (Invasive Candida)",
+        description=(
+            "Annual drug resistance rates and case metrics for Candida bloodstream infections "
+            "from CDC surveillance. Species-level breakdown and antifungal resistance trends."
+        ),
+        years="2009–present",
+        key_columns=[
+            "yearname",
+            "topic",
+            "viewby",
+            "series",
+            "value",
         ],
     ),
 }

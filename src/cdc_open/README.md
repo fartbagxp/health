@@ -356,6 +356,19 @@ for block in response.content:
 | ---------------- | ----------- | ------------ | -------------------------------------------------------------- |
 | `nssp_ed_visits` | `rdmq-nq56` | 2022–present | NSSP weekly % ED visits for COVID/flu/RSV with trend direction |
 | `nndss_weekly`   | `x9gk-5huc` | 2014–present | NNDSS weekly notifiable disease cases (~100 diseases)          |
+| `nndss_measles`  | `x9gk-5huc` | 2014–present | NNDSS weekly measles cases (imported & indigenous) by state    |
+
+### Measles (CDC page charts)
+
+These three datasets are fetched directly from the CDC measles data page
+(`cdc.gov/measles/data-research/`) rather than data.cdc.gov. They power
+the interactive charts on that page and are updated weekly.
+
+| Key                       | Coverage     | Description                                                         |
+| ------------------------- | ------------ | ------------------------------------------------------------------- |
+| `measles_annual_history`  | 1962–present | Annual national case counts; powers the annotated history chart     |
+| `measles_annual_cases`    | 1985–present | Annual national cases with two filter views (1985-Present, 2000-Present) |
+| `measles_weekly_cases`    | 2022–present | Weekly national cases by rash onset date                            |
 
 ### Birth & demographics
 

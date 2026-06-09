@@ -15,6 +15,18 @@ class Dataset:
     description: str
     years: str
     key_columns: list[str] = field(default_factory=list)
+    soql_where: str | None = None
+
+
+@dataclass(frozen=True)
+class WcmsDataset:
+    """A CDC WCMS visualization JSON endpoint that backs a chart on a CDC page."""
+
+    url: str
+    name: str
+    description: str
+    years: str
+    key_columns: list[str] = field(default_factory=list)
 
 
 DATASETS: dict[str, Dataset] = {
@@ -819,6 +831,27 @@ DATASETS: dict[str, Dataset] = {
             "m2_flag",
         ],
     ),
+    "nndss_measles": Dataset(
+        id="x9gk-5huc",
+        name="NNDSS Weekly Measles Cases",
+        description="Weekly provisional measles case counts (imported and indigenous) by state/territory, with cumulative annual totals, from NNDSS",
+        years="2014–present",
+        key_columns=[
+            "states",
+            "year",
+            "week",
+            "label",
+            "m1",
+            "m1_flag",
+            "m2",
+            "m2_flag",
+            "m3",
+            "m3_flag",
+            "m4",
+            "m4_flag",
+        ],
+        soql_where="label like 'Measles%'",
+    ),
     # ── Sexually Transmitted Infections (NNDSS weekly tables) ────────────────
     "nndss_sti_chlamydia": Dataset(
         id="hwyy-s2tt",
@@ -991,5 +1024,46 @@ DATASETS: dict[str, Dataset] = {
             "series",
             "value",
         ],
+    ),
+}
+
+# ── CDC WCMS visualization JSON endpoints ─────────────────────────────────────
+# These back interactive charts on CDC disease pages; not on data.cdc.gov.
+_WCMS_BASE = "https://www.cdc.gov/wcms/vizdata"
+
+WCMS_DATASETS: dict[str, WcmsDataset] = {
+    "measles_annual_history": WcmsDataset(
+        url=f"{_WCMS_BASE}/measles/MeaslesCasesHistory.json",
+        name="Measles Annual Cases History",
+        description=(
+            "Annual confirmed measles case counts for the United States, "
+            "1962–present. Powers the annotated history-of-measles line chart "
+            "on the CDC measles data page."
+        ),
+        years="1962–present",
+        key_columns=["year", "cases"],
+    ),
+    "measles_annual_cases": WcmsDataset(
+        url=f"{_WCMS_BASE}/measles/MeaslesCasesYear.json",
+        name="Measles Annual Cases (Filterable)",
+        description=(
+            "Annual confirmed measles case counts for the United States, "
+            "1985–present, with a 'filter' column for two chart views: "
+            "'1985-Present*' and '2000-Present*'. Powers the yearly-cases "
+            "bar chart on the CDC measles data page."
+        ),
+        years="1985–present",
+        key_columns=["year", "cases", "filter"],
+    ),
+    "measles_weekly_cases": WcmsDataset(
+        url=f"{_WCMS_BASE}/measles/MeaslesCasesWeekly.json",
+        name="Measles Weekly Cases by Rash Onset Date",
+        description=(
+            "Weekly confirmed measles case counts by rash onset date, "
+            "2022–present. Powers the weekly-cases line chart on the CDC "
+            "measles data page."
+        ),
+        years="2022–present",
+        key_columns=["week_start", "week_end", "cases"],
     ),
 }

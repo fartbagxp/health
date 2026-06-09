@@ -5,6 +5,9 @@ Usage:
     uv run python -m cdc_open.download
 """
 
+import csv
+import io
+import json
 import os
 import sys
 import time
@@ -12,7 +15,7 @@ from pathlib import Path
 
 import requests
 
-from cdc_open.datasets import DATASETS
+from cdc_open.datasets import DATASETS, WCMS_DATASETS
 
 _BASE_URL = "https://data.cdc.gov/resource"
 _DEFAULT_LIMIT = 50_000
@@ -43,6 +46,16 @@ def _fetch_with_retry(url: str, params: dict, headers: dict) -> requests.Respons
     raise last_exc
 
 
+def _json_to_csv(rows: list[dict]) -> str:
+    if not rows:
+        return ""
+    out = io.StringIO()
+    writer = csv.DictWriter(out, fieldnames=list(rows[0].keys()), lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(rows)
+    return out.getvalue()
+
+
 def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     ok, failed = 0, []
@@ -55,15 +68,31 @@ def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
     for key, ds in DATASETS.items():
         print(f"  fetching {key} ({ds.id}) ...", end=" ", flush=True)
         try:
+            params: dict = {"$limit": limit}
+            if ds.soql_where:
+                params["$where"] = ds.soql_where
             resp = _fetch_with_retry(
                 f"{_BASE_URL}/{ds.id}.csv",
-                params={"$limit": limit},
+                params=params,
                 headers=headers,
             )
             path = out_dir / f"{key}.csv"
             path.write_text(resp.text)
             row_count = resp.text.count("\n") - 1  # subtract header row
             print(f"{row_count} rows -> {path}")
+            ok += 1
+        except Exception as exc:
+            failed.append((key, exc))
+
+    for key, ds in WCMS_DATASETS.items():
+        print(f"  fetching {key} (wcms) ...", end=" ", flush=True)
+        try:
+            resp = _fetch_with_retry(ds.url, params={}, headers={"Accept": "application/json"})
+            rows = resp.json()
+            csv_text = _json_to_csv(rows)
+            path = out_dir / f"{key}.csv"
+            path.write_text(csv_text)
+            print(f"{len(rows)} rows -> {path}")
             ok += 1
         except Exception as exc:
             failed.append((key, exc))

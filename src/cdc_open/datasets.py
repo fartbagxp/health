@@ -29,6 +29,21 @@ class WcmsDataset:
     key_columns: list[str] = field(default_factory=list)
 
 
+@dataclass(frozen=True)
+class CompositeDataset:
+    """Multiple Socrata datasets that represent the same series across years.
+
+    Each entry in ``sources`` is a (year, dataset_id) pair. The downloader
+    fetches each, injects a ``year`` column, and concatenates into one CSV.
+    """
+
+    sources: tuple[tuple[int, str], ...]  # ((year, socrata_id), ...)
+    name: str
+    description: str
+    years: str
+    key_columns: list[str] = field(default_factory=list)
+
+
 DATASETS: dict[str, Dataset] = {
     "leading_death": Dataset(
         id="bi63-dtpu",
@@ -1024,6 +1039,30 @@ DATASETS: dict[str, Dataset] = {
             "series",
             "value",
         ],
+    ),
+}
+
+# ── Multi-source composite datasets ───────────────────────────────────────────
+# Each source is a (year, data.cdc.gov Socrata ID) pair. The downloader injects
+# a ``year`` column and concatenates all sources into one CSV.
+_SOCRATA_BASE = "https://data.cdc.gov/resource"
+
+COMPOSITE_DATASETS: dict[str, CompositeDataset] = {
+    "life_expectancy_by_state": CompositeDataset(
+        sources=(
+            (2018, "a5a8-jsrq"),
+            (2019, "ncvk-7amm"),
+            (2020, "ss2j-8ajj"),
+            (2021, "it4f-frdc"),
+        ),
+        name="U.S. State Life Expectancy by Sex",
+        description=(
+            "Life expectancy at birth by state/territory and sex (Male, Female, Total), "
+            "2018–2021. Each year is published as a separate NCHS dataset; this "
+            "combines them with an injected year column for longitudinal analysis."
+        ),
+        years="2018–2021",
+        key_columns=["year", "state", "sex", "leb", "se", "quartile"],
     ),
 }
 

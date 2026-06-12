@@ -15,7 +15,7 @@ from pathlib import Path
 
 import requests
 
-from cdc_open.datasets import DATASETS, WCMS_DATASETS
+from cdc_open.datasets import COMPOSITE_DATASETS, DATASETS, WCMS_DATASETS
 
 _BASE_URL = "https://data.cdc.gov/resource"
 _DEFAULT_LIMIT = 50_000
@@ -49,8 +49,12 @@ def _fetch_with_retry(url: str, params: dict, headers: dict) -> requests.Respons
 def _json_to_csv(rows: list[dict]) -> str:
     if not rows:
         return ""
+    # Union of all keys in insertion order, preserving first-seen order
+    seen: dict[str, None] = {}
+    for row in rows:
+        seen.update(dict.fromkeys(row.keys()))
     out = io.StringIO()
-    writer = csv.DictWriter(out, fieldnames=list(rows[0].keys()), lineterminator="\n")
+    writer = csv.DictWriter(out, fieldnames=list(seen), extrasaction="ignore", lineterminator="\n")
     writer.writeheader()
     writer.writerows(rows)
     return out.getvalue()
@@ -80,6 +84,37 @@ def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
             path.write_text(resp.text)
             row_count = resp.text.count("\n") - 1  # subtract header row
             print(f"{row_count} rows -> {path}")
+            ok += 1
+        except Exception as exc:
+            failed.append((key, exc))
+
+    for key, ds in COMPOSITE_DATASETS.items():
+        print(f"  fetching {key} ({len(ds.sources)} sources) ...", end=" ", flush=True)
+        try:
+            all_rows: list[dict] = []
+            for year, sid in ds.sources:
+                resp = _fetch_with_retry(
+                    f"https://data.cdc.gov/resource/{sid}.json",
+                    params={"$limit": limit},
+                    headers={"Accept": "application/json"},
+                )
+                for row in resp.json():
+                    row = {"year": year, **row}
+                    # Normalize geography column: area → state
+                    if "area" in row and "state" not in row:
+                        row["state"] = row.pop("area")
+                    elif "area" in row:
+                        row.setdefault("state", row.pop("area"))
+                    # Normalize life expectancy column: le → leb
+                    if "le" in row and not row.get("leb"):
+                        row["leb"] = row.pop("le")
+                    elif "le" in row:
+                        row.pop("le")
+                    all_rows.append(row)
+            csv_text = _json_to_csv(all_rows)
+            path = out_dir / f"{key}.csv"
+            path.write_text(csv_text)
+            print(f"{len(all_rows)} rows -> {path}")
             ok += 1
         except Exception as exc:
             failed.append((key, exc))

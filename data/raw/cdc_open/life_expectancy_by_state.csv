@@ -1,0 +1,622 @@
+year,state,sex,leb,quartile,se
+2018,United States,Total,78.7,*,
+2018,West Virginia,Total,74.4,74.4 - 77.2,0.114
+2018,Mississippi,Total,74.6,74.4 - 77.2,0.088
+2018,Alabama,Total,75.1,74.4 - 77.2,0.067
+2018,Kentucky,Total,75.3,74.4 - 77.2,0.068
+2018,Tennessee,Total,75.5,74.4 - 77.2,0.057
+2018,Arkansas,Total,75.6,74.4 - 77.2,0.086
+2018,Oklahoma,Total,75.6,74.4 - 77.2,0.073
+2018,Louisiana,Total,75.6,74.4 - 77.2,0.069
+2018,South Carolina,Total,76.5,74.4 - 77.2,0.066
+2018,Missouri,Total,76.6,74.4 - 77.2,0.059
+2018,Indiana,Total,76.8,74.4 - 77.2,0.056
+2018,Ohio,Total,76.8,74.4 - 77.2,0.043
+2018,Georgia,Total,77.2,74.4 - 77.2,0.044
+2018,New Mexico,Total,77.2,74.4 - 77.2,0.106
+2018,North Carolina,Total,77.6,77.3 - 78.6,0.045
+2018,Michigan,Total,77.7,77.3 - 78.6,0.046
+2018,District of Columbia,Total,77.7,77.3 - 78.6,0.184
+2018,Delaware,Total,77.8,77.3 - 78.6,0.150
+2018,Nevada,Total,77.9,77.3 - 78.6,0.081
+2018,Kansas,Total,78.0,77.3 - 78.6,0.083
+2018,Alaska,Total,78.0,77.3 - 78.6,0.168
+2018,Pennsylvania,Total,78.1,77.3 - 78.6,0.040
+2018,Wyoming,Total,78.1,77.3 - 78.6,0.185
+2018,Texas,Total,78.4,77.3 - 78.6,0.026
+2018,Maryland,Total,78.5,77.3 - 78.6,0.058
+2018,Maine,Total,78.6,77.3 - 78.6,0.121
+2018,Montana,Total,78.7,78.7 - 79.3,0.138
+2018,Arizona,Total,78.7,78.7 - 79.3,0.055
+2018,Illinois,Total,78.8,78.7 - 79.3,0.040
+2018,South Dakota,Total,78.9,78.7 - 79.3,0.154
+2018,Florida,Total,78.9,78.7 - 79.3,0.032
+2018,Idaho,Total,79.0,78.7 - 79.3,0.105
+2018,Virginia,Total,79.0,78.7 - 79.3,0.047
+2018,New Hampshire,Total,79.1,78.7 - 79.3,0.117
+2018,Nebraska,Total,79.1,78.7 - 79.3,0.099
+2018,Iowa,Total,79.2,78.7 - 79.3,0.077
+2018,Vermont,Total,79.3,78.7 - 79.3,0.183
+2018,North Dakota,Total,79.3,78.7 - 79.3,0.161
+2018,Wisconsin,Total,79.3,78.7 - 79.3,0.057
+2018,Utah,Total,79.6,79.4 - 81.0,0.079
+2018,Oregon,Total,79.7,79.4 - 81.0,0.065
+2018,New Jersey,Total,79.8,79.4 - 81.0,0.046
+2018,Rhode Island,Total,79.8,79.4 - 81.0,0.131
+2018,Washington,Total,80.0,79.4 - 81.0,0.049
+2018,Colorado,Total,80.0,79.4 - 81.0,0.058
+2018,Massachusetts,Total,80.1,79.4 - 81.0,0.051
+2018,Connecticut,Total,80.4,79.4 - 81.0,0.072
+2018,New York,Total,80.5,79.4 - 81.0,0.030
+2018,Minnesota,Total,80.5,79.4 - 81.0,0.056
+2018,California,Total,80.8,79.4 - 81.0,0.021
+2018,Hawaii,Total,81.0,79.4 - 81.0,0.118
+2018,United States,Male,76.2,*,
+2018,Mississippi,Male,71.7,71.7 - 74.5,0.126
+2018,West Virginia,Male,71.7,71.7 - 74.5,0.164
+2018,Alabama,Male,72.1,71.7 - 74.5,0.099
+2018,Kentucky,Male,72.6,71.7 - 74.5,0.099
+2018,Louisiana,Male,72.7,71.7 - 74.5,0.101
+2018,Arkansas,Male,73.0,71.7 - 74.5,0.124
+2018,Tennessee,Male,73.0,71.7 - 74.5,0.082
+2018,Oklahoma,Male,73.1,71.7 - 74.5,0.106
+2018,South Carolina,Male,73.7,71.7 - 74.5,0.098
+2018,Missouri,Male,73.9,71.7 - 74.5,0.087
+2018,New Mexico,Male,74.2,71.7 - 74.5,0.157
+2018,Ohio,Male,74.2,71.7 - 74.5,0.062
+2018,Indiana,Male,74.4,71.7 - 74.5,0.081
+2018,District of Columbia,Male,74.6,74.6 - 76.0,0.272
+2018,Georgia,Male,74.7,74.6 - 76.0,0.064
+2018,Delaware,Male,74.8,74.6 - 76.0,0.226
+2018,North Carolina,Male,74.9,74.6 - 76.0,0.066
+2018,Nevada,Male,75.4,74.6 - 76.0,0.119
+2018,Michigan,Male,75.4,74.6 - 76.0,0.066
+2018,Pennsylvania,Male,75.5,74.6 - 76.0,0.059
+2018,Kansas,Male,75.7,74.6 - 76.0,0.120
+2018,Maryland,Male,75.8,74.6 - 76.0,0.087
+2018,Maine,Male,75.9,74.6 - 76.0,0.179
+2018,Arizona,Male,76.0,74.6 - 76.0,0.080
+2018,Texas,Male,76.0,74.6 - 76.0,0.038
+2018,Alaska,Male,76.0,74.6 - 76.0,0.240
+2018,Wyoming,Male,76.1,76.1 - 77.0,0.267
+2018,Florida,Male,76.2,76.1 - 77.0,0.047
+2018,Illinois,Male,76.2,76.1 - 77.0,0.058
+2018,South Dakota,Male,76.5,76.1 - 77.0,0.220
+2018,Montana,Male,76.5,76.1 - 77.0,0.197
+2018,Virginia,Male,76.6,76.1 - 77.0,0.069
+2018,New Hampshire,Male,76.7,76.1 - 77.0,0.174
+2018,Iowa,Male,76.8,76.1 - 77.0,0.111
+2018,Nebraska,Male,76.8,76.1 - 77.0,0.142
+2018,Idaho,Male,76.8,76.1 - 77.0,0.153
+2018,Wisconsin,Male,76.9,76.1 - 77.0,0.084
+2018,Vermont,Male,77.0,76.1 - 77.0,0.269
+2018,North Dakota,Male,77.0,76.1 - 77.0,0.224
+2018,Rhode Island,Male,77.2,77.1 - 78.4,0.192
+2018,New Jersey,Male,77.3,77.1 - 78.4,0.067
+2018,Oregon,Male,77.5,77.1 - 78.4,0.096
+2018,Massachusetts,Male,77.7,77.1 - 78.4,0.075
+2018,Colorado,Male,77.7,77.1 - 78.4,0.085
+2018,Utah,Male,77.7,77.1 - 78.4,0.117
+2018,Connecticut,Male,77.9,77.1 - 78.4,0.107
+2018,Washington,Male,77.9,77.1 - 78.4,0.071
+2018,Hawaii,Male,78.0,77.1 - 78.4,0.172
+2018,New York,Male,78.1,77.1 - 78.4,0.044
+2018,California,Male,78.4,77.1 - 78.4,0.031
+2018,Minnesota,Male,78.4,77.1 - 78.4,0.082
+2018,United States,Female,81.2,*,
+2018,West Virginia,Female,77.3,77.3 -79.9,0.152
+2018,Mississippi,Female,77.5,77.3 -79.9,0.119
+2018,Kentucky,Female,77.9,77.3 -79.9,0.091
+2018,Alabama,Female,78.0,77.3 -79.9,0.089
+2018,Tennessee,Female,78.1,77.3 -79.9,0.075
+2018,Arkansas,Female,78.2,77.3 -79.9,0.116
+2018,Oklahoma,Female,78.2,77.3 -79.9,0.098
+2018,Louisiana,Female,78.5,77.3 -79.9,0.091
+2018,Indiana,Female,79.3,77.3 -79.9,0.075
+2018,Ohio,Female,79.3,77.3 -79.9,0.057
+2018,Missouri,Female,79.3,77.3 -79.9,0.079
+2018,South Carolina,Female,79.3,77.3 -79.9,0.087
+2018,Georgia,Female,79.7,77.3 -79.9,0.059
+2018,Michigan,Female,80.1,79.8 - 81.1,0.061
+2018,Alaska,Female,80.2,79.8 - 81.1,0.232
+2018,North Carolina,Female,80.2,79.8 - 81.1,0.058
+2018,Wyoming,Female,80.3,79.8 - 81.1,0.252
+2018,Kansas,Female,80.3,79.8 - 81.1,0.112
+2018,New Mexico,Female,80.4,79.8 - 81.1,0.138
+2018,Nevada,Female,80.5,79.8 - 81.1,0.106
+2018,District of Columbia,Female,80.5,79.8 - 81.1,0.245
+2018,Delaware,Female,80.6,79.8 - 81.1,0.195
+2018,Texas,Female,80.8,79.8 - 81.1,0.035
+2018,Pennsylvania,Female,80.8,79.8 - 81.1,0.053
+2018,Montana,Female,81.1,79.8 - 81.1,0.188
+2018,Maryland,Female,81.1,79.8 - 81.1,0.075
+2018,Maine,Female,81.2,81.0 - 81.7,0.157
+2018,Idaho,Female,81.3,81.0 - 81.7,0.139
+2018,Virginia,Female,81.3,81.0 - 81.7,0.063
+2018,Illinois,Female,81.3,81.0 - 81.7,0.052
+2018,Nebraska,Female,81.4,81.0 - 81.7,0.133
+2018,South Dakota,Female,81.4,81.0 - 81.7,0.209
+2018,Utah,Female,81.5,81.0 - 81.7,0.105
+2018,New Hampshire,Female,81.5,81.0 - 81.7,0.154
+2018,Arizona,Female,81.5,81.0 - 81.7,0.071
+2018,Wisconsin,Female,81.6,81.0 - 81.7,0.076
+2018,Iowa,Female,81.6,81.0 - 81.7,0.103
+2018,Florida,Female,81.6,81.0 - 81.7,0.042
+2018,Vermont,Female,81.7,81.0 - 81.7,0.245
+2018,North Dakota,Female,81.7,81.0 - 81.7,0.226
+2018,Oregon,Female,81.9,81.8 - 84.0,0.086
+2018,Washington,Female,82.1,81.8 - 84.0,0.065
+2018,Rhode Island,Female,82.2,81.8 - 84.0,0.173
+2018,Colorado,Female,82.3,81.8 - 84.0,0.076
+2018,New Jersey,Female,82.3,81.8 - 84.0,0.059
+2018,Massachusetts,Female,82.5,81.8 - 84.0,0.067
+2018,Minnesota,Female,82.6,81.8 - 84.0,0.074
+2018,New York,Female,82.8,81.8 - 84.0,0.039
+2018,Connecticut,Female,82.9,81.8 - 84.0,0.094
+2018,California,Female,83.1,81.8 - 84.0,0.028
+2018,Hawaii,Female,84.0,81.8 - 84.0,0.156
+2019,Hawaii,Total,80.9,79.5 - 80.9,0.119
+2019,California,Total,80.9,79.5 - 80.9,0.022
+2019,New York,Total,80.7,79.5 - 80.9,0.03
+2019,Minnesota,Total,80.4,79.5 - 80.9,0.056
+2019,Massachusetts,Total,80.4,79.5 - 80.9,0.05
+2019,Connecticut,Total,80.3,79.5 - 80.9,0.073
+2019,New Jersey,Total,80.1,79.5 - 80.9,0.046
+2019,Washington,Total,80,79.5 - 80.9,0.048
+2019,Colorado,Total,80,79.5 - 80.9,0.058
+2019,Vermont,Total,79.8,79.5 - 80.9,0.172
+2019,Utah,Total,79.7,79.5 - 80.9,0.078
+2019,Oregon,Total,79.6,79.5 - 80.9,0.066
+2019,Idaho,Total,79.5,79.5 - 80.9,0.101
+2019,Rhode Island,Total,79.5,79.5 - 80.9,0.135
+2019,New Hampshire,Total,79.4,78.4 - 79.4,0.116
+2019,Wisconsin,Total,79.3,78.4 - 79.4,0.057
+2019,Nebraska,Total,79.2,78.4 - 79.4,0.098
+2019,Virginia,Total,79.1,78.4 - 79.4,0.047
+2019,Florida,Total,79,78.4 - 79.4,0.032
+2019,Iowa,Total,79,78.4 - 79.4,0.077
+2019,Illinois,Total,79,78.4 - 79.4,0.039
+2019,United States,Total,78.8,*,
+2019,Arizona,Total,78.8,78.4 - 79.4,0.054
+2019,North Dakota,Total,78.8,78.4 - 79.4,0.166
+2019,Texas,Total,78.6,78.4 - 79.4,0.026
+2019,Maryland,Total,78.5,78.4 - 79.4,0.059
+2019,Montana,Total,78.4,78.4 - 79.4,0.139
+2019,South Dakota,Total,78.4,78.4 - 79.4,0.157
+2019,Pennsylvania,Total,78.3,77.0 - 78.3,0.04
+2019,Maine,Total,78.3,77.0 - 78.3,0.123
+2019,Kansas,Total,78.2,77.0 - 78.3,0.082
+2019,Delaware,Total,78.1,77.0 - 78.3,0.153
+2019,District of Columbia,Total,78,77.0 - 78.3,0.186
+2019,Nevada,Total,78,77.0 - 78.3,0.08
+2019,Michigan,Total,78,77.0 - 78.3,0.045
+2019,Alaska,Total,77.7,77.0 - 78.3,0.173
+2019,Wyoming,Total,77.7,77.0 - 78.3,0.199
+2019,North Carolina,Total,77.6,77.0 - 78.3,0.045
+2019,Georgia,Total,77.4,77.0 - 78.3,0.044
+2019,Indiana,Total,77,77.0 - 78.3,0.056
+2019,Missouri,Total,76.9,74.4 - 76.9,0.059
+2019,New Mexico,Total,76.9,74.4 - 76.9,0.109
+2019,Ohio,Total,76.9,74.4 - 76.9,0.043
+2019,South Carolina,Total,76.8,74.4 - 76.9,0.066
+2019,Louisiana,Total,75.7,74.4 - 76.9,0.07
+2019,Oklahoma,Total,75.7,74.4 - 76.9,0.073
+2019,Arkansas,Total,75.7,74.4 - 76.9,0.085
+2019,Tennessee,Total,75.6,74.4 - 76.9,0.057
+2019,Kentucky,Total,75.5,74.4 - 76.9,0.068
+2019,Alabama,Total,75.2,74.4 - 76.9,0.068
+2019,West Virginia,Total,74.5,74.4 - 76.9,0.114
+2019,Mississippi,Total,74.4,74.4 - 76.9,0.089
+2019,California,Male,78.4,77.2 - 78.4,0.032
+2019,Minnesota,Male,78.3,77.2 - 78.4,0.082
+2019,New York,Male,78.2,77.2 - 78.4,0.045
+2019,Hawaii,Male,78,77.2 - 78.4,0.172
+2019,Utah,Male,78,77.2 - 78.4,0.114
+2019,Massachusetts,Male,77.9,77.2 - 78.4,0.074
+2019,Washington,Male,77.9,77.2 - 78.4,0.07
+2019,Colorado,Male,77.8,77.2 - 78.4,0.084
+2019,Connecticut,Male,77.7,77.2 - 78.4,0.107
+2019,New Jersey,Male,77.6,77.2 - 78.4,0.067
+2019,Idaho,Male,77.5,77.2 - 78.4,0.147
+2019,Oregon,Male,77.3,77.2 - 78.4,0.097
+2019,Vermont,Male,77.2,77.2 - 78.4,0.259
+2019,Nebraska,Male,77.1,76.1 - 77.1,0.141
+2019,New Hampshire,Male,77.1,76.1 - 77.1,0.171
+2019,Rhode Island,Male,77,76.1 - 77.1,0.199
+2019,Wisconsin,Male,77,76.1 - 77.1,0.082
+2019,Virginia,Male,76.8,76.1 - 77.1,0.069
+2019,Iowa,Male,76.5,76.1 - 77.1,0.113
+2019,Illinois,Male,76.4,76.1 - 77.1,0.058
+2019,Florida,Male,76.3,76.1 - 77.1,0.047
+2019,North Dakota,Male,76.3,76.1 - 77.1,0.235
+2019,United States,Male,76.3,*,
+2019,Montana,Male,76.2,76.1 - 77.1,0.204
+2019,Arizona,Male,76.1,76.1 - 77.1,0.08
+2019,South Dakota,Male,76.1,76.1 - 77.1,0.226
+2019,Texas,Male,76.1,76.1 - 77.1,0.038
+2019,Kansas,Male,75.9,74.5 - 76.0,0.119
+2019,Maine,Male,75.8,74.5 - 76.0,0.18
+2019,Maryland,Male,75.8,74.5 - 76.0,0.088
+2019,Alaska,Male,75.8,74.5 - 76.0,0.247
+2019,Pennsylvania,Male,75.7,74.5 - 76.0,0.059
+2019,Michigan,Male,75.6,74.5 - 76.0,0.066
+2019,Nevada,Male,75.6,74.5 - 76.0,0.115
+2019,Wyoming,Male,75.4,74.5 - 76.0,0.279
+2019,Delaware,Male,75.1,74.5 - 76.0,0.225
+2019,North Carolina,Male,75,74.5 - 76.0,0.066
+2019,Georgia,Male,74.9,74.5 - 76.0,0.065
+2019,District of Columbia,Male,74.9,74.5 - 76.0,0.276
+2019,Indiana,Male,74.5,74.5 - 76.0,0.081
+2019,Ohio,Male,74.3,71.2 - 74.4,0.062
+2019,Missouri,Male,74.1,71.2 - 74.4,0.087
+2019,New Mexico,Male,73.9,71.2 - 74.4,0.159
+2019,South Carolina,Male,73.9,71.2 - 74.4,0.098
+2019,Oklahoma,Male,73.2,71.2 - 74.4,0.106
+2019,Arkansas,Male,73,71.2 - 74.4,0.122
+2019,Kentucky,Male,72.9,71.2 - 74.4,0.097
+2019,Louisiana,Male,72.8,71.2 - 74.4,0.102
+2019,Tennessee,Male,72.8,71.2 - 74.4,0.082
+2019,Alabama,Male,72.2,71.2 - 74.4,0.099
+2019,West Virginia,Male,71.9,71.2 - 74.4,0.164
+2019,Mississippi,Male,71.2,71.2 - 74.4,0.129
+2019,Hawaii,Female,83.9,81.8 - 83.9,0.158
+2019,California,Female,83.3,81.8 - 83.9,0.028
+2019,New York,Female,83.1,81.8 - 83.9,0.04
+2019,Connecticut,Female,82.8,81.8 - 83.9,0.094
+2019,Massachusetts,Female,82.8,81.8 - 83.9,0.065
+2019,Minnesota,Female,82.6,81.8 - 83.9,0.075
+2019,New Jersey,Female,82.5,81.8 - 83.9,0.06
+2019,Vermont,Female,82.3,81.8 - 83.9,0.223
+2019,Colorado,Female,82.2,81.8 - 83.9,0.077
+2019,Washington,Female,82.1,81.8 - 83.9,0.064
+2019,Oregon,Female,81.9,81.8 - 83.9,0.086
+2019,Florida,Female,81.8,81.8 - 83.9,0.042
+2019,Rhode Island,Female,81.8,81.8 - 83.9,0.179
+2019,Arizona,Female,81.6,81.0 - 81.7,0.071
+2019,Iowa,Female,81.6,81.0 - 81.7,0.101
+2019,New Hampshire,Female,81.6,81.0 - 81.7,0.154
+2019,Idaho,Female,81.5,81.0 - 81.7,0.137
+2019,Illinois,Female,81.5,81.0 - 81.7,0.052
+2019,North Dakota,Female,81.5,81.0 - 81.7,0.227
+2019,Utah,Female,81.5,81.0 - 81.7,0.105
+2019,Wisconsin,Female,81.5,81.0 - 81.7,0.078
+2019,Nebraska,Female,81.3,81.0 - 81.7,0.134
+2019,Virginia,Female,81.3,81.0 - 81.7,0.063
+2019,Maryland,Female,81.2,81.0 - 81.7,0.075
+2019,Delaware,Female,81,81.0 - 81.7,0.202
+2019,Texas,Female,81,81.0 - 81.7,0.035
+2019,Maine,Female,80.9,79.9 - 80.9,0.164
+2019,Pennsylvania,Female,80.9,79.9 - 80.9,0.053
+2019,District of Columbia,Female,80.8,79.9 - 80.9,0.244
+2019,Montana,Female,80.8,79.9 - 80.9,0.185
+2019,South Dakota,Female,80.8,79.9 - 80.9,0.214
+2019,Nevada,Female,80.6,79.9 - 80.9,0.107
+2019,Wyoming,Female,80.5,79.9 - 80.9,0.262
+2019,Kansas,Female,80.4,79.9 - 80.9,0.111
+2019,United States,Female,81.4,*,
+2019,Michigan,Female,80.3,79.9 - 80.9,0.06
+2019,New Mexico,Female,80.1,79.9 - 80.9,0.143
+2019,North Carolina,Female,80.1,79.9 - 80.9,0.059
+2019,Alaska,Female,79.9,79.9 - 80.9,0.237
+2019,Georgia,Female,79.9,79.9 - 80.9,0.059
+2019,Missouri,Female,79.8,77.3 - 79.8,0.078
+2019,South Carolina,Female,79.7,77.3 - 79.8,0.086
+2019,Indiana,Female,79.5,77.3 - 79.8,0.075
+2019,Ohio,Female,79.5,77.3 - 79.8,0.057
+2019,Louisiana,Female,78.6,77.3 - 79.8,0.093
+2019,Tennessee,Female,78.5,77.3 - 79.8,0.075
+2019,Arkansas,Female,78.4,77.3 - 79.8,0.114
+2019,Oklahoma,Female,78.3,77.3 - 79.8,0.099
+2019,Alabama,Female,78.2,77.3 - 79.8,0.09
+2019,Kentucky,Female,78,77.3 - 79.8,0.091
+2019,Mississippi,Female,77.6,77.3 - 79.8,0.118
+2019,West Virginia,Female,77.3,77.3 - 79.8,0.153
+2020,Alabama,Total,73.2,71.9 - 75.3,0.067
+2020,Alaska,Total,76.6,75.4 - 76.8,0.176
+2020,Arizona,Total,76.3,75.4 - 76.8,0.055
+2020,Arkansas,Total,73.8,71.9 - 75.3,0.086
+2020,California,Total,79,78.1 - 80.7,0.022
+2020,Colorado,Total,78.3,78.1 - 80.7,0.058
+2020,Connecticut,Total,78.4,78.1 - 80.7,0.073
+2020,Delaware,Total,76.7,75.4 - 76.8,0.147
+2020,District of Columbia,Total,75.3,71.9 - 75.3,0.179
+2020,Florida,Total,77.5,76.9 - 78.0,0.032
+2020,Georgia,Total,75.6,75.4 - 76.8,0.044
+2020,Hawaii,Total,80.7,78.1 - 80.7,0.119
+2020,Idaho,Total,78.4,78.1 - 80.7,0.102
+2020,Illinois,Total,76.8,75.4 - 76.8,0.04
+2020,Indiana,Total,75,71.9 - 75.3,0.056
+2020,Iowa,Total,77.5,76.9 - 78.0,0.077
+2020,Kansas,Total,76.4,75.4 - 76.8,0.084
+2020,Kentucky,Total,73.5,71.9 - 75.3,0.071
+2020,Louisiana,Total,73.1,71.9 - 75.3,0.07
+2020,Maine,Total,77.8,76.9 - 78.0,0.127
+2020,Maryland,Total,76.8,75.4 - 76.8,0.059
+2020,Massachusetts,Total,79,78.1 - 80.7,0.05
+2020,Michigan,Total,76,75.4 - 76.8,0.046
+2020,Minnesota,Total,79.1,78.1 - 80.7,0.056
+2020,Mississippi,Total,71.9,71.9 - 75.3,0.089
+2020,Missouri,Total,75.1,71.9 - 75.3,0.059
+2020,Montana,Total,76.8,75.4 - 76.8,0.142
+2020,Nebraska,Total,77.7,76.9 - 78.0,0.099
+2020,Nevada,Total,76.3,75.4 - 76.8,0.08
+2020,New Hampshire,Total,79,78.1 - 80.7,0.117
+2020,New Jersey,Total,77.5,76.9 - 78.0,0.045
+2020,New Mexico,Total,74.5,71.9 - 75.3,0.109
+2020,New York,Total,77.7,76.9 - 78.0,0.031
+2020,North Carolina,Total,76.1,75.4 - 76.8,0.045
+2020,North Dakota,Total,76.9,76.9 - 78.0,0.164
+2020,Ohio,Total,75.3,71.9 - 75.3,0.043
+2020,Oklahoma,Total,74.1,71.9 - 75.3,0.072
+2020,Oregon,Total,78.8,78.1 - 80.7,0.067
+2020,Pennsylvania,Total,76.8,75.4 - 76.8,0.04
+2020,Rhode Island,Total,78.2,78.1 - 80.7,0.13
+2020,South Carolina,Total,74.8,71.9 - 75.3,0.066
+2020,South Dakota,Total,76.7,75.4 - 76.8,0.156
+2020,Tennessee,Total,73.8,71.9 - 75.3,0.057
+2020,Texas,Total,76.5,75.4 - 76.8,0.026
+2020,United States,Total,77,*,
+2020,Utah,Total,78.6,78.1 - 80.7,0.078
+2020,Vermont,Total,78.8,78.1 - 80.7,0.178
+2020,Virginia,Total,77.6,76.9 - 78.0,0.048
+2020,Washington,Total,79.2,78.1 - 80.7,0.049
+2020,West Virginia,Total,72.8,71.9 - 75.3,0.118
+2020,Wisconsin,Total,77.7,76.9 - 78.0,0.058
+2020,Wyoming,Total,76.3,75.4 - 76.8,0.191
+2020,Alabama,Male,70.1,68.6 - 72.4,0.099
+2020,Alaska,Male,74.3,74.1 - 75.4,0.249
+2020,Arizona,Male,73.4,72.5 - 74.0,0.081
+2020,Arkansas,Male,71.1,68.6 - 72.4,0.125
+2020,California,Male,76.2,75.5 - 77.6,0.032
+2020,Colorado,Male,75.8,75.5 - 77.6,0.085
+2020,Connecticut,Male,75.6,75.5 - 77.6,0.109
+2020,Delaware,Male,73.9,72.5 - 74.0,0.219
+2020,District of Columbia,Male,71.7,68.6 - 72.4,0.266
+2020,Florida,Male,74.6,74.1 - 75.4,0.047
+2020,Georgia,Male,72.8,72.5 - 74.0,0.064
+2020,Hawaii,Male,77.6,75.5 - 77.6,0.17
+2020,Idaho,Male,76.1,75.5 - 77.6,0.15
+2020,Illinois,Male,73.8,72.5 - 74.0,0.059
+2020,Indiana,Male,72.3,68.6 - 72.4,0.082
+2020,Iowa,Male,74.9,74.1 - 75.4,0.112
+2020,Kansas,Male,73.8,72.5 - 74.0,0.122
+2020,Kentucky,Male,70.6,68.6 - 72.4,0.102
+2020,Louisiana,Male,69.9,68.6 - 72.4,0.102
+2020,Maine,Male,74.9,74.1 - 75.4,0.189
+2020,Maryland,Male,73.8,72.5 - 74.0,0.087
+2020,Massachusetts,Male,76.4,75.5 - 77.6,0.074
+2020,Michigan,Male,73.4,72.5 - 74.0,0.067
+2020,Minnesota,Male,76.8,75.5 - 77.6,0.083
+2020,Mississippi,Male,68.6,68.6 - 72.4,0.13
+2020,Missouri,Male,72.1,68.6 - 72.4,0.087
+2020,Montana,Male,74.2,74.1 - 75.4,0.203
+2020,Nebraska,Male,75.2,74.1 - 75.4,0.145
+2020,Nevada,Male,73.5,72.5 - 74.0,0.117
+2020,New Hampshire,Male,76.5,75.5 - 77.6,0.173
+2020,New Jersey,Male,74.6,74.1 - 75.4,0.066
+2020,New Mexico,Male,71.3,68.6 - 72.4,0.158
+2020,New York,Male,74.8,74.1 - 75.4,0.045
+2020,North Carolina,Male,73.3,72.5 - 74.0,0.067
+2020,North Dakota,Male,74.2,74.1 - 75.4,0.236
+2020,Ohio,Male,72.5,72.5 - 74.0,0.062
+2020,Oklahoma,Male,71.5,68.6 - 72.4,0.104
+2020,Oregon,Male,76.3,75.5 - 77.6,0.099
+2020,Pennsylvania,Male,74,72.5 - 74.0,0.059
+2020,Rhode Island,Male,75.5,75.5 - 77.6,0.192
+2020,South Carolina,Male,71.7,68.6 - 72.4,0.098
+2020,South Dakota,Male,74.2,74.1 - 75.4,0.221
+2020,Tennessee,Male,70.7,68.6 - 72.4,0.083
+2020,Texas,Male,73.7,72.5 - 74.0,0.038
+2020,United States,Male,74.2,*,
+2020,Utah,Male,76.7,75.5 - 77.6,0.113
+2020,Vermont,Male,76.1,75.5 - 77.6,0.27
+2020,Virginia,Male,75.1,74.1 - 75.4,0.07
+2020,Washington,Male,76.9,75.5 - 77.6,0.072
+2020,West Virginia,Male,69.8,68.6 - 72.4,0.17
+2020,Wisconsin,Male,75.2,74.1 - 75.4,0.085
+2020,Wyoming,Male,74,72.5 - 74.0,0.275
+2020,Alabama,Female,76.4,75.2 - 78.2,0.088
+2020,Alaska,Female,79.2,78.3 - 79.6,0.242
+2020,Arizona,Female,79.5,78.3 - 79.6,0.072
+2020,Arkansas,Female,76.6,75.2 - 78.2,0.116
+2020,California,Female,82,80.0 - 83.8,0.029
+2020,Colorado,Female,80.9,80.0 - 83.8,0.077
+2020,Connecticut,Female,81.3,80.0 - 83.8,0.093
+2020,Delaware,Female,79.5,78.3 - 79.6,0.191
+2020,District of Columbia,Female,78.7,78.3 - 79.6,0.233
+2020,Florida,Female,80.5,79.7 - 80.7,0.042
+2020,Georgia,Female,78.3,78.3 - 79.6,0.058
+2020,Hawaii,Female,83.8,80.0 - 83.8,0.159
+2020,Idaho,Female,80.8,80.0 - 83.8,0.136
+2020,Illinois,Female,79.8,79.7 - 80.7,0.052
+2020,Indiana,Female,77.9,75.2 - 78.2,0.075
+2020,Iowa,Female,80.1,79.7 - 80.7,0.102
+2020,Kansas,Female,79.2,78.3 - 79.6,0.112
+2020,Kentucky,Female,76.5,75.2 - 78.2,0.094
+2020,Louisiana,Female,76.4,75.2 - 78.2,0.093
+2020,Maine,Female,80.7,79.7 - 80.7,0.162
+2020,Maryland,Female,79.7,79.7 - 80.7,0.076
+2020,Massachusetts,Female,81.5,80.0 - 83.8,0.065
+2020,Michigan,Female,78.8,78.3 - 79.6,0.062
+2020,Minnesota,Female,81.4,80.0 - 83.8,0.074
+2020,Mississippi,Female,75.2,75.2 - 78.2,0.118
+2020,Missouri,Female,78.1,75.2 - 78.2,0.078
+2020,Montana,Female,79.6,78.3 - 79.6,0.193
+2020,Nebraska,Female,80.3,79.7 - 80.7,0.131
+2020,Nevada,Female,79.2,78.3 - 79.6,0.106
+2020,New Hampshire,Female,81.5,80.0 - 83.8,0.153
+2020,New Jersey,Female,80.5,79.7 - 80.7,0.059
+2020,New Mexico,Female,77.8,75.2 - 78.2,0.145
+2020,New York,Female,80.7,79.7 - 80.7,0.04
+2020,North Carolina,Female,79,78.3 - 79.6,0.059
+2020,North Dakota,Female,80,79.7 - 80.7,0.22
+2020,Ohio,Female,78.1,75.2 - 78.2,0.057
+2020,Oklahoma,Female,76.9,75.2 - 78.2,0.097
+2020,Oregon,Female,81.3,80.0 - 83.8,0.088
+2020,Pennsylvania,Female,79.6,78.3 - 79.6,0.052
+2020,Rhode Island,Female,80.9,80.0 - 83.8,0.17
+2020,South Carolina,Female,78,75.2 - 78.2,0.087
+2020,South Dakota,Female,79.4,78.3 - 79.6,0.217
+2020,Tennessee,Female,77,75.2 - 78.2,0.074
+2020,Texas,Female,79.3,78.3 - 79.6,0.035
+2020,United States,Female,79.9,*,
+2020,Utah,Female,80.6,79.7 - 80.7,0.105
+2020,Vermont,Female,81.4,80.0 - 83.8,0.227
+2020,Virginia,Female,80.1,79.7 - 80.7,0.064
+2020,Washington,Female,81.6,80.0 - 83.8,0.065
+2020,West Virginia,Female,76.1,75.2 - 78.2,0.158
+2020,Wisconsin,Female,80.3,79.7 - 80.7,0.078
+2020,Wyoming,Female,78.9,78.3 - 79.6,0.259
+2021,Mississippi,Total,70.9,70.9 - 74.5,0.092
+2021,West Virginia,Total,71.0,70.9 - 74.5,0.117
+2021,Alabama,Total,72.0,70.9 - 74.5,0.069
+2021,Louisiana,Total,72.2,70.9 - 74.5,0.073
+2021,Kentucky,Total,72.3,70.9 - 74.5,0.071
+2021,Tennessee,Total,72.4,70.9 - 74.5,0.057
+2021,Arkansas,Total,72.5,70.9 - 74.5,0.089
+2021,Oklahoma,Total,72.7,70.9 - 74.5,0.074
+2021,New Mexico,Total,73.0,70.9 - 74.5,0.113
+2021,South Carolina,Total,73.5,70.9 - 74.5,0.069
+2021,Georgia,Total,74.3,70.9 - 74.5,0.045
+2021,Ohio,Total,74.5,70.9 - 74.5,0.044
+2021,Alaska,Total,74.5,70.9 - 74.5,0.180
+2021,Indiana,Total,74.6,74.6 - 76.3,0.057
+2021,Missouri,Total,74.6,74.6 - 76.3,0.060
+2021,North Carolina,Total,74.9,74.6 - 76.3,0.046
+2021,Wyoming,Total,75.0,74.6 - 76.3,0.199
+2021,Arizona,Total,75.0,74.6 - 76.3,0.057
+2021,Nevada,Total,75.1,74.6 - 76.3,0.083
+2021,District of Columbia,Total,75.3,74.6 - 76.3,0.190
+2021,Texas,Total,75.4,74.6 - 76.3,0.027
+2021,Michigan,Total,75.7,74.6 - 76.3,0.046
+2021,Montana,Total,75.8,74.6 - 76.3,0.145
+2021,Kansas,Total,76.0,74.6 - 76.3,0.086
+2021,Florida,Total,76.1,74.6 - 76.3,0.033
+2021,Delaware,Total,76.3,74.6 - 76.3,0.150
+2021,Pennsylvania,Total,76.4,76.4 - 77.8,0.041
+2021,South Dakota,Total,76.6,76.4 - 77.8,0.164
+2021,Maine,Total,76.7,76.4 - 77.8,0.126
+2021,Virginia,Total,76.8,76.4 - 77.8,0.049
+2021,Illinois,Total,77.1,76.4 - 77.8,0.041
+2021,Idaho,Total,77.2,76.4 - 77.8,0.104
+2021,Maryland,Total,77.2,76.4 - 77.8,0.059
+2021,Oregon,Total,77.4,76.4 - 77.8,0.067
+2021,North Dakota,Total,77.6,76.4 - 77.8,0.164
+2021,Iowa,Total,77.7,76.4 - 77.8,0.077
+2021,Colorado,Total,77.7,76.4 - 77.8,0.060
+2021,Wisconsin,Total,77.8,76.4 - 77.8,0.059
+2021,Nebraska,Total,77.8,76.4 - 77.8,0.101
+2021,Utah,Total,78.2,77.9 - 79.9,0.078
+2021,Washington,Total,78.2,77.9 - 79.9,0.050
+2021,California,Total,78.3,77.9 - 79.9,0.023
+2021,Vermont,Total,78.4,77.9 - 79.9,0.176
+2021,Rhode Island,Total,78.5,77.9 - 79.9,0.130
+2021,New Hampshire,Total,78.5,77.9 - 79.9,0.117
+2021,Minnesota,Total,78.8,77.9 - 79.9,0.059
+2021,New Jersey,Total,79.0,77.9 - 79.9,0.045
+2021,New York,Total,79.0,77.9 - 79.9,0.031
+2021,Connecticut,Total,79.2,77.9 - 79.9,0.074
+2021,Massachusetts,Total,79.6,77.9 - 79.9,0.050
+2021,Hawaii,Total,79.9,77.9 - 79.9,0.118
+2021,Mississippi,Male,67.7,67.7 - 71.8,0.133
+2021,West Virginia,Male,68.1,67.7 - 71.8,0.167
+2021,Louisiana,Male,68.8,67.7 - 71.8,0.105
+2021,Alabama,Male,68.9,67.7 - 71.8,0.100
+2021,Tennessee,Male,69.4,67.7 - 71.8,0.083
+2021,New Mexico,Male,69.4,67.7 - 71.8,0.161
+2021,Kentucky,Male,69.6,67.7 - 71.8,0.101
+2021,Arkansas,Male,69.7,67.7 - 71.8,0.127
+2021,Oklahoma,Male,70.0,67.7 - 71.8,0.105
+2021,South Carolina,Male,70.4,67.7 - 71.8,0.100
+2021,Georgia,Male,71.6,67.7 - 71.8,0.065
+2021,Missouri,Male,71.6,67.7 - 71.8,0.088
+2021,Ohio,Male,71.7,67.7 - 71.8,0.063
+2021,Indiana,Male,71.8,67.7 - 71.8,0.083
+2021,District of Columbia,Male,71.9,71.9 - 73.5,0.275
+2021,Arizona,Male,72.0,71.9 - 73.5,0.082
+2021,North Carolina,Male,72.0,71.9 - 73.5,0.068
+2021,Alaska,Male,72.2,71.9 - 73.5,0.250
+2021,Nevada,Male,72.4,71.9 - 73.5,0.119
+2021,Wyoming,Male,72.5,71.9 - 73.5,0.281
+2021,Texas,Male,72.7,71.9 - 73.5,0.038
+2021,Michigan,Male,72.9,71.9 - 73.5,0.067
+2021,Montana,Male,73.1,71.9 - 73.5,0.210
+2021,Florida,Male,73.1,71.9 - 73.5,0.048
+2021,Delaware,Male,73.3,71.9 - 73.5,0.218
+2021,Kansas,Male,73.4,71.9 - 73.5,0.122
+2021,Pennsylvania,Male,73.6,73.6 - 75.3,0.058
+2021,Maine,Male,73.8,73.6 - 75.3,0.184
+2021,South Dakota,Male,74.1,73.6 - 75.3,0.230
+2021,Virginia,Male,74.2,73.6 - 75.3,0.071
+2021,Illinois,Male,74.2,73.6 - 75.3,0.060
+2021,Maryland,Male,74.3,73.6 - 75.3,0.087
+2021,Idaho,Male,74.8,73.6 - 75.3,0.151
+2021,Oregon,Male,74.8,73.6 - 75.3,0.098
+2021,North Dakota,Male,75.0,73.6 - 75.3,0.232
+2021,Colorado,Male,75.0,73.6 - 75.3,0.087
+2021,Iowa,Male,75.2,73.6 - 75.3,0.111
+2021,Wisconsin,Male,75.2,73.6 - 75.3,0.085
+2021,California,Male,75.3,73.6 - 75.3,0.033
+2021,Nebraska,Male,75.4,75.4 - 77.0,0.143
+2021,Vermont,Male,75.7,75.4 - 77.0,0.255
+2021,Washington,Male,75.8,75.4 - 77.0,0.073
+2021,Rhode Island,Male,75.9,75.4 - 77.0,0.191
+2021,New Hampshire,Male,76.1,75.4 - 77.0,0.172
+2021,New York,Male,76.3,75.4 - 77.0,0.045
+2021,Utah,Male,76.3,75.4 - 77.0,0.113
+2021,New Jersey,Male,76.3,75.4 - 77.0,0.065
+2021,Connecticut,Male,76.3,75.4 - 77.0,0.110
+2021,Minnesota,Male,76.3,75.4 - 77.0,0.086
+2021,Massachusetts,Male,76.9,75.4 - 77.0,0.074
+2021,Hawaii,Male,77.0,75.4 - 77.0,0.172
+2021,West Virginia,Female,74.2,74.2 - 77.5,0.159
+2021,Mississippi,Female,74.3,74.2 - 77.5,0.125
+2021,Kentucky,Female,75.3,74.2 - 77.5,0.096
+2021,Alabama,Female,75.3,74.2 - 77.5,0.091
+2021,Tennessee,Female,75.5,74.2 - 77.5,0.077
+2021,Arkansas,Female,75.6,74.2 - 77.5,0.121
+2021,Oklahoma,Female,75.6,74.2 - 77.5,0.103
+2021,Louisiana,Female,75.9,74.2 - 77.5,0.098
+2021,South Carolina,Female,76.7,74.2 - 77.5,0.092
+2021,New Mexico,Female,77.0,74.2 - 77.5,0.152
+2021,Georgia,Female,77.1,74.2 - 77.5,0.060
+2021,Alaska,Female,77.3,74.2 - 77.5,0.256
+2021,Indiana,Female,77.5,74.2 - 77.5,0.077
+2021,Ohio,Female,77.5,74.2 - 77.5,0.058
+2021,Wyoming,Female,77.7,77.6 - 79.3,0.275
+2021,Missouri,Female,77.8,77.6 - 79.3,0.080
+2021,North Carolina,Female,77.9,77.6 - 79.3,0.061
+2021,Nevada,Female,78.2,77.6 - 79.3,0.112
+2021,Texas,Female,78.3,77.6 - 79.3,0.036
+2021,Arizona,Female,78.3,77.6 - 79.3,0.076
+2021,District of Columbia,Female,78.5,77.6 - 79.3,0.258
+2021,Michigan,Female,78.6,77.6 - 79.3,0.062
+2021,Kansas,Female,78.7,77.6 - 79.3,0.116
+2021,Montana,Female,78.8,77.6 - 79.3,0.195
+2021,Florida,Female,79.3,77.6 - 79.3,0.044
+2021,Pennsylvania,Female,79.3,77.6 - 79.3,0.054
+2021,South Dakota,Female,79.3,77.6 - 79.3,0.230
+2021,Virginia,Female,79.4,79.4 - 80.5,0.065
+2021,Delaware,Female,79.4,79.4 - 80.5,0.199
+2021,Idaho,Female,79.7,79.4 - 80.5,0.137
+2021,Maine,Female,79.8,79.4 - 80.5,0.166
+2021,Maryland,Female,79.9,79.4 - 80.5,0.077
+2021,Illinois,Female,80.0,79.4 - 80.5,0.054
+2021,Utah,Female,80.2,79.4 - 80.5,0.105
+2021,Oregon,Female,80.2,79.4 - 80.5,0.089
+2021,Nebraska,Female,80.3,79.4 - 80.5,0.138
+2021,Iowa,Female,80.4,79.4 - 80.5,0.103
+2021,Wisconsin,Female,80.5,79.4 - 80.5,0.079
+2021,North Dakota,Female,80.5,79.4 - 80.5,0.224
+2021,Colorado,Female,80.6,80.6 - 83.1,0.080
+2021,Washington,Female,80.8,80.6 - 83.1,0.067
+2021,Rhode Island,Female,81.0,80.6 - 83.1,0.171
+2021,New Hampshire,Female,81.1,80.6 - 83.1,0.155
+2021,Vermont,Female,81.2,80.6 - 83.1,0.237
+2021,California,Female,81.4,80.6 - 83.1,0.030
+2021,Minnesota,Female,81.4,80.6 - 83.1,0.078
+2021,New Jersey,Female,81.6,80.6 - 83.1,0.058
+2021,New York,Female,81.6,80.6 - 83.1,0.040
+2021,Connecticut,Female,82.0,80.6 - 83.1,0.097
+2021,Massachusetts,Female,82.2,80.6 - 83.1,0.065
+2021,Hawaii,Female,83.1,80.6 - 83.1,0.155

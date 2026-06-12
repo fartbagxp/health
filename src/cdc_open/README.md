@@ -261,7 +261,8 @@ for block in response.content:
 | Key                      | Dataset ID  | Coverage     | Description                                          |
 | ------------------------ | ----------- | ------------ | ---------------------------------------------------- |
 | `leading_death`          | `bi63-dtpu` | 1999–2017    | Leading causes of death by state                     |
-| `life_expectancy`        | `w9j2-ggv5` | 1900–2018    | Life expectancy by race and sex                      |
+| `life_expectancy`        | `w9j2-ggv5` | 1900–2018    | Life expectancy at birth, national, by race × sex (Male/Female/Both) |
+| `life_expectancy_by_state` | composite | 2018–2021  | Life expectancy at birth by state and sex (Male/Female/Total); combines four NCHS single-year datasets with normalized columns |
 | `mortality_rates`        | `489q-934x` | 2020–present | Provisional quarterly death rates                    |
 | `death_rates_historical` | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes              |
 | `weekly_deaths`          | `r8kw-7aab` | 2020–present | Weekly deaths by state: COVID/flu/pneumonia (weekly) |

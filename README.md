@@ -9,6 +9,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 | [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API      |
 | [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API  |
 | [WISQARS Injury & Violence Data]                                       | `src/wisqars/`  | data.cdc.gov (Socrata)  |
+| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT |
 | [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)  |
 | [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)  |
 | [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)  |
@@ -61,6 +62,65 @@ uv run python -m wisqars county --state Texas --intent FA_Deaths --year 2023
 
 Refer to [WISQARS source](src/wisqars/) for more information.
 
+### NIS — National Immunization Survey
+
+The [NIS](https://www.cdc.gov/vaccines/imz-managers/nis/) is CDC's annual random-digit-dial telephone survey measuring childhood and adolescent vaccination coverage across the US. Two surveys are covered:
+
+| Survey      | Ages        | Index page                                                          |
+| ----------- | ----------- | ------------------------------------------------------------------- |
+| **NIS-Child** | 19–35 months | https://www.cdc.gov/nis/php/datasets-child/index.html             |
+| **NIS-Teen**  | 13–17 years  | https://www.cdc.gov/nis/php/datasets-teen/index.html              |
+
+Data are distributed as **fixed-width ASCII `.dat` files** (50–200 MB each) with accompanying SAS and R import programs. This module is a pure-Python replacement — it fetches the SAS codebook to derive column positions, then streams the `.dat` file without writing anything to disk.
+
+**Geographic scope of public-use files:** national and state level. County-level identifiers are suppressed and require [CDC Research Data Center](https://www.cdc.gov/rdc/) access.
+
+**Vaccines tracked (NIS-Child):** DTaP, MMR, Polio, Hib, PCV, HepB, HepA, Varicella, Rotavirus, Influenza, and combined series (4:3:1, 7-vaccine).
+
+**Vaccines tracked (NIS-Teen):** Tdap, MCV4 (meningococcal), HPV, HepA, HepB, Influenza, Meningococcal B.
+
+**Hesitancy columns:** `SHOT_HES` (both surveys), `NOT_SURE_VACC` (teen).
+
+```bash
+# List available years
+uv run python -m nis list child        # 2011–2022
+uv run python -m nis list teen
+
+# Stream raw respondent records — no storage; values are raw SAS codes
+uv run python -m nis stream child 2022 --limit 10 -f json
+uv run python -m nis stream teen 2022 --state CA -f csv
+
+# State-level UTD rates (unweighted %; use PROVWT_D/PROVWT_C for survey-weighted estimates)
+uv run python -m nis rates child 2022 -f table
+uv run python -m nis rates teen 2022 --vaccines P_UTDHPV13 P_UTDTDAP -f csv
+
+# National summary
+uv run python -m nis national child 2022
+uv run python -m nis national teen 2022 --vaccines P_UTDHPV13
+```
+
+**Python SDK:**
+
+```python
+from nis.sdk import list_years, stream_records, get_vaccination_rates, get_national_rates
+
+# Stream respondent-level microdata (never touches disk)
+for rec in stream_records("child", 2022, state="California"):
+    mmr_utd = rec["P_UTDMMX"]        # '1' = UTD, '0' = not UTD, '' = unknown
+    state_fips = rec["RETEILI"]
+    weight = rec["PROVWT_D"]          # survey weight for representative estimates
+
+# Aggregate UTD rates by state
+rows = get_vaccination_rates("child", 2022)
+# rows[0] → {'state_fips': '01', 'state_name': 'Alabama', 'P_UTDMMX_pct': 91.3, ...}
+
+# National rates
+nat = get_national_rates("teen", 2022, vaccines=["P_UTDHPV13", "P_UTDTDAP"])
+print(nat["P_UTDHPV13_pct"])   # % of teens with completed HPV series
+```
+
+---
+
 ### CDC Open Data
 
 [data.cdc.gov](https://data.cdc.gov) is the CDC's public open data portal, built on the Socrata platform. It exposes datasets as a standard REST/JSON API ([SODA](https://dev.socrata.com/)) — no authentication required for read access.
@@ -78,6 +138,7 @@ Refer to [CDC Open README](src/cdc_open/README.md) for more information.
 [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]: https://wonder.cdc.gov/wonder/help/wonder-api.html
 [National Syndromic Surveillance Program (NSSP)]: https://www.cdc.gov/nssp/
 [WISQARS Injury & Violence Data]: https://wisqars.cdc.gov/
+[National Immunization Survey (NIS)]: https://www.cdc.gov/vaccines/imz-managers/nis/
 [National Wastewater Surveillance System (NWSS)]: https://www.cdc.gov/nwss/about.html
 [National Respiratory and Enteric Virus Surveillance System (NREVSS)]: https://www.cdc.gov/nrevss/php/dashboard/index.html
 [National Healthcare Safety Network (NHSN)]: https://www.cdc.gov/nhsn/datastat/index.html

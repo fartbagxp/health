@@ -31,19 +31,27 @@ Rate note: the official MMR uses LIVE BIRTHS as denominator (per 100,000).
 Join with the project's natality data (births-by-year CSVs, D66) to compute
 true MMR per 100,000 live births.
 
-Prerequisites:
-    pip install playwright beautifulsoup4
-    playwright install chromium
+Prerequisites (one-time setup — downloads the browser binary):
+    uv run playwright install chromium
 
 Usage:
     uv run python src/wonder/queries/scrape_maternal_mortality_by_state.py
 """
 
 import csv
+import os
 import sys
 import time
 from io import StringIO
 from pathlib import Path
+
+# On this host, libnspr4/libnss3/libatk/etc. are not installed system-wide.
+# Stub .so files compiled from the binary's undefined-symbol list live here
+# so Chrome can load without crashing.
+_STUB_LIBS = Path.home() / ".local" / "lib" / "pw-stubs"
+if _STUB_LIBS.is_dir():
+    existing = os.environ.get("LD_LIBRARY_PATH", "")
+    os.environ["LD_LIBRARY_PATH"] = f"{_STUB_LIBS}:{existing}" if existing else str(_STUB_LIBS)
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
@@ -282,10 +290,15 @@ def parse_html_results(html: str) -> list[dict]:
         or soup.find("table", {"id": "results-table"})
     )
     if not table:
-        # Last resort: first table with a header row containing "Year"
+        # Last resort: find table whose header rows contain both "Year" and "State"
         for t in soup.find_all("table"):
-            headers_row = t.find("tr")
-            if headers_row and "Year" in headers_row.get_text():
+            all_trs = t.find_all("tr")
+            # Gather text from all header rows (first few rows)
+            header_text = " ".join(
+                tr.get_text(" ", strip=True)
+                for tr in all_trs[:5]
+            )
+            if "Year" in header_text and "State" in header_text:
                 table = t
                 break
 
@@ -296,12 +309,18 @@ def parse_html_results(html: str) -> list[dict]:
     if not rows:
         raise ValueError("Data table has no rows")
 
-    # Extract headers from first row
-    header_row = rows[0]
+    # Find the header row that contains "Year" and "State"
+    header_idx = 0
+    for i, tr in enumerate(rows):
+        cells = [c.get_text(strip=True) for c in tr.find_all(["th", "td"])]
+        if "Year" in cells and "State" in cells:
+            header_idx = i
+            break
+    header_row = rows[header_idx]
     headers = [th.get_text(strip=True) for th in header_row.find_all(["th", "td"])]
 
     records = []
-    for tr in rows[1:]:
+    for tr in rows[header_idx + 1:]:
         cells = [td.get_text(strip=True) for td in tr.find_all(["td", "th"])]
         if not cells:
             continue
@@ -374,14 +393,27 @@ def query_dataset(page, dataset: dict) -> list[dict]:
 
     print("    Results received. Downloading export …", flush=True)
 
-    # Attempt to click "Export Results" to get a clean TSV download
-    export_btn = page.locator("input[value='Export Results']")
+    # The export panel is collapsed by default. Expand it, pick TSV, then download.
     try:
-        export_btn.wait_for(state="visible", timeout=10000)
+        # Expand the export panel (button with text "Export")
+        expand_btn = page.locator("button:has-text('Export'), input[value='Export Results']").first
+        try:
+            expand_btn.click(timeout=5000)
+            page.wait_for_timeout(500)
+        except Exception:
+            pass
+
+        # Set format to TSV if the selector exists
+        fmt_sel = page.locator("select[name='O_export-format']")
+        if fmt_sel.count() > 0:
+            page.select_option("select[name='O_export-format']", value="tsv", timeout=3000)
+
+        download_btn = page.locator("input[name='action-Export']")
+        download_btn.wait_for(state="visible", timeout=10000)
         with page.expect_download(timeout=60000) as dl_info:
-            export_btn.click()
+            download_btn.click()
         download = dl_info.value
-        tsv = download.read_text("utf-8")
+        tsv = Path(download.path()).read_text("utf-8")
         records = parse_tsv_export(tsv)
         print(f"    TSV export: {len(tsv.splitlines())} lines → {len(records)} records", flush=True)
         return records
@@ -465,7 +497,20 @@ def main() -> None:
     all_records: dict[str, list[dict]] = {"D76": [], "D158": []}
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        try:
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--ignore-certificate-errors", "--no-sandbox", "--disable-dev-shm-usage"],
+            )
+        except Exception as e:
+            print(
+                f"\nERROR: Could not launch Chromium browser.\n"
+                f"  {e}\n\n"
+                f"Run this once to install the browser binary:\n"
+                f"  uv run playwright install chromium\n",
+                file=sys.stderr,
+            )
+            sys.exit(1)
         context = browser.new_context(user_agent=USER_AGENT)
         page = context.new_page()
 

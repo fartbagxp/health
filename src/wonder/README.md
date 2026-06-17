@@ -86,9 +86,8 @@ uv run python src/wonder/queries/fetch_maternal_mortality.py
 **API limitation — state-level data not available:** The WONDER web service returns a 500 error for any query that groups by or filters to a specific state on mortality datasets. To get state-level maternal mortality data, use the Playwright scraper:
 
 ```bash
-# Prerequisites (run once — requires internet access to download the browser)
-pip install playwright beautifulsoup4
-playwright install chromium
+# Prerequisites (run once — downloads the browser binary; package already in pyproject.toml)
+uv run playwright install chromium
 
 # Run — takes ~5 min; waits 90 s between the two dataset queries
 uv run python src/wonder/queries/scrape_maternal_mortality_by_state.py

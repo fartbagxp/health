@@ -61,6 +61,45 @@ Each query groups by `Year` (`V20` in all three datasets) and returns the `Birth
 | `infant-mortality-2018-2023-req.xml`              | Infant mortality                   | 2018–2023 |
 | `unintentional-injuries-by-age-2018-2023-req.xml` | Unintentional injury deaths by age | 2018–2023 |
 
+### Maternal mortality — national trend (1999–2024)
+
+Two datasets are needed to cover the full ICD-10 era:
+
+| Query file                                      | Dataset                               | Years     | API ID |
+| ----------------------------------------------- | ------------------------------------- | --------- | ------ |
+| `maternal-mortality-by-year-1999-2020-req.xml`  | Underlying Cause of Death (bridged)   | 1999–2020 | D76    |
+| `maternal-mortality-by-year-2018-2024-req.xml`  | Underlying Cause of Death (single-race) | 2018–2024 | D158 |
+
+ICD-10 filter: `O00–O99` (Pregnancy, childbirth and the puerperium) + `A34` (Obstetrical tetanus). Grouped by Year, national only.
+
+Run both and merge:
+```
+uv run python src/wonder/queries/fetch_maternal_mortality.py
+→ data/raw/wonder/maternal-mortality-by-year.csv
+```
+
+**Key findings (1999–2024):**
+- Counts were ~400–800/year from 1999–2009, rising as states adopted the 2003 revised death certificate (pregnancy checkbox rollout 2003–2017 — largely measurement change, not a real increase)
+- Peak in 2021 at **1,687 deaths** (COVID-era spike); declined to ~1,000 by 2023–2024
+- The 2018 drop reflects the end of the checkbox rollout and a methodology reset (NCHS shifted to D158 single-race)
+
+**API limitation — state-level data not available:** The WONDER web service returns a 500 error for any query that groups by or filters to a specific state on mortality datasets. To get state-level maternal mortality data, use the Playwright scraper:
+
+```bash
+# Prerequisites (run once — downloads the browser binary; package already in pyproject.toml)
+uv run playwright install chromium
+
+# Run — takes ~5 min; waits 90 s between the two dataset queries
+uv run python src/wonder/queries/scrape_maternal_mortality_by_state.py
+→ data/raw/wonder/maternal-mortality-by-state-year.csv
+```
+
+The scraper (`scrape_maternal_mortality_by_state.py`) navigates the WONDER web UI with a headless browser, sets Group By = Year × State, filters UCD = `O00–O99`, and exports both D76 (1999–2017) and D158 (2018–2024). It cannot run in the project's CI environment (requires browser libraries), so run it locally when you need fresh state-level data. Alternatively, the static **NCHS table** (2018–2022 pooled, by state) is at https://www.cdc.gov/nchs/maternal-mortality/mmr-2018-2022-state-data.pdf
+
+**Rate note:** WONDER's crude rate column uses total population as denominator. The official maternal mortality rate (MMR) uses **live births** per 100,000 as denominator. Join with birth counts from the Natality queries (D66) to compute true MMR.
+
+**Pregnancy checkbox caveat:** The 2003 revised U.S. Standard Certificate of Death added a pregnancy checkbox. States adopted it on a rolling schedule 2003–2017, causing a staggered artificial rise in reported counts. Pre-2018 and post-2018 figures are not directly comparable for trend analysis without adjustment.
+
 ## CLI usage
 
 ```bash

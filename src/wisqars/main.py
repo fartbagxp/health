@@ -30,6 +30,7 @@ from wisqars.sdk import (
     get_injury_national,
     get_injury_state,
     get_injury_county,
+    get_injury_census_tract,
     query_dataset,
 )
 
@@ -110,6 +111,17 @@ def cmd_county(args):
     _print_output(rows, args.format)
 
 
+def cmd_census_tract(args):
+    rows = get_injury_census_tract(
+        state=args.state,
+        tract=args.tract,
+        intent=args.intent,
+        year=args.year,
+        limit=args.limit,
+    )
+    _print_output(rows, args.format)
+
+
 def cmd_query(args):
     rows = query_dataset(
         dataset_id=args.dataset_id,
@@ -181,6 +193,22 @@ def main():
     p_county.add_argument("-f", "--format", **_fmt)
     p_county.add_argument("--limit", **_lim)
     p_county.set_defaults(func=cmd_county)
+
+    p_tract = sub.add_parser(
+        "tract", help="Census-tract-level injury/violence data (2022-present)"
+    )
+    p_tract.add_argument("--state", metavar="STATE", help="State name or 2-digit FIPS")
+    p_tract.add_argument("--tract", metavar="TRACT", help="Census tract GEOID partial match")
+    p_tract.add_argument(
+        "--intent",
+        choices=["All_Homicide", "Drug_OD"],
+        metavar="INTENT",
+        help="'All_Homicide' or 'Drug_OD'",
+    )
+    p_tract.add_argument("--year", metavar="YEAR", help="e.g. '2022'")
+    p_tract.add_argument("-f", "--format", **_fmt)
+    p_tract.add_argument("--limit", **_lim)
+    p_tract.set_defaults(func=cmd_census_tract)
 
     p_query = sub.add_parser("query", help="Raw SODA query against any WISQARS dataset")
     p_query.add_argument("dataset_id", help="Socrata dataset ID")

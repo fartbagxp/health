@@ -46,37 +46,37 @@ See → Multi-Year Queries for the merge pattern.
 ```
 
 !!! tip "D176 vs D157"
-    D176 (Provisional) publishes within weeks of death; D157 (Final) is confirmed 2–3 years later. For exploratory work use D176. For publications use D157 when the years are available.
+D176 (Provisional) publishes within weeks of death; D157 (Final) is confirmed 2–3 years later. For exploratory work use D176. For publications use D157 when the years are available.
 
 ### Natality — births
 
-| Dataset | Years | Notes |
-|---|---|---|
-| D192 | 2023–present | Provisional, updates monthly |
-| D66 | 2007–2024 | Default for recent births |
-| D149 | 2016–2024 | Expanded race/ethnicity detail |
-| D27 | 2003–2006 | |
-| D10 | 1995–2002 | |
+| Dataset | Years        | Notes                          |
+| ------- | ------------ | ------------------------------ |
+| D192    | 2023–present | Provisional, updates monthly   |
+| D66     | 2007–2024    | Default for recent births      |
+| D149    | 2016–2024    | Expanded race/ethnicity detail |
+| D27     | 2003–2006    |                                |
+| D10     | 1995–2002    |                                |
 
 ### Infant mortality
 
-| Dataset | Years |
-|---|---|
-| D69 | 2007–2023 |
-| D159 | 2017–2023 (expanded) |
-| D31 | 2003–2006 |
-| D18 | 1999–2002 |
-| D23 | 1995–1998 |
+| Dataset | Years                |
+| ------- | -------------------- |
+| D69     | 2007–2023            |
+| D159    | 2017–2023 (expanded) |
+| D31     | 2003–2006            |
+| D18     | 1999–2002            |
+| D23     | 1995–1998            |
 
 ### Environmental
 
-| Dataset | What | Years |
-|---|---|---|
-| D104 | Heat wave days | 1981–2010 |
-| D60 | Air temperature & heat index (NLDAS) | 1979–2011 |
-| D73 | PM2.5 fine particulate matter | 2003–2011 |
-| D80 | Daily sunlight | 1979–2011 |
-| D81 | Daily precipitation | 1979–2011 |
+| Dataset | What                                 | Years     |
+| ------- | ------------------------------------ | --------- |
+| D104    | Heat wave days                       | 1981–2010 |
+| D60     | Air temperature & heat index (NLDAS) | 1979–2011 |
+| D73     | PM2.5 fine particulate matter        | 2003–2011 |
+| D80     | Daily sunlight                       | 1979–2011 |
+| D81     | Daily precipitation                  | 1979–2011 |
 
 ## Writing prompts that work
 
@@ -126,11 +126,11 @@ uv run python -m wonder query "HIV/AIDS deaths by year 1982-1998, dataset D77" -
 
 ## Key limitations
 
-| Limit | Detail |
-|---|---|
-| **Rate limit** | ≥15 seconds between API requests. Scripts must `time.sleep(15)` in loops. |
-| **75,000 cell cap** | WONDER rejects queries whose result would exceed 75,000 cells. Break large state × year × cause queries into smaller pieces. |
-| **Suppressed values** | Counts below 10 appear as "Suppressed" — small populations and rare causes drop out. |
-| **AAR + age grouping** | Age-adjusted rates can't be computed when grouping by age. The builder disables AAR automatically. |
-| **Mode selectors** | `O_ucd`, `O_age`, `O_race` must match your active `F_*` filter, or the filter is silently ignored. The builder sets these — but if results look wrong, verify they match. |
-| **VAERS (D8)** | The XML API has a server-side bug for D8. Use `wonder build` to generate XML, submit manually via the VAERS web interface. |
+| Limit                  | Detail                                                                                                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Rate limit**         | ≥15 seconds between API requests. Scripts must `time.sleep(15)` in loops.                                                                                                 |
+| **75,000 cell cap**    | WONDER rejects queries whose result would exceed 75,000 cells. Break large state × year × cause queries into smaller pieces.                                              |
+| **Suppressed values**  | Counts below 10 appear as "Suppressed" — small populations and rare causes drop out.                                                                                      |
+| **AAR + age grouping** | Age-adjusted rates can't be computed when grouping by age. The builder disables AAR automatically.                                                                        |
+| **Mode selectors**     | `O_ucd`, `O_age`, `O_race` must match your active `F_*` filter, or the filter is silently ignored. The builder sets these — but if results look wrong, verify they match. |
+| **VAERS (D8)**         | The XML API has a server-side bug for D8. Use `wonder build` to generate XML, submit manually via the VAERS web interface.                                                |

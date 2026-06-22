@@ -36,21 +36,21 @@ uv run python -m wonder query \
 
 WONDER rejects results that would exceed 75,000 cells:
 
-```
+```bash
 cells = (states) × (years) × (other group-by dimensions)
 ```
 
 Rules of thumb:
 
-| Dimensions | Approx rows | Safe? |
-|---|---|---|
-| state only | ~52 | ✅ |
-| state × year (7 yr) | ~364 | ✅ |
-| state × year × sex | ~728 | ✅ |
-| state × year × age (10-yr groups, 12 bands) | ~4,368 | ✅ |
-| state × year × ICD chapter (~20 chapters) | ~7,280 | ✅ |
-| state × county × year | ~100k+ | ❌ split needed |
-| state × year (25 yr) × race × sex | ~90k+ | ❌ split needed |
+| Dimensions                                  | Approx rows | Safe?           |
+| ------------------------------------------- | ----------- | --------------- |
+| state only                                  | ~52         | ✅              |
+| state × year (7 yr)                         | ~364        | ✅              |
+| state × year × sex                          | ~728        | ✅              |
+| state × year × age (10-yr groups, 12 bands) | ~4,368      | ✅              |
+| state × year × ICD chapter (~20 chapters)   | ~7,280      | ✅              |
+| state × county × year                       | ~100k+      | ❌ split needed |
+| state × year (25 yr) × race × sex           | ~90k+       | ❌ split needed |
 
 When you hit the limit, the solution is to **query one year at a time** and loop:
 
@@ -83,7 +83,7 @@ with open("overdose-by-state-1999-2023.csv", "w", newline="") as f:
 ```
 
 !!! note "Total time for 25-year state loop"
-    25 queries × 16 seconds = ~6.7 minutes. Run once, save results to CSV, re-use locally.
+25 queries × 16 seconds = ~6.7 minutes. Run once, save results to CSV, re-use locally.
 
 ## State names vs FIPS codes
 

@@ -13,14 +13,14 @@ uv sync
 
 ## Data Sources
 
-| Source | Module | What it covers | Years |
-|---|---|---|---|
-| [CDC WONDER](wonder/index.md) | `wonder` | Mortality, births, natality, environment, VAERS | 1968–present |
-| [ATSDR GRASP / FluView](grasp.md) | `grasp` | Flu hospitalizations, ILI activity, hantavirus | 1997–present |
-| [WISQARS](wisqars.md) | `wisqars` | Injury, firearm, overdose deaths by geography | 1999–present |
-| [NSSP](nssp.md) | `nssp` | Emergency dept. visits for COVID/flu/RSV | 2020–present |
-| [NIS](nis.md) | `nis` | Childhood & teen vaccination coverage | 2011–present |
-| [CDC Open Data](cdc-open.md) | `cdc_open` | 30+ datasets: overdose, NHSN, NWSS, wastewater | varies |
+| Source                            | Module     | What it covers                                  | Years        |
+| --------------------------------- | ---------- | ----------------------------------------------- | ------------ |
+| [CDC WONDER](wonder/index.md)     | `wonder`   | Mortality, births, natality, environment, VAERS | 1968–present |
+| [ATSDR GRASP / FluView](grasp.md) | `grasp`    | Flu hospitalizations, ILI activity, hantavirus  | 1997–present |
+| [WISQARS](wisqars.md)             | `wisqars`  | Injury, firearm, overdose deaths by geography   | 1999–present |
+| [NSSP](nssp.md)                   | `nssp`     | Emergency dept. visits for COVID/flu/RSV        | 2020–present |
+| [NIS](nis.md)                     | `nis`      | Childhood & teen vaccination coverage           | 2011–present |
+| [CDC Open Data](cdc-open.md)      | `cdc_open` | 30+ datasets: overdose, NHSN, NWSS, wastewater  | varies       |
 
 ## One-liners
 

@@ -33,87 +33,87 @@ Use these keys with `uv run python -m cdc_open query <key>`:
 
 ### Mortality
 
-| Key | Dataset | ID | Years |
-|---|---|---|---|
-| `leading_death` | Leading Causes of Death | `bi63-dtpu` | 1999–2017 |
-| `mortality_rates` | Provisional Mortality Rates (quarterly) | `489q-934x` | 2020–present |
-| `weekly_deaths` | Weekly Death Surveillance | `r8kw-7aab` | 2020–present |
-| `weekly_deaths_by_cause` | Weekly Deaths by Cause | `muzy-jte6` | 2020–2023 |
-| `drug_overdose_state` | Drug Poisoning Mortality by State | `xbxb-epbu` | 1999–2016 |
-| `historical_death_rates` | Historical Death Rates by Cause | — | 1900–2017 |
-| `vsrr_overdose` | VSRR Provisional Drug Overdose Deaths | — | 2015–present |
-| `vsrr_overdose_county` | VSRR County-Level Drug Overdose Deaths | — | 2019–present |
-| `life_expectancy` | Life Expectancy by Race and Sex | `w9j2-ggv5` | 1900–2018 |
+| Key                      | Dataset                                 | ID          | Years        |
+| ------------------------ | --------------------------------------- | ----------- | ------------ |
+| `leading_death`          | Leading Causes of Death                 | `bi63-dtpu` | 1999–2017    |
+| `mortality_rates`        | Provisional Mortality Rates (quarterly) | `489q-934x` | 2020–present |
+| `weekly_deaths`          | Weekly Death Surveillance               | `r8kw-7aab` | 2020–present |
+| `weekly_deaths_by_cause` | Weekly Deaths by Cause                  | `muzy-jte6` | 2020–2023    |
+| `drug_overdose_state`    | Drug Poisoning Mortality by State       | `xbxb-epbu` | 1999–2016    |
+| `historical_death_rates` | Historical Death Rates by Cause         | —           | 1900–2017    |
+| `vsrr_overdose`          | VSRR Provisional Drug Overdose Deaths   | —           | 2015–present |
+| `vsrr_overdose_county`   | VSRR County-Level Drug Overdose Deaths  | —           | 2019–present |
+| `life_expectancy`        | Life Expectancy by Race and Sex         | `w9j2-ggv5` | 1900–2018    |
 
 ### COVID-19
 
-| Key | Dataset | ID | Years |
-|---|---|---|---|
-| `covid_cases` | COVID-19 Cases & Deaths (weekly, by state) | `pwn4-m3yp` | 2020–2023 |
-| `covid_conditions` | COVID-19 Contributing Conditions | `hk9y-quqm` | 2020–2023 |
-| `pct_deaths_covid` | Provisional % Deaths: COVID/Flu/RSV | — | 2020–present |
-| `pct_deaths_covid_demo` | Provisional % Deaths by Demographics | — | 2020–present |
+| Key                     | Dataset                                    | ID          | Years        |
+| ----------------------- | ------------------------------------------ | ----------- | ------------ |
+| `covid_cases`           | COVID-19 Cases & Deaths (weekly, by state) | `pwn4-m3yp` | 2020–2023    |
+| `covid_conditions`      | COVID-19 Contributing Conditions           | `hk9y-quqm` | 2020–2023    |
+| `pct_deaths_covid`      | Provisional % Deaths: COVID/Flu/RSV        | —           | 2020–present |
+| `pct_deaths_covid_demo` | Provisional % Deaths by Demographics       | —           | 2020–present |
 
 ### Hospitalizations
 
-| Key | Dataset | ID | Years |
-|---|---|---|---|
-| `resp_net` | RESP-NET: RSV/COVID/Flu Hospitalizations | — | 2017–present |
-| `rsv_net` | RSV-NET Hospitalizations | — | 2018–present |
-| `covid_net` | COVID-NET Hospitalizations | — | 2020–present |
-| `cumulative_rsv` | Cumulative RSV Hospitalizations by Week | — | 2023–present |
-| `cumulative_covid` | Cumulative COVID-19 Hospitalizations by Week | — | 2020–present |
+| Key                | Dataset                                      | ID  | Years        |
+| ------------------ | -------------------------------------------- | --- | ------------ |
+| `resp_net`         | RESP-NET: RSV/COVID/Flu Hospitalizations     | —   | 2017–present |
+| `rsv_net`          | RSV-NET Hospitalizations                     | —   | 2018–present |
+| `covid_net`        | COVID-NET Hospitalizations                   | —   | 2020–present |
+| `cumulative_rsv`   | Cumulative RSV Hospitalizations by Week      | —   | 2023–present |
+| `cumulative_covid` | Cumulative COVID-19 Hospitalizations by Week | —   | 2020–present |
 
 ### Wastewater (NWSS)
 
-| Key | Dataset | Years |
-|---|---|---|
-| `nwss_covid` | NWSS: SARS-CoV-2 wastewater surveillance | 2020–present |
-| `nwss_flu_a` | NWSS: Influenza A wastewater | 2022–present |
-| `nwss_rsv` | NWSS: RSV wastewater | 2023–present |
-| `nwss_measles` | NWSS: Measles wastewater | 2024–present |
-| `nwss_h5` | NWSS: Avian Influenza A (H5) wastewater | 2024–present |
-| `wastewater_viral` | CDC Wastewater Viral Activity Level | 2023–present |
+| Key                | Dataset                                  | Years        |
+| ------------------ | ---------------------------------------- | ------------ |
+| `nwss_covid`       | NWSS: SARS-CoV-2 wastewater surveillance | 2020–present |
+| `nwss_flu_a`       | NWSS: Influenza A wastewater             | 2022–present |
+| `nwss_rsv`         | NWSS: RSV wastewater                     | 2023–present |
+| `nwss_measles`     | NWSS: Measles wastewater                 | 2024–present |
+| `nwss_h5`          | NWSS: Avian Influenza A (H5) wastewater  | 2024–present |
+| `wastewater_viral` | CDC Wastewater Viral Activity Level      | 2023–present |
 
 ### Vaccination
 
-| Key | Dataset | Years |
-|---|---|---|
-| `flu_vaccine_coverage` | NIS-Flu: Influenza Vaccination Coverage, 6+ months | 2011–present |
-| `fall_rsvax_adults` | NIS-FRVM: Fall Respiratory Virus Vaccination, Adults | 2023–present |
-| `covid_vax_adults` | NIS-ACM: Adult COVID-19 Vaccination Coverage | 2021–present |
-| `rsv_vax_adults` | RSV Vaccination Coverage, Adults 60+ | 2023–present |
-| `brfss_vaccination` | Vaccination Coverage among Adults 18+ (BRFSS) | 2012–present |
-| `pregnant_vaccination` | Vaccination Coverage among Pregnant Women | 2012–present |
-| `nursing_home_vaccination` | Vaccination Coverage among Nursing Home Residents | 2020–present |
-| `hcp_vaccination` | Vaccination Coverage among Health Care Personnel | 2011–present |
-| `young_children_vaccination` | Vaccination Coverage: Young Children (0–35 months) | 2011–present |
-| `weekly_flu_doses` | Weekly Cumulative Flu Vaccine Doses Distributed | 2020–present |
-| `weekly_resp_vax` | Weekly Respiratory Virus Vaccination Coverage | 2023–present |
+| Key                          | Dataset                                              | Years        |
+| ---------------------------- | ---------------------------------------------------- | ------------ |
+| `flu_vaccine_coverage`       | NIS-Flu: Influenza Vaccination Coverage, 6+ months   | 2011–present |
+| `fall_rsvax_adults`          | NIS-FRVM: Fall Respiratory Virus Vaccination, Adults | 2023–present |
+| `covid_vax_adults`           | NIS-ACM: Adult COVID-19 Vaccination Coverage         | 2021–present |
+| `rsv_vax_adults`             | RSV Vaccination Coverage, Adults 60+                 | 2023–present |
+| `brfss_vaccination`          | Vaccination Coverage among Adults 18+ (BRFSS)        | 2012–present |
+| `pregnant_vaccination`       | Vaccination Coverage among Pregnant Women            | 2012–present |
+| `nursing_home_vaccination`   | Vaccination Coverage among Nursing Home Residents    | 2020–present |
+| `hcp_vaccination`            | Vaccination Coverage among Health Care Personnel     | 2011–present |
+| `young_children_vaccination` | Vaccination Coverage: Young Children (0–35 months)   | 2011–present |
+| `weekly_flu_doses`           | Weekly Cumulative Flu Vaccine Doses Distributed      | 2020–present |
+| `weekly_resp_vax`            | Weekly Respiratory Virus Vaccination Coverage        | 2023–present |
 
 ### Population health
 
-| Key | Dataset | ID | Years |
-|---|---|---|---|
-| `places_county` | PLACES: County Health Indicators | `swc5-untb` | Current |
-| `places_city` | PLACES: City Health Indicators | `dxpw-cm5u` | Current |
-| `disability` | Disability Prevalence by State (BRFSS) | `s2qv-b27b` | Current |
-| `nutrition_obesity` | Nutrition, Physical Activity & Obesity (BRFSS) | `hn4x-zwk7` | Current |
-| `births_quarterly` | Quarterly Birth Indicators | — | Current |
-| `rsv_test_positivity` | RSV Test Positivity (NREVSS) | — | 2018–present |
-| `nrevss_rsv_historical` | NREVSS RSV Lab Data (Historical) | — | 2000–present |
+| Key                     | Dataset                                        | ID          | Years        |
+| ----------------------- | ---------------------------------------------- | ----------- | ------------ |
+| `places_county`         | PLACES: County Health Indicators               | `swc5-untb` | Current      |
+| `places_city`           | PLACES: City Health Indicators                 | `dxpw-cm5u` | Current      |
+| `disability`            | Disability Prevalence by State (BRFSS)         | `s2qv-b27b` | Current      |
+| `nutrition_obesity`     | Nutrition, Physical Activity & Obesity (BRFSS) | `hn4x-zwk7` | Current      |
+| `births_quarterly`      | Quarterly Birth Indicators                     | —           | Current      |
+| `rsv_test_positivity`   | RSV Test Positivity (NREVSS)                   | —           | 2018–present |
+| `nrevss_rsv_historical` | NREVSS RSV Lab Data (Historical)               | —           | 2000–present |
 
 ### Surveillance
 
-| Key | Dataset | Years |
-|---|---|---|
-| `nssp_ed_trajectories` | NSSP ED Visit Trajectories | 2020–present |
-| `ari_activity` | Acute Respiratory Illness Activity Level by State | 2020–present |
-| `resp_conditions_ed` | Respiratory Conditions Treated in ED | 2020–present |
-| `resp_lens` | RESP-LENS: Respiratory Virus Lab Positivity (ED) | 2022–present |
-| `nvsn_pathogen` | NVSN Viral Pathogen Positivity in Children | 2015–present |
-| `nhsn_nursing` | NHSN Nursing Home Pathogens & Vaccination | 2020–present |
-| `epidemic_trends` | CDC Epidemic Trends and Rt | 2020–present |
+| Key                    | Dataset                                           | Years        |
+| ---------------------- | ------------------------------------------------- | ------------ |
+| `nssp_ed_trajectories` | NSSP ED Visit Trajectories                        | 2020–present |
+| `ari_activity`         | Acute Respiratory Illness Activity Level by State | 2020–present |
+| `resp_conditions_ed`   | Respiratory Conditions Treated in ED              | 2020–present |
+| `resp_lens`            | RESP-LENS: Respiratory Virus Lab Positivity (ED)  | 2022–present |
+| `nvsn_pathogen`        | NVSN Viral Pathogen Positivity in Children        | 2015–present |
+| `nhsn_nursing`         | NHSN Nursing Home Pathogens & Vaccination         | 2020–present |
+| `epidemic_trends`      | CDC Epidemic Trends and Rt                        | 2020–present |
 
 ---
 

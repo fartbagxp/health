@@ -5,8 +5,8 @@
 The skill is live at .claude/commands/add-wonder-template.md. Here's how it works:
 
 Usage in a future session with no context:
- /add-wonder-template
- Then tell Claude which dataset: "Add a template for D155"
+/add-wonder-template
+Then tell Claude which dataset: "Add a template for D155"
 
 What the skill gives a fresh Claude:
 

@@ -8,25 +8,25 @@ No API key required. Data updates weekly.
 
 ## Signals
 
-| Signal | What it measures |
-|---|---|
-| `covid` | % ED visits with COVID-19 diagnosis |
-| `influenza` | % ED visits with influenza diagnosis |
-| `rsv` | % ED visits with RSV diagnosis |
-| `combined` | Combined respiratory illness (COVID + flu + RSV) |
+| Signal      | What it measures                                 |
+| ----------- | ------------------------------------------------ |
+| `covid`     | % ED visits with COVID-19 diagnosis              |
+| `influenza` | % ED visits with influenza diagnosis             |
+| `rsv`       | % ED visits with RSV diagnosis                   |
+| `combined`  | Combined respiratory illness (COVID + flu + RSV) |
 
 ---
 
 ## Geographic levels
 
-| Level | `--geo` value | Notes |
-|---|---|---|
-| National | `nation` | Single aggregate value |
-| State | `state` (default) | 2-letter USPS code e.g. `ca` |
-| County | `county` | 5-digit FIPS e.g. `06037` |
-| HHS Region | `hhs` | HHS region number 1–10 |
-| Metro area | `msa` | |
-| HRR | `hrr` | Hospital Referral Region |
+| Level      | `--geo` value     | Notes                        |
+| ---------- | ----------------- | ---------------------------- |
+| National   | `nation`          | Single aggregate value       |
+| State      | `state` (default) | 2-letter USPS code e.g. `ca` |
+| County     | `county`          | 5-digit FIPS e.g. `06037`    |
+| HHS Region | `hhs`             | HHS region number 1–10       |
+| Metro area | `msa`             |                              |
+| HRR        | `hrr`             | Hospital Referral Region     |
 
 ---
 
@@ -63,6 +63,7 @@ uv run python -m nssp national --start 202201 --end 202360 -f csv
 ```
 
 Sample output:
+
 ```
 signal       epiweek   value
 covid        202501    3.2
@@ -118,16 +119,16 @@ rows = client.fetch(
 
 ### Response fields
 
-| Field | Description |
-|---|---|
-| `signal` | Signal name |
-| `geo_type` | Geographic level |
-| `geo_value` | Geographic code |
-| `time_value` | Epiweek (YYYYWW) |
-| `value` | % of ED visits |
-| `stderr` | Standard error |
+| Field         | Description                            |
+| ------------- | -------------------------------------- |
+| `signal`      | Signal name                            |
+| `geo_type`    | Geographic level                       |
+| `geo_value`   | Geographic code                        |
+| `time_value`  | Epiweek (YYYYWW)                       |
+| `value`       | % of ED visits                         |
+| `stderr`      | Standard error                         |
 | `sample_size` | Number of ED visits in the denominator |
-| `direction` | Trend direction vs prior week |
+| `direction`   | Trend direction vs prior week          |
 
 ---
 
@@ -160,12 +161,12 @@ No rate limit — the Delphi API doesn't enforce 15-second waits like WONDER. Fe
 
 NSSP and GRASP FluView measure different things for influenza:
 
-| | NSSP | GRASP FluView ILINet |
-|---|---|---|
-| Metric | % ED visits with flu dx | % outpatient visits with ILI symptoms |
-| Coverage | 2020–present | 1997–present |
-| Geography | State, county, HHS | National, HHS, state |
-| Lag | ~1 week | ~1 week |
-| Notes | Confirmed diagnosis required | Symptom-based (not lab-confirmed) |
+|           | NSSP                         | GRASP FluView ILINet                  |
+| --------- | ---------------------------- | ------------------------------------- |
+| Metric    | % ED visits with flu dx      | % outpatient visits with ILI symptoms |
+| Coverage  | 2020–present                 | 1997–present                          |
+| Geography | State, county, HHS           | National, HHS, state                  |
+| Lag       | ~1 week                      | ~1 week                               |
+| Notes     | Confirmed diagnosis required | Symptom-based (not lab-confirmed)     |
 
 Use ILINet for historical trend data; use NSSP for current season monitoring with confirmed diagnoses.

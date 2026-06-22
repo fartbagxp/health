@@ -4,13 +4,13 @@ WONDER queries are XML documents with five parameter types: **B** (group-by), **
 
 ## Parameter types overview
 
-| Prefix | Full name | Role |
-|---|---|---|
-| `B_*` | Group-by | Columns to group results by (dimensions) |
-| `M_*` | Measure | Metrics to include (death count, crude rate, AAR) |
-| `F_*` | Filter | Restrict to a subset (year range, state, race, ICD code) |
-| `V_*` | Value | Multi-select list for a filter (used with `F_*`) |
-| `O_*` | Option / mode | Mode selectors that must align with active filters |
+| Prefix | Full name     | Role                                                     |
+| ------ | ------------- | -------------------------------------------------------- |
+| `B_*`  | Group-by      | Columns to group results by (dimensions)                 |
+| `M_*`  | Measure       | Metrics to include (death count, crude rate, AAR)        |
+| `F_*`  | Filter        | Restrict to a subset (year range, state, race, ICD code) |
+| `V_*`  | Value         | Multi-select list for a filter (used with `F_*`)         |
+| `O_*`  | Option / mode | Mode selectors that must align with active filters       |
 
 ---
 
@@ -20,22 +20,22 @@ WONDER queries are XML documents with five parameter types: **B** (group-by), **
 
 ### D176/D157/D77 common group-by codes
 
-| Code | Description |
-|---|---|
-| `D176.V1-level1` | Year |
-| `D176.V9-level1` | State (2-letter FIPS label) |
-| `D176.V9-level2` | County |
-| `D176.V10` | Census Region (4 regions) |
-| `D176.V27-level1` | HHS Region (10 regions) |
-| `D176.V5` | Age group |
-| `D176.V6` | Gender |
-| `D176.V7` | Race (bridged, 5 groups) |
-| `D176.V8` | Hispanic origin |
-| `D176.V17` | Race × Hispanic origin |
-| `D176.V25` | ICD-10 cause of death (chapter/section) |
+| Code              | Description                             |
+| ----------------- | --------------------------------------- |
+| `D176.V1-level1`  | Year                                    |
+| `D176.V9-level1`  | State (2-letter FIPS label)             |
+| `D176.V9-level2`  | County                                  |
+| `D176.V10`        | Census Region (4 regions)               |
+| `D176.V27-level1` | HHS Region (10 regions)                 |
+| `D176.V5`         | Age group                               |
+| `D176.V6`         | Gender                                  |
+| `D176.V7`         | Race (bridged, 5 groups)                |
+| `D176.V8`         | Hispanic origin                         |
+| `D176.V17`        | Race × Hispanic origin                  |
+| `D176.V25`        | ICD-10 cause of death (chapter/section) |
 
 !!! tip
-    The LLM builder sets these automatically. To see what was generated, run `wonder build` and inspect the XML.
+The LLM builder sets these automatically. To see what was generated, run `wonder build` and inspect the XML.
 
 ---
 
@@ -43,18 +43,18 @@ WONDER queries are XML documents with five parameter types: **B** (group-by), **
 
 Common measures (set to `D176.M1`, `D176.M2`, etc.):
 
-| Code | Measure |
-|---|---|
-| `D176.M1` | Deaths |
-| `D176.M2` | Population |
-| `D176.M3` | Crude Rate |
+| Code       | Measure                     |
+| ---------- | --------------------------- |
+| `D176.M1`  | Deaths                      |
+| `D176.M2`  | Population                  |
+| `D176.M3`  | Crude Rate                  |
 | `D176.M31` | Standard Error (Crude Rate) |
 | `D176.M32` | 95% CI — Lower (Crude Rate) |
 | `D176.M33` | 95% CI — Upper (Crude Rate) |
-| `D176.M4` | Age-Adjusted Rate |
-| `D176.M41` | Standard Error (AAR) |
-| `D176.M42` | 95% CI — Lower (AAR) |
-| `D176.M43` | 95% CI — Upper (AAR) |
+| `D176.M4`  | Age-Adjusted Rate           |
+| `D176.M41` | Standard Error (AAR)        |
+| `D176.M42` | 95% CI — Lower (AAR)        |
+| `D176.M43` | 95% CI — Upper (AAR)        |
 
 ---
 
@@ -168,14 +168,14 @@ Options are metadata flags that must match your active filters. A mismatch cause
 
 ### Most important O parameters
 
-| Parameter | Values | Must match |
-|---|---|---|
-| `O_age` | `D176.V5` (age enabled), `*All*` (no age filter) | Active age filter |
-| `O_sex` | `D176.V6`, `*All*` | Active gender filter |
-| `O_race` | `D176.V7`, `*All*` | Active race filter |
-| `O_hispanicOrigin` | `D176.V8`, `*All*` | Active Hispanic filter |
-| `O_ucd` | `D176.V25` (UCD), `D176.V24` (MCD), `*All*` | ICD filter mode |
-| `O_aar` | `D176.M4` (include AAR), `*None*` (exclude) | Age-adjusted rate |
+| Parameter          | Values                                           | Must match             |
+| ------------------ | ------------------------------------------------ | ---------------------- |
+| `O_age`            | `D176.V5` (age enabled), `*All*` (no age filter) | Active age filter      |
+| `O_sex`            | `D176.V6`, `*All*`                               | Active gender filter   |
+| `O_race`           | `D176.V7`, `*All*`                               | Active race filter     |
+| `O_hispanicOrigin` | `D176.V8`, `*All*`                               | Active Hispanic filter |
+| `O_ucd`            | `D176.V25` (UCD), `D176.V24` (MCD), `*All*`      | ICD filter mode        |
+| `O_aar`            | `D176.M4` (include AAR), `*None*` (exclude)      | Age-adjusted rate      |
 
 ### AAR + age group conflict
 

@@ -8,10 +8,10 @@ No API key required, but downloads are ~50–200 MB per year.
 
 ## Surveys
 
-| Survey | Ages | Key vaccines | Years |
-|---|---|---|---|
+| Survey  | Ages         | Key vaccines                                                 | Years        |
+| ------- | ------------ | ------------------------------------------------------------ | ------------ |
 | `child` | 19–35 months | MMR, DTaP, Hib, PCV, polio, varicella, HepB, HepA, rotavirus | 2011–present |
-| `teen` | 13–17 years | HPV, Tdap, meningococcal, COVID-19 | 2011–present |
+| `teen`  | 13–17 years  | HPV, Tdap, meningococcal, COVID-19                           | 2011–present |
 
 ---
 
@@ -97,29 +97,29 @@ for record in stream_records(survey="child", year=2022, state="CA"):
 
 ## Key vaccine column names
 
-### Child survey (P_UTD*)
+### Child survey (P_UTD\*)
 
-| Column | Vaccine |
-|---|---|
-| `P_UTDMMX` | MMR (measles, mumps, rubella) |
-| `P_UTDDTP` | DTaP (≥4 doses) |
-| `P_UTDHIB` | Hib (H. influenzae type b) |
-| `P_UTDPCV` | PCV13 pneumococcal |
-| `P_UTDPOL` | Poliovirus (≥3 doses) |
-| `P_UTDVAC` | Varicella |
-| `P_UTDHEP` | HepB (≥3 doses) |
-| `P_UTDHEPA` | HepA (≥2 doses) |
-| `P_UTDROTA` | Rotavirus |
-| `P_UTDCOMB7` | Combined 7-vaccine series |
+| Column       | Vaccine                       |
+| ------------ | ----------------------------- |
+| `P_UTDMMX`   | MMR (measles, mumps, rubella) |
+| `P_UTDDTP`   | DTaP (≥4 doses)               |
+| `P_UTDHIB`   | Hib (H. influenzae type b)    |
+| `P_UTDPCV`   | PCV13 pneumococcal            |
+| `P_UTDPOL`   | Poliovirus (≥3 doses)         |
+| `P_UTDVAC`   | Varicella                     |
+| `P_UTDHEP`   | HepB (≥3 doses)               |
+| `P_UTDHEPA`  | HepA (≥2 doses)               |
+| `P_UTDROTA`  | Rotavirus                     |
+| `P_UTDCOMB7` | Combined 7-vaccine series     |
 
-### Teen survey (P_UTD*)
+### Teen survey (P_UTD\*)
 
-| Column | Vaccine |
-|---|---|
-| `P_UTDHPV` | HPV (≥1 dose female initiators) |
-| `P_UTDTDAP` | Tdap |
-| `P_UTDMCV4` | MCV4 meningococcal (≥1 dose) |
-| `P_UTDMCV4S` | MCV4 (≥2 doses, booster) |
+| Column       | Vaccine                         |
+| ------------ | ------------------------------- |
+| `P_UTDHPV`   | HPV (≥1 dose female initiators) |
+| `P_UTDTDAP`  | Tdap                            |
+| `P_UTDMCV4`  | MCV4 meningococcal (≥1 dose)    |
+| `P_UTDMCV4S` | MCV4 (≥2 doses, booster)        |
 
 ---
 
@@ -148,7 +148,7 @@ with open("mmr-national-trend-2011-2023.csv", "w", newline="") as f:
 ```
 
 !!! note "Download cache"
-    NIS files are large (50–200 MB). The module caches downloads locally. The first call per year triggers a download; subsequent calls use the cached file.
+NIS files are large (50–200 MB). The module caches downloads locally. The first call per year triggers a download; subsequent calls use the cached file.
 
 ---
 

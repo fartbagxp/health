@@ -28,23 +28,23 @@ uv run python -m grasp flusurv data --location network_all --season 2022-23 -f t
 
 ### Locations
 
-| Code | Description |
-|---|---|
-| `network_all` | Entire FluSurv-NET network (default) |
-| `network_eip` | Emerging Infections Program (EIP) |
-| `network_ihsp` | IHSP network |
-| `CA` | California |
-| `CO` | Colorado |
-| `CT` | Connecticut |
-| `GA` | Georgia |
-| `MD` | Maryland |
-| `MI` | Michigan |
-| `MN` | Minnesota |
-| `NM` | New Mexico |
-| `OH` | Ohio |
-| `OR` | Oregon |
-| `TN` | Tennessee |
-| `UT` | Utah |
+| Code           | Description                          |
+| -------------- | ------------------------------------ |
+| `network_all`  | Entire FluSurv-NET network (default) |
+| `network_eip`  | Emerging Infections Program (EIP)    |
+| `network_ihsp` | IHSP network                         |
+| `CA`           | California                           |
+| `CO`           | Colorado                             |
+| `CT`           | Connecticut                          |
+| `GA`           | Georgia                              |
+| `MD`           | Maryland                             |
+| `MI`           | Michigan                             |
+| `MN`           | Minnesota                            |
+| `NM`           | New Mexico                           |
+| `OH`           | Ohio                                 |
+| `OR`           | Oregon                               |
+| `TN`           | Tennessee                            |
+| `UT`           | Utah                                 |
 
 ### Python SDK
 
@@ -71,19 +71,19 @@ by_location = summarize_flusurv_by_location(season="2023-24")
 
 ### Key columns
 
-| Column | Description |
-|---|---|
-| `location` | Location code (e.g. `CA`, `network_all`) |
-| `epiweek` | YYYYWW format |
-| `season` | Season string e.g. `2023-24` |
+| Column         | Description                              |
+| -------------- | ---------------------------------------- |
+| `location`     | Location code (e.g. `CA`, `network_all`) |
+| `epiweek`      | YYYYWW format                            |
+| `season`       | Season string e.g. `2023-24`             |
 | `rate_overall` | Overall hospitalization rate per 100,000 |
-| `rate_age_0` | Ages 0–4 |
-| `rate_age_1` | Ages 5–17 |
-| `rate_age_2` | Ages 18–49 |
-| `rate_age_3` | Ages 50–64 |
-| `rate_age_4` | Ages 65+ |
-| `rate_flu_a` | Influenza A rate |
-| `rate_flu_b` | Influenza B rate |
+| `rate_age_0`   | Ages 0–4                                 |
+| `rate_age_1`   | Ages 5–17                                |
+| `rate_age_2`   | Ages 18–49                               |
+| `rate_age_3`   | Ages 50–64                               |
+| `rate_age_4`   | Ages 65+                                 |
+| `rate_flu_a`   | Influenza A rate                         |
+| `rate_flu_b`   | Influenza B rate                         |
 
 ---
 
@@ -109,11 +109,11 @@ uv run python -m grasp fluview ili by-region --epiweeks 202001-202560 -f table
 
 ### Regions
 
-| Code | Description |
-|---|---|
-| `nat` | National |
-| `hhs1`–`hhs10` | HHS Region 1–10 |
-| `cen1`–`cen9` | Census Region 1–9 |
+| Code                  | Description                          |
+| --------------------- | ------------------------------------ |
+| `nat`                 | National                             |
+| `hhs1`–`hhs10`        | HHS Region 1–10                      |
+| `cen1`–`cen9`         | Census Region 1–9                    |
 | `al`, `ak`, ..., `wy` | State (lowercase 2-letter USPS code) |
 
 ### Python SDK
@@ -140,15 +140,15 @@ summary = summarize_fluview_ili_by_region(epiweeks="202001-202560")
 
 ### Key columns
 
-| Column | Description |
-|---|---|
-| `region` | Region code |
-| `epiweek` | YYYYWW |
-| `wili` | Weighted ILI % (primary metric) |
-| `ili` | Unweighted ILI % |
-| `num_ili` | Number of ILI visits |
-| `num_patients` | Total patient visits |
-| `num_providers` | Number of reporting providers |
+| Column          | Description                     |
+| --------------- | ------------------------------- |
+| `region`        | Region code                     |
+| `epiweek`       | YYYYWW                          |
+| `wili`          | Weighted ILI % (primary metric) |
+| `ili`           | Unweighted ILI %                |
+| `num_ili`       | Number of ILI visits            |
+| `num_patients`  | Total patient visits            |
+| `num_providers` | Number of reporting providers   |
 
 ---
 
@@ -181,16 +181,16 @@ records = get_fluview_clinical(
 
 ### Key columns
 
-| Column | Description |
-|---|---|
-| `region` | Region code |
-| `epiweek` | YYYYWW |
-| `total_specimens` | Total specimens tested |
-| `total_a` | Influenza A positive |
-| `total_b` | Influenza B positive |
-| `percent_positive` | % specimens positive |
-| `percent_a` | % positive that are type A |
-| `percent_b` | % positive that are type B |
+| Column             | Description                |
+| ------------------ | -------------------------- |
+| `region`           | Region code                |
+| `epiweek`          | YYYYWW                     |
+| `total_specimens`  | Total specimens tested     |
+| `total_a`          | Influenza A positive       |
+| `total_b`          | Influenza B positive       |
+| `percent_positive` | % specimens positive       |
+| `percent_a`        | % positive that are type A |
+| `percent_b`        | % positive that are type B |
 
 ---
 
@@ -220,6 +220,7 @@ cases = get_hantavirus_cases()
 ## Epiweek format
 
 All time parameters use `YYYYWW` format (ISO week):
+
 - `202501` = week 1 of 2025
 - `202440-202560` = week 40 of 2024 through week 60 of 2025 (flu season span)
 - `199740-202660` = full ILINet history

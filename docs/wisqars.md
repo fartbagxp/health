@@ -8,14 +8,14 @@ No API key required.
 
 ## Datasets
 
-| Command | Coverage | Source |
-|---|---|---|
-| `mortality` | Fatal injuries by mechanism/intent/demographics | 1999–2016 (Socrata) |
-| `national` | Firearm, suicide, homicide, overdose deaths — national | 2019–present (WISQARS API) |
-| `state` | State-level injury/violence data | 2019–present (WISQARS API) |
-| `county` | County-level injury/violence data | 2019–present (WISQARS API) |
-| `tract` | Census-tract-level data | 2022–present (WISQARS API) |
-| `query` | Raw SODA query against any WISQARS dataset | — |
+| Command     | Coverage                                               | Source                     |
+| ----------- | ------------------------------------------------------ | -------------------------- |
+| `mortality` | Fatal injuries by mechanism/intent/demographics        | 1999–2016 (Socrata)        |
+| `national`  | Firearm, suicide, homicide, overdose deaths — national | 2019–present (WISQARS API) |
+| `state`     | State-level injury/violence data                       | 2019–present (WISQARS API) |
+| `county`    | County-level injury/violence data                      | 2019–present (WISQARS API) |
+| `tract`     | Census-tract-level data                                | 2022–present (WISQARS API) |
+| `query`     | Raw SODA query against any WISQARS dataset             | —                          |
 
 ---
 
@@ -37,14 +37,14 @@ uv run python -m wisqars national --intent Drug_OD --period year -f table
 
 **Intent codes for national/state/county:**
 
-| Code | Description |
-|---|---|
-| `FA_Deaths` | All firearm deaths |
-| `FA_Homicide` | Firearm homicides |
-| `FA_Suicide` | Firearm suicides |
+| Code           | Description                   |
+| -------------- | ----------------------------- |
+| `FA_Deaths`    | All firearm deaths            |
+| `FA_Homicide`  | Firearm homicides             |
+| `FA_Suicide`   | Firearm suicides              |
 | `All_Homicide` | All homicides (any mechanism) |
-| `All_Suicide` | All suicides (any mechanism) |
-| `Drug_OD` | Drug overdose deaths |
+| `All_Suicide`  | All suicides (any mechanism)  |
+| `Drug_OD`      | Drug overdose deaths          |
 
 ---
 
@@ -92,7 +92,7 @@ uv run python -m wisqars tract --state CA --tract 06037 --intent Drug_OD --year 
 ```
 
 !!! note
-    Census-tract data is only available starting 2022.
+Census-tract data is only available starting 2022.
 
 ---
 

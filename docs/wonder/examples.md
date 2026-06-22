@@ -26,7 +26,8 @@ uv run python src/wonder/queries/fetch_mortality_by_year.py
 Produces two files: total deaths per year, and the top-5 ICD chapters per year in long format. Uses the D16 hierarchical row parser (year only appears on first sub-row per year group) and flat parsers for D77/D176. On overlap years (2018–2020), takes `max()` — D77 final data wins.
 
 Sample output:
-```
+
+```bash
 year,total_deaths
 1979,1913841
 1999,2391399
@@ -53,10 +54,11 @@ uv run python src/wonder/queries/fetch_maternal_mortality.py
 Filters UCD to O00–O99 (Pregnancy, childbirth and the puerperium) + A34 (Obstetrical tetanus). Merges datasets: D76 for 1999–2017, D158 preferred from 2018 onward. The crude rate column uses total population as denominator — join with birth counts to compute the true maternal mortality ratio (per 100,000 live births).
 
 !!! warning "Pregnancy checkbox artifact"
-    States adopted the 2003 revised death certificate (which added a pregnancy checkbox) on a rolling schedule 2003–2017. The apparent rise in maternal deaths through the 2000s is partly a measurement change, not a real increase. Interpret pre-2018 trends with caution.
+States adopted the 2003 revised death certificate (which added a pregnancy checkbox) on a rolling schedule 2003–2017. The apparent rise in maternal deaths through the 2000s is partly a measurement change, not a real increase. Interpret pre-2018 trends with caution.
 
 Sample output:
-```
+
+```bash
 year,deaths,population,crude_rate_per_100k_pop
 1999,406,279040168,0.1
 2010,799,309326295,0.3
@@ -99,6 +101,7 @@ print(f"{len(usable)} / {len(rows)} rows have usable death counts")
 ### Births by year — 1995–2024
 
 **Files:**
+
 - `data/raw/wonder/births-by-year-1995-2002.csv` (8 rows, D10)
 - `data/raw/wonder/births-by-year-2003-2006.csv` (4 rows, D27)
 - `data/raw/wonder/births-by-year-2007-2024.csv` (18 rows, D66)
@@ -126,6 +129,7 @@ uv run python -m wonder run \
 ```
 
 To merge into a single series:
+
 ```python
 import csv
 from pathlib import Path
@@ -176,12 +180,12 @@ for year in sorted(lyme):
 
 Sample totals (Lyme disease confirmed + probable combined):
 
-| Year | Lyme | Babesiosis | Spotted fever | Anaplasmosis |
-|---|---|---|---|---|
-| 2016 | 36,429 | 1,910 | 4,269 | 4,151 |
-| 2019 | 34,945 | 2,418 | 5,207 | 7,225 |
-| 2022 | 62,006 | 3,427 | 8,232 | 9,074 |
-| 2023 | 62,473 | 3,427 | 7,248 | 9,538 |
+| Year | Lyme   | Babesiosis | Spotted fever | Anaplasmosis |
+| ---- | ------ | ---------- | ------------- | ------------ |
+| 2016 | 36,429 | 1,910      | 4,269         | 4,151        |
+| 2019 | 34,945 | 2,418      | 5,207         | 7,225        |
+| 2022 | 62,006 | 3,427      | 8,232         | 9,074        |
+| 2023 | 62,473 | 3,427      | 7,248         | 9,538        |
 
 ---
 
@@ -189,25 +193,26 @@ Sample totals (Lyme disease confirmed + probable combined):
 
 These XML files are committed so you can run them without the LLM:
 
-| File | What it fetches |
-|---|---|
-| `mortality-by-year-cause-1979-1998-req.xml` | All-cause + ICD-9 chapter, D16 |
-| `mortality-by-year-cause-1999-2020-req.xml` | All-cause + ICD-10 chapter, D77 |
-| `mortality-by-year-cause-2021-2024-req.xml` | All-cause + ICD-10 chapter, D176 |
-| `maternal-mortality-by-year-1999-2020-req.xml` | O00–O99 national by year, D76 |
-| `maternal-mortality-by-year-2018-2024-req.xml` | O00–O99 national by year, D158 |
-| `births-by-year-1995-2002-req.xml` | Births by year, D10 |
-| `births-by-year-2003-2006-req.xml` | Births by year, D27 |
-| `births-by-year-2007-2024-req.xml` | Births by year, D66 |
-| `covid-deaths-by-race-2020-2023-req.xml` | COVID deaths × race, D176 |
-| `opioid-overdose-deaths-2018-2024-req.xml` | T40.0–T40.6 UCD, D176 |
-| `infant-mortality-2018-2023-req.xml` | Infant mortality by race, D69 |
-| `racial-mortality-gap-2018-2023-req.xml` | All-cause deaths × race, D176 |
-| `heart-vs-cancer-by-sex-2018-2023-req.xml` | Heart disease vs cancer × sex, D176 |
-| `unintentional-injuries-by-age-2018-2023-req.xml` | Unintentional injuries × age, D176 |
-| `tick-borne-diseases-by-year-2016-2023-req.xml` | NNDSS tick-borne diseases, D130 |
+| File                                              | What it fetches                     |
+| ------------------------------------------------- | ----------------------------------- |
+| `mortality-by-year-cause-1979-1998-req.xml`       | All-cause + ICD-9 chapter, D16      |
+| `mortality-by-year-cause-1999-2020-req.xml`       | All-cause + ICD-10 chapter, D77     |
+| `mortality-by-year-cause-2021-2024-req.xml`       | All-cause + ICD-10 chapter, D176    |
+| `maternal-mortality-by-year-1999-2020-req.xml`    | O00–O99 national by year, D76       |
+| `maternal-mortality-by-year-2018-2024-req.xml`    | O00–O99 national by year, D158      |
+| `births-by-year-1995-2002-req.xml`                | Births by year, D10                 |
+| `births-by-year-2003-2006-req.xml`                | Births by year, D27                 |
+| `births-by-year-2007-2024-req.xml`                | Births by year, D66                 |
+| `covid-deaths-by-race-2020-2023-req.xml`          | COVID deaths × race, D176           |
+| `opioid-overdose-deaths-2018-2024-req.xml`        | T40.0–T40.6 UCD, D176               |
+| `infant-mortality-2018-2023-req.xml`              | Infant mortality by race, D69       |
+| `racial-mortality-gap-2018-2023-req.xml`          | All-cause deaths × race, D176       |
+| `heart-vs-cancer-by-sex-2018-2023-req.xml`        | Heart disease vs cancer × sex, D176 |
+| `unintentional-injuries-by-age-2018-2023-req.xml` | Unintentional injuries × age, D176  |
+| `tick-borne-diseases-by-year-2016-2023-req.xml`   | NNDSS tick-borne diseases, D130     |
 
 Run any of them with:
+
 ```bash
 uv run python -m wonder run src/wonder/queries/<filename>.xml -f csv
 ```

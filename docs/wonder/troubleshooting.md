@@ -13,6 +13,7 @@ Common WONDER query errors and how to fix them.
 **Fix:** Reduce the result size. Strategies in order of preference:
 
 1. **Query one year at a time** and loop with `time.sleep(16)` between calls:
+
    ```python
    for year in range(2018, 2025):
        rows = client.query_with_llm(f"... by state {year} ...")
@@ -35,6 +36,7 @@ See [All-State Queries](multi-state.md) for the full size table.
 **Cause:** WONDER enforces at least 15 seconds between requests from the same IP.
 
 **Fix:** Always sleep between queries:
+
 ```python
 import time
 time.sleep(16)  # 1 second margin
@@ -51,6 +53,7 @@ If a script fails mid-run and you restart quickly, WONDER may still be timing ou
 **Cause:** NCHS suppresses counts below 10 to protect privacy. Common in small states, rare causes, or narrow age/race groups.
 
 **This is expected behavior.** Handle it in your code:
+
 ```python
 def safe_float(val):
     if str(val).strip() in ("Suppressed", "Missing", "Not Applicable", ""):
@@ -79,17 +82,17 @@ uv run python -m wonder build "your query here" | grep -A2 "O_ucd\|O_race\|O_age
 
 Expected alignment:
 
-| If you filter | Then O_ must be |
-|---|---|
-| ICD cause (UCD) | `O_ucd = D176.V25` (or dataset equivalent) |
-| ICD cause (MCD) | `O_ucd = D176.V24` |
-| No ICD filter | `O_ucd = *All*` |
-| Race | `O_race = D176.V7` |
-| No race filter | `O_race = *All*` |
-| Age group | `O_age = D176.V5` |
-| No age filter | `O_age = *All*` |
-| Gender | `O_sex = D176.V6` |
-| No gender filter | `O_sex = *All*` |
+| If you filter    | Then O\_ must be                           |
+| ---------------- | ------------------------------------------ |
+| ICD cause (UCD)  | `O_ucd = D176.V25` (or dataset equivalent) |
+| ICD cause (MCD)  | `O_ucd = D176.V24`                         |
+| No ICD filter    | `O_ucd = *All*`                            |
+| Race             | `O_race = D176.V7`                         |
+| No race filter   | `O_race = *All*`                           |
+| Age group        | `O_age = D176.V5`                          |
+| No age filter    | `O_age = *All*`                            |
+| Gender           | `O_sex = D176.V6`                          |
+| No gender filter | `O_sex = *All*`                            |
 
 ---
 
@@ -100,6 +103,7 @@ Expected alignment:
 **Cause 1:** You're grouping by age group. AAR cannot be computed when the result is split by age.
 
 **Fix:** Remove age from group-by, or request crude rate instead:
+
 ```bash
 # Wrong: group by age + request AAR
 uv run python -m wonder query "deaths by age group 2020, age-adjusted rate"
@@ -139,6 +143,7 @@ uv run python -m wonder run births-2003-2006-req.xml -f csv
 **Cause:** There is a known server-side bug in WONDER's XML API for D8.
 
 **Fix:** The XML API doesn't work for VAERS. Instead:
+
 1. Generate the XML: `uv run python -m wonder build "VAERS query..." > vaers-query.xml`
 2. Go to [WONDER VAERS web interface](https://wonder.cdc.gov/vaers.html)
 3. Paste or import the XML manually
@@ -166,6 +171,7 @@ uv run python -m wonder run births-2003-2006-req.xml -f csv
 **Symptom:** `wonder run` fails to parse the XML file.
 
 **Fix:** Validate with Python's built-in XML parser:
+
 ```bash
 python -c "import xml.etree.ElementTree as ET; ET.parse('my-query.xml')"
 ```
@@ -193,6 +199,7 @@ WONDER queries typically take 2–10 seconds. If a query hangs:
 ## Comparing D77 and D176 on overlapping years (2018–2020)
 
 D77 (final) and D176 (provisional) both cover 2018–2020. Expect small differences:
+
 - D176 2018–2020 values may differ from D77 by 1–5% due to late-arriving death certificates
 - For publications, prefer D157 or D77 for confirmed final data
 - For trend monitoring, D176 is fine

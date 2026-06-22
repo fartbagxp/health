@@ -4,7 +4,7 @@ WONDER splits data into separate datasets by year range. To collect a continuous
 
 ## The epoch map for mortality
 
-```
+```bash
 1968–1978   D74   Compressed Mortality (ICD-8)
 1979–1998   D16   Compressed Mortality (ICD-9)
 1999–2020   D77   Multiple Cause of Death (ICD-10, bridged race, final)
@@ -16,7 +16,7 @@ For a **1979–2024** all-cause series use: D16 + D77 + D176.
 For a **1999–2024** series use: D77 + D176 (simpler, same ICD-10 era).
 
 !!! warning "ICD-9 vs ICD-10 discontinuity"
-    D16 uses ICD-9 codes (pre-1999); D77 and later use ICD-10. Cause-specific time series crossing 1999 need a bridging adjustment — totals can be compared directly, but individual cause groupings differ. See [CDC ICD bridging comparability](https://www.cdc.gov/nchs/nvss/bridged_race.htm).
+D16 uses ICD-9 codes (pre-1999); D77 and later use ICD-10. Cause-specific time series crossing 1999 need a bridging adjustment — totals can be compared directly, but individual cause groupings differ. See [CDC ICD bridging comparability](https://www.cdc.gov/nchs/nvss/bridged_race.htm).
 
 ## Rate limit pattern
 
@@ -195,11 +195,11 @@ WONDER's `F_D176.V1` filter accepts a list of years — the LLM expands the rang
 
 Births from 1995–2024 require three datasets:
 
-| Dataset | Years | Notes |
-|---|---|---|
-| D10 | 1995–2002 | |
-| D27 | 2003–2006 | Requires full base template — see [troubleshooting](troubleshooting.md#d27-natality-500-error) |
-| D66 | 2007–2024 | Default |
+| Dataset | Years     | Notes                                                                                          |
+| ------- | --------- | ---------------------------------------------------------------------------------------------- |
+| D10     | 1995–2002 |                                                                                                |
+| D27     | 2003–2006 | Requires full base template — see [troubleshooting](troubleshooting.md#d27-natality-500-error) |
+| D66     | 2007–2024 | Default                                                                                        |
 
 ```bash
 # Pre-built XML queries for each epoch are in src/wonder/queries/

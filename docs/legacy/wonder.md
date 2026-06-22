@@ -4,7 +4,7 @@
 
 This repo's primary interface is an LLM query builder: describe what you want in plain English, and Claude picks the right dataset, generates the XML, and enforces constraint rules automatically.
 
-- [CLI reference](../src/wonder/README.md)
+- [CLI reference](https://github.com/boris-ning/health/blob/main/src/wonder/README.md)
 - [Architecture & troubleshooting](wonder_llm_query_builder.md)
 - [Worked examples](wonder_examples.md)
 - [Official API docs](https://wonder.cdc.gov/wonder/help/wonder-api.html)

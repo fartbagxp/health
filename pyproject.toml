@@ -9,7 +9,7 @@ description = "To collect various health API around the US"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "anthropic==0.109.2",
+    "anthropic==0.111.0",
     "beautifulsoup4==4.15.0",
     "curl-cffi==0.15.0",
     "lxml==6.1.1",
@@ -24,7 +24,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "pre-commit==4.6.0",
-    "pytest==9.1.0",
+    "pytest==9.1.1",
 ]
 
 [tool.setuptools.packages.find]
@@ -36,6 +36,7 @@ cdc-open = "cdc_open.main:main"
 nssp = "nssp.main:main"
 wisqars = "wisqars.main:main"
 nis = "nis.main:main"
+grasp = "grasp.main:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

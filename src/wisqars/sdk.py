@@ -180,5 +180,41 @@ def get_injury_county(
     )
 
 
+def get_injury_census_tract(
+    state: str | None = None,
+    tract: str | None = None,
+    intent: str | None = None,
+    year: str | None = None,
+    limit: int = 500,
+) -> list[dict[str, Any]]:
+    """Census-tract-level injury/violence counts and rates using Bayesian estimation (2022–present).
+
+    Finest geographic granularity in the WISQARS mapping series.
+    Low counts are suppressed per NCHS guidelines (count_sup = 'Suppressed').
+    state: state name e.g. 'Texas', or two-digit FIPS e.g. '48'
+    tract: census tract GEOID partial match
+    intent: 'All_Homicide', 'Drug_OD' (Bayesian estimation; not all intents available at tract level)
+    year: '2022', '2023', etc.
+    """
+    clauses = []
+    if state:
+        if state.isdigit():
+            clauses.append(f"st_geoid = '{state.zfill(2)}'")
+        else:
+            clauses.append(f"upper(st_name) LIKE '%{state.upper()}%'")
+    if tract:
+        clauses.append(f"name LIKE '%{tract}%'")
+    if intent:
+        clauses.append(f"intent = '{intent}'")
+    if year:
+        clauses.append(f"period = '{year}'")
+    return query_dataset(
+        DATASETS["injury_census_tract"].id,
+        where=" AND ".join(clauses) if clauses else None,
+        order="period DESC, rate DESC",
+        limit=limit,
+    )
+
+
 def clear_cache() -> None:
     _get_client().clear_cache()

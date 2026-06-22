@@ -99,6 +99,29 @@ DATASETS: dict[str, Dataset] = {
             "data_as_of",
         ],
     ),
+    "injury_census_tract": Dataset(
+        id="4day-mt2f",
+        name="Mapping Injury, Overdose & Violence — Census Tract",
+        description=(
+            "Census-tract-level annual counts and rates for homicide and drug overdose "
+            "using Bayesian small-area estimation. Finest geographic granularity in the "
+            "WISQARS mapping series. Low counts are suppressed per NCHS guidelines. "
+            "Source: WISQARS / NCHS."
+        ),
+        years="2022–present",
+        key_columns=[
+            "geoid",
+            "name",
+            "st_geoid",
+            "st_name",
+            "intent",
+            "period",
+            "count_sup",
+            "rate",
+            "rate_m",
+            "data_as_of",
+        ],
+    ),
 }
 
 # ── Reference: valid filter values ────────────────────────────────────────────

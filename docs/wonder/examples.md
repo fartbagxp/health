@@ -8,6 +8,212 @@ uv run python -m wonder query "<prompt>" -f csv
 
 ---
 
+## Datasets we've already fetched
+
+These datasets are committed to `data/raw/wonder/`. Run the corresponding scripts to refresh them.
+
+### Mortality by year and cause — 1979–2024
+
+**File:** `data/raw/wonder/mortality-total-by-year.csv` (46 rows)  
+**File:** `data/raw/wonder/mortality-top5-causes-by-year.csv` (230 rows)  
+**Script:** `src/wonder/queries/fetch_mortality_by_year.py`  
+**Sources:** D16 (1979–1998, ICD-9) + D77 (1999–2020, ICD-10) + D176 (2021–2024, provisional)
+
+```bash
+uv run python src/wonder/queries/fetch_mortality_by_year.py
+```
+
+Produces two files: total deaths per year, and the top-5 ICD chapters per year in long format. Uses the D16 hierarchical row parser (year only appears on first sub-row per year group) and flat parsers for D77/D176. On overlap years (2018–2020), takes `max()` — D77 final data wins.
+
+Sample output:
+```
+year,total_deaths
+1979,1913841
+1999,2391399
+2019,2854838
+2020,3383729
+2021,3458697
+2022,3279857
+2023,3090964
+2024,3072666
+```
+
+---
+
+### Maternal mortality (national) — 1999–2024
+
+**File:** `data/raw/wonder/maternal-mortality-by-year.csv` (26 rows)  
+**Script:** `src/wonder/queries/fetch_maternal_mortality.py`  
+**Sources:** D76 (1999–2017) + D158 (2018–2024)
+
+```bash
+uv run python src/wonder/queries/fetch_maternal_mortality.py
+```
+
+Filters UCD to O00–O99 (Pregnancy, childbirth and the puerperium) + A34 (Obstetrical tetanus). Merges datasets: D76 for 1999–2017, D158 preferred from 2018 onward. The crude rate column uses total population as denominator — join with birth counts to compute the true maternal mortality ratio (per 100,000 live births).
+
+!!! warning "Pregnancy checkbox artifact"
+    States adopted the 2003 revised death certificate (which added a pregnancy checkbox) on a rolling schedule 2003–2017. The apparent rise in maternal deaths through the 2000s is partly a measurement change, not a real increase. Interpret pre-2018 trends with caution.
+
+Sample output:
+```
+year,deaths,population,crude_rate_per_100k_pop
+1999,406,279040168,0.1
+2010,799,309326295,0.3
+2019,754,328239523,0.2
+2021,1205,331893745,0.4
+2023,1056,334914895,0.3
+```
+
+---
+
+### Maternal mortality by state and year — 1999–2024
+
+**File:** `data/raw/wonder/maternal-mortality-by-state-year.csv` (1,260 rows)  
+**Script:** `src/wonder/queries/scrape_maternal_mortality_by_state.py`  
+**Sources:** D76 + D158 (same as national, but state-grouped)
+
+The WONDER XML API blocks state-level grouping for all mortality datasets ("only national data available via web service"). This script uses **Playwright** to interact with the WONDER web UI instead, which does allow state breakdowns.
+
+```bash
+# Requires playwright installed and browsers downloaded
+uv run playwright install chromium
+uv run python src/wonder/queries/scrape_maternal_mortality_by_state.py
+```
+
+Many state-year cells are suppressed (death count < 10). The CSV includes both suppressed and unsuppressed rows — filter before analysis:
+
+```python
+import csv
+
+with open("data/raw/wonder/maternal-mortality-by-state-year.csv") as f:
+    rows = list(csv.DictReader(f))
+
+# Only rows where deaths is a real number
+usable = [r for r in rows if r["deaths"].strip() not in ("", "Suppressed")]
+print(f"{len(usable)} / {len(rows)} rows have usable death counts")
+```
+
+---
+
+### Births by year — 1995–2024
+
+**Files:**
+- `data/raw/wonder/births-by-year-1995-2002.csv` (8 rows, D10)
+- `data/raw/wonder/births-by-year-2003-2006.csv` (4 rows, D27)
+- `data/raw/wonder/births-by-year-2007-2024.csv` (18 rows, D66)
+
+**XML queries:** `src/wonder/queries/births-by-year-*-req.xml`
+
+Run the three epochs sequentially with a 16-second sleep:
+
+```bash
+uv run python -m wonder run \
+  src/wonder/queries/births-by-year-1995-2002-req.xml -f csv \
+  > data/raw/wonder/births-by-year-1995-2002.csv
+
+sleep 16
+
+uv run python -m wonder run \
+  src/wonder/queries/births-by-year-2003-2006-req.xml -f csv \
+  > data/raw/wonder/births-by-year-2003-2006.csv
+
+sleep 16
+
+uv run python -m wonder run \
+  src/wonder/queries/births-by-year-2007-2024-req.xml -f csv \
+  > data/raw/wonder/births-by-year-2007-2024.csv
+```
+
+To merge into a single series:
+```python
+import csv
+from pathlib import Path
+
+files = [
+    "births-by-year-1995-2002.csv",
+    "births-by-year-2003-2006.csv",
+    "births-by-year-2007-2024.csv",
+]
+all_rows = []
+for fname in files:
+    with open(f"data/raw/wonder/{fname}") as f:
+        rows = [r for r in csv.DictReader(f) if r.get("Year", "").strip().isdigit()]
+        all_rows.extend(rows)
+
+all_rows.sort(key=lambda r: int(r["Year"]))
+# all_rows: [{"Year": "1995", "Births": "3900089.0"}, ...]
+```
+
+Births peaked in 2007 (4,316,233) and have fallen steadily; 2023 saw 3,596,017 births.
+
+---
+
+### Tick-borne diseases — 2016–2023
+
+**File:** `data/raw/wonder/tick-borne-diseases-by-year.csv` (128 rows)  
+**Script:** `src/wonder/queries/fetch_tick_borne_diseases.py`  
+**Source:** D130 — NNDSS Annual Summary Data
+
+```bash
+uv run python src/wonder/queries/fetch_tick_borne_diseases.py
+```
+
+Covers: Lyme disease, babesiosis, ehrlichiosis/anaplasmosis (4 subtypes), spotted fever rickettsiosis, tularemia, Powassan virus. Long format: one row per (year, disease) pair including confirmed/probable/total breakdowns.
+
+```python
+import csv
+from collections import defaultdict
+
+with open("data/raw/wonder/tick-borne-diseases-by-year.csv") as f:
+    rows = list(csv.DictReader(f))
+
+# Lyme disease totals by year
+lyme = {r["year"]: int(r["cases"]) for r in rows if r["disease"] == "Lyme disease, Total"}
+for year in sorted(lyme):
+    print(f"{year}: {lyme[year]:,} Lyme disease cases")
+```
+
+Sample totals (Lyme disease confirmed + probable combined):
+
+| Year | Lyme | Babesiosis | Spotted fever | Anaplasmosis |
+|---|---|---|---|---|
+| 2016 | 36,429 | 1,910 | 4,269 | 4,151 |
+| 2019 | 34,945 | 2,418 | 5,207 | 7,225 |
+| 2022 | 62,006 | 3,427 | 8,232 | 9,074 |
+| 2023 | 62,473 | 3,427 | 7,248 | 9,538 |
+
+---
+
+### Saved XML queries for reuse
+
+These XML files are committed so you can run them without the LLM:
+
+| File | What it fetches |
+|---|---|
+| `mortality-by-year-cause-1979-1998-req.xml` | All-cause + ICD-9 chapter, D16 |
+| `mortality-by-year-cause-1999-2020-req.xml` | All-cause + ICD-10 chapter, D77 |
+| `mortality-by-year-cause-2021-2024-req.xml` | All-cause + ICD-10 chapter, D176 |
+| `maternal-mortality-by-year-1999-2020-req.xml` | O00–O99 national by year, D76 |
+| `maternal-mortality-by-year-2018-2024-req.xml` | O00–O99 national by year, D158 |
+| `births-by-year-1995-2002-req.xml` | Births by year, D10 |
+| `births-by-year-2003-2006-req.xml` | Births by year, D27 |
+| `births-by-year-2007-2024-req.xml` | Births by year, D66 |
+| `covid-deaths-by-race-2020-2023-req.xml` | COVID deaths × race, D176 |
+| `opioid-overdose-deaths-2018-2024-req.xml` | T40.0–T40.6 UCD, D176 |
+| `infant-mortality-2018-2023-req.xml` | Infant mortality by race, D69 |
+| `racial-mortality-gap-2018-2023-req.xml` | All-cause deaths × race, D176 |
+| `heart-vs-cancer-by-sex-2018-2023-req.xml` | Heart disease vs cancer × sex, D176 |
+| `unintentional-injuries-by-age-2018-2023-req.xml` | Unintentional injuries × age, D176 |
+| `tick-borne-diseases-by-year-2016-2023-req.xml` | NNDSS tick-borne diseases, D130 |
+
+Run any of them with:
+```bash
+uv run python -m wonder run src/wonder/queries/<filename>.xml -f csv
+```
+
+---
+
 ## Mortality — recent (D176, provisional)
 
 ```bash

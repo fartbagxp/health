@@ -23,6 +23,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "zensical==0.0.46",
     "pre-commit==4.6.0",
     "pytest==9.1.1",
 ]

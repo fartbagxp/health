@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:wisqars.cdc.gov)",
+      "WebFetch(domain:gis.cdc.gov)"
+    ]
+  }
+}

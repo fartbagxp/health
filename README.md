@@ -4,17 +4,18 @@ This is a repository to collect and run fun experiments on various publicly avai
 
 ## Sources
 
-| Data Source                                                           | Module          | API                     |
-| --------------------------------------------------------------------- | --------------- | ----------------------- |
-| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API      |
-| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API  |
-| [WISQARS Injury & Violence Data]                                       | `src/wisqars/`  | data.cdc.gov (Socrata)  |
-| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT |
-| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)  |
-| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)  |
-| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)  |
-| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)  |
-| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)  |
+| Data Source                                                           | Module          | API                          |
+| --------------------------------------------------------------------- | --------------- | ---------------------------- |
+| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API           |
+| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API       |
+| [WISQARS Injury & Violence Data]                                       | `src/wisqars/`  | data.cdc.gov (Socrata)       |
+| [ATSDR GRASP Disease APIs]                                            | `src/grasp/`    | gis.cdc.gov/grasp (REST/JSON)|
+| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT      |
+| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)       |
+| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)       |
+| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)       |
+| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)       |
+| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)       |
 
 ---
 
@@ -44,23 +45,102 @@ Refer to [NSSP source](src/nssp/) for more information.
 
 ### WISQARS — Web-based Injury Statistics Query and Reporting System
 
-[WISQARS](https://wisqars.cdc.gov/) is CDC's injury data portal covering fatal and nonfatal injuries, violence, and overdose. WISQARS has no public API, but its underlying NCHS datasets are available on data.cdc.gov. 4 datasets are supported:
+[WISQARS](https://wisqars.cdc.gov/) is CDC's injury data portal covering fatal and nonfatal injuries, violence, and overdose. WISQARS has no public API, but its underlying NCHS datasets are available on data.cdc.gov. 5 datasets are supported:
 
-| Dataset              | Coverage     | Description                                             |
-| -------------------- | ------------ | ------------------------------------------------------- |
-| `injury_mortality`   | 1999–2016    | Fatal injury by mechanism, intent, age, race, sex       |
-| `injury_national`    | 2019–present | National firearm/suicide/OD/homicide — monthly & annual |
-| `injury_state`       | 2019–present | State-level firearm/suicide/OD/homicide                 |
-| `injury_county`      | 2019–present | County-level firearm/suicide/OD/homicide                |
+| Dataset               | Coverage     | Description                                                              |
+| --------------------- | ------------ | ------------------------------------------------------------------------ |
+| `injury_mortality`    | 1999–2016    | Fatal injury by mechanism, intent, age, race, sex                        |
+| `injury_national`     | 2019–present | National firearm/suicide/OD/homicide — monthly & annual                  |
+| `injury_state`        | 2019–present | State-level firearm/suicide/OD/homicide                                  |
+| `injury_county`       | 2019–present | County-level firearm/suicide/OD/homicide                                 |
+| `injury_census_tract` | 2022–present | Census-tract-level homicide & drug OD via Bayesian small-area estimation |
+
+Firearm (`FA_Deaths`, `FA_Homicide`, `FA_Suicide`) and gunshot wound fatality data are available through the mapping datasets at national, state, county, and census-tract granularity. The `injury_mortality` dataset additionally supports filtering by `mechanism = 'Firearm'` across all intent categories from 1999–2016. Nonfatal injury counts are not available via a public API — use the [WISQARS interactive tool](https://wisqars.cdc.gov/) for nonfatal queries.
 
 ```bash
 uv run python -m wisqars mortality --intent Suicide --mechanism Firearm -f csv
 uv run python -m wisqars state --intent Drug_OD --year 2023 -f table
 uv run python -m wisqars national --intent FA_Deaths --type year -f table
 uv run python -m wisqars county --state Texas --intent FA_Deaths --year 2023
+uv run python -m wisqars tract --state Texas --intent All_Homicide --year 2022
 ```
 
 Refer to [WISQARS source](src/wisqars/) for more information.
+
+### ATSDR GRASP — Geographic Research, Analysis, and Services Program
+
+[GRASP](https://gis.cdc.gov/grasp/) is a suite of disease-specific REST APIs maintained by ATSDR and hosted at `gis.cdc.gov/grasp/`. Each application exposes a `GetData_JSON` endpoint returning patient-level or aggregate records as JSON. No authentication or API key is required. Data is fetched in full and cached locally for 24 hours.
+
+All four datasets are sourced via the [CMU Delphi Epidata API](https://cmu-delphi.github.io/delphi-epidata/) (fluview/flusurv endpoints), which pulls directly from CDC GRASP and provides a clean REST interface. No authentication required.
+
+| Dataset            | Coverage         | Description                                                                             |
+| ------------------ | ---------------- | --------------------------------------------------------------------------------------- |
+| `hantavirus`       | pre-1993–present | Patient-level cases: onset date, state FIPS, and outcome                                |
+| `fluview_ili`      | 1997-98–present  | Weekly ILINet outpatient ILI % by nat/HHS region/census region/state (via Delphi)       |
+| `fluview_clinical` | 2016-17–present  | Weekly WHO/NREVSS clinical lab flu test positivity by region (via Delphi)               |
+| `flusurv_net`      | 2009-10–present  | Weekly flu hospitalization rates by age, race, sex, and flu type (via Delphi)           |
+
+**Hantavirus:** All ~890 confirmed US cases from CDC's Viral Special Pathogens Branch via NNDSS. Each record includes `IllnessOnsetDate`, `StateFIPS`, and `Outcome` (Alive/Dead/Unknown). Overall case fatality rate ~35%.
+
+**FluView ILINet:** Weekly influenza-like illness percentage from CDC's outpatient surveillance network. Regions: `nat` (national), `hhs1`–`hhs10` (HHS), `cen1`–`cen9` (census), or any 2-letter lowercase state code. Fields include `wili` (weighted ILI %), `ili`, patient/provider counts, and age-stratified ILI counts.
+
+**FluView Clinical Labs:** Weekly WHO/NREVSS clinical laboratory flu test positivity. Same region coverage as ILINet. Fields: `total_specimens`, `total_a`, `total_b`, `percent_positive`, `percent_a`, `percent_b`.
+
+**FluSurv-NET:** Weekly lab-confirmed hospitalization rates per 100,000. 3 surveillance networks (`network_all`, `network_eip`, `network_ihsp`) + 12 states (CA, CO, CT, GA, MD, MI, MN, NM, OH, OR, TN, UT). Per-record rates by age (`rate_age_0`=0–4 yr through `rate_age_7`=85+ yr), race/ethnicity, sex, and flu type (A/B).
+
+```bash
+uv run python -m grasp list
+
+# Hantavirus
+uv run python -m grasp hantavirus cases --outcome Dead -f table
+uv run python -m grasp hantavirus by-year -f table
+uv run python -m grasp hantavirus by-state -f table
+
+# FluView ILI (ILINet outpatient)
+uv run python -m grasp fluview ili data --region nat ca tx --epiweeks 202001-202026
+uv run python -m grasp fluview ili by-region --epiweeks 201940-202020 -f table
+
+# FluView Clinical Labs (WHO/NREVSS)
+uv run python -m grasp fluview clinical data --region nat hhs1 hhs2 --epiweeks 202001-202026
+
+# FluSurv-NET hospitalizations
+uv run python -m grasp flusurv by-season --location network_all -f table
+uv run python -m grasp flusurv by-location --season 2019-20 -f table
+uv run python -m grasp flusurv data --location CA OH --epiweeks 202001-202020 -f csv
+```
+
+**Python SDK:**
+
+```python
+from grasp.sdk import get_hantavirus_cases, summarize_hantavirus_by_year, summarize_hantavirus_by_state
+
+cases = get_hantavirus_cases(state_name="New Mexico", outcome="Dead")
+by_year = summarize_hantavirus_by_year()
+# [{'year': 'Before 1993', 'cases': 4, 'deaths': 3}, {'year': '1993', 'cases': 27, ...}, ...]
+
+from grasp.sdk import get_fluview_ili, summarize_fluview_ili_by_region
+
+# National + state ILI for 2019-20 season
+ili = get_fluview_ili(regions=["nat", "ca", "tx"], epiweeks="201940-202020")
+# [{'region': 'ca', 'epiweek': 201940, 'wili': 2.1, 'ili': 2.1, ...}, ...]
+
+# Peak/avg wILI across all national/HHS/census regions
+summary = summarize_fluview_ili_by_region(epiweeks="201940-202020")
+# [{'region': 'cen7', 'peak_wili': 13.49, 'avg_wili': 6.3, 'weeks': 33}, ...]
+
+from grasp.sdk import get_fluview_clinical
+
+lab = get_fluview_clinical(regions=["nat", "hhs1"], epiweeks="202001-202026")
+# [{'region': 'hhs1', 'epiweek': 202001, 'percent_positive': 18.2, ...}, ...]
+
+from grasp.sdk import get_flusurv_net, summarize_flusurv_by_season, summarize_flusurv_by_location
+
+records = get_flusurv_net(locations=["CA", "OH", "network_all"], season="2024-25")
+summary = summarize_flusurv_by_season(location="CA")
+# [{'season': '2009-10', 'location': 'CA', 'peak_rate': 3.2, 'avg_rate': 0.71, 'weeks': 30}, ...]
+by_loc = summarize_flusurv_by_location(season="2019-20")
+# [{'location': 'CT', 'name': 'Connecticut', 'peak_rate': 14.2, 'avg_rate': 3.43, ...}, ...]
+```
 
 ### NIS — National Immunization Survey
 
@@ -138,6 +218,7 @@ Refer to [CDC Open README](src/cdc_open/README.md) for more information.
 [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]: https://wonder.cdc.gov/wonder/help/wonder-api.html
 [National Syndromic Surveillance Program (NSSP)]: https://www.cdc.gov/nssp/
 [WISQARS Injury & Violence Data]: https://wisqars.cdc.gov/
+[ATSDR GRASP Disease APIs]: https://gis.cdc.gov/grasp/
 [National Immunization Survey (NIS)]: https://www.cdc.gov/vaccines/imz-managers/nis/
 [National Wastewater Surveillance System (NWSS)]: https://www.cdc.gov/nwss/about.html
 [National Respiratory and Enteric Virus Surveillance System (NREVSS)]: https://www.cdc.gov/nrevss/php/dashboard/index.html

@@ -16,6 +16,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 | [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)       |
 | [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)       |
 | [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)       |
+| [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)       |
 
 ---
 
@@ -214,6 +215,19 @@ uv run python -m cdc_open analyze "Which states had the highest drug overdose de
 
 Refer to [CDC Open README](src/cdc_open/README.md) for more information.
 
+### CDC BEAM — Bacteria, Enterics, Ameba, and Mycotics
+
+[BEAM](https://www.cdc.gov/beam/dashboard/index.html) is CDC's interactive dashboard for enteric pathogen surveillance. It tracks lab-confirmed human, animal, and food isolates for five pathogens — Campylobacter, Salmonella, Shigella, STEC (Shiga toxin-producing E. coli), and Vibrio — reported monthly by state health labs since 2018.
+
+The raw dataset (`jbhn-e8xn`) has ~200k rows of state-level isolate records. `fetch_beam.py` aggregates these to a national monthly totals CSV keyed by `(date, pathogen)`.
+
+```bash
+uv run python -m cdc_open.fetch_beam
+# → data/raw/cdc_open/beam_foodborne.csv
+```
+
+Data sourced from the [BEAM Dashboard – Report Data](https://data.cdc.gov/Foodborne-Waterborne-and-Related-Diseases/BEAM-Dashboard-Report-Data/jbhn-e8xn) Socrata dataset.
+
 [CDC]: https://www.cdc.gov
 [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]: https://wonder.cdc.gov/wonder/help/wonder-api.html
 [National Syndromic Surveillance Program (NSSP)]: https://www.cdc.gov/nssp/
@@ -225,3 +239,4 @@ Refer to [CDC Open README](src/cdc_open/README.md) for more information.
 [National Healthcare Safety Network (NHSN)]: https://www.cdc.gov/nhsn/datastat/index.html
 [Children Vaccination]: https://data.cdc.gov/Child-Vaccinations/Vaccination-Coverage-among-Young-Children-0-35-Mon/fhky-rtsk/about_data
 [CDC Open Data (data.cdc.gov)]: https://data.cdc.gov
+[CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]: https://www.cdc.gov/beam/dashboard/index.html

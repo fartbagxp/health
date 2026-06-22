@@ -1040,6 +1040,30 @@ DATASETS: dict[str, Dataset] = {
             "value",
         ],
     ),
+    # ── BEAM Foodborne Pathogens ─────────────────────────────────────────────
+    "beam_report": Dataset(
+        id="jbhn-e8xn",
+        name="BEAM Dashboard – Report Data",
+        description=(
+            "CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics) isolate reports by state, "
+            "month, source type (Human/Animal/Food), source site, pathogen, and serotype. "
+            "Covers Campylobacter, Salmonella, Shigella, STEC, and Vibrio. "
+            "Use fetch_beam.py for the pre-aggregated national monthly CSV."
+        ),
+        years="2018–present",
+        key_columns=[
+            "year",
+            "month",
+            "state",
+            "source_type",
+            "source_site",
+            "pathogen",
+            "serotype_species",
+            "number_of_isolates",
+            "outbreak_associated_isolates",
+        ],
+        soql_where="source_type='Human'",
+    ),
 }
 
 # ── Multi-source composite datasets ───────────────────────────────────────────

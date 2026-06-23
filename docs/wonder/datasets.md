@@ -83,8 +83,8 @@ Goal                                       Dataset
 ──────────────────────────────────────────────────────────
 Mortality right now (2024)                 D176
 Mortality 2018-2023 confirmed              D157
-Mortality 1999-2020 ICD-10                D77
-Mortality 1979-1998 ICD-9                 D16
+Mortality 1999-2020 ICD-10                 D77
+Mortality 1979-1998 ICD-9                  D16
 Births 2007-present                        D66
 Births expanded race 2016-present          D149
 Infant mortality 2007-present              D69

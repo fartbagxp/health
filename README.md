@@ -4,19 +4,19 @@ This is a repository to collect and run fun experiments on various publicly avai
 
 ## Sources
 
-| Data Source                                                           | Module          | API                          |
-| --------------------------------------------------------------------- | --------------- | ---------------------------- |
-| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API           |
-| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API       |
-| [WISQARS Injury & Violence Data]                                       | `src/wisqars/`  | data.cdc.gov (Socrata)       |
-| [ATSDR GRASP Disease APIs]                                            | `src/grasp/`    | gis.cdc.gov/grasp (REST/JSON)|
-| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT      |
-| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)       |
-| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)       |
-| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)       |
-| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)       |
-| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)       |
-| [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)       |
+| Data Source                                                           | Module          | API                           |
+| --------------------------------------------------------------------- | --------------- | ----------------------------- |
+| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API            |
+| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API        |
+| [WISQARS Injury & Violence Data]                                      | `src/wisqars/`  | data.cdc.gov (Socrata)        |
+| [ATSDR GRASP Disease APIs]                                            | `src/grasp/`    | gis.cdc.gov/grasp (REST/JSON) |
+| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT       |
+| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)        |
+| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)        |
+| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)        |
+| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)        |
+| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)        |
+| [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)        |
 
 ---
 
@@ -74,12 +74,12 @@ Refer to [WISQARS source](src/wisqars/) for more information.
 
 All four datasets are sourced via the [CMU Delphi Epidata API](https://cmu-delphi.github.io/delphi-epidata/) (fluview/flusurv endpoints), which pulls directly from CDC GRASP and provides a clean REST interface. No authentication required.
 
-| Dataset            | Coverage         | Description                                                                             |
-| ------------------ | ---------------- | --------------------------------------------------------------------------------------- |
-| `hantavirus`       | pre-1993–present | Patient-level cases: onset date, state FIPS, and outcome                                |
-| `fluview_ili`      | 1997-98–present  | Weekly ILINet outpatient ILI % by nat/HHS region/census region/state (via Delphi)       |
-| `fluview_clinical` | 2016-17–present  | Weekly WHO/NREVSS clinical lab flu test positivity by region (via Delphi)               |
-| `flusurv_net`      | 2009-10–present  | Weekly flu hospitalization rates by age, race, sex, and flu type (via Delphi)           |
+| Dataset            | Coverage         | Description                                                                       |
+| ------------------ | ---------------- | --------------------------------------------------------------------------------- |
+| `hantavirus`       | pre-1993–present | Patient-level cases: onset date, state FIPS, and outcome                          |
+| `fluview_ili`      | 1997-98–present  | Weekly ILINet outpatient ILI % by nat/HHS region/census region/state (via Delphi) |
+| `fluview_clinical` | 2016-17–present  | Weekly WHO/NREVSS clinical lab flu test positivity by region (via Delphi)         |
+| `flusurv_net`      | 2009-10–present  | Weekly flu hospitalization rates by age, race, sex, and flu type (via Delphi)     |
 
 **Hantavirus:** All ~890 confirmed US cases from CDC's Viral Special Pathogens Branch via NNDSS. Each record includes `IllnessOnsetDate`, `StateFIPS`, and `Outcome` (Alive/Dead/Unknown). Overall case fatality rate ~35%.
 
@@ -147,10 +147,10 @@ by_loc = summarize_flusurv_by_location(season="2019-20")
 
 The [NIS](https://www.cdc.gov/vaccines/imz-managers/nis/) is CDC's annual random-digit-dial telephone survey measuring childhood and adolescent vaccination coverage across the US. Two surveys are covered:
 
-| Survey      | Ages        | Index page                                                          |
-| ----------- | ----------- | ------------------------------------------------------------------- |
-| **NIS-Child** | 19–35 months | https://www.cdc.gov/nis/php/datasets-child/index.html             |
-| **NIS-Teen**  | 13–17 years  | https://www.cdc.gov/nis/php/datasets-teen/index.html              |
+| Survey        | Ages         | Index page                                            |
+| ------------- | ------------ | ----------------------------------------------------- |
+| **NIS-Child** | 19–35 months | https://www.cdc.gov/nis/php/datasets-child/index.html |
+| **NIS-Teen**  | 13–17 years  | https://www.cdc.gov/nis/php/datasets-teen/index.html  |
 
 Data are distributed as **fixed-width ASCII `.dat` files** (50–200 MB each) with accompanying SAS and R import programs. This module is a pure-Python replacement — it fetches the SAS codebook to derive column positions, then streams the `.dat` file without writing anything to disk.
 

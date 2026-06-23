@@ -258,16 +258,16 @@ for block in response.content:
 
 ### Mortality & chronic disease
 
-| Key                      | Dataset ID  | Coverage     | Description                                          |
-| ------------------------ | ----------- | ------------ | ---------------------------------------------------- |
-| `leading_death`          | `bi63-dtpu` | 1999–2017    | Leading causes of death by state                     |
-| `life_expectancy`        | `w9j2-ggv5` | 1900–2018    | Life expectancy at birth, national, by race × sex (Male/Female/Both) |
-| `life_expectancy_by_state` | composite | 2018–2021  | Life expectancy at birth by state and sex (Male/Female/Total); combines four NCHS single-year datasets with normalized columns |
-| `mortality_rates`        | `489q-934x` | 2020–present | Provisional quarterly death rates                    |
-| `death_rates_historical` | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes              |
-| `weekly_deaths`          | `r8kw-7aab` | 2020–present | Weekly deaths by state: COVID/flu/pneumonia (weekly) |
-| `weekly_deaths_by_cause` | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                               |
-| `covid_conditions`       | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition            |
+| Key                        | Dataset ID  | Coverage     | Description                                                                                                                    |
+| -------------------------- | ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `leading_death`            | `bi63-dtpu` | 1999–2017    | Leading causes of death by state                                                                                               |
+| `life_expectancy`          | `w9j2-ggv5` | 1900–2018    | Life expectancy at birth, national, by race × sex (Male/Female/Both)                                                           |
+| `life_expectancy_by_state` | composite   | 2018–2021    | Life expectancy at birth by state and sex (Male/Female/Total); combines four NCHS single-year datasets with normalized columns |
+| `mortality_rates`          | `489q-934x` | 2020–present | Provisional quarterly death rates                                                                                              |
+| `death_rates_historical`   | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes                                                                                        |
+| `weekly_deaths`            | `r8kw-7aab` | 2020–present | Weekly deaths by state: COVID/flu/pneumonia (weekly)                                                                           |
+| `weekly_deaths_by_cause`   | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                                                                                                         |
+| `covid_conditions`         | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition                                                                                      |
 
 ### County / city health
 
@@ -365,11 +365,11 @@ These three datasets are fetched directly from the CDC measles data page
 (`cdc.gov/measles/data-research/`) rather than data.cdc.gov. They power
 the interactive charts on that page and are updated weekly.
 
-| Key                       | Coverage     | Description                                                         |
-| ------------------------- | ------------ | ------------------------------------------------------------------- |
-| `measles_annual_history`  | 1962–present | Annual national case counts; powers the annotated history chart     |
-| `measles_annual_cases`    | 1985–present | Annual national cases with two filter views (1985-Present, 2000-Present) |
-| `measles_weekly_cases`    | 2022–present | Weekly national cases by rash onset date                            |
+| Key                      | Coverage     | Description                                                              |
+| ------------------------ | ------------ | ------------------------------------------------------------------------ |
+| `measles_annual_history` | 1962–present | Annual national case counts; powers the annotated history chart          |
+| `measles_annual_cases`   | 1985–present | Annual national cases with two filter views (1985-Present, 2000-Present) |
+| `measles_weekly_cases`   | 2022–present | Weekly national cases by rash onset date                                 |
 
 ### Birth & demographics
 

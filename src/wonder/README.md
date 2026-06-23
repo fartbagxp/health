@@ -65,20 +65,22 @@ Each query groups by `Year` (`V20` in all three datasets) and returns the `Birth
 
 Two datasets are needed to cover the full ICD-10 era:
 
-| Query file                                      | Dataset                               | Years     | API ID |
-| ----------------------------------------------- | ------------------------------------- | --------- | ------ |
-| `maternal-mortality-by-year-1999-2020-req.xml`  | Underlying Cause of Death (bridged)   | 1999–2020 | D76    |
-| `maternal-mortality-by-year-2018-2024-req.xml`  | Underlying Cause of Death (single-race) | 2018–2024 | D158 |
+| Query file                                     | Dataset                                 | Years     | API ID |
+| ---------------------------------------------- | --------------------------------------- | --------- | ------ |
+| `maternal-mortality-by-year-1999-2020-req.xml` | Underlying Cause of Death (bridged)     | 1999–2020 | D76    |
+| `maternal-mortality-by-year-2018-2024-req.xml` | Underlying Cause of Death (single-race) | 2018–2024 | D158   |
 
 ICD-10 filter: `O00–O99` (Pregnancy, childbirth and the puerperium) + `A34` (Obstetrical tetanus). Grouped by Year, national only.
 
 Run both and merge:
+
 ```
 uv run python src/wonder/queries/fetch_maternal_mortality.py
 → data/raw/wonder/maternal-mortality-by-year.csv
 ```
 
 **Key findings (1999–2024):**
+
 - Counts were ~400–800/year from 1999–2009, rising as states adopted the 2003 revised death certificate (pregnancy checkbox rollout 2003–2017 — largely measurement change, not a real increase)
 - Peak in 2021 at **1,687 deaths** (COVID-era spike); declined to ~1,000 by 2023–2024
 - The 2018 drop reflects the end of the checkbox rollout and a methodology reset (NCHS shifted to D158 single-race)

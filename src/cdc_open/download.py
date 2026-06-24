@@ -75,8 +75,9 @@ def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
             params: dict = {"$limit": limit}
             if ds.soql_where:
                 params["$where"] = ds.soql_where
+            base = ds.base_url or _BASE_URL
             resp = _fetch_with_retry(
-                f"{_BASE_URL}/{ds.id}.csv",
+                f"{base}/{ds.id}.csv",
                 params=params,
                 headers=headers,
             )

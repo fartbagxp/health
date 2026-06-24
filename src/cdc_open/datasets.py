@@ -16,6 +16,7 @@ class Dataset:
     years: str
     key_columns: list[str] = field(default_factory=list)
     soql_where: str | None = None
+    base_url: str | None = None  # overrides _BASE_URL in downloader when set
 
 
 @dataclass(frozen=True)
@@ -682,6 +683,30 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     # ── Child vaccination ────────────────────────────────────────────────────
+    "schoolvaxview": Dataset(
+        id="ijqb-a7ye",
+        name="SchoolVaxView: Kindergarten Vaccination Coverage & Exemptions",
+        description=(
+            "Annual vaccination coverage and exemption estimates for kindergartners "
+            "from the CDC School Vaccination Assessment Program, by state and nationally. "
+            "Covers DTaP, MMR, polio, hepatitis B, varicella, and exemption rates. "
+            "Complements NIS-Child (ages 19–35 months) by capturing coverage at school entry (~age 5)."
+        ),
+        years="2009–present",
+        key_columns=[
+            "vaccine",
+            "dose",
+            "geography_type",
+            "geography",
+            "year_season",
+            "coverage_estimate",
+            "number_of_exemptions",
+            "population_sample_size",
+            "percent_surveyed",
+            "survey_type",
+            "foot_notes",
+        ],
+    ),
     "children_vaccination": Dataset(
         id="fhky-rtsk",
         name="Vaccination Coverage: Young Children (0–35 months)",
@@ -1039,6 +1064,39 @@ DATASETS: dict[str, Dataset] = {
             "series",
             "value",
         ],
+    ),
+    # ── Medicare Fee-for-Service (CMS / healthdata.gov) ─────────────────────
+    "medicare_geographic_variation": Dataset(
+        id="f33x-4nyg",
+        name="Medicare Geographic Variation by National, State & County (CMS)",
+        description=(
+            "Annual Medicare FFS chronic condition prevalence, per-capita spending, and utilization "
+            "at national, state, and county level. Key chronic conditions include obesity, diabetes, "
+            "hypertension, hyperlipidemia, CHF, COPD, depression, CKD, cancer, and stroke. "
+            "Source: CMS Chronic Conditions Data Warehouse. "
+            "Hosted on healthdata.gov — provides claims-based estimates complementary to BRFSS survey data."
+        ),
+        years="2007–present",
+        key_columns=[
+            "year",
+            "bene_geo_lvl",
+            "bene_geo_desc",
+            "bene_geo_cd",
+            "benes_ffs_cnt",
+            "pct_cc_obesity",
+            "pct_cc_diabetes",
+            "pct_cc_hypertension",
+            "pct_cc_hyperlipidemia",
+            "pct_cc_depression",
+            "pct_cc_chf",
+            "pct_cc_copd",
+            "pct_cc_ckd",
+            "pct_cc_cancer",
+            "pct_cc_stroke_tia",
+            "pct_cc_alzheimer_d",
+            "tot_mdcr_stdzd_pymt_pc",
+        ],
+        base_url="https://healthdata.gov/resource",
     ),
     # ── BEAM Foodborne Pathogens ─────────────────────────────────────────────
     "beam_report": Dataset(

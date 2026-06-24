@@ -92,8 +92,39 @@ Use these keys with `uv run python -m cdc_open query <key>`:
 | `nursing_home_vaccination_coverage` | Vaccination Coverage among Nursing Home Residents    | `8w4j-reb4` | 2005–2021    |
 | `hcp_vaccination_coverage`          | Vaccination Coverage among Health Care Personnel     | `xerk-pcm8` | 2013–2021    |
 | `children_vaccination`              | Vaccination Coverage: Young Children (0–35 months)   | `fhky-rtsk` | 2011–2022    |
+| `schoolvaxview`                     | SchoolVaxView: Kindergarten Vaccination & Exemptions | `ijqb-a7ye` | 2009–present |
 | `flu_vaccine_doses`                 | Weekly Cumulative Flu Vaccine Doses Distributed      | `k87d-gv3u` | 2009–present |
 | `resp_vaccination`                  | Weekly Respiratory Virus Vaccination Coverage        | `5c6r-xi2t` | 2023–present |
+
+#### SchoolVaxView
+
+Annual kindergarten vaccination coverage and exemption rates from the [CDC School Vaccination Assessment Program](https://www.cdc.gov/schoolvaxview/), published on data.cdc.gov (Socrata ID `ijqb-a7ye`). Data covers 2009–present at the national and state level.
+
+**Data structure:** Each row is one vaccine × school year × geography × survey method. There is no single "overall immunization rate" — coverage is reported separately for each vaccine (DTaP, MMR, Polio, Hepatitis B, Varicella) and each exemption type (Any, Medical, Non-Medical).
+
+Two rows appear per vaccine per season at the national level, one for each reporting methodology (`survey_type`: `Census` or `Voluntary response`). Filter to `Census` for a single consistent series.
+
+**Vaccines tracked:**
+
+| `vaccine`               | Notes                                      |
+| ----------------------- | ------------------------------------------ |
+| `DTP, DTaP, or DT`      | Diphtheria-tetanus-pertussis               |
+| `MMR`                   | Measles-mumps-rubella — standard benchmark |
+| `Polio`                 | Poliovirus                                 |
+| `Hepatitis B`           | Hepatitis B                                |
+| `Varicella`             | Chickenpox (1-dose and 2-dose series)      |
+| `Exemption`             | Any / Medical / Non-Medical exemption rate |
+
+**To chart MMR coverage over time (national, clean series):**
+
+```bash
+uv run python -m cdc_open query schoolvaxview \
+  --where "geography_type='National' AND vaccine='MMR' AND survey_type='Census'" \
+  --select "year_season,coverage_estimate" \
+  --order "year_season" -f table
+```
+
+**Relationship to NIS:** SchoolVaxView captures coverage at kindergarten entry (~age 5); [NIS-Child](nis.md) tracks coverage at 19–35 months. Together they show whether children who were vaccinated as toddlers remain up to date by school entry.
 
 ### Population health
 

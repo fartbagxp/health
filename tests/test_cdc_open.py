@@ -38,8 +38,11 @@ class TestDatasets:
             assert ds.years, f"{key} missing years"
 
     def test_dataset_ids_are_unique(self):
+        # nndss_weekly and nndss_measles intentionally share x9gk-5huc (same table,
+        # different soql_where filters), so we allow exactly one duplicate pair.
         ids = [ds.id for ds in DATASETS.values()]
-        assert len(ids) == len(set(ids)), "Duplicate dataset IDs found"
+        duplicates = len(ids) - len(set(ids))
+        assert duplicates <= 1, f"Unexpected duplicate dataset IDs: {duplicates} extra"
 
     def test_known_datasets_present(self):
         expected = [
@@ -53,7 +56,7 @@ class TestDatasets:
             assert key in DATASETS, f"Missing dataset: {key}"
 
     def test_dataset_count(self):
-        assert len(DATASETS) == 14
+        assert len(DATASETS) == 65
 
 
 # =============================================================================
@@ -276,7 +279,7 @@ class TestCLI:
         assert result.returncode == 0
         data = json.loads(result.stdout)
         assert isinstance(data, list)
-        assert len(data) == 14
+        assert len(data) == 65
         keys = {row["key"] for row in data}
         assert "leading_death" in keys
         assert "weekly_deaths" in keys

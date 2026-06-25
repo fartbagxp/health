@@ -1065,39 +1065,6 @@ DATASETS: dict[str, Dataset] = {
             "value",
         ],
     ),
-    # ── Medicare Fee-for-Service (CMS / healthdata.gov) ─────────────────────
-    "medicare_geographic_variation": Dataset(
-        id="f33x-4nyg",
-        name="Medicare Geographic Variation by National, State & County (CMS)",
-        description=(
-            "Annual Medicare FFS chronic condition prevalence, per-capita spending, and utilization "
-            "at national, state, and county level. Key chronic conditions include obesity, diabetes, "
-            "hypertension, hyperlipidemia, CHF, COPD, depression, CKD, cancer, and stroke. "
-            "Source: CMS Chronic Conditions Data Warehouse. "
-            "Hosted on healthdata.gov — provides claims-based estimates complementary to BRFSS survey data."
-        ),
-        years="2007–present",
-        key_columns=[
-            "year",
-            "bene_geo_lvl",
-            "bene_geo_desc",
-            "bene_geo_cd",
-            "benes_ffs_cnt",
-            "pct_cc_obesity",
-            "pct_cc_diabetes",
-            "pct_cc_hypertension",
-            "pct_cc_hyperlipidemia",
-            "pct_cc_depression",
-            "pct_cc_chf",
-            "pct_cc_copd",
-            "pct_cc_ckd",
-            "pct_cc_cancer",
-            "pct_cc_stroke_tia",
-            "pct_cc_alzheimer_d",
-            "tot_mdcr_stdzd_pymt_pc",
-        ],
-        base_url="https://healthdata.gov/resource",
-    ),
     # ── BEAM Foodborne Pathogens ─────────────────────────────────────────────
     "beam_report": Dataset(
         id="jbhn-e8xn",

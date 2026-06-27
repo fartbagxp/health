@@ -1,6 +1,15 @@
 # Overview
 
+[![Deploy Docs](https://github.com/fartbagxp/health/actions/workflows/docs.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/docs.yml)
+[![Update CDC Open Data](https://github.com/fartbagxp/health/actions/workflows/update_cdc_open.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_cdc_open.yml)
+[![Update WONDER](https://github.com/fartbagxp/health/actions/workflows/update_wonder.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wonder.yml)
+[![Update WISQARS](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml)
+[![Datasets](https://img.shields.io/badge/datasets-70-4c9be8)](https://fartbagxp.github.io/health/)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-8a2be2)](https://fartbagxp.github.io/health/)
+
 This is a repository to collect and run fun experiments on various publicly available health APIs.
+
+**[Documentation site →](https://fartbagxp.github.io/health/)**
 
 ## Sources
 
@@ -20,7 +29,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 
 ---
 
-### CDC WONDER
+### CDC WONDER — [docs](https://fartbagxp.github.io/health/wonder/)
 
 [CDC WONDER](https://wonder.cdc.gov/) is CDC's public data query system covering mortality, births, vaccine adverse events, and more. It exposes an unauthenticated XML-over-HTTPS API. The [Wonder API](https://wonder.cdc.gov/wonder/help/wonder-api.html) accepts POST requests with XML query parameters including `accept_datause_restrictions=true`.
 
@@ -30,7 +39,7 @@ The soft rate limit is a query every two minutes.
 
 Refer to [WONDER README](src/wonder/README.md) for more information.
 
-### NSSP — National Syndromic Surveillance Program
+### NSSP — National Syndromic Surveillance Program — [docs](https://fartbagxp.github.io/health/nssp/)
 
 [NSSP](https://www.cdc.gov/nssp/) tracks the proportion of emergency department visits attributed to COVID-19, influenza, and RSV, updated weekly. This module uses the [CMU Delphi Epidata API](https://cmu-delphi.github.io/delphi-epidata/api/covidcast-signals/nssp.html) — a separate public API (no auth required) that processes and exposes NSSP signals at national, state, HHS region, and county level.
 
@@ -44,7 +53,7 @@ uv run python -m nssp national --start 202401 -f csv
 
 Refer to [NSSP source](src/nssp/) for more information.
 
-### WISQARS — Web-based Injury Statistics Query and Reporting System
+### WISQARS — Web-based Injury Statistics Query and Reporting System — [docs](https://fartbagxp.github.io/health/wisqars/)
 
 [WISQARS](https://wisqars.cdc.gov/) is CDC's injury data portal covering fatal and nonfatal injuries, violence, and overdose. WISQARS has no public API, but its underlying NCHS datasets are available on data.cdc.gov. 5 datasets are supported:
 
@@ -68,7 +77,7 @@ uv run python -m wisqars tract --state Texas --intent All_Homicide --year 2022
 
 Refer to [WISQARS source](src/wisqars/) for more information.
 
-### ATSDR GRASP — Geographic Research, Analysis, and Services Program
+### ATSDR GRASP — Geographic Research, Analysis, and Services Program — [docs](https://fartbagxp.github.io/health/grasp/)
 
 [GRASP](https://gis.cdc.gov/grasp/) is a suite of disease-specific REST APIs maintained by ATSDR and hosted at `gis.cdc.gov/grasp/`. Each application exposes a `GetData_JSON` endpoint returning patient-level or aggregate records as JSON. No authentication or API key is required. Data is fetched in full and cached locally for 24 hours.
 
@@ -143,7 +152,7 @@ by_loc = summarize_flusurv_by_location(season="2019-20")
 # [{'location': 'CT', 'name': 'Connecticut', 'peak_rate': 14.2, 'avg_rate': 3.43, ...}, ...]
 ```
 
-### NIS — National Immunization Survey
+### NIS — National Immunization Survey — [docs](https://fartbagxp.github.io/health/nis/)
 
 The [NIS](https://www.cdc.gov/vaccines/imz-managers/nis/) is CDC's annual random-digit-dial telephone survey measuring childhood and adolescent vaccination coverage across the US. Two surveys are covered:
 
@@ -202,7 +211,7 @@ print(nat["P_UTDHPV13_pct"])   # % of teens with completed HPV series
 
 ---
 
-### CDC Open Data
+### CDC Open Data — [docs](https://fartbagxp.github.io/health/cdc-open/)
 
 [data.cdc.gov](https://data.cdc.gov) is the CDC's public open data portal, built on the Socrata platform. It exposes datasets as a standard REST/JSON API ([SODA](https://dev.socrata.com/)) — no authentication required for read access.
 

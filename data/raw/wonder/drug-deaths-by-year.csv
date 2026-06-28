@@ -1,0 +1,183 @@
+year,drug_code,drug_name,deaths,provisional
+1999,T40.1,Heroin,2103,false
+1999,T40.2,Other opioids (natural & semi-synthetic),2915,false
+1999,T40.3,Methadone,831,false
+1999,T40.4,Synthetic opioids excl. methadone (fentanyl),772,false
+1999,T40.5,Cocaine,4494,false
+1999,T40.7,Cannabis,49,false
+1999,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",700,false
+2000,T40.1,Heroin,1999,false
+2000,T40.2,Other opioids (natural & semi-synthetic),3099,false
+2000,T40.3,Methadone,1060,false
+2000,T40.4,Synthetic opioids excl. methadone (fentanyl),821,false
+2000,T40.5,Cocaine,4194,false
+2000,T40.7,Cannabis,61,false
+2000,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",739,false
+2001,T40.1,Heroin,1906,false
+2001,T40.2,Other opioids (natural & semi-synthetic),3688,false
+2001,T40.3,Methadone,1559,false
+2001,T40.4,Synthetic opioids excl. methadone (fentanyl),1010,false
+2001,T40.5,Cocaine,4518,false
+2001,T40.7,Cannabis,58,false
+2001,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",695,false
+2002,T40.1,Heroin,2219,false
+2002,T40.2,Other opioids (natural & semi-synthetic),4707,false
+2002,T40.3,Methadone,2471,false
+2002,T40.4,Synthetic opioids excl. methadone (fentanyl),1366,false
+2002,T40.5,Cocaine,5387,false
+2002,T40.7,Cannabis,70,false
+2002,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",1245,false
+2003,T40.1,Heroin,2205,false
+2003,T40.2,Other opioids (natural & semi-synthetic),5162,false
+2003,T40.3,Methadone,3117,false
+2003,T40.4,Synthetic opioids excl. methadone (fentanyl),1470,false
+2003,T40.5,Cocaine,6099,false
+2003,T40.7,Cannabis,88,false
+2003,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",1517,false
+2004,T40.1,Heroin,2009,false
+2004,T40.2,Other opioids (natural & semi-synthetic),5558,false
+2004,T40.3,Methadone,4031,false
+2004,T40.4,Synthetic opioids excl. methadone (fentanyl),1719,false
+2004,T40.5,Cocaine,6398,false
+2004,T40.7,Cannabis,122,false
+2004,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",1657,false
+2005,T40.1,Heroin,2154,false
+2005,T40.2,Other opioids (natural & semi-synthetic),6102,false
+2005,T40.3,Methadone,4638,false
+2005,T40.4,Synthetic opioids excl. methadone (fentanyl),1808,false
+2005,T40.5,Cocaine,7283,false
+2005,T40.7,Cannabis,141,false
+2005,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",2023,false
+2006,T40.1,Heroin,2192,false
+2006,T40.2,Other opioids (natural & semi-synthetic),7402,false
+2006,T40.3,Methadone,5633,false
+2006,T40.4,Synthetic opioids excl. methadone (fentanyl),2839,false
+2006,T40.5,Cocaine,8591,false
+2006,T40.7,Cannabis,162,false
+2006,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",1848,false
+2007,T40.1,Heroin,2443,false
+2007,T40.2,Other opioids (natural & semi-synthetic),8532,false
+2007,T40.3,Methadone,5698,false
+2007,T40.4,Synthetic opioids excl. methadone (fentanyl),2297,false
+2007,T40.5,Cocaine,7463,false
+2007,T40.7,Cannabis,177,false
+2007,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",1724,false
+2008,T40.1,Heroin,3086,false
+2008,T40.2,Other opioids (natural & semi-synthetic),9515,false
+2008,T40.3,Methadone,5105,false
+2008,T40.4,Synthetic opioids excl. methadone (fentanyl),2377,false
+2008,T40.5,Cocaine,5865,false
+2008,T40.7,Cannabis,169,false
+2008,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",1560,false
+2009,T40.1,Heroin,3343,false
+2009,T40.2,Other opioids (natural & semi-synthetic),10216,false
+2009,T40.3,Methadone,4854,false
+2009,T40.4,Synthetic opioids excl. methadone (fentanyl),3042,false
+2009,T40.5,Cocaine,4988,false
+2009,T40.7,Cannabis,170,false
+2009,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",2007,false
+2010,T40.1,Heroin,3094,false
+2010,T40.2,Other opioids (natural & semi-synthetic),11504,false
+2010,T40.3,Methadone,4729,false
+2010,T40.4,Synthetic opioids excl. methadone (fentanyl),3126,false
+2010,T40.5,Cocaine,4824,false
+2010,T40.7,Cannabis,261,false
+2010,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",2330,false
+2011,T40.1,Heroin,4456,false
+2011,T40.2,Other opioids (natural & semi-synthetic),12251,false
+2011,T40.3,Methadone,4585,false
+2011,T40.4,Synthetic opioids excl. methadone (fentanyl),2769,false
+2011,T40.5,Cocaine,5324,false
+2011,T40.7,Cannabis,312,false
+2011,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",2724,false
+2012,T40.1,Heroin,5997,false
+2012,T40.2,Other opioids (natural & semi-synthetic),11676,false
+2012,T40.3,Methadone,4075,false
+2012,T40.4,Synthetic opioids excl. methadone (fentanyl),2734,false
+2012,T40.5,Cocaine,4998,false
+2012,T40.7,Cannabis,343,false
+2012,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",3247,false
+2013,T40.1,Heroin,8377,false
+2013,T40.2,Other opioids (natural & semi-synthetic),11873,false
+2013,T40.3,Methadone,3740,false
+2013,T40.4,Synthetic opioids excl. methadone (fentanyl),3220,false
+2013,T40.5,Cocaine,5495,false
+2013,T40.7,Cannabis,388,false
+2013,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",4374,false
+2014,T40.1,Heroin,10754,false
+2014,T40.2,Other opioids (natural & semi-synthetic),12657,false
+2014,T40.3,Methadone,3540,false
+2014,T40.4,Synthetic opioids excl. methadone (fentanyl),5695,false
+2014,T40.5,Cocaine,5992,false
+2014,T40.7,Cannabis,421,false
+2014,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",5114,false
+2015,T40.1,Heroin,13150,false
+2015,T40.2,Other opioids (natural & semi-synthetic),13294,false
+2015,T40.3,Methadone,3406,false
+2015,T40.4,Synthetic opioids excl. methadone (fentanyl),9803,false
+2015,T40.5,Cocaine,7406,false
+2015,T40.7,Cannabis,560,false
+2015,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",6804,false
+2016,T40.1,Heroin,15717,false
+2016,T40.2,Other opioids (natural & semi-synthetic),15114,false
+2016,T40.3,Methadone,3520,false
+2016,T40.4,Synthetic opioids excl. methadone (fentanyl),19720,false
+2016,T40.5,Cocaine,11201,false
+2016,T40.7,Cannabis,717,false
+2016,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",8865,false
+2017,T40.1,Heroin,15690,false
+2017,T40.2,Other opioids (natural & semi-synthetic),15115,false
+2017,T40.3,Methadone,3336,false
+2017,T40.4,Synthetic opioids excl. methadone (fentanyl),28869,false
+2017,T40.5,Cocaine,14879,false
+2017,T40.7,Cannabis,862,false
+2017,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",11956,false
+2018,T40.1,Heroin,15220,false
+2018,T40.2,Other opioids (natural & semi-synthetic),13119,false
+2018,T40.3,Methadone,3147,false
+2018,T40.4,Synthetic opioids excl. methadone (fentanyl),31814,false
+2018,T40.5,Cocaine,15617,false
+2018,T40.7,Cannabis,1036,false
+2018,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",14646,false
+2019,T40.1,Heroin,14233,false
+2019,T40.2,Other opioids (natural & semi-synthetic),12487,false
+2019,T40.3,Methadone,2893,false
+2019,T40.4,Synthetic opioids excl. methadone (fentanyl),36883,false
+2019,T40.5,Cocaine,16912,false
+2019,T40.7,Cannabis,1101,false
+2019,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",18386,false
+2020,T40.1,Heroin,13393,false
+2020,T40.2,Other opioids (natural & semi-synthetic),14019,false
+2020,T40.3,Methadone,3710,false
+2020,T40.4,Synthetic opioids excl. methadone (fentanyl),57390,false
+2020,T40.5,Cocaine,20523,false
+2020,T40.7,Cannabis,1302,false
+2020,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",26575,false
+2021,T40.1,Heroin,9352,true
+2021,T40.2,Other opioids (natural & semi-synthetic),14204,true
+2021,T40.3,Methadone,3860,true
+2021,T40.4,Synthetic opioids excl. methadone (fentanyl),72204,true
+2021,T40.5,Cocaine,26083,true
+2021,T40.7,Cannabis,1450,true
+2021,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",35840,true
+2022,T40.1,Heroin,5986,true
+2022,T40.2,Other opioids (natural & semi-synthetic),12394,true
+2022,T40.3,Methadone,3465,true
+2022,T40.4,Synthetic opioids excl. methadone (fentanyl),75572,true
+2022,T40.5,Cocaine,29306,true
+2022,T40.7,Cannabis,1438,true
+2022,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",37192,true
+2023,T40.1,Heroin,4056,true
+2023,T40.2,Other opioids (natural & semi-synthetic),10555,true
+2023,T40.3,Methadone,3504,true
+2023,T40.4,Synthetic opioids excl. methadone (fentanyl),74537,true
+2023,T40.5,Cocaine,31389,true
+2023,T40.7,Cannabis,1452,true
+2023,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",38166,true
+2024,T40.1,Heroin,2792,true
+2024,T40.2,Other opioids (natural & semi-synthetic),7215,true
+2024,T40.3,Methadone,3499,true
+2024,T40.4,Synthetic opioids excl. methadone (fentanyl),37192,true
+2024,T40.5,Cocaine,20283,true
+2024,T40.7,Cannabis,1272,true
+2024,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",27650,true

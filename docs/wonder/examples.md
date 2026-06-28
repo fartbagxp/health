@@ -98,6 +98,120 @@ print(f"{len(usable)} / {len(rows)} rows have usable death counts")
 
 ---
 
+### Fentanyl deaths by month — 1999–present
+
+**File:** `data/raw/wonder/fentanyl-deaths-by-month.csv`  
+**Script:** `src/wonder/queries/fetch_fentanyl_deaths.py`  
+**Sources:** D77 (1999–2020, final) + D176 (2021–present, provisional)
+
+```bash
+uv run python src/wonder/queries/fetch_fentanyl_deaths.py
+```
+
+Filters by **Multiple Cause of Death (MCD)** code **T40.4** — "Poisoning by other synthetic narcotics" — which identifies fentanyl and its analogues as a contributing cause. T40.4 appears on the death certificate alongside the underlying cause (typically accidental poisoning, X40–X44), so this query captures any death where fentanyl involvement was documented, regardless of what was listed as the primary cause.
+
+This methodology matches the reference analysis at https://github.com/dawaldron/fentanyl-deaths.
+
+!!! note "Two CDC WONDER datasets"
+    - **D77** (Multiple Cause of Death, 1999–2020): final bridged-race data; preferred for 1999–2020.
+    - **D176** (Provisional Mortality Statistics, 2018–present): updated weekly; used for 2021 onward.
+    Monthly population and crude rates are "Not Applicable" per WONDER protocol — only death counts are usable.
+
+!!! warning "Suppressed counts"
+    In early years (1999–2013), monthly T40.4 deaths were often below CDC's suppression threshold
+    (< 10). Suppressed months are omitted from the output rather than imputed.
+
+**CDC WONDER query parameters (both datasets):**
+
+| Parameter | D77 value | D176 value | Purpose |
+|---|---|---|---|
+| Group By (B_1) | `D77.V1-level1` (Year) | `D176.V1-level1` (Year) | Row grouping |
+| Group By (B_2) | `D77.V1-level2` (Month) | `D176.V1-level2` (Month) | Row grouping |
+| MCD filter mode | `O_V13_fmode = fadv` | `O_V13_fmode = fadv` | Advanced text-entry filter |
+| MCD code | `V_D77.V13 = T40.4` | `V_D176.V13 = T40.4` | Synthetic opioids excl. methadone |
+| UCD filter | `*All*` | `*All*` | No underlying-cause restriction |
+| Geography | `*All*` (national) | `*All*` (national) | National totals only |
+| Date variable | _(not required)_ | `O_PR = D176.V1` | Required by D176 stored procedure |
+
+**To replicate in the CDC WONDER web UI:**
+
+1. Go to https://wonder.cdc.gov/mcd-icd10.html (D77, 1999–2020)
+2. **Group Results By:** Year → Month
+3. **Multiple Cause of Death:** click "Advanced" → enter `T40.4`
+4. Leave all other filters at defaults
+5. Export Results (Tab-delimited)
+6. Repeat at https://wonder.cdc.gov/mcd-icd10-provisional.html (D176, 2018–present) for recent/provisional data
+
+Sample output:
+
+```
+year,month,deaths,provisional
+1999,1,62,false
+1999,2,,false
+...
+2020,12,5614,false
+2021,1,5745,true
+...
+```
+
+Annual totals (approximate):
+
+| Year | Deaths | Notes |
+|------|--------|-------|
+| 1999 | ~750   | Baseline — mostly OxyContin era |
+| 2013 | ~3,100 | Illicit fentanyl enters supply |
+| 2017 | ~29,400 | Third wave: fentanyl epidemic |
+| 2021 | ~71,200 | Peak (provisional) |
+| 2023 | ~74,700 | Continuing crisis (provisional) |
+
+---
+
+### Drug deaths by substance and year — 1999–present
+
+**File:** `data/raw/wonder/drug-deaths-by-year.csv`  
+**Script:** `src/wonder/queries/fetch_drug_deaths.py`  
+**Sources:** D77 (1999–2020, final) + D176 (2021–present, provisional)
+
+```bash
+uv run python src/wonder/queries/fetch_drug_deaths.py
+```
+
+Covers seven substances as Multiple Cause of Death (MCD) codes — deaths where the drug appears anywhere on the death certificate:
+
+| ICD-10 Code | Substance |
+|---|---|
+| T40.1 | Heroin |
+| T40.2 | Other opioids (natural & semi-synthetic: oxycodone, hydrocodone, etc.) |
+| T40.3 | Methadone |
+| T40.4 | Synthetic opioids excl. methadone (fentanyl) |
+| T40.5 | Cocaine |
+| T40.7 | Cannabis (derivatives) |
+| T43.6 | Psychostimulants with abuse potential (methamphetamine, amphetamines, MDMA) |
+
+!!! note "ICD-10 vs ICD-10-CM"
+    CDC WONDER death certificates use **ICD-10** (WHO international version), not ICD-10-CM (US clinical).
+    Methamphetamine falls under `T43.6` (all psychostimulants), not the clinical sub-code `T43.62`.
+    There is no separate meth-only code in the ICD-10 death certificate system.
+
+!!! note "Cannabis deaths are rare"
+    T40.7 deaths are very small in number (49 in 1999, ~1,450 in 2023). Cannabis is rarely coded as a
+    cause of death on its own — most T40.7 entries involve polydrug toxicity. The data is real but should
+    be interpreted cautiously.
+
+Sample output (selected years):
+
+```
+year,drug_code,drug_name,deaths,provisional
+1999,T40.1,Heroin,2103,false
+1999,T40.5,Cocaine,4494,false
+2013,T40.4,Synthetic opioids excl. methadone (fentanyl),3220,false
+2017,T40.4,Synthetic opioids excl. methadone (fentanyl),28869,false
+2023,T40.4,Synthetic opioids excl. methadone (fentanyl),74537,true
+2023,T43.6,Psychostimulants (methamphetamine...,38166,true
+```
+
+---
+
 ### Births by year — 1995–2024
 
 **Files:**
@@ -204,6 +318,10 @@ These XML files are committed so you can run them without the LLM:
 | `births-by-year-2003-2006-req.xml`                | Births by year, D27                 |
 | `births-by-year-2007-2024-req.xml`                | Births by year, D66                 |
 | `covid-deaths-by-race-2020-2023-req.xml`          | COVID deaths × race, D176           |
+| `fentanyl-deaths-by-month-1999-2020-req.xml`      | T40.4 MCD by month, D77             |
+| `fentanyl-deaths-by-month-2018-2024-req.xml`      | T40.4 MCD by month, D176            |
+| `drug-deaths-by-year-1999-2020-req.xml`           | 7 drugs MCD by year, D77            |
+| `drug-deaths-by-year-2018-2024-req.xml`           | 7 drugs MCD by year, D176           |
 | `opioid-overdose-deaths-2018-2024-req.xml`        | T40.0–T40.6 UCD, D176               |
 | `infant-mortality-2018-2023-req.xml`              | Infant mortality by race, D69       |
 | `racial-mortality-gap-2018-2023-req.xml`          | All-cause deaths × race, D176       |

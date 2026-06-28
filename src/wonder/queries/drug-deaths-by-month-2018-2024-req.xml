@@ -5,11 +5,11 @@
 	</parameter>
 	<parameter>
 		<name>B_2</name>
-		<value>*None*</value>
+		<value>D176.V1-level2</value>
 	</parameter>
 	<parameter>
 		<name>B_3</name>
-		<value>*None*</value>
+		<value>D176.V13-level3</value>
 	</parameter>
 	<parameter>
 		<name>B_4</name>
@@ -21,13 +21,7 @@
 	</parameter>
 	<parameter>
 		<name>F_D176.V1</name>
-		<value>2018</value>
-		<value>2019</value>
-		<value>2020</value>
-		<value>2021</value>
-		<value>2022</value>
-		<value>2023</value>
-		<value>2024</value>
+		<value>*All*</value>
 	</parameter>
 	<parameter>
 		<name>F_D176.V10</name>
@@ -39,7 +33,7 @@
 	</parameter>
 	<parameter>
 		<name>F_D176.V13</name>
-		<value>T40.6</value>
+		<value>*All*</value>
 	</parameter>
 	<parameter>
 		<name>F_D176.V2</name>
@@ -47,10 +41,7 @@
 	</parameter>
 	<parameter>
 		<name>F_D176.V25</name>
-		<value>D1</value>
-		<value>D2</value>
-		<value>D3</value>
-		<value>D4</value>
+		<value>*All*</value>
 	</parameter>
 	<parameter>
 		<name>F_D176.V26</name>
@@ -202,15 +193,15 @@
 	</parameter>
 	<parameter>
 		<name>O_aar</name>
-		<value>aar_std</value>
+		<value>aar_none</value>
 	</parameter>
 	<parameter>
 		<name>O_aar_CI</name>
-		<value>true</value>
+		<value>false</value>
 	</parameter>
 	<parameter>
 		<name>O_aar_enable</name>
-		<value>true</value>
+		<value>false</value>
 	</parameter>
 	<parameter>
 		<name>O_aar_pop</name>
@@ -222,7 +213,7 @@
 	</parameter>
 	<parameter>
 		<name>O_dates</name>
-		<value>YEAR</value>
+		<value>YEAR_MONTH</value>
 	</parameter>
 	<parameter>
 		<name>O_death_location</name>
@@ -265,8 +256,16 @@
 		<value>100000</value>
 	</parameter>
 	<parameter>
+		<name>O_show_suppressed</name>
+		<value>true</value>
+	</parameter>
+	<parameter>
 		<name>O_show_totals</name>
 		<value>true</value>
+	</parameter>
+	<parameter>
+		<name>O_show_zeros</name>
+		<value>false</value>
 	</parameter>
 	<parameter>
 		<name>O_timeout</name>
@@ -278,11 +277,15 @@
 	</parameter>
 	<parameter>
 		<name>O_ucd</name>
-		<value>D176.V25</value>
+		<value>D176.V2</value>
 	</parameter>
 	<parameter>
 		<name>O_urban</name>
 		<value>D176.V19</value>
+	</parameter>
+	<parameter>
+		<name>O_PR</name>
+		<value>D176.V1</value>
 	</parameter>
 	<parameter>
 		<name>VM_D176.M6_D176.V10</name>
@@ -326,12 +329,13 @@
 	</parameter>
 	<parameter>
 		<name>V_D176.V13</name>
-		<value>T40.0 (Opium)
-T40.1 (Heroin)
-T40.2 (Other opioids)
-T40.3 (Methadone)
-T40.4 (Other synthetic narcotics)
-T40.6 (Other and unspecified narcotics)</value>
+		<value>T40.1
+T40.2
+T40.3
+T40.4
+T40.5
+T40.7
+T43.6</value>
 	</parameter>
 	<parameter>
 		<name>V_D176.V13_AND</name>
@@ -471,7 +475,7 @@ T40.6 (Other and unspecified narcotics)</value>
 	</parameter>
 	<parameter>
 		<name>dataset_vintage</name>
-		<value>November 29, 2025 as of  December 07, 2025</value>
+		<value/>
 	</parameter>
 	<parameter>
 		<name>finder-stage-D176.V1</name>
@@ -531,14 +535,10 @@ T40.6 (Other and unspecified narcotics)</value>
 	</parameter>
 	<parameter>
 		<name>saved_id</name>
-		<value>D451F337</value>
+		<value/>
 	</parameter>
 	<parameter>
 		<name>stage</name>
 		<value>request</value>
-	</parameter>
-	<parameter>
-		<name>O_PR</name>
-		<value>D176.V1</value>
 	</parameter>
 </request-parameters>

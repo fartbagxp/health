@@ -111,6 +111,24 @@ class TestSdkParsing:
         assert params["compareBy"] == "race"
         assert params["chk_race_1"] == "1"
 
+    def test_get_trend_compare_by_checks_all_codes_and_drops_base_param(self):
+        # Regression test: SEER's compare view only returns one series per
+        # *checked* checkbox. Checking just one code (the old behavior)
+        # silently collapsed multi-value fields like sex down to a single
+        # series, and leaving the plain "sex" param in the request made the
+        # server ignore the checkboxes entirely.
+        from seer import sdk
+
+        with patch.object(sdk, "_get_client") as get_client:
+            get_client.return_value.get_chart_data.return_value = _FAKE_RESP
+            sdk.get_trend(site=55, sex="both", compare_by="sex")
+
+        params = get_client.return_value.get_chart_data.call_args[0][0]
+        assert "sex" not in params
+        assert params["chk_sex_1"] == "1"
+        assert params["chk_sex_2"] == "2"
+        assert params["chk_sex_3"] == "3"
+
     def test_get_trend_rejects_unknown_sex(self):
         from seer import sdk
 

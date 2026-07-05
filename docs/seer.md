@@ -109,11 +109,16 @@ rows = compare_sites_mortality([55, 47, 66])
 
 SEER only re-releases its underlying data **once a year** (typically in spring), unlike CDC Open Data/WISQARS/WONDER which get updated much more often — so instead of querying live on every use, this repo also bundles pre-fetched CSV snapshots under `data/raw/seer/`, refreshed by a monthly GitHub workflow:
 
-| File                    | Contents                                                              |
-| ----------------------- | ---------------------------------------------------------------------|
-| `var_formats.json`      | Cancer site catalog + sex/race/age/stage/rate-type label vocabularies |
-| `mortality_by_year.csv` | U.S. mortality rate/count by year, for every cataloged site, by sex   |
-| `mortality_by_age.csv`  | U.S. mortality rate/count by age group, for every cataloged site, by sex |
+| File                         | Contents                                                                        |
+| ---------------------------- | ---------------------------------------------------------------------------------|
+| `var_formats.json`           | Cancer site catalog + sex/race/age/stage/rate-type label vocabularies            |
+| `mortality_by_year.csv`      | U.S. mortality rate/count by year, for every cataloged site, by sex              |
+| `mortality_by_age.csv`       | U.S. mortality rate/count by (fine, ~5-year) age group, for every cataloged site, by sex, pooled over the most recent multi-year window |
+| `mortality_by_year_age.csv`  | U.S. mortality rate/count by year within each of 8 coarse age bands (<15, 15-39, 40-64, 65-74, 75+, <50, 50-64, 65+), for every cataloged site, by sex |
+
+All 73 cataloged sites are covered, including previously-missing ones like Breast, Prostate, Pancreas, Stomach, Ovary, Leukemia, Non-Hodgkin Lymphoma, and Myeloma — an earlier bug in the sex-comparison request meant those sex-specific/previously-erroring sites were silently dropped or mislabeled (e.g. Breast mortality showing only the Male series). SEER's chart API only returns one series per *checked* comparison checkbox, and only when the plain `sex`/`race` param is omitted from the request — checking a single hardcoded box while leaving the base param in silently collapsed every "compare by" query down to one series.
+
+SEER's "rates by age" view only offers fine ~5-year age bins (0-4, 5-9, ..., 90+) pooled over a multi-year window, not per calendar year — a true single-year × 5-year-age-bin cross isn't available from the API. `mortality_by_year_age.csv` uses SEER's broader named age bands as a year-trend filter instead, which is the finest year × age × sex breakdown SEER*Explorer supports.
 
 Refresh manually:
 

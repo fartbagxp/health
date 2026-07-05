@@ -147,7 +147,16 @@ def get_trend(
             for extra in compare_sites or []:
                 params[f"chk_site_{extra}"] = extra
         else:
-            params[f"chk_{compare_by}_1"] = "1"
+            # SEER*Explorer's compare view returns one series per *checked*
+            # checkbox (chk_<field>_<code>=<code>). The base field param must
+            # be dropped entirely when comparing over it — if present, the
+            # server ignores the checkboxes and returns only that one value
+            # (which for sex-specific sites like Breast/Prostate/Ovary means
+            # "1" = Both Sexes, which has no data at all). Check every
+            # cataloged code for the field to get the full breakdown.
+            params.pop(compare_by, None)
+            for code in variable_formats()[compare_by]:
+                params[f"chk_{compare_by}_{code}"] = code
 
     resp = _get_client().get_chart_data(params)
     return _parse_response(resp)

@@ -21,6 +21,7 @@ uv sync
 | [NSSP](nssp.md)                   | `nssp`     | Emergency dept. visits for COVID/flu/RSV        | 2020–present |
 | [NIS](nis.md)                     | `nis`      | Childhood & teen vaccination coverage           | 2011–present |
 | [CDC Open Data](cdc-open.md)      | `cdc_open` | 30+ datasets: overdose, NHSN, NWSS, wastewater  | varies       |
+| [SEER](seer.md)                   | `seer`     | Cancer incidence/mortality by site, sex, age    | 1975–present |
 
 ## One-liners
 
@@ -44,6 +45,9 @@ uv run python -m nis rates child 2022 -f table
 
 # CDC Open Data — leading causes of death
 uv run python -m cdc_open query bi63-dtpu --where "year='2021'" -f csv
+
+# SEER — cancer mortality by site/sex/race
+uv run python -m seer mortality --site 55 --sex female -f csv
 ```
 
 ## Setup Notes

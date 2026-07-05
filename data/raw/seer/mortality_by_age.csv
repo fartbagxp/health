@@ -1,44 +1,4 @@
 sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_upper_ci,count,rate_se,rate_type,rate_type_label,subtype,subtype_label
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,200,1.300387,1.140087,1.476913,237,0.084469,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,201,1.848048,1.752566,1.947379,1402,0.049355,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,202,1.881740,1.798266,1.968090,1909,0.043068,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,203,2.080871,1.995011,2.169476,2210,0.044263,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,204,2.798459,2.700302,2.899272,3068,0.050523,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,205,3.538915,3.428230,3.652264,3866,0.056916,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,206,5.554098,5.417049,5.693737,6232,0.070355,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,207,10.030509,9.850024,10.213472,11759,0.092499,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,208,18.173868,17.925993,18.424313,20511,0.126897,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,209,32.920629,32.578882,33.265068,35464,0.174813,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,210,58.691999,58.218150,59.168746,58700,0.242247,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,211,104.178439,103.558427,104.801241,108137,0.316804,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,212,185.362347,184.542442,186.184992,195913,0.418783,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,213,308.939635,307.882925,309.999074,327792,0.539603,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,214,448.908852,447.554115,450.266675,421168,0.691720,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,215,619.705209,617.942878,621.471324,474331,0.899796,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,216,865.642665,863.157722,868.132992,465506,1.268749,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,217,1187.174867,1183.476744,1190.881687,395271,1.888283,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,218,1553.965247,1548.336764,1559.609132,292293,2.874299,,,,
-1,Both Sexes,1,All Races / Ethnicities,1,All Cancer Sites Combined,219,1842.779410,1835.145187,1850.437522,223370,3.899069,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",200,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",201,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",202,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",203,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",204,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",205,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",206,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",207,0.044356,0.033127,0.058167,52,0.006151,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",208,0.089491,0.072892,0.108740,101,0.008904,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",209,0.125318,0.105071,0.148329,135,0.010785,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",210,0.271962,0.240599,0.306278,272,0.016490,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",211,0.514451,0.471737,0.559995,534,0.022262,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",212,0.742724,0.691670,0.796550,785,0.026508,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",213,1.009403,0.949847,1.071714,1071,0.030843,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",214,1.313147,1.240836,1.388573,1232,0.037411,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",215,1.421453,1.338234,1.508491,1088,0.043094,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",216,1.775892,1.665031,1.892194,955,0.057466,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",217,2.219546,2.062383,2.385509,739,0.081647,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",218,2.987852,2.745902,3.245409,562,0.126034,,,,
-1,Both Sexes,1,All Races / Ethnicities,34,"Anus, Anal Canal & Anorectum",219,3.819702,3.479654,4.184000,463,0.177516,,,,
 1,Both Sexes,1,All Races / Ethnicities,50,Bones and Joints,200,,,,,,,,,
 1,Both Sexes,1,All Races / Ethnicities,50,Bones and Joints,201,0.022408,0.013053,0.035878,17,0.005434,,,,
 1,Both Sexes,1,All Races / Ethnicities,50,Bones and Joints,202,0.077871,0.061651,0.097051,79,0.008761,,,,
@@ -59,26 +19,6 @@ sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_
 1,Both Sexes,1,All Races / Ethnicities,50,Bones and Joints,217,2.637025,2.465459,2.817382,878,0.088995,,,,
 1,Both Sexes,1,All Races / Ethnicities,50,Bones and Joints,218,4.205323,3.917328,4.508889,791,0.149524,,,,
 1,Both Sexes,1,All Races / Ethnicities,50,Bones and Joints,219,5.618179,5.204088,6.056456,681,0.215289,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,200,0.285317,0.213088,0.374155,52,0.039566,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,201,0.436308,0.390565,0.485936,331,0.023981,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,202,0.861519,0.805343,0.920582,874,0.029141,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,203,0.645917,0.598480,0.696115,686,0.024661,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,204,0.560968,0.517503,0.607109,615,0.022620,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,205,0.576698,0.532539,0.623542,630,0.022976,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,206,0.721890,0.673025,0.773364,810,0.025364,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,207,1.070523,1.012108,1.131431,1255,0.030218,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,208,1.566544,1.494366,1.641308,1768,0.037256,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,209,2.289145,2.199679,2.381317,2466,0.046097,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,210,3.413534,3.299980,3.529999,3414,0.058421,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,211,5.117544,4.980839,5.257050,5312,0.070215,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,212,7.668515,7.502464,7.837314,8105,0.085179,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,213,10.889492,10.691827,11.089893,11554,0.101307,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,214,14.071569,13.832547,14.313685,13202,0.122468,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,215,17.782535,17.485032,18.083830,13611,0.152422,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,216,21.028058,20.642248,21.419266,11308,0.197745,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,217,22.528843,22.021862,23.044552,7501,0.260123,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,218,24.328139,23.628310,25.043433,4576,0.359638,,,,
-1,Both Sexes,1,All Races / Ethnicities,76,Brain and Other Nervous System,219,20.492743,19.694701,21.314824,2484,0.411172,,,,
 1,Both Sexes,1,All Races / Ethnicities,660,Diffuse Astrocytoma and Anaplastic Astrocytoma of the Brain and ONS,200,,,,,,1,Observed SEER Incidence Rate,660,Diffuse Astrocytoma and Anaplastic Astrocytoma
 1,Both Sexes,1,All Races / Ethnicities,660,Diffuse Astrocytoma and Anaplastic Astrocytoma of the Brain and ONS,201,0.102684,0.072299,0.141537,37,0.016881,1,Observed SEER Incidence Rate,660,Diffuse Astrocytoma and Anaplastic Astrocytoma
 1,Both Sexes,1,All Races / Ethnicities,660,Diffuse Astrocytoma and Anaplastic Astrocytoma of the Brain and ONS,202,0.131625,0.101144,0.168406,63,0.016583,1,Observed SEER Incidence Rate,660,Diffuse Astrocytoma and Anaplastic Astrocytoma
@@ -499,86 +439,6 @@ sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_
 1,Both Sexes,1,All Races / Ethnicities,17,Esophagus,217,25.652427,25.111248,26.202330,8541,0.277571,,,,
 1,Both Sexes,1,All Races / Ethnicities,17,Esophagus,218,28.294222,27.539104,29.064798,5322,0.387846,,,,
 1,Both Sexes,1,All Races / Ethnicities,17,Esophagus,219,25.360182,24.471525,26.272862,3074,0.457404,,,,
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,200,0.000000,,,0,,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,201,0.000000,,,0,,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,202,0.000000,,,0,,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,203,0.000000,,,0,,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,204,,,,,,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,205,,,,,,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,206,0.058224,0.039560,0.082645,31,0.010457,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,207,0.124308,0.096530,0.157590,68,0.015074,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,208,0.343344,0.295145,0.397170,181,0.025520,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,209,0.755634,0.680983,0.836233,374,0.039072,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,210,1.400840,1.295601,1.512352,655,0.054735,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,211,2.792783,2.644634,2.947070,1329,0.076608,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,212,5.179276,4.977621,5.387003,2485,0.103897,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,213,8.029394,7.772425,8.292694,3691,0.132163,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,214,11.338548,11.007274,11.677259,4435,0.170259,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,215,14.245239,13.829599,14.670197,4447,0.213617,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,216,15.695807,15.168361,16.236914,3345,0.271384,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,217,16.471731,15.791317,17.173921,2205,0.350780,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,218,15.329678,14.474849,16.221810,1201,0.442345,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,600,Adenocarcinoma of the Esophagus,219,10.371946,9.514696,11.285699,539,0.446751,1,Observed SEER Incidence Rate,600,Adenocarcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,200,0.000000,,,0,,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,201,0.000000,,,0,,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,202,0.000000,,,0,,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,203,,,,,,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,204,,,,,,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,205,,,,,,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,206,,,,,,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,207,0.038389,0.023763,0.058682,21,0.008377,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,208,0.081567,0.059031,0.109871,43,0.012439,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,209,0.212143,0.173512,0.256812,105,0.020703,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,210,0.519701,0.456406,0.589318,243,0.033338,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,211,1.088534,0.996799,1.186440,518,0.047827,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,212,2.438532,2.300788,2.582367,1170,0.071291,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,213,3.711229,3.537191,3.891614,1706,0.089852,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,214,4.982825,4.764040,5.209066,1949,0.112867,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,215,5.647482,5.386910,5.917400,1763,0.134502,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,216,6.339323,6.005753,6.686599,1351,0.172470,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,217,6.850148,6.413898,7.308259,917,0.226211,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,218,7.313826,6.727160,7.937956,573,0.305539,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,601,Squamous Cell Carcinoma of the Esophagus,219,4.829978,4.250882,5.465949,251,0.304865,1,Observed SEER Incidence Rate,601,Squamous Cell Carcinoma
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,200,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,201,0.038226,0.025600,0.054899,29,0.007098,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,202,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,203,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,204,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,205,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,206,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,207,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,208,0.030125,0.020863,0.042097,34,0.005166,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,209,0.041772,0.030469,0.055895,45,0.006227,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,210,0.055992,0.042296,0.072710,56,0.007482,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,211,0.109826,0.090593,0.131935,114,0.010286,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,212,0.166521,0.142828,0.193022,176,0.012552,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,213,0.267666,0.237438,0.300676,284,0.015883,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,214,0.322957,0.287613,0.361446,303,0.018553,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,215,0.423300,0.378458,0.471994,324,0.023516,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,216,0.535557,0.475484,0.601118,288,0.031558,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,217,0.642737,0.559502,0.734864,214,0.043936,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,218,0.967596,0.832123,1.118839,182,0.071723,,,,
-1,Both Sexes,1,All Races / Ethnicities,75,Eye and Orbit,219,1.344733,1.146216,1.567753,163,0.105327,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,200,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,201,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,202,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,203,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,204,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,205,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,206,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,207,0.016207,0.009757,0.025309,19,0.003718,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,208,0.031011,0.021600,0.043130,35,0.005241,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,209,0.101182,0.083081,0.122056,109,0.009691,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,210,0.191973,0.165778,0.221132,192,0.013854,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,211,0.398844,0.361345,0.439178,414,0.019602,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,212,0.716232,0.666113,0.769124,757,0.026031,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,213,1.019770,0.959905,1.082391,1082,0.031001,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,214,1.596667,1.516827,1.679620,1498,0.041253,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,215,2.383024,2.274905,2.494954,1824,0.055797,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,216,3.205904,3.056342,3.360893,1724,0.077211,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,217,4.267895,4.048850,4.495712,1421,0.113218,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,218,5.412160,5.084760,5.755110,1018,0.169627,,,,
-1,Both Sexes,1,All Races / Ethnicities,38,Gallbladder,219,6.137923,5.704743,6.595275,744,0.225027,,,,
 1,Both Sexes,1,All Races / Ethnicities,83,Hodgkin Lymphoma,200,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,83,Hodgkin Lymphoma,201,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,83,Hodgkin Lymphoma,202,0.000000,,,0,,,,,
@@ -979,26 +839,6 @@ sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_
 1,Both Sexes,1,All Races / Ethnicities,53,Melanoma of the Skin,217,15.753071,15.329598,16.185277,5245,0.217516,,,,
 1,Both Sexes,1,All Races / Ethnicities,53,Melanoma of the Skin,218,21.552945,20.894538,22.226821,4054,0.338504,,,,
 1,Both Sexes,1,All Races / Ethnicities,53,Melanoma of the Skin,219,28.668390,27.723050,29.637745,3475,0.486324,,,,
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,200,0.000000,,,0,,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,201,0.000000,,,0,,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,202,,,,,,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,203,,,,,,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,204,,,,,,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,205,,,,,,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,206,0.041320,0.025895,0.062559,22,0.008809,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,207,0.078606,0.056888,0.105882,43,0.011987,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,208,0.085361,0.062263,0.114220,45,0.012724,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,209,0.177796,0.142597,0.219049,88,0.018953,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,210,0.226700,0.185604,0.274188,106,0.022019,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,211,0.369849,0.317225,0.428709,176,0.027878,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,212,0.710717,0.637276,0.790300,341,0.038487,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,213,0.981104,0.892635,1.075969,451,0.046198,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,214,1.840756,1.708738,1.980266,720,0.068600,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,215,3.152083,2.958188,3.355349,984,0.100484,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,216,5.527552,5.216367,5.852450,1178,0.161049,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,217,7.627046,7.166327,8.109614,1021,0.238695,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,218,8.398774,7.769220,9.065757,658,0.327418,1,Observed SEER Incidence Rate,111,111
-1,Both Sexes,1,All Races / Ethnicities,111,Mesothelioma,219,5.407267,4.793459,6.077885,281,0.322570,1,Observed SEER Incidence Rate,111,111
 1,Both Sexes,1,All Races / Ethnicities,409,Myelodysplastic syndromes (MDS),200,,,,,,1,Observed SEER Incidence Rate,409,409
 1,Both Sexes,1,All Races / Ethnicities,409,Myelodysplastic syndromes (MDS),201,0.072156,0.047135,0.105726,26,0.014151,1,Observed SEER Incidence Rate,409,409
 1,Both Sexes,1,All Races / Ethnicities,409,Myelodysplastic syndromes (MDS),202,0.058500,0.038872,0.084549,28,0.011055,1,Observed SEER Incidence Rate,409,409
@@ -1019,46 +859,6 @@ sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_
 1,Both Sexes,1,All Races / Ethnicities,409,Myelodysplastic syndromes (MDS),217,45.216956,44.084942,46.370685,6053,0.581187,1,Observed SEER Incidence Rate,409,409
 1,Both Sexes,1,All Races / Ethnicities,409,Myelodysplastic syndromes (MDS),218,56.927866,55.269260,58.623601,4460,0.852427,1,Observed SEER Incidence Rate,409,409
 1,Both Sexes,1,All Races / Ethnicities,409,Myelodysplastic syndromes (MDS),219,52.148378,50.203288,54.149525,2710,1.001742,1,Observed SEER Incidence Rate,409,409
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,200,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,201,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,202,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,203,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,204,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,205,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,206,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,207,0.021325,0.013800,0.031480,25,0.004265,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,208,0.086833,0.070495,0.105822,98,0.008771,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,209,0.247851,0.219011,0.279433,267,0.015168,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,210,0.645911,0.597056,0.697699,646,0.025413,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,211,1.354530,1.284645,1.427229,1406,0.036124,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,212,2.655832,2.558482,2.755938,2807,0.050127,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,213,4.453250,4.327168,4.582073,4725,0.064785,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,214,7.221245,7.050305,7.395282,6775,0.087731,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,215,12.377616,12.129615,12.629411,9474,0.127165,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,216,19.910454,19.535085,20.291223,10707,0.192418,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,217,30.821356,30.227880,31.423554,10262,0.304253,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,218,41.829939,40.910706,42.764619,7868,0.471579,,,,
-1,Both Sexes,1,All Races / Ethnicities,89,Myeloma,219,39.244758,38.137365,40.376145,4757,0.569003,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,200,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,201,0.035590,0.023454,0.051781,27,0.006849,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,202,0.031543,0.021575,0.044529,32,0.005576,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,203,0.067793,0.053043,0.085374,72,0.007989,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,204,0.090302,0.073393,0.109939,99,0.009075,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,205,0.167517,0.144124,0.193624,183,0.012383,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,206,0.278952,0.248901,0.311631,313,0.015767,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,207,0.379588,0.345134,0.416549,445,0.017994,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,208,0.611377,0.566605,0.658747,690,0.023274,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,209,0.846594,0.792533,0.903371,912,0.028033,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,210,1.331818,1.261247,1.405309,1332,0.036491,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,211,2.377654,2.284765,2.473350,2468,0.047860,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,212,4.039098,3.918834,4.162115,4269,0.061818,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,213,6.933875,6.776326,7.094162,7357,0.080839,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,214,11.513489,11.297379,11.732694,10802,0.110778,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,215,18.691846,18.386801,19.000684,14307,0.156270,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,216,31.748499,31.274034,32.228361,17073,0.242978,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,217,50.241634,49.483123,51.008861,16728,0.388455,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,218,69.305426,68.120754,70.505531,13036,0.607008,,,,
-1,Both Sexes,1,All Races / Ethnicities,86,Non-Hodgkin Lymphoma,219,78.489516,76.920176,80.082817,9514,0.804692,,,,
 1,Both Sexes,1,All Races / Ethnicities,3,Oral Cavity and Pharynx,200,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,3,Oral Cavity and Pharynx,201,,,,,,,,,
 1,Both Sexes,1,All Races / Ethnicities,3,Oral Cavity and Pharynx,202,,,,,,,,,
@@ -1079,26 +879,6 @@ sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_
 1,Both Sexes,1,All Races / Ethnicities,3,Oral Cavity and Pharynx,217,17.371928,16.927084,17.825502,5784,0.228419,,,,
 1,Both Sexes,1,All Races / Ethnicities,3,Oral Cavity and Pharynx,218,21.308388,20.653755,21.978490,4008,0.336578,,,,
 1,Both Sexes,1,All Races / Ethnicities,3,Oral Cavity and Pharynx,219,26.754414,25.841443,27.691405,3243,0.469809,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,200,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,201,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,202,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,203,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,204,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,205,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,206,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,207,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,208,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,209,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,210,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,211,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,212,0.019869,0.012299,0.030371,21,0.004335,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,213,0.032044,0.022191,0.044779,34,0.005495,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,214,0.037305,0.025984,0.051882,35,0.006305,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,215,0.074469,0.056402,0.096483,57,0.009863,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,216,0.135748,0.106405,0.170683,73,0.015888,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,217,0.150172,0.111460,0.197983,50,0.021237,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,218,0.334937,0.257374,0.428530,63,0.042198,,,,
-1,Both Sexes,1,All Races / Ethnicities,5,Lip,219,0.610492,0.479367,0.766417,74,0.070968,,,,
 1,Both Sexes,1,All Races / Ethnicities,6,Tongue,200,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,6,Tongue,201,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,6,Tongue,202,0.000000,,,0,,,,,
@@ -1119,26 +899,6 @@ sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_
 1,Both Sexes,1,All Races / Ethnicities,6,Tongue,217,4.748447,4.517241,4.988419,1581,0.119422,,,,
 1,Both Sexes,1,All Races / Ethnicities,6,Tongue,218,5.444059,5.115680,5.787987,1024,0.170126,,,,
 1,Both Sexes,1,All Races / Ethnicities,6,Tongue,219,6.401919,5.959353,6.868652,776,0.229815,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,200,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,201,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,202,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,203,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,204,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,205,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,206,0.017824,0.010887,0.027528,20,0.003985,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,207,0.026443,0.017966,0.037534,31,0.004749,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,208,0.036328,0.026069,0.049283,41,0.005673,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,209,0.074262,0.058885,0.092426,80,0.008302,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,210,0.114984,0.094931,0.138021,115,0.010722,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,211,0.180154,0.155257,0.207907,187,0.013174,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,212,0.333989,0.300052,0.370713,353,0.017776,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,213,0.497633,0.456086,0.541947,528,0.021656,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,214,0.634190,0.584249,0.687258,595,0.025999,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,215,0.955038,0.887051,1.026854,731,0.035323,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,216,1.452326,1.352243,1.557857,781,0.051968,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,217,2.399752,2.236220,2.572081,799,0.084897,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,218,3.344055,3.087793,3.615912,629,0.133336,,,,
-1,Both Sexes,1,All Races / Ethnicities,7,Salivary Gland,219,5.461431,5.053268,5.893784,662,0.212264,,,,
 1,Both Sexes,1,All Races / Ethnicities,8,Floor of Mouth,200,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,8,Floor of Mouth,201,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,8,Floor of Mouth,202,0.000000,,,0,,,,,
@@ -1159,26 +919,6 @@ sex,sex_label,race,race_label,site,site_label,age_range,rate,rate_lower_ci,rate_
 1,Both Sexes,1,All Races / Ethnicities,8,Floor of Mouth,217,0.132151,0.096021,0.177407,44,0.019922,,,,
 1,Both Sexes,1,All Races / Ethnicities,8,Floor of Mouth,218,0.207342,0.147440,0.283443,39,0.033201,,,,
 1,Both Sexes,1,All Races / Ethnicities,8,Floor of Mouth,219,0.156748,0.094372,0.244781,19,0.035960,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,200,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,201,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,202,0.000000,,,0,,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,203,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,204,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,205,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,206,,,,,,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,207,0.016207,0.009757,0.025309,19,0.003718,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,208,0.041644,0.030598,0.055378,47,0.006074,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,209,0.082617,0.066348,0.101667,89,0.008757,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,210,0.151979,0.128779,0.178151,152,0.012327,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,211,0.340077,0.305522,0.377471,353,0.018100,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,212,0.613102,0.566799,0.662180,648,0.024084,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,213,0.933061,0.875837,0.993043,990,0.029654,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,214,1.239602,1.169374,1.312946,1163,0.036349,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,215,1.616119,1.527301,1.708753,1237,0.045950,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,216,2.047390,1.928225,2.171992,1101,0.061703,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,217,3.102559,2.916221,3.297681,1033,0.096531,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,218,4.843298,4.533857,5.168299,911,0.160465,,,,
-1,Both Sexes,1,All Races / Ethnicities,9,Gum & other mouth,219,7.548655,7.067404,8.054049,915,0.249550,,,,
 1,Both Sexes,1,All Races / Ethnicities,12,Oropharynx & Tonsil,200,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,12,Oropharynx & Tonsil,201,0.000000,,,0,,,,,
 1,Both Sexes,1,All Races / Ethnicities,12,Oropharynx & Tonsil,202,0.000000,,,0,,,,,

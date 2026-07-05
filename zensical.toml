@@ -19,6 +19,7 @@ nav = [
   { NSSP = "nssp.md" },
   { NIS = "nis.md" },
   { "CDC Open Data" = "cdc-open.md" },
+  { SEER = "seer.md" },
 ]
 
 [project.theme]

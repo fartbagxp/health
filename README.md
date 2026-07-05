@@ -4,6 +4,7 @@
 [![Update CDC Open Data](https://github.com/fartbagxp/health/actions/workflows/update_cdc_open.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_cdc_open.yml)
 [![Update WONDER](https://github.com/fartbagxp/health/actions/workflows/update_wonder.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wonder.yml)
 [![Update WISQARS](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml)
+[![Update SEER](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml)
 [![Datasets](https://img.shields.io/badge/datasets-70-4c9be8)](https://fartbagxp.github.io/health/)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-8a2be2)](https://fartbagxp.github.io/health/)
 
@@ -26,6 +27,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 | [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)        |
 | [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)        |
 | [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)        |
+| [SEER Cancer Statistics]                                              | `src/seer/`     | seer.cancer.gov (SEER*Explorer JSON) |
 
 ---
 
@@ -237,6 +239,20 @@ uv run python -m cdc_open.fetch_beam
 
 Data sourced from the [BEAM Dashboard – Report Data](https://data.cdc.gov/Foodborne-Waterborne-and-Related-Diseases/BEAM-Dashboard-Report-Data/jbhn-e8xn) Socrata dataset.
 
+### SEER — Cancer Statistics — [docs](https://fartbagxp.github.io/health/seer/)
+
+[SEER*Explorer](https://seer.cancer.gov/statistics-network/explorer/) (Surveillance, Epidemiology, and End Results) is NCI's cancer statistics system. The `seer` module calls the same JSON endpoints the SEER*Explorer web app uses to render its charts — undocumented, but public and unauthenticated. It covers 70+ cancer sites with incidence and U.S. mortality rates/counts by year, sex, race, and age group back to 1975.
+
+```bash
+uv run python -m seer sites --search breast
+uv run python -m seer mortality --site 55 --sex female -f csv
+uv run python -m seer mortality --site 47 --compare-by race -f csv
+uv run python -m seer by-age --site 1 -f csv
+uv run python -m seer compare-sites 55 47 66 -f csv
+```
+
+Refer to `uv run python -m seer.download` to refresh the bundled cancer-site catalog.
+
 [CDC]: https://www.cdc.gov
 [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]: https://wonder.cdc.gov/wonder/help/wonder-api.html
 [National Syndromic Surveillance Program (NSSP)]: https://www.cdc.gov/nssp/
@@ -249,3 +265,4 @@ Data sourced from the [BEAM Dashboard – Report Data](https://data.cdc.gov/Food
 [Children Vaccination]: https://data.cdc.gov/Child-Vaccinations/Vaccination-Coverage-among-Young-Children-0-35-Mon/fhky-rtsk/about_data
 [CDC Open Data (data.cdc.gov)]: https://data.cdc.gov
 [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]: https://www.cdc.gov/beam/dashboard/index.html
+[SEER Cancer Statistics]: https://seer.cancer.gov/statistics-network/explorer/

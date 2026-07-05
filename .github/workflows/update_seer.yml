@@ -1,0 +1,40 @@
+name: Update SEER Data
+
+on:
+  schedule:
+    - cron: "0 15 1 * *" # At 15:00 UTC on the 1st of each month (SEER re-releases annually, not weekly)
+  workflow_dispatch:
+
+jobs:
+  update-seer-data:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
+        with:
+          version: "latest"
+
+      - name: Download SEER cancer site catalog and mortality data
+        run: |
+          uv run python -m seer.download
+
+      - name: Commit and push changes
+        run: |
+          git status
+          git config --local user.email "noreply@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/raw/seer/
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update of SEER data on $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push -u origin main
+          fi

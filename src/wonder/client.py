@@ -54,6 +54,7 @@ class ResponseCell:
     data_total: Optional[str] = None  # dt attribute
     attribute: Optional[str] = None  # a attribute
     sub_label: Optional[str] = None  # nested <l> element value
+    code: Optional[str] = None  # cd attribute — ICD-10 code when grouping by cause
 
     def get_numeric_value(self) -> Optional[float]:
         """Try to parse the value as a number, handling commas"""
@@ -83,6 +84,7 @@ class ResponseRow:
                     "value": c.value,
                     "data_total": c.data_total,
                     "sub_label": c.sub_label,
+                    "code": c.code,
                     "numeric_value": c.get_numeric_value(),
                 }
                 for c in self.cells
@@ -298,6 +300,7 @@ class WonderClient:
                 column = cell_elem.get("c")
                 data_total = cell_elem.get("dt")
                 attribute = cell_elem.get("a")
+                code = cell_elem.get("cd")
 
                 # Check for nested <l> element
                 sub_label_elem = cell_elem.find("l")
@@ -316,6 +319,7 @@ class WonderClient:
                     data_total=data_total,
                     attribute=attribute,
                     sub_label=sub_label,
+                    code=code,
                 )
                 cells.append(cell)
 

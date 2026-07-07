@@ -50,6 +50,18 @@ jobs:
           git status
           git config --local user.email "noreply@github.com"
           git config --local user.name "github-actions[bot]"
+
+          # Safety net: a dataset can grow past GitHub's 100MB hard limit
+          # between reviews (this has happened more than once as pagination
+          # stopped silently truncating results). Rather than let one
+          # oversized file fail the whole push, skip it here and flag it --
+          # then give it `enabled=False` in datasets.py so it stops being
+          # fetched at all.
+          for f in $(find data/raw/cdc_open data/raw/resp -name '*.csv' -size +95M 2>/dev/null); do
+            echo "::warning::$f is $(du -h "$f" | cut -f1) -- exceeds safe git file size, skipping commit. Give it enabled=False in datasets.py."
+            git rm --cached --ignore-unmatch "$f" >/dev/null 2>&1 || true
+          done
+
           git add data/raw/cdc_open/ data/raw/resp/ data/processed/cdc_open/
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update of CDC Open Data on $(date +'%Y-%m-%d')"

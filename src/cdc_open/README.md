@@ -278,6 +278,8 @@ over time.
 | `nssp_ed_visits`              | `rdmq-nq56` | NSSP (National Syndromic Surveillance Program)                                                     | 2022–present | ~626k rows / ~150MB  | Weekly % of ED visits for COVID-19, influenza, and RSV by state and county, with trend direction              |
 | `resp_coverage_adults`        | `ee83-ukst` | NIS-FRVM (National Immunization Survey Fall Respiratory Virus Module)                              | 2024–present | ~544k rows / ~140MB  | Monthly COVID-19/flu/RSV vaccination coverage among adults, by state and demographics                         |
 | `chronic_disease_indicators`  | `hksd-2xuw` | CDI (U.S. Chronic Disease Indicators — compiled from BRFSS, NVSS, and other state surveillance)    | Current      | ~399k rows / ~120MB  | County/state-level chronic disease indicators: diabetes, cardiovascular disease, cancer, obesity, tobacco use |
+| `nndss_weekly`                | `x9gk-5huc` | NNDSS (National Notifiable Diseases Surveillance System)                                           | 2014–present | ~1.89M rows / ~260MB | Weekly provisional case counts for ~100 nationally notifiable diseases by state (measles, pertussis, hepatitis, TB, Lyme, etc.) |
+| `covid_conditions`            | `hk9y-quqm` | NVSS (National Vital Statistics System)                                                            | 2020–2023    | ~621k rows / ~139MB  | COVID-19 deaths by contributing condition, age group, and state                                               |
 
 ### Mortality & chronic disease
 
@@ -290,7 +292,7 @@ over time.
 | `death_rates_historical`   | `6rkc-nb2q` | 1900–2017    | Historical death rates for major causes                                                                                        |
 | `weekly_deaths`            | `r8kw-7aab` | 2020–present | Weekly deaths by state: COVID/flu/pneumonia (weekly)                                                                           |
 | `weekly_deaths_by_cause`   | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                                                                                                         |
-| `covid_conditions`         | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition                                                                                      |
+| `covid_conditions`         | `hk9y-quqm` | 2020–2023    | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large)                                                  |
 | `chronic_disease_indicators` | `hksd-2xuw` | Current    | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large)                                                  |
 
 ### County / city health
@@ -380,7 +382,7 @@ over time.
 | Key              | Dataset ID  | Coverage     | Description                                                    |
 | ---------------- | ----------- | ------------ | -------------------------------------------------------------- |
 | `nssp_ed_visits` | `rdmq-nq56` | 2022–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
-| `nndss_weekly`   | `x9gk-5huc` | 2014–present | NNDSS weekly notifiable disease cases (~100 diseases)          |
+| `nndss_weekly`   | `x9gk-5huc` | 2014–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
 | `nndss_measles`  | `x9gk-5huc` | 2014–present | NNDSS weekly measles cases (imported & indigenous) by state    |
 
 ### Measles (CDC page charts)

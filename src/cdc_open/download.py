@@ -7,7 +7,6 @@ Usage:
 
 import csv
 import io
-import json
 import os
 import sys
 import time
@@ -18,7 +17,10 @@ import requests
 from cdc_open.datasets import COMPOSITE_DATASETS, DATASETS, WCMS_DATASETS
 
 _BASE_URL = "https://data.cdc.gov/resource"
-_DEFAULT_LIMIT = 50_000
+# Socrata caps a single response, so we page through with $offset instead of
+# requesting one giant page. Datasets larger than this were previously being
+# silently truncated to the first _PAGE_SIZE rows.
+_PAGE_SIZE = 50_000
 _OUT_DIR = Path("data/raw/cdc_open")
 _TIMEOUT = 120
 _MAX_RETRIES = 3
@@ -46,6 +48,56 @@ def _fetch_with_retry(url: str, params: dict, headers: dict) -> requests.Respons
     raise last_exc
 
 
+def _count_csv_rows(text: str) -> int:
+    """Count data rows (excluding header) in CSV text, honoring quoted newlines."""
+    reader = csv.reader(io.StringIO(text))
+    n = sum(1 for _ in reader)
+    return max(n - 1, 0)
+
+
+def _fetch_csv_paginated(
+    url: str, base_params: dict, headers: dict, page_size: int = _PAGE_SIZE
+) -> tuple[str, int]:
+    """Page through a Socrata CSV endpoint until exhausted, preserving CDC's
+    exact column order and formatting. Only the first page keeps its header."""
+    parts: list[str] = []
+    total = 0
+    offset = 0
+    while True:
+        params = {**base_params, "$order": ":id", "$limit": page_size, "$offset": offset}
+        resp = _fetch_with_retry(url, params=params, headers=headers)
+        text = resp.text
+        page_rows = _count_csv_rows(text)
+        if offset == 0:
+            parts.append(text)
+        elif page_rows:
+            # Drop the header line repeated on every page (no embedded newline).
+            newline = text.find("\n")
+            parts.append(text[newline + 1 :] if newline != -1 else "")
+        total += page_rows
+        if page_rows < page_size:
+            break
+        offset += page_size
+    return "".join(parts), total
+
+
+def _fetch_json_paginated(
+    url: str, base_params: dict, headers: dict, page_size: int = _PAGE_SIZE
+) -> list[dict]:
+    """Page through a Socrata JSON endpoint until exhausted."""
+    rows: list[dict] = []
+    offset = 0
+    while True:
+        params = {**base_params, "$order": ":id", "$limit": page_size, "$offset": offset}
+        resp = _fetch_with_retry(url, params=params, headers=headers)
+        page = resp.json()
+        rows.extend(page)
+        if len(page) < page_size:
+            break
+        offset += page_size
+    return rows
+
+
 def _json_to_csv(rows: list[dict]) -> str:
     if not rows:
         return ""
@@ -60,7 +112,7 @@ def _json_to_csv(rows: list[dict]) -> str:
     return out.getvalue()
 
 
-def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
+def download_all(out_dir: Path = _OUT_DIR, page_size: int = _PAGE_SIZE) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     ok, failed = 0, []
 
@@ -72,18 +124,18 @@ def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
     for key, ds in DATASETS.items():
         print(f"  fetching {key} ({ds.id}) ...", end=" ", flush=True)
         try:
-            params: dict = {"$limit": limit}
+            base_params: dict = {}
             if ds.soql_where:
-                params["$where"] = ds.soql_where
+                base_params["$where"] = ds.soql_where
             base = ds.base_url or _BASE_URL
-            resp = _fetch_with_retry(
+            csv_text, row_count = _fetch_csv_paginated(
                 f"{base}/{ds.id}.csv",
-                params=params,
+                base_params=base_params,
                 headers=headers,
+                page_size=page_size,
             )
             path = out_dir / f"{key}.csv"
-            path.write_text(resp.text)
-            row_count = resp.text.count("\n") - 1  # subtract header row
+            path.write_text(csv_text)
             print(f"{row_count} rows -> {path}")
             ok += 1
         except Exception as exc:
@@ -94,12 +146,13 @@ def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
         try:
             all_rows: list[dict] = []
             for year, sid in ds.sources:
-                resp = _fetch_with_retry(
+                page = _fetch_json_paginated(
                     f"https://data.cdc.gov/resource/{sid}.json",
-                    params={"$limit": limit},
+                    base_params={},
                     headers={"Accept": "application/json"},
+                    page_size=page_size,
                 )
-                for row in resp.json():
+                for row in page:
                     row = {"year": year, **row}
                     # Normalize geography column: area → state
                     if "area" in row and "state" not in row:

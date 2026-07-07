@@ -369,7 +369,7 @@ TOOLS: list[dict] = [
     {
         "name": "get_rsv_hospitalizations",
         "description": (
-            "Get weekly RSV hospitalization rates from RSV-NET surveillance (2018–present). "
+            "Get RSV hospitalization rates from RSV-NET surveillance (2018–present). "
             "Population-based, covers children and adults. By state/age/sex/race."
         ),
         "input_schema": {
@@ -378,11 +378,15 @@ TOOLS: list[dict] = [
                 "season": {"type": "string", "description": "'2024-25', '2023-24'."},
                 "age_category": {
                     "type": "string",
-                    "description": "'Overall', '0-5 months', '6-11 months', '1-4 years', '5-17 years', '18-49 years', '65-74 years', '75+ years'.",
+                    "description": "'All', '0-<6 months', '6mo-<12 months', '1-4 years', '5-17 years', '18-49 years', '65-74 years', '≥75 years'.",
                 },
                 "state": {
                     "type": "string",
-                    "description": "Surveillance site state name e.g. 'California'.",
+                    "description": "2-letter surveillance site code e.g. 'CA', 'NY', or 'RSV-NET' for the national total.",
+                },
+                "data_type": {
+                    "type": "string",
+                    "description": "'Weekly Rate' (default) or 'Cumulative Rate'.",
                 },
                 "limit": {
                     "type": "integer",

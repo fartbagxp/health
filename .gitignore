@@ -337,3 +337,14 @@ terraform/cdcgov/generated/**
 ## Temporary Files
 .~*
 *.png
+
+## CDC Open Data — full-resolution wastewater surveillance
+## These run 300MB+ at true full resolution (past GitHub's 100MB file limit),
+## far more detail than any chart needs. Fetched fresh by cdc_open.download
+## each run and reduced by cdc_open.aggregate; only the small weekly rollup
+## in data/processed/cdc_open/ is tracked.
+data/raw/cdc_open/wastewater_covid.csv
+data/raw/cdc_open/wastewater_flu.csv
+data/raw/cdc_open/wastewater_rsv.csv
+data/raw/cdc_open/wastewater_h5.csv
+data/raw/cdc_open/wastewater_measles.csv

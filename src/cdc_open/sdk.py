@@ -457,14 +457,27 @@ def get_rsv_hospitalizations(
     season: str | None = None,
     age_category: str | None = None,
     state: str | None = None,
+    data_type: str = "Weekly Rate",
     limit: int = 500,
 ) -> list[dict[str, Any]]:
-    """RSV-NET weekly RSV hospitalization rates by state/age/sex/race (2018–present).
+    """RSV-NET RSV hospitalization rates by state/age/sex/race (2018–present).
     season: '2024-25'
-    age_category: 'Overall', '0-5 months', '6-11 months', '1-4 years', '65-74 years', '75+ years'
-    state: surveillance site name e.g. 'California', 'New York'
+    age_category: 'All', '0-<6 months', '6mo-<12 months', '1-4 years', '65-74 years', '≥75 years'
+    state: 2-letter surveillance site code e.g. 'CA', 'NY', or 'RSV-NET' for the national total
+    data_type: 'Weekly Rate' (default) or 'Cumulative Rate'. The dataset also carries
+        clinical/underlying-condition breakdowns (e.g. 'Diabetes', 'Severe Obesity (BMI >=40)')
+        under this same field for rows where rate_type='Estimated'.
+
+    Note: CDC reshaped this dataset from one row per week (with dedicated
+    week_ending_date/rate/cumulative_rate columns) into a long/tidy format keyed
+    by date_type/data_type/estimate_type/rate_type, with a single `estimate`
+    value column -- hence the filtering below.
     """
-    clauses = []
+    clauses = [
+        f"data_type = '{data_type}'",
+        "estimate_type = 'Rate per 100,000'",
+        "rate_type = 'Observed'",
+    ]
     if season:
         clauses.append(f"season = '{season}'")
     if age_category:
@@ -473,8 +486,8 @@ def get_rsv_hospitalizations(
         clauses.append(f"state = '{state}'")
     return query_dataset(
         DATASETS["rsv_net"].id,
-        where=" AND ".join(clauses) if clauses else None,
-        order="week_ending_date DESC",
+        where=" AND ".join(clauses),
+        order="date DESC",
         limit=limit,
     )
 

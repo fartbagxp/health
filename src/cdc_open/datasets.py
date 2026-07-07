@@ -400,18 +400,26 @@ DATASETS: dict[str, Dataset] = {
         charted=True,
         id="29hc-w46k",
         name="RSV-NET: RSV Hospitalizations",
-        description="Weekly lab-confirmed RSV hospitalization rates in children and adults from RSV-NET surveillance, by state/age/sex/race",
+        description=(
+            "Lab-confirmed RSV hospitalization rates in children and adults from RSV-NET "
+            "surveillance, by state/age/sex/race. Long/tidy format: value pivoted across "
+            "data_type ('Weekly Rate'/'Cumulative Rate', plus clinical breakdowns like "
+            "'Diabetes'/'Severe Obesity (BMI ≥40)') x estimate_type x rate_type, in a "
+            "single `estimate` column."
+        ),
         years="2018–present",
         key_columns=[
             "state",
             "season",
-            "week_ending_date",
+            "date",
+            "date_type",
             "age_category",
             "sex",
             "race",
-            "rate",
-            "cumulative_rate",
-            "type",
+            "data_type",
+            "estimate_type",
+            "rate_type",
+            "estimate",
         ],
     ),
     "covid_net": Dataset(

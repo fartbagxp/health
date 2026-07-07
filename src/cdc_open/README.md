@@ -178,7 +178,7 @@ rows = get_wastewater_data(pathogen="measles", limit=200)
 rows = get_resp_net_hospitalizations(season="2024-25", age_group="Overall")
 
 # RSV hospitalization rates by age group
-rows = get_rsv_hospitalizations(season="2024-25", age_category="0-5 months")
+rows = get_rsv_hospitalizations(season="2024-25", age_category="0-<6 months")
 
 # COVID-NET hospitalization rates — 65+ age group, all states
 rows = get_covid_net_hospitalizations(age_category="65-74 years")

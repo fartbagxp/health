@@ -78,7 +78,14 @@ def fetch_covid_hosp(out_dir: Path) -> list[dict]:
 
 
 def fetch_rsv_hosp(out_dir: Path) -> list[dict]:
-    """RSV hospitalization rates (29hc-w46k) — RSV-NET national, 2020-21 through 2023-24."""
+    """RSV hospitalization rates (29hc-w46k) — RSV-NET national, 2020-21 through 2023-24.
+
+    CDC reshaped this dataset from one row per week (with dedicated
+    `week_ending_date`/`rate`/`cumulative_rate` columns) into a long/tidy
+    format: `date` plus the value pivoted across `data_type`
+    ("Weekly Rate"/"Cumulative Rate") x `estimate_type` x `rate_type`, with a
+    single `estimate` column. We pivot it back to the flat shape below.
+    """
     print("Fetching RSV hospitalization data (29hc-w46k)...", end=" ", flush=True)
     seasons = ["2020-21", "2021-22", "2022-23", "2023-24", "2024-25"]
     season_clause = " OR ".join(f"season='{s}'" for s in seasons)
@@ -91,23 +98,25 @@ def fetch_rsv_hosp(out_dir: Path) -> list[dict]:
                 " AND age_category='All'"
                 " AND sex='All'"
                 " AND race='All'"
+                " AND rate_type='Observed'"
+                " AND estimate_type='Rate per 100,000'"
+                " AND data_type in('Weekly Rate','Cumulative Rate')"
             ),
-            "$order": "week_ending_date ASC",
-            "$limit": 2000,
+            "$order": "date ASC",
+            "$limit": 4000,
         },
     )
-    rows = [
-        {
-            "date": d["week_ending_date"].split("T")[0]
-            if "T" in d.get("week_ending_date", "")
-            else d.get("week_ending_date", ""),
-            "rate": round(float(d.get("rate") or 0), 4),
-            "cumulative_rate": round(float(d.get("cumulative_rate") or 0), 4),
-            "season": d.get("season", ""),
-        }
-        for d in data
-        if d.get("week_ending_date")
-    ]
+    by_date: dict[str, dict] = {}
+    for d in data:
+        date = d.get("date", "").split("T")[0]
+        if not date:
+            continue
+        entry = by_date.setdefault(date, {"date": date, "season": d.get("season", "")})
+        if d["data_type"] == "Weekly Rate":
+            entry["rate"] = round(float(d.get("estimate") or 0), 4)
+        elif d["data_type"] == "Cumulative Rate":
+            entry["cumulative_rate"] = round(float(d.get("estimate") or 0), 4)
+    rows = sorted(by_date.values(), key=lambda r: r["date"])
     path = out_dir / "rsv-hospitalizations.csv"
     _write_csv(path, rows, ["date", "rate", "cumulative_rate", "season"])
     if rows:

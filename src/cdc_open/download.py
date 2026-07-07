@@ -122,6 +122,9 @@ def download_all(out_dir: Path = _OUT_DIR, page_size: int = _PAGE_SIZE) -> None:
         headers["X-App-Token"] = app_token
 
     for key, ds in DATASETS.items():
+        if not ds.enabled:
+            print(f"  skipping {key} ({ds.id}) -- disabled, see datasets.py")
+            continue
         print(f"  fetching {key} ({ds.id}) ...", end=" ", flush=True)
         try:
             base_params: dict = {}

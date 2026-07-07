@@ -23,6 +23,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 from cdc_open.aggregate import aggregate_series, weekly_median, _week_start
 from cdc_open.client import SodaClient
 from cdc_open.datasets import DATASETS, Dataset
+from cdc_open.download import download_all
 from cdc_open.tools import TOOLS, execute_tool
 
 
@@ -476,6 +477,32 @@ class TestWeeklyMedian:
             (date(2023, 1, 23), 1.0),
             (date(2023, 1, 30), 10.0),
         ]
+
+
+class TestDownloadSkipsDisabledDatasets:
+    def test_disabled_dataset_is_skipped_not_fetched(self, tmp_path):
+        enabled_ds = Dataset(id="abcd-1234", name="Enabled", description="d", years="y")
+        disabled_ds = Dataset(
+            id="wxyz-5678", name="Disabled", description="d", years="y", enabled=False
+        )
+        fake_datasets = {"enabled_one": enabled_ds, "disabled_one": disabled_ds}
+
+        with (
+            patch("cdc_open.download.DATASETS", fake_datasets),
+            patch("cdc_open.download.COMPOSITE_DATASETS", {}),
+            patch("cdc_open.download.WCMS_DATASETS", {}),
+            patch(
+                "cdc_open.download._fetch_csv_paginated",
+                return_value=("header\nrow", 1),
+            ) as mock_fetch,
+        ):
+            download_all(out_dir=tmp_path)
+
+        assert mock_fetch.call_count == 1
+        fetched_url = mock_fetch.call_args.args[0]
+        assert "abcd-1234" in fetched_url
+        assert not (tmp_path / "disabled_one.csv").exists()
+        assert (tmp_path / "enabled_one.csv").exists()
 
 
 class TestAggregateSeries:

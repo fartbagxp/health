@@ -143,6 +143,10 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "covid_conditions": Dataset(
+        # ~621k rows / ~139MB at full resolution -- past GitHub's 100MB file
+        # limit and not currently charted. Disabled until charted; see
+        # cdc_open.aggregate for the pattern to follow when it is.
+        enabled=False,
         id="hk9y-quqm",
         name="COVID-19 Contributing Conditions",
         description="COVID-19 deaths by contributing condition, age group, and state",
@@ -908,6 +912,12 @@ DATASETS: dict[str, Dataset] = {
     ),
     # ── Notifiable diseases (weekly) ─────────────────────────────────────────
     "nndss_weekly": Dataset(
+        # ~1.89M rows / ~260MB at full resolution -- past GitHub's 100MB file
+        # limit and not currently charted. Disabled until charted; see
+        # cdc_open.aggregate for the pattern to follow when it is. Note:
+        # nndss_measles below shares this same Socrata ID but stays enabled --
+        # its soql_where filters server-side to just measles rows (~4MB).
+        enabled=False,
         id="x9gk-5huc",
         name="NNDSS Weekly Notifiable Diseases",
         description="Provisional weekly case counts for ~100 nationally notifiable diseases (measles, pertussis, hepatitis, TB, Lyme, etc.) by state",

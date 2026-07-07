@@ -870,7 +870,6 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "nhsn_hrd": Dataset(
-        charted=True,
         id="ua7e-t2fy",
         name="Weekly Hospital Respiratory Data (NHSN)",
         description="Weekly hospital-reported COVID-19, influenza, and RSV new admissions, current inpatient/ICU patients, and bed occupancy by state/territory and nationally (jurisdiction='USA'), from NHSN (2020–present)",

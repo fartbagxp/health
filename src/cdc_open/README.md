@@ -397,6 +397,19 @@ Four datasets from the [National Wastewater Surveillance System (NWSS)](https://
 
 Use `get_wastewater_data(pathogen=...)` with `pathogen` set to `"sars_cov2"`, `"flu_a"`, `"measles"`, or `"rsv"`.
 
+### Raw vs. processed
+
+At full resolution (per-site, per-sample) the five `wastewater_*` datasets run
+into the hundreds of thousands of rows — 300MB+ for `wastewater_covid` — well
+past what git/GitHub can track as a file. `cdc_open.download` still fetches
+them at full resolution to `data/raw/cdc_open/`, but that directory is
+`.gitignore`'d for these five files and rebuilt fresh on every run.
+
+`uv run python -m cdc_open.aggregate` reduces each one to a national
+weekly-median series (~KB, a few hundred rows) in `data/processed/cdc_open/`,
+which *is* tracked and is what `health-charts` actually reads. Run it after
+`cdc_open.download` any time you refresh the wastewater data locally.
+
 ## PLACES measure IDs
 
 Common measures for `get_places_county_health` and `get_places_city_health`:

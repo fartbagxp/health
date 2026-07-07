@@ -102,6 +102,31 @@ The scraper (`scrape_maternal_mortality_by_state.py`) navigates the WONDER web U
 
 **Pregnancy checkbox caveat:** The 2003 revised U.S. Standard Certificate of Death added a pregnancy checkbox. States adopted it on a rolling schedule 2003–2017, causing a staggered artificial rise in reported counts. Pre-2018 and post-2018 figures are not directly comparable for trend analysis without adjustment.
 
+### Obesity & diabetes as a contributing cause of death (1999–present)
+
+| Query file                                                | Dataset | Years     |
+| ---------------------------------------------------------- | ------- | --------- |
+| `obesity-diabetes-deaths-by-year-1999-2020-req.xml`       | D77     | 1999–2020 |
+| `obesity-diabetes-deaths-by-year-2018-2024-req.xml`       | D176    | 2018–present |
+
+Both queries group by Year × Multiple Cause of Death (MCD) ICD-10 code and filter to `E66` (obesity, all subtypes) and `E10`–`E14` (diabetes mellitus, all subtypes/complications). MCD counts a condition if it appears *anywhere* on the death certificate — a contributing factor — not only when it's the underlying cause. This is deliberately different from `leading_death.csv` (`cdc_open`), which counts diabetes only as an **underlying** cause and essentially never counts obesity at all, since obesity is rarely the immediate cause of death.
+
+WONDER returns the specific ICD-10 subcode on each row (e.g. `E66.0`, `E11.9` — visible as the `cd` attribute on response cells, now exposed as `ResponseCell.code` in `client.py`). Subcodes are summed into their parent category per year.
+
+```
+uv run python src/wonder/queries/fetch_obesity_diabetes_deaths.py
+→ data/raw/wonder/obesity-diabetes-deaths-by-year.csv
+```
+
+**Key findings (1999–2024):**
+
+- Obesity as a contributing cause grew roughly **5×**: 13,049 deaths in 1999 → a peak of 96,262 in 2021
+- Diabetes as a contributing cause grew from 209,811 (1999) to a peak of 416,780 (2021) — roughly 2×
+- Both series spike sharply in **2020–2021**, consistent with obesity and diabetes acting as major COVID-19 comorbidities
+- Diabetes as a contributing cause is consistently far larger than obesity — expected, since obesity is more often the upstream driver than something coded directly on the certificate
+
+Merge strategy: D77 (final) for 1999–2020; D176 (provisional) for 2021+, same convention as the drug-deaths queries. 2018–2019 counts match exactly between the two datasets in the overlap years, cross-validating the query; 2020 differs slightly between D77-final and D176-provisional, as expected.
+
 ## CLI usage
 
 ```bash

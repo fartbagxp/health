@@ -212,6 +212,41 @@ year,drug_code,drug_name,deaths,provisional
 
 ---
 
+### Obesity & diabetes as a contributing cause of death — 1999–present
+
+**File:** `data/raw/wonder/obesity-diabetes-deaths-by-year.csv`
+**Script:** `src/wonder/queries/fetch_obesity_diabetes_deaths.py`
+**Sources:** D77 (1999–2020, final) + D176 (2021–present, provisional)
+
+```bash
+uv run python src/wonder/queries/fetch_obesity_diabetes_deaths.py
+```
+
+Counts deaths where obesity (`E66`, all subtypes) or diabetes (`E10`–`E14`, all subtypes/complications) appears anywhere on the death certificate as a Multiple Cause of Death (MCD) — i.e. a *contributing* factor, not necessarily the underlying cause. This is the complement to `leading_death.csv` (`cdc_open`), which only counts diabetes as an underlying cause and essentially never counts obesity, since obesity is rarely the immediate cause of death.
+
+!!! note "Codes are ICD-10 categories, summed from subcodes"
+    The request filters on the 3-character categories `E66` and `E10`–`E14`, but WONDER returns each
+    4-character subcode individually (e.g. `E66.0` "Obesity due to excess calories", `E11.9`
+    "Non-insulin-dependent diabetes mellitus, without complications"). The fetch script sums all
+    subcodes into one `obesity` or `diabetes` total per year using the `cd` code attribute on each
+    response cell — not label text matching, which is more robust to CDC wording changes.
+
+Sample output (selected years):
+
+```
+year,category,deaths,provisional
+1999,obesity,13049,false
+1999,diabetes,209811,false
+2020,obesity,74903,false
+2020,diabetes,398556,false
+2021,obesity,96262,true
+2021,diabetes,416780,true
+```
+
+Both categories peak in 2021 — a ~5× rise for obesity and ~2× for diabetes since 1999, with a sharp spike in 2020–2021 consistent with both conditions acting as major COVID-19 comorbidities.
+
+---
+
 ### Births by year — 1995–2024
 
 **Files:**
@@ -322,6 +357,8 @@ These XML files are committed so you can run them without the LLM:
 | `fentanyl-deaths-by-month-2018-2024-req.xml`      | T40.4 MCD by month, D176            |
 | `drug-deaths-by-year-1999-2020-req.xml`           | 7 drugs MCD by year, D77            |
 | `drug-deaths-by-year-2018-2024-req.xml`           | 7 drugs MCD by year, D176           |
+| `obesity-diabetes-deaths-by-year-1999-2020-req.xml` | E66 + E10-E14 MCD by year, D77    |
+| `obesity-diabetes-deaths-by-year-2018-2024-req.xml` | E66 + E10-E14 MCD by year, D176   |
 | `opioid-overdose-deaths-2018-2024-req.xml`        | T40.0–T40.6 UCD, D176               |
 | `infant-mortality-2018-2023-req.xml`              | Infant mortality by race, D69       |
 | `racial-mortality-gap-2018-2023-req.xml`          | All-cause deaths × race, D176       |

@@ -21,6 +21,12 @@ class Dataset:
     # (directly via CDC_OPEN_BASE, or indirectly via a derived/aggregated file).
     # Collected-but-uncharted datasets are the backlog of charts we could add.
     charted: bool = False
+    # False for datasets deliberately skipped by the bulk downloader -- e.g.
+    # full resolution runs well past GitHub's 100MB file limit and nothing
+    # charts it yet, so there's no shape to roll up to (see wastewater_* for
+    # the pattern once one of these does get charted). Still queryable
+    # directly via `cdc_open query <id>`; just excluded from `download_all()`.
+    enabled: bool = True
 
 
 @dataclass(frozen=True)
@@ -545,6 +551,10 @@ DATASETS: dict[str, Dataset] = {
     ),
     # ── Surveillance: ED visits & lab positivity ────────────────────────────
     "nssp_ed_visits": Dataset(
+        # ~625k rows / ~150MB at full resolution -- past GitHub's 100MB file
+        # limit and not currently charted. Disabled until charted; see
+        # cdc_open.aggregate for the pattern to follow when it is.
+        enabled=False,
         id="rdmq-nq56",
         name="NSSP Emergency Department Visit Trajectories",
         description="Weekly % of ED visits for COVID-19, influenza, and RSV by state and county from NSSP sentinel emergency departments, with trend direction (increasing/stable/decreasing)",
@@ -597,6 +607,10 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "resp_coverage_adults": Dataset(
+        # ~544k rows / ~140MB at full resolution -- past GitHub's 100MB file
+        # limit and not currently charted. Disabled until charted; see
+        # cdc_open.aggregate for the pattern to follow when it is.
+        enabled=False,
         id="ee83-ukst",
         name="NIS-FRVM: Fall Respiratory Virus Vaccination Coverage, Adults",
         description="Monthly COVID-19, influenza, and RSV vaccination coverage among adults and older adults from the National Immunization Survey Fall Respiratory Virus Module (NIS-FRVM), by state and demographics (2024–present)",
@@ -615,6 +629,10 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "covid_coverage_adults": Dataset(
+        # ~1.44M rows / ~400MB at full resolution -- past GitHub's 100MB file
+        # limit and not currently charted. Disabled until charted; see
+        # cdc_open.aggregate for the pattern to follow when it is.
+        enabled=False,
         id="si7g-c2bs",
         name="NIS-ACM: Adult COVID-19 Vaccination Coverage and Attitudes",
         description="Monthly COVID-19 vaccination coverage and vaccine confidence among adults by state and demographic group from the National Immunization Survey Adult COVID Module (NIS-ACM)",
@@ -975,6 +993,10 @@ DATASETS: dict[str, Dataset] = {
     ),
     # ── Chronic Disease Indicators ───────────────────────────────────────────
     "chronic_disease_indicators": Dataset(
+        # ~399k rows / ~120MB at full resolution -- past GitHub's 100MB file
+        # limit and not currently charted. Disabled until charted; see
+        # cdc_open.aggregate for the pattern to follow when it is.
+        enabled=False,
         id="hksd-2xuw",
         name="U.S. Chronic Disease Indicators (CDI)",
         description=(

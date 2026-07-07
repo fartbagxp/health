@@ -1,6 +1,12 @@
 name: Update CDC Open Data
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/cdc_open/**.py"
+      - ".github/workflows/update_cdc_open.yml"
   schedule:
     - cron: "0 14 * * 6" # At 14:00 UTC on Saturday
   workflow_dispatch:

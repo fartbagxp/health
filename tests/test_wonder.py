@@ -23,6 +23,7 @@ DATA_DIR = Path(__file__).parent.parent / "data" / "raw" / "wonder"
 FENTANYL_CSV = DATA_DIR / "fentanyl-deaths-by-month.csv"
 DRUG_YEAR_CSV = DATA_DIR / "drug-deaths-by-year.csv"
 DRUG_MONTH_CSV = DATA_DIR / "drug-deaths-by-month.csv"
+OBESITY_DIABETES_CSV = DATA_DIR / "obesity-diabetes-deaths-by-year.csv"
 
 EXPECTED_DRUG_CODES = {"T40.1", "T40.2", "T40.3", "T40.4", "T40.5", "T40.7", "T43.6"}
 
@@ -331,12 +332,90 @@ class TestDrugDeathsByMonth:
         assert not mismatches, "Monthly→annual sum mismatches:\n" + "\n".join(mismatches)
 
 
+# ── obesity-diabetes-deaths-by-year.csv ───────────────────────────────────────
+
+class TestObesityDiabetesDeathsByYear:
+    """Shape, completeness, and spot-check tests for obesity-diabetes-deaths-by-year.csv."""
+
+    @pytest.fixture(scope="class")
+    @classmethod
+    def rows(cls):
+        return _load_csv(OBESITY_DIABETES_CSV)
+
+    def test_file_exists(self):
+        assert OBESITY_DIABETES_CSV.exists(), f"Missing {OBESITY_DIABETES_CSV}"
+
+    def test_columns(self, rows):
+        assert rows[0].keys() == {"year", "category", "deaths", "provisional"}
+
+    def test_categories(self, rows):
+        assert {r["category"] for r in rows} == {"obesity", "diabetes"}
+
+    def test_both_categories_in_every_year(self, rows):
+        by_year: dict[int, set] = {}
+        for r in rows:
+            by_year.setdefault(int(r["year"]), set()).add(r["category"])
+        for yr, cats in by_year.items():
+            assert cats == {"obesity", "diabetes"}, f"Missing category in year {yr}: {cats}"
+
+    def test_no_duplicate_year_category(self, rows):
+        keys = [(r["year"], r["category"]) for r in rows]
+        assert len(keys) == len(set(keys))
+
+    def test_deaths_are_positive_integers(self, rows):
+        for r in rows:
+            assert r["deaths"].isdigit(), f"Non-integer deaths: {r}"
+            assert int(r["deaths"]) > 0
+
+    def test_provisional_flag_format(self, rows):
+        for r in rows:
+            assert r["provisional"] in ("true", "false")
+
+    def test_d77_years_not_provisional(self, rows):
+        for r in rows:
+            if int(r["year"]) <= 2020:
+                assert r["provisional"] == "false"
+
+    def test_diabetes_exceeds_obesity_every_year(self, rows):
+        """Diabetes is always the larger contributing-cause count — obesity is
+        rarely coded even as a contributing cause, so this is a basic sanity
+        check that the two categories weren't swapped during aggregation."""
+        by_year: dict[int, dict] = {}
+        for r in rows:
+            by_year.setdefault(int(r["year"]), {})[r["category"]] = int(r["deaths"])
+        for yr, cats in by_year.items():
+            assert cats["diabetes"] > cats["obesity"], f"{yr}: diabetes should exceed obesity"
+
+    # ── known-value pins (cross-checked against CDC WONDER live query) ────────
+
+    def test_obesity_1999(self, rows):
+        r = next(r for r in rows if r["year"] == "1999" and r["category"] == "obesity")
+        assert int(r["deaths"]) == 13049
+
+    def test_diabetes_1999(self, rows):
+        r = next(r for r in rows if r["year"] == "1999" and r["category"] == "diabetes")
+        assert int(r["deaths"]) == 209811
+
+    def test_obesity_2020_final(self, rows):
+        """2020 uses D77 (final), not D176 (provisional) — the two differ slightly."""
+        r = next(r for r in rows if r["year"] == "2020" and r["category"] == "obesity")
+        assert int(r["deaths"]) == 74903
+        assert r["provisional"] == "false"
+
+    def test_obesity_2021_covid_peak(self, rows):
+        """2021 is the peak year for both categories — COVID-era comorbidity spike."""
+        r = next(r for r in rows if r["year"] == "2021" and r["category"] == "obesity")
+        assert int(r["deaths"]) == 96262
+        assert r["provisional"] == "true"
+
+
 # ── parser unit tests (no network) ────────────────────────────────────────────
 
-def _make_cell(label=None, value=None, is_total=False):
+def _make_cell(label=None, value=None, is_total=False, code=None):
     cell = MagicMock()
     cell.label = label
     cell.value = value
+    cell.code = code
     cell.get_numeric_value.return_value = (
         None if value in (None, "Suppressed")
         else float(value.replace(",", ""))
@@ -515,6 +594,137 @@ class TestDrugDeathsByMonthParser:
         assert _parse_month("Jan") == 1
         assert _parse_month("Dec., 2024") == 12
         assert _parse_month("") is None
+
+
+class TestObesityDiabetesDeathsParser:
+    """Unit tests for the code-based categorizer/parser in fetch_obesity_diabetes_deaths."""
+
+    def _import(self):
+        from wonder.queries.fetch_obesity_diabetes_deaths import parse_rows
+        return parse_rows
+
+    def test_categorizes_by_code_not_label(self):
+        """WONDER's `cd` attribute drives categorization — label text is ignored,
+        unlike fetch_drug_deaths' fragile label-matching approach."""
+        parse_rows = self._import()
+        client = MagicMock()
+
+        xml_rows = [
+            _make_row([
+                _make_cell("2018"),
+                _make_cell("Obesity due to excess calories", code="E66.0"),
+                _make_cell(value="59"),
+            ]),
+            _make_row([
+                _make_cell("2018"),
+                _make_cell("Non-insulin-dependent diabetes mellitus, without complications", code="E11.9"),
+                _make_cell(value="76154"),
+            ]),
+        ]
+        client.parse_response_table.return_value = xml_rows
+
+        records = parse_rows(client, "<xml/>", provisional=True)
+        by_category = {r["category"]: r["deaths"] for r in records}
+        assert by_category == {"obesity": 59, "diabetes": 76154}
+        assert all(r["year"] == 2018 for r in records)
+
+    def test_subcodes_sum_into_one_category_total(self):
+        """Multiple E1x subcodes in the same year aggregate into a single diabetes total."""
+        parse_rows = self._import()
+        client = MagicMock()
+
+        xml_rows = [
+            _make_row([_make_cell("2018"), _make_cell("x", code="E10.9"), _make_cell(value="4742")]),
+            _make_row([_make_cell("2018"), _make_cell("x", code="E11.2"), _make_cell(value="23500")]),
+            _make_row([_make_cell("2018"), _make_cell("x", code="E11.9"), _make_cell(value="76154")]),
+        ]
+        client.parse_response_table.return_value = xml_rows
+
+        records = parse_rows(client, "<xml/>", provisional=True)
+        assert len(records) == 1
+        assert records[0] == {"year": 2018, "category": "diabetes", "deaths": 104396, "provisional": True}
+
+    def test_unrelated_code_is_skipped(self):
+        """A non-obesity/diabetes ICD code (e.g. a different E-series condition) is ignored."""
+        parse_rows = self._import()
+        client = MagicMock()
+
+        xml_rows = [
+            _make_row([_make_cell("2018"), _make_cell("Thyrotoxicosis", code="E05.9"), _make_cell(value="100")]),
+        ]
+        client.parse_response_table.return_value = xml_rows
+
+        records = parse_rows(client, "<xml/>", provisional=True)
+        assert records == []
+
+    def test_suppressed_subcode_contributes_nothing(self):
+        """A suppressed (<10) subcode is dropped rather than treated as zero-but-present."""
+        parse_rows = self._import()
+        client = MagicMock()
+
+        suppressed = _make_cell(value="Suppressed", code="E66.1")
+        suppressed.get_numeric_value.return_value = None
+
+        xml_rows = [
+            _make_row([_make_cell("2018"), _make_cell("Drug-induced obesity", code="E66.1"), suppressed]),
+            _make_row([_make_cell("2018"), _make_cell("Other obesity", code="E66.8"), _make_cell(value="7675")]),
+        ]
+        client.parse_response_table.return_value = xml_rows
+
+        records = parse_rows(client, "<xml/>", provisional=True)
+        assert len(records) == 1
+        assert records[0]["deaths"] == 7675
+
+    def test_total_rows_are_skipped(self):
+        parse_rows = self._import()
+        client = MagicMock()
+
+        xml_rows = [
+            _make_row([_make_cell("2018"), _make_cell("Other obesity", code="E66.8"), _make_cell(value="7675")]),
+            _make_row([_make_cell("2018")], is_total=True),
+        ]
+        client.parse_response_table.return_value = xml_rows
+
+        records = parse_rows(client, "<xml/>", provisional=True)
+        assert len(records) == 1
+
+    def test_partial_year_label_extracts_leading_year(self):
+        """'2026 (provisional and partial)' should parse to year=2026."""
+        parse_rows = self._import()
+        client = MagicMock()
+
+        xml_rows = [
+            _make_row([
+                _make_cell("2026 (provisional and partial)"),
+                _make_cell("Other obesity", code="E66.8"),
+                _make_cell(value="7675"),
+            ]),
+        ]
+        client.parse_response_table.return_value = xml_rows
+
+        records = parse_rows(client, "<xml/>", provisional=True)
+        assert records[0]["year"] == 2026
+
+    def test_merge_prefers_d77_through_2020_d176_after(self):
+        from wonder.queries.fetch_obesity_diabetes_deaths import merge
+
+        d77 = [
+            {"year": 2020, "category": "obesity", "deaths": 74903, "provisional": False},
+            {"year": 2020, "category": "diabetes", "deaths": 398556, "provisional": False},
+        ]
+        d176 = [
+            {"year": 2020, "category": "obesity", "deaths": 75627, "provisional": True},
+            {"year": 2020, "category": "diabetes", "deaths": 405046, "provisional": True},
+            {"year": 2021, "category": "obesity", "deaths": 96262, "provisional": True},
+            {"year": 2021, "category": "diabetes", "deaths": 416780, "provisional": True},
+        ]
+
+        merged = merge(d77, d176)
+        by_key = {(r["year"], r["category"]): r for r in merged}
+
+        assert by_key[(2020, "obesity")]["deaths"] == 74903  # D77 final wins for 2020
+        assert by_key[(2020, "obesity")]["provisional"] is False
+        assert by_key[(2021, "obesity")]["deaths"] == 96262  # D176 is the only source for 2021
 
 
 # ── integration tests (hits wonder.cdc.gov) ───────────────────────────────────

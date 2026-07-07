@@ -17,6 +17,10 @@ class Dataset:
     key_columns: list[str] = field(default_factory=list)
     soql_where: str | None = None
     base_url: str | None = None  # overrides _BASE_URL in downloader when set
+    # True once this dataset's CSV is actually read by fartbagxp/health-charts
+    # (directly via CDC_OPEN_BASE, or indirectly via a derived/aggregated file).
+    # Collected-but-uncharted datasets are the backlog of charts we could add.
+    charted: bool = False
 
 
 @dataclass(frozen=True)
@@ -28,6 +32,7 @@ class WcmsDataset:
     description: str
     years: str
     key_columns: list[str] = field(default_factory=list)
+    charted: bool = False
 
 
 @dataclass(frozen=True)
@@ -43,6 +48,7 @@ class CompositeDataset:
     description: str
     years: str
     key_columns: list[str] = field(default_factory=list)
+    charted: bool = False
 
 
 DATASETS: dict[str, Dataset] = {
@@ -60,6 +66,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "life_expectancy": Dataset(
+        charted=True,
         id="w9j2-ggv5",
         name="Life Expectancy",
         description="Life expectancy at birth by race (All Races, Black, White) and sex",
@@ -73,6 +80,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "mortality_rates": Dataset(
+        charted=True,
         id="489q-934x",
         name="Provisional Mortality Rates",
         description="Quarterly age-adjusted death rates by cause, sex, and state",
@@ -206,8 +214,8 @@ DATASETS: dict[str, Dataset] = {
     "nutrition_obesity": Dataset(
         id="hn4x-zwk7",
         name="Nutrition, Physical Activity & Obesity",
-        description="Adult obesity, physical inactivity, and fruit/vegetable consumption by state from BRFSS",
-        years="Current",
+        description="Adult obesity, physical inactivity, and fruit/vegetable consumption by state from BRFSS (self-reported height/weight)",
+        years="2011–2024",
         key_columns=[
             "yearstart",
             "yearend",
@@ -221,7 +229,21 @@ DATASETS: dict[str, Dataset] = {
             "stratification1",
         ],
     ),
+    "nhanes_obesity": Dataset(
+        id="28df-2bwy",
+        name="NHANES Measured Obesity, Hypertension & Cholesterol",
+        description=(
+            "Prevalence of obesity, hypertension, and high total cholesterol among adults 20+, "
+            "national, by sex and age group, 1999-2000 through 2017-2018. Derived from NHANES "
+            "physical exams — measured height/weight/blood pressure/labs, not self-report. "
+            "Obesity here runs consistently ~7-10 points above the self-reported BRFSS figures "
+            "in `nutrition_obesity`, which is the expected direction and size of self-report bias."
+        ),
+        years="1999-2000–2017-2018",
+        key_columns=["survey_years", "sex", "age_group", "measure", "percent", "standard_error"],
+    ),
     "death_rates_historical": Dataset(
+        charted=True,
         id="6rkc-nb2q",
         name="Historical Death Rates by Cause",
         description="Age-adjusted death rates for major causes (heart disease, cancer, stroke, etc.) since 1900",
@@ -229,6 +251,7 @@ DATASETS: dict[str, Dataset] = {
         key_columns=["year", "leading_causes", "deaths", "age_adjusted_death_rate"],
     ),
     "birth_indicators": Dataset(
+        charted=True,
         id="76vv-a7x8",
         name="Quarterly Birth Indicators",
         description="Provisional quarterly birth rates, teen births, preterm births, cesarean rates by race/ethnicity",
@@ -243,6 +266,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "wastewater_covid": Dataset(
+        charted=True,
         id="j9g8-acpt",
         name="NWSS Wastewater: SARS-CoV-2",
         description="SARS-CoV-2 RNA concentrations from US wastewater sampling sites via NWSS, updated weekly",
@@ -259,6 +283,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "wastewater_flu": Dataset(
+        charted=True,
         id="ymmh-divb",
         name="NWSS Wastewater: Influenza A",
         description="Influenza A RNA concentrations from US wastewater sampling sites via NWSS, updated weekly",
@@ -275,6 +300,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "wastewater_measles": Dataset(
+        charted=True,
         id="akvg-8vrb",
         name="NWSS Wastewater: Measles",
         description="Measles RNA concentrations from US wastewater sampling sites via NWSS, updated weekly",
@@ -307,6 +333,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "wastewater_rsv": Dataset(
+        charted=True,
         id="45cq-cw4i",
         name="NWSS Wastewater: RSV",
         description="RSV RNA concentrations from US wastewater sampling sites via NWSS, updated weekly",
@@ -323,6 +350,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "wastewater_h5": Dataset(
+        charted=True,
         id="mtpu-urpp",
         name="CDC Wastewater Data for Avian Influenza A (H5)",
         description="Raw wastewater sample measurements for Avian Influenza A (H5) at US sampling sites — concentration, flow-normalized values, and detection flags",
@@ -359,6 +387,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "rsv_net": Dataset(
+        charted=True,
         id="29hc-w46k",
         name="RSV-NET: RSV Hospitalizations",
         description="Weekly lab-confirmed RSV hospitalization rates in children and adults from RSV-NET surveillance, by state/age/sex/race",
@@ -393,6 +422,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "resp_deaths_pct": Dataset(
+        charted=True,
         id="4bc2-bbpq",
         name="Provisional % Deaths: COVID-19, Flu & RSV",
         description="Provisional weekly percentage of total US deaths attributed to COVID-19, Influenza, and RSV",
@@ -430,6 +460,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "nursing_home_resp": Dataset(
+        charted=True,
         id="tscn-ryh9",
         name="Nursing Home Respiratory Pathogens & Vaccination (NHSN)",
         description="Weekly COVID-19, Influenza, and RSV case counts, hospitalizations, and vaccination rates for nursing home residents by state, from NHSN",
@@ -448,6 +479,7 @@ DATASETS: dict[str, Dataset] = {
     ),
     # ── Vaccination (weekly) ─────────────────────────────────────────────────
     "resp_vaccination": Dataset(
+        charted=True,
         id="5c6r-xi2t",
         name="Weekly Respiratory Virus Vaccination Coverage",
         description="Weekly flu, COVID-19, and RSV vaccination coverage for children and adults from National Immunization Survey, by state/demographics",
@@ -684,6 +716,7 @@ DATASETS: dict[str, Dataset] = {
     ),
     # ── Child vaccination ────────────────────────────────────────────────────
     "schoolvaxview": Dataset(
+        charted=True,
         id="ijqb-a7ye",
         name="SchoolVaxView: Kindergarten Vaccination Coverage & Exemptions",
         description=(
@@ -822,6 +855,7 @@ DATASETS: dict[str, Dataset] = {
     ),
     # ── COVID / flu / RSV hospitalization (NHSN / archived) ─────────────────
     "covid_hosp_archived": Dataset(
+        charted=True,
         id="7dk4-g6vg",
         name="Weekly COVID-19 Hospitalization Metrics by Jurisdiction (Archived)",
         description="Archived weekly COVID-19 hospital admissions, inpatient bed utilization, and staff ICU bed occupancy by state and national (USA) — data through May 2024 when mandatory reporting ended",
@@ -836,6 +870,7 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "nhsn_hrd": Dataset(
+        charted=True,
         id="ua7e-t2fy",
         name="Weekly Hospital Respiratory Data (NHSN)",
         description="Weekly hospital-reported COVID-19, influenza, and RSV new admissions, current inpatient/ICU patients, and bed occupancy by state/territory and nationally (jurisdiction='USA'), from NHSN (2020–present)",
@@ -1121,6 +1156,7 @@ _WCMS_BASE = "https://www.cdc.gov/wcms/vizdata"
 
 WCMS_DATASETS: dict[str, WcmsDataset] = {
     "measles_annual_history": WcmsDataset(
+        charted=True,
         url=f"{_WCMS_BASE}/measles/MeaslesCasesHistory.json",
         name="Measles Annual Cases History",
         description=(
@@ -1144,6 +1180,7 @@ WCMS_DATASETS: dict[str, WcmsDataset] = {
         key_columns=["year", "cases", "filter"],
     ),
     "measles_weekly_cases": WcmsDataset(
+        charted=True,
         url=f"{_WCMS_BASE}/measles/MeaslesCasesWeekly.json",
         name="Measles Weekly Cases by Rash Onset Date",
         description=(

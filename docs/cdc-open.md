@@ -133,7 +133,8 @@ uv run python -m cdc_open query schoolvaxview \
 | `places_county`              | PLACES: County Health Indicators               | `swc5-untb` | Current      |
 | `places_city`                | PLACES: City Health Indicators                 | `dxpw-cm5u` | Current      |
 | `disability`                 | Disability Prevalence by State (BRFSS)         | `s2qv-b27b` | Current      |
-| `nutrition_obesity`          | Nutrition, Physical Activity & Obesity (BRFSS) | `hn4x-zwk7` | Current      |
+| `nutrition_obesity`          | Nutrition, Physical Activity & Obesity (BRFSS, self-reported) | `hn4x-zwk7` | 2011–2024    |
+| `nhanes_obesity`             | NHANES Measured Obesity, Hypertension & Cholesterol (exam-based) | `28df-2bwy` | 1999-2000–2017-2018 |
 | `chronic_disease_indicators` | U.S. Chronic Disease Indicators (CDI)          | `hksd-2xuw` | 2001–present |
 | `birth_indicators`           | Quarterly Birth Indicators                     | `76vv-a7x8` | Current      |
 | `rsv_positivity`             | RSV Test Positivity (NREVSS)                   | `3cxc-4k8q` | 2020–present |

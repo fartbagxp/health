@@ -43,18 +43,27 @@ def cmd_list(args):
             "name": ds.name,
             "years": ds.years,
             "description": ds.description,
+            "charted": ds.charted,
         }
         for key, ds in DATASETS.items()
     ]
+    if args.charted:
+        rows = [r for r in rows if r["charted"]]
+    elif args.uncharted:
+        rows = [r for r in rows if not r["charted"]]
+
     if args.format == "json":
         print(json.dumps(rows, indent=2))
     else:
-        print(f"{'KEY':<25} {'DATASET ID':<12} {'YEARS':<14} NAME")
-        print("-" * 80)
+        print(f"{'KEY':<25} {'DATASET ID':<12} {'YEARS':<14} {'CHARTED':<7} NAME")
+        print("-" * 90)
         for r in rows:
-            print(f"{r['key']:<25} {r['id']:<12} {r['years']:<14} {r['name']}")
+            charted_mark = "yes" if r["charted"] else ""
+            print(f"{r['key']:<25} {r['id']:<12} {r['years']:<14} {charted_mark:<7} {r['name']}")
             if args.verbose:
                 print(f"  {r['description']}")
+        if args.uncharted:
+            print(f"\n{len(rows)} uncharted dataset(s) — collected but not yet in health-charts.")
 
 
 def cmd_query(args):
@@ -237,6 +246,17 @@ def main():
         choices=["table", "json"],
         default="table",
         help="Output format (default: table)",
+    )
+    charted_group = list_parser.add_mutually_exclusive_group()
+    charted_group.add_argument(
+        "--charted",
+        action="store_true",
+        help="Only show datasets already used by health-charts",
+    )
+    charted_group.add_argument(
+        "--uncharted",
+        action="store_true",
+        help="Only show datasets collected but not yet charted (the backlog)",
     )
     list_parser.set_defaults(func=cmd_list)
 

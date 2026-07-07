@@ -217,7 +217,7 @@ print(nat["P_UTDHPV13_pct"])   # % of teens with completed HPV series
 
 [data.cdc.gov](https://data.cdc.gov) is the CDC's public open data portal, built on the Socrata platform. It exposes datasets as a standard REST/JSON API ([SODA](https://dev.socrata.com/)) — no authentication required for read access.
 
-32 datasets are available covering mortality, birth indicators, COVID-19, respiratory surveillance, wastewater (NWSS), vaccination, disability, nutrition, overdose, notifiable diseases (NNDSS), NHSN nursing homes, NREVSS RSV, NSSP ED visits, and children's vaccination. An LLM-powered `analyze` command uses Claude to fetch and synthesize data in response to natural language questions.
+69 datasets are available covering mortality, birth indicators, COVID-19, respiratory surveillance, wastewater (NWSS), vaccination, disability, nutrition, chronic disease, overdose, notifiable diseases (NNDSS), NHSN nursing homes, NREVSS RSV, NSSP ED visits, children's vaccination, and NHANES measured obesity. An LLM-powered `analyze` command uses Claude to fetch and synthesize data in response to natural language questions. Not every dataset is wired into a chart yet — `cdc-open list --uncharted` shows what's collected but unused.
 
 ```bash
 uv run python -m cdc_open list

@@ -2,7 +2,9 @@
 
 Python SDK and CLI for [data.cdc.gov](https://data.cdc.gov) — U.S. public health statistics via the Socrata SODA API.
 
-52 datasets covering mortality, birth, COVID-19, flu, RSV, vaccination coverage, wastewater surveillance, injury, disability, nutrition, and county/city health indicators.
+69 datasets covering mortality, birth, COVID-19, flu, RSV, vaccination coverage, wastewater surveillance, injury, disability, nutrition, chronic disease, and county/city health indicators.
+
+Not every collected dataset is wired into a chart yet. `list --uncharted` shows what's fetched but unused — the backlog for new series.
 
 ## Setup
 
@@ -27,16 +29,18 @@ A `.env` file in the project root is loaded automatically.
 ```bash
 uv run python -m cdc_open list
 uv run python -m cdc_open list -f json
+uv run python -m cdc_open list --charted      # only datasets already used by health-charts
+uv run python -m cdc_open list --uncharted    # only datasets collected but not yet charted
 ```
 
 ```bash
-KEY                       DATASET ID   YEARS          NAME
---------------------------------------------------------------------------------
-leading_death             bi63-dtpu    1999–2017      Leading Causes of Death
-life_expectancy           w9j2-ggv5    1900–2018      Life Expectancy
-mortality_rates           489q-934x    2020–present   Provisional Mortality Rates
-places_county             swc5-untb    Current        PLACES: County Health
-places_city               dxpw-cm5u    Current        PLACES: City Health
+KEY                       DATASET ID   YEARS          CHARTED NAME
+------------------------------------------------------------------------------------------
+leading_death             bi63-dtpu    1999–2017              Leading Causes of Death
+life_expectancy           w9j2-ggv5    1900–2018      yes     Life Expectancy
+mortality_rates           489q-934x    2020–present   yes     Provisional Mortality Rates
+places_county             swc5-untb    Current                PLACES: County Health
+places_city               dxpw-cm5u    Current                PLACES: City Health
 ...
 ```
 

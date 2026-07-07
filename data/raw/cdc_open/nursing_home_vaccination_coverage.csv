@@ -601,7 +601,6 @@
 "Pneumococcal","States","New Jersey","2011","Age","25-44 Years","49.4","2036"
 "Pneumococcal","States","New Jersey","2020","Race and Ethnicity","White, Non-Hispanic","67.6","76838"
 "Pneumococcal","States","New Jersey","2010","Age","25-44 Years","54.0","2002"
-"Seasonal Influenza","States","New Jersey","2012-13","Age","75-84 Years","78.7","27040"
 "Seasonal Influenza","States","New Jersey","2010-11","Race and Ethnicity","Multiple Races, Non-Hispanic","64.6","144"
 "Seasonal Influenza","States","New Jersey","2019-20","Race and Ethnicity","Hispanic","75.0","6460"
 "Seasonal Influenza","States","New Jersey","2020-21","Race and Ethnicity","Hispanic","75.6","5528"
@@ -644,6 +643,7 @@
 "Seasonal Influenza","States","New Jersey","2008-09","Age","75-84 Years","77.2","28299"
 "Seasonal Influenza","States","New Jersey","2007-08","Age","75-84 Years","77.3","28796"
 "Seasonal Influenza","States","New Jersey","2006-07","Age","75-84 Years","75.2","28924"
+"Seasonal Influenza","States","New Jersey","2012-13","Age","75-84 Years","78.7","27040"
 "Seasonal Influenza","States","New Jersey","2011-12","Age","75-84 Years","78.9","26813"
 "Seasonal Influenza","States","New Jersey","2010-11","Age","75-84 Years","75.8","27227"
 "Seasonal Influenza","States","New Jersey","2009-10","Age","75-84 Years","79.0","27423"
@@ -766,7 +766,6 @@
 "Seasonal Influenza","States","New Jersey","2014-15","All Residents",">=18 Years","77.6","94466"
 "Pneumococcal","States","New Jersey","2011","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","79.6","98"
 "Pneumococcal","States","New Jersey","2010","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","73.1","171"
-"Seasonal Influenza","States","New Jersey","2007-08","Sex","Male","75.3","30492"
 "Pneumococcal","States","New Jersey","2009","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","75.9","323"
 "Pneumococcal","States","New Jersey","2008","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","73.0","333"
 "Pneumococcal","States","New Jersey","2007","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","67.6","207"
@@ -807,6 +806,7 @@
 "Seasonal Influenza","States","New Jersey","2009-10","Sex","Male","76.4","31645"
 "Seasonal Influenza","States","New Jersey","2006-07","Sex","Male","73.4","29518"
 "Seasonal Influenza","States","New Jersey","2008-09","Sex","Male","76.2","31280"
+"Seasonal Influenza","States","New Jersey","2007-08","Sex","Male","75.3","30492"
 "Seasonal Influenza","States","New Jersey","2008-09","Age","18-24 Years","79.6","162"
 "Seasonal Influenza","States","New Jersey","2007-08","Age","18-24 Years","73.9","157"
 "Seasonal Influenza","States","New Jersey","2006-07","Age","18-24 Years","70.7","174"
@@ -2707,7 +2707,6 @@
 "Seasonal Influenza","States","Maine","2011-12","Marital Status","Divorced","79.4","1565"
 "Seasonal Influenza","States","Maine","2012-13","Marital Status","Divorced","81.1","1535"
 "Pneumococcal","States","Maine","2006","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","80.0","15"
-"Seasonal Influenza","States","Maine","2020-21","Marital Status","Never Married","79.3","1283"
 "Pneumococcal","States","Maine","2007","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","64.7","17"
 "Pneumococcal","States","Maine","2008","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","88.2","17"
 "Pneumococcal","States","Maine","2009","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","86.7","15"
@@ -2749,6 +2748,7 @@
 "Seasonal Influenza","States","Maine","2019-20","Marital Status","Married","80.9","3097"
 "Seasonal Influenza","States","Maine","2005-06","Marital Status","Separated","63.0","46"
 "Seasonal Influenza","States","Maine","2006-07","Marital Status","Separated","62.9","35"
+"Seasonal Influenza","States","Maine","2020-21","Marital Status","Never Married","79.3","1283"
 "Seasonal Influenza","States","Maine","2019-20","Marital Status","Never Married","78.9","1485"
 "Seasonal Influenza","States","Maine","2005-06","Marital Status","Married","74.4","3209"
 "Seasonal Influenza","States","Maine","2006-07","Marital Status","Married","75.8","3240"
@@ -3855,7 +3855,6 @@
 "Pneumococcal","HHS Regions/National","Region 1","2011","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2009-10","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2008-09","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","NA",
-"Seasonal Influenza","HHS Regions/National","Region 1","2019-20","Sex","Male","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2007-08","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2006-07","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2005-06","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","NA",
@@ -3893,6 +3892,7 @@
 "Seasonal Influenza","HHS Regions/National","Region 1","2015-16","Marital Status","Widowed","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2014-15","Marital Status","Widowed","NA",
 "Pneumococcal","HHS Regions/National","Region 1","2007","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","NA",
+"Seasonal Influenza","HHS Regions/National","Region 1","2019-20","Sex","Male","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2018-19","Sex","Male","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2017-18","Sex","Male","NA",
 "Seasonal Influenza","HHS Regions/National","Region 1","2016-17","Sex","Male","NA",
@@ -3930,7 +3930,6 @@
 "Pneumococcal","HHS Regions/National","Region 1","2018","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 1","2011","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 1","2010","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
-"Pneumococcal","States","Nevada","2017","All Residents",">=18 Years","41.8","23188"
 "Pneumococcal","HHS Regions/National","Region 1","2019","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 1","2018","All Residents",">=18 Years","72.1","234574"
 "Pneumococcal","HHS Regions/National","Region 1","2017","All Residents",">=18 Years","75.0","238361"
@@ -3969,6 +3968,7 @@
 "Pneumococcal","States","Nevada","2019","Race and Ethnicity","Multiple Races, Non-Hispanic","54.6","218"
 "Pneumococcal","States","Nevada","2020","Race and Ethnicity","Multiple Races, Non-Hispanic","48.8","240"
 "Pneumococcal","States","Nevada","2018","All Residents",">=18 Years","42.7","24413"
+"Pneumococcal","States","Nevada","2017","All Residents",">=18 Years","41.8","23188"
 "Pneumococcal","States","Nevada","2016","All Residents",">=18 Years","44.7","21243"
 "Pneumococcal","States","Nevada","2015","All Residents",">=18 Years","47.1","19826"
 "Pneumococcal","States","Nevada","2014","All Residents",">=18 Years","55.0","19164"
@@ -5185,7 +5185,6 @@
 "Seasonal Influenza","States","Hawaii","2011-12","Race and Ethnicity","Asian, Non-Hispanic","87.6","4081"
 "Seasonal Influenza","States","Hawaii","2010-11","Race and Ethnicity","Asian, Non-Hispanic","86.6","4009"
 "Seasonal Influenza","States","Hawaii","2020-21","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","43.8","16"
-"Pneumococcal","States","Hawaii","2011","Age",">=85 Years","91.0","4333"
 "Seasonal Influenza","States","Hawaii","2019-20","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","75.0","12"
 "Seasonal Influenza","States","Hawaii","2012-13","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","40.0","5"
 "Seasonal Influenza","States","Hawaii","2011-12","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","80.0","5"
@@ -5269,6 +5268,7 @@
 "Pneumococcal","States","Hawaii","2014","Age","75-84 Years","80.6","2715"
 "Pneumococcal","States","Hawaii","2015","Age","75-84 Years","75.9","2814"
 "Pneumococcal","States","Hawaii","2012","Age",">=85 Years","90.0","4467"
+"Pneumococcal","States","Hawaii","2011","Age",">=85 Years","91.0","4333"
 "Pneumococcal","States","Hawaii","2010","Age",">=85 Years","90.7","4161"
 "Pneumococcal","States","Hawaii","2013","Age",">=85 Years","87.0","4477"
 "Pneumococcal","States","Hawaii","2009","Age",">=85 Years","90.3","4030"
@@ -6167,7 +6167,6 @@
 "Seasonal Influenza","States","New Hampshire","2006-07","Education","Technical or Trade School","75.2","359"
 "Seasonal Influenza","States","New Hampshire","2012-13","Marital Status","Never Married","84.3","1214"
 "Seasonal Influenza","States","New Hampshire","2013-14","Marital Status","Never Married","81.9","1272"
-"Seasonal Influenza","States","New Hampshire","2007-08","Education","Some College","80.2","560"
 "Seasonal Influenza","States","New Hampshire","2014-15","Marital Status","Never Married","83.3","1306"
 "Seasonal Influenza","States","New Hampshire","2015-16","Marital Status","Never Married","81.2","1355"
 "Seasonal Influenza","States","New Hampshire","2016-17","Marital Status","Never Married","81.8","1401"
@@ -6208,6 +6207,7 @@
 "Seasonal Influenza","States","New Hampshire","2009-10","Education","Technical or Trade School","82.9","340"
 "Seasonal Influenza","States","New Hampshire","2005-06","Education","Some College","76.8","611"
 "Seasonal Influenza","States","New Hampshire","2006-07","Education","Some College","78.2","616"
+"Seasonal Influenza","States","New Hampshire","2007-08","Education","Some College","80.2","560"
 "Seasonal Influenza","States","New Hampshire","2007-08","Education","High School","82.0","2441"
 "Seasonal Influenza","States","New Hampshire","2008-09","Education","High School","81.8","2487"
 "Seasonal Influenza","States","New Hampshire","2005-06","Education","< High School","79.4","1575"
@@ -7730,7 +7730,6 @@
 "Seasonal Influenza","HHS Regions/National","United States","2017-18","Race and Ethnicity","Hispanic","68.1","133805"
 "Seasonal Influenza","HHS Regions/National","United States","2018-19","Race and Ethnicity","Hispanic","68.8","135217"
 "Seasonal Influenza","HHS Regions/National","United States","2020-21","Race and Ethnicity","Hispanic","68.3","112245"
-"Seasonal Influenza","States","Tennessee","2014-15","Age","25-44 Years","63.6","858"
 "Seasonal Influenza","HHS Regions/National","United States","2019-20","Race and Ethnicity","Hispanic","68.9","133468"
 "Seasonal Influenza","HHS Regions/National","United States","2013-14","Age","55-64 Years","70.1","267298"
 "Seasonal Influenza","HHS Regions/National","United States","2014-15","Age","55-64 Years","68.9","276416"
@@ -7806,7 +7805,6 @@
 "Seasonal Influenza","HHS Regions/National","United States","2005-06","Education","Technical or Trade School","68.2","58850"
 "Seasonal Influenza","HHS Regions/National","United States","2006-07","Education","Technical or Trade School","71.7","57820"
 "Seasonal Influenza","HHS Regions/National","United States","2006-07","Education","Some College","69.1","148221"
-"Seasonal Influenza","States","Tennessee","2011-12","Age","55-64 Years","72.8","5311"
 "Seasonal Influenza","HHS Regions/National","United States","2007-08","Education","Some College","71.8","154004"
 "Seasonal Influenza","HHS Regions/National","United States","2008-09","Education","Technical or Trade School","76.1","56787"
 "Seasonal Influenza","HHS Regions/National","United States","2007-08","Education","Technical or Trade School","75.0","57544"
@@ -7883,6 +7881,8 @@
 "Seasonal Influenza","States","Tennessee","2014-15","Age","45-54 Years","67.4","2050"
 "Seasonal Influenza","States","Tennessee","2010-11","Age","25-44 Years","62.8","745"
 "Seasonal Influenza","States","Tennessee","2015-16","Age","25-44 Years","60.4","953"
+"Seasonal Influenza","States","Tennessee","2014-15","Age","25-44 Years","63.6","858"
+"Seasonal Influenza","States","Tennessee","2011-12","Age","55-64 Years","72.8","5311"
 "Seasonal Influenza","States","Tennessee","2010-11","Age","55-64 Years","71.2","5088"
 "Seasonal Influenza","States","Tennessee","2009-10","Age","55-64 Years","73.9","4978"
 "Seasonal Influenza","States","Tennessee","2008-09","Age","55-64 Years","75.6","4677"
@@ -8546,7 +8546,6 @@
 "Pneumococcal","States","Montana","2009","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","87.3","410"
 "Pneumococcal","States","Montana","2008","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","88.1","419"
 "Pneumococcal","States","Montana","2007","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","84.0","455"
-"Seasonal Influenza","States","Montana","2005-06","Age","25-44 Years","68.4","136"
 "Pneumococcal","States","Montana","2006","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","85.0","394"
 "Seasonal Influenza","States","Montana","2019-20","All Residents",">=18 Years","77.8","6696"
 "Seasonal Influenza","States","Montana","2020-21","All Residents",">=18 Years","77.1","5105"
@@ -8588,6 +8587,7 @@
 "Pneumococcal","States","Montana","2017","Race and Ethnicity","Asian, Non-Hispanic","62.5","16"
 "Pneumococcal","States","Montana","2016","Race and Ethnicity","Asian, Non-Hispanic","69.2","13"
 "Pneumococcal","States","Montana","2015","Race and Ethnicity","Asian, Non-Hispanic","77.8","18"
+"Seasonal Influenza","States","Montana","2005-06","Age","25-44 Years","68.4","136"
 "Seasonal Influenza","States","Montana","2020-21","Age","18-24 Years","100.0","3"
 "Seasonal Influenza","States","Montana","2019-20","Age","18-24 Years","55.6","9"
 "Pneumococcal","States","Montana","2006","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","80.0","25"
@@ -10520,7 +10520,6 @@
 "Seasonal Influenza","States","Idaho","2019-20","Race and Ethnicity","Asian, Non-Hispanic","72.4","29"
 "Seasonal Influenza","States","Idaho","2018-19","Race and Ethnicity","Asian, Non-Hispanic","70.0","30"
 "Seasonal Influenza","States","Idaho","2017-18","Race and Ethnicity","Asian, Non-Hispanic","82.8","29"
-"Pneumococcal","States","Idaho","2007","Race and Ethnicity","Hispanic","79.2","197"
 "Seasonal Influenza","States","Idaho","2016-17","Race and Ethnicity","Asian, Non-Hispanic","70.0","20"
 "Seasonal Influenza","States","Idaho","2015-16","Race and Ethnicity","Asian, Non-Hispanic","84.0","25"
 "Pneumococcal","States","Idaho","2011","All Residents",">=18 Years","80.9","13621"
@@ -10640,6 +10639,7 @@
 "Seasonal Influenza","States","Idaho","2015-16","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","74.3","105"
 "Seasonal Influenza","States","Idaho","2014-15","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","68.2","88"
 "Seasonal Influenza","States","Idaho","2013-14","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","67.0","91"
+"Pneumococcal","States","Idaho","2007","Race and Ethnicity","Hispanic","79.2","197"
 "Pneumococcal","States","Idaho","2006","Race and Ethnicity","Hispanic","69.0","168"
 "Pneumococcal","States","Idaho","2020","Race and Ethnicity","Black, Non-Hispanic","65.4","52"
 "Pneumococcal","States","Idaho","2020","Age","75-84 Years","70.5","3853"
@@ -10810,7 +10810,6 @@
 "Seasonal Influenza","States","Idaho","2012-13","Race and Ethnicity","White, Non-Hispanic","74.3","8482"
 "Seasonal Influenza","States","Idaho","2011-12","Race and Ethnicity","White, Non-Hispanic","74.8","8542"
 "Seasonal Influenza","States","Idaho","2010-11","Race and Ethnicity","White, Non-Hispanic","75.6","8635"
-"Pneumococcal","States","Idaho","2019","Marital Status","Never Married","64.7","1506"
 "Seasonal Influenza","States","Idaho","2009-10","Race and Ethnicity","White, Non-Hispanic","78.7","8619"
 "Seasonal Influenza","States","Idaho","2008-09","Race and Ethnicity","White, Non-Hispanic","79.2","8462"
 "Seasonal Influenza","States","Idaho","2007-08","Race and Ethnicity","White, Non-Hispanic","77.6","8589"
@@ -10854,6 +10853,7 @@
 "Pneumococcal","States","Idaho","2008","Education","Advanced Degree","84.5","297"
 "Pneumococcal","States","Idaho","2006","Marital Status","Married","76.3","3745"
 "Pneumococcal","States","Idaho","2020","Marital Status","Never Married","63.6","1394"
+"Pneumococcal","States","Idaho","2019","Marital Status","Never Married","64.7","1506"
 "Pneumococcal","States","Idaho","2018","Marital Status","Never Married","61.9","1398"
 "Pneumococcal","States","Idaho","2007","Marital Status","Never Married","76.9","847"
 "Pneumococcal","States","Idaho","2006","Marital Status","Never Married","72.1","845"
@@ -13042,7 +13042,6 @@
 "Seasonal Influenza","States","Utah","2006-07","Age","18-24 Years","54.5","44"
 "Seasonal Influenza","States","Utah","2007-08","Age","18-24 Years","74.4","39"
 "Seasonal Influenza","States","Utah","2008-09","Age","18-24 Years","59.5","42"
-"Pneumococcal","States","Utah","2006","Marital Status","Widowed","70.6","6769"
 "Seasonal Influenza","States","Utah","2017-18","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","82.1","162"
 "Seasonal Influenza","States","Utah","2018-19","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","83.3","138"
 "Pneumococcal","States","Utah","2019","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","63.6","198"
@@ -13083,7 +13082,6 @@
 "Pneumococcal","States","Utah","2009","Race and Ethnicity","Hispanic","74.8","461"
 "Pneumococcal","States","Utah","2010","Race and Ethnicity","Hispanic","75.9","515"
 "Seasonal Influenza","States","Utah","2016-17","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","82.4","159"
-"Pneumococcal","States","Utah","2008","Marital Status","Widowed","83.4","6488"
 "Seasonal Influenza","States","Utah","2013-14","Race and Ethnicity","Asian, Non-Hispanic","76.1","71"
 "Seasonal Influenza","States","Utah","2014-15","Race and Ethnicity","Asian, Non-Hispanic","77.5","89"
 "Seasonal Influenza","States","Utah","2019-20","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","83.6","140"
@@ -13204,7 +13202,6 @@
 "Seasonal Influenza","States","Utah","2014-15","Race and Ethnicity","Black, Non-Hispanic","73.1","119"
 "Seasonal Influenza","States","Utah","2015-16","Race and Ethnicity","Black, Non-Hispanic","74.1","112"
 "Seasonal Influenza","States","Utah","2016-17","Race and Ethnicity","Black, Non-Hispanic","74.6","134"
-"Pneumococcal","States","Utah","2009","Marital Status","Widowed","85.5","6293"
 "Seasonal Influenza","States","Utah","2017-18","Race and Ethnicity","Black, Non-Hispanic","71.2","125"
 "Pneumococcal","States","Utah","2015","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","70.0","100"
 "Pneumococcal","States","Utah","2016","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","66.9","118"
@@ -13249,6 +13246,9 @@
 "Pneumococcal","States","Utah","2019","Sex","Male","60.3","9709"
 "Pneumococcal","States","Utah","2020","Sex","Male","61.6","7930"
 "Pneumococcal","States","Utah","2007","Marital Status","Widowed","79.4","6569"
+"Pneumococcal","States","Utah","2006","Marital Status","Widowed","70.6","6769"
+"Pneumococcal","States","Utah","2008","Marital Status","Widowed","83.4","6488"
+"Pneumococcal","States","Utah","2009","Marital Status","Widowed","85.5","6293"
 "Pneumococcal","States","Utah","2010","Marital Status","Widowed","85.4","6416"
 "Pneumococcal","States","Utah","2011","Marital Status","Widowed","85.2","6805"
 "Pneumococcal","States","Utah","2012","Marital Status","Widowed","85.1","6806"
@@ -14185,7 +14185,6 @@
 "Pneumococcal","States","West Virginia","2009","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","70.0","20"
 "Pneumococcal","States","West Virginia","2010","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","83.3","6"
 "Pneumococcal","States","West Virginia","2006","Race and Ethnicity","Black, Non-Hispanic","58.6","636"
-"Pneumococcal","States","West Virginia","2020","Race and Ethnicity","Hispanic","73.3","30"
 "Pneumococcal","States","West Virginia","2007","Race and Ethnicity","Black, Non-Hispanic","66.7","648"
 "Pneumococcal","States","West Virginia","2008","Race and Ethnicity","Black, Non-Hispanic","70.2","685"
 "Seasonal Influenza","States","West Virginia","2009-10","Age","25-44 Years","69.9","209"
@@ -14224,6 +14223,7 @@
 "Pneumococcal","States","West Virginia","2018","Race and Ethnicity","Hispanic","68.4","38"
 "Pneumococcal","States","West Virginia","2019","Race and Ethnicity","Hispanic","71.4","42"
 "Pneumococcal","States","West Virginia","2010","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
+"Pneumococcal","States","West Virginia","2020","Race and Ethnicity","Hispanic","73.3","30"
 "Pneumococcal","States","West Virginia","2009","All Residents",">=18 Years","78.6","22559"
 "Pneumococcal","States","West Virginia","2010","All Residents",">=18 Years","80.4","22798"
 "Pneumococcal","States","West Virginia","2011","All Residents",">=18 Years","81.4","23037"
@@ -15235,7 +15235,6 @@
 "Seasonal Influenza","HHS Regions/National","Region 5","2009-10","Age","45-54 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2008-09","Age","45-54 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2007-08","Age","45-54 Years","NA",
-"Seasonal Influenza","States","Massachusetts","2019-20","Age","45-54 Years","61.3","2038"
 "Seasonal Influenza","States","Massachusetts","2012-13","Marital Status","Never Married","80.1","13601"
 "Seasonal Influenza","States","Massachusetts","2013-14","Marital Status","Never Married","80.3","13787"
 "Seasonal Influenza","States","Massachusetts","2014-15","Marital Status","Never Married","78.6","14305"
@@ -15276,6 +15275,7 @@
 "Seasonal Influenza","States","Massachusetts","2012-13","Age","55-64 Years","75.9","7355"
 "Seasonal Influenza","States","Massachusetts","2007-08","Age","45-54 Years","67.1","2699"
 "Seasonal Influenza","States","Massachusetts","2020-21","Age","45-54 Years","63.5","1676"
+"Seasonal Influenza","States","Massachusetts","2019-20","Age","45-54 Years","61.3","2038"
 "Seasonal Influenza","States","Massachusetts","2005-06","Age","55-64 Years","62.1","5537"
 "Seasonal Influenza","States","Massachusetts","2012-13","Age","45-54 Years","72.8","2881"
 "Seasonal Influenza","States","Massachusetts","2013-14","Age","45-54 Years","73.0","2995"
@@ -15597,7 +15597,6 @@
 "Seasonal Influenza","States","Florida","2010-11","Age","25-44 Years","46.9","2066"
 "Seasonal Influenza","States","Florida","2018-19","Marital Status","Widowed","58.1","58502"
 "Seasonal Influenza","States","Florida","2006-07","Sex","Male","54.3","52991"
-"Pneumococcal","States","Florida","2008","Education","Advanced Degree","64.7","6452"
 "Pneumococcal","States","Florida","2008","Race and Ethnicity","Black, Non-Hispanic","60.7","23706"
 "Pneumococcal","States","Florida","2007","Race and Ethnicity","Black, Non-Hispanic","55.0","22945"
 "Pneumococcal","States","Florida","2011","Race and Ethnicity","Black, Non-Hispanic","62.4","24878"
@@ -15638,6 +15637,7 @@
 "Pneumococcal","States","Florida","2016","Marital Status","Never Married","42.9","30226"
 "Pneumococcal","States","Florida","2014","Marital Status","Never Married","57.4","28067"
 "Pneumococcal","States","Florida","2013","Marital Status","Never Married","59.0","26380"
+"Pneumococcal","States","Florida","2008","Education","Advanced Degree","64.7","6452"
 "Pneumococcal","States","Florida","2009","Marital Status","Never Married","63.1","20849"
 "Pneumococcal","States","Florida","2008","Marital Status","Never Married","59.3","19575"
 "Pneumococcal","States","Florida","2007","Marital Status","Never Married","53.1","18973"
@@ -17458,7 +17458,6 @@
 "Seasonal Influenza","HHS Regions/National","United States","2019-20","Marital Status","Separated","68.9","30036"
 "Seasonal Influenza","HHS Regions/National","United States","2005-06","Marital Status","Divorced","70.7","186752"
 "Pneumococcal","HHS Regions/National","United States","2012","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","80.2","11543"
-"Pneumococcal","HHS Regions/National","United States","2017","Sex","Female","69.9","2322095"
 "Pneumococcal","HHS Regions/National","United States","2013","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","79.4","12053"
 "Pneumococcal","HHS Regions/National","United States","2014","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","78.5","12740"
 "Pneumococcal","HHS Regions/National","United States","2015","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","71.1","12982"
@@ -17496,6 +17495,7 @@
 "Pneumococcal","HHS Regions/National","United States","2011","Marital Status","Divorced","77.2","369120"
 "Pneumococcal","HHS Regions/National","United States","2015","Sex","Female","72.2","2347173"
 "Pneumococcal","HHS Regions/National","United States","2016","Sex","Female","71.3","2329267"
+"Pneumococcal","HHS Regions/National","United States","2017","Sex","Female","69.9","2322095"
 "Pneumococcal","HHS Regions/National","United States","2018","Sex","Female","68.1","2296347"
 "Pneumococcal","HHS Regions/National","United States","2020","Sex","Female","65.6","1891380"
 "Pneumococcal","HHS Regions/National","United States","2019","Sex","Female","66.5","2276909"
@@ -17687,7 +17687,6 @@
 "Pneumococcal","HHS Regions/National","United States","2019","Age","55-64 Years","52.7","421699"
 "Pneumococcal","HHS Regions/National","United States","2020","Age","55-64 Years","51.7","364324"
 "Pneumococcal","HHS Regions/National","United States","2006","Age","65-74 Years","64.3","515977"
-"Seasonal Influenza","States","Arkansas","2017-18","Marital Status","Separated","82.4","250"
 "Pneumococcal","HHS Regions/National","United States","2007","Age","55-64 Years","62.5","272275"
 "Pneumococcal","HHS Regions/National","United States","2008","Age","55-64 Years","66.2","286365"
 "Pneumococcal","HHS Regions/National","United States","2020","Age","45-54 Years","45.0","112800"
@@ -17884,7 +17883,6 @@
 "Seasonal Influenza","States","Arkansas","2011-12","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","70.8","24"
 "Seasonal Influenza","States","Arkansas","2010-11","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","66.7","24"
 "Pneumococcal","States","Arkansas","2016","Race and Ethnicity","Black, Non-Hispanic","73.6","4542"
-"Pneumococcal","States","Arkansas","2013","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","89.3","28"
 "Seasonal Influenza","States","Arkansas","2009-10","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","92.9","42"
 "Pneumococcal","States","Arkansas","2015","Race and Ethnicity","Black, Non-Hispanic","77.6","4259"
 "Pneumococcal","States","Arkansas","2014","Race and Ethnicity","Black, Non-Hispanic","84.1","4152"
@@ -17923,6 +17921,7 @@
 "Pneumococcal","States","Arkansas","2016","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","71.4","42"
 "Pneumococcal","States","Arkansas","2015","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","75.0","32"
 "Pneumococcal","States","Arkansas","2014","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","78.4","37"
+"Pneumococcal","States","Arkansas","2013","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","89.3","28"
 "Pneumococcal","States","Arkansas","2012","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","88.9","27"
 "Seasonal Influenza","States","Arkansas","2011-12","Marital Status","Widowed","89.4","13029"
 "Seasonal Influenza","States","Arkansas","2013-14","Sex","Male","86.6","9004"
@@ -17965,6 +17964,7 @@
 "Seasonal Influenza","States","Arkansas","2020-21","Marital Status","Separated","78.4","236"
 "Seasonal Influenza","States","Arkansas","2019-20","Marital Status","Separated","81.9","259"
 "Seasonal Influenza","States","Arkansas","2018-19","Marital Status","Separated","81.0","258"
+"Seasonal Influenza","States","Arkansas","2017-18","Marital Status","Separated","82.4","250"
 "Seasonal Influenza","States","Arkansas","2016-17","Marital Status","Separated","81.5","248"
 "Seasonal Influenza","States","Arkansas","2015-16","Marital Status","Separated","78.4","208"
 "Seasonal Influenza","States","Arkansas","2016-17","Age","18-24 Years","75.9","29"
@@ -18579,7 +18579,6 @@
 "Seasonal Influenza","States","Rhode Island","2020-21","Age",">=85 Years","84.2","4485"
 "Seasonal Influenza","States","Rhode Island","2018-19","Age",">=85 Years","85.6","6069"
 "Seasonal Influenza","States","Rhode Island","2019-20","Age",">=85 Years","84.7","5686"
-"Seasonal Influenza","States","Rhode Island","2013-14","Marital Status","Married","83.3","3395"
 "Seasonal Influenza","States","Rhode Island","2005-06","Education","< High School","76.8","2822"
 "Seasonal Influenza","States","Rhode Island","2006-07","Education","< High School","78.9","2576"
 "Seasonal Influenza","States","Rhode Island","2007-08","Education","< High School","78.9","2492"
@@ -18620,6 +18619,7 @@
 "Seasonal Influenza","States","Rhode Island","2010-11","Marital Status","Married","77.5","3287"
 "Seasonal Influenza","States","Rhode Island","2011-12","Marital Status","Married","79.6","3298"
 "Seasonal Influenza","States","Rhode Island","2012-13","Marital Status","Married","82.9","3332"
+"Seasonal Influenza","States","Rhode Island","2013-14","Marital Status","Married","83.3","3395"
 "Seasonal Influenza","States","Rhode Island","2014-15","Marital Status","Married","81.4","3606"
 "Seasonal Influenza","States","Rhode Island","2015-16","Marital Status","Married","81.4","3576"
 "Seasonal Influenza","States","Rhode Island","2007-08","Marital Status","Married","79.1","2521"
@@ -19016,7 +19016,6 @@
 "Pneumococcal","States","Rhode Island","2010","Education","High School","84.4","3393"
 "Pneumococcal","States","Rhode Island","2006","Education","Technical or Trade School","78.0","478"
 "Pneumococcal","States","Rhode Island","2007","Education","Technical or Trade School","77.2","464"
-"Pneumococcal","States","Rhode Island","2019","Sex","Female","75.2","13216"
 "Pneumococcal","States","Rhode Island","2008","Education","Technical or Trade School","80.0","436"
 "Pneumococcal","States","Rhode Island","2007","Education","High School","78.7","4110"
 "Pneumococcal","States","Rhode Island","2008","Education","High School","82.3","4344"
@@ -19061,6 +19060,7 @@
 "Pneumococcal","States","Rhode Island","2016","Sex","Female","80.9","13222"
 "Pneumococcal","States","Rhode Island","2017","Sex","Female","81.4","13528"
 "Pneumococcal","States","Rhode Island","2018","Sex","Female","78.6","13336"
+"Pneumococcal","States","Rhode Island","2019","Sex","Female","75.2","13216"
 "Pneumococcal","States","Rhode Island","2020","Sex","Female","72.9","10373"
 "Pneumococcal","States","Rhode Island","2007","Marital Status","Divorced","77.6","1390"
 "Pneumococcal","States","Rhode Island","2006","Sex","Male","75.7","5483"
@@ -19224,7 +19224,6 @@
 "Seasonal Influenza","HHS Regions/National","Region 5","2008-09","All Residents",">=18 Years","75.7","523702"
 "Seasonal Influenza","HHS Regions/National","Region 5","2007-08","All Residents",">=18 Years","74.4","528604"
 "Seasonal Influenza","HHS Regions/National","Region 5","2012-13","All Residents",">=18 Years","77.1","531203"
-"Seasonal Influenza","HHS Regions/National","Region 5","2005-06","Age","65-74 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2011-12","All Residents",">=18 Years","76.7","526307"
 "Pneumococcal","HHS Regions/National","Region 5","2006","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 5","2019","Race and Ethnicity","Asian, Non-Hispanic","NA",
@@ -19340,7 +19339,6 @@
 "Pneumococcal","HHS Regions/National","Region 5","2013","Race and Ethnicity","Black, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 5","2012","Race and Ethnicity","Black, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2010-11","Race and Ethnicity","Black, Non-Hispanic","NA",
-"Seasonal Influenza","HHS Regions/National","Region 5","2005-06","Age","75-84 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2009-10","Race and Ethnicity","Black, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2008-09","Race and Ethnicity","Black, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2007-08","Race and Ethnicity","Black, Non-Hispanic","NA",
@@ -19497,6 +19495,8 @@
 "Seasonal Influenza","HHS Regions/National","Region 5","2008-09","Age","65-74 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2007-08","Age","65-74 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2006-07","Age","65-74 Years","NA",
+"Seasonal Influenza","HHS Regions/National","Region 5","2005-06","Age","65-74 Years","NA",
+"Seasonal Influenza","HHS Regions/National","Region 5","2005-06","Age","75-84 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2019-20","Age","65-74 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2018-19","Age","65-74 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2017-18","Age","65-74 Years","NA",
@@ -19576,7 +19576,6 @@
 "Seasonal Influenza","HHS Regions/National","Region 5","2005-06","Race and Ethnicity","White, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2019-20","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2018-19","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
-"Seasonal Influenza","HHS Regions/National","Region 5","2011-12","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2017-18","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2016-17","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2013-14","Race and Ethnicity","White, Non-Hispanic","NA",
@@ -19615,6 +19614,7 @@
 "Seasonal Influenza","HHS Regions/National","Region 5","2015-16","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2019-20","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2012-13","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
+"Seasonal Influenza","HHS Regions/National","Region 5","2011-12","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 5","2019","Age","25-44 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 5","2018","Age","25-44 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 5","2010-11","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
@@ -20151,7 +20151,6 @@
 "Seasonal Influenza","States","Colorado","2005-06","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","73.6","239"
 "Seasonal Influenza","States","Colorado","2020-21","Race and Ethnicity","Asian, Non-Hispanic","77.7","260"
 "Pneumococcal","States","Colorado","2020","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","63.3","49"
-"Seasonal Influenza","States","Colorado","2016-17","Sex","Male","74.1","13622"
 "Pneumococcal","States","Colorado","2019","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","56.9","51"
 "Pneumococcal","States","Colorado","2018","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","47.3","55"
 "Pneumococcal","States","Colorado","2017","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","54.8","42"
@@ -20229,6 +20228,7 @@
 "Seasonal Influenza","States","Colorado","2019-20","Sex","Male","74.8","13428"
 "Seasonal Influenza","States","Colorado","2018-19","Sex","Male","74.6","13662"
 "Seasonal Influenza","States","Colorado","2017-18","Sex","Male","75.2","13800"
+"Seasonal Influenza","States","Colorado","2016-17","Sex","Male","74.1","13622"
 "Seasonal Influenza","States","Colorado","2015-16","Sex","Male","76.1","12720"
 "Seasonal Influenza","States","Colorado","2014-15","Sex","Male","76.1","12259"
 "Seasonal Influenza","States","Colorado","2009-10","Age","25-44 Years","69.9","435"
@@ -21690,7 +21690,6 @@
 "Pneumococcal","States","Minnesota","2014","Age","45-54 Years","65.5","2469"
 "Pneumococcal","States","Minnesota","2015","Age","45-54 Years","59.9","2274"
 "Seasonal Influenza","States","Minnesota","2020-21","Race and Ethnicity","Multiple Races, Non-Hispanic","78.0","59"
-"Seasonal Influenza","States","Minnesota","2008-09","Sex","Female","86.3","35798"
 "Seasonal Influenza","States","Minnesota","2010-11","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","89.7","29"
 "Seasonal Influenza","States","Minnesota","2011-12","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","91.2","34"
 "Seasonal Influenza","States","Minnesota","2012-13","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","91.4","35"
@@ -21733,6 +21732,7 @@
 "Seasonal Influenza","States","Minnesota","2005-06","Sex","Female","81.4","37165"
 "Seasonal Influenza","States","Minnesota","2006-07","Sex","Female","83.7","36612"
 "Seasonal Influenza","States","Minnesota","2007-08","Sex","Female","86.1","36571"
+"Seasonal Influenza","States","Minnesota","2008-09","Sex","Female","86.3","35798"
 "Seasonal Influenza","States","Minnesota","2009-10","Sex","Female","88.4","34664"
 "Seasonal Influenza","States","Minnesota","2010-11","Sex","Female","86.6","34823"
 "Seasonal Influenza","States","Minnesota","2011-12","Sex","Female","86.9","34276"
@@ -22307,7 +22307,6 @@
 "Seasonal Influenza","States","Georgia","2020-21","Race and Ethnicity","Multiple Races, Non-Hispanic","67.7","62"
 "Seasonal Influenza","States","Georgia","2010-11","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","61.5","13"
 "Seasonal Influenza","States","Georgia","2011-12","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","58.3","24"
-"Seasonal Influenza","States","Washington","2008-09","Age","65-74 Years","73.7","6172"
 "Seasonal Influenza","States","Georgia","2012-13","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","59.5","37"
 "Seasonal Influenza","States","Georgia","2013-14","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","64.1","39"
 "Seasonal Influenza","States","Georgia","2014-15","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","67.4","43"
@@ -22349,6 +22348,7 @@
 "Seasonal Influenza","States","Washington","2020-21","Age","55-64 Years","68.6","2644"
 "Seasonal Influenza","States","Washington","2005-06","Age","65-74 Years","68.2","5748"
 "Seasonal Influenza","States","Washington","2009-10","Age","65-74 Years","75.2","6576"
+"Seasonal Influenza","States","Washington","2008-09","Age","65-74 Years","73.7","6172"
 "Seasonal Influenza","States","Washington","2007-08","Age","65-74 Years","72.8","6029"
 "Seasonal Influenza","States","Washington","2006-07","Age","65-74 Years","69.4","5891"
 "Pneumococcal","States","Washington","2014","Age","18-24 Years","41.7","115"
@@ -23261,7 +23261,6 @@
 "Pneumococcal","States","Ohio","2007","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","60.0","130"
 "Pneumococcal","States","Ohio","2008","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","67.6","102"
 "Pneumococcal","States","Ohio","2009","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","71.2","104"
-"Pneumococcal","States","Ohio","2008","Race and Ethnicity","Hispanic","67.5","1083"
 "Pneumococcal","States","Ohio","2010","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","73.5","196"
 "Pneumococcal","States","Ohio","2011","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","63.5","85"
 "Seasonal Influenza","States","Ohio","2014-15","All Residents",">=18 Years","74.0","146680"
@@ -23301,6 +23300,7 @@
 "Seasonal Influenza","States","Ohio","2019-20","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","73.1","52"
 "Seasonal Influenza","States","Ohio","2010-11","Race and Ethnicity","Asian, Non-Hispanic","74.1","224"
 "Seasonal Influenza","States","Ohio","2011-12","Race and Ethnicity","Asian, Non-Hispanic","73.7","255"
+"Pneumococcal","States","Ohio","2008","Race and Ethnicity","Hispanic","67.5","1083"
 "Pneumococcal","States","Ohio","2009","Race and Ethnicity","Hispanic","71.3","1171"
 "Pneumococcal","States","Ohio","2010","Race and Ethnicity","Hispanic","75.3","1188"
 "Seasonal Influenza","States","Ohio","2015-16","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","67.1","73"
@@ -23978,7 +23978,6 @@
 "Pneumococcal","HHS Regions/National","Region 10","2015","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 10","2014","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 10","2013","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","NA",
-"Seasonal Influenza","HHS Regions/National","Region 10","2006-07","Age","18-24 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 10","2012","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 10","2014-15","Marital Status","Separated","NA",
 "Seasonal Influenza","HHS Regions/National","Region 10","2011-12","Sex","Female","NA",
@@ -24019,6 +24018,7 @@
 "Seasonal Influenza","HHS Regions/National","Region 10","2016-17","Sex","Female","NA",
 "Seasonal Influenza","HHS Regions/National","Region 10","2008-09","Age","18-24 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 10","2007-08","Age","18-24 Years","NA",
+"Seasonal Influenza","HHS Regions/National","Region 10","2006-07","Age","18-24 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 10","2005-06","Age","18-24 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 10","2011-12","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 10","2019-20","Marital Status","Divorced","NA",
@@ -25538,7 +25538,6 @@
 "Seasonal Influenza","States","Pennsylvania","2007-08","Age","55-64 Years","68.7","9381"
 "Seasonal Influenza","States","Pennsylvania","2006-07","Age","55-64 Years","65.8","9068"
 "Seasonal Influenza","States","Pennsylvania","2005-06","Age","55-64 Years","64.2","8715"
-"Seasonal Influenza","HHS Regions/National","Region 6","2019-20","Age","75-84 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2008-09","Race and Ethnicity","Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2007","Race and Ethnicity","White, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2008","Race and Ethnicity","White, Non-Hispanic","NA",
@@ -25620,6 +25619,7 @@
 "Seasonal Influenza","HHS Regions/National","Region 6","2015-16","Age","75-84 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2017-18","Age","18-24 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2016-17","Age","75-84 Years","NA",
+"Seasonal Influenza","HHS Regions/National","Region 6","2019-20","Age","75-84 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2005-06","Age",">=85 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2006-07","Age",">=85 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2014-15","Age",">=85 Years","NA",
@@ -26833,7 +26833,6 @@
 "Pneumococcal","HHS Regions/National","Region 6","2019","Age","55-64 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2006","Age","65-74 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2008","Age","55-64 Years","NA",
-"Pneumococcal","HHS Regions/National","Region 6","2018","Age","45-54 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2015-16","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2009","Age","45-54 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 6","2016-17","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
@@ -26871,6 +26870,7 @@
 "Seasonal Influenza","HHS Regions/National","Region 6","2018-19","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2016","Age","45-54 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2017","Age","45-54 Years","NA",
+"Pneumococcal","HHS Regions/National","Region 6","2018","Age","45-54 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2019","Age","45-54 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2006","Age","55-64 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 6","2007","Age","55-64 Years","NA",
@@ -27784,7 +27784,6 @@
 "Pneumococcal","States","Wyoming","2009","Age","45-54 Years","59.6","156"
 "Seasonal Influenza","States","Wyoming","2016-17","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NR",
 "Seasonal Influenza","States","Wyoming","2017-18","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NR",
-"Pneumococcal","States","Wyoming","2016","Age","75-84 Years","74.4","1418"
 "Seasonal Influenza","States","Wyoming","2019-20","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NR",
 "Seasonal Influenza","States","Wyoming","2018-19","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","80.0","5"
 "Seasonal Influenza","States","Wyoming","2005-06","Race and Ethnicity","White, Non-Hispanic","82.3","3669"
@@ -27827,6 +27826,7 @@
 "Pneumococcal","States","Wyoming","2015","Age","75-84 Years","78.8","1456"
 "Pneumococcal","States","Wyoming","2014","Age","75-84 Years","85.4","1502"
 "Pneumococcal","States","Wyoming","2020","Age","75-84 Years","72.1","1394"
+"Pneumococcal","States","Wyoming","2016","Age","75-84 Years","74.4","1418"
 "Pneumococcal","States","Wyoming","2017","Age","75-84 Years","78.9","1444"
 "Pneumococcal","States","Wyoming","2018","Age","75-84 Years","76.0","1599"
 "Pneumococcal","States","Wyoming","2019","Age","75-84 Years","75.0","1558"
@@ -30354,7 +30354,6 @@
 "Pneumococcal","States","Arizona","2008","Marital Status","Married","75.9","12326"
 "Seasonal Influenza","States","Arizona","2019-20","Race and Ethnicity","Multiple Races, Non-Hispanic","65.6","32"
 "Seasonal Influenza","States","Arizona","2011-12","Race and Ethnicity","Multiple Races, Non-Hispanic","80.8","26"
-"Pneumococcal","States","Arizona","2011","Age","55-64 Years","64.3","6097"
 "Seasonal Influenza","States","Arizona","2012-13","Race and Ethnicity","Multiple Races, Non-Hispanic","77.6","49"
 "Pneumococcal","States","Arizona","2018","Age","25-44 Years","25.8","2561"
 "Pneumococcal","States","Arizona","2019","Age","25-44 Years","24.1","2465"
@@ -30396,6 +30395,7 @@
 "Pneumococcal","States","Arizona","2010","Age","75-84 Years","77.9","15520"
 "Pneumococcal","States","Arizona","2009","Age","55-64 Years","65.6","5031"
 "Pneumococcal","States","Arizona","2010","Age","55-64 Years","65.6","5574"
+"Pneumococcal","States","Arizona","2011","Age","55-64 Years","64.3","6097"
 "Pneumococcal","States","Arizona","2012","Age","55-64 Years","62.8","6231"
 "Pneumococcal","States","Arizona","2013","Age","55-64 Years","59.3","6471"
 "Pneumococcal","States","Arizona","2014","Age","55-64 Years","56.3","7164"
@@ -31461,7 +31461,6 @@
 "Seasonal Influenza","States","South Dakota","2020-21","Race and Ethnicity","Asian, Non-Hispanic","86.7","15"
 "Seasonal Influenza","States","South Dakota","2006-07","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","75.0","8"
 "Seasonal Influenza","States","South Dakota","2007-08","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","100.0","8"
-"Seasonal Influenza","States","South Dakota","2019-20","Age","65-74 Years","84.7","1337"
 "Seasonal Influenza","States","South Dakota","2008-09","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","88.9","9"
 "Seasonal Influenza","States","South Dakota","2009-10","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","85.7","7"
 "Pneumococcal","States","South Dakota","2011","Race and Ethnicity","Multiple Races, Non-Hispanic","NR",
@@ -31579,6 +31578,7 @@
 "Seasonal Influenza","States","South Dakota","2016-17","Age","65-74 Years","84.9","1227"
 "Seasonal Influenza","States","South Dakota","2017-18","Age","65-74 Years","85.4","1233"
 "Seasonal Influenza","States","South Dakota","2018-19","Age","65-74 Years","83.9","1270"
+"Seasonal Influenza","States","South Dakota","2019-20","Age","65-74 Years","84.7","1337"
 "Seasonal Influenza","States","South Dakota","2005-06","Age","75-84 Years","86.2","2872"
 "Seasonal Influenza","States","South Dakota","2020-21","Age","65-74 Years","86.6","1235"
 "Seasonal Influenza","States","South Dakota","2010-11","Age","65-74 Years","83.9","1009"
@@ -32113,7 +32113,6 @@
 "Seasonal Influenza","States","District of Columbia","2012-13","Age","65-74 Years","69.3","916"
 "Seasonal Influenza","States","District of Columbia","2013-14","Age","65-74 Years","63.9","988"
 "Seasonal Influenza","States","District of Columbia","2014-15","Age","65-74 Years","67.8","973"
-"Pneumococcal","States","District of Columbia","2015","Marital Status","Married","58.1","1090"
 "Seasonal Influenza","States","District of Columbia","2015-16","Age","65-74 Years","66.5","1001"
 "Seasonal Influenza","States","District of Columbia","2016-17","Age","65-74 Years","67.4","1021"
 "Seasonal Influenza","States","District of Columbia","2017-18","Age","65-74 Years","65.3","1011"
@@ -32230,7 +32229,6 @@
 "Pneumococcal","States","District of Columbia","2018","Race and Ethnicity","Asian, Non-Hispanic","63.8","47"
 "Pneumococcal","States","District of Columbia","2019","Race and Ethnicity","Asian, Non-Hispanic","68.2","44"
 "Pneumococcal","States","District of Columbia","2020","Race and Ethnicity","Asian, Non-Hispanic","45.5","33"
-"Pneumococcal","States","District of Columbia","2009","Marital Status","Separated","61.1","108"
 "Pneumococcal","States","District of Columbia","2006","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","34.8","46"
 "Pneumococcal","States","District of Columbia","2007","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","57.6","59"
 "Seasonal Influenza","States","District of Columbia","2019-20","Age","18-24 Years","28.6","7"
@@ -32420,6 +32418,8 @@
 "Pneumococcal","States","District of Columbia","2012","Marital Status","Married","60.6","1182"
 "Pneumococcal","States","District of Columbia","2013","Marital Status","Married","60.6","1220"
 "Pneumococcal","States","District of Columbia","2014","Marital Status","Married","60.9","1144"
+"Pneumococcal","States","District of Columbia","2015","Marital Status","Married","58.1","1090"
+"Pneumococcal","States","District of Columbia","2009","Marital Status","Separated","61.1","108"
 "Pneumococcal","States","District of Columbia","2010","Marital Status","Separated","60.4","111"
 "Pneumococcal","States","District of Columbia","2011","Marital Status","Separated","73.5","98"
 "Pneumococcal","States","District of Columbia","2012","Marital Status","Separated","66.3","95"
@@ -32995,7 +32995,6 @@
 "Pneumococcal","States","Alaska","2011","Race and Ethnicity","Black, Non-Hispanic","87.0","46"
 "Pneumococcal","States","Alaska","2010","Race and Ethnicity","Black, Non-Hispanic","83.3","60"
 "Seasonal Influenza","States","Alaska","2008-09","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","91.5","200"
-"Seasonal Influenza","States","Alaska","2019-20","Marital Status","Separated","68.4","19"
 "Seasonal Influenza","States","Alaska","2007-08","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","88.3","196"
 "Seasonal Influenza","States","Alaska","2006-07","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","89.4","198"
 "Seasonal Influenza","States","Alaska","2005-06","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","90.2","215"
@@ -33037,6 +33036,7 @@
 "Seasonal Influenza","States","Alaska","2013-14","All Residents",">=18 Years","82.8","948"
 "Seasonal Influenza","States","Alaska","2005-06","Marital Status","Divorced","84.2","146"
 "Seasonal Influenza","States","Alaska","2020-21","Marital Status","Separated","55.6","18"
+"Seasonal Influenza","States","Alaska","2019-20","Marital Status","Separated","68.4","19"
 "Seasonal Influenza","States","Alaska","2018-19","Marital Status","Separated","70.6","17"
 "Seasonal Influenza","States","Alaska","2017-18","Marital Status","Separated","84.2","19"
 "Seasonal Influenza","States","Alaska","2016-17","Marital Status","Separated","86.7","15"
@@ -33077,7 +33077,6 @@
 "Pneumococcal","States","Alaska","2018","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","82.7","300"
 "Pneumococcal","States","Alaska","2017","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","84.4","282"
 "Pneumococcal","States","Alaska","2016","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","88.9","252"
-"Seasonal Influenza","States","Alaska","2012-13","Age","18-24 Years","NR",
 "Pneumococcal","States","Alaska","2015","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","86.6","239"
 "Pneumococcal","States","Alaska","2014","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","92.0","237"
 "Pneumococcal","States","Alaska","2013","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","91.5","247"
@@ -33120,6 +33119,7 @@
 "Seasonal Influenza","States","Alaska","2015-16","Age","18-24 Years","66.7",
 "Seasonal Influenza","States","Alaska","2014-15","Age","18-24 Years","NR",
 "Seasonal Influenza","States","Alaska","2013-14","Age","18-24 Years","NR",
+"Seasonal Influenza","States","Alaska","2012-13","Age","18-24 Years","NR",
 "Pneumococcal","States","Alaska","2014","Race and Ethnicity","Asian, Non-Hispanic","79.4","34"
 "Pneumococcal","States","Alaska","2013","Race and Ethnicity","Asian, Non-Hispanic","76.9","26"
 "Pneumococcal","States","Alaska","2012","Race and Ethnicity","Asian, Non-Hispanic","78.8","33"
@@ -35913,7 +35913,6 @@
 "Pneumococcal","States","North Carolina","2019","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","53.0","66"
 "Seasonal Influenza","States","North Carolina","2013-14","Race and Ethnicity","Black, Non-Hispanic","68.4","15647"
 "Seasonal Influenza","States","North Carolina","2014-15","Race and Ethnicity","Black, Non-Hispanic","65.5","16001"
-"Pneumococcal","States","North Carolina","2007","Age","25-44 Years","58.1","1199"
 "Seasonal Influenza","States","North Carolina","2015-16","Race and Ethnicity","Black, Non-Hispanic","66.7","16395"
 "Seasonal Influenza","States","North Carolina","2016-17","Race and Ethnicity","Black, Non-Hispanic","64.8","16951"
 "Seasonal Influenza","States","North Carolina","2017-18","Race and Ethnicity","Black, Non-Hispanic","65.6","17206"
@@ -35953,6 +35952,7 @@
 "Pneumococcal","States","North Carolina","2020","Age","18-24 Years","33.3","42"
 "Pneumococcal","States","North Carolina","2019","Age","18-24 Years","31.6","57"
 "Pneumococcal","States","North Carolina","2006","Age","25-44 Years","45.9","1168"
+"Pneumococcal","States","North Carolina","2007","Age","25-44 Years","58.1","1199"
 "Pneumococcal","States","North Carolina","2018","Age","18-24 Years","28.6","63"
 "Seasonal Influenza","States","North Carolina","2015-16","Race and Ethnicity","Hispanic","61.8","393"
 "Seasonal Influenza","States","North Carolina","2016-17","Race and Ethnicity","Hispanic","66.7","459"
@@ -36953,7 +36953,6 @@
 "Pneumococcal","States","Michigan","2012","Race and Ethnicity","Multiple Races, Non-Hispanic","81.5","54"
 "Pneumococcal","States","Michigan","2011","Race and Ethnicity","Multiple Races, Non-Hispanic","81.1","74"
 "Seasonal Influenza","States","Michigan","2009-10","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","69.4","216"
-"Seasonal Influenza","States","Michigan","2018-19","Sex","Male","67.9","33180"
 "Seasonal Influenza","States","Michigan","2008-09","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","70.1","264"
 "Pneumococcal","States","Michigan","2008","All Residents",">=18 Years","75.0","105481"
 "Pneumococcal","States","Michigan","2007","All Residents",">=18 Years","72.8","101156"
@@ -36995,6 +36994,7 @@
 "Seasonal Influenza","States","Michigan","2012-13","Marital Status","Widowed","78.2","34625"
 "Seasonal Influenza","States","Michigan","2011-12","Marital Status","Widowed","78.2","35014"
 "Seasonal Influenza","States","Michigan","2019-20","Sex","Male","65.9","32394"
+"Seasonal Influenza","States","Michigan","2018-19","Sex","Male","67.9","33180"
 "Seasonal Influenza","States","Michigan","2017-18","Sex","Male","67.8","32764"
 "Seasonal Influenza","States","Michigan","2016-17","Sex","Male","68.6","32153"
 "Pneumococcal","States","Michigan","2007","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","59.5","304"
@@ -37796,7 +37796,6 @@
 "Seasonal Influenza","HHS Regions/National","Region 9","2012-13","Race and Ethnicity","White, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2011-12","Race and Ethnicity","White, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2010-11","Race and Ethnicity","White, Non-Hispanic","NA",
-"Pneumococcal","HHS Regions/National","Region 9","2009","Age","45-54 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2009-10","Race and Ethnicity","White, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2008-09","Race and Ethnicity","White, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2007-08","Race and Ethnicity","White, Non-Hispanic","NA",
@@ -37839,6 +37838,7 @@
 "Pneumococcal","HHS Regions/National","Region 9","2016","Age","45-54 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2018-19","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2017-18","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
+"Pneumococcal","HHS Regions/National","Region 9","2009","Age","45-54 Years","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2015-16","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Seasonal Influenza","HHS Regions/National","Region 9","2019-20","Race and Ethnicity","Multiple Races, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 9","2013","Age","45-54 Years","NA",
@@ -40458,7 +40458,6 @@
 "Pneumococcal","States","Oklahoma","2010","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","85.0","1293"
 "Pneumococcal","States","Oklahoma","2009","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","85.0","1423"
 "Pneumococcal","States","Oklahoma","2008","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","82.2","1427"
-"Seasonal Influenza","States","Oklahoma","2018-19","Sex","Male","81.7","11243"
 "Pneumococcal","States","Oklahoma","2007","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","80.0","1400"
 "Pneumococcal","States","Oklahoma","2006","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","74.9","1437"
 "Pneumococcal","States","Oklahoma","2020","Marital Status","Widowed","73.2","13853"
@@ -40498,6 +40497,7 @@
 "Seasonal Influenza","States","Oklahoma","2014-15","Marital Status","Widowed","84.8","13243"
 "Pneumococcal","States","Oklahoma","2007","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","74.5","94"
 "Seasonal Influenza","States","Oklahoma","2019-20","Sex","Male","80.2","11124"
+"Seasonal Influenza","States","Oklahoma","2018-19","Sex","Male","81.7","11243"
 "Seasonal Influenza","States","Oklahoma","2017-18","Sex","Male","80.8","11182"
 "Seasonal Influenza","States","Oklahoma","2016-17","Sex","Male","80.6","10905"
 "Seasonal Influenza","States","Oklahoma","2013-14","Marital Status","Widowed","85.1","13272"
@@ -41652,7 +41652,6 @@
 "Pneumococcal","States","Vermont","2016","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","33.3","6"
 "Pneumococcal","States","Vermont","2015","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","NR",
 "Pneumococcal","States","Vermont","2014","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","NR",
-"Seasonal Influenza","States","Vermont","2008-09","Age","18-24 Years","NR",
 "Pneumococcal","States","Vermont","2013","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","44.4","9"
 "Pneumococcal","States","Vermont","2012","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","NR",
 "Seasonal Influenza","States","Vermont","2014-15","Marital Status","Separated","89.2","37"
@@ -41695,6 +41694,7 @@
 "Seasonal Influenza","States","Vermont","2009-10","Sex","Male","84.2","1787"
 "Seasonal Influenza","States","Vermont","2015-16","Sex","Female","83.1","3160"
 "Seasonal Influenza","States","Vermont","2016-17","Sex","Female","81.5","3116"
+"Seasonal Influenza","States","Vermont","2008-09","Age","18-24 Years","NR",
 "Seasonal Influenza","States","Vermont","2007-08","Age","18-24 Years","NR",
 "Seasonal Influenza","States","Vermont","2006-07","Age","18-24 Years","NR",
 "Seasonal Influenza","States","Vermont","2005-06","Age","18-24 Years","NR",
@@ -42567,7 +42567,6 @@
 "Pneumococcal","States","Kansas","2010","Race and Ethnicity","Black, Non-Hispanic","75.4","1711"
 "Seasonal Influenza","States","Kansas","2008-09","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","83.3","72"
 "Pneumococcal","States","Kansas","2009","Race and Ethnicity","Black, Non-Hispanic","76.5","1630"
-"Pneumococcal","States","Kansas","2006","Race and Ethnicity","Hispanic","71.6","416"
 "Seasonal Influenza","States","Kansas","2007-08","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","81.7","82"
 "Seasonal Influenza","States","Kansas","2006-07","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","93.7","79"
 "Seasonal Influenza","States","Kansas","2005-06","Race and Ethnicity","American Indian or Alaska Native, Non-Hispanic","78.9","76"
@@ -42609,6 +42608,7 @@
 "Pneumococcal","States","Kansas","2013","Race and Ethnicity","Black, Non-Hispanic","78.0","1752"
 "Pneumococcal","States","Kansas","2012","Race and Ethnicity","Black, Non-Hispanic","76.0","1782"
 "Pneumococcal","States","Kansas","2007","Race and Ethnicity","Hispanic","77.8","483"
+"Pneumococcal","States","Kansas","2006","Race and Ethnicity","Hispanic","71.6","416"
 "Pneumococcal","States","Kansas","2020","Race and Ethnicity","Black, Non-Hispanic","49.8","2161"
 "Pneumococcal","States","Kansas","2019","Race and Ethnicity","Black, Non-Hispanic","47.7","2408"
 "Pneumococcal","States","Kansas","2018","Race and Ethnicity","Black, Non-Hispanic","48.5","2272"
@@ -42900,7 +42900,6 @@
 "Seasonal Influenza","States","Indiana","2007-08","Education","Advanced Degree","74.3","891"
 "Seasonal Influenza","States","Indiana","2006-07","Education","Advanced Degree","72.7","849"
 "Seasonal Influenza","States","Indiana","2005-06","Education","Advanced Degree","71.0","834"
-"Seasonal Influenza","States","Indiana","2005-06","All Residents",">=18 Years","71.9","65462"
 "Seasonal Influenza","States","Indiana","2011-12","Marital Status","Never Married","75.0","6943"
 "Seasonal Influenza","States","Indiana","2010-11","Marital Status","Never Married","74.7","6731"
 "Seasonal Influenza","States","Indiana","2009-10","Marital Status","Never Married","79.5","5934"
@@ -42941,6 +42940,7 @@
 "Seasonal Influenza","States","Indiana","2012-13","Sex","Female","78.7","45603"
 "Seasonal Influenza","States","Indiana","2007-08","Marital Status","Separated","72.5","334"
 "Seasonal Influenza","States","Indiana","2006-07","All Residents",">=18 Years","75.2","65662"
+"Seasonal Influenza","States","Indiana","2005-06","All Residents",">=18 Years","71.9","65462"
 "Seasonal Influenza","States","Indiana","2014-15","Marital Status","Separated","69.9","372"
 "Seasonal Influenza","States","Indiana","2013-14","Marital Status","Separated","74.9","371"
 "Seasonal Influenza","States","Indiana","2012-13","Marital Status","Separated","73.8","378"
@@ -43302,7 +43302,6 @@
 "Seasonal Influenza","States","Indiana","2019-20","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","67.9","28"
 "Seasonal Influenza","States","Indiana","2018-19","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","69.6","23"
 "Seasonal Influenza","States","Indiana","2017-18","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","85.7","21"
-"Seasonal Influenza","States","Indiana","2010-11","Sex","Female","76.8","45027"
 "Seasonal Influenza","States","Indiana","2016-17","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","52.4","21"
 "Seasonal Influenza","States","Indiana","2019-20","Race and Ethnicity","White, Non-Hispanic","75.1","60004"
 "Seasonal Influenza","States","Indiana","2020-21","Race and Ethnicity","White, Non-Hispanic","73.4","51994"
@@ -43345,6 +43344,7 @@
 "Pneumococcal","States","Indiana","2015","Age","65-74 Years","71.4","19255"
 "Pneumococcal","States","Indiana","2013","Age",">=85 Years","85.3","34760"
 "Seasonal Influenza","States","Indiana","2011-12","Sex","Female","78.0","45397"
+"Seasonal Influenza","States","Indiana","2010-11","Sex","Female","76.8","45027"
 "Seasonal Influenza","States","Indiana","2009-10","Sex","Female","80.6","44909"
 "Seasonal Influenza","States","Indiana","2008-09","Sex","Female","78.2","44964"
 "Seasonal Influenza","States","Indiana","2007-08","Sex","Female","76.7","45738"
@@ -43802,7 +43802,6 @@
 "Pneumococcal","States","California","2019","Race and Ethnicity","Multiple Races, Non-Hispanic","73.0","2486"
 "Pneumococcal","States","California","2020","Race and Ethnicity","Multiple Races, Non-Hispanic","72.8","2261"
 "Pneumococcal","States","California","2010","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","63.0","154"
-"Seasonal Influenza","States","California","2016-17","Marital Status","Widowed","77.3","67219"
 "Pneumococcal","States","California","2011","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","68.7","739"
 "Pneumococcal","States","California","2014","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","76.4","912"
 "Pneumococcal","States","California","2019","All Residents",">=18 Years","67.8","343562"
@@ -43841,6 +43840,7 @@
 "Seasonal Influenza","States","California","2015-16","Sex","Male","73.4","93144"
 "Seasonal Influenza","States","California","2014-15","Marital Status","Widowed","77.0","69511"
 "Seasonal Influenza","States","California","2015-16","Marital Status","Widowed","77.2","68357"
+"Seasonal Influenza","States","California","2016-17","Marital Status","Widowed","77.3","67219"
 "Seasonal Influenza","States","California","2017-18","Marital Status","Widowed","75.9","65283"
 "Pneumococcal","States","California","2008","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","71.5","21601"
 "Pneumococcal","States","California","2009","Race and Ethnicity","Asian or Pacific Islander, Non-Hispanic","74.8","22816"
@@ -44011,7 +44011,6 @@
 "Seasonal Influenza","States","California","2011-12","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","76.7","593"
 "Seasonal Influenza","States","California","2012-13","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","76.0","634"
 "Seasonal Influenza","States","California","2013-14","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","78.1","640"
-"Pneumococcal","States","California","2006","Age","65-74 Years","55.0","45649"
 "Seasonal Influenza","States","California","2014-15","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","78.1","670"
 "Pneumococcal","States","California","2020","Age",">=85 Years","71.9","78717"
 "Pneumococcal","States","California","2006","Education","< High School","56.6","34962"
@@ -44054,6 +44053,7 @@
 "Pneumococcal","States","California","2018","Age","55-64 Years","60.9","43058"
 "Pneumococcal","States","California","2019","Age","55-64 Years","59.0","43862"
 "Pneumococcal","States","California","2020","Age","55-64 Years","57.4","37171"
+"Pneumococcal","States","California","2006","Age","65-74 Years","55.0","45649"
 "Pneumococcal","States","California","2009","Age","55-64 Years","65.7","29425"
 "Pneumococcal","States","California","2010","Age","55-64 Years","67.3","30446"
 "Pneumococcal","States","California","2011","Age","55-64 Years","67.8","33072"
@@ -44332,7 +44332,6 @@
 "Pneumococcal","HHS Regions/National","Region 4","2006","Age","18-24 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 4","2007","Age","18-24 Years","NA",
 "Pneumococcal","HHS Regions/National","Region 4","2008","Age","18-24 Years","NA",
-"Seasonal Influenza","HHS Regions/National","Region 4","2015-16","Marital Status","Married","NA",
 "Pneumococcal","HHS Regions/National","Region 4","2014","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 4","2017","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
 "Pneumococcal","HHS Regions/National","Region 4","2018","Race and Ethnicity","Native Hawaiian or Other Pacific Islander, Non-Hispanic","NA",
@@ -44406,6 +44405,7 @@
 "Seasonal Influenza","HHS Regions/National","Region 4","2012-13","Marital Status","Married","NA",
 "Seasonal Influenza","HHS Regions/National","Region 4","2013-14","Marital Status","Married","NA",
 "Seasonal Influenza","HHS Regions/National","Region 4","2014-15","Marital Status","Married","NA",
+"Seasonal Influenza","HHS Regions/National","Region 4","2015-16","Marital Status","Married","NA",
 "Seasonal Influenza","HHS Regions/National","Region 4","2005-06","All Residents",">=18 Years","66.1","445338"
 "Seasonal Influenza","HHS Regions/National","Region 4","2008-09","Marital Status","Separated","NA",
 "Seasonal Influenza","HHS Regions/National","Region 4","2009-10","Marital Status","Separated","NA",

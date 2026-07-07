@@ -41,12 +41,16 @@ jobs:
         run: |
           uv run python -m cdc_open.fetch_resp
 
+      - name: Aggregate wastewater data into weekly rollups
+        run: |
+          uv run python -m cdc_open.aggregate
+
       - name: Commit and push changes
         run: |
           git status
           git config --local user.email "noreply@github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/raw/cdc_open/ data/raw/resp/
+          git add data/raw/cdc_open/ data/raw/resp/ data/processed/cdc_open/
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update of CDC Open Data on $(date +'%Y-%m-%d')"
             git pull --rebase origin main

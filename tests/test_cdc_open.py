@@ -8,9 +8,11 @@ Run integration tests (hits data.cdc.gov):
     uv run pytest tests/test_cdc_open.py -m integration -v
 """
 
+import csv
 import json
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
@@ -18,6 +20,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
+from cdc_open.aggregate import aggregate_series, weekly_median, _week_start
 from cdc_open.client import SodaClient
 from cdc_open.datasets import DATASETS, Dataset
 from cdc_open.tools import TOOLS, execute_tool
@@ -409,3 +412,91 @@ class TestSDKIntegration:
         lines = result.stdout.strip().splitlines()
         assert len(lines) >= 2  # header + at least one row
         assert "state" in lines[0] or "year" in lines[0]
+
+
+# =============================================================================
+# Wastewater aggregation (raw -> weekly national rollup)
+# =============================================================================
+
+
+class TestWeekStart:
+    def test_returns_monday_of_the_week(self):
+        # 2023-01-26 is a Thursday
+        assert _week_start(date(2023, 1, 26)) == date(2023, 1, 23)
+
+    def test_monday_maps_to_itself(self):
+        assert _week_start(date(2023, 1, 23)) == date(2023, 1, 23)
+
+
+class TestWeeklyMedian:
+    def test_odd_count_uses_middle_value(self):
+        rows = [
+            {"sample_collect_date": "2023-01-23", "pcr_target_flowpop_lin": "1"},
+            {"sample_collect_date": "2023-01-24", "pcr_target_flowpop_lin": "5"},
+            {"sample_collect_date": "2023-01-25", "pcr_target_flowpop_lin": "3"},
+        ]
+        result = weekly_median(rows)
+        assert result == [(date(2023, 1, 23), 3.0)]
+
+    def test_even_count_averages_middle_two(self):
+        rows = [
+            {"sample_collect_date": "2023-01-23", "pcr_target_flowpop_lin": "1"},
+            {"sample_collect_date": "2023-01-24", "pcr_target_flowpop_lin": "2"},
+            {"sample_collect_date": "2023-01-25", "pcr_target_flowpop_lin": "3"},
+            {"sample_collect_date": "2023-01-26", "pcr_target_flowpop_lin": "4"},
+        ]
+        result = weekly_median(rows)
+        assert result == [(date(2023, 1, 23), 2.5)]
+
+    def test_skips_missing_date_or_value(self):
+        rows = [
+            {"sample_collect_date": "", "pcr_target_flowpop_lin": "1"},
+            {"sample_collect_date": "2023-01-23", "pcr_target_flowpop_lin": ""},
+            {"sample_collect_date": "not-a-date", "pcr_target_flowpop_lin": "1"},
+            {"sample_collect_date": "2023-01-24", "pcr_target_flowpop_lin": "7"},
+        ]
+        result = weekly_median(rows)
+        assert result == [(date(2023, 1, 23), 7.0)]
+
+    def test_skips_negative_values(self):
+        rows = [
+            {"sample_collect_date": "2023-01-23", "pcr_target_flowpop_lin": "-5"},
+            {"sample_collect_date": "2023-01-24", "pcr_target_flowpop_lin": "9"},
+        ]
+        result = weekly_median(rows)
+        assert result == [(date(2023, 1, 23), 9.0)]
+
+    def test_buckets_across_weeks_and_sorts_output(self):
+        rows = [
+            {"sample_collect_date": "2023-02-01", "pcr_target_flowpop_lin": "10"},
+            {"sample_collect_date": "2023-01-23", "pcr_target_flowpop_lin": "1"},
+        ]
+        result = weekly_median(rows)
+        assert result == [
+            (date(2023, 1, 23), 1.0),
+            (date(2023, 1, 30), 10.0),
+        ]
+
+
+class TestAggregateSeries:
+    def test_writes_weekly_csv_from_raw(self, tmp_path):
+        raw_dir = tmp_path / "raw"
+        out_dir = tmp_path / "processed"
+        raw_dir.mkdir()
+
+        raw_path = raw_dir / "wastewater_covid.csv"
+        with raw_path.open("w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(["sample_collect_date", "pcr_target_flowpop_lin", "site"])
+            writer.writerow(["2023-01-23", "100", "1"])
+            writer.writerow(["2023-01-24", "200", "2"])
+
+        n = aggregate_series("wastewater_covid", raw_dir=raw_dir, out_dir=out_dir)
+        assert n == 1
+
+        out_path = out_dir / "wastewater_covid.csv"
+        assert out_path.exists()
+        rows = list(csv.DictReader(out_path.open()))
+        assert rows == [
+            {"sample_collect_date": "2023-01-23", "pcr_target_flowpop_lin": "150.0"}
+        ]

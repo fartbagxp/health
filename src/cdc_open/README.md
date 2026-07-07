@@ -260,6 +260,25 @@ for block in response.content:
 
 ## Available datasets
 
+### Not downloaded (dataset too large)
+
+These are real, valid data.cdc.gov datasets — registered in `datasets.py` with
+`enabled=False` — that `cdc_open.download` skips by default. Each runs well
+past GitHub's 100MB tracked-file limit at full resolution, and none is
+currently read by `health-charts`, so there's no derived shape worth building
+yet (see [Wastewater surveillance](#wastewater-surveillance-nwss) below for
+what that would look like once one of these is charted). Still fully
+queryable on demand with `cdc_open query <id>` — they're just excluded from
+the weekly bulk download. Row counts are live as of 2026-07-07 and only grow
+over time.
+
+| Key                          | Dataset ID  | Source system                                                                                   | Coverage     | Est. full size       | Description                                                                                                |
+| ----------------------------- | ----------- | -------------------------------------------------------------------------------------------------- | ------------ | --------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `covid_coverage_adults`       | `si7g-c2bs` | NIS-ACM (National Immunization Survey Adult COVID Module)                                          | 2021–present | ~1.44M rows / ~400MB | Monthly COVID-19 vaccination coverage and vaccine confidence among adults, by state and demographic group     |
+| `nssp_ed_visits`              | `rdmq-nq56` | NSSP (National Syndromic Surveillance Program)                                                     | 2022–present | ~626k rows / ~150MB  | Weekly % of ED visits for COVID-19, influenza, and RSV by state and county, with trend direction              |
+| `resp_coverage_adults`        | `ee83-ukst` | NIS-FRVM (National Immunization Survey Fall Respiratory Virus Module)                              | 2024–present | ~544k rows / ~140MB  | Monthly COVID-19/flu/RSV vaccination coverage among adults, by state and demographics                         |
+| `chronic_disease_indicators`  | `hksd-2xuw` | CDI (U.S. Chronic Disease Indicators — compiled from BRFSS, NVSS, and other state surveillance)    | Current      | ~399k rows / ~120MB  | County/state-level chronic disease indicators: diabetes, cardiovascular disease, cancer, obesity, tobacco use |
+
 ### Mortality & chronic disease
 
 | Key                        | Dataset ID  | Coverage     | Description                                                                                                                    |
@@ -272,6 +291,7 @@ for block in response.content:
 | `weekly_deaths`            | `r8kw-7aab` | 2020–present | Weekly deaths by state: COVID/flu/pneumonia (weekly)                                                                           |
 | `weekly_deaths_by_cause`   | `muzy-jte6` | 2020–2023    | Weekly deaths by cause                                                                                                         |
 | `covid_conditions`         | `hk9y-quqm` | 2020–2023    | COVID-19 deaths by contributing condition                                                                                      |
+| `chronic_disease_indicators` | `hksd-2xuw` | Current    | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large)                                                  |
 
 ### County / city health
 
@@ -327,8 +347,8 @@ for block in response.content:
 | `resp_vaccination`                  | `5c6r-xi2t` | 2023–present | Weekly flu/COVID-19/RSV coverage, children + adults, by state  |
 | `flu_vaccine_doses`                 | `k87d-gv3u` | 2009–present | Cumulative flu vaccine doses distributed nationally (weekly)   |
 | `flu_coverage_all_ages`             | `vh55-3he6` | 2009–present | NIS-Flu monthly flu coverage, all ages 6+, by state/age/race   |
-| `resp_coverage_adults`              | `ee83-ukst` | 2024–present | NIS-FRVM monthly COVID/flu/RSV coverage among adults, by state |
-| `covid_coverage_adults`             | `si7g-c2bs` | 2021–present | NIS-ACM monthly COVID-19 coverage + vaccine confidence, adults |
+| `resp_coverage_adults`              | `ee83-ukst` | 2024–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
+| `covid_coverage_adults`             | `si7g-c2bs` | 2021–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
 | `rsv_coverage_adults_60plus`        | `qve4-fp9c` | 2023–present | Weekly cumulative RSV coverage, adults 60+, by jurisdiction    |
 | `adult_vaccination_coverage`        | `aetd-68ew` | 2008–present | BRFSS annual coverage: pneumococcal, shingles, tetanus, adults |
 | `pregnant_vaccination_coverage`     | `h7pm-wmjc` | 2012–present | Annual flu + Tdap coverage among pregnant women, by state      |
@@ -359,7 +379,7 @@ for block in response.content:
 
 | Key              | Dataset ID  | Coverage     | Description                                                    |
 | ---------------- | ----------- | ------------ | -------------------------------------------------------------- |
-| `nssp_ed_visits` | `rdmq-nq56` | 2022–present | NSSP weekly % ED visits for COVID/flu/RSV with trend direction |
+| `nssp_ed_visits` | `rdmq-nq56` | 2022–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
 | `nndss_weekly`   | `x9gk-5huc` | 2014–present | NNDSS weekly notifiable disease cases (~100 diseases)          |
 | `nndss_measles`  | `x9gk-5huc` | 2014–present | NNDSS weekly measles cases (imported & indigenous) by state    |
 

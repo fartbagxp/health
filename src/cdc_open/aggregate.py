@@ -8,6 +8,11 @@ needs. This produces a national weekly-median series per pathogen from the
 raw per-site, per-sample data, matching the aggregation health-charts used
 to do at build time (scripts/aggregate-wastewater.js).
 
+wastewater_activity (WVAL scored activity levels) uses the same per-site
+raw shape but a different schema, so it gets its own aggregation function
+(aggregate_wastewater_activity) rather than the shared PCR-concentration
+one below.
+
 Usage:
     uv run python -m cdc_open.aggregate
 """
@@ -82,11 +87,61 @@ def aggregate_series(key: str, raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DI
     return len(weekly)
 
 
+def aggregate_wastewater_activity(raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR) -> int:
+    """National weekly median WVAL (Wastewater Viral Activity Level) score per
+    pathogen, from wastewater_activity.csv's per-site rows (~500k rows / ~65MB
+    at full resolution -- same reason the PCR-concentration series above are
+    never committed raw)."""
+    raw_path = raw_dir / "wastewater_activity.csv"
+    with raw_path.open(newline="") as f:
+        rows = list(csv.DictReader(f))
+
+    by_week_pathogen: dict[tuple[date, str], list[float]] = defaultdict(list)
+    for row in rows:
+        raw_date = (row.get("week_end") or "").strip()
+        pathogen = (row.get("pathogen_target") or "").strip()
+        if not pathogen:
+            continue
+        try:
+            d = datetime.fromisoformat(raw_date[:10]).date()
+        except ValueError:
+            continue
+        try:
+            value = float(row.get("site_wval") or "")
+        except ValueError:
+            continue
+        if value < 0:
+            continue
+        by_week_pathogen[(d, pathogen)].append(value)
+
+    result = []
+    for (week, pathogen), values in by_week_pathogen.items():
+        values.sort()
+        mid = len(values) // 2
+        median = values[mid] if len(values) % 2 else (values[mid - 1] + values[mid]) / 2
+        result.append((week, pathogen, median))
+    result.sort()
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "wastewater_activity.csv"
+    with out_path.open("w", newline="") as f:
+        writer = csv.writer(f, lineterminator="\n")
+        writer.writerow(["week_end", "pathogen_target", "median_wval"])
+        for week, pathogen, median in result:
+            writer.writerow([week.isoformat(), pathogen, median])
+
+    return len(result)
+
+
 def aggregate_all(series: list[str] = WASTEWATER_SERIES) -> None:
     for key in series:
         print(f"  aggregating {key} ...", end=" ", flush=True)
         n = aggregate_series(key)
         print(f"{n} weekly points -> {_OUT_DIR / f'{key}.csv'}")
+
+    print("  aggregating wastewater_activity ...", end=" ", flush=True)
+    n = aggregate_wastewater_activity()
+    print(f"{n} weekly points -> {_OUT_DIR / 'wastewater_activity.csv'}")
 
 
 if __name__ == "__main__":

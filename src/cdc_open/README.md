@@ -264,13 +264,13 @@ for block in response.content:
 
 These are real, valid data.cdc.gov datasets — registered in `datasets.py` with
 `enabled=False` — that `cdc_open.download` skips by default. Each runs well
-past GitHub's 100MB tracked-file limit at full resolution, and none is
-currently read by `health-charts`, so there's no derived shape worth building
-yet (see [Wastewater surveillance](#wastewater-surveillance-nwss) below for
-what that would look like once one of these is charted). Still fully
-queryable on demand with `cdc_open query <id>` — they're just excluded from
-the weekly bulk download. Row counts are live as of 2026-07-07 and only grow
-over time.
+past GitHub's recommended 50MB (several past the 100MB hard limit) at full
+resolution, and none is currently read by `health-charts`, so there's no
+derived shape worth building yet (see [Wastewater surveillance](#wastewater-surveillance-nwss)
+below for what that would look like once one of these is charted). Still
+fully queryable on demand with `cdc_open query <id>` — they're just excluded
+from the weekly bulk download. Row counts are live as of 2026-07-08 and only
+grow over time.
 
 | Key                          | Dataset ID  | Source system                                                                                   | Coverage     | Est. full size       | Description                                                                                                |
 | ----------------------------- | ----------- | -------------------------------------------------------------------------------------------------- | ------------ | --------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -280,6 +280,10 @@ over time.
 | `chronic_disease_indicators`  | `hksd-2xuw` | CDI (U.S. Chronic Disease Indicators — compiled from BRFSS, NVSS, and other state surveillance)    | Current      | ~399k rows / ~120MB  | County/state-level chronic disease indicators: diabetes, cardiovascular disease, cancer, obesity, tobacco use |
 | `nndss_weekly`                | `x9gk-5huc` | NNDSS (National Notifiable Diseases Surveillance System)                                           | 2014–present | ~1.89M rows / ~260MB | Weekly provisional case counts for ~100 nationally notifiable diseases by state (measles, pertussis, hepatitis, TB, Lyme, etc.) |
 | `covid_conditions`            | `hk9y-quqm` | NVSS (National Vital Statistics System)                                                            | 2020–2023    | ~621k rows / ~139MB  | COVID-19 deaths by contributing condition, age group, and state                                               |
+| `rsv_net`                     | `29hc-w46k` | RSV-NET (population-based hospitalization surveillance)                                            | 2018–present | ~505k rows / ~64MB   | RSV-NET hospitalization rates; long/tidy format after a CDC schema migration added clinical breakdowns (Diabetes, Severe Obesity, etc.) alongside the weekly/cumulative rate |
+| `covid_net`                   | `6jg4-xsqq` | COVID-NET (population-based hospitalization surveillance)                                          | 2020–present | ~480k rows / ~61MB   | COVID-NET hospitalization rates; same long/tidy reshape as `rsv_net`                                          |
+| `drug_overdose_county`        | `gb4e-yj24` | VSRR (Vital Statistics Rapid Release)                                                              | 2020–present | ~217k rows / ~51MB   | Quarterly provisional county-level drug overdose deaths, with 12-month rolling periods                        |
+| `epidemic_trends_rt`          | `5dqz-y4ea` | CDC Center for Forecasting and Outbreak Analytics                                                  | 2020–present | ~488k rows / ~72MB   | Estimated Rt and epidemic trend category for COVID-19/flu/RSV by state; bloated by 80 distinct `as_of` revision snapshots, not just current estimates |
 
 ### Mortality & chronic disease
 
@@ -299,7 +303,7 @@ over time.
 
 | Key                 | Dataset ID  | Coverage | Description                             |
 | ------------------- | ----------- | -------- | --------------------------------------- |
-| `places_county`     | `swc5-untb` | Current  | County health indicators (30+ measures) |
+| `places_county`     | `swc5-untb` | Current  | County chronic disease indicators — obesity, diabetes, high BP, heart disease, stroke, cancer, COPD, arthritis. Archive is filtered to these 8 measures (~47k of ~229k rows); the full 39-measure dataset is queryable live |
 | `places_city`       | `dxpw-cm5u` | Current  | City health indicators (pop. > 50k)     |
 | `disability`        | `s2qv-b27b` | Current  | Disability prevalence by type and state |
 | `nutrition_obesity` | `hn4x-zwk7` | Current  | Obesity, inactivity, nutrition by state |
@@ -311,8 +315,8 @@ over time.
 | `covid_cases`           | `pwn4-m3yp` | 2020–2023    | Weekly COVID-19 cases and deaths by state                 |
 | `covid_hosp_archived`   | `7dk4-g6vg` | 2020–2024    | Weekly hospital admissions and bed utilization (archived) |
 | `cumulative_covid_hosp` | `xnjn-rdmd` | 2024–present | Preliminary cumulative COVID-19 hospitalization estimates |
-| `covid_net`             | `6jg4-xsqq` | 2020–present | COVID-NET hospitalization rates by state/age (weekly)     |
-| `epidemic_trends_rt`    | `5dqz-y4ea` | 2020–present | Estimated Rt and epidemic trend category for COVID/flu    |
+| `covid_net`             | `6jg4-xsqq` | 2020–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
+| `epidemic_trends_rt`    | `5dqz-y4ea` | 2020–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
 
 ### Flu & RSV surveillance
 
@@ -323,7 +327,7 @@ over time.
 | `resp_lens`                | `ch5i-63ve` | 2021–2024    | RESP-LENS % positivity for 9 viruses by HHS region (ED network) |
 | `nvsn_pathogen_positivity` | `kipu-qxy8` | 2017–present | % positivity for 9 pathogens in children with ARI (NVSN)        |
 | `resp_net`                 | `kvib-3txy` | 2017–present | RESP-NET hospitalization rates: RSV/COVID/Flu (weekly)          |
-| `rsv_net`                  | `29hc-w46k` | 2018–present | RSV-NET RSV hospitalization rates (weekly)                      |
+| `rsv_net`                  | `29hc-w46k` | 2018–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
 | `rsv_positivity`           | `3cxc-4k8q` | 2020–present | RSV NAAT test positivity by HHS region (NREVSS, weekly)         |
 | `nrevss_rsv_historic`      | `52kb-ccu2` | 2010–2020    | Historical RSV lab data by HHS region (NREVSS)                  |
 | `cumulative_rsv_hosp`      | `hmye-mqgq` | 2024–present | Preliminary cumulative RSV hospitalization estimates            |
@@ -374,7 +378,7 @@ over time.
 | Key                    | Dataset ID  | Coverage     | Description                                        |
 | ---------------------- | ----------- | ------------ | -------------------------------------------------- |
 | `drug_overdose_vsrr`   | `xkb8-kh2a` | 2015–present | VSRR provisional OD deaths by state/drug (monthly) |
-| `drug_overdose_county` | `gb4e-yj24` | 2020–present | VSRR county-level OD death counts (quarterly)      |
+| `drug_overdose_county` | `gb4e-yj24` | 2020–present | ⚠️ not downloaded (too large) — see [above](#not-downloaded-dataset-too-large) |
 | `drug_overdose_state`  | `xbxb-epbu` | 1999–2016    | Drug overdose mortality rates by state/race/sex    |
 
 ### ED & surveillance
@@ -421,16 +425,25 @@ Use `get_wastewater_data(pathogen=...)` with `pathogen` set to `"sars_cov2"`, `"
 
 ### Raw vs. processed
 
-At full resolution (per-site, per-sample) the five `wastewater_*` datasets run
-into the hundreds of thousands of rows — 300MB+ for `wastewater_covid` — well
-past what git/GitHub can track as a file. `cdc_open.download` still fetches
-them at full resolution to `data/raw/cdc_open/`, but that directory is
-`.gitignore`'d for these five files and rebuilt fresh on every run.
+At full resolution (per-site, per-sample) the five `wastewater_*` PCR-concentration
+datasets run into the hundreds of thousands of rows — 300MB+ for
+`wastewater_covid` — well past what git/GitHub can track as a file.
+`cdc_open.download` still fetches them at full resolution to
+`data/raw/cdc_open/`, but that directory is `.gitignore`'d for these five
+files and rebuilt fresh on every run.
 
 `uv run python -m cdc_open.aggregate` reduces each one to a national
 weekly-median series (~KB, a few hundred rows) in `data/processed/cdc_open/`,
 which *is* tracked and is what `health-charts` actually reads. Run it after
 `cdc_open.download` any time you refresh the wastewater data locally.
+
+`wastewater_activity` (the WVAL scored-activity-level dataset) gets the same
+raw/processed treatment but has a different schema — per-site categorical
+scores rather than PCR concentrations — so `cdc_open.aggregate` handles it
+with a separate function, `aggregate_wastewater_activity()`, producing
+`week_end,pathogen_target,median_wval` rows (national weekly median WVAL
+score per pathogen) instead of the `sample_collect_date,pcr_target_flowpop_lin`
+shape above.
 
 ## PLACES measure IDs
 

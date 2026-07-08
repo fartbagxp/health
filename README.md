@@ -253,6 +253,20 @@ uv run python -m seer compare-sites 55 47 66 -f csv
 
 Refer to `uv run python -m seer.download` to refresh the bundled cancer-site catalog.
 
+---
+
+## Related projects
+
+This repo is the middle of a three-repo pipeline:
+
+```
+pulse-code  →  health  →  health-charts
+(explore)      (archive)   (visualize)
+```
+
+- **[fartbagxp/pulse-code](https://github.com/fartbagxp/pulse-code)** — a CDC WONDER exploration CLI for one-off, ad hoc queries, with an LLM-assisted XML query builder. 23 of the 25 saved queries in `src/wonder/queries/` here started as saved queries in `pulse-code`'s `src/pulse/queries/`; this repo wraps each in a `fetch_*.py` script that runs on a schedule and commits the result as a CSV in `data/raw/wonder/` — the archival step `pulse-code` itself doesn't do.
+- **[fartbagxp/health-charts](https://github.com/fartbagxp/health-charts)** — the dashboard downstream of this repo. It fetches CSVs from `data/raw/` and `data/processed/` here directly via `raw.githubusercontent.com` at page-load time (nothing is copied into that repo) and renders them with svelteplot.
+
 [CDC]: https://www.cdc.gov
 [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]: https://wonder.cdc.gov/wonder/help/wonder-api.html
 [National Syndromic Surveillance Program (NSSP)]: https://www.cdc.gov/nssp/

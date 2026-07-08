@@ -100,9 +100,25 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "places_county": Dataset(
+        # Full dataset is long-format: county x year x 39 BRFSS measures, ~230k
+        # rows / ~60MB -- over GitHub's 50MB recommended limit. Archive is
+        # filtered server-side to the chronic-disease measures this project
+        # actually tracks; `get_places_county_health()` queries the live API
+        # unfiltered, so any measure is still reachable on demand.
+        soql_where=(
+            "measureid in("
+            "'OBESITY','DIABETES','BPHIGH','CHD','STROKE','CANCER','COPD','ARTHRITIS'"
+            ")"
+        ),
         id="swc5-untb",
         name="PLACES: County Health",
-        description="County-level health indicators: obesity, diabetes, smoking, depression, sleep, etc. (BRFSS-based)",
+        description=(
+            "County-level chronic disease indicators (BRFSS-based): obesity, diabetes, "
+            "high blood pressure, heart disease, stroke, cancer, COPD, arthritis. Archive "
+            "is filtered to these measures; the full 39-measure dataset (also including "
+            "smoking, depression, sleep, etc.) is queryable live via `cdc_open query "
+            "swc5-untb` or `get_places_county_health()`."
+        ),
         years="Current",
         key_columns=[
             "stateabbr",
@@ -328,6 +344,12 @@ DATASETS: dict[str, Dataset] = {
     ),
     # ── Wastewater: scored activity levels & avian flu ───────────────────────
     "wastewater_activity": Dataset(
+        # Per-site rows like the NWSS PCR-concentration series above (~500k
+        # rows / ~65MB at full resolution -- over GitHub's 50MB recommended
+        # limit). Fetched fresh by cdc_open.download each run and reduced by
+        # cdc_open.aggregate.aggregate_wastewater_activity() to a national
+        # weekly median WVAL score per pathogen; only that rollup in
+        # data/processed/cdc_open/ is tracked (see .gitignore).
         id="atcp-73re",
         name="CDC Wastewater Viral Activity Level (SARS-CoV-2, Flu A, RSV)",
         description="Weekly wastewater viral activity level (WVAL) scores and categories (Very Low/Low/Moderate/High/Very High) per sampling site for SARS-CoV-2, Influenza A, and RSV",
@@ -397,7 +419,15 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "rsv_net": Dataset(
-        charted=True,
+        # CDC reshaped this from ~2 rows/week to a long/tidy pivot across
+        # data_type x estimate_type x rate_type (adding clinical breakdowns
+        # like "Diabetes"/"Severe Obesity"), ballooning it to ~64MB -- over
+        # GitHub's 50MB recommended limit. Nothing reads this raw archive:
+        # the RSV chart's rsv-hospitalizations.csv comes from a separate,
+        # tightly-filtered live query in cdc_open.fetch_resp, not from here.
+        # Disabled until charted directly; still queryable live via
+        # `cdc_open query 29hc-w46k` or `get_rsv_hospitalizations()`.
+        enabled=False,
         id="29hc-w46k",
         name="RSV-NET: RSV Hospitalizations",
         description=(
@@ -423,20 +453,32 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "covid_net": Dataset(
+        # Same reshape as rsv_net (same NHSN family) -- ~60MB, over GitHub's
+        # 50MB recommended limit, and not read by health-charts. Disabled
+        # until charted; still queryable live via `cdc_open query 6jg4-xsqq`
+        # or `get_covid_net_hospitalizations()`.
+        enabled=False,
         id="6jg4-xsqq",
         name="COVID-NET: COVID-19 Hospitalizations",
-        description="Weekly lab-confirmed COVID-19 hospitalization rates from COVID-NET surveillance, by state/age/sex/race",
+        description=(
+            "Lab-confirmed COVID-19 hospitalization rates from COVID-NET surveillance, by "
+            "state/age/sex/race. Long/tidy format: value pivoted across data_type "
+            "('Weekly Rate'/'Cumulative Rate', plus clinical breakdowns) x estimate_type x "
+            "rate_type, in a single `estimate` column."
+        ),
         years="2020–present",
         key_columns=[
             "state",
             "season",
-            "week_ending_date",
+            "date",
+            "date_type",
             "agecat_label",
             "sex_label",
             "race_label",
+            "data_type",
+            "estimate_type",
             "rate_type",
-            "weekly_rate",
-            "cumulative_rate",
+            "estimate",
         ],
     ),
     "resp_deaths_pct": Dataset(
@@ -546,6 +588,12 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "drug_overdose_county": Dataset(
+        # ~217k rows / ~51MB -- one row per county x month plus verbose
+        # repeated text columns (footnote, historicaldatacompletenessnote),
+        # over GitHub's 50MB recommended limit. Not currently charted.
+        # Disabled until charted; still queryable live via
+        # `cdc_open query gb4e-yj24`.
+        enabled=False,
         id="gb4e-yj24",
         name="VSRR Provisional County-Level Drug Overdose Deaths",
         description="Quarterly provisional drug overdose death counts at county level from NVSS, with 12-month rolling periods",
@@ -828,9 +876,16 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "epidemic_trends_rt": Dataset(
+        # ~488k rows / ~72MB -- over GitHub's 50MB recommended limit. Bloated
+        # by revision history: 80 distinct `as_of` snapshot dates each
+        # re-publishing most of the 651-date estimate history (80 x 651 x 3
+        # diseases x 52 states), not just the current estimate. Not currently
+        # charted. Disabled until charted; still queryable live via
+        # `cdc_open query 5dqz-y4ea`.
+        enabled=False,
         id="5dqz-y4ea",
         name="CDC Epidemic Trends and Rt",
-        description="Weekly estimated effective reproduction number (Rt), trend category, and probability of epidemic growth for COVID-19 and influenza by state",
+        description="Weekly estimated effective reproduction number (Rt), trend category, and probability of epidemic growth for COVID-19, influenza, and RSV by state",
         years="2020–present",
         key_columns=[
             "as_of",

@@ -133,6 +133,45 @@ def aggregate_wastewater_activity(raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT
     return len(result)
 
 
+_PLACES_COUNTY_COLUMNS = [
+    "locationid",
+    "stateabbr",
+    "locationname",
+    "measureid",
+    "data_value",
+    "totalpopulation",
+]
+
+
+def aggregate_places_county(raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR) -> int:
+    """Slim places_county.csv down to what health-charts' choropleth map
+    actually joins on: crude-prevalence rows for real counties (5-digit FIPS
+    -- drops the national 'US' aggregate row), and only the columns it reads.
+    The raw file carries both crude and age-adjusted rows plus confidence
+    intervals and descriptive text health-charts never touches, so this cuts
+    both the row count and the column count roughly in half each -- the raw
+    ~12MB file becomes well under 1MB."""
+    raw_path = raw_dir / "places_county.csv"
+    with raw_path.open(newline="") as f:
+        rows = [
+            row
+            for row in csv.DictReader(f)
+            if row.get("datavaluetypeid") == "CrdPrv"
+            and len(row.get("locationid") or "") == 5
+            and row.get("data_value")
+        ]
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "places_county.csv"
+    with out_path.open("w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=_PLACES_COUNTY_COLUMNS, lineterminator="\n")
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({k: row[k] for k in _PLACES_COUNTY_COLUMNS})
+
+    return len(rows)
+
+
 def aggregate_all(series: list[str] = WASTEWATER_SERIES) -> None:
     for key in series:
         print(f"  aggregating {key} ...", end=" ", flush=True)
@@ -142,6 +181,10 @@ def aggregate_all(series: list[str] = WASTEWATER_SERIES) -> None:
     print("  aggregating wastewater_activity ...", end=" ", flush=True)
     n = aggregate_wastewater_activity()
     print(f"{n} weekly points -> {_OUT_DIR / 'wastewater_activity.csv'}")
+
+    print("  aggregating places_county ...", end=" ", flush=True)
+    n = aggregate_places_county()
+    print(f"{n} rows -> {_OUT_DIR / 'places_county.csv'}")
 
 
 if __name__ == "__main__":

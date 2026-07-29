@@ -1,0 +1,52 @@
+state,state_fips,year,week,cases
+South Carolina,45,2026,28,214
+Utah,49,2026,28,58
+Florida,12,2026,28,51
+Virginia,51,2026,28,33
+Arizona,04,2026,28,29
+Pennsylvania,42,2026,28,21
+Wisconsin,55,2026,28,17
+Texas,48,2026,28,16
+Minnesota,27,2026,28,11
+Washington,53,2026,28,10
+California,06,2026,28,8
+New Mexico,35,2026,28,8
+New York,36,2026,28,8
+Michigan,26,2026,28,7
+Oregon,41,2026,28,7
+South Dakota,46,2026,28,7
+North Carolina,37,2026,28,6
+New York City,36,2026,28,5
+Colorado,08,2026,28,4
+Maine,23,2026,28,4
+Montana,30,2026,28,4
+North Dakota,38,2026,28,4
+Ohio,39,2026,28,4
+Georgia,13,2026,28,3
+Idaho,16,2026,28,3
+Illinois,17,2026,28,3
+Maryland,24,2026,28,3
+Alabama,01,2026,28,2
+Alaska,02,2026,28,2
+Indiana,18,2026,28,2
+Kentucky,21,2026,28,2
+Massachusetts,25,2026,28,2
+Nevada,32,2026,28,2
+New Jersey,34,2026,28,2
+Connecticut,09,2026,28,1
+Hawaii,15,2026,28,1
+Iowa,19,2026,28,1
+Kansas,20,2026,28,1
+Louisiana,22,2026,28,1
+Nebraska,31,2026,28,1
+Oklahoma,40,2026,28,1
+Rhode Island,44,2026,28,1
+Tennessee,47,2026,28,1
+Vermont,50,2026,28,1
+Arkansas,05,2026,28,0
+Delaware,10,2026,28,0
+Mississippi,28,2026,28,0
+Missouri,29,2026,28,0
+New Hampshire,33,2026,28,0
+West Virginia,54,2026,28,0
+Wyoming,56,2026,28,0

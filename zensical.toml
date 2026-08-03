@@ -1,6 +1,6 @@
 [project]
 site_name = "US Health Data APIs"
-site_description = "Query guides for CDC WONDER, GRASP, WISQARS, NSSP, NIS, and CDC Open Data"
+site_description = "Query guides for CDC WONDER, GRASP, WISQARS, NSSP, NIS, CDC Open Data, and state/local health sources"
 site_url = "https://boris-ning.github.io/health/"
 
 nav = [
@@ -20,6 +20,8 @@ nav = [
   { NIS = "nis.md" },
   { "CDC Open Data" = "cdc-open.md" },
   { SEER = "seer.md" },
+  { "State & Local" = "local.md" },
+  { "State Portals" = "state-portals.md" },
 ]
 
 [project.theme]

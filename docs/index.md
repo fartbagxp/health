@@ -23,6 +23,8 @@ uv sync
 | [CDC Open Data](cdc-open.md)      | `cdc_open` | 30+ datasets: overdose, NHSN, NWSS, wastewater  | varies       |
 | [SEER](seer.md)                   | `seer`     | Cancer incidence/mortality by site, sex, age    | 1975–present |
 
+Federal surveillance mostly stops at the state line. Two research catalogs cover what is available below it, and nothing in either is collected yet. [State & Local Sources](local.md) goes deep on the endpoints that have been verified against live data: county and census-tract figures for cancer, COVID, flu, tickborne disease and foodborne outbreaks. [State Health Data Portals](state-portals.md) goes wide, listing the official portal for all 50 states and DC and grouping them by the software behind them.
+
 ## One-liners
 
 ```bash

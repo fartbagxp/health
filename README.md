@@ -14,19 +14,19 @@ This is a repository to collect and run fun experiments on various publicly avai
 
 ## Sources
 
-| Data Source                                                           | Module          | API                           |
-| --------------------------------------------------------------------- | --------------- | ----------------------------- |
-| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API            |
-| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API        |
-| [WISQARS Injury & Violence Data]                                      | `src/wisqars/`  | data.cdc.gov (Socrata)        |
-| [ATSDR GRASP Disease APIs]                                            | `src/grasp/`    | gis.cdc.gov/grasp (REST/JSON) |
-| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT       |
-| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)        |
-| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)        |
-| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)        |
-| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)        |
-| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)        |
-| [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)        |
+| Data Source                                                           | Module          | API                                  |
+| --------------------------------------------------------------------- | --------------- | ------------------------------------ |
+| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API                   |
+| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API               |
+| [WISQARS Injury & Violence Data]                                      | `src/wisqars/`  | data.cdc.gov (Socrata)               |
+| [ATSDR GRASP Disease APIs]                                            | `src/grasp/`    | gis.cdc.gov/grasp (REST/JSON)        |
+| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT              |
+| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)               |
+| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)               |
+| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)               |
+| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)               |
+| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)               |
+| [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)               |
 | [SEER Cancer Statistics]                                              | `src/seer/`     | seer.cancer.gov (SEER*Explorer JSON) |
 
 ---
@@ -252,6 +252,31 @@ uv run python -m seer compare-sites 55 47 66 -f csv
 ```
 
 Refer to `uv run python -m seer.download` to refresh the bundled cancer-site catalog.
+
+---
+
+## State, county & local sources ([docs](https://fartbagxp.github.io/health/local/))
+
+Every source above is federal, and federal surveillance mostly stops at the state line. Two docs survey what is available below it. [`docs/local.md`](docs/local.md) covers endpoints verified against live data: county and census-tract figures for cancer, COVID, flu, tickborne disease, and foodborne outbreaks. [`docs/state-portals.md`](docs/state-portals.md) catalogs the official health data portal for all 50 states and DC, grouped by the software behind them, and ranks the states by how much work ingestion would take.
+
+It is a research catalog, not a module. Nothing there is downloaded, deliberately, since `data/` is already 352MB. Endpoints were probed live on 2026-08-02 and marked verified (✅), outside the network allowlist (⚠️), or no-API (❌).
+
+Highlights:
+
+- **CDC PLACES** (`cwsq-ngmh`) covers 40 chronic-disease and health-behavior measures at census-tract level nationwide. Modeled estimates, not counts.
+- **County COVID/flu/RSV** is already reachable with the installed `nssp` module via `--geo-type county`, so no new code and no new storage.
+- **Lyme with county FIPS** (`x5j9-wybp`) has real county geography, suppressed wherever counts are small.
+- **NY tick surveillance** (`vzbp-i2d4`) gives county-level tick density and pathogen infection prevalence, with no federal equivalent.
+- **NORS** (`5xkq-dg7x`) holds 66,713 foodborne and waterborne outbreak records back to 1971, at state level.
+- **State Cancer Profiles** returns county cancer incidence and mortality with confidence intervals, average annual counts and 5-year trends, through an undocumented `output=1` CSV export. One state per request.
+- **County Health Rankings** publishes a single 13MB national county CSV keyed on FIPS. Funding ends December 2026, so archive it once rather than scheduling it.
+- **State and county Socrata portals** such as `health.data.ny.gov`, `data.pa.gov` and `data.cityofchicago.org` run the same platform as `data.cdc.gov`, so the existing `cdc_open` client works against them unchanged via `Dataset.base_url`.
+
+California's county infectious disease series (`data.chhs.ca.gov`, CKAN) is the richest local dataset found: 199,125 rows covering 52 reportable diseases across all 59 counties, 2001–2023, sex-stratified with population denominators and confidence intervals. All six tickborne conditions and the major foodborne ones sit in one 13MB file.
+
+The doc also records the network allowlist status of every host. The finding worth knowing up front is that allowlisted hosts flap. `services*.arcgis.com` served data and then refused connections minutes later within a single session, so anything built here needs retry logic rather than single-shot fetches, and no source should be written off on one failed probe.
+
+Alpha-gal syndrome county data exists, just not at CDC. It is not nationally notifiable, has no CDC API and no `data.cdc.gov` dataset, and [MMWR 72(30)](https://www.cdc.gov/mmwr/volumes/72/wr/mm7230a2.htm) publishes its county distribution only as a rendered map. The full text was parsed from PubMed Central to confirm that: one table, broken down by age, sex and year, no geography. Kansas DHE, however, republishes the MMWR county classification as a queryable ArcGIS layer covering 372 counties across KS, MO, AR and OK, pairing each county's alpha-gal burden with its lone star tick population status. The values are the MMWR's own tertiles, low/medium/high at <11, 11–87 and >87 suspected cases per million person-years, rather than raw counts.
 
 ---
 

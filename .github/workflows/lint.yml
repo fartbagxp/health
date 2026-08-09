@@ -22,7 +22,7 @@ jobs:
           persist-credentials: false
 
       - name: csvlinter
-        uses: kcheriyath/csvlinter@def8e270b407a64b6cd1fa5862127ac62e3decd4 # V0.7.0
+        uses: kcheriyath/csvlinter@8f78b213da9be31ba771a516ad63235ec65fbbd0 # V0.7.1
         with:
           find_pattern: "*.csv"
           fail_on_error: "true"

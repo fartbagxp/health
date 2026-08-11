@@ -5,6 +5,7 @@
 [![Update WONDER](https://github.com/fartbagxp/health/actions/workflows/update_wonder.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wonder.yml)
 [![Update WISQARS](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml)
 [![Update SEER](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml)
+[![Update NCHS DQS](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml)
 [![Datasets](https://img.shields.io/badge/datasets-70-4c9be8)](https://fartbagxp.github.io/health/)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-8a2be2)](https://fartbagxp.github.io/health/)
 
@@ -28,6 +29,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 | [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)               |
 | [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)               |
 | [SEER Cancer Statistics]                                              | `src/seer/`     | seer.cancer.gov (SEER*Explorer JSON) |
+| [NCHS Data Query System (DQS)]                                        | `src/nchs_dqs/` | data.cdc.gov (Socrata)               |
 
 ---
 
@@ -252,6 +254,18 @@ uv run python -m seer compare-sites 55 47 66 -f csv
 ```
 
 Refer to `uv run python -m seer.download` to refresh the bundled cancer-site catalog.
+
+### NCHS DQS — Data Query System (Health, United States)
+
+The [NCHS Data Query System](https://www.cdc.gov/nchs/dqs/) is CDC/NCHS's unified query layer over the "Health, United States" report family, drawing from the national surveys (NHANES, NHIS, NHAMCS, NVSS, NPALS, NHCS). Every topic is published as a Socrata dataset on data.cdc.gov sharing one tidy schema (`classification`/`group`/`subgroup`/`estimate_type`/`time_period`/`estimate` with confidence intervals), so a single `query` verb covers all 28 registered datasets. `classification = 'Total'` is the all-persons row. Coverage the other sources don't have: chronic disease and risk factors, nutrition, oral health, disability, self-reported health, the health-care system (beds, ED visits, utilization), workforce, spending, and long-term care.
+
+```bash
+uv run python -m nchs_dqs list --uncharted     # the backlog of datasets not yet charted
+uv run python -m nchs_dqs trend national-health-spending -f csv
+uv run python -m nchs_dqs query low-birthweight --where "classification='Geographic Characteristic'" -f csv
+```
+
+`fetch_dqs.py` archives the charted slices to `data/raw/dqs/` on a weekly schedule. Refer to [nchs_dqs README](src/nchs_dqs/README.md) for the CLI and the charted-vs-backlog dataset list.
 
 ---
 

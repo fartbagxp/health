@@ -1,0 +1,52 @@
+state,state_fips,year,pct_low_birthweight
+Alabama,01,2023,10.43
+Alaska,02,2023,6.68
+Arizona,04,2023,8.06
+Arkansas,05,2023,9.65
+California,06,2023,7.51
+Colorado,08,2023,9.74
+Connecticut,09,2023,7.91
+Delaware,10,2023,9.15
+District of Columbia,11,2023,10.83
+Florida,12,2023,9.04
+Georgia,13,2023,10.18
+Hawaii,15,2023,8.71
+Idaho,16,2023,6.93
+Illinois,17,2023,8.87
+Indiana,18,2023,8.6
+Iowa,19,2023,7.61
+Kansas,20,2023,7.65
+Kentucky,21,2023,8.85
+Louisiana,22,2023,11.25
+Maine,23,2023,8.02
+Maryland,24,2023,8.58
+Massachusetts,25,2023,7.61
+Michigan,26,2023,8.91
+Minnesota,27,2023,7.2
+Mississippi,28,2023,12.45
+Missouri,29,2023,8.9
+Montana,30,2023,7.72
+Nebraska,31,2023,8.03
+Nevada,32,2023,9.49
+New Hampshire,33,2023,6.79
+New Jersey,34,2023,7.8
+New Mexico,35,2023,9.66
+New York,36,2023,8.55
+North Carolina,37,2023,9.42
+North Dakota,38,2023,7.06
+Ohio,39,2023,8.75
+Oklahoma,40,2023,8.6
+Oregon,41,2023,7.16
+Pennsylvania,42,2023,8.44
+Rhode Island,44,2023,7.69
+South Carolina,45,2023,9.96
+South Dakota,46,2023,7.21
+Tennessee,47,2023,9.07
+Texas,48,2023,8.6
+Utah,49,2023,7.35
+Vermont,50,2023,7.09
+Virginia,51,2023,8.44
+Washington,53,2023,6.97
+West Virginia,54,2023,9.81
+Wisconsin,55,2023,7.85
+Wyoming,56,2023,9.01

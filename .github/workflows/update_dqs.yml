@@ -1,0 +1,49 @@
+name: Update NCHS DQS Data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/nchs_dqs/**.py"
+      - ".github/workflows/update_dqs.yml"
+  schedule:
+    - cron: "0 15 * * 6" # At 15:00 UTC on Saturday
+  workflow_dispatch:
+
+jobs:
+  update-dqs-data:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          version: "latest"
+
+      - name: Fetch NCHS DQS slices
+        env:
+          CDC_DATA_APP_TOKEN: ${{ secrets.CDC_DATA_APP_TOKEN }}
+        run: |
+          uv run python -m nchs_dqs.fetch_dqs
+
+      - name: Commit and push changes
+        run: |
+          git status
+          git config --local user.email "noreply@github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add data/raw/dqs/
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update of NCHS DQS data on $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push -u origin main
+          fi

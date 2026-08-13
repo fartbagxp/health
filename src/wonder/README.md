@@ -127,6 +127,21 @@ uv run python src/wonder/queries/fetch_obesity_diabetes_deaths.py
 
 Merge strategy: D77 (final) for 1999–2020; D176 (provisional) for 2021+, same convention as the drug-deaths queries. 2018–2019 counts match exactly between the two datasets in the overlap years, cross-validating the query; 2020 differs slightly between D77-final and D176-provisional, as expected.
 
+### Deaths by place of death (2018–present)
+
+| Query file                                          | Dataset | Years        |
+| ---------------------------------------------------- | ------- | ------------ |
+| `deaths-by-place-of-death-2018-2024-req.xml`         | D176    | 2018–present |
+
+Groups by Year × Month × Place of Death (`D176.V21`), across all causes of death. Only D176 has a Place of Death variable, so there's no pre-2018 counterpart to merge in.
+
+Place of death categories: Medical Facility (Inpatient / Outpatient or ER / Dead on Arrival / Status unknown), Decedent's home, Hospice facility, Nursing home/long term care, Other, Place of death unknown.
+
+```
+uv run python src/wonder/queries/fetch_deaths_by_place_of_death.py
+→ data/raw/wonder/deaths-by-place-of-death.csv
+```
+
 ## CLI usage
 
 ```bash

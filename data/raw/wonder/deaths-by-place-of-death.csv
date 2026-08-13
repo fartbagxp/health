@@ -1,0 +1,673 @@
+year,month,place,deaths
+2018,1,Decedent's home,84611
+2018,1,Hospice facility,20877
+2018,1,Medical Facility - Dead on Arrival,1007
+2018,1,Medical Facility - Inpatient,87752
+2018,1,Medical Facility - Outpatient or ER,18553
+2018,1,Nursing home/long term care,57505
+2018,1,Other,16373
+2018,1,Place of death unknown,66
+2018,2,Decedent's home,71799
+2018,2,Hospice facility,18616
+2018,2,Medical Facility - Dead on Arrival,808
+2018,2,Medical Facility - Inpatient,70851
+2018,2,Medical Facility - Outpatient or ER,14806
+2018,2,Nursing home/long term care,46161
+2018,2,Other,13906
+2018,2,Place of death unknown,51
+2018,3,Decedent's home,76843
+2018,3,Hospice facility,19584
+2018,3,Medical Facility - Dead on Arrival,881
+2018,3,Medical Facility - Inpatient,73198
+2018,3,Medical Facility - Outpatient or ER,15557
+2018,3,Nursing home/long term care,47532
+2018,3,Other,15165
+2018,3,Place of death unknown,45
+2018,4,Decedent's home,72823
+2018,4,Hospice facility,18417
+2018,4,Medical Facility - Dead on Arrival,846
+2018,4,Medical Facility - Inpatient,67661
+2018,4,Medical Facility - Outpatient or ER,14269
+2018,4,Nursing home/long term care,44788
+2018,4,Other,14314
+2018,4,Place of death unknown,46
+2018,5,Decedent's home,73534
+2018,5,Hospice facility,18160
+2018,5,Medical Facility - Dead on Arrival,802
+2018,5,Medical Facility - Inpatient,64806
+2018,5,Medical Facility - Outpatient or ER,13966
+2018,5,Nursing home/long term care,42481
+2018,5,Other,14976
+2018,5,Place of death unknown,47
+2018,6,Decedent's home,71122
+2018,6,Hospice facility,17625
+2018,6,Medical Facility - Dead on Arrival,818
+2018,6,Medical Facility - Inpatient,62060
+2018,6,Medical Facility - Outpatient or ER,13617
+2018,6,Nursing home/long term care,39944
+2018,6,Other,14882
+2018,6,Place of death unknown,35
+2018,7,Decedent's home,72442
+2018,7,Hospice facility,17845
+2018,7,Medical Facility - Dead on Arrival,808
+2018,7,Medical Facility - Inpatient,63298
+2018,7,Medical Facility - Outpatient or ER,13944
+2018,7,Nursing home/long term care,41286
+2018,7,Other,15442
+2018,7,Place of death unknown,46
+2018,8,Decedent's home,72062
+2018,8,Hospice facility,18000
+2018,8,Medical Facility - Dead on Arrival,750
+2018,8,Medical Facility - Inpatient,63078
+2018,8,Medical Facility - Outpatient or ER,13597
+2018,8,Nursing home/long term care,41480
+2018,8,Other,15239
+2018,8,Place of death unknown,48
+2018,9,Decedent's home,70145
+2018,9,Hospice facility,17181
+2018,9,Medical Facility - Dead on Arrival,800
+2018,9,Medical Facility - Inpatient,61810
+2018,9,Medical Facility - Outpatient or ER,13205
+2018,9,Nursing home/long term care,40894
+2018,9,Other,14619
+2018,9,Place of death unknown,42
+2018,10,Decedent's home,73855
+2018,10,Hospice facility,18233
+2018,10,Medical Facility - Dead on Arrival,801
+2018,10,Medical Facility - Inpatient,66365
+2018,10,Medical Facility - Outpatient or ER,14428
+2018,10,Nursing home/long term care,45059
+2018,10,Other,15124
+2018,10,Place of death unknown,38
+2018,11,Decedent's home,74160
+2018,11,Hospice facility,18004
+2018,11,Medical Facility - Dead on Arrival,848
+2018,11,Medical Facility - Inpatient,66186
+2018,11,Medical Facility - Outpatient or ER,14892
+2018,11,Nursing home/long term care,44665
+2018,11,Other,14584
+2018,11,Place of death unknown,36
+2018,12,Decedent's home,78011
+2018,12,Hospice facility,18821
+2018,12,Medical Facility - Dead on Arrival,910
+2018,12,Medical Facility - Inpatient,72446
+2018,12,Medical Facility - Outpatient or ER,15894
+2018,12,Nursing home/long term care,47947
+2018,12,Other,15187
+2018,12,Place of death unknown,64
+2019,1,Decedent's home,79934
+2019,1,Hospice facility,20077
+2019,1,Medical Facility - Dead on Arrival,853
+2019,1,Medical Facility - Inpatient,75878
+2019,1,Medical Facility - Outpatient or ER,16717
+2019,1,Nursing home/long term care,48626
+2019,1,Other,15524
+2019,1,Place of death unknown,40
+2019,2,Decedent's home,72558
+2019,2,Hospice facility,18237
+2019,2,Medical Facility - Dead on Arrival,738
+2019,2,Medical Facility - Inpatient,68292
+2019,2,Medical Facility - Outpatient or ER,14838
+2019,2,Nursing home/long term care,44107
+2019,2,Other,14025
+2019,2,Place of death unknown,26
+2019,3,Decedent's home,79038
+2019,3,Hospice facility,20059
+2019,3,Medical Facility - Dead on Arrival,788
+2019,3,Medical Facility - Inpatient,74560
+2019,3,Medical Facility - Outpatient or ER,16035
+2019,3,Nursing home/long term care,48625
+2019,3,Other,15774
+2019,3,Place of death unknown,50
+2019,4,Decedent's home,74149
+2019,4,Hospice facility,18565
+2019,4,Medical Facility - Dead on Arrival,785
+2019,4,Medical Facility - Inpatient,68014
+2019,4,Medical Facility - Outpatient or ER,14487
+2019,4,Nursing home/long term care,43963
+2019,4,Other,15235
+2019,4,Place of death unknown,56
+2019,5,Decedent's home,75362
+2019,5,Hospice facility,18915
+2019,5,Medical Facility - Dead on Arrival,782
+2019,5,Medical Facility - Inpatient,67863
+2019,5,Medical Facility - Outpatient or ER,14724
+2019,5,Nursing home/long term care,43663
+2019,5,Other,15540
+2019,5,Place of death unknown,44
+2019,6,Decedent's home,72293
+2019,6,Hospice facility,18044
+2019,6,Medical Facility - Dead on Arrival,805
+2019,6,Medical Facility - Inpatient,63515
+2019,6,Medical Facility - Outpatient or ER,13745
+2019,6,Nursing home/long term care,41639
+2019,6,Other,15337
+2019,6,Place of death unknown,44
+2019,7,Decedent's home,73916
+2019,7,Hospice facility,18310
+2019,7,Medical Facility - Dead on Arrival,761
+2019,7,Medical Facility - Inpatient,64009
+2019,7,Medical Facility - Outpatient or ER,14062
+2019,7,Nursing home/long term care,41826
+2019,7,Other,16277
+2019,7,Place of death unknown,50
+2019,8,Decedent's home,73037
+2019,8,Hospice facility,18197
+2019,8,Medical Facility - Dead on Arrival,745
+2019,8,Medical Facility - Inpatient,63014
+2019,8,Medical Facility - Outpatient or ER,14023
+2019,8,Nursing home/long term care,42351
+2019,8,Other,15872
+2019,8,Place of death unknown,41
+2019,9,Decedent's home,70881
+2019,9,Hospice facility,17619
+2019,9,Medical Facility - Dead on Arrival,681
+2019,9,Medical Facility - Inpatient,62169
+2019,9,Medical Facility - Outpatient or ER,13692
+2019,9,Nursing home/long term care,42121
+2019,9,Other,15509
+2019,9,Place of death unknown,43
+2019,10,Decedent's home,75795
+2019,10,Hospice facility,18617
+2019,10,Medical Facility - Dead on Arrival,755
+2019,10,Medical Facility - Inpatient,66012
+2019,10,Medical Facility - Outpatient or ER,14713
+2019,10,Nursing home/long term care,45427
+2019,10,Other,16301
+2019,10,Place of death unknown,41
+2019,11,Decedent's home,76597
+2019,11,Hospice facility,18271
+2019,11,Medical Facility - Dead on Arrival,795
+2019,11,Medical Facility - Inpatient,66556
+2019,11,Medical Facility - Outpatient or ER,15442
+2019,11,Nursing home/long term care,45338
+2019,11,Other,15985
+2019,11,Place of death unknown,44
+2019,12,Decedent's home,81028
+2019,12,Hospice facility,19406
+2019,12,Medical Facility - Dead on Arrival,825
+2019,12,Medical Facility - Inpatient,73367
+2019,12,Medical Facility - Outpatient or ER,16798
+2019,12,Nursing home/long term care,47986
+2019,12,Other,16520
+2019,12,Place of death unknown,45
+2020,1,Decedent's home,82965
+2020,1,Hospice facility,20599
+2020,1,Medical Facility - Dead on Arrival,868
+2020,1,Medical Facility - Inpatient,79732
+2020,1,Medical Facility - Outpatient or ER,16692
+2020,1,Nursing home/long term care,49105
+2020,1,Other,16684
+2020,1,Place of death unknown,63
+2020,2,Decedent's home,77730
+2020,2,Hospice facility,19040
+2020,2,Medical Facility - Dead on Arrival,711
+2020,2,Medical Facility - Inpatient,72293
+2020,2,Medical Facility - Outpatient or ER,15346
+2020,2,Nursing home/long term care,46154
+2020,2,Other,15627
+2020,2,Place of death unknown,50
+2020,3,Decedent's home,88522
+2020,3,Hospice facility,18905
+2020,3,Medical Facility - Dead on Arrival,798
+2020,3,Medical Facility - Inpatient,78869
+2020,3,Medical Facility - Outpatient or ER,16909
+2020,3,Nursing home/long term care,50428
+2020,3,Other,17477
+2020,3,Place of death unknown,54
+2020,4,Decedent's home,101932
+2020,4,Hospice facility,14878
+2020,4,Medical Facility - Dead on Arrival,850
+2020,4,Medical Facility - Inpatient,101173
+2020,4,Medical Facility - Outpatient or ER,17930
+2020,4,Nursing home/long term care,68362
+2020,4,Other,19074
+2020,4,Place of death unknown,84
+2020,5,Decedent's home,98037
+2020,5,Hospice facility,15668
+2020,5,Medical Facility - Dead on Arrival,843
+2020,5,Medical Facility - Inpatient,80962
+2020,5,Medical Facility - Outpatient or ER,16021
+2020,5,Nursing home/long term care,51425
+2020,5,Other,19585
+2020,5,Place of death unknown,76
+2020,6,Decedent's home,91372
+2020,6,Hospice facility,15444
+2020,6,Medical Facility - Dead on Arrival,807
+2020,6,Medical Facility - Inpatient,70425
+2020,6,Medical Facility - Outpatient or ER,15636
+2020,6,Nursing home/long term care,39634
+2020,6,Other,19067
+2020,6,Place of death unknown,50
+2020,7,Decedent's home,99088
+2020,7,Hospice facility,16273
+2020,7,Medical Facility - Dead on Arrival,852
+2020,7,Medical Facility - Inpatient,84187
+2020,7,Medical Facility - Outpatient or ER,17449
+2020,7,Nursing home/long term care,42393
+2020,7,Other,20759
+2020,7,Place of death unknown,61
+2020,8,Decedent's home,97640
+2020,8,Hospice facility,16494
+2020,8,Medical Facility - Dead on Arrival,824
+2020,8,Medical Facility - Inpatient,84246
+2020,8,Medical Facility - Outpatient or ER,16729
+2020,8,Nursing home/long term care,43211
+2020,8,Other,20459
+2020,8,Place of death unknown,44
+2020,9,Decedent's home,92410
+2020,9,Hospice facility,15977
+2020,9,Medical Facility - Dead on Arrival,766
+2020,9,Medical Facility - Inpatient,75700
+2020,9,Medical Facility - Outpatient or ER,15474
+2020,9,Nursing home/long term care,40245
+2020,9,Other,18757
+2020,9,Place of death unknown,40
+2020,10,Decedent's home,96127
+2020,10,Hospice facility,16987
+2020,10,Medical Facility - Dead on Arrival,804
+2020,10,Medical Facility - Inpatient,81791
+2020,10,Medical Facility - Outpatient or ER,16613
+2020,10,Nursing home/long term care,44486
+2020,10,Other,19312
+2020,10,Place of death unknown,45
+2020,11,Decedent's home,99986
+2020,11,Hospice facility,16372
+2020,11,Medical Facility - Dead on Arrival,801
+2020,11,Medical Facility - Inpatient,97477
+2020,11,Medical Facility - Outpatient or ER,18022
+2020,11,Nursing home/long term care,52720
+2020,11,Other,19488
+2020,11,Place of death unknown,50
+2020,12,Decedent's home,113579
+2020,12,Hospice facility,18034
+2020,12,Medical Facility - Dead on Arrival,900
+2020,12,Medical Facility - Inpatient,130659
+2020,12,Medical Facility - Outpatient or ER,21403
+2020,12,Nursing home/long term care,63250
+2020,12,Other,21735
+2020,12,Place of death unknown,62
+2021,1,Decedent's home,115405
+2021,1,Hospice facility,18785
+2021,1,Medical Facility - Dead on Arrival,933
+2021,1,Medical Facility - Inpatient,141881
+2021,1,Medical Facility - Outpatient or ER,20752
+2021,1,Nursing home/long term care,56058
+2021,1,Other,22006
+2021,1,Place of death unknown,47
+2021,2,Decedent's home,96194
+2021,2,Hospice facility,16112
+2021,2,Medical Facility - Dead on Arrival,782
+2021,2,Medical Facility - Inpatient,97954
+2021,2,Medical Facility - Outpatient or ER,16379
+2021,2,Nursing home/long term care,39344
+2021,2,Other,17749
+2021,2,Place of death unknown,42
+2021,3,Decedent's home,97577
+2021,3,Hospice facility,17141
+2021,3,Medical Facility - Dead on Arrival,853
+2021,3,Medical Facility - Inpatient,85063
+2021,3,Medical Facility - Outpatient or ER,16397
+2021,3,Nursing home/long term care,37536
+2021,3,Other,18642
+2021,3,Place of death unknown,49
+2021,4,Decedent's home,92923
+2021,4,Hospice facility,16704
+2021,4,Medical Facility - Dead on Arrival,740
+2021,4,Medical Facility - Inpatient,78941
+2021,4,Medical Facility - Outpatient or ER,15827
+2021,4,Nursing home/long term care,35904
+2021,4,Other,18161
+2021,4,Place of death unknown,33
+2021,5,Decedent's home,93093
+2021,5,Hospice facility,17081
+2021,5,Medical Facility - Dead on Arrival,725
+2021,5,Medical Facility - Inpatient,77989
+2021,5,Medical Facility - Outpatient or ER,15602
+2021,5,Nursing home/long term care,37323
+2021,5,Other,18828
+2021,5,Place of death unknown,33
+2021,6,Decedent's home,88809
+2021,6,Hospice facility,16600
+2021,6,Medical Facility - Dead on Arrival,758
+2021,6,Medical Facility - Inpatient,71485
+2021,6,Medical Facility - Outpatient or ER,15053
+2021,6,Nursing home/long term care,35844
+2021,6,Other,18649
+2021,6,Place of death unknown,34
+2021,7,Decedent's home,91421
+2021,7,Hospice facility,17453
+2021,7,Medical Facility - Dead on Arrival,749
+2021,7,Medical Facility - Inpatient,76968
+2021,7,Medical Facility - Outpatient or ER,15894
+2021,7,Nursing home/long term care,37795
+2021,7,Other,19640
+2021,7,Place of death unknown,48
+2021,8,Decedent's home,100570
+2021,8,Hospice facility,17581
+2021,8,Medical Facility - Dead on Arrival,861
+2021,8,Medical Facility - Inpatient,105555
+2021,8,Medical Facility - Outpatient or ER,18811
+2021,8,Nursing home/long term care,40560
+2021,8,Other,22275
+2021,8,Place of death unknown,58
+2021,9,Decedent's home,98850
+2021,9,Hospice facility,17106
+2021,9,Medical Facility - Dead on Arrival,771
+2021,9,Medical Facility - Inpatient,117593
+2021,9,Medical Facility - Outpatient or ER,18144
+2021,9,Nursing home/long term care,40455
+2021,9,Other,21720
+2021,9,Place of death unknown,68
+2021,10,Decedent's home,98155
+2021,10,Hospice facility,17517
+2021,10,Medical Facility - Dead on Arrival,788
+2021,10,Medical Facility - Inpatient,104715
+2021,10,Medical Facility - Outpatient or ER,17468
+2021,10,Nursing home/long term care,42226
+2021,10,Other,21356
+2021,10,Place of death unknown,62
+2021,11,Decedent's home,96992
+2021,11,Hospice facility,17174
+2021,11,Medical Facility - Dead on Arrival,735
+2021,11,Medical Facility - Inpatient,96337
+2021,11,Medical Facility - Outpatient or ER,17567
+2021,11,Nursing home/long term care,42109
+2021,11,Other,20107
+2021,11,Place of death unknown,59
+2021,12,Decedent's home,105096
+2021,12,Hospice facility,18180
+2021,12,Medical Facility - Dead on Arrival,908
+2021,12,Medical Facility - Inpatient,111546
+2021,12,Medical Facility - Outpatient or ER,19812
+2021,12,Nursing home/long term care,45119
+2021,12,Other,21378
+2021,12,Place of death unknown,57
+2022,1,Decedent's home,120953
+2022,1,Hospice facility,18577
+2022,1,Medical Facility - Dead on Arrival,1000
+2022,1,Medical Facility - Inpatient,134583
+2022,1,Medical Facility - Outpatient or ER,22948
+2022,1,Nursing home/long term care,51475
+2022,1,Other,23567
+2022,1,Place of death unknown,30
+2022,2,Decedent's home,96916
+2022,2,Hospice facility,16889
+2022,2,Medical Facility - Dead on Arrival,707
+2022,2,Medical Facility - Inpatient,100103
+2022,2,Medical Facility - Outpatient or ER,16408
+2022,2,Nursing home/long term care,41932
+2022,2,Other,19982
+2022,2,Place of death unknown,19
+2022,3,Decedent's home,94427
+2022,3,Hospice facility,18008
+2022,3,Medical Facility - Dead on Arrival,720
+2022,3,Medical Facility - Inpatient,80995
+2022,3,Medical Facility - Outpatient or ER,15934
+2022,3,Nursing home/long term care,40660
+2022,3,Other,20176
+2022,3,Place of death unknown,24
+2022,4,Decedent's home,87311
+2022,4,Hospice facility,16804
+2022,4,Medical Facility - Dead on Arrival,665
+2022,4,Medical Facility - Inpatient,71725
+2022,4,Medical Facility - Outpatient or ER,14787
+2022,4,Nursing home/long term care,38471
+2022,4,Other,18906
+2022,4,Place of death unknown,30
+2022,5,Decedent's home,90336
+2022,5,Hospice facility,16976
+2022,5,Medical Facility - Dead on Arrival,714
+2022,5,Medical Facility - Inpatient,74326
+2022,5,Medical Facility - Outpatient or ER,15217
+2022,5,Nursing home/long term care,39357
+2022,5,Other,20285
+2022,5,Place of death unknown,22
+2022,6,Decedent's home,87764
+2022,6,Hospice facility,16384
+2022,6,Medical Facility - Dead on Arrival,682
+2022,6,Medical Facility - Inpatient,72885
+2022,6,Medical Facility - Outpatient or ER,14952
+2022,6,Nursing home/long term care,37991
+2022,6,Other,20170
+2022,6,Place of death unknown,26
+2022,7,Decedent's home,92058
+2022,7,Hospice facility,16548
+2022,7,Medical Facility - Dead on Arrival,672
+2022,7,Medical Facility - Inpatient,76006
+2022,7,Medical Facility - Outpatient or ER,16088
+2022,7,Nursing home/long term care,40204
+2022,7,Other,21481
+2022,7,Place of death unknown,31
+2022,8,Decedent's home,91125
+2022,8,Hospice facility,17035
+2022,8,Medical Facility - Dead on Arrival,644
+2022,8,Medical Facility - Inpatient,75891
+2022,8,Medical Facility - Outpatient or ER,15514
+2022,8,Nursing home/long term care,40627
+2022,8,Other,21038
+2022,8,Place of death unknown,31
+2022,9,Decedent's home,88129
+2022,9,Hospice facility,16710
+2022,9,Medical Facility - Dead on Arrival,647
+2022,9,Medical Facility - Inpatient,73648
+2022,9,Medical Facility - Outpatient or ER,15153
+2022,9,Nursing home/long term care,39273
+2022,9,Other,20134
+2022,9,Place of death unknown,19
+2022,10,Decedent's home,92068
+2022,10,Hospice facility,17240
+2022,10,Medical Facility - Dead on Arrival,715
+2022,10,Medical Facility - Inpatient,77778
+2022,10,Medical Facility - Outpatient or ER,15916
+2022,10,Nursing home/long term care,43721
+2022,10,Other,20432
+2022,10,Place of death unknown,29
+2022,11,Decedent's home,92844
+2022,11,Hospice facility,17413
+2022,11,Medical Facility - Dead on Arrival,710
+2022,11,Medical Facility - Inpatient,80043
+2022,11,Medical Facility - Outpatient or ER,16497
+2022,11,Nursing home/long term care,43246
+2022,11,Other,20194
+2022,11,Place of death unknown,23
+2022,12,Decedent's home,102303
+2022,12,Hospice facility,18657
+2022,12,Medical Facility - Dead on Arrival,764
+2022,12,Medical Facility - Inpatient,92349
+2022,12,Medical Facility - Outpatient or ER,19186
+2022,12,Nursing home/long term care,48051
+2022,12,Other,22238
+2022,12,Place of death unknown,24
+2023,1,Decedent's home,97867
+2023,1,Hospice facility,18879
+2023,1,Medical Facility - Dead on Arrival,721
+2023,1,Medical Facility - Inpatient,89596
+2023,1,Medical Facility - Outpatient or ER,17475
+2023,1,Nursing home/long term care,47661
+2023,1,Other,19712
+2023,1,Place of death unknown,28
+2023,2,Decedent's home,86405
+2023,2,Hospice facility,16727
+2023,2,Medical Facility - Dead on Arrival,612
+2023,2,Medical Facility - Inpatient,74064
+2023,2,Medical Facility - Outpatient or ER,14942
+2023,2,Nursing home/long term care,41040
+2023,2,Other,17588
+2023,2,Place of death unknown,20
+2023,3,Decedent's home,93531
+2023,3,Hospice facility,18257
+2023,3,Medical Facility - Dead on Arrival,666
+2023,3,Medical Facility - Inpatient,79540
+2023,3,Medical Facility - Outpatient or ER,15959
+2023,3,Nursing home/long term care,44697
+2023,3,Other,18976
+2023,3,Place of death unknown,16
+2023,4,Decedent's home,87417
+2023,4,Hospice facility,17427
+2023,4,Medical Facility - Dead on Arrival,620
+2023,4,Medical Facility - Inpatient,73791
+2023,4,Medical Facility - Outpatient or ER,14930
+2023,4,Nursing home/long term care,41692
+2023,4,Other,18536
+2023,4,Place of death unknown,25
+2023,5,Decedent's home,88142
+2023,5,Hospice facility,17290
+2023,5,Medical Facility - Dead on Arrival,634
+2023,5,Medical Facility - Inpatient,73536
+2023,5,Medical Facility - Outpatient or ER,14936
+2023,5,Nursing home/long term care,41317
+2023,5,Other,19014
+2023,5,Place of death unknown,24
+2023,6,Decedent's home,84125
+2023,6,Hospice facility,16996
+2023,6,Medical Facility - Dead on Arrival,601
+2023,6,Medical Facility - Inpatient,69768
+2023,6,Medical Facility - Outpatient or ER,14173
+2023,6,Nursing home/long term care,39384
+2023,6,Other,18630
+2023,6,Place of death unknown,31
+2023,7,Decedent's home,87411
+2023,7,Hospice facility,16910
+2023,7,Medical Facility - Dead on Arrival,622
+2023,7,Medical Facility - Inpatient,70169
+2023,7,Medical Facility - Outpatient or ER,14769
+2023,7,Nursing home/long term care,39700
+2023,7,Other,19782
+2023,7,Place of death unknown,22
+2023,8,Decedent's home,87756
+2023,8,Hospice facility,17420
+2023,8,Medical Facility - Dead on Arrival,599
+2023,8,Medical Facility - Inpatient,71827
+2023,8,Medical Facility - Outpatient or ER,14495
+2023,8,Nursing home/long term care,40917
+2023,8,Other,19722
+2023,8,Place of death unknown,26
+2023,9,Decedent's home,84528
+2023,9,Hospice facility,16743
+2023,9,Medical Facility - Dead on Arrival,610
+2023,9,Medical Facility - Inpatient,71328
+2023,9,Medical Facility - Outpatient or ER,14289
+2023,9,Nursing home/long term care,41195
+2023,9,Other,18537
+2023,9,Place of death unknown,25
+2023,10,Decedent's home,89656
+2023,10,Hospice facility,17238
+2023,10,Medical Facility - Dead on Arrival,609
+2023,10,Medical Facility - Inpatient,74798
+2023,10,Medical Facility - Outpatient or ER,15172
+2023,10,Nursing home/long term care,44743
+2023,10,Other,18696
+2023,10,Place of death unknown,28
+2023,11,Decedent's home,88369
+2023,11,Hospice facility,17283
+2023,11,Medical Facility - Dead on Arrival,615
+2023,11,Medical Facility - Inpatient,75559
+2023,11,Medical Facility - Outpatient or ER,15575
+2023,11,Nursing home/long term care,44839
+2023,11,Other,18009
+2023,11,Place of death unknown,29
+2023,12,Decedent's home,96546
+2023,12,Hospice facility,18518
+2023,12,Medical Facility - Dead on Arrival,667
+2023,12,Medical Facility - Inpatient,85445
+2023,12,Medical Facility - Outpatient or ER,17286
+2023,12,Nursing home/long term care,48423
+2023,12,Other,19369
+2023,12,Place of death unknown,23
+2024,1,Decedent's home,99945
+2024,1,Hospice facility,19354
+2024,1,Medical Facility - Dead on Arrival,624
+2024,1,Medical Facility - Inpatient,90707
+2024,1,Medical Facility - Outpatient or ER,17681
+2024,1,Nursing home/long term care,49980
+2024,1,Other,19259
+2024,1,Place of death unknown,44
+2024,2,Decedent's home,87814
+2024,2,Hospice facility,17899
+2024,2,Medical Facility - Dead on Arrival,579
+2024,2,Medical Facility - Inpatient,75910
+2024,2,Medical Facility - Outpatient or ER,14974
+2024,2,Nursing home/long term care,43287
+2024,2,Other,17325
+2024,2,Place of death unknown,22
+2024,3,Decedent's home,90676
+2024,3,Hospice facility,18622
+2024,3,Medical Facility - Dead on Arrival,598
+2024,3,Medical Facility - Inpatient,77580
+2024,3,Medical Facility - Outpatient or ER,15150
+2024,3,Nursing home/long term care,45170
+2024,3,Other,18149
+2024,3,Place of death unknown,21
+2024,4,Decedent's home,86394
+2024,4,Hospice facility,17775
+2024,4,Medical Facility - Dead on Arrival,544
+2024,4,Medical Facility - Inpatient,72531
+2024,4,Medical Facility - Outpatient or ER,14123
+2024,4,Nursing home/long term care,42501
+2024,4,Other,17743
+2024,4,Place of death unknown,21
+2024,5,Decedent's home,87666
+2024,5,Hospice facility,17648
+2024,5,Medical Facility - Dead on Arrival,515
+2024,5,Medical Facility - Inpatient,72140
+2024,5,Medical Facility - Outpatient or ER,14548
+2024,5,Nursing home/long term care,42180
+2024,5,Other,17948
+2024,5,Place of death unknown,23
+2024,6,Decedent's home,84766
+2024,6,Hospice facility,17104
+2024,6,Medical Facility - Dead on Arrival,528
+2024,6,Medical Facility - Inpatient,69294
+2024,6,Medical Facility - Outpatient or ER,14137
+2024,6,Nursing home/long term care,40943
+2024,6,Other,18235
+2024,6,Place of death unknown,62
+2024,7,Decedent's home,87162
+2024,7,Hospice facility,17401
+2024,7,Medical Facility - Dead on Arrival,557
+2024,7,Medical Facility - Inpatient,71321
+2024,7,Medical Facility - Outpatient or ER,14367
+2024,7,Nursing home/long term care,41865
+2024,7,Other,18417
+2024,7,Place of death unknown,134
+2024,8,Decedent's home,87662
+2024,8,Hospice facility,17677
+2024,8,Medical Facility - Dead on Arrival,499
+2024,8,Medical Facility - Inpatient,72013
+2024,8,Medical Facility - Outpatient or ER,14186
+2024,8,Nursing home/long term care,43295
+2024,8,Other,17727
+2024,8,Place of death unknown,28
+2024,9,Decedent's home,84259
+2024,9,Hospice facility,16892
+2024,9,Medical Facility - Dead on Arrival,500
+2024,9,Medical Facility - Inpatient,70187
+2024,9,Medical Facility - Outpatient or ER,13850
+2024,9,Nursing home/long term care,41927
+2024,9,Other,16835
+2024,9,Place of death unknown,28
+2024,10,Decedent's home,87729
+2024,10,Hospice facility,17645
+2024,10,Medical Facility - Dead on Arrival,537
+2024,10,Medical Facility - Inpatient,74405
+2024,10,Medical Facility - Outpatient or ER,14763
+2024,10,Nursing home/long term care,44729
+2024,10,Other,17346
+2024,10,Place of death unknown,36
+2024,11,Decedent's home,86489
+2024,11,Hospice facility,17195
+2024,11,Medical Facility - Dead on Arrival,554
+2024,11,Medical Facility - Inpatient,71430
+2024,11,Medical Facility - Outpatient or ER,14350
+2024,11,Nursing home/long term care,43971
+2024,11,Other,16517
+2024,11,Place of death unknown,24
+2024,12,Decedent's home,95105
+2024,12,Hospice facility,18039
+2024,12,Medical Facility - Dead on Arrival,606
+2024,12,Medical Facility - Inpatient,81328
+2024,12,Medical Facility - Outpatient or ER,16974
+2024,12,Nursing home/long term care,48547
+2024,12,Other,17606
+2024,12,Place of death unknown,17

@@ -15,21 +15,21 @@ This is a repository to collect and run fun experiments on various publicly avai
 
 ## Sources
 
-| Data Source                                                           | Module          | API                                  |
-| --------------------------------------------------------------------- | --------------- | ------------------------------------ |
-| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API                   |
-| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API               |
-| [WISQARS Injury & Violence Data]                                      | `src/wisqars/`  | data.cdc.gov (Socrata)               |
-| [ATSDR GRASP Disease APIs]                                            | `src/grasp/`    | gis.cdc.gov/grasp (REST/JSON)        |
-| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT              |
-| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)               |
-| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)               |
-| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)               |
-| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)               |
-| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)               |
-| [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)               |
-| [SEER Cancer Statistics]                                              | `src/seer/`     | seer.cancer.gov (SEER*Explorer JSON) |
-| [NCHS Data Query System (DQS)]                                        | `src/nchs_dqs/` | data.cdc.gov (Socrata)               |
+| Data Source                                                           | Module          | API                                   |
+| --------------------------------------------------------------------- | --------------- | ------------------------------------- |
+| [Wide-ranging ONline Data for Epidemiologic Research (WONDER)]        | `src/wonder/`   | CDC WONDER XML API                    |
+| [National Syndromic Surveillance Program (NSSP)]                      | `src/nssp/`     | CMU Delphi Epidata API                |
+| [WISQARS Injury & Violence Data]                                      | `src/wisqars/`  | data.cdc.gov (Socrata)                |
+| [ATSDR GRASP Disease APIs]                                            | `src/grasp/`    | gis.cdc.gov/grasp (REST/JSON)         |
+| [National Immunization Survey (NIS)]                                  | `src/nis/`      | CDC FTP fixed-width DAT               |
+| [National Wastewater Surveillance System (NWSS)]                      | `src/cdc_open/` | data.cdc.gov (Socrata)                |
+| [National Respiratory and Enteric Virus Surveillance System (NREVSS)] | `src/cdc_open/` | data.cdc.gov (Socrata)                |
+| [National Healthcare Safety Network (NHSN)]                           | `src/cdc_open/` | data.cdc.gov (Socrata)                |
+| [Children Vaccination]                                                | `src/cdc_open/` | data.cdc.gov (Socrata)                |
+| [CDC Open Data (data.cdc.gov)]                                        | `src/cdc_open/` | data.cdc.gov (Socrata)                |
+| [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)                |
+| [SEER Cancer Statistics]                                              | `src/seer/`     | seer.cancer.gov (SEER\*Explorer JSON) |
+| [NCHS Data Query System (DQS)]                                        | `src/nchs_dqs/` | data.cdc.gov (Socrata)                |
 
 ---
 
@@ -243,7 +243,7 @@ Data sourced from the [BEAM Dashboard – Report Data](https://data.cdc.gov/Food
 
 ### SEER — Cancer Statistics — [docs](https://fartbagxp.github.io/health/seer/)
 
-[SEER*Explorer](https://seer.cancer.gov/statistics-network/explorer/) (Surveillance, Epidemiology, and End Results) is NCI's cancer statistics system. The `seer` module calls the same JSON endpoints the SEER*Explorer web app uses to render its charts — undocumented, but public and unauthenticated. It covers 70+ cancer sites with incidence and U.S. mortality rates/counts by year, sex, race, and age group back to 1975.
+[SEER\*Explorer](https://seer.cancer.gov/statistics-network/explorer/) (Surveillance, Epidemiology, and End Results) is NCI's cancer statistics system. The `seer` module calls the same JSON endpoints the SEER\*Explorer web app uses to render its charts — undocumented, but public and unauthenticated. It covers 70+ cancer sites with incidence and U.S. mortality rates/counts by year, sex, race, and age group back to 1975.
 
 ```bash
 uv run python -m seer sites --search breast

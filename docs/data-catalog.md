@@ -51,6 +51,23 @@ committed to `data/` — they're fetched live on demand.
 | 8 | **NIS** (immunization) | `nis` | CDC FTP fixed-width `.dat` | NIS-Child + NIS-Teen | ❌ live-stream | — | live |
 | 9 | **EPHT** (environmental tracking) | `epht` | ephtracking.cdc.gov REST/JSON | 867 measures; 8 curated for state-level archive | 🚧 discovery ✅, archive pending token | not yet scheduled | live |
 
+### Who collects it, and how
+
+The center and collection method behind each system (health-charts renders the
+same taxonomy per chart from `src/lib/sources.js`):
+
+| System | CDC center | How it's collected |
+| ------ | ---------- | ------------------ |
+| CDC WONDER | NCHS | Vital records (birth/death certificates) + notifiable-disease case counts |
+| CDC Open Data (Socrata) | Multi-center portal | Varies by dataset — hospital/facility reporting (NHSN), surveys (NIS, PLACES/BRFSS), wastewater (NWSS), vital records (NVSS), lab surveillance (RESP-NET, BEAM, measles/NNDSS), model-based nowcast (CFA) |
+| NCHS DQS | NCHS | Vital records + national surveys (NHANES/NHIS) + CMS expenditure accounts |
+| WISQARS | NCIPC (Injury Prevention & Control) | Compiled from NVSS death certificates + related systems |
+| NCI SEER | **NCI (NIH)** — not CDC | Population-based cancer registries |
+| ATSDR GRASP / FluView | ATSDR platform; NCIRD data | Outpatient ILINet + clinical-lab influenza surveillance |
+| NSSP | CSELS / OPHDST | Syndromic emergency-department visit reporting |
+| NIS | NCIRD (Immunization Services Div.) | Random-digit-dial & panel telephone survey |
+| EPHT | NCEH (National Center for Environmental Health) | Environmental monitoring + linked health records |
+
 !!! note "Activity verdict"
     All five scheduled jobs are **healthy**. Weekly respiratory, wastewater,
     measles, and NHSN archives are current through mid-August 2026; the annual

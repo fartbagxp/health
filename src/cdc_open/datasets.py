@@ -399,6 +399,47 @@ DATASETS: dict[str, Dataset] = {
             "population_served",
         ],
     ),
+    "wastewater_mpox": Dataset(
+        charted=True,
+        id="xpxn-rzgz",
+        name="NWSS Wastewater: Mpox",
+        description="Mpox (monkeypox) DNA concentrations from US wastewater sampling sites via NWSS, updated weekly. Per-site raw (~300k rows); like the other NWSS series it is fetched fresh and rolled up by cdc_open.aggregate to a small national weekly-median signal in data/processed/cdc_open/ — only that rollup is committed.",
+        years="2025–present",
+        key_columns=[
+            "state_territory",
+            "sample_collect_date",
+            "counties_served",
+            "population_served",
+            "pcr_target_detect",
+            "pcr_target_avg_conc",
+            "pcr_target_flowpop_lin",
+            "date_updated",
+        ],
+    ),
+    "nwss_metric": Dataset(
+        charted=True,
+        id="2ew6-ywp6",
+        name="NWSS Public SARS-CoV-2 Wastewater Metric Data",
+        description=(
+            "The interpreted NWSS COVID-19 wastewater metric the public dashboard shows: "
+            "per-site 15-day percent change (ptc_15d), detection proportion, and the "
+            "activity percentile (0–100) relative to each site's own history. ~840k rows "
+            "at full resolution, so fetched fresh and reduced by "
+            "cdc_open.aggregate.aggregate_nwss_metric() to a national weekly-median "
+            "percentile in data/processed/cdc_open/; only that rollup is committed."
+        ),
+        years="2020–present",
+        key_columns=[
+            "reporting_jurisdiction",
+            "county_fips",
+            "population_served",
+            "date_start",
+            "date_end",
+            "ptc_15d",
+            "detect_prop_15d",
+            "percentile",
+        ],
+    ),
     # ── Respiratory surveillance (weekly) ────────────────────────────────────
     "resp_net": Dataset(
         id="kvib-3txy",
@@ -876,11 +917,14 @@ DATASETS: dict[str, Dataset] = {
         ],
     ),
     "epidemic_trends_rt": Dataset(
-        # ~488k rows / ~72MB -- over GitHub's 50MB recommended limit. Bloated
-        # by revision history: 80 distinct `as_of` snapshot dates each
-        # re-publishing most of the 651-date estimate history (80 x 651 x 3
-        # diseases x 52 states), not just the current estimate. Not currently
-        # charted. Disabled until charted; still queryable live via
+        # CFA (Center for Forecasting and Outbreak Analytics) nowcast product.
+        # ~520k rows / ~72MB at full resolution -- bloated by revision history:
+        # ~87 distinct `as_of` snapshots each re-publishing the recent estimate
+        # window (state x disease x day), not just the current one. The bulk
+        # downloader skips it (enabled=False); cdc_open.fetch_epidemic_trends
+        # instead pulls only the latest `as_of` snapshot (~4.4k rows) and
+        # accumulates it into a small committed national trend series that
+        # health-charts renders. Still queryable live via
         # `cdc_open query 5dqz-y4ea`.
         enabled=False,
         id="5dqz-y4ea",
@@ -1217,6 +1261,33 @@ DATASETS: dict[str, Dataset] = {
             "outbreak_associated_isolates",
         ],
         soql_where="source_type='Human'",
+    ),
+    # ── NCHS Rapid Surveys System ────────────────────────────────────────────
+    "rapid_surveys": Dataset(
+        id="p89x-xx88",
+        name="NCHS Rapid Surveys System",
+        description=(
+            "Quick-turnaround national health estimates from NCHS's Rapid Surveys "
+            "System — questions sponsored by CDC programs on time-sensitive health "
+            "topics, attitudes, and behaviors, collected quarterly in rounds from "
+            "commercial probability panels (AmeriSpeak, KnowledgePanel). One tidy "
+            "long-format row per indicator x demographic subgroup, with a percentage "
+            "estimate and confidence interval. ~1.7MB, so archived in full. "
+            "Note: gender-identity items were removed from the instrument in 2025 "
+            "(see the data-catalog terminations cross-check); the survey itself "
+            "continues. Round-based, not a continuous time series."
+        ),
+        years="2023–present",
+        key_columns=[
+            "round",
+            "topic",
+            "indicator",
+            "full_indicator",
+            "demographic_variable",
+            "demographic_variable_label",
+            "estimate",
+            "confidence_interval",
+        ],
     ),
 }
 

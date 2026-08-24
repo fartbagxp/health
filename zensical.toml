@@ -5,6 +5,7 @@ site_url = "https://boris-ning.github.io/health/"
 
 nav = [
   { Home = "index.md" },
+  { "Data Catalog" = "data-catalog.md" },
   { WONDER = [
     { Overview = "wonder/index.md" },
     { "Multi-Year Queries" = "wonder/multi-year.md" },

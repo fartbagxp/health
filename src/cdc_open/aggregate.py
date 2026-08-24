@@ -36,6 +36,7 @@ WASTEWATER_SERIES = [
     "wastewater_rsv",
     "wastewater_h5",
     "wastewater_measles",
+    "wastewater_mpox",
 ]
 
 
@@ -133,6 +134,52 @@ def aggregate_wastewater_activity(raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT
     return len(result)
 
 
+def aggregate_nwss_metric(raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR) -> int:
+    """National weekly-median COVID-19 wastewater activity *percentile* from
+    nwss_metric.csv (2ew6-ywp6, ~840k per-site rows / far past GitHub's limit).
+
+    This is the interpreted metric the public NWSS dashboard shows: each site's
+    `percentile` is where its current level sits within its own history (0–100).
+    We take the national median across sites per ISO week, keyed on the sample
+    window end date, giving one small chart-ready series."""
+    raw_path = raw_dir / "nwss_metric.csv"
+    with raw_path.open(newline="") as f:
+        rows = list(csv.DictReader(f))
+
+    by_week: dict[date, list[float]] = defaultdict(list)
+    for row in rows:
+        raw_date = (row.get("date_end") or "").strip()
+        try:
+            d = datetime.fromisoformat(raw_date[:10]).date()
+        except ValueError:
+            continue
+        try:
+            value = float(row.get("percentile") or "")
+        except ValueError:
+            continue
+        if value < 0:
+            continue
+        by_week[_week_start(d)].append(value)
+
+    result = []
+    for week, values in by_week.items():
+        values.sort()
+        mid = len(values) // 2
+        median = values[mid] if len(values) % 2 else (values[mid - 1] + values[mid]) / 2
+        result.append((week, round(median, 2)))
+    result.sort()
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "nwss_metric.csv"
+    with out_path.open("w", newline="") as f:
+        writer = csv.writer(f, lineterminator="\n")
+        writer.writerow(["week_end", "median_percentile"])
+        for week, median in result:
+            writer.writerow([week.isoformat(), median])
+
+    return len(result)
+
+
 _PLACES_COUNTY_COLUMNS = [
     "locationid",
     "stateabbr",
@@ -181,6 +228,10 @@ def aggregate_all(series: list[str] = WASTEWATER_SERIES) -> None:
     print("  aggregating wastewater_activity ...", end=" ", flush=True)
     n = aggregate_wastewater_activity()
     print(f"{n} weekly points -> {_OUT_DIR / 'wastewater_activity.csv'}")
+
+    print("  aggregating nwss_metric ...", end=" ", flush=True)
+    n = aggregate_nwss_metric()
+    print(f"{n} weekly points -> {_OUT_DIR / 'nwss_metric.csv'}")
 
     print("  aggregating places_county ...", end=" ", flush=True)
     n = aggregate_places_county()

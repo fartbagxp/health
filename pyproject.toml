@@ -9,21 +9,21 @@ description = "To collect various health API around the US"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "anthropic==0.121.0",
+    "anthropic==1.0.0",
     "beautifulsoup4==4.15.0",
-    "curl-cffi==0.16.0",
-    "lxml==6.1.1",
+    "curl-cffi==0.16.1",
+    "lxml==6.1.2",
     "matplotlib==3.11.1",
     "pandas==3.0.5",
     "playwright==1.62.0",
     "pydantic==2.13.4",
-    "python-dotenv==1.2.2",
+    "python-dotenv==1.2.3",
     "requests==2.34.2",
 ]
 
 [dependency-groups]
 dev = [
-    "zensical==0.0.53",
+    "zensical==0.0.57",
     "pre-commit==4.6.2",
     "pytest==9.1.1",
 ]
@@ -40,6 +40,7 @@ nis = "nis.main:main"
 grasp = "grasp.main:main"
 seer = "seer.main:main"
 dqs = "nchs_dqs.main:main"
+epht = "epht.main:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -6,7 +6,7 @@
 [![Update WISQARS](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml)
 [![Update SEER](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml)
 [![Update NCHS DQS](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml)
-[![Datasets](https://img.shields.io/badge/datasets-70-4c9be8)](https://fartbagxp.github.io/health/)
+[![Datasets](https://img.shields.io/badge/cdc--open%20datasets-68-4c9be8)](https://fartbagxp.github.io/health/data-catalog/)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-8a2be2)](https://fartbagxp.github.io/health/)
 
 This is a repository to collect and run fun experiments on various publicly available health APIs.
@@ -30,6 +30,9 @@ This is a repository to collect and run fun experiments on various publicly avai
 | [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]                  | `src/cdc_open/` | data.cdc.gov (Socrata)                |
 | [SEER Cancer Statistics]                                              | `src/seer/`     | seer.cancer.gov (SEER\*Explorer JSON) |
 | [NCHS Data Query System (DQS)]                                        | `src/nchs_dqs/` | data.cdc.gov (Socrata)                |
+| [Environmental Public Health Tracking (EPHT)]                         | `src/epht/`     | ephtracking.cdc.gov (REST/JSON)       |
+
+See the [Data Catalog](https://fartbagxp.github.io/health/data-catalog/) for the full, verified inventory across all systems, their CDC center, collection method, refresh cadence, and archive status.
 
 ---
 
@@ -219,7 +222,7 @@ print(nat["P_UTDHPV13_pct"])   # % of teens with completed HPV series
 
 [data.cdc.gov](https://data.cdc.gov) is the CDC's public open data portal, built on the Socrata platform. It exposes datasets as a standard REST/JSON API ([SODA](https://dev.socrata.com/)) — no authentication required for read access.
 
-69 datasets are available covering mortality, birth indicators, COVID-19, respiratory surveillance, wastewater (NWSS), vaccination, disability, nutrition, chronic disease, overdose, notifiable diseases (NNDSS), NHSN nursing homes, NREVSS RSV, NSSP ED visits, children's vaccination, and NHANES measured obesity. An LLM-powered `analyze` command uses Claude to fetch and synthesize data in response to natural language questions. Not every dataset is wired into a chart yet — `cdc-open list --uncharted` shows what's collected but unused.
+68 datasets are available covering mortality, birth indicators, COVID-19, respiratory surveillance, wastewater (NWSS, including SARS-CoV-2/flu/RSV/measles/H5/mpox and the public activity-level metric), vaccination, disability, nutrition, chronic disease, overdose, notifiable diseases (NNDSS), NHSN nursing homes, NREVSS RSV, NSSP ED visits, children's vaccination, NHANES measured obesity, the NCHS Rapid Surveys System, and CFA's Epidemic Trends nowcast. An LLM-powered `analyze` command uses Claude to fetch and synthesize data in response to natural language questions. Not every dataset is wired into a chart yet — `cdc-open list --uncharted` shows what's collected but unused. Near-real-time additions (CFA Epidemic Trends, Mpox/NWSS-metric wastewater) are summarized in the [Data Catalog](https://fartbagxp.github.io/health/data-catalog/).
 
 ```bash
 uv run python -m cdc_open list
@@ -303,7 +306,7 @@ pulse-code  →  health  →  health-charts
 (explore)      (archive)   (visualize)
 ```
 
-- **[fartbagxp/pulse-code](https://github.com/fartbagxp/pulse-code)** — a CDC WONDER exploration CLI for one-off, ad hoc queries, with an LLM-assisted XML query builder. 23 of the 25 saved queries in `src/wonder/queries/` here started as saved queries in `pulse-code`'s `src/pulse/queries/`; this repo wraps each in a `fetch_*.py` script that runs on a schedule and commits the result as a CSV in `data/raw/wonder/` — the archival step `pulse-code` itself doesn't do.
+- **[fartbagxp/pulse-code](https://github.com/fartbagxp/pulse-code)** — a CDC WONDER exploration CLI for one-off, ad hoc queries, with an LLM-assisted XML query builder. This repo carries 49 saved WONDER XML queries in `src/wonder/queries/`; 23 of `pulse-code`'s 59 saved queries have graduated here, each wrapped in a `fetch_*.py` script that runs on a schedule and commits the result as a CSV in `data/raw/wonder/`. That archival step is the one `pulse-code` itself doesn't do.
 - **[fartbagxp/health-charts](https://github.com/fartbagxp/health-charts)** — the dashboard downstream of this repo. It fetches CSVs from `data/raw/` and `data/processed/` here directly via `raw.githubusercontent.com` at page-load time (nothing is copied into that repo) and renders them with svelteplot.
 
 [CDC]: https://www.cdc.gov
@@ -319,3 +322,5 @@ pulse-code  →  health  →  health-charts
 [CDC Open Data (data.cdc.gov)]: https://data.cdc.gov
 [CDC BEAM (Bacteria, Enterics, Ameba, and Mycotics)]: https://www.cdc.gov/beam/dashboard/index.html
 [SEER Cancer Statistics]: https://seer.cancer.gov/statistics-network/explorer/
+[NCHS Data Query System (DQS)]: https://www.cdc.gov/nchs/dqs/
+[Environmental Public Health Tracking (EPHT)]: https://ephtracking.cdc.gov/

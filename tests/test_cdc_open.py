@@ -20,12 +20,11 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-from cdc_open.aggregate import aggregate_series, weekly_median, _week_start
+from cdc_open.aggregate import _week_start, aggregate_series, weekly_median
 from cdc_open.client import SodaClient
 from cdc_open.datasets import DATASETS, Dataset
 from cdc_open.download import download_all
 from cdc_open.tools import TOOLS, execute_tool
-
 
 # =============================================================================
 # Dataset registry
@@ -60,7 +59,9 @@ class TestDatasets:
             assert key in DATASETS, f"Missing dataset: {key}"
 
     def test_dataset_count(self):
-        assert len(DATASETS) == 65
+        # Bump alongside any registry change -- this and the CLI's `list`
+        # assertion below are the only two places the count is pinned.
+        assert len(DATASETS) == 68
 
 
 # =============================================================================
@@ -264,6 +265,7 @@ class TestCLI:
             capture_output=True,
             text=True,
             cwd=SRC,
+            check=False,  # callers assert on returncode; some expect failure
             **kwargs,
         )
 
@@ -283,7 +285,7 @@ class TestCLI:
         assert result.returncode == 0
         data = json.loads(result.stdout)
         assert isinstance(data, list)
-        assert len(data) == 65
+        assert len(data) == len(DATASETS)
         keys = {row["key"] for row in data}
         assert "leading_death" in keys
         assert "weekly_deaths" in keys
@@ -384,6 +386,7 @@ class TestSDKIntegration:
             capture_output=True,
             text=True,
             cwd=SRC,
+            check=False,  # asserted on explicitly below
         )
         assert result.returncode == 0
         data = json.loads(result.stdout)
@@ -408,6 +411,7 @@ class TestSDKIntegration:
             capture_output=True,
             text=True,
             cwd=SRC,
+            check=False,  # asserted on explicitly below
         )
         assert result.returncode == 0
         lines = result.stdout.strip().splitlines()

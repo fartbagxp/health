@@ -37,10 +37,12 @@ matching `fetch_*.py` script here. The rest stay exploration-only for now.
 
 ## Source systems
 
-Nine upstream systems are wired up. Five feed the scheduled archive. Three
+Ten upstream systems are wired up. Six feed the scheduled archive. Three
 (**GRASP**, **NSSP**, **NIS**) are query-only in `pulse`/`health` and are **not**
 committed to `data/`. **EPHT** is cataloged with a working discovery client, but
-its archiver is not scheduled yet (see section 9).
+its archiver is not scheduled yet (see section 9). **PLACES** is the one source
+too large to commit at all: it is mirrored into a public Dolt database, with
+only small derived slices tracked here (see section 10).
 
 | # | System | Module | API | Datasets | Archived? | Schedule (UTC) | Verified latest data |
 | - | ------ | ------ | --- | -------- | --------- | -------------- | -------------------- |
@@ -53,6 +55,7 @@ its archiver is not scheduled yet (see section 9).
 | 7 | **NSSP** (ED visits) | `nssp` | CMU Delphi Epidata | 4 pathogens (COVID/flu/RSV/combined) | ❌ live-only | on demand | live |
 | 8 | **NIS** (immunization) | `nis` | CDC FTP fixed-width `.dat` | NIS-Child + NIS-Teen | ❌ live-stream | on demand | live |
 | 9 | **EPHT** (environmental tracking) | `epht` | ephtracking.cdc.gov REST/JSON | 867 measures; 8 curated for state-level archive | 🚧 discovery ✅, archive pending token | not yet scheduled | live |
+| 10 | **CDC PLACES** | `places` | data.cdc.gov bulk export | 4 geographies x 49 measures, 2 families (~7.9M rows) | ✅ Dolt `fartbagxp/cdc-places` + `data/processed/places/` | 1st of month 17:00 | 2025 release + ACS 2017-2021 |
 
 ### Who collects it, and how
 
@@ -70,6 +73,7 @@ same taxonomy per chart from `src/lib/sources.js`):
 | NSSP | CSELS / OPHDST | Syndromic emergency-department visit reporting |
 | NIS | NCIRD (Immunization Services Div.) | Random-digit-dial and panel telephone survey |
 | EPHT | NCEH (National Center for Environmental Health) | Environmental monitoring plus linked health records |
+| CDC PLACES | NCCDPHP (Chronic Disease Prevention & Health Promotion) | Two products: small-area estimates modeled from BRFSS responses (40 measures), and Non-Medical Factor Measures derived from the 5-year American Community Survey (9 measures) |
 
 > **Activity verdict.** All five scheduled jobs are healthy. Weekly respiratory,
 > wastewater, measles, and NHSN archives are current through mid-August 2026. The
@@ -212,6 +216,93 @@ county-only). The curated registry is a starting set, not a final one.
 
 ---
 
+## 10. CDC PLACES (`data/processed/places/` + Dolt)
+
+Small-area estimates of 49 measures for every US county, place, census tract and
+ZCTA — all seven pages of CDC's PLACES data portal.
+
+Two CDC products, mirrored as two families. **PLACES proper** is 40 measures
+modeled from BRFSS, in six categories: Health Outcomes (12 measures),
+Prevention (7), Disability (7), Health-Related Social Needs (7), Health Risk
+Behaviors (4), Health Status (3). **Non-Medical Factor Measures** is the
+seventh page: 9 measures derived from the 5-year American Community Survey,
+under `categoryid` `SDOH`.
+
+**The one source too large to commit.** Together, ~7.9M rows / ~1.7 GB:
+
+| Geography | PLACES ID | Rows | Export | Non-Medical ID | Rows |
+| --------- | --------- | ---- | ------ | -------------- | ---- |
+| County | `swc5-untb` | 229,298 | 53 MB | `i6u4-y3g4` | 28,287 |
+| Place | `eav7-hnsx` | 2,150,438 | ~460 MB | `edkk-ze78` | 268,389 |
+| Census tract | `cwsq-ngmh` | 3,047,284 | 694 MB | `e539-uadk` | 751,509 |
+| ZCTA | `qnzd-25i4` | 1,171,563 | 224 MB | `bumh-rgsq` | 291,024 |
+
+The tract export alone is past GitHub's 100 MB hard limit. So PLACES is mirrored
+into the public Dolt database
+[`fartbagxp/cdc-places`](https://www.dolthub.com/repositories/fartbagxp/cdc-places)
+— free at any size, versioned and diffable — and `data/raw/places/` is
+gitignored. Only these derived slices are tracked:
+
+| Archived CSV | Charted as | Coverage |
+| ------------ | ---------- | -------- |
+| `county_crude.csv` (114,576 rows, 4.1 MB) | county choropleth | 40 measures x 3,145 counties, crude prevalence |
+| `county_ageadj.csv` (114,576 rows, 4.1 MB) | backlog | same, age-adjusted |
+| `state_rollup.csv` (3,814 rows, 122 KB) | backlog | population-weighted state means |
+| `nmf_county.csv` (28,278 rows, 1.3 MB) | backlog | 9 non-medical factors x 3,143 counties, with margin of error |
+| `nmf_state_rollup.csv` (459 rows, 10 KB) | backlog | population-weighted state means |
+| `measures.csv` (49 rows) | measure labels | the shared measure dimension, all 7 categories |
+
+> **The mirror is ours, not CDC's.** DoltHub is a commercial service run by
+> DoltHub Inc., with no affiliation to CDC. `fartbagxp/cdc-places` is a copy
+> this project maintains; CDC does not publish it and is not responsible for it.
+> The authoritative source is always `data.cdc.gov` — the Socrata IDs above.
+> The database is named `cdc-places` for what it holds, not for who runs it.
+
+### How it's kept small
+
+| Full resolution | Technique | Result |
+| --------------- | --------- | ------ |
+| 7,937,792 rows / ~1.7 GB | Full fidelity to Dolt; only county-level slices committed | 9.4 MB tracked |
+| 24 columns, 11 of them redundant per row | Normalized to fact + 4 dimension tables in Dolt | 727 MB of tract CSV → 178 MB of fact rows |
+
+Population is constant per `(location, year)` — zero violations across all
+229,298 PLACES county rows and all 28,287 Non-Medical Factors ones — and
+geolocation is constant per location, so both are location attributes rather
+than measurements.
+
+**The two families keep separate fact and location tables**, sharing only
+`measure` and `category`. The forcing difference is geographic, not cosmetic:
+ACS 2017-2021 still uses Connecticut's retired county FIPS `09001`—`09015`
+while PLACES 2025 uses the new planning regions `09110`—`09190`, so the two
+do not even cover the same county universe. A county map built from one
+family's FIPS will have gaps in Connecticut for the other. County names differ
+too (— `Autauga County` vs `Autauga`, on 3,131 of 3,133 shared counties),
+which is harmless when joining on FIPS. See [PLACES](places.md#two-families).
+
+### Live queries
+
+The DoltHub SQL API sends CORS headers and needs no key, so health-charts can
+query it from the browser for drill-down. Two limits shape every query: a
+**1000-row cap** (reported as a `RowLimit` status, not an error) and a **~55
+second deadline**. A single location's measures comes back in 0.3s, but any
+join against the 6.6M-row PLACES fact table exceeds the deadline — labels
+have to be resolved from the 49-row `measures.csv` client-side. National-scale
+chart payloads stay as committed CSVs. See [PLACES](places.md).
+
+> **Supersedes `places_county` in `cdc_open`.** The older
+> `data/processed/cdc_open/places_county.csv` covered 8 of the 40 PLACES measures,
+> crude only, from a server-filtered 12 MB download. `county_crude.csv` uses the
+> identical column layout and reproduces all 23,648 of its rows with no value
+> differences, so the migration is a path change for health-charts rather than a
+> parsing change. `places_county` should be set `enabled=False` once
+> health-charts has moved.
+
+> **`places_city` is not PLACES.** Despite the name, `dxpw-cm5u` in the
+> `cdc_open` registry is *500 Cities* 2019 GIS-format data — a different,
+> retired product. PLACES place-level data is `eav7-hnsx`, via Dolt.
+
+---
+
 ## State, county and local
 
 Every source above is federal. Two research catalogs survey what is available
@@ -251,3 +342,19 @@ _Counts and dates verified 2026-08-24 against the working tree: `cdc_open`
 registry (68 + 1 + 3), DQS (28/17 topics), WISQARS (5), GRASP (4), WONDER (49 XML
 / 9 fetch / 13 CSV), and `health-charts` config (54 defined, 50 visible). Latest
 committed data dates sampled from the archived CSVs._
+
+_PLACES (section 10) verified 2026-08-31 against both the live exports and the
+published database: all four geographies loaded into `fartbagxp/cdc-places` and
+queried back at 229,298 / 2,150,438 / 3,047,284 / 1,171,563 (6,598,583 total),
+with 3,145 / 29,923 / 83,522 / 32,520 locations. Age-adjusted estimates exist
+only at county and place level, as CDC documents. All four 2025 datasets were
+last republished by CDC in December 2025._
+
+_Non-Medical Factors verified 2026-09-03 the same way: all four geographies
+loaded and queried back at 28,287 / 268,389 / 751,509 / 291,024 (1,339,209
+total) across 148,801 locations, exactly 9 measures per location at every level
+with no primary-key collisions. The shared `measure` table now holds 49 rows
+across 7 categories — the seven pages of CDC's portal, enumerated from the
+ArcGIS Experience config itself rather than from the page. The published
+database totals 7,937,792 fact rows. CDC last republished these four datasets
+in October/November 2023._

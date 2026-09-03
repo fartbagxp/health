@@ -1,0 +1,124 @@
+name: Update CDC PLACES
+
+# PLACES is an annual product, so this runs monthly rather than weekly like the
+# other archive jobs -- matching update_seer.yml, which is also annual upstream.
+# `places.sync` compares Socrata's rowsUpdatedAt against its release ledger
+# before downloading anything, so a run against an unchanged release costs one
+# metadata request per leg and transfers none of the ~1.7GB.
+#
+# Two families, matching the seven pages of CDC's PLACES portal: `places` is
+# the six BRFSS categories (40 measures), `nmf` the ACS-derived Non-Medical
+# Factors (9 measures). They write separate fact tables and separate ledgers.
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/places/**.py"
+      - ".github/workflows/update_places.yml"
+  schedule:
+    - cron: "0 17 1 * *" # At 17:00 UTC on the 1st of each month
+  workflow_dispatch:
+
+jobs:
+  # One job per family/geography pair: the census-tract export is 694MB, so
+  # keeping them apart bounds each runner's disk and lets a transient Socrata
+  # failure on one cost only that one.
+  #
+  # max-parallel: 1 is required, not a tuning choice. DoltHub runs a single
+  # import job per database at a time and rejects concurrent ones with
+  # "cleaning up existing job, please wait a few minutes then try again", so
+  # eight legs importing at once would fight over the same lock. They run
+  # strictly one after another, which is also why each leg's timeout is
+  # per-job rather than for the workflow as a whole.
+  sync:
+    runs-on: ubuntu-latest
+    # Generous, because the import path waits on DoltHub's server-side jobs and
+    # retries through its 5xx spells rather than giving up. Still bounded, so a
+    # wedged run cannot hold the schedule open indefinitely.
+    timeout-minutes: 120
+    environment:
+      name: prod
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        family: [places, nmf]
+        geo: [county, place, tract, zcta]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "latest"
+
+      - name: Mirror ${{ matrix.family }}/${{ matrix.geo }} into DoltHub
+        env:
+          CDC_DATA_APP_TOKEN: ${{ secrets.CDC_DATA_APP_TOKEN }}
+          DOLTHUB_TOKEN: ${{ secrets.DOLTHUB_TOKEN }}
+          # Python block-buffers stdout when it is not a tty, so without this a
+          # run that spends 10 minutes downloading shows no progress at all and
+          # then dumps everything at once. Matters here because the steps are
+          # long enough that live output is the only sign it is still alive.
+          PYTHONUNBUFFERED: "1"
+        run: |
+          uv run python -m places.sync \
+            --family ${{ matrix.family }} \
+            --geo ${{ matrix.geo }} \
+            --release 2025
+
+  # The committed slices health-charts reads. Deliberately independent of the
+  # Dolt import -- `if: always()` means a failed tract sync still refreshes the
+  # county CSVs, and this job never sees DOLTHUB_TOKEN because it does not need it.
+  derive:
+    needs: sync
+    if: always()
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "latest"
+
+      # Rebuilds every committed slice for both families, reading the two county
+      # exports straight from Socrata rather than back out of Dolt.
+      - name: Build derived PLACES slices
+        env:
+          CDC_DATA_APP_TOKEN: ${{ secrets.CDC_DATA_APP_TOKEN }}
+          PYTHONUNBUFFERED: "1"
+        run: |
+          uv run python -m places.derive
+
+      - name: Commit and push changes
+        run: |
+          git status
+          git config --local user.email "noreply@github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # Same safety net as update_cdc_open.yml: never let an unexpectedly
+          # large file fail the whole push. These slices should be ~4MB, so
+          # anything near the limit means derive.py stopped filtering.
+          for f in $(find data/processed/places -name '*.csv' -size +95M 2>/dev/null); do
+            echo "::warning::$f is $(du -h "$f" | cut -f1) -- exceeds safe git file size, skipping commit."
+            git rm --cached --ignore-unmatch "$f" >/dev/null 2>&1 || true
+          done
+
+          git add data/processed/places/
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update of CDC PLACES data on $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push -u origin main
+          fi

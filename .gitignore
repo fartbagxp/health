@@ -298,8 +298,8 @@ crash.log
 crash.*.log
 
 # Exclude all .tfvars files, which are likely to contain sensitive data, such as
-# password, private keys, and other secrets. These should not be part of version 
-# control as they are data points which are potentially sensitive and subject 
+# password, private keys, and other secrets. These should not be part of version
+# control as they are data points which are potentially sensitive and subject
 # to change depending on the environment.
 *.tfvars
 *.tfvars.json
@@ -351,3 +351,12 @@ data/raw/cdc_open/wastewater_measles.csv
 data/raw/cdc_open/wastewater_mpox.csv
 data/raw/cdc_open/wastewater_activity.csv
 data/raw/cdc_open/nwss_metric.csv
+
+## CDC PLACES -- full-resolution releases
+## Both families behind CDC's PLACES portal: the six BRFSS categories and the
+## ACS-derived Non-Medical Factors (nmf_*.csv). ~7.9M rows / ~1.7GB across the
+## eight datasets, and the census-tract export alone is 694MB -- past GitHub's
+## 100MB file limit. Downloaded fresh by places.sync, mirrored into the public
+## Dolt database fartbagxp/cdc-places, then deleted. Only the small derived
+## slices in data/processed/places/ are tracked.
+data/raw/places/

@@ -22,25 +22,31 @@ Every endpoint below was probed on 2026-08-02, then re-probed after the network 
 
 The highest-value tier, because these need no new client code. Every ✅ Socrata row is reachable with the existing `cdc_open` downloader by adding a `Dataset` entry to `src/cdc_open/datasets.py`.
 
-| Source                    | Finest geography | ID / endpoint                                | Status |
-| ------------------------- | ---------------- | -------------------------------------------- | ------ |
-| CDC PLACES                | **Census tract** | `cwsq-ngmh` (tract), `swc5-untb` (county)    | ✅     |
-| NSSP ED visits via Delphi | **County**       | `api.delphi.cmu.edu/epidata/covidcast`       | ✅     |
-| Lyme disease public-use   | **County FIPS**  | `x5j9-wybp` (2022–23), `qtbi-xd4i` (2008–21) | ✅     |
-| WISQARS injury            | **Census tract** | already wired, `src/wisqars/`                | ✅     |
-| EPHT Tracking Network     | **County**       | `ephtracking.cdc.gov/apigateway/api/v1`      | ✅     |
-| NORS outbreaks            | State            | `5xkq-dg7x`                                  | ✅     |
-| BEAM enteric pathogens    | State            | already wired, `fetch_beam.py`               | ✅     |
-| openFDA food enforcement  | Firm city/state  | `api.fda.gov/food/enforcement.json`          | ✅     |
-| NNDSS weekly notifiable   | State            | `x9gk-5huc`                                  | ✅     |
-| State Cancer Profiles     | **County**       | `statecancerprofiles.cancer.gov`             | ✅     |
-| County Health Rankings    | **County**       | `countyhealthrankings.org` (CSV)             | ✅     |
+| Source                    | Finest geography | ID / endpoint                                | Status  |
+| ------------------------- | ---------------- | -------------------------------------------- | ------- |
+| CDC PLACES                | **Census tract** | `cwsq-ngmh` (tract), `swc5-untb` (county)    | ✅ done |
+| NSSP ED visits via Delphi | **County**       | `api.delphi.cmu.edu/epidata/covidcast`       | ✅      |
+| Lyme disease public-use   | **County FIPS**  | `x5j9-wybp` (2022–23), `qtbi-xd4i` (2008–21) | ✅      |
+| WISQARS injury            | **Census tract** | already wired, `src/wisqars/`                | ✅      |
+| EPHT Tracking Network     | **County**       | `ephtracking.cdc.gov/apigateway/api/v1`      | ✅      |
+| NORS outbreaks            | State            | `5xkq-dg7x`                                  | ✅      |
+| BEAM enteric pathogens    | State            | already wired, `fetch_beam.py`               | ✅      |
+| openFDA food enforcement  | Firm city/state  | `api.fda.gov/food/enforcement.json`          | ✅      |
+| NNDSS weekly notifiable   | State            | `x9gk-5huc`                                  | ✅      |
+| State Cancer Profiles     | **County**       | `statecancerprofiles.cancer.gov`             | ✅      |
+| County Health Rankings    | **County**       | `countyhealthrankings.org` (CSV)             | ✅      |
 
 Two more county-level sources come from state-published ArcGIS layers and have no federal equivalent: Kansas DHE's alpha-gal and lone star tick layer, and Missouri DHSS's tick disease rates. Both are covered under [Alpha-gal syndrome](#alpha-gal-syndrome-the-hard-case).
 
 ### CDC PLACES: the single best local-health dataset
 
-Model-based small-area estimates for 40 measures (chronic disease, prevention, health behaviors, disability) at census tract, ZCTA, county, and place level, covering the whole country. Nothing else gets this close to a national county-and-below health profile.
+Small-area estimates for 49 measures (chronic disease, prevention, health behaviors, disability, and ACS-derived non-medical factors) at census tract, ZCTA, county, and place level, covering the whole country. Nothing else gets this close to a national county-and-below health profile.
+
+> **Now implemented.** PLACES is the `places` module — but note it broke the rule
+> at the top of this page: it was far too large to add as a `cdc_open` registry
+> entry. All eight datasets together are ~7.9M rows / ~1.7 GB, so they are
+> mirrored into the public Dolt database `fartbagxp/cdc-places` and only
+> county-level slices are committed. See [PLACES](places.md).
 
 ```bash
 curl "https://data.cdc.gov/resource/cwsq-ngmh.json?\$limit=1"

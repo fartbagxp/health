@@ -6,6 +6,7 @@
 [![Update WISQARS](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_wisqars.yml)
 [![Update SEER](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml)
 [![Update NCHS DQS](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml)
+[![Update CDC PLACES](https://github.com/fartbagxp/health/actions/workflows/update_places.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_places.yml)
 [![Datasets](https://img.shields.io/badge/cdc--open%20datasets-68-4c9be8)](https://fartbagxp.github.io/health/data-catalog/)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-8a2be2)](https://fartbagxp.github.io/health/)
 
@@ -31,6 +32,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 | [SEER Cancer Statistics]                                              | `src/seer/`     | seer.cancer.gov (SEER\*Explorer JSON) |
 | [NCHS Data Query System (DQS)]                                        | `src/nchs_dqs/` | data.cdc.gov (Socrata)                |
 | [Environmental Public Health Tracking (EPHT)]                         | `src/epht/`     | ephtracking.cdc.gov (REST/JSON)       |
+| [CDC PLACES]                                                          | `src/places/`   | data.cdc.gov bulk export -> DoltHub   |
 
 See the [Data Catalog](https://fartbagxp.github.io/health/data-catalog/) for the full, verified inventory across all systems, their CDC center, collection method, refresh cadence, and archive status.
 
@@ -129,7 +131,11 @@ uv run python -m grasp flusurv data --location CA OH --epiweeks 202001-202020 -f
 **Python SDK:**
 
 ```python
-from grasp.sdk import get_hantavirus_cases, summarize_hantavirus_by_year, summarize_hantavirus_by_state
+from grasp.sdk import (
+    get_hantavirus_cases,
+    summarize_hantavirus_by_year,
+    summarize_hantavirus_by_state,
+)
 
 cases = get_hantavirus_cases(state_name="New Mexico", outcome="Dead")
 by_year = summarize_hantavirus_by_year()
@@ -150,7 +156,11 @@ from grasp.sdk import get_fluview_clinical
 lab = get_fluview_clinical(regions=["nat", "hhs1"], epiweeks="202001-202026")
 # [{'region': 'hhs1', 'epiweek': 202001, 'percent_positive': 18.2, ...}, ...]
 
-from grasp.sdk import get_flusurv_net, summarize_flusurv_by_season, summarize_flusurv_by_location
+from grasp.sdk import (
+    get_flusurv_net,
+    summarize_flusurv_by_season,
+    summarize_flusurv_by_location,
+)
 
 records = get_flusurv_net(locations=["CA", "OH", "network_all"], season="2024-25")
 summary = summarize_flusurv_by_season(location="CA")
@@ -199,13 +209,18 @@ uv run python -m nis national teen 2022 --vaccines P_UTDHPV13
 **Python SDK:**
 
 ```python
-from nis.sdk import list_years, stream_records, get_vaccination_rates, get_national_rates
+from nis.sdk import (
+    list_years,
+    stream_records,
+    get_vaccination_rates,
+    get_national_rates,
+)
 
 # Stream respondent-level microdata (never touches disk)
 for rec in stream_records("child", 2022, state="California"):
-    mmr_utd = rec["P_UTDMMX"]        # '1' = UTD, '0' = not UTD, '' = unknown
+    mmr_utd = rec["P_UTDMMX"]  # '1' = UTD, '0' = not UTD, '' = unknown
     state_fips = rec["RETEILI"]
-    weight = rec["PROVWT_D"]          # survey weight for representative estimates
+    weight = rec["PROVWT_D"]  # survey weight for representative estimates
 
 # Aggregate UTD rates by state
 rows = get_vaccination_rates("child", 2022)
@@ -213,7 +228,7 @@ rows = get_vaccination_rates("child", 2022)
 
 # National rates
 nat = get_national_rates("teen", 2022, vaccines=["P_UTDHPV13", "P_UTDTDAP"])
-print(nat["P_UTDHPV13_pct"])   # % of teens with completed HPV series
+print(nat["P_UTDHPV13_pct"])  # % of teens with completed HPV series
 ```
 
 ---
@@ -272,6 +287,25 @@ uv run python -m nchs_dqs query low-birthweight --where "classification='Geograp
 
 ---
 
+### CDC PLACES — [docs](https://fartbagxp.github.io/health/places/)
+
+[PLACES](https://www.cdc.gov/places/) publishes small-area estimates for every US county, place, census tract and ZCTA. CDC's PLACES data portal has seven pages and `places` mirrors all seven: six categories of BRFSS-modeled measures — Health Outcomes (arthritis, asthma, high blood pressure, diabetes, obesity, …), Prevention, Health Risk Behaviors, Health Status, Disability (hearing, vision, cognitive, mobility, self-care, independent living), Health-Related Social Needs — plus the ACS-derived Non-Medical Factors. 49 measures in all.
+
+This is the one source too large to commit. Together the eight datasets are ~7.9M rows / ~1.7 GB, and the census-tract export alone is 694 MB, past GitHub's 100 MB hard limit. So `places` mirrors it into the public Dolt database [`fartbagxp/cdc-places`](https://www.dolthub.com/repositories/fartbagxp/cdc-places) — free at any size, versioned and diffable — while `data/processed/places/` keeps only the ~9 MB of county-level slices health-charts reads.
+
+```bash
+uv run python -m places list                  # the registry
+uv run python -m places status                # has CDC published newer data than the mirror has?
+uv run python -m places sync --geo county     # mirror one geography (needs DOLTHUB_TOKEN)
+uv run python -m places sync --all --family both   # all seven portal pages
+uv run python -m places derive                # rebuild the committed CSVs
+uv run python -m places query "select count(*) from measurement"
+```
+
+The DoltHub SQL API is public and CORS-enabled, so charts can query it straight from the browser — but it caps responses at 1000 rows and enforces a ~55s query deadline, and joins against the 6.6M-row PLACES fact table reliably exceed it. Drill-down queries must hit a primary-key prefix and resolve labels from the 49-row `measures.csv` rather than joining. National-scale payloads stay as committed CSVs. Refer to [places README](src/places/README.md) and [the docs](https://fartbagxp.github.io/health/places/).
+
+---
+
 ## State, county & local sources ([docs](https://fartbagxp.github.io/health/local/))
 
 Every source above is federal, and federal surveillance mostly stops at the state line. Two docs survey what is available below it. [`docs/local.md`](docs/local.md) covers endpoints verified against live data: county and census-tract figures for cancer, COVID, flu, tickborne disease, and foodborne outbreaks. [`docs/state-portals.md`](docs/state-portals.md) catalogs the official health data portal for all 50 states and DC, grouped by the software behind them, and ranks the states by how much work ingestion would take.
@@ -280,7 +314,7 @@ It is a research catalog, not a module. Nothing there is downloaded, deliberatel
 
 Highlights:
 
-- **CDC PLACES** (`cwsq-ngmh`) covers 40 chronic-disease and health-behavior measures at census-tract level nationwide. Modeled estimates, not counts.
+- ~~**CDC PLACES** (`cwsq-ngmh`)~~ — now implemented as the `places` module; see above. Census-tract level, 40 measures, mirrored to DoltHub rather than committed.
 - **County COVID/flu/RSV** is already reachable with the installed `nssp` module via `--geo-type county`, so no new code and no new storage.
 - **Lyme with county FIPS** (`x5j9-wybp`) has real county geography, suppressed wherever counts are small.
 - **NY tick surveillance** (`vzbp-i2d4`) gives county-level tick density and pathogen infection prevalence, with no federal equivalent.
@@ -324,3 +358,4 @@ pulse-code  →  health  →  health-charts
 [SEER Cancer Statistics]: https://seer.cancer.gov/statistics-network/explorer/
 [NCHS Data Query System (DQS)]: https://www.cdc.gov/nchs/dqs/
 [Environmental Public Health Tracking (EPHT)]: https://ephtracking.cdc.gov/
+[CDC PLACES]: https://www.cdc.gov/places/

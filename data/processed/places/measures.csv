@@ -1,0 +1,50 @@
+measureid,categoryid,category,measure,short_question_text,data_value_unit,data_source
+ACCESS2,PREVENT,Prevention,Current lack of health insurance among adults aged 18-64 years,Health Insurance,%,BRFSS
+AGE65,SDOH,Non-Medical Factors,Persons aged 65 years or older,Aged 65 years or older,%,5-year ACS
+ARTHRITIS,HLTHOUT,Health Outcomes,Arthritis among adults,Arthritis,%,BRFSS
+BINGE,RISKBEH,Health Risk Behaviors,Binge drinking among adults,Binge Drinking,%,BRFSS
+BPHIGH,HLTHOUT,Health Outcomes,High blood pressure among adults,High Blood Pressure,%,BRFSS
+BPMED,PREVENT,Prevention,Taking medicine to control high blood pressure among adults with high blood pressure,High Blood Pressure Medication,%,BRFSS
+BROAD,SDOH,Non-Medical Factors,No broadband internet subscription among households,No broadband,%,5-year ACS
+CANCER,HLTHOUT,Health Outcomes,Cancer (non-skin) or melanoma among adults,Cancer (non-skin) or Melanoma,%,BRFSS
+CASTHMA,HLTHOUT,Health Outcomes,Current asthma among adults,Current Asthma,%,BRFSS
+CHD,HLTHOUT,Health Outcomes,Coronary heart disease among adults,Coronary Heart Disease,%,BRFSS
+CHECKUP,PREVENT,Prevention,Visits to doctor for routine checkup within the past year among adults,Annual Checkup,%,BRFSS
+CHOLSCREEN,PREVENT,Prevention,Cholesterol screening among adults,Cholesterol Screening,%,BRFSS
+COGNITION,DISABLT,Disability,Cognitive disability among adults,Cognitive Disability,%,BRFSS
+COLON_SCREEN,PREVENT,Prevention,Colorectal cancer screening among adults aged 45–75 years,Colorectal Cancer Screening,%,BRFSS
+COPD,HLTHOUT,Health Outcomes,Chronic obstructive pulmonary disease among adults,COPD,%,BRFSS
+CROWD,SDOH,Non-Medical Factors,Crowding among housing units,Crowding,%,5-year ACS
+CSMOKING,RISKBEH,Health Risk Behaviors,Current cigarette smoking among adults,Current Cigarette Smoking,%,BRFSS
+DENTAL,PREVENT,Prevention,Visited dentist or dental clinic in the past year among adults,Dental Visit,%,BRFSS
+DEPRESSION,HLTHOUT,Health Outcomes,Depression among adults,Depression,%,BRFSS
+DIABETES,HLTHOUT,Health Outcomes,Diagnosed diabetes among adults,Diabetes,%,BRFSS
+DISABILITY,DISABLT,Disability,Any disability among adults,Any Disability,%,BRFSS
+EMOTIONSPT,SOCLNEED,Health-Related Social Needs,Lack of social and emotional support among adults,Lack of Social/Emotional Support,%,BRFSS
+FOODINSECU,SOCLNEED,Health-Related Social Needs,Food insecurity in the past 12 months among adults,Food Insecurity,%,BRFSS
+FOODSTAMP,SOCLNEED,Health-Related Social Needs,Received food stamps in the past 12 months among adults,Food Stamps,%,BRFSS
+GHLTH,HLTHSTAT,Health Status,Fair or poor self-rated health status among adults,General Health,%,BRFSS
+HCOST,SDOH,Non-Medical Factors,Housing cost burden among households,Housing cost burden,%,5-year ACS
+HEARING,DISABLT,Disability,Hearing disability among adults,Hearing Disability,%,BRFSS
+HIGHCHOL,HLTHOUT,Health Outcomes,High cholesterol among adults who have ever been screened,High Cholesterol,%,BRFSS
+HOUSINSECU,SOCLNEED,Health-Related Social Needs,Housing insecurity in the past 12 months among adults,Housing Insecurity,%,BRFSS
+INDEPLIVE,DISABLT,Disability,Independent living disability among adults,Independent Living Disability,%,BRFSS
+LACKTRPT,SOCLNEED,Health-Related Social Needs,Lack of reliable transportation in the past 12 months among adults,Transportation Barriers,%,BRFSS
+LONELINESS,SOCLNEED,Health-Related Social Needs,Loneliness among adults,Loneliness,%,BRFSS
+LPA,RISKBEH,Health Risk Behaviors,No leisure-time physical activity among adults,Physical Inactivity,%,BRFSS
+MAMMOUSE,PREVENT,Prevention,Mammography use among women aged 50-74 years,Mammography,%,BRFSS
+MHLTH,HLTHSTAT,Health Status,Frequent mental distress among adults,Frequent Mental Distress,%,BRFSS
+MOBILITY,DISABLT,Disability,Mobility disability among adults,Mobility Disability,%,BRFSS
+NOHSDP,SDOH,Non-Medical Factors,No high school diploma among adults aged 25 years or older,No high school diploma,%,5-year ACS
+OBESITY,HLTHOUT,Health Outcomes,Obesity among adults,Obesity,%,BRFSS
+PHLTH,HLTHSTAT,Health Status,Frequent physical distress among adults,Frequent Physical Distress,%,BRFSS
+POV150,SDOH,Non-Medical Factors,Persons living below 150% of the poverty level,Poverty,%,5-year ACS
+REMNRTY,SDOH,Non-Medical Factors,Persons of racial or ethnic minority status,Racial or ethnic minority status,%,5-year ACS
+SELFCARE,DISABLT,Disability,Self-care disability among adults,Self-care Disability,%,BRFSS
+SHUTUTILITY,SOCLNEED,Health-Related Social Needs,Utility services shut-off threat in the past 12 months among adults,Utility Services Threat,%,BRFSS
+SLEEP,RISKBEH,Health Risk Behaviors,Short sleep duration among adults,Short Sleep Duration,%,BRFSS
+SNGPNT,SDOH,Non-Medical Factors,Single-parent households,Single-parent households,%,5-year ACS
+STROKE,HLTHOUT,Health Outcomes,Stroke among adults,Stroke,%,BRFSS
+TEETHLOST,HLTHOUT,Health Outcomes,All teeth lost among adults aged >=65 years,All Teeth Lost,%,BRFSS
+UNEMP,SDOH,Non-Medical Factors,Unemployment among people 16 years and older in the labor force,Unemployment,%,5-year ACS
+VISION,DISABLT,Disability,Vision disability among adults,Vision Disability,%,BRFSS

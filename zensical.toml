@@ -20,6 +20,7 @@ nav = [
   { NSSP = "nssp.md" },
   { NIS = "nis.md" },
   { "CDC Open Data" = "cdc-open.md" },
+  { PLACES = "places.md" },
   { SEER = "seer.md" },
   { "State & Local" = "local.md" },
   { "State Portals" = "state-portals.md" },

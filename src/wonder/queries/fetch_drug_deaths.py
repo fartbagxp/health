@@ -38,6 +38,7 @@ Usage:
     uv run python src/wonder/queries/fetch_drug_deaths.py
 """
 
+import argparse
 import csv
 import sys
 import time
@@ -50,6 +51,16 @@ from wonder.client import WonderClient  # noqa: E402
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
+
+# The chart consumes this merged file.
+OUTPUT_CSV = "drug-deaths-by-year.csv"
+
+# The D77 half (1999–2020) is FINAL data — CDC will not revise it — so we cache
+# it here once and reuse it on subsequent runs instead of re-querying WONDER.
+# That keeps the historical era out of harm's way (a failed/rate-limited fetch
+# can never shrink it) and halves per-run WONDER load. Refresh with
+# --refresh-final if CDC ever restates the historical series.
+FINAL_CACHE_CSV = "drug-deaths-by-year-final-1999-2020.csv"
 
 RATE_LIMIT_SLEEP = 16
 
@@ -177,6 +188,22 @@ def write_csv(records: list[dict], out_path: Path) -> None:
     print(f"  ✓ {out_path.name}  ({len(records)} rows  |  years {years[0]}–{years[-1]})")
 
 
+def read_csv(path: Path) -> list[dict]:
+    """Read a previously-written drug-deaths CSV back into records."""
+    records = []
+    with open(path, newline="") as f:
+        for row in csv.DictReader(f):
+            deaths = row["deaths"].strip()
+            records.append({
+                "year": int(row["year"]),
+                "drug_code": row["drug_code"],
+                "drug_name": row["drug_name"],
+                "deaths": None if deaths == "" else int(deaths),
+                "provisional": row["provisional"].strip().lower() == "true",
+            })
+    return records
+
+
 def print_summary(records: list[dict]) -> None:
     code_to_name = {code: name for _, (code, name) in WONDER_LABEL_TO_CODE.items()}
     drugs = sorted(code_to_name.keys())
@@ -204,29 +231,78 @@ def print_summary(records: list[dict]) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--refresh-final",
+        action="store_true",
+        help="Re-query WONDER for the final 1999–2020 data instead of reusing "
+             "the cached snapshot (use only if CDC restates the historical series).",
+    )
+    args = parser.parse_args()
+
     client = WonderClient(timeout=120)
     print("Fetching drug deaths by substance from CDC WONDER …\n")
 
-    queries = [
-        ("D77",  QUERIES_DIR / "drug-deaths-by-year-1999-2020-req.xml",  False),
-        ("D176", QUERIES_DIR / "drug-deaths-by-year-2018-2024-req.xml",  True),
-    ]
+    final_cache = OUTPUT_DIR / FINAL_CACHE_CSV
+    d77_from_cache = final_cache.exists() and not args.refresh_final
 
     d77_records: list[dict] = []
     d176_records: list[dict] = []
 
-    for i, (ds_id, qfile, provisional) in enumerate(queries):
-        if i > 0:
-            print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit …)", flush=True)
-            time.sleep(RATE_LIMIT_SLEEP)
-        records = run_query(client, ds_id, qfile, provisional)
-        if ds_id == "D77":
-            d77_records = records
-        else:
-            d176_records = records
+    # D77 (final, 1999–2020) — load the cached snapshot when we have one; only
+    # hit WONDER when the cache is missing or --refresh-final was requested.
+    if d77_from_cache:
+        d77_records = read_csv(final_cache)
+        yrs = sorted({r["year"] for r in d77_records})
+        print(
+            f"  → [D77] reusing cache {final_cache.name} "
+            f"({len(d77_records)} rows  |  years {yrs[0]}–{yrs[-1]})",
+            flush=True,
+        )
+    else:
+        d77_records = run_query(
+            client, "D77", QUERIES_DIR / "drug-deaths-by-year-1999-2020-req.xml", False
+        )
+        print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit …)", flush=True)
+        time.sleep(RATE_LIMIT_SLEEP)
 
-    if not d77_records and not d176_records:
-        print("\nNo data returned — check errors above.", file=sys.stderr)
+    # D176 (provisional, 2021+) — always re-fetched; these counts get revised.
+    d176_records = run_query(
+        client, "D176", QUERIES_DIR / "drug-deaths-by-year-2018-2024-req.xml", True
+    )
+
+    # Validate each half independently. A partial failure (e.g. one query
+    # hitting a WONDER 429 and returning []) must abort rather than silently
+    # write a truncated CSV — otherwise the merged output loses an entire era
+    # of data with no error. See the D77-drops-out truncation bug.
+    problems: list[str] = []
+
+    d77_years = {r["year"] for r in d77_records}
+    if not d77_records:
+        problems.append("D77 (final, 1999–2020) returned no rows")
+    elif D77_PREFERRED_THROUGH not in d77_years:
+        problems.append(
+            f"D77 (final) is missing year {D77_PREFERRED_THROUGH}; "
+            f"got {min(d77_years)}–{max(d77_years)}"
+        )
+
+    d176_years = {r["year"] for r in d176_records}
+    if not d176_records:
+        problems.append("D176 (provisional, 2021+) returned no rows")
+    elif not any(y > D77_PREFERRED_THROUGH for y in d176_years):
+        problems.append(
+            f"D176 (provisional) has no year past {D77_PREFERRED_THROUGH}; "
+            f"got {min(d176_years)}–{max(d176_years)}"
+        )
+
+    if problems:
+        print(
+            "\nAborting — incomplete fetch, refusing to write a truncated CSV:",
+            file=sys.stderr,
+        )
+        for p in problems:
+            print(f"  • {p}", file=sys.stderr)
+        print("Check errors above (WONDER rate-limits with HTTP 429).", file=sys.stderr)
         sys.exit(1)
 
     print(f"\nMerging: D77 for 1999–{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+")
@@ -235,7 +311,11 @@ def main() -> None:
 
     print("\nWriting output …")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    write_csv(merged, OUTPUT_DIR / "drug-deaths-by-year.csv")
+    # Persist the final snapshot when it came fresh from WONDER (and validated),
+    # so future runs can reuse it without re-querying.
+    if not d77_from_cache:
+        write_csv([r for r in d77_records if r["year"] <= D77_PREFERRED_THROUGH], final_cache)
+    write_csv(merged, OUTPUT_DIR / OUTPUT_CSV)
 
     print("\n── Deaths by substance and year (all intents, MCD) ──────────────────")
     print_summary(merged)

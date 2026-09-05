@@ -42,6 +42,7 @@ Usage:
     uv run python src/wonder/queries/fetch_maternal_mortality.py
 """
 
+import argparse
 import csv
 import sys
 import time
@@ -51,6 +52,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from wonder.client import WonderClient  # noqa: E402
+from wonder.queries._final_cache import read_final_cache, write_final_cache  # noqa: E402
+from wonder.queries._merge_guard import require_complete  # noqa: E402
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -66,6 +69,11 @@ QUERY_FILES = [
 
 # D158 is preferred from 2018 onward (more current final methodology)
 D158_PREFERRED_FROM = 2018
+
+# The D76 half (1999–2017) is FINAL data CDC will not revise, so we cache it once
+# and reuse it instead of re-querying WONDER. Refresh with --refresh-final.
+FINAL_CACHE_CSV = "maternal-mortality-by-year-final-1999-2017.csv"
+FINAL_CACHE_FIELDS = ["year", "deaths", "population", "crude_rate"]
 
 
 def _is_year(label: str) -> bool:
@@ -159,34 +167,69 @@ def write_csv(records: list[dict], out_path: Path) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--refresh-final",
+        action="store_true",
+        help="Re-query WONDER for the final 1999–2017 data instead of reusing "
+             "the cached snapshot (use only if CDC restates the historical series).",
+    )
+    args = parser.parse_args()
+
     client = WonderClient(timeout=120)
     print("Fetching maternal mortality data from CDC WONDER …\n")
+
+    query_by_id = {ds_id: qfile for ds_id, qfile, _ in QUERY_FILES}
+    final_cache = OUTPUT_DIR / FINAL_CACHE_CSV
+    d76_from_cache = final_cache.exists() and not args.refresh_final
 
     d76_records: list[dict] = []
     d158_records: list[dict] = []
 
-    for i, (ds_id, qfile, _) in enumerate(QUERY_FILES):
-        if i > 0:
-            print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit …)", flush=True)
-            time.sleep(RATE_LIMIT_SLEEP)
+    # D76 (final, 1999–2017) — reuse the cached snapshot when present.
+    if d76_from_cache:
+        d76_records = read_final_cache(
+            final_cache,
+            int_fields=("year",),
+            # deaths/population/crude_rate come from WONDER's get_numeric_value()
+            # as floats — read them back the same way so a cached run reproduces
+            # a fresh fetch byte-for-byte.
+            nullable_float_fields=("deaths", "population", "crude_rate"),
+        )
+        yrs = sorted({r["year"] for r in d76_records})
+        print(
+            f"  → [D76] reusing cache {final_cache.name} "
+            f"({len(d76_records)} rows  |  years {yrs[0]}–{yrs[-1]})",
+            flush=True,
+        )
+    else:
+        d76_records = run_query(client, "D76", query_by_id["D76"])
+        print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit …)", flush=True)
+        time.sleep(RATE_LIMIT_SLEEP)
 
-        records = run_query(client, ds_id, qfile)
-        if ds_id == "D76":
-            d76_records = records
-        else:
-            d158_records = records
+    # D158 (2018+) — always re-fetched; these counts get revised.
+    d158_records = run_query(client, "D158", query_by_id["D158"])
 
-    if not d76_records and not d158_records:
-        print("\nNo data returned — check errors above.", file=sys.stderr)
-        sys.exit(1)
+    # A partial failure (e.g. one query hitting a WONDER 429 and returning [])
+    # must abort rather than silently write a truncated CSV missing an era.
+    require_complete(
+        (f"D76 (final, 1999–{D158_PREFERRED_FROM - 1})", d76_records, D158_PREFERRED_FROM - 1),
+        (f"D158 ({D158_PREFERRED_FROM}+)", d158_records),
+    )
 
     print(f"\nMerging: D76 for 1999–{D158_PREFERRED_FROM - 1}, D158 for {D158_PREFERRED_FROM}+")
     merged = merge(d76_records, d158_records)
     print(f"Total merged rows: {len(merged)}")
 
-
     print("\nWriting output …")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    # Persist the final snapshot when it came fresh from WONDER (and validated).
+    if not d76_from_cache:
+        write_final_cache(
+            [r for r in d76_records if r["year"] < D158_PREFERRED_FROM],
+            final_cache,
+            FINAL_CACHE_FIELDS,
+        )
     write_csv(merged, OUTPUT_DIR / "maternal-mortality-by-year.csv")
 
     # ── Quick preview ──────────────────────────────────────────────────────────

@@ -48,6 +48,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from wonder.client import WonderClient  # noqa: E402
+from wonder.queries._merge_guard import require_complete  # noqa: E402
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -271,39 +272,12 @@ def main() -> None:
         client, "D176", QUERIES_DIR / "drug-deaths-by-year-2018-2024-req.xml", True
     )
 
-    # Validate each half independently. A partial failure (e.g. one query
-    # hitting a WONDER 429 and returning []) must abort rather than silently
-    # write a truncated CSV — otherwise the merged output loses an entire era
-    # of data with no error. See the D77-drops-out truncation bug.
-    problems: list[str] = []
-
-    d77_years = {r["year"] for r in d77_records}
-    if not d77_records:
-        problems.append("D77 (final, 1999–2020) returned no rows")
-    elif D77_PREFERRED_THROUGH not in d77_years:
-        problems.append(
-            f"D77 (final) is missing year {D77_PREFERRED_THROUGH}; "
-            f"got {min(d77_years)}–{max(d77_years)}"
-        )
-
-    d176_years = {r["year"] for r in d176_records}
-    if not d176_records:
-        problems.append("D176 (provisional, 2021+) returned no rows")
-    elif not any(y > D77_PREFERRED_THROUGH for y in d176_years):
-        problems.append(
-            f"D176 (provisional) has no year past {D77_PREFERRED_THROUGH}; "
-            f"got {min(d176_years)}–{max(d176_years)}"
-        )
-
-    if problems:
-        print(
-            "\nAborting — incomplete fetch, refusing to write a truncated CSV:",
-            file=sys.stderr,
-        )
-        for p in problems:
-            print(f"  • {p}", file=sys.stderr)
-        print("Check errors above (WONDER rate-limits with HTTP 429).", file=sys.stderr)
-        sys.exit(1)
+    # A partial failure (e.g. one query hitting a WONDER 429 and returning [])
+    # must abort rather than silently write a truncated CSV missing an era.
+    require_complete(
+        ("D77 (final, 1999–2020)", d77_records, D77_PREFERRED_THROUGH),
+        ("D176 (provisional, 2021+)", d176_records),
+    )
 
     print(f"\nMerging: D77 for 1999–{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+")
     merged = merge(d77_records, d176_records)

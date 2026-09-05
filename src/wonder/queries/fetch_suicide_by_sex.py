@@ -25,6 +25,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from wonder.client import WonderClient  # noqa: E402
+from wonder.queries._merge_guard import require_complete  # noqa: E402
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_PATH = PROJECT_ROOT / "data" / "raw" / "wisqars" / "suicide_by_sex.csv"
@@ -196,7 +197,8 @@ def main() -> None:
 
     # 1. Local data (1999-2016)
     print("[1/3] Loading injury_mortality.csv …")
-    all_records.extend(load_injury_mortality())
+    injury_records = load_injury_mortality()
+    all_records.extend(injury_records)
 
     client = WonderClient(timeout=120)
 
@@ -222,9 +224,13 @@ def main() -> None:
     )
     all_records.extend(records_d176)
 
-    if not all_records:
-        print("\nNo data returned.", file=sys.stderr)
-        sys.exit(1)
+    # A partial failure (e.g. one query hitting a WONDER 429 and returning [])
+    # must abort rather than silently write a CSV missing an era of data.
+    require_complete(
+        ("injury_mortality.csv (1999–2016)", injury_records),
+        ("D77 (1999–2020)", records_d77, 2020),
+        ("D176 (2021–2024, provisional)", records_d176),
+    )
 
     all_records = add_both_sexes(all_records)
     merged = merge(all_records)

@@ -34,6 +34,7 @@ Usage:
     uv run python src/wonder/queries/fetch_fentanyl_deaths.py
 """
 
+import argparse
 import csv
 import sys
 import time
@@ -43,6 +44,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from wonder.client import WonderClient  # noqa: E402
+from wonder.queries._final_cache import read_final_cache, write_final_cache  # noqa: E402
+from wonder.queries._merge_guard import require_complete  # noqa: E402
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -56,6 +59,11 @@ MONTH_NAMES = {
 
 # D77 has final data through 2020; prefer it over D176 for 1999-2020
 D77_PREFERRED_THROUGH = 2020
+
+# The D77 half (1999–2020) is FINAL data CDC will not revise, so we cache it once
+# and reuse it instead of re-querying WONDER. Refresh with --refresh-final.
+FINAL_CACHE_CSV = "fentanyl-deaths-by-month-final-1999-2020.csv"
+FINAL_CACHE_FIELDS = ["year", "month", "deaths", "provisional"]
 
 
 def _is_year(label: str) -> bool:
@@ -184,31 +192,58 @@ def write_csv(records: list[dict], out_path: Path) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--refresh-final",
+        action="store_true",
+        help="Re-query WONDER for the final 1999–2020 data instead of reusing "
+             "the cached snapshot (use only if CDC restates the historical series).",
+    )
+    args = parser.parse_args()
+
     client = WonderClient(timeout=120)
     print("Fetching fentanyl (T40.4) death data from CDC WONDER …\n")
+
+    final_cache = OUTPUT_DIR / FINAL_CACHE_CSV
+    d77_from_cache = final_cache.exists() and not args.refresh_final
 
     d77_records: list[dict] = []
     d176_records: list[dict] = []
 
-    queries = [
-        ("D77",  QUERIES_DIR / "fentanyl-deaths-by-month-1999-2020-req.xml",  False),
-        ("D176", QUERIES_DIR / "fentanyl-deaths-by-month-2018-2024-req.xml",  True),
-    ]
+    # D77 (final, 1999–2020) — reuse the cached snapshot when present.
+    if d77_from_cache:
+        d77_records = read_final_cache(
+            final_cache,
+            int_fields=("year", "month"),
+            # deaths comes from WONDER's get_numeric_value() as a float; read it
+            # back the same way (write_csv coerces to int on output).
+            nullable_float_fields=("deaths",),
+            bool_fields=("provisional",),
+        )
+        yrs = sorted({r["year"] for r in d77_records})
+        print(
+            f"  → [D77] reusing cache {final_cache.name} "
+            f"({len(d77_records)} rows  |  years {yrs[0]}–{yrs[-1]})",
+            flush=True,
+        )
+    else:
+        d77_records = run_query(
+            client, "D77", QUERIES_DIR / "fentanyl-deaths-by-month-1999-2020-req.xml", False
+        )
+        print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit …)", flush=True)
+        time.sleep(RATE_LIMIT_SLEEP)
 
-    for i, (ds_id, qfile, provisional) in enumerate(queries):
-        if i > 0:
-            print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit …)", flush=True)
-            time.sleep(RATE_LIMIT_SLEEP)
+    # D176 (provisional, 2021+) — always re-fetched; these counts get revised.
+    d176_records = run_query(
+        client, "D176", QUERIES_DIR / "fentanyl-deaths-by-month-2018-2024-req.xml", True
+    )
 
-        records = run_query(client, ds_id, qfile, provisional)
-        if ds_id == "D77":
-            d77_records = records
-        else:
-            d176_records = records
-
-    if not d77_records and not d176_records:
-        print("\nNo data returned — check errors above.", file=sys.stderr)
-        sys.exit(1)
+    # A partial failure (e.g. one query hitting a WONDER 429 and returning [])
+    # must abort rather than silently write a truncated CSV missing an era.
+    require_complete(
+        ("D77 (final, 1999–2020)", d77_records, D77_PREFERRED_THROUGH),
+        ("D176 (provisional, 2021+)", d176_records),
+    )
 
     print(f"\nMerging: D77 for 1999–{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+")
     merged = merge(d77_records, d176_records)
@@ -216,6 +251,13 @@ def main() -> None:
 
     print("\nWriting output …")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    # Persist the final snapshot when it came fresh from WONDER (and validated).
+    if not d77_from_cache:
+        write_final_cache(
+            [r for r in d77_records if r["year"] <= D77_PREFERRED_THROUGH],
+            final_cache,
+            FINAL_CACHE_FIELDS,
+        )
     write_csv(merged, OUTPUT_DIR / "fentanyl-deaths-by-month.csv")
 
     years = sorted({r["year"] for r in merged})

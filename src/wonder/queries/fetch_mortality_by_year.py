@@ -22,6 +22,7 @@ Usage:
     uv run python src/wonder/queries/fetch_mortality_by_year.py
 """
 
+import argparse
 import csv
 import sys
 import time
@@ -32,6 +33,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from wonder.client import WonderClient  # noqa: E402
+from wonder.queries._final_cache import read_final_cache, write_final_cache  # noqa: E402
+from wonder.queries._merge_guard import require_complete  # noqa: E402
 
 # ── Query configuration ────────────────────────────────────────────────────────
 QUERIES_DIR = Path(__file__).parent
@@ -44,6 +47,14 @@ QUERY_FILES = [
 ]
 
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
+
+# D16 (1979–1998) and D77 (1999–2020) are FINAL data CDC will not revise; only
+# D176 (2021+) is provisional. We cache the two final eras together as one
+# 1979–2020 snapshot and reuse it instead of re-querying WONDER (2 of 3 queries
+# saved per run). Refresh with --refresh-final.
+MORTALITY_FINAL_THROUGH = 2020
+FINAL_CACHE_CSV = "mortality-by-year-cause-final-1979-2020.csv"
+FINAL_CACHE_FIELDS = ["year", "cause", "deaths"]
 
 # CDC WONDER requires ≥15 s between consecutive API requests
 RATE_LIMIT_SLEEP = 16
@@ -205,21 +216,65 @@ def write_top5_by_year(data: dict[int, dict[str, int]], out_path: Path) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--refresh-final",
+        action="store_true",
+        help="Re-query WONDER for the final 1979–2020 data instead of reusing "
+             "the cached snapshot (use only if CDC restates the historical series).",
+    )
+    args = parser.parse_args()
+
     client = WonderClient(timeout=120)
     all_records: list[dict] = []
 
     print("Fetching US mortality data from CDC WONDER …\n")
 
-    for i, (ds_id, qfile, hierarchical) in enumerate(QUERY_FILES):
-        if i > 0:
+    query_by_id = {ds_id: (qfile, hier) for ds_id, qfile, hier in QUERY_FILES}
+    final_cache = OUTPUT_DIR / FINAL_CACHE_CSV
+    final_from_cache = final_cache.exists() and not args.refresh_final
+
+    per_source: dict[str, list[dict]] = {}
+
+    # Final eras D16 (1979–1998) + D77 (1999–2020) — reuse the cached snapshot
+    # when present; otherwise query both and (below) persist them together.
+    if final_from_cache:
+        cached = read_final_cache(final_cache, int_fields=("year", "deaths"))
+        all_records.extend(cached)
+        yrs = sorted({r["year"] for r in cached})
+        print(
+            f"  → [D16+D77] reusing cache {final_cache.name} "
+            f"({len(cached)} rows  |  years {yrs[0]}–{yrs[-1]})",
+            flush=True,
+        )
+    else:
+        for ds_id in ("D16", "D77"):
+            qfile, hierarchical = query_by_id[ds_id]
+            records = run_query(client, ds_id, qfile, hierarchical)
+            per_source[ds_id] = records
+            all_records.extend(records)
             print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit …)", flush=True)
             time.sleep(RATE_LIMIT_SLEEP)
-        records = run_query(client, ds_id, qfile, hierarchical)
-        all_records.extend(records)
 
-    if not all_records:
-        print("\nNo data returned — check errors above.", file=sys.stderr)
-        sys.exit(1)
+    # D176 (2021+) — provisional, always re-fetched.
+    qfile, hierarchical = query_by_id["D176"]
+    d176_records = run_query(client, "D176", qfile, hierarchical)
+    per_source["D176"] = d176_records
+    all_records.extend(d176_records)
+
+    # A partial failure (e.g. one query hitting a WONDER 429 and returning [])
+    # must abort rather than silently write a CSV missing an entire era. The
+    # final half must reach both 1998 (D16) and 2020 (D77); D176 must reach 2021.
+    final_recs = [r for r in all_records if r["year"] <= MORTALITY_FINAL_THROUGH]
+    require_complete(
+        ("final era (…1998, D16)", final_recs, 1998),
+        ("final era (…2020, D77)", final_recs, 2020),
+        ("D176 (2021–2024)", d176_records, 2021),
+    )
+
+    # Persist the final snapshot when it came fresh from WONDER (and validated).
+    if not final_from_cache:
+        write_final_cache(final_recs, final_cache, FINAL_CACHE_FIELDS)
 
     print(f"\nTotal records: {len(all_records)}")
     data = combine(all_records)

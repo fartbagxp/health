@@ -1,0 +1,42 @@
+name: Update Health Department Directories
+
+on:
+  schedule:
+    - cron: "0 15 1 * *" # At 15:00 UTC on the 1st of each month (directories change slowly)
+  workflow_dispatch:
+
+jobs:
+  update-health-depts:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          version: "latest"
+
+      - name: Scrape FSIS state + NACCHO local health department directories
+        run: |
+          uv run python -m health_depts all --out
+
+      - name: Commit and push changes
+        run: |
+          git status
+          git config --local user.email "noreply@github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/processed/health_depts/
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update of health department directories on $(date +'%Y-%m-%d')"
+            git pull --rebase origin main
+            git push -u origin main
+          fi
+          # The push to data/processed/health_depts/** triggers docs.yml, which
+          # rebuilds the Svelte funding-flow graph from the refreshed summary.json.

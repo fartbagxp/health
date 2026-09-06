@@ -1,0 +1,410 @@
+[
+  {
+    "state": "Alabama",
+    "state_url": "http://www.state.al.us/",
+    "public_health_dept": "Department of Public Health",
+    "public_health_url": "http://www.adph.org/",
+    "agriculture_dept": "Department of Agriculture and Industries",
+    "agriculture_url": "http://www.agi.alabama.gov/home"
+  },
+  {
+    "state": "Alaska",
+    "state_url": "http://www.state.ak.us/",
+    "public_health_dept": "Health and Social Services",
+    "public_health_url": "http://dhss.alaska.gov/Pages/default.aspx",
+    "agriculture_dept": "Department of Natural Resources",
+    "agriculture_url": "http://dnr.alaska.gov/"
+  },
+  {
+    "state": "Arizona",
+    "state_url": "http://www.az.gov/",
+    "public_health_dept": "Department of Health Services",
+    "public_health_url": "http://www.azdhs.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.azda.gov/"
+  },
+  {
+    "state": "Arkansas",
+    "state_url": "http://www.state.ar.us/",
+    "public_health_dept": "Arkansas Department of Health",
+    "public_health_url": "http://www.healthy.arkansas.gov/Pages/default.aspx",
+    "agriculture_dept": "Agriculture Department",
+    "agriculture_url": "http://aad.arkansas.gov"
+  },
+  {
+    "state": "California",
+    "state_url": "http://www.ca.gov",
+    "public_health_dept": "California Department of Public Health",
+    "public_health_url": "https://www.cdph.ca.gov/",
+    "agriculture_dept": "Department of Food and Agriculture",
+    "agriculture_url": "http://www.cdfa.ca.gov/"
+  },
+  {
+    "state": "Colorado",
+    "state_url": "http://www.colorado.gov/",
+    "public_health_dept": "Colorado Department of Public Health and Environment",
+    "public_health_url": "https://cdphe.colorado.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.colorado.gov/ag"
+  },
+  {
+    "state": "Connecticut",
+    "state_url": "http://www.ct.gov/",
+    "public_health_dept": "Department of Public Health",
+    "public_health_url": "http://www.ct.gov/dph/site/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.ct.gov/doag/site/default.asp"
+  },
+  {
+    "state": "Delaware",
+    "state_url": "http://delaware.gov/",
+    "public_health_dept": "Division of Public Health",
+    "public_health_url": "http://www.dhss.delaware.gov/dhss/dph/index.html",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.state.de.us/deptagri/default.shtml"
+  },
+  {
+    "state": "District of Columbia",
+    "state_url": "http://www.dc.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.doh.dc.gov/",
+    "agriculture_dept": "\u2013",
+    "agriculture_url": ""
+  },
+  {
+    "state": "Florida",
+    "state_url": "http://www.myflorida.com/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.floridahealth.gov/",
+    "agriculture_dept": "Department of Agriculture and Consumer Services",
+    "agriculture_url": "http://www.freshfromflorida.com"
+  },
+  {
+    "state": "Georgia",
+    "state_url": "http://www.georgia.gov",
+    "public_health_dept": "Division of Public Health",
+    "public_health_url": "http://health.state.ga.us/",
+    "agriculture_dept": "Department of Agriculture and Industries",
+    "agriculture_url": "http://www.agr.State.ga.us/"
+  },
+  {
+    "state": "Hawaii",
+    "state_url": "https://portal.ehawaii.gov/",
+    "public_health_dept": "State Department of Health",
+    "public_health_url": "http://health.hawaii.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.hawaii.gov/hdoa/"
+  },
+  {
+    "state": "Idaho",
+    "state_url": "http://www.state.id.us/",
+    "public_health_dept": "Department of Health and Welfare",
+    "public_health_url": "http://www.healthandwelfare.idaho.gov",
+    "agriculture_dept": "State Department of Agriculture",
+    "agriculture_url": "https://agri.idaho.gov/main/"
+  },
+  {
+    "state": "Illinois",
+    "state_url": "http://www.illinois.gov/",
+    "public_health_dept": "Department of Public Health",
+    "public_health_url": "http://www.idph.state.il.us/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.agr.state.il.us/"
+  },
+  {
+    "state": "Indiana",
+    "state_url": "https://www.in.gov/core/index.html",
+    "public_health_dept": "State Department of Health",
+    "public_health_url": "http://www.in.gov/isdh/",
+    "agriculture_dept": "State Department of Agriculture",
+    "agriculture_url": "http://www.in.gov/isda"
+  },
+  {
+    "state": "Iowa",
+    "state_url": "http://www.iowa.gov/",
+    "public_health_dept": "State of Iowa Department of Health and Human Services",
+    "public_health_url": "https://hhs.iowa.gov/",
+    "agriculture_dept": "Department of Agriculture and Land Stewardship",
+    "agriculture_url": "http://www.iowaagriculture.gov/"
+  },
+  {
+    "state": "Kansas",
+    "state_url": "http://www.kansas.gov",
+    "public_health_dept": "Department of Health and Environment",
+    "public_health_url": "http://www.kdheks.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://agriculture.ks.gov"
+  },
+  {
+    "state": "Kentucky",
+    "state_url": "http://kentucky.gov/",
+    "public_health_dept": "Cabinet for Health and Family Services",
+    "public_health_url": "http://chfs.ky.gov",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.kyagr.com"
+  },
+  {
+    "state": "Louisiana",
+    "state_url": "http://www.louisiana.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "https://www.ldh.la.gov/",
+    "agriculture_dept": "Department of Agriculture and Forestry",
+    "agriculture_url": "http://www.ldaf.state.la.us/"
+  },
+  {
+    "state": "Maine",
+    "state_url": "http://www.maine.gov/",
+    "public_health_dept": "Department of Health and Human Services",
+    "public_health_url": "https://www.maine.gov/dhhs/",
+    "agriculture_dept": "Department of Agriculture, Food and Rural Resources",
+    "agriculture_url": "http://www.state.me.us/agriculture/index.html"
+  },
+  {
+    "state": "Maryland",
+    "state_url": "http://www.maryland.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "https://health.maryland.gov/Pages/Home.aspx",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.mda.state.md.us/"
+  },
+  {
+    "state": "Massachusetts",
+    "state_url": "http://www.mass.gov/",
+    "public_health_dept": "Department of Public Health",
+    "public_health_url": "http://www.mass.gov/eohhs/gov/departments/dph/",
+    "agriculture_dept": "Department of Agricultural Resources",
+    "agriculture_url": "http://www.state.ma.us/dfa/"
+  },
+  {
+    "state": "Michigan",
+    "state_url": "http://www.michigan.gov/",
+    "public_health_dept": "Department of Health and Human Services",
+    "public_health_url": "https://www.michigan.gov/mdhhs",
+    "agriculture_dept": "Agriculture and Rural Development",
+    "agriculture_url": "https://www.michigan.gov/mdard"
+  },
+  {
+    "state": "Minnesota",
+    "state_url": "http://www.state.mn.us/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.health.state.mn.us/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.mda.state.mn.us"
+  },
+  {
+    "state": "Mississippi",
+    "state_url": "http://www.ms.gov/",
+    "public_health_dept": "State Department of Health",
+    "public_health_url": "http://www.msdh.state.ms.us/",
+    "agriculture_dept": "Department of Agriculture and Commerce",
+    "agriculture_url": "http://www.mdac.state.ms.us/"
+  },
+  {
+    "state": "Missouri",
+    "state_url": "http://www.mo.gov/",
+    "public_health_dept": "Department of Health and Senior Services",
+    "public_health_url": "http://health.mo.gov",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.mda.mo.gov/"
+  },
+  {
+    "state": "Montana",
+    "state_url": "http://mt.gov/",
+    "public_health_dept": "Department of Public Health and Human Services",
+    "public_health_url": "http://dphhs.mt.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://agr.mt.gov/"
+  },
+  {
+    "state": "Nebraska",
+    "state_url": "http://www.state.ne.us/",
+    "public_health_dept": "Department of Health and Human Services",
+    "public_health_url": "http://dhhs.ne.gov/Pages/default.aspx",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.agr.state.ne.us/"
+  },
+  {
+    "state": "Nevada",
+    "state_url": "http://www.nv.gov/",
+    "public_health_dept": "Health Division",
+    "public_health_url": "http://health.nv.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://agri.state.nv.us/"
+  },
+  {
+    "state": "New Hampshire",
+    "state_url": "https://www.nh.gov/index.htm",
+    "public_health_dept": "Department of Health and Human Services",
+    "public_health_url": "http://www.dhhs.nh.gov/",
+    "agriculture_dept": "Department of Agriculture, Markets, and Food",
+    "agriculture_url": "http://agriculture.nh.gov/"
+  },
+  {
+    "state": "New Jersey",
+    "state_url": "http://www.state.nj.us/",
+    "public_health_dept": "Department of Health and Senior Services",
+    "public_health_url": "http://www.state.nj.us/health/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.state.nj.us/agriculture/"
+  },
+  {
+    "state": "New Mexico",
+    "state_url": "http://www.state.nm.us/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "https://www.nmhealth.org/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "https://www.nm.gov/departments-and-agencies/department-of-agriculture/"
+  },
+  {
+    "state": "New York",
+    "state_url": "http://www.ny.gov",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.health.ny.gov/",
+    "agriculture_dept": "Department of Agriculture and Markets",
+    "agriculture_url": "http://www.agriculture.ny.gov/"
+  },
+  {
+    "state": "North Carolina",
+    "state_url": "http://www.ncgov.com/",
+    "public_health_dept": "Department of Health and Human Services",
+    "public_health_url": "http://www.ncdhhs.gov/",
+    "agriculture_dept": "Department of Agriculture and Consumer Services",
+    "agriculture_url": "http://www.ncagr.gov/"
+  },
+  {
+    "state": "North Dakota",
+    "state_url": "http://discovernd.com/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.ndhealth.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.agdepartment.com/"
+  },
+  {
+    "state": "Ohio",
+    "state_url": "http://www.ohio.gov/government/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.odh.ohio.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "https://agri.ohio.gov/"
+  },
+  {
+    "state": "Oklahoma",
+    "state_url": "http://www.state.ok.us/",
+    "public_health_dept": "State Department of Health",
+    "public_health_url": "http://www.ok.gov/health/",
+    "agriculture_dept": "Department of Agriculture, Food & Forestry",
+    "agriculture_url": "https://ag.ok.gov/"
+  },
+  {
+    "state": "Oregon",
+    "state_url": "http://www.oregon.gov",
+    "public_health_dept": "Public Health Division",
+    "public_health_url": "http://public.health.oregon.gov/Pages/Home.aspx",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://oregon.gov/ODA"
+  },
+  {
+    "state": "Pennsylvania",
+    "state_url": "https://www.pa.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.portal.state.pa.us/portal/server.pt/community/department_of_health_home/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.agriculture.state.pa.us/"
+  },
+  {
+    "state": "Rhode Island",
+    "state_url": "https://www.ri.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "https://health.ri.gov/",
+    "agriculture_dept": "Division of Agriculture",
+    "agriculture_url": "http://www.dem.ri.gov/programs/bnatres/agricult/index.htm"
+  },
+  {
+    "state": "South Carolina",
+    "state_url": "http://www.sc.gov",
+    "public_health_dept": "Department of Health and Human Services",
+    "public_health_url": "https://www.scdhhs.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.state.sc.us/scda/"
+  },
+  {
+    "state": "South Dakota",
+    "state_url": "http://sd.gov/government.aspx",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://doh.sd.gov/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://sdda.sd.gov/"
+  },
+  {
+    "state": "Tennessee",
+    "state_url": "http://www.tennessee.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://tn.gov/health",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.state.tn.us/agriculture/"
+  },
+  {
+    "state": "Texas",
+    "state_url": "http://www.texas.gov/",
+    "public_health_dept": "Department of State Health Services",
+    "public_health_url": "https://www.dshs.state.tx.us/",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.agr.state.tx.us/"
+  },
+  {
+    "state": "Utah",
+    "state_url": "http://www.utah.gov/main/index",
+    "public_health_dept": "Department of Health and Human Services",
+    "public_health_url": "https://dhhs.utah.gov/",
+    "agriculture_dept": "Department of Agriculture and Food",
+    "agriculture_url": "http://ag.utah.gov/"
+  },
+  {
+    "state": "Vermont",
+    "state_url": "http://vermont.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://www.healthvermont.gov/",
+    "agriculture_dept": "Agency of Agriculture, Food and Markets",
+    "agriculture_url": "http://www.vermontagriculture.com/index.htm"
+  },
+  {
+    "state": "Virginia",
+    "state_url": "http://www.virginia.gov/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "https://www.vdh.virginia.gov/",
+    "agriculture_dept": "Department of Agriculture and Consumer Services",
+    "agriculture_url": "https://www.vdacs.virginia.gov/"
+  },
+  {
+    "state": "Washington",
+    "state_url": "http://access.wa.gov/",
+    "public_health_dept": "State Department of Health",
+    "public_health_url": "http://www.doh.wa.gov/",
+    "agriculture_dept": "State Department of Agriculture",
+    "agriculture_url": "http://agr.wa.gov/"
+  },
+  {
+    "state": "West Virginia",
+    "state_url": "http://www.wv.gov/",
+    "public_health_dept": "Department of Health and Human Resources",
+    "public_health_url": "http://www.dhhr.wv.gov",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://www.wvagriculture.org/"
+  },
+  {
+    "state": "Wisconsin",
+    "state_url": "http://www.wisconsin.gov/",
+    "public_health_dept": "Department of Health and Family Services",
+    "public_health_url": "http://www.dhs.wisconsin.gov",
+    "agriculture_dept": "Department of Agriculture, Trade and Consumer Protection",
+    "agriculture_url": "http://datcp.wi.gov/"
+  },
+  {
+    "state": "Wyoming",
+    "state_url": "http://www.state.wy.us/",
+    "public_health_dept": "Department of Health",
+    "public_health_url": "http://health.wyo.gov",
+    "agriculture_dept": "Department of Agriculture",
+    "agriculture_url": "http://wyagric.state.wy.us/"
+  }
+]

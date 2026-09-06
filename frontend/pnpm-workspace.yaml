@@ -1,0 +1,4 @@
+# esbuild (a Vite dependency) runs a postinstall to select its native binary.
+# pnpm 11 gates build scripts behind this allowlist.
+allowBuilds:
+  esbuild: true

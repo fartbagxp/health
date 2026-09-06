@@ -190,6 +190,12 @@ venv.bak/
 # mkdocs documentation
 /site
 
+## Frontend (Svelte Flow funding-flow graph). node_modules and the compiled
+## bundle are build artifacts; the bundle is rebuilt in CI into docs/funding-flow/.
+/frontend/node_modules/
+/frontend/dist/
+/docs/funding-flow/
+
 # mypy
 .mypy_cache/
 .dmypy.json

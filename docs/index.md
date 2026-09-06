@@ -2,6 +2,18 @@
 
 A Python toolkit for querying CDC surveillance and public health datasets — no API keys needed for most sources.
 
+## The money behind the data
+
+Almost none of the data here is *generated* at the CDC — it is produced by state and county health departments and reported upward, under the cooperative agreements that fund them. Pick a state to trace the flow: federal dollars down, surveillance back up as the datasets this toolkit collects.
+
+<link rel="stylesheet" href="funding-flow/funding-flow.css" />
+<div id="funding-flow" class="ff-embed">
+  <noscript>This interactive graph needs JavaScript. See <a href="funding.md">Funding &amp; Governance</a> for the same map in text.</noscript>
+</div>
+<script src="funding-flow/funding-flow.js" defer></script>
+
+See [Funding & Governance](funding.md) for the funding mechanisms behind each dataset and the scraped roster of every state and local health department.
+
 ## Quick Start
 
 ```bash
@@ -23,7 +35,7 @@ uv sync
 | [CDC Open Data](cdc-open.md)      | `cdc_open` | 30+ datasets: overdose, NHSN, NWSS, wastewater  | varies       |
 | [SEER](seer.md)                   | `seer`     | Cancer incidence/mortality by site, sex, age    | 1975–present |
 
-Federal surveillance mostly stops at the state line. Two research catalogs cover what is available below it, and nothing in either is collected yet. [State & Local Sources](local.md) goes deep on the endpoints that have been verified against live data: county and census-tract figures for cancer, COVID, flu, tickborne disease and foodborne outbreaks. [State Health Data Portals](state-portals.md) goes wide, listing the official portal for all 50 states and DC and grouping them by the software behind them.
+Federal surveillance mostly stops at the state line. Two research catalogs cover what is available below it, and nothing in either is collected yet. [State & Local Sources](local.md) goes deep on the endpoints that have been verified against live data: county and census-tract figures for cancer, COVID, flu, tickborne disease and foodborne outbreaks. [State Health Data Portals](state-portals.md) goes wide, listing the official portal for all 50 states and DC and grouping them by the software behind them. [Funding & Governance](funding.md) traces how CDC dollars reach those state and county departments — and how the surveillance they fund becomes the datasets collected here — with an interactive money-flow graph and a scraped roster of every state and local health department.
 
 ## One-liners
 

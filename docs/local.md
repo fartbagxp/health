@@ -4,7 +4,7 @@ Every source wired into this repo today is federal, and federal surveillance mos
 
 This page is a survey, not an implementation. Nothing here is downloaded yet. `data/` is already 352 MB against a 358 MB `.git`, so the point is to work out what is worth ingesting before ingesting it. See [Ingestion strategy](#ingestion-strategy) for the size constraint that should govern that call.
 
-Everything below was probed against a live endpoint, which limits it to about a dozen portals. For the wider view, [State Health Data Portals](state-portals.md) lists the official portal for all 50 states and DC and groups them by the software behind them, which is the faster way to find a source this page has not reached yet.
+Everything below was probed against a live endpoint, which limits it to about a dozen portals. For the wider view, [State Health Data Portals](state-portals.md) lists the official portal for all 50 states and DC and groups them by the software behind them, which is the faster way to find a source this page has not reached yet. To see how those state and county departments are *funded* — and how the surveillance they run becomes the federal datasets this repo collects — see [Funding & Governance](funding.md), which maps the money flow and scrapes the full roster of state (FSIS) and local (NACCHO) health departments.
 
 ## Verification legend
 

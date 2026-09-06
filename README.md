@@ -7,6 +7,7 @@
 [![Update SEER](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_seer.yml)
 [![Update NCHS DQS](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_dqs.yml)
 [![Update CDC PLACES](https://github.com/fartbagxp/health/actions/workflows/update_places.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_places.yml)
+[![Update Health Dept Directories](https://github.com/fartbagxp/health/actions/workflows/update_health_depts.yml/badge.svg)](https://github.com/fartbagxp/health/actions/workflows/update_health_depts.yml)
 [![Datasets](https://img.shields.io/badge/cdc--open%20datasets-68-4c9be8)](https://fartbagxp.github.io/health/data-catalog/)
 [![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-8a2be2)](https://fartbagxp.github.io/health/)
 
@@ -33,6 +34,7 @@ This is a repository to collect and run fun experiments on various publicly avai
 | [NCHS Data Query System (DQS)]                                        | `src/nchs_dqs/` | data.cdc.gov (Socrata)                |
 | [Environmental Public Health Tracking (EPHT)]                         | `src/epht/`     | ephtracking.cdc.gov (REST/JSON)       |
 | [CDC PLACES]                                                          | `src/places/`   | data.cdc.gov bulk export -> DoltHub   |
+| [State & Local Health Department Directories]                         | `src/health_depts/` | FSIS + NACCHO HTML scrape          |
 
 See the [Data Catalog](https://fartbagxp.github.io/health/data-catalog/) for the full, verified inventory across all systems, their CDC center, collection method, refresh cadence, and archive status.
 
@@ -329,6 +331,19 @@ The doc also records the network allowlist status of every host. The finding wor
 
 Alpha-gal syndrome county data exists, just not at CDC. It is not nationally notifiable, has no CDC API and no `data.cdc.gov` dataset, and [MMWR 72(30)](https://www.cdc.gov/mmwr/volumes/72/wr/mm7230a2.htm) publishes its county distribution only as a rendered map. The full text was parsed from PubMed Central to confirm that: one table, broken down by age, sex and year, no geography. Kansas DHE, however, republishes the MMWR county classification as a queryable ArcGIS layer covering 372 counties across KS, MO, AR and OK, pairing each county's alpha-gal burden with its lone star tick population status. The values are the MMWR's own tertiles, low/medium/high at <11, 11–87 and >87 suspected cases per million person-years, rather than raw counts.
 
+### Health department directories & the money flow — [docs](https://fartbagxp.github.io/health/funding/)
+
+The `health_depts` module scrapes the two authoritative rosters of the state and county tier and commits them to `data/processed/health_depts/`: the [FSIS](https://www.fsis.usda.gov/food-safety/foodborne-illness-and-disease/resources-public-health-partners/state-departments-public) table of state public-health and agriculture departments (50 states + DC), and the [NACCHO](https://www.naccho.org/membership/lhd-directory) directory of ~3,400 local health departments (name, address, phone, website). Both sit behind bot protection, so the scrape uses `curl-cffi` browser impersonation, the same as the rest of the repo. Together they are ~2MB — small enough to commit whole.
+
+The docs front page and the [Funding & Governance](https://fartbagxp.github.io/health/funding/) doc use these directories to illustrate the federal → state → county **money flow**: an interactive [Svelte Flow](https://svelte.xyflow.com/) graph showing CDC cooperative agreements (ELC, PHEP, BRFSS, NPCR, §317, EPHT, NVSS) flowing down to the states and counties, and the surveillance they fund flowing back up as the datasets this repo collects. The graph lives in [`frontend/`](frontend/) — a small Svelte 5 + Vite project (`@xyflow/svelte`) that bakes `summary.json` in at build time and compiles into `docs/funding-flow/`, built in CI before the docs.
+
+```bash
+uv run python -m health_depts state -f table    # FSIS state depts
+uv run python -m health_depts local -f csv       # NACCHO local (county) depts
+uv run python -m health_depts all --out          # write both + summary.json
+cd frontend && pnpm install && pnpm build         # compile the graph into docs/funding-flow/
+```
+
 ---
 
 ## Related projects
@@ -359,3 +374,4 @@ pulse-code  →  health  →  health-charts
 [NCHS Data Query System (DQS)]: https://www.cdc.gov/nchs/dqs/
 [Environmental Public Health Tracking (EPHT)]: https://ephtracking.cdc.gov/
 [CDC PLACES]: https://www.cdc.gov/places/
+[State & Local Health Department Directories]: https://www.naccho.org/membership/lhd-directory

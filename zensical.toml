@@ -24,6 +24,7 @@ nav = [
   { SEER = "seer.md" },
   { "State & Local" = "local.md" },
   { "State Portals" = "state-portals.md" },
+  { "Funding & Governance" = "funding.md" },
 ]
 
 [project.theme]

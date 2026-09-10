@@ -16,7 +16,8 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-from health_depts import fsis, naccho
+from health_depts import fsis, main, naccho
+from health_depts.client import ScrapeError
 from health_depts.main import build_summary
 from health_depts.naccho import _derive_county
 
@@ -118,6 +119,63 @@ class TestSummary:
         assert al["dept"] == "Department of Public Health"
         assert al["county_count"] == 4
         assert "Autauga" in al["counties"]
+
+
+# ---------------------------------------------------------------------------
+# write guard — stops a blocked scrape from wiping the committed directory
+# ---------------------------------------------------------------------------
+class TestWriteGuard:
+    def _rows(self):
+        return (
+            fsis.parse_state_departments(FSIS_HTML),
+            naccho.parse_local_departments(NACCHO_HTML, state="AL"),
+        )
+
+    def test_page_without_table_raises(self):
+        # a Cloudflare challenge is a 200 carrying no directory table; parsing
+        # it must fail loudly rather than report an empty directory
+        with pytest.raises(ScrapeError):
+            naccho.parse_local_departments("<html><body>Just a moment…</body></html>")
+
+    def test_first_run_writes(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(main, "PROCESSED_DIR", tmp_path)
+        states, locals_ = self._rows()
+        summary = main._write_processed(states, locals_)
+        assert summary["generated_locals"] == 4
+        assert (tmp_path / "local_departments.csv").exists()
+
+    def test_refuses_to_empty_a_populated_directory(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(main, "PROCESSED_DIR", tmp_path)
+        states, locals_ = self._rows()
+        main._write_processed(states, locals_)
+        before = (tmp_path / "local_departments.csv").read_text()
+
+        with pytest.raises(main.DataRegression, match="local departments"):
+            main._write_processed(states, [])
+
+        # the previously committed data is still intact
+        assert (tmp_path / "local_departments.csv").read_text() == before
+
+    def test_guard_also_covers_state_departments(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(main, "PROCESSED_DIR", tmp_path)
+        states, locals_ = self._rows()
+        main._write_processed(states, locals_)
+        with pytest.raises(main.DataRegression, match="state departments"):
+            main._write_processed([], locals_)
+
+    def test_unchanged_count_is_allowed(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(main, "PROCESSED_DIR", tmp_path)
+        states, locals_ = self._rows()
+        main._write_processed(states, locals_)
+        summary = main._write_processed(states, locals_)
+        assert summary["generated_locals"] == 4
+
+    def test_force_overrides_the_guard(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(main, "PROCESSED_DIR", tmp_path)
+        states, locals_ = self._rows()
+        main._write_processed(states, locals_)
+        summary = main._write_processed(states, [], force=True)
+        assert summary["generated_locals"] == 0
 
 
 # ---------------------------------------------------------------------------

@@ -15,7 +15,7 @@ import time
 
 from bs4 import BeautifulSoup
 
-from health_depts.client import fetch
+from health_depts.client import ScrapeError, fetch
 
 NACCHO_URL = "https://www.naccho.org/membership/lhd-directory?searchType=standard"
 
@@ -168,11 +168,20 @@ def parse_local_departments(html: str, state: str | None = None) -> list[dict]:
 
     If ``state`` (a USPS code) is given it is authoritative; otherwise the state
     is derived from each address and rows outside the 50 states + DC are dropped.
+
+    Raises ``ScrapeError`` if the page carries no table at all.
     """
     soup = BeautifulSoup(html, "lxml")
     table = soup.find("table")
     if table is None:
-        return []
+        # The directory is always rendered server-side, so a page without a
+        # table is not the directory. NACCHO sits behind Cloudflare and a
+        # challenge comes back as a 200 that parses to zero rows -- raise, so a
+        # blocked scrape fails loudly instead of quietly emptying the output.
+        raise ScrapeError(
+            "NACCHO returned a page with no directory table "
+            "(bot-protection challenge, or the markup changed)"
+        )
 
     rows: list[dict] = []
     for tr in table.find_all("tr"):

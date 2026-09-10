@@ -22,6 +22,20 @@ from health_depts import fsis, naccho
 
 PROCESSED_DIR = Path("data/processed/health_depts")
 
+# A fresh scrape must reach this fraction of the rows already committed before
+# it is allowed to overwrite them. Both sources sit behind bot protection that
+# answers with a 200 and no usable data, so "scraped cleanly, found nothing" is
+# indistinguishable from a real result until it is compared against what we
+# already had.
+MIN_RETAINED_FRACTION = 0.8
+
+
+class DataRegression(RuntimeError):
+    """A scrape came back far smaller than the data already on disk."""
+
+
+_FORCE_HELP = "write even if the scrape shrank sharply against the committed data"
+
 
 def _print_output(rows: list[dict], fmt: str, cols: list[str] | None = None) -> None:
     if not rows:
@@ -48,8 +62,43 @@ def _print_output(rows: list[dict], fmt: str, cols: list[str] | None = None) -> 
         print("  ".join(str(r.get(c, "")).ljust(widths[c]) for c in cols))
 
 
-def _write_processed(states: list[dict], locals_: list[dict]) -> dict:
+def _existing_row_count(path: Path) -> int:
+    """Data rows (header excluded) in an already-committed CSV; 0 if absent."""
+    if not path.exists():
+        return 0
+    with open(path, newline="") as f:
+        return max(sum(1 for _ in csv.reader(f)) - 1, 0)
+
+
+def _check_no_regression(path: Path, rows: list[dict], label: str) -> None:
+    """Refuse to replace a populated directory with a much smaller one."""
+    previous = _existing_row_count(path)
+    if previous == 0:
+        return  # nothing committed yet — first run has nothing to protect
+    floor = int(previous * MIN_RETAINED_FRACTION)
+    if len(rows) < floor:
+        raise DataRegression(
+            f"{label}: scraped {len(rows)} rows but {path.name} already holds "
+            f"{previous} (floor {floor}). Refusing to overwrite — the source is "
+            f"probably blocking us or changed its markup. Re-run with --force if "
+            f"the drop is genuine."
+        )
+
+
+def _write_processed(
+    states: list[dict], locals_: list[dict], *, force: bool = False
+) -> dict:
     """Write CSV + JSON directories and a compact per-state summary blob."""
+    if not force:
+        # Check both before writing either, so a rejected scrape never leaves
+        # the directory half-updated.
+        _check_no_regression(
+            PROCESSED_DIR / "state_departments.csv", states, "state departments"
+        )
+        _check_no_regression(
+            PROCESSED_DIR / "local_departments.csv", locals_, "local departments"
+        )
+
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
     _write_table(PROCESSED_DIR / "state_departments.csv", states, fsis.FIELDS)
@@ -104,7 +153,7 @@ def cmd_state(args):
     rows = fsis.scrape_state_departments()
     if args.out:
         locals_ = naccho.scrape_local_departments()
-        _write_processed(rows, locals_)
+        _write_processed(rows, locals_, force=args.force)
         print(
             f"Wrote {len(rows)} state + {len(locals_)} local depts to {PROCESSED_DIR}"
         )
@@ -123,7 +172,7 @@ def cmd_all(args):
     states = fsis.scrape_state_departments()
     locals_ = naccho.scrape_local_departments()
     if args.out:
-        summary = _write_processed(states, locals_)
+        summary = _write_processed(states, locals_, force=args.force)
         print(
             f"Wrote {summary['generated_states']} state + "
             f"{summary['generated_locals']} local depts to {PROCESSED_DIR}"
@@ -144,6 +193,7 @@ def main():
     p_state = sub.add_parser("state", help="FSIS state health/agriculture depts")
     p_state.add_argument("-f", "--format", **_fmt)
     p_state.add_argument("--out", action="store_true", help="write to data/processed/")
+    p_state.add_argument("--force", action="store_true", help=_FORCE_HELP)
     p_state.set_defaults(func=cmd_state)
 
     p_local = sub.add_parser("local", help="NACCHO local (county) health depts")
@@ -152,6 +202,7 @@ def main():
 
     p_all = sub.add_parser("all", help="scrape both directories")
     p_all.add_argument("--out", action="store_true", help="write to data/processed/")
+    p_all.add_argument("--force", action="store_true", help=_FORCE_HELP)
     p_all.set_defaults(func=cmd_all)
 
     args = parser.parse_args()

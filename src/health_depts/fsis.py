@@ -9,8 +9,11 @@ with three columns: the state's home portal, its public-health department
 (name + link), and its agriculture department (name + link).
 """
 
+import time
+
 from bs4 import BeautifulSoup
 
+from health_depts import progress
 from health_depts.client import fetch
 
 FSIS_URL = (
@@ -68,4 +71,11 @@ def parse_state_departments(html: str) -> list[dict]:
 
 def scrape_state_departments() -> list[dict]:
     """Fetch and parse the FSIS state-departments directory."""
-    return parse_state_departments(fetch(FSIS_URL))
+    started = time.time()
+    progress.log("FSIS state directory: fetching (1 page)")
+    rows = parse_state_departments(fetch(FSIS_URL))
+    progress.log(
+        f"FSIS state directory: {len(rows)} states "
+        f"in {progress.duration(time.time() - started)}"
+    )
+    return rows

@@ -16,9 +16,10 @@ import csv
 import io
 import json
 import sys
+import time
 from pathlib import Path
 
-from health_depts import fsis, naccho
+from health_depts import fsis, naccho, progress
 
 PROCESSED_DIR = Path("data/processed/health_depts")
 
@@ -35,6 +36,7 @@ class DataRegression(RuntimeError):
 
 
 _FORCE_HELP = "write even if the scrape shrank sharply against the committed data"
+_QUIET_HELP = "suppress progress narration on stderr"
 
 
 def _print_output(rows: list[dict], fmt: str, cols: list[str] | None = None) -> None:
@@ -74,8 +76,10 @@ def _check_no_regression(path: Path, rows: list[dict], label: str) -> None:
     """Refuse to replace a populated directory with a much smaller one."""
     previous = _existing_row_count(path)
     if previous == 0:
+        progress.log(f"  {label}: {len(rows)} rows, nothing committed yet to compare")
         return  # nothing committed yet — first run has nothing to protect
     floor = int(previous * MIN_RETAINED_FRACTION)
+    progress.log(f"  {label}: {len(rows)} rows vs {previous} committed (floor {floor})")
     if len(rows) < floor:
         raise DataRegression(
             f"{label}: scraped {len(rows)} rows but {path.name} already holds "
@@ -89,9 +93,12 @@ def _write_processed(
     states: list[dict], locals_: list[dict], *, force: bool = False
 ) -> dict:
     """Write CSV + JSON directories and a compact per-state summary blob."""
-    if not force:
+    if force:
+        progress.log("--force given: skipping the row-count check")
+    else:
         # Check both before writing either, so a rejected scrape never leaves
         # the directory half-updated.
+        progress.log("checking scrape against the committed row counts")
         _check_no_regression(
             PROCESSED_DIR / "state_departments.csv", states, "state departments"
         )
@@ -99,6 +106,7 @@ def _write_processed(
             PROCESSED_DIR / "local_departments.csv", locals_, "local departments"
         )
 
+    progress.log(f"writing CSV + JSON + summary to {PROCESSED_DIR}")
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
     _write_table(PROCESSED_DIR / "state_departments.csv", states, fsis.FIELDS)
@@ -150,10 +158,12 @@ def build_summary(states: list[dict], locals_: list[dict]) -> dict:
 
 
 def cmd_state(args):
+    started = time.time()
     rows = fsis.scrape_state_departments()
     if args.out:
         locals_ = naccho.scrape_local_departments()
         _write_processed(rows, locals_, force=args.force)
+        progress.log(f"done in {progress.duration(time.time() - started)}")
         print(
             f"Wrote {len(rows)} state + {len(locals_)} local depts to {PROCESSED_DIR}"
         )
@@ -169,10 +179,12 @@ def cmd_local(args):
 
 
 def cmd_all(args):
+    started = time.time()
     states = fsis.scrape_state_departments()
     locals_ = naccho.scrape_local_departments()
     if args.out:
         summary = _write_processed(states, locals_, force=args.force)
+        progress.log(f"done in {progress.duration(time.time() - started)}")
         print(
             f"Wrote {summary['generated_states']} state + "
             f"{summary['generated_locals']} local depts to {PROCESSED_DIR}"
@@ -194,18 +206,22 @@ def main():
     p_state.add_argument("-f", "--format", **_fmt)
     p_state.add_argument("--out", action="store_true", help="write to data/processed/")
     p_state.add_argument("--force", action="store_true", help=_FORCE_HELP)
+    p_state.add_argument("-q", "--quiet", action="store_true", help=_QUIET_HELP)
     p_state.set_defaults(func=cmd_state)
 
     p_local = sub.add_parser("local", help="NACCHO local (county) health depts")
     p_local.add_argument("-f", "--format", **_fmt)
+    p_local.add_argument("-q", "--quiet", action="store_true", help=_QUIET_HELP)
     p_local.set_defaults(func=cmd_local)
 
     p_all = sub.add_parser("all", help="scrape both directories")
     p_all.add_argument("--out", action="store_true", help="write to data/processed/")
     p_all.add_argument("--force", action="store_true", help=_FORCE_HELP)
+    p_all.add_argument("-q", "--quiet", action="store_true", help=_QUIET_HELP)
     p_all.set_defaults(func=cmd_all)
 
     args = parser.parse_args()
+    progress.set_enabled(not args.quiet)
     try:
         args.func(args)
     except Exception as e:  # noqa: BLE001

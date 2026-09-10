@@ -15,6 +15,7 @@ import time
 
 from bs4 import BeautifulSoup
 
+from health_depts import progress
 from health_depts.client import ScrapeError, fetch
 
 NACCHO_URL = "https://www.naccho.org/membership/lhd-directory?searchType=standard"
@@ -223,9 +224,35 @@ def parse_local_departments(html: str, state: str | None = None) -> list[dict]:
 def scrape_local_departments(*, delay: float = 0.5) -> list[dict]:
     """Fetch and parse every state's NACCHO LHD directory (50 states + DC)."""
     rows: list[dict] = []
-    for code in STATE_NAMES:
+    total = len(STATE_NAMES)
+    started = time.time()
+    progress.log(
+        f"NACCHO local directory: {total} states, one page each "
+        f"(~6s per state, so ~{progress.duration(total * (6.0 + delay))} total)"
+    )
+
+    for i, code in enumerate(STATE_NAMES, start=1):
+        page_started = time.time()
         html = fetch(f"{NACCHO_URL}&lhd-state={code}")
-        rows.extend(parse_local_departments(html, state=code))
-        if delay:
-            time.sleep(delay)
+        found = parse_local_departments(html, state=code)
+        rows.extend(found)
+        page_took = time.time() - page_started
+
+        if i < total:
+            eta = ((time.time() - started) / i) * (total - i)
+            tail = f"{len(rows)} so far, ~{progress.duration(eta)} left"
+        else:
+            tail = f"{len(rows)} total"
+        progress.log(
+            f"  [{i:2d}/{total}] {code}  {len(found):4d} rows  "
+            f"{progress.duration(page_took):>6}  ({tail})"
+        )
+
+        if delay and i < total:
+            time.sleep(delay)  # politeness gap, pointless after the last state
+
+    progress.log(
+        f"NACCHO local directory: {len(rows)} rows from {total} states "
+        f"in {progress.duration(time.time() - started)}"
+    )
     return rows

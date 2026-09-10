@@ -16,7 +16,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-from health_depts import fsis, main, naccho
+from health_depts import fsis, main, naccho, progress
 from health_depts.client import ScrapeError
 from health_depts.main import build_summary
 from health_depts.naccho import _derive_county
@@ -176,6 +176,42 @@ class TestWriteGuard:
         main._write_processed(states, locals_)
         summary = main._write_processed(states, [], force=True)
         assert summary["generated_locals"] == 0
+
+
+# ---------------------------------------------------------------------------
+# progress narration
+# ---------------------------------------------------------------------------
+class TestProgress:
+    @pytest.fixture(autouse=True)
+    def _restore(self):
+        yield
+        progress.set_enabled(True)
+
+    @pytest.mark.parametrize(
+        "seconds,expected",
+        [
+            (0.0, "0.0s"),
+            (4.24, "4.2s"),
+            (59.9, "59.9s"),
+            (60, "1m 00s"),
+            (332, "5m 32s"),
+        ],
+    )
+    def test_duration_formatting(self, seconds, expected):
+        assert progress.duration(seconds) == expected
+
+    def test_log_goes_to_stderr_not_stdout(self, capsys):
+        progress.set_enabled(True)
+        progress.log("scraping AL")
+        captured = capsys.readouterr()
+        assert captured.out == ""  # stdout stays clean for -f csv piping
+        assert "scraping AL" in captured.err
+
+    def test_quiet_suppresses_output(self, capsys):
+        progress.set_enabled(False)
+        progress.log("scraping AL")
+        captured = capsys.readouterr()
+        assert captured.out == "" and captured.err == ""
 
 
 # ---------------------------------------------------------------------------

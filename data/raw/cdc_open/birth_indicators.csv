@@ -1,104 +1,204 @@
 "year_and_quarter","topic","topic_subgroup","indicator","race_ethnicity","rate","unit","significant"
-"2026 Q1","Birth Rates","Teen Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic Black","0.2","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic Black","0.3","per 1,000 population",
+"2026 Q2","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic White","0","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","4.3","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","15-17 years","Hispanic","6.8","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","7","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","2.6","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","21.1","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","29.3","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","28.7","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","16.6","per 1,000 population",
+"2026 Q2","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","11.2","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","16.1","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","15.8","per 1,000 population","*"
+"2026 Q2","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8.3","per 1,000 population","*"
+"2026 Q2","Birth Rates","General Fertility Rates","15-44 years","All races and origins","52.7","per 1,000 population","*"
+"2026 Q2","Birth Rates","General Fertility Rates","15-44 years","Hispanic","59","per 1,000 population","*"
+"2026 Q2","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","49.3","per 1,000 population","*"
+"2026 Q2","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","53.5","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic Black","0.3","per 1,000 population",
+"2026 Q2","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic White","0","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","11.2","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","16.1","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","15.8","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8.3","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","All races and origins","51.5","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","Hispanic","67.4","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic Black","58","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic White","47.3","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","All races and origins","83.7","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Hispanic","98.8","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic Black","74.3","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic White","87.5","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","All races and origins","96.3","per 1,000 population",
+"2026 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","Hispanic","95.8","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","77.8","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic White","105.1","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","55.4","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","55.6","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic Black","49.6","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","56.2","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","All races and origins","12.9","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","Hispanic","14.5","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic Black","14.4","per 1,000 population",
+"2026 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic White","11.6","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","45+ years","All races and origins","1.1","per 1,000 population",
+"2026 Q2","Birth Rates","Age-specific Birth Rates","45+ years","Hispanic","1","per 1,000 population","*"
+"2026 Q2","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic Black","1.5","per 1,000 population",
+"2026 Q2","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic White","0.9","per 1,000 population",
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Cesarean","All races and origins","32.5","per 100 births","*"
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Cesarean","Hispanic","32.8","per 100 births","*"
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","38.3","per 100 births","*"
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","30.8","per 100 births","*"
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","All races and origins","26.9","per 100 births","*"
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","26.9","per 100 births","*"
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","32.7","per 100 births","*"
+"2026 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.3","per 100 births",
+"2026 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","16.3","per 100 births","*"
+"2026 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Hispanic","15.4","per 100 births",
+"2026 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15.2","per 100 births",
+"2026 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic White","17","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.43","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.28","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","15.08","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic White","9.43","per 100 births",
+"2026 Q2","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.67","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Hispanic","2.61","per 100 births",
+"2026 Q2","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic Black","4.81","per 100 births",
+"2026 Q2","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic White","2.19","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","All races and origins","31.05","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Hispanic","31.73","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic Black","34.78","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic White","29.52","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","53.85","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.05","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic Black","46.77","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","55.51","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.77","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.67","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","10.27","per 100 births","*"
+"2026 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic White","7.24","per 100 births",
+"2026 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.66","per 100 births","*"
+"2026 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","3.94","per 100 births",
+"2026 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.37","per 100 births",
+"2026 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.54","per 100 births","*"
+"2026 Q2","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","All races and origins","8.36","per 100 births","*"
+"2026 Q2","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Hispanic","7.85","per 100 births",
+"2026 Q2","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic Black","14.94","per 100 births",
+"2026 Q2","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic White","6.81","per 100 births","*"
+"2026 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","38.3","per 100 births","*"
+"2026 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","55","per 100 births","*"
+"2026 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","60.8","per 100 births","*"
+"2026 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic White","25.3","per 100 births","*"
+"2026 Q2","NICU Admission","NICU Admission Rates","NICU Admission","All races and origins","10.2","per 100 births","*"
+"2026 Q2","NICU Admission","NICU Admission Rates","NICU Admission","Hispanic","9.3","per 100 births","*"
+"2026 Q2","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic Black","13.8","per 100 births","*"
+"2026 Q2","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic White","10","per 100 births","*"
+"2026 Q1","Birth Rates","Teen Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic Black","0.2","per 1,000 population",
 "2026 Q1","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic White","0.1","per 1,000 population",
-"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","4.4","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","Hispanic","7","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","7","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","2.6","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","21.2","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","30.7","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","28.2","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","15.7","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","11.3","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","16.7","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","15.6","per 1,000 population","*"
-"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8.0","per 1,000 population","*"
-"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","All races and origins","53","per 1,000 population","*"
-"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","Hispanic","61.4","per 1,000 population","*"
-"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","48.1","per 1,000 population","*"
-"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","52.1","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic Black","0.2","per 1,000 population","*"
+"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","4.4","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","Hispanic","7","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","7","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","2.6","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","21.2","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","30.7","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","28.2","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","15.7","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","11.3","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","16.7","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","15.6","per 1,000 population",
+"2026 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8","per 1,000 population",
+"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","All races and origins","53","per 1,000 population",
+"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","Hispanic","61.4","per 1,000 population",
+"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","48.1","per 1,000 population",
+"2026 Q1","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","52.1","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic Black","0.2","per 1,000 population",
 "2026 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic White","0.1","per 1,000 population",
-"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","11.3","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","16.7","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","15.6","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8.0","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","All races and origins","52.4","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Hispanic","71.8","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic Black","58.6","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic White","45.8","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","All races and origins","87.9","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","Hispanic","106.2","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic Black","75.8","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic White","89.3","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","All races and origins","94.4","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Hispanic","98.7","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","71.4","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic White","100.3","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","54.8","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","57.8","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic Black","47.1","per 1,000 population","*"
-"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","54.1","per 1,000 population","*"
+"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","11.3","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","16.7","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","15.6","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","All races and origins","52.4","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Hispanic","71.8","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic Black","58.6","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic White","45.8","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","All races and origins","87.9","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","Hispanic","106.2","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic Black","75.8","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic White","89.3","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","All races and origins","94.4","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Hispanic","98.7","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","71.4","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic White","100.3","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","54.8","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","57.8","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic Black","47.1","per 1,000 population",
+"2026 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","54.1","per 1,000 population",
 "2026 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","All races and origins","12.7","per 1,000 population",
-"2026 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Hispanic","14.8","per 1,000 population","*"
+"2026 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Hispanic","14.8","per 1,000 population",
 "2026 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic Black","14","per 1,000 population",
-"2026 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic White","11.1","per 1,000 population","*"
+"2026 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic White","11.1","per 1,000 population",
 "2026 Q1","Birth Rates","Age-specific Birth Rates","45+ years","All races and origins","1.1","per 1,000 population",
 "2026 Q1","Birth Rates","Age-specific Birth Rates","45+ years","Hispanic","1.1","per 1,000 population",
 "2026 Q1","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic Black","1.5","per 1,000 population",
 "2026 Q1","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic White","0.9","per 1,000 population",
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","All races and origins","32.5","per 100 births","*"
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Hispanic","32.7","per 100 births","*"
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","38.1","per 100 births","*"
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","30.8","per 100 births","*"
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","All races and origins","26.9","per 100 births","*"
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","26.7","per 100 births","*"
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","32.6","per 100 births","*"
-"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.3","per 100 births","*"
-"2026 Q1","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","16.1","per 100 births","*"
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","All races and origins","32.5","per 100 births",
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Hispanic","32.7","per 100 births",
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","38.1","per 100 births",
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","30.8","per 100 births",
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","All races and origins","26.9","per 100 births",
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","26.7","per 100 births",
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","32.6","per 100 births",
+"2026 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.3","per 100 births",
+"2026 Q1","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","16.1","per 100 births",
 "2026 Q1","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Hispanic","15.3","per 100 births",
 "2026 Q1","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15.1","per 100 births",
-"2026 Q1","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic White","16.7","per 100 births","*"
-"2026 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.43","per 100 births","*"
-"2026 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.24","per 100 births","*"
-"2026 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.99","per 100 births","*"
+"2026 Q1","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic White","16.7","per 100 births",
+"2026 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.43","per 100 births",
+"2026 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.24","per 100 births",
+"2026 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.99","per 100 births",
 "2026 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic White","9.45","per 100 births",
-"2026 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.68","per 100 births","*"
+"2026 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.68","per 100 births",
 "2026 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Hispanic","2.61","per 100 births",
-"2026 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic Black","4.80","per 100 births",
-"2026 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic White","2.20","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","All races and origins","30.89","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Hispanic","31.58","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic Black","34.51","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic White","29.35","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","54.01","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.22","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic Black","47.10","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","55.65","per 100 births","*"
-"2026 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.75","per 100 births","*"
-"2026 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.63","per 100 births","*"
-"2026 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","10.20","per 100 births","*"
+"2026 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic Black","4.8","per 100 births",
+"2026 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic White","2.2","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","All races and origins","30.89","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Hispanic","31.58","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic Black","34.51","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic White","29.35","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","54.01","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.22","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic Black","47.1","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","55.65","per 100 births",
+"2026 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.75","per 100 births",
+"2026 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.63","per 100 births",
+"2026 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","10.2","per 100 births",
 "2026 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic White","7.25","per 100 births",
-"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.67","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","3.96","per 100 births","*"
-"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.40","per 100 births",
-"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.54","per 100 births","*"
-"2026 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","All races and origins","8.39","per 100 births","*"
+"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.67","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","3.96","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.4","per 100 births",
+"2026 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.54","per 100 births",
+"2026 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","All races and origins","8.39","per 100 births",
 "2026 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Hispanic","7.87","per 100 births",
 "2026 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic Black","14.88","per 100 births",
-"2026 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic White","6.83","per 100 births","*"
-"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","38.6","per 100 births","*"
-"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","55.5","per 100 births","*"
-"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","61.0","per 100 births","*"
-"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic White","25.5","per 100 births","*"
-"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","All races and origins","10.2","per 100 births","*"
-"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","Hispanic","9.3","per 100 births","*"
-"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic Black","13.7","per 100 births","*"
-"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic White","9.9","per 100 births","*"
+"2026 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic White","6.83","per 100 births",
+"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","38.6","per 100 births",
+"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","55.5","per 100 births",
+"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","61","per 100 births",
+"2026 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic White","25.5","per 100 births",
+"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","All races and origins","10.2","per 100 births",
+"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","Hispanic","9.3","per 100 births",
+"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic Black","13.7","per 100 births",
+"2026 Q1","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic White","9.9","per 100 births",
 "2025 Q4","Birth Rates","Teen Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population",
 "2025 Q4","Birth Rates","Teen Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population",
 "2025 Q4","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic Black","0.3","per 1,000 population",
@@ -114,7 +214,7 @@
 "2025 Q4","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","11.6","per 1,000 population",
 "2025 Q4","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","17.4","per 1,000 population",
 "2025 Q4","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","16.2","per 1,000 population",
-"2025 Q4","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8.0","per 1,000 population",
+"2025 Q4","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8","per 1,000 population",
 "2025 Q4","Birth Rates","General Fertility Rates","15-44 years","All races and origins","53.3","per 1,000 population",
 "2025 Q4","Birth Rates","General Fertility Rates","15-44 years","Hispanic","62.3","per 1,000 population",
 "2025 Q4","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","48.9","per 1,000 population",
@@ -126,7 +226,7 @@
 "2025 Q4","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","11.6","per 1,000 population",
 "2025 Q4","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","17.4","per 1,000 population",
 "2025 Q4","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","16.2","per 1,000 population",
-"2025 Q4","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8.0","per 1,000 population",
+"2025 Q4","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8","per 1,000 population",
 "2025 Q4","Birth Rates","Age-specific Birth Rates","20-24 years","All races and origins","53.2","per 1,000 population",
 "2025 Q4","Birth Rates","Age-specific Birth Rates","20-24 years","Hispanic","73.8","per 1,000 population",
 "2025 Q4","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic Black","60.1","per 1,000 population",
@@ -153,23 +253,23 @@
 "2025 Q4","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic White","0.9","per 1,000 population",
 "2025 Q4","Method of Delivery","Cesarean Delivery Rates","Cesarean","All races and origins","32.5","per 100 births",
 "2025 Q4","Method of Delivery","Cesarean Delivery Rates","Cesarean","Hispanic","32.6","per 100 births",
-"2025 Q4","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","38.0","per 100 births",
+"2025 Q4","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","38","per 100 births",
 "2025 Q4","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","30.8","per 100 births",
 "2025 Q4","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","All races and origins","26.9","per 100 births",
 "2025 Q4","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","26.6","per 100 births",
 "2025 Q4","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","32.4","per 100 births",
 "2025 Q4","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.4","per 100 births",
-"2025 Q4","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","16.0","per 100 births",
+"2025 Q4","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","16","per 100 births",
 "2025 Q4","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Hispanic","15.3","per 100 births",
 "2025 Q4","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15.1","per 100 births",
 "2025 Q4","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic White","16.5","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.41","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.19","per 100 births",
-"2025 Q4","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.90","per 100 births",
+"2025 Q4","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.9","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic White","9.46","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.69","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Hispanic","2.63","per 100 births",
-"2025 Q4","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic Black","4.80","per 100 births",
+"2025 Q4","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic Black","4.8","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic White","2.21","per 100 births",
 "2025 Q4","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","All races and origins","30.78","per 100 births",
 "2025 Q4","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Hispanic","31.45","per 100 births",
@@ -181,7 +281,7 @@
 "2025 Q4","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","55.81","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.72","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.56","per 100 births",
-"2025 Q4","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","10.10","per 100 births",
+"2025 Q4","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","10.1","per 100 births",
 "2025 Q4","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic White","7.24","per 100 births",
 "2025 Q4","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.67","per 100 births",
 "2025 Q4","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","4.01","per 100 births",
@@ -191,8 +291,8 @@
 "2025 Q4","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Hispanic","7.88","per 100 births",
 "2025 Q4","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic Black","14.88","per 100 births",
 "2025 Q4","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic White","6.86","per 100 births",
-"2025 Q4","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","39.0","per 100 births",
-"2025 Q4","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","56.0","per 100 births",
+"2025 Q4","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","39","per 100 births",
+"2025 Q4","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","56","per 100 births",
 "2025 Q4","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","61.4","per 100 births",
 "2025 Q4","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic White","25.7","per 100 births",
 "2025 Q4","NICU Admission","NICU Admission Rates","NICU Admission","All races and origins","10.1","per 100 births",
@@ -208,7 +308,7 @@
 "2025 Q3","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","7.5","per 1,000 population",
 "2025 Q3","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","2.7","per 1,000 population",
 "2025 Q3","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","22.3","per 1,000 population",
-"2025 Q3","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","34.0","per 1,000 population",
+"2025 Q3","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","34","per 1,000 population",
 "2025 Q3","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","29.9","per 1,000 population",
 "2025 Q3","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","15.8","per 1,000 population",
 "2025 Q3","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","11.9","per 1,000 population",
@@ -218,7 +318,7 @@
 "2025 Q3","Birth Rates","General Fertility Rates","15-44 years","All races and origins","53.6","per 1,000 population",
 "2025 Q3","Birth Rates","General Fertility Rates","15-44 years","Hispanic","63.2","per 1,000 population",
 "2025 Q3","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","49.6","per 1,000 population",
-"2025 Q3","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","52.0","per 1,000 population",
+"2025 Q3","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","52","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","10-14 years","Hispanic","0.2","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic Black","0.3","per 1,000 population",
@@ -246,7 +346,7 @@
 "2025 Q3","Birth Rates","Age-specific Birth Rates","40-44 years","All races and origins","12.8","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","40-44 years","Hispanic","15.1","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic Black","14.2","per 1,000 population",
-"2025 Q3","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic White","11.0","per 1,000 population",
+"2025 Q3","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic White","11","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","45+ years","All races and origins","1.1","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","45+ years","Hispanic","1.1","per 1,000 population",
 "2025 Q3","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic Black","1.5","per 1,000 population",
@@ -261,13 +361,13 @@
 "2025 Q3","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.4","per 100 births",
 "2025 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","15.8","per 100 births",
 "2025 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Hispanic","15.3","per 100 births",
-"2025 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15.0","per 100 births",
+"2025 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15","per 100 births",
 "2025 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic White","16.3","per 100 births",
-"2025 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.40","per 100 births",
+"2025 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.4","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.15","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.89","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic White","9.45","per 100 births",
-"2025 Q3","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.70","per 100 births",
+"2025 Q3","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.7","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Hispanic","2.63","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic Black","4.83","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic White","2.22","per 100 births",
@@ -279,14 +379,14 @@
 "2025 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.51","per 100 births",
 "2025 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic Black","47.34","per 100 births",
 "2025 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","55.97","per 100 births",
-"2025 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.70","per 100 births",
+"2025 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.7","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.52","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","10.06","per 100 births",
 "2025 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic White","7.23","per 100 births",
 "2025 Q3","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.69","per 100 births",
 "2025 Q3","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","4.07","per 100 births",
-"2025 Q3","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.50","per 100 births",
-"2025 Q3","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.50","per 100 births",
+"2025 Q3","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.5","per 100 births",
+"2025 Q3","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.5","per 100 births",
 "2025 Q3","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","All races and origins","8.45","per 100 births",
 "2025 Q3","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Hispanic","7.88","per 100 births",
 "2025 Q3","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic Black","14.93","per 100 births",
@@ -295,15 +395,15 @@
 "2025 Q3","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","56.5","per 100 births",
 "2025 Q3","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","61.7","per 100 births",
 "2025 Q3","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic White","25.9","per 100 births",
-"2025 Q3","NICU Admission","NICU Admission Rates","NICU Admission","All races and origins","10.0","per 100 births",
-"2025 Q3","NICU Admission","NICU Admission Rates","NICU Admission","Hispanic","9.0","per 100 births",
+"2025 Q3","NICU Admission","NICU Admission Rates","NICU Admission","All races and origins","10","per 100 births",
+"2025 Q3","NICU Admission","NICU Admission Rates","NICU Admission","Hispanic","9","per 100 births",
 "2025 Q3","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic Black","13.6","per 100 births",
 "2025 Q3","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic White","9.7","per 100 births",
 "2025 Q2","Birth Rates","Teen Birth Rates","10-14 years","All races and origins","0.1","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","10-14 years","Hispanic","0.3","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic Black","0.3","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic White","0.1","per 1,000 population",
-"2025 Q2","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","5.0","per 1,000 population",
+"2025 Q2","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","5","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","15-17 years","Hispanic","8.2","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","7.8","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","2.8","per 1,000 population",
@@ -313,7 +413,7 @@
 "2025 Q2","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","15.8","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","12.2","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","19.1","per 1,000 population",
-"2025 Q2","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","17.0","per 1,000 population",
+"2025 Q2","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","17","per 1,000 population",
 "2025 Q2","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8.1","per 1,000 population",
 "2025 Q2","Birth Rates","General Fertility Rates","15-44 years","All races and origins","53.7","per 1,000 population",
 "2025 Q2","Birth Rates","General Fertility Rates","15-44 years","Hispanic","63.9","per 1,000 population",
@@ -325,15 +425,15 @@
 "2025 Q2","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic White","0.1","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","12.2","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","19.1","per 1,000 population",
-"2025 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","17.0","per 1,000 population",
+"2025 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","17","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8.1","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","All races and origins","54.8","per 1,000 population",
-"2025 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","Hispanic","78.0","per 1,000 population",
+"2025 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","Hispanic","78","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic Black","62.5","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic White","46.5","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","All races and origins","89.4","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Hispanic","110.2","per 1,000 population",
-"2025 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic Black","79.0","per 1,000 population",
+"2025 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic Black","79","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic White","89.1","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","All races and origins","94.4","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","Hispanic","100.2","per 1,000 population",
@@ -344,7 +444,7 @@
 "2025 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic Black","48.1","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","52.9","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","All races and origins","12.7","per 1,000 population",
-"2025 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","Hispanic","15.0","per 1,000 population",
+"2025 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","Hispanic","15","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic Black","14.2","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic White","10.9","per 1,000 population",
 "2025 Q2","Birth Rates","Age-specific Birth Rates","45+ years","All races and origins","1.1","per 1,000 population",
@@ -356,14 +456,14 @@
 "2025 Q2","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","37.7","per 100 births",
 "2025 Q2","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","30.9","per 100 births",
 "2025 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","All races and origins","26.7","per 100 births",
-"2025 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","26.0","per 100 births",
+"2025 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","26","per 100 births",
 "2025 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","31.9","per 100 births",
 "2025 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.4","per 100 births",
 "2025 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","15.7","per 100 births",
 "2025 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Hispanic","15.4","per 100 births",
-"2025 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15.0","per 100 births",
+"2025 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15","per 100 births",
 "2025 Q2","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic White","16.1","per 100 births",
-"2025 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.40","per 100 births",
+"2025 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.4","per 100 births",
 "2025 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.09","per 100 births",
 "2025 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.79","per 100 births",
 "2025 Q2","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic White","9.48","per 100 births",
@@ -375,7 +475,7 @@
 "2025 Q2","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Hispanic","31.17","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic Black","34.13","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic White","29.01","per 100 births",
-"2025 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","54.40","per 100 births",
+"2025 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","54.4","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.65","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic Black","47.54","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","56.06","per 100 births",
@@ -384,7 +484,7 @@
 "2025 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","9.95","per 100 births",
 "2025 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic White","7.24","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.67","per 100 births",
-"2025 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","4.10","per 100 births",
+"2025 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","4.1","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.54","per 100 births",
 "2025 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.45","per 100 births",
 "2025 Q2","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","All races and origins","8.48","per 100 births",
@@ -405,14 +505,14 @@
 "2025 Q1","Birth Rates","Teen Birth Rates","10-14 years","Non-Hispanic White","0.1","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","5.2","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","15-17 years","Hispanic","8.7","per 1,000 population",
-"2025 Q1","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","8.0","per 1,000 population",
+"2025 Q1","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","8","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","2.9","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","23.4","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","37.2","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","31.7","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","15.9","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","12.5","per 1,000 population",
-"2025 Q1","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","20.0","per 1,000 population",
+"2025 Q1","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","20","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","17.4","per 1,000 population",
 "2025 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8.1","per 1,000 population",
 "2025 Q1","Birth Rates","General Fertility Rates","15-44 years","All races and origins","54.5","per 1,000 population",
@@ -424,12 +524,12 @@
 "2025 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic Black","0.3","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic White","0.1","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","12.5","per 1,000 population",
-"2025 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","20.0","per 1,000 population",
+"2025 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","20","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","17.4","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8.1","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","All races and origins","56.1","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Hispanic","81.3","per 1,000 population",
-"2025 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic Black","64.0","per 1,000 population",
+"2025 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic Black","64","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","20-24 years","Non-Hispanic White","46.7","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","All races and origins","91.1","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","25-29 years","Hispanic","114.4","per 1,000 population",
@@ -440,7 +540,7 @@
 "2025 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","74.2","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic White","98.1","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","55.1","per 1,000 population",
-"2025 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","60.0","per 1,000 population",
+"2025 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","60","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic Black","48.4","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","52.7","per 1,000 population",
 "2025 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","All races and origins","12.8","per 1,000 population",
@@ -454,7 +554,7 @@
 "2025 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","All races and origins","32.4","per 100 births",
 "2025 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Hispanic","32.2","per 100 births",
 "2025 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","37.6","per 100 births",
-"2025 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","31.0","per 100 births",
+"2025 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","31","per 100 births",
 "2025 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","All races and origins","26.7","per 100 births",
 "2025 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","25.9","per 100 births",
 "2025 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","31.7","per 100 births",
@@ -476,7 +576,7 @@
 "2025 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic Black","33.98","per 100 births",
 "2025 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic White","28.88","per 100 births",
 "2025 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","54.54","per 100 births",
-"2025 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.80","per 100 births",
+"2025 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.8","per 100 births",
 "2025 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic Black","47.64","per 100 births",
 "2025 Q1","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","56.21","per 100 births",
 "2025 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.68","per 100 births",
@@ -487,9 +587,9 @@
 "2025 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","4.16","per 100 births",
 "2025 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.57","per 100 births",
 "2025 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.43","per 100 births",
-"2025 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","All races and origins","8.50","per 100 births",
+"2025 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","All races and origins","8.5","per 100 births",
 "2025 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Hispanic","7.83","per 100 births",
-"2025 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic Black","15.00","per 100 births",
+"2025 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic Black","15","per 100 births",
 "2025 Q1","Birthweight","Low Birthweight Rates","Low birthweight (Less than 2,500g)","Non-Hispanic White","6.94","per 100 births",
 "2025 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","39.9","per 100 births",
 "2025 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","57.1","per 100 births",
@@ -539,7 +639,7 @@
 "2024 Q4","Birth Rates","Age-specific Birth Rates","30-34 years","Hispanic","102.8","per 1,000 population",
 "2024 Q4","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","74.4","per 1,000 population",
 "2024 Q4","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic White","97.9","per 1,000 population",
-"2024 Q4","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","55.0","per 1,000 population",
+"2024 Q4","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","55","per 1,000 population",
 "2024 Q4","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","60.1","per 1,000 population",
 "2024 Q4","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic Black","48.8","per 1,000 population",
 "2024 Q4","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","52.6","per 1,000 population",
@@ -606,7 +706,7 @@
 "2024 Q3","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","5.4","per 1,000 population",
 "2024 Q3","Birth Rates","Teen Birth Rates","15-17 years","Hispanic","9.1","per 1,000 population",
 "2024 Q3","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","8.6","per 1,000 population",
-"2024 Q3","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","3.0","per 1,000 population",
+"2024 Q3","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","3","per 1,000 population",
 "2024 Q3","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","24.2","per 1,000 population",
 "2024 Q3","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","38.8","per 1,000 population",
 "2024 Q3","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","33.5","per 1,000 population",
@@ -617,7 +717,7 @@
 "2024 Q3","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8.3","per 1,000 population",
 "2024 Q3","Birth Rates","General Fertility Rates","15-44 years","All races and origins","54.6","per 1,000 population",
 "2024 Q3","Birth Rates","General Fertility Rates","15-44 years","Hispanic","65.7","per 1,000 population",
-"2024 Q3","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","52.0","per 1,000 population",
+"2024 Q3","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","52","per 1,000 population",
 "2024 Q3","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","51.7","per 1,000 population",
 "2024 Q3","Birth Rates","Age-specific Birth Rates","10-14 years","All races and origins","0.2","per 1,000 population",
 "2024 Q3","Birth Rates","Age-specific Birth Rates","10-14 years","Hispanic","0.3","per 1,000 population",
@@ -637,7 +737,7 @@
 "2024 Q3","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic White","89.2","per 1,000 population",
 "2024 Q3","Birth Rates","Age-specific Birth Rates","30-34 years","All races and origins","95.1","per 1,000 population",
 "2024 Q3","Birth Rates","Age-specific Birth Rates","30-34 years","Hispanic","102.1","per 1,000 population",
-"2024 Q3","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","75.0","per 1,000 population",
+"2024 Q3","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","75","per 1,000 population",
 "2024 Q3","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic White","97.7","per 1,000 population",
 "2024 Q3","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","54.8","per 1,000 population",
 "2024 Q3","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","59.8","per 1,000 population",
@@ -660,12 +760,12 @@
 "2024 Q3","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","31.3","per 100 births",
 "2024 Q3","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.5","per 100 births",
 "2024 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","All races and origins","15.4","per 100 births",
-"2024 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Hispanic","15.0","per 100 births",
+"2024 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Hispanic","15","per 100 births",
 "2024 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic Black","15.1","per 100 births",
 "2024 Q3","Method of Delivery","Vaginal Birth After Cesarean Delivery Rates","Vaginal Birth After Cesarean Delivery","Non-Hispanic White","15.6","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.41","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.08","per 100 births",
-"2024 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.80","per 100 births",
+"2024 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.8","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic White","9.49","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.73","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Hispanic","2.56","per 100 births",
@@ -675,10 +775,10 @@
 "2024 Q3","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Hispanic","30.73","per 100 births",
 "2024 Q3","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic Black","33.77","per 100 births",
 "2024 Q3","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Non-Hispanic White","28.65","per 100 births",
-"2024 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","54.70","per 100 births",
+"2024 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","All races and origins","54.7","per 100 births",
 "2024 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Hispanic","54.94","per 100 births",
 "2024 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic Black","47.87","per 100 births",
-"2024 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","56.40","per 100 births",
+"2024 Q3","Gestational Age","Term Birth Rates","Full term (39-40 weeks)","Non-Hispanic White","56.4","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.68","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.52","per 100 births",
 "2024 Q3","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","9.98","per 100 births",
@@ -706,7 +806,7 @@
 "2024 Q2","Birth Rates","Teen Birth Rates","15-17 years","All races and origins","5.4","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","15-17 years","Hispanic","9.1","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic Black","8.5","per 1,000 population",
-"2024 Q2","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","3.0","per 1,000 population",
+"2024 Q2","Birth Rates","Teen Birth Rates","15-17 years","Non-Hispanic White","3","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","12.8","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","20.4","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","18.4","per 1,000 population",
@@ -719,7 +819,7 @@
 "2024 Q2","Birth Rates","General Fertility Rates","15-44 years","Hispanic","63.9","per 1,000 population",
 "2024 Q2","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","51.9","per 1,000 population",
 "2024 Q2","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","51.6","per 1,000 population",
-"2024 Q2","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","24.0","per 1,000 population",
+"2024 Q2","Birth Rates","Teen Birth Rates","18-19 years","All races and origins","24","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","38.1","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","33.7","per 1,000 population",
 "2024 Q2","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","16.3","per 1,000 population",
@@ -734,12 +834,12 @@
 "2024 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","All races and origins","89.7","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Hispanic","109.4","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic Black","82.5","per 1,000 population",
-"2024 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic White","89.0","per 1,000 population",
+"2024 Q2","Birth Rates","Age-specific Birth Rates","25-29 years","Non-Hispanic White","89","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","All races and origins","93.5","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","Hispanic","98.8","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic Black","74.6","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","30-34 years","Non-Hispanic White","97.2","per 1,000 population",
-"2024 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","54.0","per 1,000 population",
+"2024 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","All races and origins","54","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Hispanic","58.2","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic Black","48.6","per 1,000 population",
 "2024 Q2","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","52.2","per 1,000 population",
@@ -771,7 +871,7 @@
 "2024 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.54","per 100 births",
 "2024 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","10.04","per 100 births",
 "2024 Q2","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic White","7.19","per 100 births",
-"2024 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.50","per 100 births",
+"2024 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","All races and origins","4.5","per 100 births",
 "2024 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Hispanic","4.11","per 100 births",
 "2024 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic Black","3.34","per 100 births",
 "2024 Q2","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.16","per 100 births",
@@ -784,7 +884,7 @@
 "2024 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic Black","31.1","per 100 births",
 "2024 Q2","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Non-Hispanic White","25.6","per 100 births",
 "2024 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","40.8","per 100 births",
-"2024 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","58.0","per 100 births",
+"2024 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","58","per 100 births",
 "2024 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","63.5","per 100 births",
 "2024 Q2","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic White","27.1","per 100 births",
 "2024 Q2","NICU Admission","NICU Admission Rates","NICU Admission","All races and origins","9.9","per 100 births",
@@ -803,7 +903,7 @@
 "2024 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Hispanic","0.3","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic Black","0.3","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","10-14 years","Non-Hispanic White","0.1","per 1,000 population",
-"2024 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","13.0","per 1,000 population",
+"2024 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","All races and origins","13","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Hispanic","20.9","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic Black","18.9","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","15-19 years","Non-Hispanic White","8.4","per 1,000 population",
@@ -825,15 +925,15 @@
 "2024 Q1","Birth Rates","Age-specific Birth Rates","35-39 years","Non-Hispanic White","52.2","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","All races and origins","12.7","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Hispanic","15.5","per 1,000 population",
-"2024 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic Black","14.0","per 1,000 population",
+"2024 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic Black","14","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","40-44 years","Non-Hispanic White","10.7","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","45+ years","All races and origins","1.1","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","45+ years","Hispanic","1.1","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic Black","1.5","per 1,000 population",
 "2024 Q1","Birth Rates","Age-specific Birth Rates","45+ years","Non-Hispanic White","0.9","per 1,000 population",
 "2024 Q1","Birth Rates","General Fertility Rates","15-44 years","All races and origins","54.6","per 1,000 population",
-"2024 Q1","Birth Rates","General Fertility Rates","15-44 years","Hispanic","65.0","per 1,000 population",
-"2024 Q1","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","53.0","per 1,000 population",
+"2024 Q1","Birth Rates","General Fertility Rates","15-44 years","Hispanic","65","per 1,000 population",
+"2024 Q1","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic Black","53","per 1,000 population",
 "2024 Q1","Birth Rates","General Fertility Rates","15-44 years","Non-Hispanic White","51.8","per 1,000 population",
 "2024 Q1","Birth Rates","Teen Birth Rates","10-14 years","All races and origins","0.2","per 1,000 population",
 "2024 Q1","Birth Rates","Teen Birth Rates","10-14 years","Hispanic","0.3","per 1,000 population",
@@ -847,7 +947,7 @@
 "2024 Q1","Birth Rates","Teen Birth Rates","18-19 years","Hispanic","39.1","per 1,000 population",
 "2024 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic Black","34.8","per 1,000 population",
 "2024 Q1","Birth Rates","Teen Birth Rates","18-19 years","Non-Hispanic White","16.6","per 1,000 population",
-"2024 Q1","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","13.0","per 1,000 population",
+"2024 Q1","Birth Rates","Teen Birth Rates","15-19 years","All races and origins","13","per 1,000 population",
 "2024 Q1","Birth Rates","Teen Birth Rates","15-19 years","Hispanic","20.9","per 1,000 population",
 "2024 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic Black","18.9","per 1,000 population",
 "2024 Q1","Birth Rates","Teen Birth Rates","15-19 years","Non-Hispanic White","8.4","per 1,000 population",
@@ -858,14 +958,14 @@
 "2024 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","All races and origins","2.76","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Hispanic","2.61","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic Black","4.83","per 100 births",
-"2024 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic White","2.30","per 100 births",
+"2024 Q1","Gestational Age","Preterm Birth Rates","Early preterm (<34 weeks)","Non-Hispanic White","2.3","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","All races and origins","7.69","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Hispanic","7.55","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic Black","9.97","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Late preterm (34-36 weeks)","Non-Hispanic White","7.19","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","All races and origins","10.46","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Hispanic","10.16","per 100 births",
-"2024 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.80","per 100 births",
+"2024 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic Black","14.8","per 100 births",
 "2024 Q1","Gestational Age","Preterm Birth Rates","Total preterm (<37 weeks)","Non-Hispanic White","9.49","per 100 births",
 "2024 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","All races and origins","29.98","per 100 births",
 "2024 Q1","Gestational Age","Term Birth Rates","Early term (37-38 weeks)","Hispanic","30.54","per 100 births",
@@ -881,7 +981,7 @@
 "2024 Q1","Gestational Age","Term Birth Rates","Late term (41 weeks)","Non-Hispanic White","5.16","per 100 births",
 "2024 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","All races and origins","32.3","per 100 births",
 "2024 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Hispanic","32.1","per 100 births",
-"2024 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","37.0","per 100 births",
+"2024 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic Black","37","per 100 births",
 "2024 Q1","Method of Delivery","Cesarean Delivery Rates","Cesarean","Non-Hispanic White","31.1","per 100 births",
 "2024 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","All races and origins","26.6","per 100 births",
 "2024 Q1","Method of Delivery","Cesarean Delivery Rates","Low-risk Cesarean","Hispanic","25.9","per 100 births",
@@ -897,5 +997,5 @@
 "2024 Q1","NICU Admission","NICU Admission Rates","NICU Admission","Non-Hispanic White","9.5","per 100 births",
 "2024 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","All races and origins","41.1","per 100 births",
 "2024 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Hispanic","58.4","per 100 births",
-"2024 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","64.0","per 100 births",
+"2024 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic Black","64","per 100 births",
 "2024 Q1","Source of Payment for the Delivery","Medicaid","Medicaid","Non-Hispanic White","27.4","per 100 births",

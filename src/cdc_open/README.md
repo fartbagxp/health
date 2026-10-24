@@ -169,7 +169,9 @@ rows = get_historical_death_rates(cause="Heart Disease", start_year=1950)
 rows = get_wastewater_data(pathogen="sars_cov2", state="NY", limit=30)
 
 # Influenza A wastewater detections nationally since Oct 2024
-rows = get_wastewater_data(pathogen="flu_a", start_date="2024-10-01", detected_only=True)
+rows = get_wastewater_data(
+    pathogen="flu_a", start_date="2024-10-01", detected_only=True
+)
 
 # Measles wastewater signal (2024–present)
 rows = get_wastewater_data(pathogen="measles", limit=200)
@@ -187,7 +189,9 @@ rows = get_covid_net_hospitalizations(age_category="65-74 years")
 rows = get_resp_deaths_pct(pathogen="Influenza")
 
 # COVID-19 death % by race/ethnicity in a state
-rows = get_resp_deaths_pct_demo(pathogen="COVID-19", demographic_type="Race/Ethnicity", state="California")
+rows = get_resp_deaths_pct_demo(
+    pathogen="COVID-19", demographic_type="Race/Ethnicity", state="California"
+)
 
 # RSV test positivity nationally since Sept 2024
 rows = get_rsv_positivity(level="National", start_date="2024-09-01")
@@ -222,15 +226,7 @@ rows = query_dataset(
 )
 ```
 
-Each function returns a `list[dict]`, ready for use with `pandas`, `csv`, or JSON output.
-
-```python
-import pandas as pd
-from cdc_open.sdk import get_places_county_health
-
-df = pd.DataFrame(get_places_county_health(state="NY", measure="DIABETES"))
-print(df[["locationname", "data_value"]].sort_values("data_value", ascending=False))
-```
+Each function returns a `list[dict]`, ready for use with `csv`, JSON output, or any dataframe library.
 
 ### LLM tool-calling integration
 
@@ -246,7 +242,12 @@ response = client.messages.create(
     model="claude-sonnet-4-6",
     max_tokens=4096,
     tools=TOOLS,
-    messages=[{"role": "user", "content": "Which states have the highest rates of cognitive disability?"}],
+    messages=[
+        {
+            "role": "user",
+            "content": "Which states have the highest rates of cognitive disability?",
+        }
+    ],
 )
 
 # Execute tool calls returned by Claude

@@ -14,9 +14,9 @@ These datasets are committed to `data/raw/wonder/`. Run the corresponding script
 
 ### Mortality by year and cause — 1979–2024
 
-**File:** `data/raw/wonder/mortality-total-by-year.csv` (46 rows)  
-**File:** `data/raw/wonder/mortality-top5-causes-by-year.csv` (230 rows)  
-**Script:** `src/wonder/queries/fetch_mortality_by_year.py`  
+**File:** `data/raw/wonder/mortality-total-by-year.csv` (46 rows)
+**File:** `data/raw/wonder/mortality-top5-causes-by-year.csv` (230 rows)
+**Script:** `src/wonder/queries/fetch_mortality_by_year.py`
 **Sources:** D16 (1979–1998, ICD-9) + D77 (1999–2020, ICD-10) + D176 (2021–2024, provisional)
 
 ```bash
@@ -43,8 +43,8 @@ year,total_deaths
 
 ### Maternal mortality (national) — 1999–2024
 
-**File:** `data/raw/wonder/maternal-mortality-by-year.csv` (26 rows)  
-**Script:** `src/wonder/queries/fetch_maternal_mortality.py`  
+**File:** `data/raw/wonder/maternal-mortality-by-year.csv` (26 rows)
+**Script:** `src/wonder/queries/fetch_maternal_mortality.py`
 **Sources:** D76 (1999–2017) + D158 (2018–2024)
 
 ```bash
@@ -71,8 +71,8 @@ year,deaths,population,crude_rate_per_100k_pop
 
 ### Maternal mortality by state and year — 1999–2024
 
-**File:** `data/raw/wonder/maternal-mortality-by-state-year.csv` (1,260 rows)  
-**Script:** `src/wonder/queries/scrape_maternal_mortality_by_state.py`  
+**File:** `data/raw/wonder/maternal-mortality-by-state-year.csv` (1,260 rows)
+**Script:** `src/wonder/queries/scrape_maternal_mortality_by_state.py`
 **Sources:** D76 + D158 (same as national, but state-grouped)
 
 The WONDER XML API blocks state-level grouping for all mortality datasets ("only national data available via web service"). This script uses **Playwright** to interact with the WONDER web UI instead, which does allow state breakdowns.
@@ -100,8 +100,8 @@ print(f"{len(usable)} / {len(rows)} rows have usable death counts")
 
 ### Fentanyl deaths by month — 1999–present
 
-**File:** `data/raw/wonder/fentanyl-deaths-by-month.csv`  
-**Script:** `src/wonder/queries/fetch_fentanyl_deaths.py`  
+**File:** `data/raw/wonder/fentanyl-deaths-by-month.csv`
+**Script:** `src/wonder/queries/fetch_fentanyl_deaths.py`
 **Sources:** D77 (1999–2020, final) + D176 (2021–present, provisional)
 
 ```bash
@@ -168,8 +168,8 @@ Annual totals (approximate):
 
 ### Drug deaths by substance and year — 1999–present
 
-**File:** `data/raw/wonder/drug-deaths-by-year.csv`  
-**Script:** `src/wonder/queries/fetch_drug_deaths.py`  
+**File:** `data/raw/wonder/drug-deaths-by-year.csv`
+**Script:** `src/wonder/queries/fetch_drug_deaths.py`
 **Sources:** D77 (1999–2020, final) + D176 (2021–present, provisional)
 
 ```bash
@@ -304,8 +304,8 @@ Births peaked in 2007 (4,316,233) and have fallen steadily; 2023 saw 3,596,017 b
 
 ### Tick-borne diseases — 2016–2023
 
-**File:** `data/raw/wonder/tick-borne-diseases-by-year.csv` (128 rows)  
-**Script:** `src/wonder/queries/fetch_tick_borne_diseases.py`  
+**File:** `data/raw/wonder/tick-borne-diseases-by-year.csv` (128 rows)
+**Script:** `src/wonder/queries/fetch_tick_borne_diseases.py`
 **Source:** D130 — NNDSS Annual Summary Data
 
 ```bash
@@ -322,7 +322,9 @@ with open("data/raw/wonder/tick-borne-diseases-by-year.csv") as f:
     rows = list(csv.DictReader(f))
 
 # Lyme disease totals by year
-lyme = {r["year"]: int(r["cases"]) for r in rows if r["disease"] == "Lyme disease, Total"}
+lyme = {
+    r["year"]: int(r["cases"]) for r in rows if r["disease"] == "Lyme disease, Total"
+}
 for year in sorted(lyme):
     print(f"{year}: {lyme[year]:,} Lyme disease cases")
 ```
@@ -538,7 +540,7 @@ sleep 16
 uv run python -m wonder query \
   "drug overdose deaths by year 2021-2024, dataset D176" -f csv > overdose-d176.csv
 
-# Then merge the two CSVs in pandas / polars / awk
+# Then merge the two CSVs with your tool of choice
 ```
 
 ---

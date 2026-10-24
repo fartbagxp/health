@@ -27,7 +27,7 @@ pulse-code  →  health  →  health-charts
 | Repo | Role | What it holds |
 | ---- | ---- | ------------- |
 | **`pulse-code`** | Exploration CLI (`pulse`) | Standalone `requests`-only reimplementations of eight of health's nine source clients (all but EPHT), plus **59** saved CDC WONDER XML queries. Nothing is archived; it holds ad hoc, one-off queries and an LLM XML query builder. |
-| **`health`** | Scheduled archive | The full ingestion stack (`pandas`/`lxml`/`playwright`). Five GitHub Actions jobs fetch on a schedule and commit CSVs to `data/raw/` and `data/processed/`. This is the source of truth. |
+| **`health`** | Scheduled archive | The full ingestion stack (`lxml`/`playwright`). Five GitHub Actions jobs fetch on a schedule and commit CSVs to `data/raw/` and `data/processed/`. This is the source of truth. |
 | **`health-charts`** | Dashboard | A SvelteKit site that reads the committed CSVs directly from `raw.githubusercontent.com` at page load. **50** visible chart series (54 defined, 4 hidden). Copies no data. |
 
 **Query graduates to archive:** 23 of `pulse-code`'s 59 saved WONDER queries have a

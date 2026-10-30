@@ -70,7 +70,9 @@ def weekly_median(rows: list[dict]) -> list[tuple[date, float]]:
     return sorted(result)
 
 
-def aggregate_series(key: str, raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR) -> int:
+def aggregate_series(
+    key: str, raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR
+) -> int:
     raw_path = raw_dir / f"{key}.csv"
     with raw_path.open(newline="") as f:
         rows = list(csv.DictReader(f))
@@ -88,7 +90,9 @@ def aggregate_series(key: str, raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DI
     return len(weekly)
 
 
-def aggregate_wastewater_activity(raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR) -> int:
+def aggregate_wastewater_activity(
+    raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR
+) -> int:
     """National weekly median WVAL (Wastewater Viral Activity Level) score per
     pathogen, from wastewater_activity.csv's per-site rows (~500k rows / ~65MB
     at full resolution -- same reason the PCR-concentration series above are
@@ -211,12 +215,163 @@ def aggregate_places_county(raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR) 
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / "places_county.csv"
     with out_path.open("w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=_PLACES_COUNTY_COLUMNS, lineterminator="\n")
+        writer = csv.DictWriter(
+            f, fieldnames=_PLACES_COUNTY_COLUMNS, lineterminator="\n"
+        )
         writer.writeheader()
         for row in rows:
             writer.writerow({k: row[k] for k in _PLACES_COUNTY_COLUMNS})
 
     return len(rows)
+
+
+# U.S. Census Bureau regions, the four-way split KFF and Force of Infection's
+# regional editions use. DC counts toward the South; territories are dropped.
+CENSUS_REGIONS = {
+    "Northeast": ["CT", "ME", "MA", "NH", "RI", "VT", "NJ", "NY", "PA"],
+    "Midwest": ["IL", "IN", "MI", "OH", "WI", "IA", "KS", "MN", "MO", "NE", "ND", "SD"],
+    "South": [
+        "DE",
+        "DC",
+        "FL",
+        "GA",
+        "MD",
+        "NC",
+        "SC",
+        "VA",
+        "WV",
+        "AL",
+        "KY",
+        "MS",
+        "TN",
+        "AR",
+        "LA",
+        "OK",
+        "TX",
+    ],
+    "West": [
+        "AZ",
+        "CO",
+        "ID",
+        "MT",
+        "NV",
+        "NM",
+        "UT",
+        "WY",
+        "AK",
+        "CA",
+        "HI",
+        "OR",
+        "WA",
+    ],
+}
+
+# Census Bureau Vintage 2024 resident population estimates (July 1, 2024),
+# used only as the per-100k denominator for the regional rates below.
+STATE_POPULATION_2024 = {
+    "AL": 5_157_699,
+    "AK": 740_133,
+    "AZ": 7_582_384,
+    "AR": 3_088_354,
+    "CA": 39_431_263,
+    "CO": 5_957_493,
+    "CT": 3_675_069,
+    "DE": 1_051_917,
+    "DC": 702_250,
+    "FL": 23_372_215,
+    "GA": 11_180_878,
+    "HI": 1_446_146,
+    "ID": 2_001_619,
+    "IL": 12_710_158,
+    "IN": 6_924_275,
+    "IA": 3_241_488,
+    "KS": 2_970_606,
+    "KY": 4_588_372,
+    "LA": 4_597_740,
+    "ME": 1_405_012,
+    "MD": 6_263_220,
+    "MA": 7_136_171,
+    "MI": 10_140_459,
+    "MN": 5_793_151,
+    "MS": 2_943_045,
+    "MO": 6_245_466,
+    "MT": 1_137_233,
+    "NE": 2_005_465,
+    "NV": 3_267_467,
+    "NH": 1_409_032,
+    "NJ": 9_500_851,
+    "NM": 2_130_256,
+    "NY": 19_867_248,
+    "NC": 11_046_024,
+    "ND": 796_568,
+    "OH": 11_883_304,
+    "OK": 4_095_393,
+    "OR": 4_272_371,
+    "PA": 13_078_751,
+    "RI": 1_112_308,
+    "SC": 5_478_831,
+    "SD": 924_669,
+    "TN": 7_227_750,
+    "TX": 31_290_831,
+    "UT": 3_503_613,
+    "VT": 648_493,
+    "VA": 8_811_195,
+    "WA": 7_958_180,
+    "WV": 1_769_979,
+    "WI": 5_960_975,
+    "WY": 587_618,
+}
+
+
+def aggregate_flu_census_region(
+    raw_dir: Path = _RAW_DIR, out_dir: Path = _OUT_DIR
+) -> int:
+    """Weekly confirmed flu new hospital admissions per Census region, as a
+    count and a rate per 100k residents, from nhsn_hrd.csv's per-state rows
+    (~22k rows / ~38MB raw). The rate is what makes regions comparable: the
+    South alone holds ~39% of the U.S. population, so raw counts would put it
+    on top every week regardless of where flu is actually rising first."""
+    state_region = {
+        st: region for region, states in CENSUS_REGIONS.items() for st in states
+    }
+
+    raw_path = raw_dir / "nhsn_hrd.csv"
+    totals: dict[tuple[date, str], float] = defaultdict(float)
+    with raw_path.open(newline="") as f:
+        for row in csv.DictReader(f):
+            region = state_region.get((row.get("jurisdiction") or "").strip())
+            if not region:
+                continue
+            try:
+                d = datetime.fromisoformat(
+                    (row.get("weekendingdate") or "")[:10]
+                ).date()
+                value = float(row.get("totalconfflunewadm") or "")
+            except ValueError:
+                continue
+            totals[(d, region)] += value
+
+    region_pop = {
+        region: sum(STATE_POPULATION_2024[st] for st in states)
+        for region, states in CENSUS_REGIONS.items()
+    }
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "flu_census_region.csv"
+    with out_path.open("w", newline="") as f:
+        writer = csv.writer(f, lineterminator="\n")
+        writer.writerow(["week_end", "region", "flu_new_admissions", "rate_per_100k"])
+        for (week, region), count in sorted(totals.items()):
+            writer.writerow(
+                [
+                    week.isoformat(),
+                    region,
+                    int(count),
+                    round(count / region_pop[region] * 100_000, 3),
+                ]
+            )
+
+    return len(totals)
 
 
 def aggregate_all(series: list[str] = WASTEWATER_SERIES) -> None:
@@ -236,6 +391,10 @@ def aggregate_all(series: list[str] = WASTEWATER_SERIES) -> None:
     print("  aggregating places_county ...", end=" ", flush=True)
     n = aggregate_places_county()
     print(f"{n} rows -> {_OUT_DIR / 'places_county.csv'}")
+
+    print("  aggregating flu_census_region ...", end=" ", flush=True)
+    n = aggregate_flu_census_region()
+    print(f"{n} weekly points -> {_OUT_DIR / 'flu_census_region.csv'}")
 
 
 if __name__ == "__main__":

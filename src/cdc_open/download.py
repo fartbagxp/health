@@ -42,7 +42,7 @@ def _fetch_with_retry(url: str, params: dict, headers: dict) -> requests.Respons
             resp = requests.get(url, params=params, headers=headers, timeout=_TIMEOUT)
             resp.raise_for_status()
             return resp
-        except Exception as exc:
+        except requests.RequestException as exc:
             last_exc = exc
             print(f"ERROR: {exc}")
     raise last_exc
@@ -64,7 +64,12 @@ def _fetch_csv_paginated(
     total = 0
     offset = 0
     while True:
-        params = {**base_params, "$order": ":id", "$limit": page_size, "$offset": offset}
+        params = {
+            **base_params,
+            "$order": ":id",
+            "$limit": page_size,
+            "$offset": offset,
+        }
         resp = _fetch_with_retry(url, params=params, headers=headers)
         text = resp.text
         page_rows = _count_csv_rows(text)
@@ -88,7 +93,12 @@ def _fetch_json_paginated(
     rows: list[dict] = []
     offset = 0
     while True:
-        params = {**base_params, "$order": ":id", "$limit": page_size, "$offset": offset}
+        params = {
+            **base_params,
+            "$order": ":id",
+            "$limit": page_size,
+            "$offset": offset,
+        }
         resp = _fetch_with_retry(url, params=params, headers=headers)
         page = resp.json()
         rows.extend(page)
@@ -106,7 +116,9 @@ def _json_to_csv(rows: list[dict]) -> str:
     for row in rows:
         seen.update(dict.fromkeys(row.keys()))
     out = io.StringIO()
-    writer = csv.DictWriter(out, fieldnames=list(seen), extrasaction="ignore", lineterminator="\n")
+    writer = csv.DictWriter(
+        out, fieldnames=list(seen), extrasaction="ignore", lineterminator="\n"
+    )
     writer.writeheader()
     writer.writerows(rows)
     return out.getvalue()
@@ -141,7 +153,7 @@ def download_all(out_dir: Path = _OUT_DIR, page_size: int = _PAGE_SIZE) -> None:
             path.write_text(csv_text)
             print(f"{row_count} rows -> {path}")
             ok += 1
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 — record and keep going; reported at the end
             failed.append((key, exc))
 
     for key, ds in COMPOSITE_DATASETS.items():
@@ -173,20 +185,28 @@ def download_all(out_dir: Path = _OUT_DIR, page_size: int = _PAGE_SIZE) -> None:
             path.write_text(csv_text)
             print(f"{len(all_rows)} rows -> {path}")
             ok += 1
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 — record and keep going; reported at the end
             failed.append((key, exc))
 
     for key, ds in WCMS_DATASETS.items():
         print(f"  fetching {key} (wcms) ...", end=" ", flush=True)
         try:
-            resp = _fetch_with_retry(ds.url, params={}, headers={"Accept": "application/json"})
+            resp = _fetch_with_retry(
+                ds.url, params={}, headers={"Accept": "application/json"}
+            )
             rows = resp.json()
+            # As of Oct 2026 CDC wraps these as {"lastUpdated": ..., "data": [...]};
+            # older responses were a bare list.
+            if isinstance(rows, dict):
+                if not isinstance(rows.get("data"), list):
+                    raise TypeError(f"unexpected WCMS payload keys: {sorted(rows)}")
+                rows = rows["data"]
             csv_text = _json_to_csv(rows)
             path = out_dir / f"{key}.csv"
             path.write_text(csv_text)
             print(f"{len(rows)} rows -> {path}")
             ok += 1
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 — record and keep going; reported at the end
             failed.append((key, exc))
 
     print(f"\nDone: {ok} succeeded, {len(failed)} failed.")

@@ -1,6 +1,6 @@
 {
   "generated_states": 51,
-  "generated_locals": 3412,
+  "generated_locals": 3417,
   "states": {
     "AL": {
       "name": "Alabama",
@@ -211,7 +211,7 @@
     "CA": {
       "name": "California",
       "dept": "California Department of Public Health",
-      "county_count": 69,
+      "county_count": 70,
       "counties": [
         "Alameda",
         "Alpine",
@@ -227,6 +227,7 @@
         "County of Santa Barbara",
         "Del Norte",
         "El Dorado",
+        "Fort Mojave Indian",
         "Fresno",
         "Glenn",
         "Hoopa Valley Tribe - Kima Medical",
@@ -556,7 +557,6 @@
         "Dawson",
         "DeKalb",
         "Decatur",
-        "District 1, Unit 1: Northwest",
         "District 1, Unit 2: North Georgia",
         "District 2: North",
         "District 3, Unit 1: Cobb & Douglas",
@@ -630,6 +630,7 @@
         "Muscogee",
         "North Central",
         "Northeast",
+        "Northwest Georgia",
         "Oconee",
         "Oglethorpe",
         "Paulding",
@@ -1763,7 +1764,7 @@
     "MI": {
       "name": "Michigan",
       "dept": "Department of Health and Human Services",
-      "county_count": 47,
+      "county_count": 49,
       "counties": [
         "Allegan",
         "Barry-Eaton",
@@ -1782,6 +1783,7 @@
         "District Health Department #4",
         "Genesee",
         "Grand Traverse",
+        "Gun Lake Tribe",
         "Health Department of Northwest Michigan",
         "Huron",
         "Ingham",
@@ -1789,6 +1791,7 @@
         "Jackson",
         "Kalamazoo County Health and Community",
         "Kent",
+        "Keweenaw Bay Indian Community",
         "LMAS",
         "Lapeer",
         "Lenawee",
@@ -2517,7 +2520,7 @@
     "NC": {
       "name": "North Carolina",
       "dept": "Department of Health and Human Services",
-      "county_count": 86,
+      "county_count": 87,
       "counties": [
         "Alamance",
         "Albemarle",
@@ -2546,6 +2549,7 @@
         "Davie",
         "Duplin",
         "Durham",
+        "Eastern Band of Cherokee Indians",
         "Edgecombe",
         "Foothills",
         "Forsyth",
@@ -2766,7 +2770,7 @@
     "OK": {
       "name": "Oklahoma",
       "dept": "State Department of Health",
-      "county_count": 77,
+      "county_count": 78,
       "counties": [
         "Adair",
         "Atoka",
@@ -2780,6 +2784,7 @@
         "Carter",
         "Cherokee",
         "Cherokee Nation",
+        "Cheyenne and Arapaho",
         "Chickasaw Nation",
         "Choctaw",
         "Choctaw Nation",
@@ -3648,7 +3653,7 @@
         "Cudahy",
         "De Pere",
         "Dodge",
-        "Door",
+        "Door County Department of Health and Human Services -",
         "Douglas",
         "Dunn",
         "Eau Claire",

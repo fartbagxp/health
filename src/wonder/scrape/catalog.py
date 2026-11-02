@@ -436,8 +436,8 @@ def print_datasets_by_topic(mapping_path: Path) -> None:
         by_topic[m["topic"]].append(m)
 
     # Sort datasets within each topic by dataset_id numerically
-    for topic in by_topic:
-        by_topic[topic].sort(key=lambda x: dataset_id_sort_key(x["dataset_id"]))
+    for datasets in by_topic.values():
+        datasets.sort(key=lambda x: dataset_id_sort_key(x["dataset_id"]))
 
     # Print header
     print("\n" + "=" * 70)

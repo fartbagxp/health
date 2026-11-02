@@ -290,17 +290,13 @@ def test_wonder_request_to_dict():
 
 def test_llm_query_builder_initialization():
     """Test LLMQueryBuilder initialization (without API key)"""
-    try:
-        # This might fail if no API key, but we're just testing import
-        builder = LLMQueryBuilder(api_key="dummy-key-for-testing")
-        assert builder.data_dir.exists()
-        assert builder.topics_mapping is not None
-        assert len(builder.topics_mapping) > 0
-        print(
-            f"✓ LLMQueryBuilder initialization works ({len(builder.topics_mapping)} datasets)"
-        )
-    except Exception as e:
-        print(f"⚠ LLMQueryBuilder initialization (expected if no API key): {e}")
+    builder = LLMQueryBuilder(api_key="dummy-key-for-testing")
+    assert builder.data_dir.exists()
+    assert builder.topics_mapping is not None
+    assert len(builder.topics_mapping) > 0
+    print(
+        f"✓ LLMQueryBuilder initialization works ({len(builder.topics_mapping)} datasets)"
+    )
 
 
 def test_load_topics_mapping():
@@ -639,7 +635,7 @@ def run_all_tests():
         try:
             test()
             passed += 1
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 - manual runner reports any failure
             print(f"✗ {test.__name__} failed: {e}")
             failed += 1
             import traceback

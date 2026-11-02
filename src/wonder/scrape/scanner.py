@@ -50,7 +50,7 @@ HEADERS = {
 def is_wonder_html(url: str) -> bool:
     try:
         u = urlparse(url)
-    except Exception:
+    except ValueError:
         return False
     if not (u.scheme and u.netloc):
         return False

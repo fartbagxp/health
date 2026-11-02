@@ -182,13 +182,18 @@ class TestParseSASColumns:
         # SEQNUMC(0-7) YEAR(7-11) RETEILI(11-13) P_UTDDTP4(13) P_UTDMMX(14)
         # SHOT_HES(15) PROVWT_D(16-24)
         line = "1234567202206111" + "1234.567"
-        assert line[0:7] == "1234567"
-        assert line[7:11] == "2022"
-        assert line[11:13] == "06"
-        assert line[13:14] == "1"
-        assert line[14:15] == "1"
-        assert line[15:16] == "1"
-        assert line[16:24] == "1234.567"
+
+        def field(name):
+            start, end = cols[name]
+            return line[start:end]
+
+        assert field("SEQNUMC") == "1234567"
+        assert field("YEAR") == "2022"
+        assert field("RETEILI") == "06"
+        assert field("P_UTDDTP4") == "1"
+        assert field("P_UTDMMX") == "1"
+        assert field("SHOT_HES") == "1"
+        assert field("PROVWT_D") == "1234.567"
 
 
 # =============================================================================
@@ -293,9 +298,11 @@ class TestStreamDat:
     def test_raises_on_http_error(self):
         mock = MagicMock()
         mock.raise_for_status.side_effect = Exception("404 Not Found")
-        with patch("nis.parser.requests.get", return_value=mock):
-            with pytest.raises(Exception, match="404"):
-                list(stream_dat("http://fake.url/data.dat", _SIMPLE_COLS))
+        with (
+            patch("nis.parser.requests.get", return_value=mock),
+            pytest.raises(Exception, match="404"),
+        ):
+            list(stream_dat("http://fake.url/data.dat", _SIMPLE_COLS))
 
     def test_handles_chunk_boundary(self):
         # Split a two-line record across two chunks to verify the leftover-buffer logic.
@@ -619,9 +626,11 @@ class TestStreamRecords:
             list(stream_records("child", 2022, state="Narnia"))
 
     def test_no_matching_columns_raises_runtime_error(self):
-        with patch("nis.sdk._fetch_columns", return_value={}):
-            with pytest.raises(RuntimeError, match="No matching columns"):
-                list(stream_records("child", 2022))
+        with (
+            patch("nis.sdk._fetch_columns", return_value={}),
+            pytest.raises(RuntimeError, match="No matching columns"),
+        ):
+            list(stream_records("child", 2022))
 
 
 class TestGetVaccinationRates:

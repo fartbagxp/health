@@ -397,10 +397,10 @@ class TestDrugDeathsByMonth:
                 drug_fentanyl_by_year.setdefault(int(r["year"]), 0)
                 drug_fentanyl_by_year[int(r["year"])] += int(r["deaths"])
 
-        for yr in fentanyl_by_year:
-            assert fentanyl_by_year[yr] == drug_fentanyl_by_year.get(yr), (
+        for yr, total in fentanyl_by_year.items():
+            assert total == drug_fentanyl_by_year.get(yr), (
                 f"Fentanyl sum mismatch in {yr}: "
-                f"fentanyl csv={fentanyl_by_year[yr]}, drug csv={drug_fentanyl_by_year.get(yr)}"
+                f"fentanyl csv={total}, drug csv={drug_fentanyl_by_year.get(yr)}"
             )
 
     def test_monthly_sums_match_annual_totals(self, rows):
@@ -988,6 +988,7 @@ class TestFentanylFetchIntegration:
         result = subprocess.run(
             ["uv", "run", "python", "src/wonder/queries/fetch_fentanyl_deaths.py"],
             capture_output=True,
+            check=False,
             text=True,
             cwd=Path(__file__).parent.parent,
         )
@@ -1006,6 +1007,7 @@ class TestDrugDeathsFetchIntegration:
         result = subprocess.run(
             ["uv", "run", "python", "src/wonder/queries/fetch_drug_deaths.py"],
             capture_output=True,
+            check=False,
             text=True,
             cwd=Path(__file__).parent.parent,
         )
@@ -1017,6 +1019,7 @@ class TestDrugDeathsFetchIntegration:
         result = subprocess.run(
             ["uv", "run", "python", "src/wonder/queries/fetch_drug_deaths_monthly.py"],
             capture_output=True,
+            check=False,
             text=True,
             cwd=Path(__file__).parent.parent,
         )

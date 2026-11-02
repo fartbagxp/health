@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 CDC WONDER Query Parameter Scraper using Playwright
 
@@ -16,16 +15,16 @@ Example:
     python -m src.wonder.query https://wonder.cdc.gov/natality-expanded-provisional.html
 """
 
-import json
-import logging
 import argparse
 import csv
+import json
+import logging
 import re
-
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
-from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
+from playwright.sync_api import Page, sync_playwright
+from playwright.sync_api import TimeoutError as PlaywrightTimeout
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,7 +39,7 @@ log = logging.getLogger("wonder-query")
 
 def get_dataset_id_and_target_url(
     url: str, dmap_csv_path: str = "data/raw/wonder/dataset_map.csv"
-) -> tuple[Optional[str], Optional[str]]:
+) -> tuple[str | None, str | None]:
     """
     Extract dataset ID from URL and get the target URL to scrape.
     If a controller URL is provided, looks up the actual page URL from the dmap CSV.
@@ -390,8 +389,8 @@ def scrape_query_parameters(url: str, headless: bool = True) -> dict[str, Any]:
 
 def save_results(
     data: dict[str, Any],
-    output_path: Optional[str] = None,
-    dataset_id: Optional[str] = None,
+    output_path: str | None = None,
+    dataset_id: str | None = None,
 ) -> str:
     """
     Save extracted parameters to JSON file.
@@ -572,6 +571,9 @@ def main():
 
             # Save summary
             summary_path = f"data/raw/wonder/scrape_summary_D{start_id}-D{end_id}.json"
+            if results["summary"]["successful"] == 0:
+                log.error(f"No datasets scraped; leaving {summary_path} unchanged")
+                raise SystemExit(1)
             with open(summary_path, "w") as f:
                 json.dump(results, f, indent=2)
 

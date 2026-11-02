@@ -9,7 +9,7 @@ All parsing is streaming; the DAT file is never written to disk.
 """
 
 import re
-from typing import Iterator
+from collections.abc import Iterator
 
 import requests
 
@@ -23,6 +23,8 @@ def parse_sas_columns(sas_text: str) -> dict[str, tuple[int, int]]:
 
     Handles both NIS pointer notation and column-range notation:
       @1  SEQNUMC  7.        →  SEQNUMC: (0, 7)
+      @1  SEQNUMC  $6.       →  SEQNUMC: (0, 6)    (character informat)
+      @13 PROVWT_C 19.14     →  PROVWT_C: (12, 31) (width.decimals)
       YEAR 8-11              →  YEAR:    (7, 11)
     """
     columns: dict[str, tuple[int, int]] = {}
@@ -39,9 +41,9 @@ def parse_sas_columns(sas_text: str) -> dict[str, tuple[int, int]]:
 
     block = m.group(1)
 
-    # Pointer notation:  @COL  VARNAME  WIDTH.
-    for hit in re.finditer(r"@(\d+)\s+(\w+)\s+(\d+)\.", block, re.IGNORECASE):
-        start = int(hit.group(1)) - 1          # SAS is 1-indexed
+    # Pointer notation:  @COL  VARNAME  [$]WIDTH.[DECIMALS]
+    for hit in re.finditer(r"@(\d+)\s+(\w+)\s+\$?(\d+)\.\d*", block, re.IGNORECASE):
+        start = int(hit.group(1)) - 1  # SAS is 1-indexed
         name = hit.group(2).upper()
         width = int(hit.group(3))
         columns[name] = (start, start + width)

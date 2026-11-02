@@ -21,11 +21,13 @@ Key Concepts:
 """
 
 import re
-import requests
+import time
 import xml.etree.ElementTree as ET
-from typing import Dict, List, Any, Optional, Union
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
+
+import requests
 
 
 @dataclass
@@ -33,7 +35,7 @@ class QueryParameter:
     """Represents a single query parameter"""
 
     name: str
-    values: List[str]
+    values: list[str]
 
     def to_xml(self) -> str:
         """Convert parameter to XML format"""
@@ -48,15 +50,15 @@ class QueryParameter:
 class ResponseCell:
     """Represents a cell in the response data table"""
 
-    label: Optional[str] = None  # l attribute
-    value: Optional[str] = None  # v attribute
-    column: Optional[str] = None  # c attribute
-    data_total: Optional[str] = None  # dt attribute
-    attribute: Optional[str] = None  # a attribute
-    sub_label: Optional[str] = None  # nested <l> element value
-    code: Optional[str] = None  # cd attribute — ICD-10 code when grouping by cause
+    label: str | None = None  # l attribute
+    value: str | None = None  # v attribute
+    column: str | None = None  # c attribute
+    data_total: str | None = None  # dt attribute
+    attribute: str | None = None  # a attribute
+    sub_label: str | None = None  # nested <l> element value
+    code: str | None = None  # cd attribute — ICD-10 code when grouping by cause
 
-    def get_numeric_value(self) -> Optional[float]:
+    def get_numeric_value(self) -> float | None:
         """Try to parse the value as a number, handling commas"""
         val = self.value or self.data_total
         if val is None:
@@ -64,7 +66,7 @@ class ResponseCell:
         try:
             # Remove commas and convert to float
             return float(val.replace(",", ""))
-        except (ValueError, AttributeError):
+        except ValueError, AttributeError:
             return None
 
 
@@ -72,10 +74,10 @@ class ResponseCell:
 class ResponseRow:
     """Represents a row in the response data table"""
 
-    cells: List[ResponseCell]
+    cells: list[ResponseCell]
     is_total: bool = False
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         """Convert row to dictionary format"""
         return {
             "cells": [
@@ -115,17 +117,56 @@ class WonderClient:
 
     BASE_URL = "https://wonder.cdc.gov/controller/datarequest"
 
-    def __init__(self, timeout: int = 60):
+    # Statuses WONDER returns when throttling; worth waiting out rather than failing
+    RETRY_STATUSES = (429, 503)
+
+    def __init__(self, timeout: int = 60, max_retries: int = 4, backoff: float = 30.0):
         """
         Initialize the WONDER client
 
         Args:
             timeout: Request timeout in seconds (default: 60)
+            max_retries: Retries on 429/503 before giving up (default: 4)
+            backoff: Initial wait in seconds before a retry, doubled each attempt
+                (default: 30). A Retry-After header from the server takes precedence.
         """
         self.timeout = timeout
+        self.max_retries = max_retries
+        self.backoff = backoff
         self.session = requests.Session()
 
-    def _build_request_data(self, request_xml: str) -> Dict[str, str]:
+    def _post(self, url: str, data: dict[str, str]) -> requests.Response:
+        """
+        POST to WONDER, retrying with exponential backoff when rate limited
+
+        Args:
+            url: Dataset request URL
+            data: Form data
+
+        Returns:
+            The final response (may still be non-200 once retries are exhausted)
+        """
+        for attempt in range(self.max_retries + 1):
+            response = self.session.post(url, data=data, timeout=self.timeout)
+            if (
+                response.status_code not in self.RETRY_STATUSES
+                or attempt == self.max_retries
+            ):
+                return response
+
+            wait = self.backoff * (2**attempt)
+            retry_after = response.headers.get("Retry-After", "")
+            if retry_after.isdigit():
+                wait = float(retry_after)
+            print(
+                f"    WONDER returned {response.status_code}; retrying in {wait:.0f}s "
+                f"({attempt + 1}/{self.max_retries}) …",
+                flush=True,
+            )
+            time.sleep(wait)
+        return response
+
+    def _build_request_data(self, request_xml: str) -> dict[str, str]:
         """
         Build request data dict from XML
 
@@ -143,7 +184,7 @@ class WonderClient:
     def query(
         self,
         dataset_id: str,
-        parameters: Dict[str, Union[str, List[str]]],
+        parameters: dict[str, str | list[str]],
     ) -> str:
         """
         Execute a query against CDC WONDER API
@@ -166,7 +207,7 @@ class WonderClient:
 
         # Make request
         url = f"{self.BASE_URL}/{dataset_id}"
-        response = self.session.post(url, data=data, timeout=self.timeout)
+        response = self._post(url, data)
 
         if response.status_code != 200:
             raise RuntimeError(
@@ -191,7 +232,7 @@ class WonderClient:
         """
         data = self._build_request_data(request_xml)
         url = f"{self.BASE_URL}/{dataset_id}"
-        response = self.session.post(url, data=data, timeout=self.timeout)
+        response = self._post(url, data)
 
         if response.status_code != 200:
             raise RuntimeError(
@@ -228,7 +269,7 @@ class WonderClient:
 
         return self.query_from_xml(dataset_id, request_xml)
 
-    def _extract_dataset_id(self, xml_string: str) -> Optional[str]:
+    def _extract_dataset_id(self, xml_string: str) -> str | None:
         """Extract dataset_id from request XML"""
         try:
             root = ET.fromstring(xml_string)
@@ -239,7 +280,7 @@ class WonderClient:
             pass
         return None
 
-    def _build_request_xml(self, parameters: Dict[str, Union[str, List[str]]]) -> str:
+    def _build_request_xml(self, parameters: dict[str, str | list[str]]) -> str:
         """
         Build XML request from parameters dictionary
 
@@ -266,7 +307,7 @@ class WonderClient:
         lines.append("</request-parameters>")
         return "\n".join(lines)
 
-    def parse_response_table(self, response_xml: str) -> List[ResponseRow]:
+    def parse_response_table(self, response_xml: str) -> list[ResponseRow]:
         """
         Parse the data table from response XML
 
@@ -327,7 +368,7 @@ class WonderClient:
 
         return rows
 
-    def parse_response_to_dicts(self, response_xml: str) -> List[Dict[str, Any]]:
+    def parse_response_to_dicts(self, response_xml: str) -> list[dict[str, Any]]:
         """
         Parse response table to list of dictionaries (simpler format)
 
@@ -340,7 +381,7 @@ class WonderClient:
         rows = self.parse_response_table(response_xml)
         return [row.to_dict() for row in rows]
 
-    def parse_response_to_arrays(self, response_xml: str) -> List[List[Any]]:
+    def parse_response_to_arrays(self, response_xml: str) -> list[list[Any]]:
         """
         Parse response table to 2D array (compatible with Handler.xml_to_table)
 
@@ -373,7 +414,7 @@ class WonderClient:
 
         return result
 
-    def get_column_headers(self, response_xml: str) -> List[str]:
+    def get_column_headers(self, response_xml: str) -> list[str]:
         """
         Extract column headers from response XML based on groupby and measure selections
 
@@ -449,7 +490,7 @@ class WonderClient:
 
         return headers
 
-    def get_dataset_metadata(self, response_xml: str) -> Dict[str, Any]:
+    def get_dataset_metadata(self, response_xml: str) -> dict[str, Any]:
         """
         Extract dataset metadata from response
 
@@ -498,7 +539,7 @@ class QueryBuilder:
     def __init__(self, dataset_id: str):
         """Initialize builder with dataset ID"""
         self.dataset_id = dataset_id
-        self.params: Dict[str, Union[str, List[str]]] = {
+        self.params: dict[str, str | list[str]] = {
             "dataset_code": dataset_id,
             "action-Send": "Send",
             "stage": "request",
@@ -508,7 +549,7 @@ class QueryBuilder:
         for i in range(1, 6):
             self.params[f"B_{i}"] = "*None*"
 
-    def group_by(self, variable: str, slot: int = 1) -> "QueryBuilder":
+    def group_by(self, variable: str, slot: int = 1) -> QueryBuilder:
         """
         Set a group-by variable
 
@@ -524,7 +565,7 @@ class QueryBuilder:
         self.params[f"B_{slot}"] = variable
         return self
 
-    def measures(self, measures: List[str]) -> "QueryBuilder":
+    def measures(self, measures: list[str]) -> QueryBuilder:
         """
         Set measures to include
 
@@ -538,7 +579,7 @@ class QueryBuilder:
             self.params[f"M_{i}"] = measure
         return self
 
-    def filter(self, parameter: str, values: Union[str, List[str]]) -> "QueryBuilder":
+    def filter(self, parameter: str, values: str | list[str]) -> QueryBuilder:
         """
         Add a filter parameter
 
@@ -552,7 +593,7 @@ class QueryBuilder:
         self.params[parameter] = values
         return self
 
-    def option(self, option: str, value: str) -> "QueryBuilder":
+    def option(self, option: str, value: str) -> QueryBuilder:
         """
         Set an output option
 
@@ -566,7 +607,7 @@ class QueryBuilder:
         self.params[option] = value
         return self
 
-    def build(self) -> Dict[str, Union[str, List[str]]]:
+    def build(self) -> dict[str, str | list[str]]:
         """
         Build and return the parameters dictionary
 

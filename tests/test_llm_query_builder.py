@@ -25,7 +25,7 @@ import re
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 import pytest
 
@@ -38,7 +38,6 @@ from wonder.llm_query_builder import (
     WonderRequest,
 )
 
-
 # =============================================================================
 # Test Case Definitions
 # =============================================================================
@@ -49,9 +48,9 @@ class ExpectedDataset:
     """Expected dataset selection for a query"""
 
     dataset_id: str
-    year_range: Optional[tuple[int, int]] = None
-    required_params: Dict[str, Any] = field(default_factory=dict)
-    forbidden_params: List[str] = field(default_factory=list)
+    year_range: tuple[int, int] | None = None
+    required_params: dict[str, Any] = field(default_factory=dict)
+    forbidden_params: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -61,9 +60,9 @@ class QueryTestCase:
     id: str
     description: str
     prompt: str
-    expected_datasets: List[ExpectedDataset]
-    required_param_patterns: Dict[str, List[str]] = field(default_factory=dict)
-    topics: List[str] = field(default_factory=list)
+    expected_datasets: list[ExpectedDataset]
+    required_param_patterns: dict[str, list[str]] = field(default_factory=dict)
+    topics: list[str] = field(default_factory=list)
 
 
 # =============================================================================
@@ -131,8 +130,8 @@ MORTALITY_TEST_CASES = [
             # Multiple valid datasets for 2019 mortality data
             ExpectedDataset(dataset_id="D76"),  # UCD 1999-2020
             ExpectedDataset(dataset_id="D77"),  # MCD 1999-2020
-            ExpectedDataset(dataset_id="D157"),  # MCD 2018-2023
-            ExpectedDataset(dataset_id="D158"),  # UCD 2018-2023
+            ExpectedDataset(dataset_id="D157"),  # MCD 2018-2024
+            ExpectedDataset(dataset_id="D158"),  # UCD 2018-2024
             ExpectedDataset(dataset_id="D176"),  # Provisional (also has 2019)
         ],
         required_param_patterns={
@@ -208,8 +207,8 @@ def dataset_registry(data_dir):
 
 def validate_param_patterns(
     result: WonderRequest,
-    patterns: Dict[str, List[str]],
-) -> List[str]:
+    patterns: dict[str, list[str]],
+) -> list[str]:
     """
     Validate that parameters match expected patterns.
     Returns list of validation errors (empty if valid).
@@ -390,7 +389,7 @@ class TestDatasetSelection:
         """Verify MCD datasets are in the mapping"""
         dataset_ids = {m["dataset_id"] for m in topics_mapping["mappings"]}
         assert "D77" in dataset_ids, "D77 (MCD 1999-2020) should exist"
-        assert "D157" in dataset_ids, "D157 (MCD 2018-2023) should exist"
+        assert "D157" in dataset_ids, "D157 (MCD 2018-2024) should exist"
         assert "D176" in dataset_ids, "D176 (Provisional) should exist"
 
     def test_mortality_topic_mapping(self, topics_mapping):
@@ -444,15 +443,15 @@ class TestDatasetYearCoverage:
         assert "1999" in title
         assert "2020" in title
 
-    def test_d157_covers_2018_2023(self, data_dir):
-        """D157 should cover 2018-2023"""
+    def test_d157_covers_2018_2024(self, data_dir):
+        """D157 should cover 2018-2024"""
         params_file = data_dir / "query_params_D157.json"
         with open(params_file) as f:
             params = json.load(f)
 
         title = params.get("page_title", "")
         assert "2018" in title
-        assert "2023" in title
+        assert "2024" in title
 
     def test_d176_is_provisional(self, data_dir):
         """D176 should be provisional data"""
@@ -502,12 +501,12 @@ class TestDatasetSelectionStrategy:
     def test_identify_datasets_needing_split(self, dataset_registry):
         """
         Identify when a query needs multiple datasets.
-        For 2018-2024, we might need:
-        - D157 (2018-2023) for final data
-        - D176 (2024+) for provisional/recent data
+        For 2018-2025, we might need:
+        - D157 (2018-2024) for final data
+        - D176 (2025+) for provisional/recent data
         """
         target_start = 2018
-        target_end = 2024
+        target_end = 2025
 
         # Find datasets that fully cover the range
         fully_covering = []
@@ -520,10 +519,10 @@ class TestDatasetSelectionStrategy:
                 partially_covering.append(dataset_id)
 
         # D176 (provisional 2018-present) should fully cover
-        assert "D176" in fully_covering, "D176 should fully cover 2018-2024"
+        assert "D176" in fully_covering, "D176 should fully cover 2018-2025"
 
-        # D157 (2018-2023) should partially cover
-        assert "D157" in partially_covering, "D157 should partially cover 2018-2024"
+        # D157 (2018-2024) should partially cover
+        assert "D157" in partially_covering, "D157 should partially cover 2018-2025"
 
 
 # =============================================================================

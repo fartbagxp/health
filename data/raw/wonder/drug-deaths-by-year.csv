@@ -175,9 +175,9 @@ year,drug_code,drug_name,deaths,provisional
 2023,T40.7,Cannabis,1452,true
 2023,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",38166,true
 2024,T40.1,Heroin,2792,true
-2024,T40.2,Other opioids (natural & semi-synthetic),1165,true
-2024,T40.3,Methadone,567,true
-2024,T40.4,Synthetic opioids excl. methadone (fentanyl),5438,true
-2024,T40.5,Cocaine,3284,true
-2024,T40.7,Cannabis,187,true
-2024,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",4258,true
+2024,T40.2,Other opioids (natural & semi-synthetic),2383,true
+2024,T40.3,Methadone,1068,true
+2024,T40.4,Synthetic opioids excl. methadone (fentanyl),10591,true
+2024,T40.5,Cocaine,6460,true
+2024,T40.7,Cannabis,374,true
+2024,T43.6,"Psychostimulants (methamphetamine, amphetamines, MDMA)",8189,true

@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/lbd-current-expanded.html",
   "final_url": "https://wonder.cdc.gov/controller/datarequest/D159",
-  "page_title": "Linked Birth / Infant Death Records, 2017-2023 Expanded Request Form",
+  "page_title": "Linked Birth / Infant Death Records, 2017-2024 Expanded Request Form",
   "forms": [
     {
       "id": "form_0",
@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D159;jsessionid=FA97BF3EEB2658251B21D4E14EEE",
+      "action": "/controller/datarequest/D159;jsessionid=D9EEDDFE5AF026C92D3CD75E2712",
       "method": "POST"
     }
   ],
@@ -14063,10 +14063,15 @@
           {
             "value": "2023",
             "text": " 2023 ",
+            "selected": false
+          },
+          {
+            "value": "2024",
+            "text": " 2024 ",
             "selected": true
           }
         ],
-        "option_count": 8
+        "option_count": 9
       },
       {
         "type": "select",
@@ -17369,9 +17374,14 @@
             "value": "9",
             "text": " Unknown or Not Stated ",
             "selected": false
+          },
+          {
+            "value": "10",
+            "text": " Not Reported ",
+            "selected": false
           }
         ],
-        "option_count": 4
+        "option_count": 5
       },
       {
         "type": "select",
@@ -18855,7 +18865,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "Linked Birth / Infant Death Records, 2017-2023 Expanded",
+        "value": "Linked Birth / Infant Death Records, 2017-2024 Expanded",
         "checked": null
       },
       {
@@ -18863,7 +18873,7 @@
         "name": "dataset_vintage",
         "id": "",
         "label": "",
-        "value": "2023",
+        "value": "2024",
         "checked": null
       },
       {

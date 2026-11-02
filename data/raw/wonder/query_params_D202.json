@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/tb-v2023.html",
   "final_url": "https://wonder.cdc.gov/tb-v2023.html",
-  "page_title": "OTIS TB Data 1993-2023 Request",
+  "page_title": "OTIS TB Data 1993-2023, Archive Request",
   "forms": [
     {
       "id": "form_0",
@@ -2460,15 +2460,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "OTIS TB Data 1993-2023",
-        "checked": null
-      },
-      {
-        "type": "input_hidden",
-        "name": "dataset_vintage_latest",
-        "id": "",
-        "label": "",
-        "value": "TB",
+        "value": "OTIS TB Data 1993-2023, Archive",
         "checked": null
       },
       {
@@ -2513,7 +2505,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_12",
+        "name": "input_11",
         "id": "",
         "label": "",
         "value": "Request Form",
@@ -2764,9 +2756,9 @@
   },
   "summary": {
     "total_selects": 36,
-    "total_inputs": 43,
+    "total_inputs": 42,
     "total_textareas": 0,
-    "total_parameters": 79
+    "total_parameters": 78
   },
   "dataset_id": "D202"
 }

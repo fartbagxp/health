@@ -1,7 +1,7 @@
 {
   "url": "http://wonder.cdc.gov/lbd-current.html",
   "final_url": "https://wonder.cdc.gov/controller/datarequest/D69",
-  "page_title": "Linked Birth / Infant Death Records, 2007-2023 Request Form",
+  "page_title": "Linked Birth / Infant Death Records, 2007-2024 Request Form",
   "forms": [
     {
       "id": "form_0",
@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D69;jsessionid=87CAEB5B9CA7D1603FC256FB86D8",
+      "action": "/controller/datarequest/D69;jsessionid=CEAD7261F0A596913CFC2CF0960B",
       "method": "POST"
     }
   ],
@@ -3658,10 +3658,15 @@
           {
             "value": "2023",
             "text": " 2023 ",
+            "selected": false
+          },
+          {
+            "value": "2024",
+            "text": " 2024 ",
             "selected": true
           }
         ],
-        "option_count": 18
+        "option_count": 19
       },
       {
         "type": "select",
@@ -3905,7 +3910,7 @@
         "name": "dataset_label",
         "id": "",
         "label": "",
-        "value": "Linked Birth / Infant Death Records, 2007-2023",
+        "value": "Linked Birth / Infant Death Records, 2007-2024",
         "checked": null
       },
       {
@@ -3913,7 +3918,7 @@
         "name": "dataset_vintage",
         "id": "",
         "label": "",
-        "value": "2023",
+        "value": "2024",
         "checked": null
       },
       {

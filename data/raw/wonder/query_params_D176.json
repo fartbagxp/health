@@ -12,7 +12,7 @@
     {
       "id": "wonderform",
       "name": "form",
-      "action": "/controller/datarequest/D176;jsessionid=3D51A931569E6355BE9F9A112574",
+      "action": "/controller/datarequest/D176;jsessionid=E1464F6B242E1BDB301379C66654",
       "method": "POST"
     }
   ],
@@ -27,27 +27,37 @@
         "options": [
           {
             "value": "D176.V10-level1",
-            "text": "Residence Census Region",
+            "text": "Residence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V10-level2",
-            "text": "Residence Census Division",
+            "text": "Residence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V27-level1",
-            "text": "Residence HHS Region",
+            "text": "Residence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level1",
-            "text": "Residence State",
+            "text": "Residence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level2",
-            "text": "Residence County",
+            "text": "Residence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level1",
+            "text": "Residence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level2",
+            "text": "Residence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -67,27 +77,37 @@
           },
           {
             "value": "D176.V80-level1",
-            "text": "Occurrence Census Region",
+            "text": "Occurrence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V80-level2",
-            "text": "Occurrence Census Division",
+            "text": "Occurrence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V77-level1",
-            "text": "Occurrence HHS Region",
+            "text": "Occurrence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level1",
-            "text": "Occurrence State",
+            "text": "Occurrence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level2",
-            "text": "Occurrence County",
+            "text": "Occurrence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level1",
+            "text": "Occurrence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level2",
+            "text": "Occurrence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -271,7 +291,7 @@
             "selected": false
           }
         ],
-        "option_count": 49
+        "option_count": 53
       },
       {
         "type": "select",
@@ -287,27 +307,37 @@
           },
           {
             "value": "D176.V10-level1",
-            "text": "Residence Census Region",
+            "text": "Residence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V10-level2",
-            "text": "Residence Census Division",
+            "text": "Residence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V27-level1",
-            "text": "Residence HHS Region",
+            "text": "Residence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level1",
-            "text": "Residence State",
+            "text": "Residence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level2",
-            "text": "Residence County",
+            "text": "Residence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level1",
+            "text": "Residence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level2",
+            "text": "Residence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -327,27 +357,37 @@
           },
           {
             "value": "D176.V80-level1",
-            "text": "Occurrence Census Region",
+            "text": "Occurrence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V80-level2",
-            "text": "Occurrence Census Division",
+            "text": "Occurrence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V77-level1",
-            "text": "Occurrence HHS Region",
+            "text": "Occurrence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level1",
-            "text": "Occurrence State",
+            "text": "Occurrence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level2",
-            "text": "Occurrence County",
+            "text": "Occurrence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level1",
+            "text": "Occurrence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level2",
+            "text": "Occurrence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -531,7 +571,7 @@
             "selected": false
           }
         ],
-        "option_count": 50
+        "option_count": 54
       },
       {
         "type": "select",
@@ -547,27 +587,37 @@
           },
           {
             "value": "D176.V10-level1",
-            "text": "Residence Census Region",
+            "text": "Residence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V10-level2",
-            "text": "Residence Census Division",
+            "text": "Residence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V27-level1",
-            "text": "Residence HHS Region",
+            "text": "Residence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level1",
-            "text": "Residence State",
+            "text": "Residence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level2",
-            "text": "Residence County",
+            "text": "Residence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level1",
+            "text": "Residence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level2",
+            "text": "Residence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -587,27 +637,37 @@
           },
           {
             "value": "D176.V80-level1",
-            "text": "Occurrence Census Region",
+            "text": "Occurrence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V80-level2",
-            "text": "Occurrence Census Division",
+            "text": "Occurrence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V77-level1",
-            "text": "Occurrence HHS Region",
+            "text": "Occurrence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level1",
-            "text": "Occurrence State",
+            "text": "Occurrence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level2",
-            "text": "Occurrence County",
+            "text": "Occurrence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level1",
+            "text": "Occurrence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level2",
+            "text": "Occurrence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -791,7 +851,7 @@
             "selected": false
           }
         ],
-        "option_count": 50
+        "option_count": 54
       },
       {
         "type": "select",
@@ -807,27 +867,37 @@
           },
           {
             "value": "D176.V10-level1",
-            "text": "Residence Census Region",
+            "text": "Residence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V10-level2",
-            "text": "Residence Census Division",
+            "text": "Residence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V27-level1",
-            "text": "Residence HHS Region",
+            "text": "Residence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level1",
-            "text": "Residence State",
+            "text": "Residence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level2",
-            "text": "Residence County",
+            "text": "Residence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level1",
+            "text": "Residence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level2",
+            "text": "Residence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -847,27 +917,37 @@
           },
           {
             "value": "D176.V80-level1",
-            "text": "Occurrence Census Region",
+            "text": "Occurrence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V80-level2",
-            "text": "Occurrence Census Division",
+            "text": "Occurrence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V77-level1",
-            "text": "Occurrence HHS Region",
+            "text": "Occurrence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level1",
-            "text": "Occurrence State",
+            "text": "Occurrence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level2",
-            "text": "Occurrence County",
+            "text": "Occurrence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level1",
+            "text": "Occurrence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level2",
+            "text": "Occurrence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -1051,7 +1131,7 @@
             "selected": false
           }
         ],
-        "option_count": 50
+        "option_count": 54
       },
       {
         "type": "select",
@@ -1067,27 +1147,37 @@
           },
           {
             "value": "D176.V10-level1",
-            "text": "Residence Census Region",
+            "text": "Residence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V10-level2",
-            "text": "Residence Census Division",
+            "text": "Residence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V27-level1",
-            "text": "Residence HHS Region",
+            "text": "Residence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level1",
-            "text": "Residence State",
+            "text": "Residence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V9-level2",
-            "text": "Residence County",
+            "text": "Residence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level1",
+            "text": "Residence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V90-level2",
+            "text": "Residence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -1107,27 +1197,37 @@
           },
           {
             "value": "D176.V80-level1",
-            "text": "Occurrence Census Region",
+            "text": "Occurrence Census Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V80-level2",
-            "text": "Occurrence Census Division",
+            "text": "Occurrence Census Division (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V77-level1",
-            "text": "Occurrence HHS Region",
+            "text": "Occurrence HHS Region (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level1",
-            "text": "Occurrence State",
+            "text": "Occurrence State (without Puerto Rico)",
             "selected": false
           },
           {
             "value": "D176.V79-level2",
-            "text": "Occurrence County",
+            "text": "Occurrence County (without Puerto Rico)",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level1",
+            "text": "Occurrence States and Puerto Rico",
+            "selected": false
+          },
+          {
+            "value": "D176.V91-level2",
+            "text": "Occurrence States and Puerto Rico County",
             "selected": false
           },
           {
@@ -1311,7 +1411,7 @@
             "selected": false
           }
         ],
-        "option_count": 50
+        "option_count": 54
       },
       {
         "type": "select",
@@ -1552,7 +1652,7 @@
         "type": "select",
         "name": "F_D176.V9",
         "id": "codes-D176.V9",
-        "label": "Residence States",
+        "label": "Residence States (without Puerto Rico)",
         "multiple": true,
         "options": [
           {
@@ -1822,7 +1922,7 @@
         "type": "select",
         "name": "F_D176.V10",
         "id": "codes-D176.V10",
-        "label": "Residence Census Regions",
+        "label": "Residence Census Regions (without Puerto Rico)",
         "multiple": true,
         "options": [
           {
@@ -1857,7 +1957,7 @@
         "type": "select",
         "name": "F_D176.V27",
         "id": "codes-D176.V27",
-        "label": "Residence HHS Regions",
+        "label": "Residence HHS Regions (without Puerto Rico)",
         "multiple": true,
         "options": [
           {
@@ -1917,6 +2017,281 @@
           }
         ],
         "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "F_D176.V90",
+        "id": "codes-D176.V90",
+        "label": "Residence States and Puerto Rico",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States and Puerto Rico)",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": "+ 01  (Alabama)  ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "+ 02  (Alaska)  ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "+ 04  (Arizona)  ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "+ 05  (Arkansas)  ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "+ 06  (California)  ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "+ 08  (Colorado)  ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "+ 09  (Connecticut)  ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "+ 10  (Delaware)  ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "+ 11  (District of Columbia)  ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "+ 12  (Florida)  ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "+ 13  (Georgia)  ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "+ 15  (Hawaii)  ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "+ 16  (Idaho)  ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "+ 17  (Illinois)  ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "+ 18  (Indiana)  ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "+ 19  (Iowa)  ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "+ 20  (Kansas)  ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "+ 21  (Kentucky)  ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "+ 22  (Louisiana)  ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "+ 23  (Maine)  ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "+ 24  (Maryland)  ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "+ 25  (Massachusetts)  ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "+ 26  (Michigan)  ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "+ 27  (Minnesota)  ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "+ 28  (Mississippi)  ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "+ 29  (Missouri)  ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "+ 30  (Montana)  ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "+ 31  (Nebraska)  ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "+ 32  (Nevada)  ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "+ 33  (New Hampshire)  ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "+ 34  (New Jersey)  ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "+ 35  (New Mexico)  ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": "+ 36  (New York)  ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "+ 37  (North Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "+ 38  (North Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "+ 39  (Ohio)  ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "+ 40  (Oklahoma)  ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "+ 41  (Oregon)  ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "+ 42  (Pennsylvania)  ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "+ 44  (Rhode Island)  ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "+ 45  (South Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "+ 46  (South Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "+ 47  (Tennessee)  ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "+ 48  (Texas)  ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "+ 49  (Utah)  ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "+ 50  (Vermont)  ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "+ 51  (Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "+ 53  (Washington)  ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "+ 54  (West Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "+ 55  (Wisconsin)  ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "+ 56  (Wyoming)  ",
+            "selected": false
+          },
+          {
+            "value": "72",
+            "text": "+ 72  (Puerto Rico)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 53
       },
       {
         "type": "select",
@@ -2062,7 +2437,7 @@
         "type": "select",
         "name": "F_D176.V79",
         "id": "codes-D176.V79",
-        "label": "Occurrence States",
+        "label": "Occurrence States (without Puerto Rico)",
         "multiple": true,
         "options": [
           {
@@ -2332,7 +2707,7 @@
         "type": "select",
         "name": "F_D176.V80",
         "id": "codes-D176.V80",
-        "label": "Occurrence Census Regions",
+        "label": "Occurrence Census Regions (without Puerto Rico)",
         "multiple": true,
         "options": [
           {
@@ -2367,7 +2742,7 @@
         "type": "select",
         "name": "F_D176.V77",
         "id": "codes-D176.V77",
-        "label": "Occurrence HHS Regions",
+        "label": "Occurrence HHS Regions (without Puerto Rico)",
         "multiple": true,
         "options": [
           {
@@ -2427,6 +2802,281 @@
           }
         ],
         "option_count": 11
+      },
+      {
+        "type": "select",
+        "name": "F_D176.V91",
+        "id": "codes-D176.V91",
+        "label": "Occurrence States and Puerto Rico",
+        "multiple": true,
+        "options": [
+          {
+            "value": "*All*",
+            "text": "   *All*  (The United States and Puerto Rico)",
+            "selected": true
+          },
+          {
+            "value": "01",
+            "text": "+ 01  (Alabama)  ",
+            "selected": false
+          },
+          {
+            "value": "02",
+            "text": "+ 02  (Alaska)  ",
+            "selected": false
+          },
+          {
+            "value": "04",
+            "text": "+ 04  (Arizona)  ",
+            "selected": false
+          },
+          {
+            "value": "05",
+            "text": "+ 05  (Arkansas)  ",
+            "selected": false
+          },
+          {
+            "value": "06",
+            "text": "+ 06  (California)  ",
+            "selected": false
+          },
+          {
+            "value": "08",
+            "text": "+ 08  (Colorado)  ",
+            "selected": false
+          },
+          {
+            "value": "09",
+            "text": "+ 09  (Connecticut)  ",
+            "selected": false
+          },
+          {
+            "value": "10",
+            "text": "+ 10  (Delaware)  ",
+            "selected": false
+          },
+          {
+            "value": "11",
+            "text": "+ 11  (District of Columbia)  ",
+            "selected": false
+          },
+          {
+            "value": "12",
+            "text": "+ 12  (Florida)  ",
+            "selected": false
+          },
+          {
+            "value": "13",
+            "text": "+ 13  (Georgia)  ",
+            "selected": false
+          },
+          {
+            "value": "15",
+            "text": "+ 15  (Hawaii)  ",
+            "selected": false
+          },
+          {
+            "value": "16",
+            "text": "+ 16  (Idaho)  ",
+            "selected": false
+          },
+          {
+            "value": "17",
+            "text": "+ 17  (Illinois)  ",
+            "selected": false
+          },
+          {
+            "value": "18",
+            "text": "+ 18  (Indiana)  ",
+            "selected": false
+          },
+          {
+            "value": "19",
+            "text": "+ 19  (Iowa)  ",
+            "selected": false
+          },
+          {
+            "value": "20",
+            "text": "+ 20  (Kansas)  ",
+            "selected": false
+          },
+          {
+            "value": "21",
+            "text": "+ 21  (Kentucky)  ",
+            "selected": false
+          },
+          {
+            "value": "22",
+            "text": "+ 22  (Louisiana)  ",
+            "selected": false
+          },
+          {
+            "value": "23",
+            "text": "+ 23  (Maine)  ",
+            "selected": false
+          },
+          {
+            "value": "24",
+            "text": "+ 24  (Maryland)  ",
+            "selected": false
+          },
+          {
+            "value": "25",
+            "text": "+ 25  (Massachusetts)  ",
+            "selected": false
+          },
+          {
+            "value": "26",
+            "text": "+ 26  (Michigan)  ",
+            "selected": false
+          },
+          {
+            "value": "27",
+            "text": "+ 27  (Minnesota)  ",
+            "selected": false
+          },
+          {
+            "value": "28",
+            "text": "+ 28  (Mississippi)  ",
+            "selected": false
+          },
+          {
+            "value": "29",
+            "text": "+ 29  (Missouri)  ",
+            "selected": false
+          },
+          {
+            "value": "30",
+            "text": "+ 30  (Montana)  ",
+            "selected": false
+          },
+          {
+            "value": "31",
+            "text": "+ 31  (Nebraska)  ",
+            "selected": false
+          },
+          {
+            "value": "32",
+            "text": "+ 32  (Nevada)  ",
+            "selected": false
+          },
+          {
+            "value": "33",
+            "text": "+ 33  (New Hampshire)  ",
+            "selected": false
+          },
+          {
+            "value": "34",
+            "text": "+ 34  (New Jersey)  ",
+            "selected": false
+          },
+          {
+            "value": "35",
+            "text": "+ 35  (New Mexico)  ",
+            "selected": false
+          },
+          {
+            "value": "36",
+            "text": "+ 36  (New York)  ",
+            "selected": false
+          },
+          {
+            "value": "37",
+            "text": "+ 37  (North Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "38",
+            "text": "+ 38  (North Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "39",
+            "text": "+ 39  (Ohio)  ",
+            "selected": false
+          },
+          {
+            "value": "40",
+            "text": "+ 40  (Oklahoma)  ",
+            "selected": false
+          },
+          {
+            "value": "41",
+            "text": "+ 41  (Oregon)  ",
+            "selected": false
+          },
+          {
+            "value": "42",
+            "text": "+ 42  (Pennsylvania)  ",
+            "selected": false
+          },
+          {
+            "value": "44",
+            "text": "+ 44  (Rhode Island)  ",
+            "selected": false
+          },
+          {
+            "value": "45",
+            "text": "+ 45  (South Carolina)  ",
+            "selected": false
+          },
+          {
+            "value": "46",
+            "text": "+ 46  (South Dakota)  ",
+            "selected": false
+          },
+          {
+            "value": "47",
+            "text": "+ 47  (Tennessee)  ",
+            "selected": false
+          },
+          {
+            "value": "48",
+            "text": "+ 48  (Texas)  ",
+            "selected": false
+          },
+          {
+            "value": "49",
+            "text": "+ 49  (Utah)  ",
+            "selected": false
+          },
+          {
+            "value": "50",
+            "text": "+ 50  (Vermont)  ",
+            "selected": false
+          },
+          {
+            "value": "51",
+            "text": "+ 51  (Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "53",
+            "text": "+ 53  (Washington)  ",
+            "selected": false
+          },
+          {
+            "value": "54",
+            "text": "+ 54  (West Virginia)  ",
+            "selected": false
+          },
+          {
+            "value": "55",
+            "text": "+ 55  (Wisconsin)  ",
+            "selected": false
+          },
+          {
+            "value": "56",
+            "text": "+ 56  (Wyoming)  ",
+            "selected": false
+          },
+          {
+            "value": "72",
+            "text": "+ 72  (Puerto Rico)  ",
+            "selected": false
+          }
+        ],
+        "option_count": 53
       },
       {
         "type": "select",
@@ -3342,7 +3992,7 @@
         "options": [
           {
             "value": "*All*",
-            "text": " All ",
+            "text": " All Genders ",
             "selected": true
           },
           {
@@ -7940,7 +8590,7 @@
       {
         "type": "input_hidden",
         "name": "dataset_code",
-        "id": "",
+        "id": "dataset_code",
         "label": "",
         "value": "D176",
         "checked": null
@@ -7963,10 +8613,18 @@
       },
       {
         "type": "input_hidden",
+        "name": "O_PR",
+        "id": "O_PR",
+        "label": "",
+        "value": "false",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
         "name": "dataset_vintage",
         "id": "",
         "label": "",
-        "value": "May 16, 2026 as of  May 24, 2026",
+        "value": "October 17, 2026 as of  October 25, 2026",
         "checked": null
       },
       {
@@ -8019,7 +8677,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_14",
+        "name": "input_15",
         "id": "",
         "label": "",
         "value": "Request Form",
@@ -8205,7 +8863,7 @@
         "type": "input_radio",
         "name": "O_location",
         "id": "RO_locationD176.V9",
-        "label": "Residence States",
+        "label": "Residence States (without Puerto Rico)",
         "value": "D176.V9",
         "checked": true
       },
@@ -8213,7 +8871,7 @@
         "type": "input_radio",
         "name": "O_location",
         "id": "RO_locationD176.V10",
-        "label": "Residence Census Regions",
+        "label": "Residence Census Regions (without Puerto Rico)",
         "value": "D176.V10",
         "checked": false
       },
@@ -8221,8 +8879,16 @@
         "type": "input_radio",
         "name": "O_location",
         "id": "RO_locationD176.V27",
-        "label": "Residence HHS Regions",
+        "label": "Residence HHS Regions (without Puerto Rico)",
         "value": "D176.V27",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_location",
+        "id": "RO_locationD176.V90",
+        "label": "Residence States and Puerto Rico",
+        "value": "D176.V90",
         "checked": false
       },
       {
@@ -8243,7 +8909,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_42",
+        "name": "input_44",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8251,7 +8917,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_43",
+        "name": "input_45",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8315,7 +8981,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_51",
+        "name": "input_53",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8323,7 +8989,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_52",
+        "name": "input_54",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8395,7 +9061,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_61",
+        "name": "input_63",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8403,7 +9069,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_62",
+        "name": "input_64",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8458,6 +9124,78 @@
         "checked": null
       },
       {
+        "type": "input_hidden",
+        "name": "finder-stage-D176.V90",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V90_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_73",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_74",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V90-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V90-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V90-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V90-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V90-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
         "type": "input_radio",
         "name": "O_urban",
         "id": "RO_urbanD176.V19",
@@ -8485,7 +9223,7 @@
         "type": "input_radio",
         "name": "O_death_location",
         "id": "RO_death_locationD176.V79",
-        "label": "Occurrence States",
+        "label": "Occurrence States (without Puerto Rico)",
         "value": "D176.V79",
         "checked": true
       },
@@ -8493,7 +9231,7 @@
         "type": "input_radio",
         "name": "O_death_location",
         "id": "RO_death_locationD176.V80",
-        "label": "Occurrence Census Regions",
+        "label": "Occurrence Census Regions (without Puerto Rico)",
         "value": "D176.V80",
         "checked": false
       },
@@ -8501,8 +9239,16 @@
         "type": "input_radio",
         "name": "O_death_location",
         "id": "RO_death_locationD176.V77",
-        "label": "Occurrence HHS Regions",
+        "label": "Occurrence HHS Regions (without Puerto Rico)",
         "value": "D176.V77",
+        "checked": false
+      },
+      {
+        "type": "input_radio",
+        "name": "O_death_location",
+        "id": "RO_death_locationD176.V91",
+        "label": "Occurrence States and Puerto Rico",
+        "value": "D176.V91",
         "checked": false
       },
       {
@@ -8523,7 +9269,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_77",
+        "name": "input_89",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8531,7 +9277,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_78",
+        "name": "input_90",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8595,7 +9341,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_86",
+        "name": "input_98",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8603,7 +9349,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_87",
+        "name": "input_99",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8675,7 +9421,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_96",
+        "name": "input_108",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8683,7 +9429,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_97",
+        "name": "input_109",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8732,6 +9478,78 @@
       {
         "type": "input_submit",
         "name": "finder-action-D176.V77-Close All",
+        "id": "",
+        "label": "",
+        "value": "Close All",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "finder-stage-D176.V91",
+        "id": "",
+        "label": "",
+        "value": "codeset",
+        "checked": null
+      },
+      {
+        "type": "input_hidden",
+        "name": "O_V91_fmode",
+        "id": "",
+        "label": "",
+        "value": "freg",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_118",
+        "id": "",
+        "label": "",
+        "value": "Clear",
+        "checked": null
+      },
+      {
+        "type": "input_button",
+        "name": "input_119",
+        "id": "",
+        "label": "",
+        "value": "Browse",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V91-Search",
+        "id": "",
+        "label": "",
+        "value": "Search",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V91-Details",
+        "id": "",
+        "label": "",
+        "value": "Details",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V91-Open",
+        "id": "",
+        "label": "",
+        "value": "Open",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V91-Close",
+        "id": "",
+        "label": "",
+        "value": "Close",
+        "checked": null
+      },
+      {
+        "type": "input_submit",
+        "name": "finder-action-D176.V91-Close All",
         "id": "",
         "label": "",
         "value": "Close All",
@@ -8867,7 +9685,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_120",
+        "name": "input_141",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8875,7 +9693,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_121",
+        "name": "input_142",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -8939,7 +9757,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_129",
+        "name": "input_150",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -8947,7 +9765,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_130",
+        "name": "input_151",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9067,7 +9885,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_145",
+        "name": "input_166",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9075,7 +9893,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_146",
+        "name": "input_167",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9147,7 +9965,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_155",
+        "name": "input_176",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9155,7 +9973,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_156",
+        "name": "input_177",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9259,7 +10077,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_169",
+        "name": "input_190",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9267,7 +10085,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_170",
+        "name": "input_191",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9275,7 +10093,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_171",
+        "name": "input_192",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9347,7 +10165,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_180",
+        "name": "input_201",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9355,7 +10173,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_181",
+        "name": "input_202",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9379,7 +10197,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_184",
+        "name": "input_205",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9387,7 +10205,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_185",
+        "name": "input_206",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9411,7 +10229,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_188",
+        "name": "input_209",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9419,7 +10237,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_189",
+        "name": "input_210",
         "id": "",
         "label": "",
         "value": "Clear",
@@ -9427,7 +10245,7 @@
       },
       {
         "type": "input_button",
-        "name": "input_190",
+        "name": "input_211",
         "id": "",
         "label": "",
         "value": "Browse",
@@ -9582,6 +10400,20 @@
       },
       {
         "type": "textarea",
+        "name": "V_D176.V90",
+        "id": "TD176.V90",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D176.V90",
+        "id": "D176.V90-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States and Puerto Rico)\n"
+      },
+      {
+        "type": "textarea",
         "name": "V_D176.V79",
         "id": "TD176.V79",
         "label": "Selected Items",
@@ -9621,6 +10453,20 @@
         "id": "D176.V77-fhi",
         "label": "Currently selected:",
         "default_value": "*All* (The United States)\n"
+      },
+      {
+        "type": "textarea",
+        "name": "V_D176.V91",
+        "id": "TD176.V91",
+        "label": "Selected Items",
+        "default_value": ""
+      },
+      {
+        "type": "textarea",
+        "name": "I_D176.V91",
+        "id": "D176.V91-fhi",
+        "label": "Currently selected:",
+        "default_value": "*All* (The United States and Puerto Rico)\n"
       },
       {
         "type": "textarea",
@@ -9737,10 +10583,10 @@
     ]
   },
   "summary": {
-    "total_selects": 49,
-    "total_inputs": 203,
-    "total_textareas": 29,
-    "total_parameters": 281
+    "total_selects": 51,
+    "total_inputs": 224,
+    "total_textareas": 33,
+    "total_parameters": 308
   },
   "dataset_id": "D176"
 }

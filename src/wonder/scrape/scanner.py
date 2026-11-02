@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 CDC WONDER Dataset ID Scanner
 
@@ -23,11 +22,11 @@ Output:
 
 import csv
 import logging
-import requests
 import re
+from urllib.parse import urljoin, urlparse
 
+import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse, urljoin
 
 logging.basicConfig(
     level=logging.INFO,
@@ -51,7 +50,7 @@ HEADERS = {
 def is_wonder_html(url: str) -> bool:
     try:
         u = urlparse(url)
-    except Exception:
+    except ValueError:
         return False
     if not (u.scheme and u.netloc):
         return False
@@ -91,7 +90,7 @@ def html_redirect_candidates(html: str, base_url: str) -> list[str]:
         "meta", attrs={"http-equiv": lambda v: v and v.lower() == "refresh"}
     ):
         content = meta.get("content", "") or meta.get("CONTENT", "")
-        m = re.search(r"url\s*=\s*([^;]+)", content, flags=re.I)
+        m = re.search(r"url\s*=\s*([^;]+)", content, flags=re.IGNORECASE)
         if m:
             out.append(urljoin(base_url, m.group(1).strip().strip("'\"")))
 
@@ -103,7 +102,7 @@ def html_redirect_candidates(html: str, base_url: str) -> list[str]:
         r'location\.replace\(\s*([\'"])(.+?)\1\s*\)',
     ]
     for pat in js_patterns:
-        for m in re.finditer(pat, html, flags=re.I):
+        for m in re.finditer(pat, html, flags=re.IGNORECASE):
             out.append(urljoin(base_url, m.group(2).strip()))
 
     # Anchor links
@@ -266,6 +265,12 @@ def map_d_range(
         log.info(f"{row['id']}: {status:>10}  {final_url}")
         if n % 20 == 0:
             log.info(f"...progress {n - start + 1}/{end - start + 1}")
+
+    # When WONDER blocks us (e.g. every probe returns 403) nothing is discovered;
+    # keep the previous map rather than overwrite it with an empty one.
+    if not any(r["final_url"] for r in rows):
+        log.error(f"No datasets discovered; leaving {out_csv} unchanged")
+        return rows
 
     cols = [
         "id",

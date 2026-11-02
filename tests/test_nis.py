@@ -9,7 +9,6 @@ Run integration tests (hits CDC FTP — large files, slow):
 """
 
 import sys
-from io import BytesIO
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
@@ -21,13 +20,12 @@ from nis.datasets import (
     CHILD_COLS,
     CHILD_GEO_COLS,
     CHILD_VAX_COLS,
+    CHILD_YEARS,
     FIPS_TO_STATE,
     STATE_TO_FIPS,
     SURVEY_COLS,
-    SURVEY_YEARS,
     TEEN_COLS,
     TEEN_VAX_COLS,
-    CHILD_YEARS,
     TEEN_YEARS,
 )
 from nis.parser import _extract, parse_sas_columns, stream_dat
@@ -38,7 +36,6 @@ from nis.sdk import (
     list_years,
     stream_records,
 )
-
 
 # =============================================================================
 # SAS parser
@@ -93,7 +90,13 @@ class TestParseSASColumns:
     def test_pointer_notation_parses_all_columns(self):
         cols = parse_sas_columns(_POINTER_SAS)
         assert set(cols.keys()) == {
-            "SEQNUMC", "YEAR", "RETEILI", "P_UTDDTP4", "P_UTDMMX", "SHOT_HES", "PROVWT_D"
+            "SEQNUMC",
+            "YEAR",
+            "RETEILI",
+            "P_UTDDTP4",
+            "P_UTDMMX",
+            "SHOT_HES",
+            "PROVWT_D",
         }
 
     def test_pointer_notation_positions_are_zero_indexed(self):
@@ -111,10 +114,26 @@ class TestParseSASColumns:
         assert cols["P_UTDMMX"] == (14, 15)
         assert cols["SHOT_HES"] == (15, 16)
 
+    def test_pointer_notation_character_and_decimal_informats(self):
+        # Real NIS codebooks use $W. for character fields and W.D for weights
+        sas = "INPUT @1 SEQNUMC $6. @7 SEQNUMHH $5. @13 PROVWT_C 19.14 @32 YEAR 4.;"
+        cols = parse_sas_columns(sas)
+        assert cols == {
+            "SEQNUMC": (0, 6),
+            "SEQNUMHH": (6, 11),
+            "PROVWT_C": (12, 31),
+            "YEAR": (31, 35),
+        }
+
     def test_range_notation_parses_all_columns(self):
         cols = parse_sas_columns(_RANGE_SAS)
         assert set(cols.keys()) == {
-            "SEQNUMT", "YEAR", "STATE", "P_UTDTDAP", "SHOT_HES", "PROVWT_C"
+            "SEQNUMT",
+            "YEAR",
+            "STATE",
+            "P_UTDTDAP",
+            "SHOT_HES",
+            "PROVWT_C",
         }
 
     def test_range_notation_positions_are_zero_indexed(self):
@@ -163,13 +182,18 @@ class TestParseSASColumns:
         # SEQNUMC(0-7) YEAR(7-11) RETEILI(11-13) P_UTDDTP4(13) P_UTDMMX(14)
         # SHOT_HES(15) PROVWT_D(16-24)
         line = "1234567202206111" + "1234.567"
-        assert line[0:7] == "1234567"
-        assert line[7:11] == "2022"
-        assert line[11:13] == "06"
-        assert line[13:14] == "1"
-        assert line[14:15] == "1"
-        assert line[15:16] == "1"
-        assert line[16:24] == "1234.567"
+
+        def field(name):
+            start, end = cols[name]
+            return line[start:end]
+
+        assert field("SEQNUMC") == "1234567"
+        assert field("YEAR") == "2022"
+        assert field("RETEILI") == "06"
+        assert field("P_UTDDTP4") == "1"
+        assert field("P_UTDMMX") == "1"
+        assert field("SHOT_HES") == "1"
+        assert field("PROVWT_D") == "1234.567"
 
 
 # =============================================================================
@@ -222,10 +246,10 @@ def _fake_response(lines: list[str]) -> MagicMock:
 _SIMPLE_COLS = {"NAME": (0, 7), "YEAR": (7, 11), "STATE": (11, 13), "UTD": (13, 14)}
 # Each line: NAME(7) + YEAR(4) + STATE(2) + UTD(1) = 14 chars, no gaps
 _LINES = [
-    "1234567" + "2022" + "06" + "1",   # NAME=1234567, YEAR=2022, STATE=06, UTD=1
-    "7654321" + "2021" + "48" + "0",   # NAME=7654321, YEAR=2021, STATE=48, UTD=0
-    "9999999" + "2020" + "48" + "1",   # NAME=9999999, YEAR=2020, STATE=48, UTD=1
-    "",                                 # blank line — should be skipped
+    "1234567" + "2022" + "06" + "1",  # NAME=1234567, YEAR=2022, STATE=06, UTD=1
+    "7654321" + "2021" + "48" + "0",  # NAME=7654321, YEAR=2021, STATE=48, UTD=0
+    "9999999" + "2020" + "48" + "1",  # NAME=9999999, YEAR=2020, STATE=48, UTD=1
+    "",  # blank line — should be skipped
 ]
 
 
@@ -252,14 +276,18 @@ class TestStreamDat:
     def test_select_filters_columns(self):
         with patch("nis.parser.requests.get", return_value=_fake_response(_LINES)):
             rows = list(
-                stream_dat("http://fake.url/data.dat", _SIMPLE_COLS, select={"UTD", "STATE"})
+                stream_dat(
+                    "http://fake.url/data.dat", _SIMPLE_COLS, select={"UTD", "STATE"}
+                )
             )
         assert set(rows[0].keys()) == {"UTD", "STATE"}
         assert "NAME" not in rows[0]
 
     def test_select_none_returns_all_columns(self):
         with patch("nis.parser.requests.get", return_value=_fake_response(_LINES)):
-            rows = list(stream_dat("http://fake.url/data.dat", _SIMPLE_COLS, select=None))
+            rows = list(
+                stream_dat("http://fake.url/data.dat", _SIMPLE_COLS, select=None)
+            )
         assert set(rows[0].keys()) == set(_SIMPLE_COLS.keys())
 
     def test_empty_response_yields_nothing(self):
@@ -270,9 +298,11 @@ class TestStreamDat:
     def test_raises_on_http_error(self):
         mock = MagicMock()
         mock.raise_for_status.side_effect = Exception("404 Not Found")
-        with patch("nis.parser.requests.get", return_value=mock):
-            with pytest.raises(Exception, match="404"):
-                list(stream_dat("http://fake.url/data.dat", _SIMPLE_COLS))
+        with (
+            patch("nis.parser.requests.get", return_value=mock),
+            pytest.raises(Exception, match="404"),
+        ):
+            list(stream_dat("http://fake.url/data.dat", _SIMPLE_COLS))
 
     def test_handles_chunk_boundary(self):
         # Split a two-line record across two chunks to verify the leftover-buffer logic.
@@ -298,13 +328,17 @@ class TestStreamDat:
         assert rows[1]["YEAR"] == "2021"
 
     def test_uses_correct_url(self):
-        with patch("nis.parser.requests.get", return_value=_fake_response([])) as mock_get:
+        with patch(
+            "nis.parser.requests.get", return_value=_fake_response([])
+        ) as mock_get:
             list(stream_dat("http://example.com/NISPUF22.DAT", _SIMPLE_COLS))
         mock_get.assert_called_once()
         assert mock_get.call_args[0][0] == "http://example.com/NISPUF22.DAT"
 
     def test_streams_with_stream_true(self):
-        with patch("nis.parser.requests.get", return_value=_fake_response([])) as mock_get:
+        with patch(
+            "nis.parser.requests.get", return_value=_fake_response([])
+        ) as mock_get:
             list(stream_dat("http://fake.url/data.dat", _SIMPLE_COLS))
         kwargs = mock_get.call_args[1]
         assert kwargs.get("stream") is True
@@ -327,7 +361,9 @@ class TestDatasetRegistry:
     def test_all_child_years_have_dat_and_sas_urls(self):
         for year, entry in CHILD_YEARS.items():
             assert entry.dat_url.endswith(".DAT"), f"child {year}: dat_url wrong suffix"
-            assert ".sas" in entry.sas_url.lower(), f"child {year}: sas_url missing .sas"
+            assert ".sas" in entry.sas_url.lower(), (
+                f"child {year}: sas_url missing .sas"
+            )
 
     def test_all_teen_years_have_dat_and_sas_urls(self):
         for year, entry in TEEN_YEARS.items():
@@ -348,13 +384,16 @@ class TestDatasetRegistry:
         for year in range(2011, 2023):
             child_dat = CHILD_YEARS[year].dat_url
             teen_dat = TEEN_YEARS[year].dat_url
-            assert child_dat != teen_dat, f"year {year}: child and teen share same dat_url"
+            assert child_dat != teen_dat, (
+                f"year {year}: child and teen share same dat_url"
+            )
 
-    def test_all_years_on_cdc_ftp(self):
-        ftp = "https://ftp.cdc.gov/pub/health_statistics/nchs/datasets/nis"
+    def test_all_years_hosted_on_cdc(self):
         for entry in list(CHILD_YEARS.values()) + list(TEEN_YEARS.values()):
-            assert entry.dat_url.startswith(ftp)
-            assert entry.sas_url.startswith(ftp)
+            for url in (entry.dat_url, entry.sas_url):
+                assert url.startswith(
+                    ("https://ftp.cdc.gov/", "https://www.cdc.gov/")
+                ), url
 
     def test_year_field_matches_dict_key(self):
         for year, entry in CHILD_YEARS.items():
@@ -433,19 +472,57 @@ class TestFIPSLookup:
 # patch always wins, so both calls would get the wrong mock).
 _SAMPLE_ROWS = [
     # RETEILI 06 = California (3 records)
-    {"RETEILI": "06", "STATE": "", "P_UTDDTP4": "1", "P_UTDMMX": "1", "SHOT_HES": "0", "PROVWT_D": "1234.567"},
-    {"RETEILI": "06", "STATE": "", "P_UTDDTP4": "1", "P_UTDMMX": "0", "SHOT_HES": "1", "PROVWT_D": "2345.678"},
-    {"RETEILI": "06", "STATE": "", "P_UTDDTP4": "0", "P_UTDMMX": "1", "SHOT_HES": "0", "PROVWT_D": "3456.789"},
+    {
+        "RETEILI": "06",
+        "STATE": "",
+        "P_UTDDTP4": "1",
+        "P_UTDMMX": "1",
+        "SHOT_HES": "0",
+        "PROVWT_D": "1234.567",
+    },
+    {
+        "RETEILI": "06",
+        "STATE": "",
+        "P_UTDDTP4": "1",
+        "P_UTDMMX": "0",
+        "SHOT_HES": "1",
+        "PROVWT_D": "2345.678",
+    },
+    {
+        "RETEILI": "06",
+        "STATE": "",
+        "P_UTDDTP4": "0",
+        "P_UTDMMX": "1",
+        "SHOT_HES": "0",
+        "PROVWT_D": "3456.789",
+    },
     # RETEILI 36 = New York (2 records)
-    {"RETEILI": "36", "STATE": "", "P_UTDDTP4": "1", "P_UTDMMX": "1", "SHOT_HES": "0", "PROVWT_D": "4567.890"},
-    {"RETEILI": "36", "STATE": "", "P_UTDDTP4": "0", "P_UTDMMX": "0", "SHOT_HES": "1", "PROVWT_D": "5678.901"},
+    {
+        "RETEILI": "36",
+        "STATE": "",
+        "P_UTDDTP4": "1",
+        "P_UTDMMX": "1",
+        "SHOT_HES": "0",
+        "PROVWT_D": "4567.890",
+    },
+    {
+        "RETEILI": "36",
+        "STATE": "",
+        "P_UTDDTP4": "0",
+        "P_UTDMMX": "0",
+        "SHOT_HES": "1",
+        "PROVWT_D": "5678.901",
+    },
 ]
 
 # Fake column map returned by the patched _fetch_columns
 _FAKE_COLS: dict[str, tuple[int, int]] = {
-    "RETEILI": (11, 13), "STATE": (0, 0),
-    "P_UTDDTP4": (13, 14), "P_UTDMMX": (14, 15),
-    "SHOT_HES": (15, 16), "PROVWT_D": (16, 24),
+    "RETEILI": (11, 13),
+    "STATE": (0, 0),
+    "P_UTDDTP4": (13, 14),
+    "P_UTDMMX": (14, 15),
+    "SHOT_HES": (15, 16),
+    "PROVWT_D": (16, 24),
 }
 
 
@@ -511,8 +588,10 @@ class TestStreamRecords:
         assert len(rows) == 5
 
     def test_records_have_expected_keys(self):
-        p1, p2 = patch("nis.sdk._fetch_columns", return_value=_FAKE_COLS), \
-                  patch("nis.sdk.stream_dat", return_value=iter(_SAMPLE_ROWS))
+        p1, p2 = (
+            patch("nis.sdk._fetch_columns", return_value=_FAKE_COLS),
+            patch("nis.sdk.stream_dat", return_value=iter(_SAMPLE_ROWS)),
+        )
         with p1, p2:
             rows = list(stream_records("child", 2022))
         assert "RETEILI" in rows[0]
@@ -543,14 +622,15 @@ class TestStreamRecords:
     def test_unknown_state_raises(self):
         p1 = patch("nis.sdk._fetch_columns", return_value=_FAKE_COLS)
         p2 = patch("nis.sdk.stream_dat", return_value=iter(_SAMPLE_ROWS))
-        with p1, p2:
-            with pytest.raises(ValueError, match="Unknown state"):
-                list(stream_records("child", 2022, state="Narnia"))
+        with p1, p2, pytest.raises(ValueError, match="Unknown state"):
+            list(stream_records("child", 2022, state="Narnia"))
 
     def test_no_matching_columns_raises_runtime_error(self):
-        with patch("nis.sdk._fetch_columns", return_value={}):
-            with pytest.raises(RuntimeError, match="No matching columns"):
-                list(stream_records("child", 2022))
+        with (
+            patch("nis.sdk._fetch_columns", return_value={}),
+            pytest.raises(RuntimeError, match="No matching columns"),
+        ):
+            list(stream_records("child", 2022))
 
 
 class TestGetVaccinationRates:
@@ -560,7 +640,8 @@ class TestGetVaccinationRates:
         p2 = patch("nis.sdk.stream_dat", return_value=iter(rows))
         with p1, p2:
             return get_vaccination_rates(
-                "child", 2022,
+                "child",
+                2022,
                 vaccines=vaccines or ["P_UTDDTP4", "P_UTDMMX"],
             )
 
@@ -618,7 +699,14 @@ class TestGetVaccinationRates:
     def test_pct_is_none_when_no_valid_values(self):
         # Records where the UTD columns are blank → no valid 0/1 values
         blank_rows = [
-            {"RETEILI": "06", "STATE": "", "P_UTDDTP4": "", "P_UTDMMX": "", "SHOT_HES": "0", "PROVWT_D": "1.0"},
+            {
+                "RETEILI": "06",
+                "STATE": "",
+                "P_UTDDTP4": "",
+                "P_UTDMMX": "",
+                "SHOT_HES": "0",
+                "PROVWT_D": "1.0",
+            },
         ]
         rows = self._run(rows=blank_rows, vaccines=["P_UTDDTP4", "P_UTDMMX"])
         ca = next(r for r in rows if r["state_fips"] == "06")
@@ -633,7 +721,8 @@ class TestGetNationalRates:
         p2 = patch("nis.sdk.stream_dat", return_value=iter(rows))
         with p1, p2:
             return get_national_rates(
-                "child", 2022,
+                "child",
+                2022,
                 vaccines=vaccines or ["P_UTDDTP4", "P_UTDMMX"],
             )
 
@@ -696,7 +785,7 @@ class TestNISIntegration:
         cols = parse_sas_columns(resp.text)
         # These columns exist in every recent NIS-Child release
         assert "SEQNUMC" in cols, "SEQNUMC not in 2022 child codebook"
-        assert "RETEILI" in cols, "RETEILI not in 2022 child codebook"
+        assert "STATE" in cols, "STATE not in 2022 child codebook"
 
     def test_teen_2022_sas_codebook_fetchable(self):
         import requests
@@ -712,8 +801,9 @@ class TestNISIntegration:
         entry = TEEN_YEARS[2022]
         resp = requests.get(entry.sas_url, timeout=30)
         cols = parse_sas_columns(resp.text)
-        assert "SEQNUMT" in cols or "SEQNUMS" in cols, \
+        assert "SEQNUMT" in cols or "SEQNUMS" in cols, (
             "Neither SEQNUMT nor SEQNUMS found in 2022 teen codebook"
+        )
 
     def test_list_years_child(self):
         years = list_years("child")

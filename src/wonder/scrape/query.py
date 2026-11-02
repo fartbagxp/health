@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 CDC WONDER Query Parameter Scraper using Playwright
 
@@ -16,16 +15,17 @@ Example:
     python -m src.wonder.query https://wonder.cdc.gov/natality-expanded-provisional.html
 """
 
-import json
-import logging
 import argparse
 import csv
+import json
+import logging
 import re
-
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 
-from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
+from playwright.sync_api import Error as PlaywrightError
+from playwright.sync_api import Page, sync_playwright
+from playwright.sync_api import TimeoutError as PlaywrightTimeout
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,7 +40,7 @@ log = logging.getLogger("wonder-query")
 
 def get_dataset_id_and_target_url(
     url: str, dmap_csv_path: str = "data/raw/wonder/dataset_map.csv"
-) -> tuple[Optional[str], Optional[str]]:
+) -> tuple[str | None, str | None]:
     """
     Extract dataset ID from URL and get the target URL to scrape.
     If a controller URL is provided, looks up the actual page URL from the dmap CSV.
@@ -84,7 +84,7 @@ def get_dataset_id_and_target_url(
                         or row.get("page_name", "") == url_path
                     ):
                         return dataset_id, url
-    except Exception as e:
+    except (OSError, csv.Error) as e:
         log.warning(f"Error reading dmap CSV: {e}")
         return None, url
 
@@ -124,7 +124,7 @@ def click_agree_button(page: Page) -> bool:
                 # Wait for navigation or form to load (use domcontentloaded for faster response)
                 page.wait_for_load_state("domcontentloaded", timeout=15000)
                 return True
-        except Exception as e:
+        except PlaywrightError as e:
             log.debug(f"Selector {selector} failed: {e}")
             continue
 
@@ -154,7 +154,7 @@ def extract_select_options(page: Page) -> list[dict[str, Any]]:
                 label = page.locator(f"label[for='{select_id}']").first
                 try:
                     label_text = label.inner_text() if label.count() > 0 else ""
-                except Exception as e:
+                except PlaywrightError as e:
                     log.error(f"Error extracting label for select {name}: {e}")
 
             # Extract all options
@@ -180,7 +180,7 @@ def extract_select_options(page: Page) -> list[dict[str, Any]]:
                 }
             )
             log.info(f"Extracted select '{name}' with {len(options)} options")
-        except Exception as e:
+        except PlaywrightError as e:
             log.error(f"Error extracting select element {idx}: {e}")
 
     return selects
@@ -210,7 +210,7 @@ def extract_input_elements(page: Page) -> list[dict[str, Any]]:
                 label = page.locator(f"label[for='{input_id}']").first
                 try:
                     label_text = label.inner_text() if label.count() > 0 else ""
-                except Exception as e:
+                except PlaywrightError as e:
                     log.error(f"Error extracting label for input {name}: {e}")
 
             inputs.append(
@@ -223,7 +223,7 @@ def extract_input_elements(page: Page) -> list[dict[str, Any]]:
                     "checked": checked,
                 }
             )
-        except Exception as e:
+        except PlaywrightError as e:
             log.error(f"Error extracting input element {idx}: {e}")
 
     return inputs
@@ -251,7 +251,7 @@ def extract_textarea_elements(page: Page) -> list[dict[str, Any]]:
                 label = page.locator(f"label[for='{textarea_id}']").first
                 try:
                     label_text = label.inner_text() if label.count() > 0 else ""
-                except Exception as e:
+                except PlaywrightError as e:
                     log.error(f"Error extracting label for textarea {name}: {e}")
 
             textareas.append(
@@ -263,7 +263,7 @@ def extract_textarea_elements(page: Page) -> list[dict[str, Any]]:
                     "default_value": value,
                 }
             )
-        except Exception as e:
+        except PlaywrightError as e:
             log.error(f"Error extracting textarea element {idx}: {e}")
 
     return textareas
@@ -294,7 +294,7 @@ def extract_form_action(page: Page) -> dict[str, str]:
                     "method": method.upper(),
                 }
             )
-        except Exception as e:
+        except PlaywrightError as e:
             log.error(f"Error extracting form {idx}: {e}")
 
     return {"forms": form_info}
@@ -390,8 +390,8 @@ def scrape_query_parameters(url: str, headless: bool = True) -> dict[str, Any]:
 
 def save_results(
     data: dict[str, Any],
-    output_path: Optional[str] = None,
-    dataset_id: Optional[str] = None,
+    output_path: str | None = None,
+    dataset_id: str | None = None,
 ) -> str:
     """
     Save extracted parameters to JSON file.
@@ -466,8 +466,8 @@ def scrape_dataset_range(
                                     "page_name": row.get("page_name", ""),
                                 }
                             )
-    except Exception as e:
-        raise Exception(f"Error reading dmap CSV: {e}")
+    except (OSError, csv.Error) as e:
+        raise RuntimeError(f"Error reading dmap CSV: {e}") from e
 
     log.info(
         f"Found {len(datasets_to_scrape)} datasets to scrape in range D{start_id}-D{end_id}"
@@ -506,7 +506,7 @@ def scrape_dataset_range(
                 f"✓ {dataset_id} completed: {dataset_results['summary']['total_parameters']} parameters"
             )
 
-        except Exception as e:
+        except Exception as e:  # noqa: BLE001 - one bad dataset must not abort the batch
             log.error(f"✗ {dataset_id} failed: {e}")
             results["datasets"][dataset_id] = {"status": "failed", "error": str(e)}
 
@@ -572,6 +572,9 @@ def main():
 
             # Save summary
             summary_path = f"data/raw/wonder/scrape_summary_D{start_id}-D{end_id}.json"
+            if results["summary"]["successful"] == 0:
+                log.error(f"No datasets scraped; leaving {summary_path} unchanged")
+                raise SystemExit(1)
             with open(summary_path, "w") as f:
                 json.dump(results, f, indent=2)
 

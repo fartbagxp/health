@@ -12,8 +12,8 @@ disabled when grouping by age).
 
 Datasets with base templates:
   D176  Provisional Mortality (2018–present)
-  D157  Final Mortality, Single Race (2018–2023)
-  D158  Underlying Cause of Death, Single Race (2018–2023)
+  D157  Final Mortality, Single Race (2018–2024)
+  D158  Underlying Cause of Death, Single Race (2018–2024)
   D141  Multiple Cause of Death with US–Mexico Border Regions (1999–2020)
   D77   Multiple Cause of Death (1999–2020)
   D76   Underlying Cause of Death (1999–2020)
@@ -39,15 +39,15 @@ Datasets with base templates:
   D8    VAERS — Vaccine Adverse Event Reporting System (1990–present)
 """
 
-import anthropic
 import json
 import os
 import xml.etree.ElementTree as ET
-
-from dotenv import load_dotenv
 from pathlib import Path
+from typing import Any
+
+import anthropic
+from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-from typing import Dict, List, Any, Optional, Union
 
 # Load environment variables from .env file
 load_dotenv()
@@ -55,8 +55,8 @@ load_dotenv()
 # Datasets that have base templates
 TEMPLATE_DATASETS = {
     "D176",  # Provisional Mortality (2018–present)
-    "D157",  # Final Mortality, Single Race (2018–2023)
-    "D158",  # Underlying Cause of Death, Single Race (2018–2023)
+    "D157",  # Final Mortality, Single Race (2018–2024)
+    "D158",  # Underlying Cause of Death, Single Race (2018–2024)
     "D141",  # MCD with US–Mexico Border Regions (1999–2020)
     "D77",  # Multiple Cause of Death (1999–2020)
     "D76",  # Underlying Cause of Death (1999–2020)
@@ -122,7 +122,7 @@ class WonderParameter(BaseModel):
     """Single query parameter with one or more values"""
 
     name: str = Field(..., description="Parameter name (e.g., B_1, F_D176.V1, M_1)")
-    values: List[str] = Field(..., description="List of values for this parameter")
+    values: list[str] = Field(..., description="List of values for this parameter")
 
 
 class WonderRequest(BaseModel):
@@ -132,11 +132,11 @@ class WonderRequest(BaseModel):
     """
 
     dataset_id: str = Field(..., description="CDC WONDER dataset ID (e.g., D176)")
-    parameters: List[WonderParameter] = Field(
+    parameters: list[WonderParameter] = Field(
         default_factory=list, description="List of all query parameters"
     )
 
-    def to_dict(self) -> Dict[str, Union[str, List[str]]]:
+    def to_dict(self) -> dict[str, str | list[str]]:
         """Convert to dictionary format used by WonderClient"""
         result = {}
         for param in self.parameters:
@@ -168,20 +168,20 @@ class QueryIntent(BaseModel):
     description: str = Field(
         ..., description="Natural language description of what data is requested"
     )
-    health_topics: List[str] = Field(
+    health_topics: list[str] = Field(
         default_factory=list, description="Identified health topics"
     )
-    time_period: Optional[str] = Field(None, description="Time period if specified")
-    geography: Optional[str] = Field(None, description="Geographic scope if specified")
-    grouping_dimensions: List[str] = Field(
+    time_period: str | None = Field(None, description="Time period if specified")
+    geography: str | None = Field(None, description="Geographic scope if specified")
+    grouping_dimensions: list[str] = Field(
         default_factory=list, description="How to group the results"
     )
-    filters: Dict[str, List[str]] = Field(
+    filters: dict[str, list[str]] = Field(
         default_factory=dict, description="Specific filters to apply"
     )
 
 
-def _parse_xml_to_parameters(xml_str: str) -> List[WonderParameter]:
+def _parse_xml_to_parameters(xml_str: str) -> list[WonderParameter]:
     """Parse XML request string into a list of WonderParameter objects."""
     root = ET.fromstring(xml_str)
     params = []
@@ -204,7 +204,7 @@ class LLMQueryBuilder:
     template and enforces constraint rules.
     """
 
-    def __init__(self, api_key: Optional[str] = None, data_dir: Optional[Path] = None):
+    def __init__(self, api_key: str | None = None, data_dir: Path | None = None):
         """
         Initialize the LLM query builder.
 
@@ -226,9 +226,9 @@ class LLMQueryBuilder:
             self.topics_mapping = data.get("mappings", [])
 
         # Cache for query params
-        self._query_params_cache: Dict[str, Dict] = {}
+        self._query_params_cache: dict[str, dict] = {}
 
-    def _load_template(self, dataset_id: str) -> Optional[str]:
+    def _load_template(self, dataset_id: str) -> str | None:
         """Load the base template XML for a dataset."""
         path = Path(__file__).parent / "templates" / f"{dataset_id}-base.xml"
         if not path.exists():
@@ -236,7 +236,7 @@ class LLMQueryBuilder:
         return path.read_text()
 
     def _merge_with_template(
-        self, template_xml: str, overrides: List[WonderParameter]
+        self, template_xml: str, overrides: list[WonderParameter]
     ) -> str:
         """Overlay LLM-generated overrides onto a base template."""
         root = ET.fromstring(template_xml)
@@ -272,8 +272,8 @@ class LLMQueryBuilder:
         return request.to_xml()
 
     def _apply_constraints(
-        self, overrides: List[WonderParameter]
-    ) -> List[WonderParameter]:
+        self, overrides: list[WonderParameter]
+    ) -> list[WonderParameter]:
         """Enforce CDC WONDER rules that the LLM doesn't know about."""
         by_name = {p.name: p for p in overrides}
 
@@ -290,7 +290,7 @@ class LLMQueryBuilder:
 
         return list(by_name.values())
 
-    def _load_query_params(self, dataset_id: str) -> Dict[str, Any]:
+    def _load_query_params(self, dataset_id: str) -> dict[str, Any]:
         """Load query parameters for a specific dataset"""
         if dataset_id in self._query_params_cache:
             return self._query_params_cache[dataset_id]
@@ -307,7 +307,7 @@ class LLMQueryBuilder:
     def _get_available_datasets_summary(self) -> str:
         """Create a summary of available datasets for the LLM"""
         # Group by topic
-        by_topic: Dict[str, List[Dict]] = {}
+        by_topic: dict[str, list[dict]] = {}
         for dataset in self.topics_mapping:
             topic = dataset.get("topic", "Unknown")
             if topic not in by_topic:
@@ -367,7 +367,7 @@ class LLMQueryBuilder:
 
         return "\n".join(lines)
 
-    def _create_build_query_tool_schema(self) -> Dict[str, Any]:
+    def _create_build_query_tool_schema(self) -> dict[str, Any]:
         """Create the tool schema for build_wonder_query"""
         return {
             "name": "build_wonder_query",
@@ -388,8 +388,8 @@ class LLMQueryBuilder:
                         "description": (
                             "The CDC WONDER dataset ID. Options: "
                             "'D176' (Provisional Mortality 2018–present), "
-                            "'D157' (Final MCD+UCD Single Race 2018–2023), "
-                            "'D158' (Final UCD Single Race 2018–2023), "
+                            "'D157' (Final MCD+UCD Single Race 2018–2024), "
+                            "'D158' (Final UCD Single Race 2018–2024), "
                             "'D141' (MCD with Border Regions 1999–2020), "
                             "'D77' (Multiple Cause of Death 1999–2020), "
                             "'D76' (UCD 1999–2020), "
@@ -485,8 +485,8 @@ natural language queries into structured WONDER API requests.
 
    Recent / final mortality (ICD-10):
    - D176: Provisional Mortality (2018–present)          — most recent data; use by default for recent queries
-   - D157: Final Mortality, Single Race (2018–2023)      — like D176 but final (MCD + UCD)
-   - D158: Underlying Cause of Death, Single Race (2018–2023) — like D157 but UCD only (no MCD filters)
+   - D157: Final Mortality, Single Race (2018–2024)      — like D176 but final (MCD + UCD)
+   - D158: Underlying Cause of Death, Single Race (2018–2024) — like D157 but UCD only (no MCD filters)
 
    Historical mortality (ICD-10):
    - D141: MCD with US–Mexico Border Regions (1999–2020) — like D77 but adds border/metro region geography

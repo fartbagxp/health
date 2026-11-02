@@ -10,7 +10,6 @@ Run integration tests (hits wonder.cdc.gov, slow — respects 16s rate limit):
 
 import csv
 import sys
-import textwrap
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
@@ -29,12 +28,74 @@ EXPECTED_DRUG_CODES = {"T40.1", "T40.2", "T40.3", "T40.4", "T40.5", "T40.7", "T4
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 
+
 def _load_csv(path: Path) -> list[dict]:
     with open(path, newline="") as f:
         return list(csv.DictReader(f))
 
 
+# ── WonderClient rate-limit retry ────────────────────────────────────────────
+
+
+def _response(status: int, text: str = "", headers: dict | None = None) -> MagicMock:
+    resp = MagicMock()
+    resp.status_code = status
+    resp.text = text
+    resp.headers = headers or {}
+    return resp
+
+
+class TestWonderClientRetry:
+    @patch("wonder.client.time.sleep")
+    def test_retries_429_then_succeeds(self, sleep):
+        from wonder.client import WonderClient
+
+        client = WonderClient(max_retries=3, backoff=10)
+        client.session.post = MagicMock(
+            side_effect=[_response(429), _response(429), _response(200, "<ok/>")]
+        )
+        assert client.query_from_xml("D176", "<x/>") == "<ok/>"
+        assert client.session.post.call_count == 3
+        assert [c.args[0] for c in sleep.call_args_list] == [10, 20]
+
+    @patch("wonder.client.time.sleep")
+    def test_honors_retry_after_header(self, sleep):
+        from wonder.client import WonderClient
+
+        client = WonderClient(max_retries=1, backoff=10)
+        client.session.post = MagicMock(
+            side_effect=[
+                _response(429, headers={"Retry-After": "45"}),
+                _response(200, "<ok/>"),
+            ]
+        )
+        client.query_from_xml("D176", "<x/>")
+        sleep.assert_called_once_with(45.0)
+
+    @patch("wonder.client.time.sleep")
+    def test_gives_up_after_max_retries(self, sleep):
+        from wonder.client import WonderClient
+
+        client = WonderClient(max_retries=2, backoff=1)
+        client.session.post = MagicMock(return_value=_response(429))
+        with pytest.raises(RuntimeError, match="429"):
+            client.query_from_xml("D176", "<x/>")
+        assert client.session.post.call_count == 3
+
+    @patch("wonder.client.time.sleep")
+    def test_does_not_retry_other_errors(self, sleep):
+        from wonder.client import WonderClient
+
+        client = WonderClient()
+        client.session.post = MagicMock(return_value=_response(500))
+        with pytest.raises(RuntimeError, match="500"):
+            client.query_from_xml("D176", "<x/>")
+        assert client.session.post.call_count == 1
+        sleep.assert_not_called()
+
+
 # ── fentanyl-deaths-by-month.csv ─────────────────────────────────────────────
+
 
 class TestFentanylDeathsByMonth:
     """Shape, completeness, and spot-check tests for fentanyl-deaths-by-month.csv."""
@@ -97,7 +158,9 @@ class TestFentanylDeathsByMonth:
 
     def test_fentanyl_annual_total_1999(self, rows):
         """1999 fentanyl annual total = 772 (verified against dawaldron/fentanyl-deaths)."""
-        total = sum(int(r["deaths"]) for r in rows if r["year"] == "1999" and r["deaths"])
+        total = sum(
+            int(r["deaths"]) for r in rows if r["year"] == "1999" and r["deaths"]
+        )
         assert total == 772
 
     def test_fentanyl_monthly_jan_1999(self, rows):
@@ -106,11 +169,20 @@ class TestFentanylDeathsByMonth:
         assert int(jan["deaths"]) == 62
 
     def test_fentanyl_monthly_feb_1999(self, rows):
-        assert int(next(r for r in rows if r["year"] == "1999" and r["month"] == "2")["deaths"]) == 72
+        assert (
+            int(
+                next(r for r in rows if r["year"] == "1999" and r["month"] == "2")[
+                    "deaths"
+                ]
+            )
+            == 72
+        )
 
     def test_fentanyl_annual_total_2020(self, rows):
         """2020 fentanyl annual total = 57,390."""
-        total = sum(int(r["deaths"]) for r in rows if r["year"] == "2020" and r["deaths"])
+        total = sum(
+            int(r["deaths"]) for r in rows if r["year"] == "2020" and r["deaths"]
+        )
         assert total == 57390
 
     def test_fentanyl_trend_growing(self, rows):
@@ -125,6 +197,7 @@ class TestFentanylDeathsByMonth:
 
 # ── drug-deaths-by-year.csv ───────────────────────────────────────────────────
 
+
 class TestDrugDeathsByYear:
     """Shape, completeness, and spot-check tests for drug-deaths-by-year.csv."""
 
@@ -137,7 +210,13 @@ class TestDrugDeathsByYear:
         assert DRUG_YEAR_CSV.exists(), f"Missing {DRUG_YEAR_CSV}"
 
     def test_columns(self, rows):
-        assert rows[0].keys() == {"year", "drug_code", "drug_name", "deaths", "provisional"}
+        assert rows[0].keys() == {
+            "year",
+            "drug_code",
+            "drug_name",
+            "deaths",
+            "provisional",
+        }
 
     def test_row_count(self, rows):
         # 26 years × 7 drugs = 182
@@ -157,7 +236,9 @@ class TestDrugDeathsByYear:
         for r in rows:
             by_year.setdefault(int(r["year"]), set()).add(r["drug_code"])
         for yr, codes in by_year.items():
-            assert codes == EXPECTED_DRUG_CODES, f"Missing drugs in year {yr}: {EXPECTED_DRUG_CODES - codes}"
+            assert codes == EXPECTED_DRUG_CODES, (
+                f"Missing drugs in year {yr}: {EXPECTED_DRUG_CODES - codes}"
+            )
 
     def test_no_duplicate_year_drug(self, rows):
         keys = [(r["year"], r["drug_code"]) for r in rows]
@@ -208,6 +289,7 @@ class TestDrugDeathsByYear:
 
 # ── drug-deaths-by-month.csv ──────────────────────────────────────────────────
 
+
 class TestDrugDeathsByMonth:
     """Shape, completeness, and spot-check tests for drug-deaths-by-month.csv."""
 
@@ -220,7 +302,14 @@ class TestDrugDeathsByMonth:
         assert DRUG_MONTH_CSV.exists(), f"Missing {DRUG_MONTH_CSV}"
 
     def test_columns(self, rows):
-        assert rows[0].keys() == {"year", "month", "drug_code", "drug_name", "deaths", "provisional"}
+        assert rows[0].keys() == {
+            "year",
+            "month",
+            "drug_code",
+            "drug_name",
+            "deaths",
+            "provisional",
+        }
 
     def test_row_count(self, rows):
         # 26 years × 12 months × 7 drugs = 2184
@@ -260,19 +349,35 @@ class TestDrugDeathsByMonth:
     # ── known-value pins ──────────────────────────────────────────────────────
 
     def test_heroin_jan_1999(self, rows):
-        r = next(r for r in rows if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T40.1")
+        r = next(
+            r
+            for r in rows
+            if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T40.1"
+        )
         assert int(r["deaths"]) == 186
 
     def test_cocaine_jan_1999(self, rows):
-        r = next(r for r in rows if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T40.5")
+        r = next(
+            r
+            for r in rows
+            if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T40.5"
+        )
         assert int(r["deaths"]) == 315
 
     def test_meth_jan_1999(self, rows):
-        r = next(r for r in rows if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T43.6")
+        r = next(
+            r
+            for r in rows
+            if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T43.6"
+        )
         assert int(r["deaths"]) == 47
 
     def test_cannabis_jan_1999_suppressed(self, rows):
-        r = next(r for r in rows if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T40.7")
+        r = next(
+            r
+            for r in rows
+            if r["year"] == "1999" and r["month"] == "1" and r["drug_code"] == "T40.7"
+        )
         assert r["deaths"] == ""
 
     # ── cross-dataset consistency ──────────────────────────────────────────────
@@ -292,10 +397,10 @@ class TestDrugDeathsByMonth:
                 drug_fentanyl_by_year.setdefault(int(r["year"]), 0)
                 drug_fentanyl_by_year[int(r["year"])] += int(r["deaths"])
 
-        for yr in fentanyl_by_year:
-            assert fentanyl_by_year[yr] == drug_fentanyl_by_year.get(yr), (
+        for yr, total in fentanyl_by_year.items():
+            assert total == drug_fentanyl_by_year.get(yr), (
                 f"Fentanyl sum mismatch in {yr}: "
-                f"fentanyl csv={fentanyl_by_year[yr]}, drug csv={drug_fentanyl_by_year.get(yr)}"
+                f"fentanyl csv={total}, drug csv={drug_fentanyl_by_year.get(yr)}"
             )
 
     def test_monthly_sums_match_annual_totals(self, rows):
@@ -314,12 +419,18 @@ class TestDrugDeathsByMonth:
         annual = {
             (int(r["year"]), r["drug_code"]): int(r["deaths"])
             for r in annual_rows
-            if r["deaths"] and int(r["year"]) <= 2020 and r["drug_code"] not in SKIP_CODES
+            if r["deaths"]
+            and int(r["year"]) <= 2020
+            and r["drug_code"] not in SKIP_CODES
         }
 
         monthly_sums: dict[tuple, int] = {}
         for r in rows:
-            if r["deaths"] and int(r["year"]) <= 2020 and r["drug_code"] not in SKIP_CODES:
+            if (
+                r["deaths"]
+                and int(r["year"]) <= 2020
+                and r["drug_code"] not in SKIP_CODES
+            ):
                 key = (int(r["year"]), r["drug_code"])
                 monthly_sums[key] = monthly_sums.get(key, 0) + int(r["deaths"])
 
@@ -327,12 +438,17 @@ class TestDrugDeathsByMonth:
         for key, annual_total in annual.items():
             monthly_total = monthly_sums.get(key, 0)
             if annual_total != monthly_total:
-                mismatches.append(f"{key}: annual={annual_total}, monthly sum={monthly_total}")
+                mismatches.append(
+                    f"{key}: annual={annual_total}, monthly sum={monthly_total}"
+                )
 
-        assert not mismatches, "Monthly→annual sum mismatches:\n" + "\n".join(mismatches)
+        assert not mismatches, "Monthly→annual sum mismatches:\n" + "\n".join(
+            mismatches
+        )
 
 
 # ── obesity-diabetes-deaths-by-year.csv ───────────────────────────────────────
+
 
 class TestObesityDiabetesDeathsByYear:
     """Shape, completeness, and spot-check tests for obesity-diabetes-deaths-by-year.csv."""
@@ -356,7 +472,9 @@ class TestObesityDiabetesDeathsByYear:
         for r in rows:
             by_year.setdefault(int(r["year"]), set()).add(r["category"])
         for yr, cats in by_year.items():
-            assert cats == {"obesity", "diabetes"}, f"Missing category in year {yr}: {cats}"
+            assert cats == {"obesity", "diabetes"}, (
+                f"Missing category in year {yr}: {cats}"
+            )
 
     def test_no_duplicate_year_category(self, rows):
         keys = [(r["year"], r["category"]) for r in rows]
@@ -384,7 +502,9 @@ class TestObesityDiabetesDeathsByYear:
         for r in rows:
             by_year.setdefault(int(r["year"]), {})[r["category"]] = int(r["deaths"])
         for yr, cats in by_year.items():
-            assert cats["diabetes"] > cats["obesity"], f"{yr}: diabetes should exceed obesity"
+            assert cats["diabetes"] > cats["obesity"], (
+                f"{yr}: diabetes should exceed obesity"
+            )
 
     # ── known-value pins (cross-checked against CDC WONDER live query) ────────
 
@@ -411,14 +531,14 @@ class TestObesityDiabetesDeathsByYear:
 
 # ── parser unit tests (no network) ────────────────────────────────────────────
 
+
 def _make_cell(label=None, value=None, is_total=False, code=None):
     cell = MagicMock()
     cell.label = label
     cell.value = value
     cell.code = code
     cell.get_numeric_value.return_value = (
-        None if value in (None, "Suppressed")
-        else float(value.replace(",", ""))
+        None if value in (None, "Suppressed") else float(value.replace(",", ""))
     )
     return cell
 
@@ -435,6 +555,7 @@ class TestFentanylParser:
 
     def _import(self):
         from wonder.queries.fetch_fentanyl_deaths import parse_rows
+
         return parse_rows
 
     def test_hierarchical_year_carry_forward(self):
@@ -450,9 +571,24 @@ class TestFentanylParser:
 
         records = parse_rows(client, "<xml/>", provisional=False)
         assert len(records) == 3
-        assert records[0] == {"year": 1999, "month": 1, "deaths": 62.0, "provisional": False}
-        assert records[1] == {"year": 1999, "month": 2, "deaths": 72.0, "provisional": False}
-        assert records[2] == {"year": 2000, "month": 1, "deaths": 59.0, "provisional": False}
+        assert records[0] == {
+            "year": 1999,
+            "month": 1,
+            "deaths": 62.0,
+            "provisional": False,
+        }
+        assert records[1] == {
+            "year": 1999,
+            "month": 2,
+            "deaths": 72.0,
+            "provisional": False,
+        }
+        assert records[2] == {
+            "year": 2000,
+            "month": 1,
+            "deaths": 59.0,
+            "provisional": False,
+        }
 
     def test_totals_rows_are_skipped(self):
         parse_rows = self._import()
@@ -488,6 +624,7 @@ class TestDrugDeathsByYearParser:
 
     def _import(self):
         from wonder.queries.fetch_drug_deaths import parse_rows
+
         return parse_rows
 
     def test_year_and_drug_first_row(self):
@@ -495,7 +632,9 @@ class TestDrugDeathsByYearParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([_make_cell("1999"), _make_cell("Heroin"), _make_cell(value="2103")]),
+            _make_row(
+                [_make_cell("1999"), _make_cell("Heroin"), _make_cell(value="2103")]
+            ),
             _make_row([_make_cell("Cocaine"), _make_cell(value="4494")]),
         ]
         client.parse_response_table.return_value = xml_rows
@@ -514,7 +653,13 @@ class TestDrugDeathsByYearParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([_make_cell("1999"), _make_cell("Unknown substance"), _make_cell(value="10")]),
+            _make_row(
+                [
+                    _make_cell("1999"),
+                    _make_cell("Unknown substance"),
+                    _make_cell(value="10"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
@@ -527,6 +672,7 @@ class TestDrugDeathsByMonthParser:
 
     def _import(self):
         from wonder.queries.fetch_drug_deaths_monthly import parse_rows
+
         return parse_rows
 
     def test_flat_row_parsing(self):
@@ -534,26 +680,34 @@ class TestDrugDeathsByMonthParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([
-                _make_cell("1999"),
-                _make_cell("Jan., 1999"),
-                _make_cell("Heroin"),
-                _make_cell(value="186"),
-            ]),
-            _make_row([
-                _make_cell("1999"),
-                _make_cell("Jan., 1999"),
-                _make_cell("Cocaine"),
-                _make_cell(value="315"),
-            ]),
+            _make_row(
+                [
+                    _make_cell("1999"),
+                    _make_cell("Jan., 1999"),
+                    _make_cell("Heroin"),
+                    _make_cell(value="186"),
+                ]
+            ),
+            _make_row(
+                [
+                    _make_cell("1999"),
+                    _make_cell("Jan., 1999"),
+                    _make_cell("Cocaine"),
+                    _make_cell(value="315"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
         records = parse_rows(client, "<xml/>", provisional=False)
         assert len(records) == 2
         assert records[0] == {
-            "year": 1999, "month": 1, "drug_code": "T40.1",
-            "drug_name": "Heroin", "deaths": 186.0, "provisional": False,
+            "year": 1999,
+            "month": 1,
+            "drug_code": "T40.1",
+            "drug_name": "Heroin",
+            "deaths": 186.0,
+            "provisional": False,
         }
         assert records[1]["drug_code"] == "T40.5"
         assert records[1]["deaths"] == 315.0
@@ -566,7 +720,14 @@ class TestDrugDeathsByMonthParser:
         suppressed.get_numeric_value.return_value = None
 
         xml_rows = [
-            _make_row([_make_cell("1999"), _make_cell("Jan., 1999"), _make_cell("Cannabis (derivatives)"), suppressed]),
+            _make_row(
+                [
+                    _make_cell("1999"),
+                    _make_cell("Jan., 1999"),
+                    _make_cell("Cannabis (derivatives)"),
+                    suppressed,
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
@@ -579,7 +740,14 @@ class TestDrugDeathsByMonthParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([_make_cell("Total"), _make_cell(""), _make_cell("Heroin"), _make_cell(value="100")]),
+            _make_row(
+                [
+                    _make_cell("Total"),
+                    _make_cell(""),
+                    _make_cell("Heroin"),
+                    _make_cell(value="100"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
@@ -589,6 +757,7 @@ class TestDrugDeathsByMonthParser:
     def test_month_label_variations(self):
         """'Jan., 1999', 'January', 'Jan' all parse to month=1."""
         from wonder.queries.fetch_drug_deaths_monthly import _parse_month
+
         assert _parse_month("Jan., 1999") == 1
         assert _parse_month("January") == 1
         assert _parse_month("Jan") == 1
@@ -601,6 +770,7 @@ class TestObesityDiabetesDeathsParser:
 
     def _import(self):
         from wonder.queries.fetch_obesity_diabetes_deaths import parse_rows
+
         return parse_rows
 
     def test_categorizes_by_code_not_label(self):
@@ -610,16 +780,23 @@ class TestObesityDiabetesDeathsParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([
-                _make_cell("2018"),
-                _make_cell("Obesity due to excess calories", code="E66.0"),
-                _make_cell(value="59"),
-            ]),
-            _make_row([
-                _make_cell("2018"),
-                _make_cell("Non-insulin-dependent diabetes mellitus, without complications", code="E11.9"),
-                _make_cell(value="76154"),
-            ]),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("Obesity due to excess calories", code="E66.0"),
+                    _make_cell(value="59"),
+                ]
+            ),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell(
+                        "Non-insulin-dependent diabetes mellitus, without complications",
+                        code="E11.9",
+                    ),
+                    _make_cell(value="76154"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
@@ -634,15 +811,38 @@ class TestObesityDiabetesDeathsParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([_make_cell("2018"), _make_cell("x", code="E10.9"), _make_cell(value="4742")]),
-            _make_row([_make_cell("2018"), _make_cell("x", code="E11.2"), _make_cell(value="23500")]),
-            _make_row([_make_cell("2018"), _make_cell("x", code="E11.9"), _make_cell(value="76154")]),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("x", code="E10.9"),
+                    _make_cell(value="4742"),
+                ]
+            ),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("x", code="E11.2"),
+                    _make_cell(value="23500"),
+                ]
+            ),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("x", code="E11.9"),
+                    _make_cell(value="76154"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
         records = parse_rows(client, "<xml/>", provisional=True)
         assert len(records) == 1
-        assert records[0] == {"year": 2018, "category": "diabetes", "deaths": 104396, "provisional": True}
+        assert records[0] == {
+            "year": 2018,
+            "category": "diabetes",
+            "deaths": 104396,
+            "provisional": True,
+        }
 
     def test_unrelated_code_is_skipped(self):
         """A non-obesity/diabetes ICD code (e.g. a different E-series condition) is ignored."""
@@ -650,7 +850,13 @@ class TestObesityDiabetesDeathsParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([_make_cell("2018"), _make_cell("Thyrotoxicosis", code="E05.9"), _make_cell(value="100")]),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("Thyrotoxicosis", code="E05.9"),
+                    _make_cell(value="100"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
@@ -666,8 +872,20 @@ class TestObesityDiabetesDeathsParser:
         suppressed.get_numeric_value.return_value = None
 
         xml_rows = [
-            _make_row([_make_cell("2018"), _make_cell("Drug-induced obesity", code="E66.1"), suppressed]),
-            _make_row([_make_cell("2018"), _make_cell("Other obesity", code="E66.8"), _make_cell(value="7675")]),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("Drug-induced obesity", code="E66.1"),
+                    suppressed,
+                ]
+            ),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("Other obesity", code="E66.8"),
+                    _make_cell(value="7675"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
@@ -680,7 +898,13 @@ class TestObesityDiabetesDeathsParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([_make_cell("2018"), _make_cell("Other obesity", code="E66.8"), _make_cell(value="7675")]),
+            _make_row(
+                [
+                    _make_cell("2018"),
+                    _make_cell("Other obesity", code="E66.8"),
+                    _make_cell(value="7675"),
+                ]
+            ),
             _make_row([_make_cell("2018")], is_total=True),
         ]
         client.parse_response_table.return_value = xml_rows
@@ -694,11 +918,13 @@ class TestObesityDiabetesDeathsParser:
         client = MagicMock()
 
         xml_rows = [
-            _make_row([
-                _make_cell("2026 (provisional and partial)"),
-                _make_cell("Other obesity", code="E66.8"),
-                _make_cell(value="7675"),
-            ]),
+            _make_row(
+                [
+                    _make_cell("2026 (provisional and partial)"),
+                    _make_cell("Other obesity", code="E66.8"),
+                    _make_cell(value="7675"),
+                ]
+            ),
         ]
         client.parse_response_table.return_value = xml_rows
 
@@ -709,14 +935,34 @@ class TestObesityDiabetesDeathsParser:
         from wonder.queries.fetch_obesity_diabetes_deaths import merge
 
         d77 = [
-            {"year": 2020, "category": "obesity", "deaths": 74903, "provisional": False},
-            {"year": 2020, "category": "diabetes", "deaths": 398556, "provisional": False},
+            {
+                "year": 2020,
+                "category": "obesity",
+                "deaths": 74903,
+                "provisional": False,
+            },
+            {
+                "year": 2020,
+                "category": "diabetes",
+                "deaths": 398556,
+                "provisional": False,
+            },
         ]
         d176 = [
             {"year": 2020, "category": "obesity", "deaths": 75627, "provisional": True},
-            {"year": 2020, "category": "diabetes", "deaths": 405046, "provisional": True},
+            {
+                "year": 2020,
+                "category": "diabetes",
+                "deaths": 405046,
+                "provisional": True,
+            },
             {"year": 2021, "category": "obesity", "deaths": 96262, "provisional": True},
-            {"year": 2021, "category": "diabetes", "deaths": 416780, "provisional": True},
+            {
+                "year": 2021,
+                "category": "diabetes",
+                "deaths": 416780,
+                "provisional": True,
+            },
         ]
 
         merged = merge(d77, d176)
@@ -724,10 +970,13 @@ class TestObesityDiabetesDeathsParser:
 
         assert by_key[(2020, "obesity")]["deaths"] == 74903  # D77 final wins for 2020
         assert by_key[(2020, "obesity")]["provisional"] is False
-        assert by_key[(2021, "obesity")]["deaths"] == 96262  # D176 is the only source for 2021
+        assert (
+            by_key[(2021, "obesity")]["deaths"] == 96262
+        )  # D176 is the only source for 2021
 
 
 # ── integration tests (hits wonder.cdc.gov) ───────────────────────────────────
+
 
 @pytest.mark.integration
 class TestFentanylFetchIntegration:
@@ -735,29 +984,44 @@ class TestFentanylFetchIntegration:
 
     def test_fetch_produces_expected_rows(self, tmp_path):
         import subprocess
+
         result = subprocess.run(
             ["uv", "run", "python", "src/wonder/queries/fetch_fentanyl_deaths.py"],
-            capture_output=True, text=True, cwd=Path(__file__).parent.parent
+            capture_output=True,
+            check=False,
+            text=True,
+            cwd=Path(__file__).parent.parent,
         )
         assert result.returncode == 0, result.stderr
-        assert "312 rows" in result.stdout or "fentanyl-deaths-by-month.csv" in result.stdout
+        assert (
+            "312 rows" in result.stdout
+            or "fentanyl-deaths-by-month.csv" in result.stdout
+        )
 
 
 @pytest.mark.integration
 class TestDrugDeathsFetchIntegration:
     def test_drug_deaths_by_year_produces_expected_rows(self):
         import subprocess
+
         result = subprocess.run(
             ["uv", "run", "python", "src/wonder/queries/fetch_drug_deaths.py"],
-            capture_output=True, text=True, cwd=Path(__file__).parent.parent
+            capture_output=True,
+            check=False,
+            text=True,
+            cwd=Path(__file__).parent.parent,
         )
         assert result.returncode == 0, result.stderr
 
     def test_drug_deaths_by_month_produces_expected_rows(self):
         import subprocess
+
         result = subprocess.run(
             ["uv", "run", "python", "src/wonder/queries/fetch_drug_deaths_monthly.py"],
-            capture_output=True, text=True, cwd=Path(__file__).parent.parent
+            capture_output=True,
+            check=False,
+            text=True,
+            cwd=Path(__file__).parent.parent,
         )
         assert result.returncode == 0, result.stderr
         assert "2184 rows" in result.stdout

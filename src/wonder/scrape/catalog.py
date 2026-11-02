@@ -18,7 +18,6 @@ import csv
 import json
 import logging
 import re
-
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -437,8 +436,8 @@ def print_datasets_by_topic(mapping_path: Path) -> None:
         by_topic[m["topic"]].append(m)
 
     # Sort datasets within each topic by dataset_id numerically
-    for topic in by_topic:
-        by_topic[topic].sort(key=lambda x: dataset_id_sort_key(x["dataset_id"]))
+    for datasets in by_topic.values():
+        datasets.sort(key=lambda x: dataset_id_sort_key(x["dataset_id"]))
 
     # Print header
     print("\n" + "=" * 70)
@@ -479,6 +478,10 @@ def main() -> None:
 
     # Catalog datasets
     mappings, unmapped = catalog_datasets(dataset_map_path, topics_path)
+    if not mappings:
+        # An empty dataset_map (e.g. from a blocked scrape) would wipe the catalog
+        log.error(f"No datasets classified; leaving {output_path} unchanged")
+        raise SystemExit(1)
 
     # Write to topics_mapping.json (separate file, sorted by dataset_id)
     write_topics_mapping(output_path, mappings, unmapped)

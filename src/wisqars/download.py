@@ -42,7 +42,7 @@ def download_all(out_dir: Path = _OUT_DIR, limit: int = _DEFAULT_LIMIT) -> None:
             row_count = resp.text.count("\n") - 1
             print(f"{row_count} rows -> {path}")
             ok += 1
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 - keep going so one failure doesn't sink the batch
             print(f"ERROR: {exc}")
             failed.append((key, exc))
 

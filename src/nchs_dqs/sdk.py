@@ -21,9 +21,17 @@ _TIMEOUT = 60
 
 # Shared DQS columns; `group` is backtick-quoted because it is a SoQL keyword.
 CORE_COLUMNS = [
-    "topic", "subtopic", "classification", "`group`", "subgroup",
-    "estimate_type", "time_period", "estimate", "standard_error",
-    "estimate_lci", "estimate_uci",
+    "topic",
+    "subtopic",
+    "classification",
+    "`group`",
+    "subgroup",
+    "estimate_type",
+    "time_period",
+    "estimate",
+    "standard_error",
+    "estimate_lci",
+    "estimate_uci",
 ]
 
 
@@ -51,12 +59,19 @@ def query_dataset(
     if order:
         params["$order"] = order
 
-    resp = requests.get(f"{BASE_URL}/{dataset_id}.json", params=params, headers=headers, timeout=_TIMEOUT)
+    resp = requests.get(
+        f"{BASE_URL}/{dataset_id}.json",
+        params=params,
+        headers=headers,
+        timeout=_TIMEOUT,
+    )
     resp.raise_for_status()
     return resp.json()
 
 
-def trend(dataset_id: str, estimate_type: str | None = None, limit: int = 1000) -> list[dict[str, Any]]:
+def trend(
+    dataset_id: str, estimate_type: str | None = None, limit: int = 1000
+) -> list[dict[str, Any]]:
     """All-persons ('Total' classification) national series for a dataset, oldest→newest."""
     where = "classification = 'Total'"
     if estimate_type:

@@ -38,11 +38,11 @@ Usage:
     uv run python src/wonder/queries/scrape_maternal_mortality_by_state.py
 """
 
+import contextlib
 import csv
 import os
 import sys
 import time
-from io import StringIO
 from pathlib import Path
 
 # On this host, libnspr4/libnss3/libatk/etc. are not installed system-wide.
@@ -51,10 +51,14 @@ from pathlib import Path
 _STUB_LIBS = Path.home() / ".local" / "lib" / "pw-stubs"
 if _STUB_LIBS.is_dir():
     existing = os.environ.get("LD_LIBRARY_PATH", "")
-    os.environ["LD_LIBRARY_PATH"] = f"{_STUB_LIBS}:{existing}" if existing else str(_STUB_LIBS)
+    os.environ["LD_LIBRARY_PATH"] = (
+        f"{_STUB_LIBS}:{existing}" if existing else str(_STUB_LIBS)
+    )
 
 from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
+from playwright.sync_api import Error as PlaywrightError
+from playwright.sync_api import TimeoutError as PlaywrightTimeout
+from playwright.sync_api import sync_playwright
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -125,9 +129,12 @@ def set_group_by(page, slot: int, value: str) -> None:
     try:
         page.select_option(f"[name='{name}']", value=value, timeout=5000)
         print(f"    Set {name} = {value}", flush=True)
-    except Exception as e:
+    except PlaywrightError as e:
         # Try by visible text (fallback)
-        print(f"    {name} select_option by value failed ({e}); trying label …", flush=True)
+        print(
+            f"    {name} select_option by value failed ({e}); trying label …",
+            flush=True,
+        )
         handle = page.locator(f"[name='{name}']")
         opts = handle.evaluate(
             "el => Array.from(el.options).map(o => ({v:o.value,t:o.text.trim()}))"
@@ -139,7 +146,9 @@ def set_group_by(page, slot: int, value: str) -> None:
             page.select_option(f"[name='{name}']", value=match["v"], timeout=5000)
             print(f"    Set {name} = {match['v']} (matched '{match['t']}')", flush=True)
         else:
-            raise RuntimeError(f"Could not find '{keyword}' option in {name}. Options: {opts[:10]}")
+            raise RuntimeError(
+                f"Could not find '{keyword}' option in {name}. Options: {opts[:10]}"
+            )
 
 
 def set_ucd_filter(page, field_name: str, values: list[str]) -> None:
@@ -159,12 +168,22 @@ def set_ucd_filter(page, field_name: str, values: list[str]) -> None:
             opts = sel.evaluate(
                 "el => Array.from(el.options).map(o => ({v:o.value, t:o.text.trim()}))"
             )
-            matched = [o["v"] for o in opts if o["v"] in values or any(v in o["v"] for v in values)]
+            matched = [
+                o["v"]
+                for o in opts
+                if o["v"] in values or any(v in o["v"] for v in values)
+            ]
             if not matched:
                 # Try text-based matching for "Pregnancy"
-                matched = [o["v"] for o in opts if "pregnancy" in o["t"].lower() or "O00" in o["v"]]
+                matched = [
+                    o["v"]
+                    for o in opts
+                    if "pregnancy" in o["t"].lower() or "O00" in o["v"]
+                ]
             if matched:
-                page.select_option(f"[name='{field_name}']", value=matched, timeout=5000)
+                page.select_option(
+                    f"[name='{field_name}']", value=matched, timeout=5000
+                )
                 print(f"    Set UCD filter ({field_name}) = {matched}", flush=True)
                 return
             else:
@@ -193,9 +212,9 @@ def show_suppressed(page, dataset_id: str) -> None:
     """Enable 'Show Suppressed Values' if the checkbox exists."""
     # The checkbox might be named differently per dataset
     candidates = [
-        f"[name='O_show_suppressed']",
-        f"[name='O_show_suppressed'][value='true']",
-        f"input[type='checkbox'][name*='suppressed' i]",
+        "[name='O_show_suppressed']",
+        "[name='O_show_suppressed'][value='true']",
+        "input[type='checkbox'][name*='suppressed' i]",
     ]
     for sel in candidates:
         el = page.locator(sel)
@@ -236,12 +255,12 @@ def parse_tsv_export(content: str) -> list[dict]:
     headers = [p.strip().strip('"') for p in lines[header_idx].split("\t")]
 
     records = []
-    for line in lines[header_idx + 1:]:
+    for line in lines[header_idx + 1 :]:
         if not line.strip():
             continue
         # Stop at totals/footer
         stripped = line.lstrip('"')
-        if stripped.startswith("Total\t") or stripped.startswith("---"):
+        if stripped.startswith(("Total\t", "---")):
             break
 
         parts = [p.strip().strip('"') for p in line.split("\t")]
@@ -262,16 +281,24 @@ def parse_tsv_export(content: str) -> list[dict]:
 
         SUPPRESSED = ("Suppressed", "Not Applicable", "Missing", "")
         deaths = None if deaths_str in SUPPRESSED else int(deaths_str.replace(",", ""))
-        population = None if pop_str in SUPPRESSED else (
-            int(pop_str.replace(",", "")) if pop_str.replace(",", "").isdigit() else None
+        population = (
+            None
+            if pop_str in SUPPRESSED
+            else (
+                int(pop_str.replace(",", ""))
+                if pop_str.replace(",", "").isdigit()
+                else None
+            )
         )
 
-        records.append({
-            "year": int(year_str),
-            "state": state_str,
-            "deaths": deaths,
-            "population": population,
-        })
+        records.append(
+            {
+                "year": int(year_str),
+                "state": state_str,
+                "deaths": deaths,
+                "population": population,
+            }
+        )
 
     return records
 
@@ -294,10 +321,7 @@ def parse_html_results(html: str) -> list[dict]:
         for t in soup.find_all("table"):
             all_trs = t.find_all("tr")
             # Gather text from all header rows (first few rows)
-            header_text = " ".join(
-                tr.get_text(" ", strip=True)
-                for tr in all_trs[:5]
-            )
+            header_text = " ".join(tr.get_text(" ", strip=True) for tr in all_trs[:5])
             if "Year" in header_text and "State" in header_text:
                 table = t
                 break
@@ -320,7 +344,7 @@ def parse_html_results(html: str) -> list[dict]:
     headers = [th.get_text(strip=True) for th in header_row.find_all(["th", "td"])]
 
     records = []
-    for tr in rows[header_idx + 1:]:
+    for tr in rows[header_idx + 1 :]:
         cells = [td.get_text(strip=True) for td in tr.find_all(["td", "th"])]
         if not cells:
             continue
@@ -338,16 +362,24 @@ def parse_html_results(html: str) -> list[dict]:
 
         SUPPRESSED = ("Suppressed", "Not Applicable", "Missing", "")
         deaths = None if deaths_str in SUPPRESSED else int(deaths_str.replace(",", ""))
-        population = None if pop_str in SUPPRESSED else (
-            int(pop_str.replace(",", "")) if pop_str.replace(",", "").isdigit() else None
+        population = (
+            None
+            if pop_str in SUPPRESSED
+            else (
+                int(pop_str.replace(",", ""))
+                if pop_str.replace(",", "").isdigit()
+                else None
+            )
         )
 
-        records.append({
-            "year": int(year_str),
-            "state": state_str,
-            "deaths": deaths,
-            "population": population,
-        })
+        records.append(
+            {
+                "year": int(year_str),
+                "state": state_str,
+                "deaths": deaths,
+                "population": population,
+            }
+        )
 
     return records
 
@@ -396,17 +428,19 @@ def query_dataset(page, dataset: dict) -> list[dict]:
     # The export panel is collapsed by default. Expand it, pick TSV, then download.
     try:
         # Expand the export panel (button with text "Export")
-        expand_btn = page.locator("button:has-text('Export'), input[value='Export Results']").first
-        try:
+        expand_btn = page.locator(
+            "button:has-text('Export'), input[value='Export Results']"
+        ).first
+        with contextlib.suppress(PlaywrightError):
             expand_btn.click(timeout=5000)
             page.wait_for_timeout(500)
-        except Exception:
-            pass
 
         # Set format to TSV if the selector exists
         fmt_sel = page.locator("select[name='O_export-format']")
         if fmt_sel.count() > 0:
-            page.select_option("select[name='O_export-format']", value="tsv", timeout=3000)
+            page.select_option(
+                "select[name='O_export-format']", value="tsv", timeout=3000
+            )
 
         download_btn = page.locator("input[name='action-Export']")
         download_btn.wait_for(state="visible", timeout=10000)
@@ -415,11 +449,17 @@ def query_dataset(page, dataset: dict) -> list[dict]:
         download = dl_info.value
         tsv = Path(download.path()).read_text("utf-8")
         records = parse_tsv_export(tsv)
-        print(f"    TSV export: {len(tsv.splitlines())} lines → {len(records)} records", flush=True)
+        print(
+            f"    TSV export: {len(tsv.splitlines())} lines → {len(records)} records",
+            flush=True,
+        )
         return records
-    except Exception as export_err:
+    except Exception as export_err:  # noqa: BLE001 - fall back to HTML table
         # Fallback: parse the HTML results table directly
-        print(f"    Export download failed ({export_err}); parsing HTML table …", flush=True)
+        print(
+            f"    Export download failed ({export_err}); parsing HTML table …",
+            flush=True,
+        )
         html = page.content()
         records = parse_html_results(html)
         print(f"    HTML parse: {len(records)} records", flush=True)
@@ -456,12 +496,14 @@ def write_csv(records: list[dict]) -> None:
         writer = csv.writer(f)
         writer.writerow(["year", "state", "deaths", "population"])
         for rec in records:
-            writer.writerow([
-                rec["year"],
-                rec["state"],
-                "" if rec["deaths"] is None else rec["deaths"],
-                "" if rec["population"] is None else rec["population"],
-            ])
+            writer.writerow(
+                [
+                    rec["year"],
+                    rec["state"],
+                    "" if rec["deaths"] is None else rec["deaths"],
+                    "" if rec["population"] is None else rec["population"],
+                ]
+            )
 
     print(
         f"  ✓ {OUTPUT_CSV.name}  "
@@ -482,7 +524,9 @@ def print_preview(records: list[dict]) -> None:
 
     suppressed = sum(1 for r in records if r["deaths"] is None)
     if suppressed:
-        print(f"\n  Note: {suppressed} state×year cells were suppressed by WONDER (n < 10)")
+        print(
+            f"\n  Note: {suppressed} state×year cells were suppressed by WONDER (n < 10)"
+        )
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────
@@ -500,9 +544,13 @@ def main() -> None:
         try:
             browser = p.chromium.launch(
                 headless=True,
-                args=["--ignore-certificate-errors", "--no-sandbox", "--disable-dev-shm-usage"],
+                args=[
+                    "--ignore-certificate-errors",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                ],
             )
-        except Exception as e:
+        except PlaywrightError as e:
             print(
                 f"\nERROR: Could not launch Chromium browser.\n"
                 f"  {e}\n\n"
@@ -533,7 +581,7 @@ def main() -> None:
                         flush=True,
                     )
                 all_records[dataset["id"]] = records
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001 - continue with remaining datasets
                 print(f"\n    ERROR [{dataset['id']}]: {e}", file=sys.stderr)
                 print("    Continuing with remaining datasets …", file=sys.stderr)
 
@@ -546,7 +594,9 @@ def main() -> None:
         print("\nNo data returned from either dataset.", file=sys.stderr)
         sys.exit(1)
 
-    print(f"\nMerging: D76 for 1999–{D158_PREFERRED_FROM - 1}, D158 for {D158_PREFERRED_FROM}+")
+    print(
+        f"\nMerging: D76 for 1999–{D158_PREFERRED_FROM - 1}, D158 for {D158_PREFERRED_FROM}+"
+    )
     merged = merge(d76, d158)
     print(f"Total merged rows: {len(merged)}")
 

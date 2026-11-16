@@ -21,7 +21,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from wonder.llm_query_builder import WonderParameter, WonderRequest
 
-
 # =============================================================================
 # WonderRequest.to_xml() Tests
 # =============================================================================
@@ -142,6 +141,7 @@ class TestCLIArgumentParsing:
         """Test that --help works"""
         result = subprocess.run(
             [sys.executable, "-m", "wonder", "--help"],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -153,6 +153,7 @@ class TestCLIArgumentParsing:
         """Test build subcommand help"""
         result = subprocess.run(
             [sys.executable, "-m", "wonder", "build", "--help"],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -164,6 +165,7 @@ class TestCLIArgumentParsing:
         """Test run subcommand help"""
         result = subprocess.run(
             [sys.executable, "-m", "wonder", "run", "--help"],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -175,6 +177,7 @@ class TestCLIArgumentParsing:
         """Test query subcommand help"""
         result = subprocess.run(
             [sys.executable, "-m", "wonder", "query", "--help"],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -195,6 +198,7 @@ class TestCommandErrors:
         """Test run command with missing file"""
         result = subprocess.run(
             [sys.executable, "-m", "wonder", "run", "/nonexistent/file.xml"],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -206,6 +210,7 @@ class TestCommandErrors:
         """Test that missing command shows error"""
         result = subprocess.run(
             [sys.executable, "-m", "wonder"],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -236,6 +241,7 @@ class TestCLIIntegration:
                 "-o",
                 str(output_file),
             ],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -274,6 +280,7 @@ class TestCLIIntegration:
                 "-t",
                 "120",
             ],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",
@@ -304,6 +311,7 @@ class TestCLIIntegration:
                 "-t",
                 "120",
             ],
+            check=False,
             capture_output=True,
             text=True,
             cwd=Path(__file__).parent.parent / "src",

@@ -10,6 +10,7 @@ The cache stores raw fetch records — the same dicts a fetcher's merge() consum
 — one per row, with light type coercion on read so booleans and nullable numbers
 round-trip. Each fetcher declares its own columns and per-column types.
 """
+
 from __future__ import annotations
 
 import csv

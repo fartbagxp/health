@@ -16,8 +16,8 @@ import sys
 
 from dotenv import load_dotenv
 
-from nssp.sdk import get_ed_visits, get_national_trends, get_hhs_region_trends
-from nssp.client import SIGNALS, GEO_TYPES
+from nssp.client import GEO_TYPES, SIGNALS
+from nssp.sdk import get_ed_visits, get_hhs_region_trends, get_national_trends
 
 load_dotenv()
 
@@ -93,7 +93,7 @@ def main():
         description="Query NSSP ED visit signals via Delphi Epidata API",
     )
     sub = parser.add_subparsers(dest="command", required=True)
-    _fmt = dict(choices=["table", "json", "csv"], default="table")
+    _fmt = {"choices": ["table", "json", "csv"], "default": "table"}
 
     p_query = sub.add_parser("query", help="ED visit pct for a pathogen by geography")
     p_query.add_argument("pathogen", choices=list(SIGNALS), help="Pathogen signal")
@@ -136,9 +136,6 @@ def main():
     args = parser.parse_args()
     try:
         args.func(args)
-    except ValueError as e:
-        print(f"Error: {e}", file=sys.stderr)
-        sys.exit(1)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - top-level CLI error handler
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)

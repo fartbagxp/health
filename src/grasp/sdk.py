@@ -24,7 +24,7 @@ from collections import Counter, defaultdict
 from typing import Any
 
 from grasp.client import clear_cache as _clear_cache
-from grasp.client import fetch, fluview_clinical_fetch, fluview_fetch, flusurv_fetch
+from grasp.client import fetch, flusurv_fetch, fluview_clinical_fetch, fluview_fetch
 from grasp.datasets import DATASETS, FLUSURV_LOCATIONS, STATE_FIPS
 
 # Full epiweek ranges covering all available data
@@ -79,11 +79,15 @@ def get_hantavirus_cases(
         records = [r for r in records if r.get("StateFIPS") in matched_fips]
 
     if outcome:
-        records = [r for r in records if r.get("Outcome", "").lower() == outcome.lower()]
+        records = [
+            r for r in records if r.get("Outcome", "").lower() == outcome.lower()
+        ]
 
     if year is not None:
         year_str = str(year)
-        records = [r for r in records if _parse_year(r.get("IllnessOnsetDate", "")) == year_str]
+        records = [
+            r for r in records if _parse_year(r.get("IllnessOnsetDate", "")) == year_str
+        ]
 
     for r in records:
         r["StateName"] = STATE_FIPS.get(r.get("StateFIPS", ""), "Unknown")
@@ -122,13 +126,15 @@ def summarize_hantavirus_by_state() -> list[dict[str, Any]]:
 
     rows = []
     for fips in sorted(counts, key=lambda f: STATE_FIPS.get(f, f)):
-        rows.append({
-            "state_fips": fips,
-            "state": STATE_FIPS.get(fips, "Unknown"),
-            "cases": counts[fips],
-            "deaths": deaths[fips],
-            "case_fatality_pct": round(deaths[fips] / counts[fips] * 100, 1),
-        })
+        rows.append(
+            {
+                "state_fips": fips,
+                "state": STATE_FIPS.get(fips, "Unknown"),
+                "cases": counts[fips],
+                "deaths": deaths[fips],
+                "case_fatality_pct": round(deaths[fips] / counts[fips] * 100, 1),
+            }
+        )
     return sorted(rows, key=lambda r: r["cases"], reverse=True)
 
 
@@ -173,9 +179,7 @@ def summarize_fluview_ili_by_region(
     Returns [{region, peak_wili, avg_wili, weeks}] sorted by peak_wili desc.
     """
     all_regions = (
-        ["nat"]
-        + [f"hhs{i}" for i in range(1, 11)]
-        + [f"cen{i}" for i in range(1, 10)]
+        ["nat"] + [f"hhs{i}" for i in range(1, 11)] + [f"cen{i}" for i in range(1, 10)]
     )
     records = fluview_fetch(all_regions, epiweeks or _FLUVIEW_ALL_EPIWEEKS)
 
@@ -187,12 +191,14 @@ def summarize_fluview_ili_by_region(
 
     rows = []
     for region, values in sorted(by_region.items()):
-        rows.append({
-            "region": region,
-            "peak_wili": round(max(values), 2),
-            "avg_wili": round(sum(values) / len(values), 2),
-            "weeks": len(values),
-        })
+        rows.append(
+            {
+                "region": region,
+                "peak_wili": round(max(values), 2),
+                "avg_wili": round(sum(values) / len(values), 2),
+                "weeks": len(values),
+            }
+        )
     return sorted(rows, key=lambda r: r["peak_wili"], reverse=True)
 
 
@@ -220,7 +226,9 @@ def get_fluview_clinical(
         percent_b         — % positive for flu B
     """
     regions = _normalize_regions(regions, "nat")
-    records = fluview_clinical_fetch(regions, epiweeks or _FLUVIEW_CLINICAL_ALL_EPIWEEKS)
+    records = fluview_clinical_fetch(
+        regions, epiweeks or _FLUVIEW_CLINICAL_ALL_EPIWEEKS
+    )
     return sorted(records, key=lambda r: (r.get("region", ""), r.get("epiweek", 0)))
 
 
@@ -280,13 +288,15 @@ def summarize_flusurv_by_season(
     rows = []
     for season in sorted(by_season):
         rates = by_season[season]
-        rows.append({
-            "season": season,
-            "location": location,
-            "peak_rate": round(max(rates), 1),
-            "avg_rate": round(sum(rates) / len(rates), 2),
-            "weeks": len(rates),
-        })
+        rows.append(
+            {
+                "season": season,
+                "location": location,
+                "peak_rate": round(max(rates), 1),
+                "avg_rate": round(sum(rates) / len(rates), 2),
+                "weeks": len(rates),
+            }
+        )
     return rows
 
 
@@ -314,13 +324,15 @@ def summarize_flusurv_by_location(
 
     rows = []
     for loc, rates in sorted(by_loc.items()):
-        rows.append({
-            "location": loc,
-            "name": FLUSURV_LOCATIONS.get(loc, loc),
-            "peak_rate": round(max(rates), 1),
-            "avg_rate": round(sum(rates) / len(rates), 2),
-            "weeks": len(rates),
-        })
+        rows.append(
+            {
+                "location": loc,
+                "name": FLUSURV_LOCATIONS.get(loc, loc),
+                "peak_rate": round(max(rates), 1),
+                "avg_rate": round(sum(rates) / len(rates), 2),
+                "weeks": len(rates),
+            }
+        )
     return sorted(rows, key=lambda r: r["peak_rate"], reverse=True)
 
 

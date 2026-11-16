@@ -47,8 +47,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from wonder.client import WonderClient  # noqa: E402
-from wonder.queries._merge_guard import require_complete  # noqa: E402
+from wonder.client import WonderClient
+from wonder.queries._merge_guard import require_complete
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -68,13 +68,19 @@ RATE_LIMIT_SLEEP = 16
 # WONDER returns drug names as row labels (not ICD codes).
 # Map from the label WONDER uses → (ICD code, canonical name).
 WONDER_LABEL_TO_CODE: dict[str, tuple[str, str]] = {
-    "Heroin":                                    ("T40.1", "Heroin"),
-    "Other opioids":                             ("T40.2", "Other opioids (natural & semi-synthetic)"),
-    "Methadone":                                 ("T40.3", "Methadone"),
-    "Other synthetic narcotics":                 ("T40.4", "Synthetic opioids excl. methadone (fentanyl)"),
-    "Cocaine":                                   ("T40.5", "Cocaine"),
-    "Cannabis (derivatives)":                    ("T40.7", "Cannabis"),
-    "Psychostimulants with abuse potential":     ("T43.6", "Psychostimulants (methamphetamine, amphetamines, MDMA)"),
+    "Heroin": ("T40.1", "Heroin"),
+    "Other opioids": ("T40.2", "Other opioids (natural & semi-synthetic)"),
+    "Methadone": ("T40.3", "Methadone"),
+    "Other synthetic narcotics": (
+        "T40.4",
+        "Synthetic opioids excl. methadone (fentanyl)",
+    ),
+    "Cocaine": ("T40.5", "Cocaine"),
+    "Cannabis (derivatives)": ("T40.7", "Cannabis"),
+    "Psychostimulants with abuse potential": (
+        "T43.6",
+        "Psychostimulants (methamphetamine, amphetamines, MDMA)",
+    ),
 }
 
 D77_PREFERRED_THROUGH = 2020
@@ -133,17 +139,21 @@ def parse_rows(client: WonderClient, xml: str, provisional: bool) -> list[dict]:
             continue
         drug_code, drug_name = parsed
 
-        records.append({
-            "year": current_year,
-            "drug_code": drug_code,
-            "drug_name": drug_name,
-            "deaths": deaths,
-            "provisional": provisional,
-        })
+        records.append(
+            {
+                "year": current_year,
+                "drug_code": drug_code,
+                "drug_name": drug_name,
+                "deaths": deaths,
+                "provisional": provisional,
+            }
+        )
     return records
 
 
-def run_query(client: WonderClient, dataset_id: str, query_file: Path, provisional: bool) -> list[dict]:
+def run_query(
+    client: WonderClient, dataset_id: str, query_file: Path, provisional: bool
+) -> list[dict]:
     print(f"  → [{dataset_id}] {query_file.name} …", flush=True)
     try:
         xml = client.execute_query_file(str(query_file))
@@ -155,7 +165,10 @@ def run_query(client: WonderClient, dataset_id: str, query_file: Path, provision
     years = sorted({r["year"] for r in records})
     drugs = sorted({r["drug_code"] for r in records})
     if years:
-        print(f"    {len(records)} rows  |  years {years[0]}–{years[-1]}  |  drugs {drugs}", flush=True)
+        print(
+            f"    {len(records)} rows  |  years {years[0]}–{years[-1]}  |  drugs {drugs}",
+            flush=True,
+        )
     else:
         print("    0 rows", flush=True)
     return records
@@ -179,14 +192,18 @@ def write_csv(records: list[dict], out_path: Path) -> None:
         writer = csv.writer(f)
         writer.writerow(["year", "drug_code", "drug_name", "deaths", "provisional"])
         for rec in records:
-            writer.writerow([
-                rec["year"],
-                rec["drug_code"],
-                rec["drug_name"],
-                "" if rec["deaths"] is None else int(rec["deaths"]),
-                str(rec["provisional"]).lower(),
-            ])
-    print(f"  ✓ {out_path.name}  ({len(records)} rows  |  years {years[0]}–{years[-1]})")
+            writer.writerow(
+                [
+                    rec["year"],
+                    rec["drug_code"],
+                    rec["drug_name"],
+                    "" if rec["deaths"] is None else int(rec["deaths"]),
+                    str(rec["provisional"]).lower(),
+                ]
+            )
+    print(
+        f"  ✓ {out_path.name}  ({len(records)} rows  |  years {years[0]}–{years[-1]})"
+    )
 
 
 def read_csv(path: Path) -> list[dict]:
@@ -195,13 +212,15 @@ def read_csv(path: Path) -> list[dict]:
     with open(path, newline="") as f:
         for row in csv.DictReader(f):
             deaths = row["deaths"].strip()
-            records.append({
-                "year": int(row["year"]),
-                "drug_code": row["drug_code"],
-                "drug_name": row["drug_name"],
-                "deaths": None if deaths == "" else int(deaths),
-                "provisional": row["provisional"].strip().lower() == "true",
-            })
+            records.append(
+                {
+                    "year": int(row["year"]),
+                    "drug_code": row["drug_code"],
+                    "drug_name": row["drug_name"],
+                    "deaths": None if deaths == "" else int(deaths),
+                    "provisional": row["provisional"].strip().lower() == "true",
+                }
+            )
     return records
 
 
@@ -212,7 +231,9 @@ def print_summary(records: list[dict]) -> None:
     lookup = {(r["year"], r["drug_code"]): r for r in records}
 
     col_w = 12
-    header = f"{'Year':<6}" + "".join(f"{code_to_name.get(d, d)[:col_w]:>{col_w}}" for d in drugs)
+    header = f"{'Year':<6}" + "".join(
+        f"{code_to_name.get(d, d)[:col_w]:>{col_w}}" for d in drugs
+    )
     print(header)
     print("-" * len(header))
     for yr in years:
@@ -226,7 +247,11 @@ def print_summary(records: list[dict]) -> None:
             else:
                 val = f"{int(rec['deaths']):,}"
             row += f"{val:>{col_w}}"
-        prov = " *" if any(lookup.get((yr, d), {}).get("provisional") for d in drugs) else ""
+        prov = (
+            " *"
+            if any(lookup.get((yr, d), {}).get("provisional") for d in drugs)
+            else ""
+        )
         print(row + prov)
     print("\n* provisional")
 
@@ -237,7 +262,7 @@ def main() -> None:
         "--refresh-final",
         action="store_true",
         help="Re-query WONDER for the final 1999–2020 data instead of reusing "
-             "the cached snapshot (use only if CDC restates the historical series).",
+        "the cached snapshot (use only if CDC restates the historical series).",
     )
     args = parser.parse_args()
 
@@ -279,7 +304,9 @@ def main() -> None:
         ("D176 (provisional, 2021+)", d176_records),
     )
 
-    print(f"\nMerging: D77 for 1999–{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+")
+    print(
+        f"\nMerging: D77 for 1999–{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+"
+    )
     merged = merge(d77_records, d176_records)
     print(f"Total merged rows: {len(merged)}\n")
 
@@ -288,7 +315,9 @@ def main() -> None:
     # Persist the final snapshot when it came fresh from WONDER (and validated),
     # so future runs can reuse it without re-querying.
     if not d77_from_cache:
-        write_csv([r for r in d77_records if r["year"] <= D77_PREFERRED_THROUGH], final_cache)
+        write_csv(
+            [r for r in d77_records if r["year"] <= D77_PREFERRED_THROUGH], final_cache
+        )
     write_csv(merged, OUTPUT_DIR / OUTPUT_CSV)
 
     print("\n── Deaths by substance and year (all intents, MCD) ──────────────────")

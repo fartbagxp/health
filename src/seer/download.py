@@ -57,7 +57,7 @@ def download_mortality_by_year(out_path: Path = _MORTALITY_BY_YEAR_PATH) -> None
     for code in sites:
         try:
             rows.extend(get_mortality_trend(site=code, compare_by="sex"))
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 - keep going so one failure doesn't sink the batch
             print(f"  WARNING: site {code} ({sites[code]}) failed: {exc}")
         time.sleep(_REQUEST_DELAY)
     _write_csv(out_path, rows)
@@ -73,7 +73,7 @@ def download_mortality_by_age(out_path: Path = _MORTALITY_BY_AGE_PATH) -> None:
     for code in sites:
         try:
             rows.extend(get_mortality_by_age(site=code, compare_by="sex"))
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 - keep going so one failure doesn't sink the batch
             print(f"  WARNING: site {code} ({sites[code]}) failed: {exc}")
         time.sleep(_REQUEST_DELAY)
     _write_csv(out_path, rows)
@@ -82,7 +82,9 @@ def download_mortality_by_age(out_path: Path = _MORTALITY_BY_AGE_PATH) -> None:
     )
 
 
-def download_mortality_by_year_age(out_path: Path = _MORTALITY_BY_YEAR_AGE_PATH) -> None:
+def download_mortality_by_year_age(
+    out_path: Path = _MORTALITY_BY_YEAR_AGE_PATH,
+) -> None:
     """U.S. mortality rate/count by year within each (coarse) age band, for
     every cataloged cancer site, split by sex.
 
@@ -105,18 +107,18 @@ def download_mortality_by_year_age(out_path: Path = _MORTALITY_BY_YEAR_AGE_PATH)
         for code, label in AGE_RANGE.items()
         if code != "1" and code not in _INVALID_YEAR_TREND_AGE_CODES
     }
-    for site_code in sites:
-        for age_code in age_ranges:
+    for site_code, site_label in sites.items():
+        for age_code, age_label in age_ranges.items():
             try:
                 rows.extend(
                     get_mortality_trend(
                         site=site_code, age_range=age_code, compare_by="sex"
                     )
                 )
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001 - keep going so one failure doesn't sink the batch
                 print(
-                    f"  WARNING: site {site_code} ({sites[site_code]}) "
-                    f"age {age_code} ({age_ranges[age_code]}) failed: {exc}"
+                    f"  WARNING: site {site_code} ({site_label}) "
+                    f"age {age_code} ({age_label}) failed: {exc}"
                 )
             time.sleep(_REQUEST_DELAY)
     _write_csv(out_path, rows)

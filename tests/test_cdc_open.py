@@ -61,7 +61,7 @@ class TestDatasets:
     def test_dataset_count(self):
         # Bump alongside any registry change -- this and the CLI's `list`
         # assertion below are the only two places the count is pinned.
-        assert len(DATASETS) == 68
+        assert len(DATASETS) == 69
 
 
 # =============================================================================

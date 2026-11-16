@@ -32,9 +32,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from wonder.client import WonderClient  # noqa: E402
-from wonder.queries._final_cache import read_final_cache, write_final_cache  # noqa: E402
-from wonder.queries._merge_guard import require_complete  # noqa: E402
+from wonder.client import WonderClient
+from wonder.queries._final_cache import read_final_cache, write_final_cache
+from wonder.queries._merge_guard import require_complete
 
 # ── Query configuration ────────────────────────────────────────────────────────
 QUERIES_DIR = Path(__file__).parent
@@ -221,7 +221,7 @@ def main() -> None:
         "--refresh-final",
         action="store_true",
         help="Re-query WONDER for the final 1979–2020 data instead of reusing "
-             "the cached snapshot (use only if CDC restates the historical series).",
+        "the cached snapshot (use only if CDC restates the historical series).",
     )
     args = parser.parse_args()
 

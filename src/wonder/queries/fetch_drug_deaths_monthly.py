@@ -50,8 +50,8 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from wonder.client import WonderClient  # noqa: E402
-from wonder.queries._merge_guard import require_complete  # noqa: E402
+from wonder.client import WonderClient
+from wonder.queries._merge_guard import require_complete
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -67,18 +67,34 @@ FINAL_CACHE_CSV = "drug-deaths-by-month-final-1999-2020.csv"
 RATE_LIMIT_SLEEP = 16
 
 WONDER_LABEL_TO_CODE: dict[str, tuple[str, str]] = {
-    "Heroin":                                    ("T40.1", "Heroin"),
-    "Other opioids":                             ("T40.2", "Other opioids (natural & semi-synthetic)"),
-    "Methadone":                                 ("T40.3", "Methadone"),
-    "Other synthetic narcotics":                 ("T40.4", "Synthetic opioids excl. methadone (fentanyl)"),
-    "Cocaine":                                   ("T40.5", "Cocaine"),
-    "Cannabis (derivatives)":                    ("T40.7", "Cannabis"),
-    "Psychostimulants with abuse potential":     ("T43.6", "Psychostimulants (methamphetamine, amphetamines, MDMA)"),
+    "Heroin": ("T40.1", "Heroin"),
+    "Other opioids": ("T40.2", "Other opioids (natural & semi-synthetic)"),
+    "Methadone": ("T40.3", "Methadone"),
+    "Other synthetic narcotics": (
+        "T40.4",
+        "Synthetic opioids excl. methadone (fentanyl)",
+    ),
+    "Cocaine": ("T40.5", "Cocaine"),
+    "Cannabis (derivatives)": ("T40.7", "Cannabis"),
+    "Psychostimulants with abuse potential": (
+        "T43.6",
+        "Psychostimulants (methamphetamine, amphetamines, MDMA)",
+    ),
 }
 
 MONTH_ABBR = {
-    "Jan": 1, "Feb": 2, "Mar": 3, "Apr": 4,  "May": 5,  "Jun": 6,
-    "Jul": 7, "Aug": 8, "Sep": 9, "Oct": 10, "Nov": 11, "Dec": 12,
+    "Jan": 1,
+    "Feb": 2,
+    "Mar": 3,
+    "Apr": 4,
+    "May": 5,
+    "Jun": 6,
+    "Jul": 7,
+    "Aug": 8,
+    "Sep": 9,
+    "Oct": 10,
+    "Nov": 11,
+    "Dec": 12,
 }
 
 D77_PREFERRED_THROUGH = 2020
@@ -134,18 +150,22 @@ def parse_rows(client: WonderClient, xml: str, provisional: bool) -> list[dict]:
 
         deaths = cells[3].get_numeric_value()
 
-        records.append({
-            "year": year,
-            "month": month,
-            "drug_code": drug_code,
-            "drug_name": drug_name,
-            "deaths": deaths,
-            "provisional": provisional,
-        })
+        records.append(
+            {
+                "year": year,
+                "month": month,
+                "drug_code": drug_code,
+                "drug_name": drug_name,
+                "deaths": deaths,
+                "provisional": provisional,
+            }
+        )
     return records
 
 
-def run_query(client: WonderClient, dataset_id: str, query_file: Path, provisional: bool) -> list[dict]:
+def run_query(
+    client: WonderClient, dataset_id: str, query_file: Path, provisional: bool
+) -> list[dict]:
     print(f"  → [{dataset_id}] {query_file.name} …", flush=True)
     try:
         xml = client.execute_query_file(str(query_file))
@@ -177,24 +197,32 @@ def merge(d77: list[dict], d176: list[dict]) -> list[dict]:
     for rec in d176:
         if rec["year"] > D77_PREFERRED_THROUGH:
             combined[(rec["year"], rec["month"], rec["drug_code"])] = rec
-    return sorted(combined.values(), key=lambda r: (r["year"], r["month"], r["drug_code"]))
+    return sorted(
+        combined.values(), key=lambda r: (r["year"], r["month"], r["drug_code"])
+    )
 
 
 def write_csv(records: list[dict], out_path: Path) -> None:
     years = sorted({r["year"] for r in records})
     with open(out_path, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["year", "month", "drug_code", "drug_name", "deaths", "provisional"])
+        writer.writerow(
+            ["year", "month", "drug_code", "drug_name", "deaths", "provisional"]
+        )
         for rec in records:
-            writer.writerow([
-                rec["year"],
-                rec["month"],
-                rec["drug_code"],
-                rec["drug_name"],
-                "" if rec["deaths"] is None else int(rec["deaths"]),
-                str(rec["provisional"]).lower(),
-            ])
-    print(f"  ✓ {out_path.name}  ({len(records)} rows  |  years {years[0]}–{years[-1]})")
+            writer.writerow(
+                [
+                    rec["year"],
+                    rec["month"],
+                    rec["drug_code"],
+                    rec["drug_name"],
+                    "" if rec["deaths"] is None else int(rec["deaths"]),
+                    str(rec["provisional"]).lower(),
+                ]
+            )
+    print(
+        f"  ✓ {out_path.name}  ({len(records)} rows  |  years {years[0]}–{years[-1]})"
+    )
 
 
 def read_csv(path: Path) -> list[dict]:
@@ -203,14 +231,16 @@ def read_csv(path: Path) -> list[dict]:
     with open(path, newline="") as f:
         for row in csv.DictReader(f):
             deaths = row["deaths"].strip()
-            records.append({
-                "year": int(row["year"]),
-                "month": int(row["month"]),
-                "drug_code": row["drug_code"],
-                "drug_name": row["drug_name"],
-                "deaths": None if deaths == "" else int(deaths),
-                "provisional": row["provisional"].strip().lower() == "true",
-            })
+            records.append(
+                {
+                    "year": int(row["year"]),
+                    "month": int(row["month"]),
+                    "drug_code": row["drug_code"],
+                    "drug_name": row["drug_name"],
+                    "deaths": None if deaths == "" else int(deaths),
+                    "provisional": row["provisional"].strip().lower() == "true",
+                }
+            )
     return records
 
 
@@ -220,7 +250,7 @@ def main() -> None:
         "--refresh-final",
         action="store_true",
         help="Re-query WONDER for the final 1999–2020 data instead of reusing "
-             "the cached snapshot (use only if CDC restates the historical series).",
+        "the cached snapshot (use only if CDC restates the historical series).",
     )
     args = parser.parse_args()
 
@@ -262,7 +292,9 @@ def main() -> None:
         ("D176 (provisional, 2021+)", d176_records),
     )
 
-    print(f"\nMerging: D77 for 1999–{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+")
+    print(
+        f"\nMerging: D77 for 1999–{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+"
+    )
     merged = merge(d77_records, d176_records)
     print(f"Total merged rows: {len(merged)}\n")
 
@@ -270,7 +302,9 @@ def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     # Persist the final snapshot when it came fresh from WONDER (and validated).
     if not d77_from_cache:
-        write_csv([r for r in d77_records if r["year"] <= D77_PREFERRED_THROUGH], final_cache)
+        write_csv(
+            [r for r in d77_records if r["year"] <= D77_PREFERRED_THROUGH], final_cache
+        )
     write_csv(merged, OUTPUT_DIR / OUTPUT_CSV)
     print("\nDone.")
 

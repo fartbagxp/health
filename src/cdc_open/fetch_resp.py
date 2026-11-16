@@ -191,7 +191,7 @@ def main() -> None:
     ]:
         try:
             fn()
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 - keep going so one failure doesn't sink the batch
             print(f"ERROR: {exc}")
             failed.append((label, exc))
 

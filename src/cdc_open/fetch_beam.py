@@ -48,13 +48,15 @@ def fetch_beam_foodborne(out_dir: Path = _OUT_DIR) -> list[dict]:
     """Aggregate human BEAM isolates by month and pathogen, national total."""
     print("Fetching BEAM foodborne pathogen data (jbhn-e8xn) ...", end=" ", flush=True)
 
-    raw = _fetch({
-        "$select": "year,month,pathogen,sum(number_of_isolates) as isolates",
-        "$where": "source_type='Human'",
-        "$group": "year,month,pathogen",
-        "$order": "year,month,pathogen",
-        "$limit": 5000,
-    })
+    raw = _fetch(
+        {
+            "$select": "year,month,pathogen,sum(number_of_isolates) as isolates",
+            "$where": "source_type='Human'",
+            "$group": "year,month,pathogen",
+            "$order": "year,month,pathogen",
+            "$limit": 5000,
+        }
+    )
 
     rows = []
     for r in raw:
@@ -73,8 +75,12 @@ def fetch_beam_foodborne(out_dir: Path = _OUT_DIR) -> list[dict]:
     _write_csv(path, rows, ["date", "pathogen", "isolates"])
 
     pathogens = sorted({r["pathogen"] for r in rows})
-    date_range = f"{rows[0]['date'][:7]} – {rows[-1]['date'][:7]}" if rows else "no data"
-    print(f"{len(rows)} rows ({date_range}, pathogens: {', '.join(pathogens)}) -> {path}")
+    date_range = (
+        f"{rows[0]['date'][:7]} – {rows[-1]['date'][:7]}" if rows else "no data"
+    )
+    print(
+        f"{len(rows)} rows ({date_range}, pathogens: {', '.join(pathogens)}) -> {path}"
+    )
     return rows
 
 

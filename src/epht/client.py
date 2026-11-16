@@ -111,7 +111,9 @@ def geographic_types(measure_id: int) -> list[dict]:
     )
 
 
-def stratification_levels(measure_id: int, geo_type_id: int, smoothing: int = 0) -> list[dict]:
+def stratification_levels(
+    measure_id: int, geo_type_id: int, smoothing: int = 0
+) -> list[dict]:
     """Stratification levels for a measure x geographic type. The plain level
     (``name == 'State'``) has an empty ``stratificationType`` -- that's the
     one-row-per-state-per-year series with no demographic split."""

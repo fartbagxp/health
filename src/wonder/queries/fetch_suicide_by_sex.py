@@ -24,17 +24,20 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from wonder.client import WonderClient  # noqa: E402
-from wonder.queries._merge_guard import require_complete  # noqa: E402
+from wonder.client import WonderClient
+from wonder.queries._merge_guard import require_complete
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_PATH = PROJECT_ROOT / "data" / "raw" / "wisqars" / "suicide_by_sex.csv"
-INJURY_MORTALITY_PATH = PROJECT_ROOT / "data" / "raw" / "wisqars" / "injury_mortality.csv"
+INJURY_MORTALITY_PATH = (
+    PROJECT_ROOT / "data" / "raw" / "wisqars" / "injury_mortality.csv"
+)
 
 RATE_LIMIT_SLEEP = 16
 
 
 # ── Source 1: derive 1999-2016 from injury_mortality.csv ─────────────────────
+
 
 def load_injury_mortality() -> list[dict]:
     """Sum age-specific suicide deaths and population by year × sex (1999-2016)."""
@@ -49,19 +52,31 @@ def load_injury_mortality() -> list[dict]:
                 continue
             key = (int(row["year"]), row["sex"])
             totals[key]["deaths"] += int(row["deaths"]) if row["deaths"] else 0
-            totals[key]["population"] += int(row["population"]) if row["population"] else 0
+            totals[key]["population"] += (
+                int(row["population"]) if row["population"] else 0
+            )
 
     records = []
     for (year, sex), v in totals.items():
         rate = v["deaths"] / v["population"] * 100_000 if v["population"] else 0
-        records.append({"year": year, "sex": sex, "deaths": v["deaths"],
-                        "population": v["population"], "crude_rate": round(rate, 2)})
+        records.append(
+            {
+                "year": year,
+                "sex": sex,
+                "deaths": v["deaths"],
+                "population": v["population"],
+                "crude_rate": round(rate, 2),
+            }
+        )
     years = sorted({r["year"] for r in records})
-    print(f"  injury_mortality.csv: {len(records)} rows  |  years {years[0]}–{years[-1]}")
+    print(
+        f"  injury_mortality.csv: {len(records)} rows  |  years {years[0]}–{years[-1]}"
+    )
     return records
 
 
 # ── Source 2 & 3: parse flat WONDER responses (Year × Sex grouping) ───────────
+
 
 def _is_year(label: str) -> bool:
     s = label.strip()
@@ -126,17 +141,20 @@ def parse_wonder_by_sex(client: WonderClient, xml: str, year_range: str) -> list
             continue
 
         crude_rate = (
-            crude_rate_raw if crude_rate_raw is not None
+            crude_rate_raw
+            if crude_rate_raw is not None
             else (deaths / population * 100_000 if population else 0)
         )
 
-        records.append({
-            "year": current_year,
-            "sex": sex_label,
-            "deaths": int(deaths),
-            "population": int(population) if population else 0,
-            "crude_rate": round(crude_rate, 2),
-        })
+        records.append(
+            {
+                "year": current_year,
+                "sex": sex_label,
+                "deaths": int(deaths),
+                "population": int(population) if population else 0,
+                "crude_rate": round(crude_rate, 2),
+            }
+        )
 
     years = sorted({r["year"] for r in records})
     rng = f"{years[0]}–{years[-1]}" if years else "none"
@@ -156,6 +174,7 @@ def run_wonder_query(client: WonderClient, query_file: Path, label: str) -> list
 
 # ── Merge and deduplicate ─────────────────────────────────────────────────────
 
+
 def add_both_sexes(records: list[dict]) -> list[dict]:
     """For years that have Male + Female but no 'Both sexes', compute it."""
     by_year: dict[int, dict[str, dict]] = {}
@@ -170,13 +189,15 @@ def add_both_sexes(records: list[dict]) -> list[dict]:
             total_deaths = m["deaths"] + f["deaths"]
             total_pop = m["population"] + f["population"]
             rate = total_deaths / total_pop * 100_000 if total_pop else 0
-            extra.append({
-                "year": year,
-                "sex": "Both sexes",
-                "deaths": total_deaths,
-                "population": total_pop,
-                "crude_rate": round(rate, 2),
-            })
+            extra.append(
+                {
+                    "year": year,
+                    "sex": "Both sexes",
+                    "deaths": total_deaths,
+                    "population": total_pop,
+                    "crude_rate": round(rate, 2),
+                }
+            )
     return records + extra
 
 
@@ -189,6 +210,7 @@ def merge(all_records: list[dict]) -> list[dict]:
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
+
 
 def main() -> None:
     print("Building U.S. suicide deaths by sex (1999–2024) …\n")
@@ -238,7 +260,9 @@ def main() -> None:
     print(f"\nMerged: {len(merged)} rows  |  years {years[0]}–{years[-1]}\n")
 
     with open(OUTPUT_PATH, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=["year", "sex", "deaths", "population", "crude_rate"])
+        writer = csv.DictWriter(
+            f, fieldnames=["year", "sex", "deaths", "population", "crude_rate"]
+        )
         writer.writeheader()
         writer.writerows(merged)
 

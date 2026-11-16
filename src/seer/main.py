@@ -115,13 +115,15 @@ def main():
         description="Query NCI SEER cancer incidence/mortality statistics",
     )
     sub = parser.add_subparsers(dest="command", required=True)
-    _fmt = dict(choices=["table", "json", "csv"], default="table")
-    _sex = dict(choices=["both", "male", "female"], default="both")
-    _race = dict(choices=sorted(RACE), default="1", metavar="RACE_CODE")
-    _age = dict(choices=sorted(AGE_RANGE), default="1", metavar="AGE_RANGE_CODE")
-    _compare_by = dict(
-        choices=["sex", "race", "age_range"], default=None, metavar="FIELD"
-    )
+    _fmt = {"choices": ["table", "json", "csv"], "default": "table"}
+    _sex = {"choices": ["both", "male", "female"], "default": "both"}
+    _race = {"choices": sorted(RACE), "default": "1", "metavar": "RACE_CODE"}
+    _age = {"choices": sorted(AGE_RANGE), "default": "1", "metavar": "AGE_RANGE_CODE"}
+    _compare_by = {
+        "choices": ["sex", "race", "age_range"],
+        "default": None,
+        "metavar": "FIELD",
+    }
 
     p_sites = sub.add_parser("sites", help="List/search the cancer site catalog")
     p_sites.add_argument(
@@ -185,7 +187,7 @@ def main():
     args = parser.parse_args()
     try:
         args.func(args)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - top-level CLI error handler
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 

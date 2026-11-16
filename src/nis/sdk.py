@@ -35,24 +35,21 @@ Examples
 
 from __future__ import annotations
 
-import statistics
 from collections import defaultdict
-from typing import Any, Iterator
+from collections.abc import Iterator
+from typing import Any
 
 import requests
 
 from nis.datasets import (
-    CHILD_COLS,
     FIPS_TO_STATE,
     STATE_TO_FIPS,
     SURVEY_COLS,
     SURVEY_VAX_COLS,
     SURVEY_YEARS,
-    TEEN_COLS,
     NISYear,
 )
 from nis.parser import parse_sas_columns, stream_dat
-
 
 # ── Internals ──────────────────────────────────────────────────────────────────
 
@@ -195,7 +192,14 @@ def get_vaccination_rates(
     weight_col = "PROVWT_D" if survey == "child" else "PROVWT_C"
     geo_col = "STATE" if survey == "teen" else "RETEILI"
 
-    wanted = vax_cols | {"SHOT_HES", "NOT_SURE_VACC", weight_col, geo_col, "STATE", "RETEILI"}
+    wanted = vax_cols | {
+        "SHOT_HES",
+        "NOT_SURE_VACC",
+        weight_col,
+        geo_col,
+        "STATE",
+        "RETEILI",
+    }
     records = list(stream_records(survey, year, state=state, columns=wanted))
 
     # Accumulate by state FIPS

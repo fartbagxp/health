@@ -60,7 +60,9 @@ def download_all(out_dir: Path = _OUT_DIR) -> None:
             csv_text = _records_to_csv(rows)
             size = len(csv_text.encode())
             if size > _MAX_BYTES:
-                print(f"SKIP -- {size/1048576:.1f}MB over {_MAX_BYTES/1048576:.0f}MB cap")
+                print(
+                    f"SKIP -- {size / 1048576:.1f}MB over {_MAX_BYTES / 1048576:.0f}MB cap"
+                )
                 skipped.append((key, size))
                 continue
             if not rows:
@@ -69,7 +71,7 @@ def download_all(out_dir: Path = _OUT_DIR) -> None:
                 continue
             path = out_dir / f"{key}.csv"
             path.write_text(csv_text)
-            print(f"{len(rows)} rows, {size/1024:.0f}KB -> {path}")
+            print(f"{len(rows)} rows, {size / 1024:.0f}KB -> {path}")
             ok += 1
         except Exception as exc:  # noqa: BLE001
             print(f"ERROR: {exc}")
@@ -77,7 +79,7 @@ def download_all(out_dir: Path = _OUT_DIR) -> None:
 
     print(f"\nDone: {ok} ok, {len(skipped)} skipped (too big), {len(failed)} failed.")
     for key, size in skipped:
-        print(f"  SKIPPED {key}: {size/1048576:.1f}MB", file=sys.stderr)
+        print(f"  SKIPPED {key}: {size / 1048576:.1f}MB", file=sys.stderr)
     if failed:
         for key, exc in failed:
             print(f"  FAILED {key}: {exc}", file=sys.stderr)

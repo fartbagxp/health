@@ -59,9 +59,7 @@ def _delphi_get(
         if now - ts < _CACHE_TTL:
             return data
 
-    resp = _get_session().get(
-        f"{_DELPHI_BASE}/{endpoint}/", params=params, timeout=60
-    )
+    resp = _get_session().get(f"{_DELPHI_BASE}/{endpoint}/", params=params, timeout=60)
     resp.raise_for_status()
     body = resp.json()
 
@@ -131,7 +129,9 @@ def fluview_clinical_fetch(
     region, epiweek, total_specimens, total_a, total_b,
     percent_positive, percent_a, percent_b
     """
-    cache_key = f"fluview_clinical:{','.join(sorted(r.lower() for r in regions))}:{epiweeks}"
+    cache_key = (
+        f"fluview_clinical:{','.join(sorted(r.lower() for r in regions))}:{epiweeks}"
+    )
     return _delphi_get(
         "fluview_clinical",
         {"regions": ",".join(regions), "epiweeks": epiweeks},

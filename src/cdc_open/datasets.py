@@ -266,7 +266,14 @@ DATASETS: dict[str, Dataset] = {
             "in `nutrition_obesity`, which is the expected direction and size of self-report bias."
         ),
         years="1999-2000–2017-2018",
-        key_columns=["survey_years", "sex", "age_group", "measure", "percent", "standard_error"],
+        key_columns=[
+            "survey_years",
+            "sex",
+            "age_group",
+            "measure",
+            "percent",
+            "standard_error",
+        ],
     ),
     "death_rates_historical": Dataset(
         charted=True,
@@ -939,6 +946,33 @@ DATASETS: dict[str, Dataset] = {
             "median",
             "lower",
             "upper",
+            "p_growing",
+            "category",
+        ],
+    ),
+    "epidemic_trends_rt_state_national": Dataset(
+        # CFA's newer multi-level Rt archive (HGAM model). The full dataset is
+        # ~3.8M rows / ~560MB, almost all of it local HSA rows repeated once
+        # per county, so we keep only state + national rows (~61k rows / ~7MB
+        # as of 2026-11, growing ~1MB per weekly release). Every release
+        # (origin_date) is kept, each covering the trailing 8 weeks of
+        # target_dates. Also the source for cdc_open.fetch_epidemic_trends now
+        # that 5dqz-y4ea came back empty on 2026-11-13.
+        id="ahfs-x44r",
+        name="Epidemic Trends and Rt: COVID-19, Influenza, and RSV (state + national)",
+        description="Weekly releases of estimated Rt, trend category, and probability of epidemic growth for COVID-19, influenza, and RSV at the national and state level",
+        years="2026–present",
+        soql_where="estimate_level in ('state', 'national')",
+        key_columns=[
+            "origin_date",
+            "target_date",
+            "horizon",
+            "estimate_level",
+            "state_name",
+            "disease",
+            "median",
+            "lower_95",
+            "upper_95",
             "p_growing",
             "category",
         ],

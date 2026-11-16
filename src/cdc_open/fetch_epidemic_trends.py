@@ -2,13 +2,15 @@
 Fetch CDC's Center for Forecasting and Outbreak Analytics (CFA) epidemic-trends
 nowcast and reduce it to a small, committed national trend series.
 
-The source dataset ``5dqz-y4ea`` ("CDC Epidemic Trends and Rt") classifies the
-recent trajectory of COVID-19, Influenza, and RSV in each state/day as Growing,
-Likely Growing, Not Changing, Likely Declining, Declining, or Not Estimated. At
-full resolution it re-publishes ~87 revision snapshots (~520k rows / ~72MB), far
-past what a git repo should carry, so the bulk downloader skips it.
+The source dataset ``ahfs-x44r`` ("Epidemic Trends and Rt: COVID-19, Influenza,
+and RSV at National, State, Local Level") classifies the recent trajectory of
+COVID-19, Influenza, and RSV in each location/day as Growing, Likely Growing,
+Not Changing, Likely Declining, Declining, or Not Estimated. It replaced the
+state-only ``5dqz-y4ea`` as our source after that dataset was emptied on
+2026-11-13.
 
-This script instead pulls only the latest ``as_of`` snapshot (~4k rows), then:
+This script pulls only the latest release (``origin_date``) at the state level
+(~8.5k rows: 51 states x 3 diseases x 8 weeks), then:
 
   * writes that raw snapshot to data/raw/cdc_open/epidemic_trends_rt.csv
     (state x disease x day trend categories, small enough to commit), and
@@ -30,11 +32,13 @@ from pathlib import Path
 import requests
 
 _BASE_URL = "https://data.cdc.gov/resource"
-_DATASET_ID = "5dqz-y4ea"
+_DATASET_ID = "ahfs-x44r"
 _RAW_DIR = Path("data/raw/cdc_open")
 _PROC_DIR = Path("data/processed/cdc_open")
 _RAW_PATH = _RAW_DIR / "epidemic_trends_rt.csv"
 _PROC_PATH = _PROC_DIR / "epidemic_trends_national.csv"
+
+_STATE_FILTER = "estimate_level='state'"
 
 _RAW_COLUMNS = ["as_of", "disease", "state", "date", "category"]
 _PROC_COLUMNS = ["date", "disease", "states_growing", "states_estimated", "pct_growing"]
@@ -62,21 +66,21 @@ def _get(params: dict) -> list[dict]:
 
 
 def _latest_as_of() -> str:
-    rows = _get({"$select": "max(as_of) as m"})
+    rows = _get({"$select": "max(origin_date) as m", "$where": _STATE_FILTER})
     if not rows or not rows[0].get("m"):
-        raise RuntimeError("could not determine latest as_of for 5dqz-y4ea")
+        raise RuntimeError(f"could not determine latest origin_date for {_DATASET_ID}")
     return rows[0]["m"]
 
 
 def _fetch_snapshot(as_of: str) -> list[dict]:
-    """All state x disease x day rows for one as_of snapshot."""
+    """All state x disease x day rows for one release, in the legacy raw shape."""
     rows: list[dict] = []
     offset = 0
     while True:
         page = _get(
             {
-                "$where": f"as_of='{as_of}'",
-                "$order": "date,disease,state",
+                "$where": f"{_STATE_FILTER} AND origin_date='{as_of}'",
+                "$order": "target_date,disease,state_name",
                 "$limit": 50_000,
                 "$offset": offset,
             }
@@ -85,7 +89,17 @@ def _fetch_snapshot(as_of: str) -> list[dict]:
         if len(page) < 50_000:
             break
         offset += 50_000
-    return rows
+    # Keep the column names the committed CSVs (and health-charts) already use.
+    return [
+        {
+            "as_of": r.get("origin_date"),
+            "disease": r.get("disease"),
+            "state": r.get("state_name"),
+            "date": r.get("target_date"),
+            "category": r.get("category"),
+        }
+        for r in rows
+    ]
 
 
 def _clean_row(r: dict) -> dict:
@@ -133,7 +147,7 @@ def _load_existing() -> dict[tuple[str, str], dict]:
                     "growing": int(row["states_growing"]),
                     "estimated": int(row["states_estimated"]),
                 }
-            except (KeyError, ValueError):
+            except KeyError, ValueError:
                 continue
     return out
 
@@ -152,12 +166,12 @@ def _write_rollup(merged: dict[tuple[str, str], dict]) -> int:
 
 
 def main() -> None:
-    print("Fetching CFA epidemic trends (5dqz-y4ea)...", end=" ", flush=True)
+    print(f"Fetching CFA epidemic trends ({_DATASET_ID})...", end=" ", flush=True)
     try:
         as_of = _latest_as_of()
         snapshot = _fetch_snapshot(as_of)
         print(f"latest as_of={as_of.split('T')[0]}, {len(snapshot)} rows")
-    except Exception as exc:
+    except (requests.RequestException, RuntimeError, ValueError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         sys.exit(1)
 

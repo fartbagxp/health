@@ -42,20 +42,58 @@ _LABELS = ("Measles, Imported", "Measles, Indigenous")
 # HHS regions ("NEW ENGLAND"), a national total ("US RESIDENTS"), and a few
 # territories with no county/state boundary in us-atlas, all excluded.
 _STATE_TO_FIPS: dict[str, str] = {
-    "Alabama": "01", "Alaska": "02", "Arizona": "04", "Arkansas": "05",
-    "California": "06", "Colorado": "08", "Connecticut": "09", "Delaware": "10",
-    "District of Columbia": "11", "Florida": "12", "Georgia": "13", "Hawaii": "15",
-    "Idaho": "16", "Illinois": "17", "Indiana": "18", "Iowa": "19",
-    "Kansas": "20", "Kentucky": "21", "Louisiana": "22", "Maine": "23",
-    "Maryland": "24", "Massachusetts": "25", "Michigan": "26", "Minnesota": "27",
-    "Mississippi": "28", "Missouri": "29", "Montana": "30", "Nebraska": "31",
-    "Nevada": "32", "New Hampshire": "33", "New Jersey": "34", "New Mexico": "35",
-    "New York": "36", "New York City": "36", "North Carolina": "37", "North Dakota": "38",
-    "Ohio": "39", "Oklahoma": "40", "Oregon": "41", "Pennsylvania": "42",
-    "Rhode Island": "44", "South Carolina": "45", "South Dakota": "46",
-    "Tennessee": "47", "Texas": "48", "Utah": "49", "Vermont": "50",
-    "Virginia": "51", "Washington": "53", "West Virginia": "54",
-    "Wisconsin": "55", "Wyoming": "56",
+    "Alabama": "01",
+    "Alaska": "02",
+    "Arizona": "04",
+    "Arkansas": "05",
+    "California": "06",
+    "Colorado": "08",
+    "Connecticut": "09",
+    "Delaware": "10",
+    "District of Columbia": "11",
+    "Florida": "12",
+    "Georgia": "13",
+    "Hawaii": "15",
+    "Idaho": "16",
+    "Illinois": "17",
+    "Indiana": "18",
+    "Iowa": "19",
+    "Kansas": "20",
+    "Kentucky": "21",
+    "Louisiana": "22",
+    "Maine": "23",
+    "Maryland": "24",
+    "Massachusetts": "25",
+    "Michigan": "26",
+    "Minnesota": "27",
+    "Mississippi": "28",
+    "Missouri": "29",
+    "Montana": "30",
+    "Nebraska": "31",
+    "Nevada": "32",
+    "New Hampshire": "33",
+    "New Jersey": "34",
+    "New Mexico": "35",
+    "New York": "36",
+    "New York City": "36",
+    "North Carolina": "37",
+    "North Dakota": "38",
+    "Ohio": "39",
+    "Oklahoma": "40",
+    "Oregon": "41",
+    "Pennsylvania": "42",
+    "Rhode Island": "44",
+    "South Carolina": "45",
+    "South Dakota": "46",
+    "Tennessee": "47",
+    "Texas": "48",
+    "Utah": "49",
+    "Vermont": "50",
+    "Virginia": "51",
+    "Washington": "53",
+    "West Virginia": "54",
+    "Wisconsin": "55",
+    "Wyoming": "56",
 }
 
 
@@ -74,16 +112,24 @@ def _fetch(params: dict) -> list[dict]:
     return resp.json()
 
 
-def fetch_measles_by_state(out_dir: Path = _OUT_DIR, min_year: int = 2024) -> list[dict]:
+def fetch_measles_by_state(
+    out_dir: Path = _OUT_DIR, min_year: int = 2024
+) -> list[dict]:
     """Each state's latest year-to-date cumulative measles case count."""
-    print(f"Fetching NNDSS measles-by-state data ({_NNDSS_ID}, {min_year}-present) ...", end=" ", flush=True)
+    print(
+        f"Fetching NNDSS measles-by-state data ({_NNDSS_ID}, {min_year}-present) ...",
+        end=" ",
+        flush=True,
+    )
 
     label_clause = " OR ".join(f"label='{label}'" for label in _LABELS)
-    raw = _fetch({
-        "$select": "states,year,week,label,m2",
-        "$where": f"({label_clause}) AND year >= '{min_year}'",
-        "$limit": 50000,
-    })
+    raw = _fetch(
+        {
+            "$select": "states,year,week,label,m2",
+            "$where": f"({label_clause}) AND year >= '{min_year}'",
+            "$limit": 50000,
+        }
+    )
 
     # Latest (year, week) seen per state, summing the two labels at that week.
     latest: dict[str, tuple[int, int]] = {}
@@ -97,7 +143,7 @@ def fetch_measles_by_state(out_dir: Path = _OUT_DIR, min_year: int = 2024) -> li
         try:
             year, week = int(row.get("year", 0)), int(row.get("week", 0))
             cases = float(row.get("m2") or 0)
-        except (TypeError, ValueError):
+        except TypeError, ValueError:
             continue
         by_state_week[(state, year, week)] += cases
 
@@ -108,19 +154,25 @@ def fetch_measles_by_state(out_dir: Path = _OUT_DIR, min_year: int = 2024) -> li
 
     rows = []
     for state, (year, week) in sorted(latest.items()):
-        rows.append({
-            "state": state,
-            "state_fips": _STATE_TO_FIPS[state],
-            "year": year,
-            "week": week,
-            "cases": int(cases_at_latest[state]),
-        })
+        rows.append(
+            {
+                "state": state,
+                "state_fips": _STATE_TO_FIPS[state],
+                "year": year,
+                "week": week,
+                "cases": int(cases_at_latest[state]),
+            }
+        )
     rows.sort(key=lambda r: -r["cases"])
 
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / "measles_by_state.csv"
     with open(path, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=["state", "state_fips", "year", "week", "cases"], lineterminator="\n")
+        writer = csv.DictWriter(
+            f,
+            fieldnames=["state", "state_fips", "year", "week", "cases"],
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
 

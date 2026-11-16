@@ -12,6 +12,7 @@ every source that is supposed to contribute rows must actually contribute rows
 (and, optionally, reach an expected year) or the process exits non-zero without
 writing anything.
 """
+
 from __future__ import annotations
 
 import sys

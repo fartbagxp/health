@@ -41,20 +41,57 @@ _LIMIT = 50000
 # column (Title Case, "District of Columbia"). 50 states + DC = 51 rows, which
 # is exactly what the Geographic-Characteristic classification carries.
 _STATE_TO_FIPS: dict[str, str] = {
-    "Alabama": "01", "Alaska": "02", "Arizona": "04", "Arkansas": "05",
-    "California": "06", "Colorado": "08", "Connecticut": "09", "Delaware": "10",
-    "District of Columbia": "11", "Florida": "12", "Georgia": "13", "Hawaii": "15",
-    "Idaho": "16", "Illinois": "17", "Indiana": "18", "Iowa": "19",
-    "Kansas": "20", "Kentucky": "21", "Louisiana": "22", "Maine": "23",
-    "Maryland": "24", "Massachusetts": "25", "Michigan": "26", "Minnesota": "27",
-    "Mississippi": "28", "Missouri": "29", "Montana": "30", "Nebraska": "31",
-    "Nevada": "32", "New Hampshire": "33", "New Jersey": "34", "New Mexico": "35",
-    "New York": "36", "North Carolina": "37", "North Dakota": "38",
-    "Ohio": "39", "Oklahoma": "40", "Oregon": "41", "Pennsylvania": "42",
-    "Rhode Island": "44", "South Carolina": "45", "South Dakota": "46",
-    "Tennessee": "47", "Texas": "48", "Utah": "49", "Vermont": "50",
-    "Virginia": "51", "Washington": "53", "West Virginia": "54",
-    "Wisconsin": "55", "Wyoming": "56",
+    "Alabama": "01",
+    "Alaska": "02",
+    "Arizona": "04",
+    "Arkansas": "05",
+    "California": "06",
+    "Colorado": "08",
+    "Connecticut": "09",
+    "Delaware": "10",
+    "District of Columbia": "11",
+    "Florida": "12",
+    "Georgia": "13",
+    "Hawaii": "15",
+    "Idaho": "16",
+    "Illinois": "17",
+    "Indiana": "18",
+    "Iowa": "19",
+    "Kansas": "20",
+    "Kentucky": "21",
+    "Louisiana": "22",
+    "Maine": "23",
+    "Maryland": "24",
+    "Massachusetts": "25",
+    "Michigan": "26",
+    "Minnesota": "27",
+    "Mississippi": "28",
+    "Missouri": "29",
+    "Montana": "30",
+    "Nebraska": "31",
+    "Nevada": "32",
+    "New Hampshire": "33",
+    "New Jersey": "34",
+    "New Mexico": "35",
+    "New York": "36",
+    "North Carolina": "37",
+    "North Dakota": "38",
+    "Ohio": "39",
+    "Oklahoma": "40",
+    "Oregon": "41",
+    "Pennsylvania": "42",
+    "Rhode Island": "44",
+    "South Carolina": "45",
+    "South Dakota": "46",
+    "Tennessee": "47",
+    "Texas": "48",
+    "Utah": "49",
+    "Vermont": "50",
+    "Virginia": "51",
+    "Washington": "53",
+    "West Virginia": "54",
+    "Wisconsin": "55",
+    "Wyoming": "56",
 }
 
 
@@ -76,7 +113,9 @@ def _fetch(dataset_id: str, params: dict) -> list[dict]:
 def _write_csv(path: Path, rows: list[dict], fieldnames: list[str]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n")
+        writer = csv.DictWriter(
+            f, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(rows)
 
@@ -93,7 +132,11 @@ def fetch_national_health_spending(out_dir: Path = _OUT_DIR) -> list[dict]:
     """
     entry = DATASETS["national-health-spending"]
     dataset_id = entry.id
-    print(f"Fetching national health spending ({dataset_id}, 1960-present) ...", end=" ", flush=True)
+    print(
+        f"Fetching national health spending ({dataset_id}, 1960-present) ...",
+        end=" ",
+        flush=True,
+    )
 
     raw = _fetch(
         dataset_id,
@@ -152,7 +195,11 @@ def fetch_drug_overdose_by_type(out_dir: Path = _OUT_DIR) -> list[dict]:
     """
     entry = DATASETS["drug-overdose-deaths"]
     dataset_id = entry.id
-    print(f"Fetching drug-overdose death rates by type ({dataset_id}) ...", end=" ", flush=True)
+    print(
+        f"Fetching drug-overdose death rates by type ({dataset_id}) ...",
+        end=" ",
+        flush=True,
+    )
 
     raw = _fetch(
         dataset_id,
@@ -261,7 +308,7 @@ def main() -> None:
     for fn in fetchers:
         try:
             fn()
-        except Exception as exc:  # keep going so one bad source doesn't sink the rest
+        except Exception as exc:  # noqa: BLE001 - keep going so one failure doesn't sink the batch
             print(f"FAILED ({fn.__name__}): {exc}")
             failed.append(fn.__name__)
     if failed:

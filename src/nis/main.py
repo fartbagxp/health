@@ -33,9 +33,12 @@ import json
 import sys
 from typing import Any
 
-from nis.datasets import CHILD_VAX_COLS, TEEN_VAX_COLS
-from nis.sdk import get_national_rates, get_vaccination_rates, list_years, stream_records
-
+from nis.sdk import (
+    get_national_rates,
+    get_vaccination_rates,
+    list_years,
+    stream_records,
+)
 
 # ── Commands ───────────────────────────────────────────────────────────────────
 
@@ -62,7 +65,9 @@ def cmd_stream(args: argparse.Namespace) -> None:
 def cmd_rates(args: argparse.Namespace) -> None:
     vaccines = args.vaccines if args.vaccines else None
     try:
-        rows = get_vaccination_rates(args.survey, args.year, state=args.state, vaccines=vaccines)
+        rows = get_vaccination_rates(
+            args.survey, args.year, state=args.state, vaccines=vaccines
+        )
         _output(rows, args.format)
     except (ValueError, RuntimeError) as e:
         print(f"Error: {e}", file=sys.stderr)
@@ -97,7 +102,9 @@ def _output(rows: list[dict[str, Any]], fmt: str) -> None:
         print(buf.getvalue(), end="")
     elif fmt == "table":
         keys = list(rows[0].keys())
-        widths = {k: max(len(str(k)), max(len(str(r.get(k, ""))) for r in rows)) for k in keys}
+        widths = {
+            k: max(len(str(k)), max(len(str(r.get(k, ""))) for r in rows)) for k in keys
+        }
         header = "  ".join(str(k).ljust(widths[k]) for k in keys)
         print(header)
         print("-" * len(header))
@@ -128,12 +135,23 @@ def main() -> None:
     sp = subparsers.add_parser("stream", help="Stream raw respondent records")
     sp.add_argument("survey", choices=["child", "teen"])
     sp.add_argument("year", type=int)
-    sp.add_argument("--state", metavar="STATE",
-                    help="Filter by state: FIPS code ('06'), postal ('CA'), or full name ('California')")
-    sp.add_argument("--vaccines", nargs="+", metavar="VAR",
-                    help="Column names to include (default: all vaccination + geo + hesitancy columns)")
-    sp.add_argument("--limit", type=int, metavar="N",
-                    help="Return at most N records (buffered into memory)")
+    sp.add_argument(
+        "--state",
+        metavar="STATE",
+        help="Filter by state: FIPS code ('06'), postal ('CA'), or full name ('California')",
+    )
+    sp.add_argument(
+        "--vaccines",
+        nargs="+",
+        metavar="VAR",
+        help="Column names to include (default: all vaccination + geo + hesitancy columns)",
+    )
+    sp.add_argument(
+        "--limit",
+        type=int,
+        metavar="N",
+        help="Return at most N records (buffered into memory)",
+    )
     sp.add_argument("-f", "--format", choices=["json", "csv", "table"], default="csv")
     sp.set_defaults(func=cmd_stream)
 
@@ -141,10 +159,13 @@ def main() -> None:
     rp = subparsers.add_parser("rates", help="State-level UTD vaccination rates")
     rp.add_argument("survey", choices=["child", "teen"])
     rp.add_argument("year", type=int)
-    rp.add_argument("--state", metavar="STATE",
-                    help="Limit to one state")
-    rp.add_argument("--vaccines", nargs="+", metavar="VAR",
-                    help="UTD column names to aggregate (default: all)")
+    rp.add_argument("--state", metavar="STATE", help="Limit to one state")
+    rp.add_argument(
+        "--vaccines",
+        nargs="+",
+        metavar="VAR",
+        help="UTD column names to aggregate (default: all)",
+    )
     rp.add_argument("-f", "--format", choices=["json", "csv", "table"], default="table")
     rp.set_defaults(func=cmd_rates)
 
@@ -152,9 +173,15 @@ def main() -> None:
     np_ = subparsers.add_parser("national", help="National-level UTD vaccination rates")
     np_.add_argument("survey", choices=["child", "teen"])
     np_.add_argument("year", type=int)
-    np_.add_argument("--vaccines", nargs="+", metavar="VAR",
-                     help="UTD column names to aggregate (default: all)")
-    np_.add_argument("-f", "--format", choices=["json", "csv", "table"], default="table")
+    np_.add_argument(
+        "--vaccines",
+        nargs="+",
+        metavar="VAR",
+        help="UTD column names to aggregate (default: all)",
+    )
+    np_.add_argument(
+        "-f", "--format", choices=["json", "csv", "table"], default="table"
+    )
     np_.set_defaults(func=cmd_national)
 
     args = parser.parse_args()

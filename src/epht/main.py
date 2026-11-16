@@ -39,7 +39,9 @@ def _print(rows: list[dict], fmt: str) -> None:
         print(buf.getvalue(), end="")
     else:
         cols = list(rows[0].keys())
-        widths = {c: max(len(str(c)), max(len(str(r.get(c, ""))) for r in rows)) for c in cols}
+        widths = {
+            c: max(len(str(c)), max(len(str(r.get(c, ""))) for r in rows)) for c in cols
+        }
         line = "  ".join(str(c).ljust(widths[c]) for c in cols)
         print(line[:160])
         print("-" * min(len(line), 160))
@@ -54,19 +56,29 @@ def main() -> None:
     sub.add_parser("content-areas", help="list EPHT content areas")
 
     p_meas = sub.add_parser("measures", help="search the ~867 EPHT measures")
-    p_meas.add_argument("--search", required=True, help="substring of measure/area/indicator name")
-    p_meas.add_argument("-f", "--format", default="table", choices=["table", "csv", "json"])
+    p_meas.add_argument(
+        "--search", required=True, help="substring of measure/area/indicator name"
+    )
+    p_meas.add_argument(
+        "-f", "--format", default="table", choices=["table", "csv", "json"]
+    )
 
     sub.add_parser("registry", help="list the curated measures this repo archives")
 
     p_fetch = sub.add_parser("fetch", help="fetch one measure's state-level series")
-    p_fetch.add_argument("key", help="registry key (see `registry`) or a numeric measure ID")
-    p_fetch.add_argument("-f", "--format", default="table", choices=["table", "csv", "json"])
+    p_fetch.add_argument(
+        "key", help="registry key (see `registry`) or a numeric measure ID"
+    )
+    p_fetch.add_argument(
+        "-f", "--format", default="table", choices=["table", "csv", "json"]
+    )
 
     args = parser.parse_args()
 
     if args.cmd == "content-areas":
-        rows = [{"id": c.get("id"), "name": c.get("name")} for c in client.content_areas()]
+        rows = [
+            {"id": c.get("id"), "name": c.get("name")} for c in client.content_areas()
+        ]
         _print(sorted(rows, key=lambda r: r["name"] or ""), "table")
 
     elif args.cmd == "measures":
@@ -102,7 +114,10 @@ def main() -> None:
         elif args.key.isdigit():
             measure_id = int(args.key)
         else:
-            print(f"unknown measure key '{args.key}' (see `epht registry`)", file=sys.stderr)
+            print(
+                f"unknown measure key '{args.key}' (see `epht registry`)",
+                file=sys.stderr,
+            )
             sys.exit(2)
         rows = get_state_series(measure_id)
         _print(rows, args.format)

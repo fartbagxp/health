@@ -12,7 +12,7 @@ import json
 import subprocess
 import sys
 from pathlib import Path
-from unittest.mock import MagicMock, call, patch
+from unittest.mock import MagicMock, patch
 
 import pytest
 
@@ -70,7 +70,6 @@ class TestDatasets:
         for code, name in FLUSURV_LOCATIONS.items():
             assert name, f"Location {code} has empty name"
 
-
     def test_fluview_ili_metadata(self):
         from grasp.datasets import DATASETS
 
@@ -106,13 +105,16 @@ class TestFlusurvClient:
     def setup_method(self):
         # Clear module-level cache between tests
         import grasp.client as _client
+
         _client._CACHE.clear()
         _client._SESSION = None
 
     def test_calls_correct_endpoint(self):
         from grasp.client import flusurv_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             flusurv_fetch(["network_all"], "202001")
             url = mock_get.call_args[0][0]
             assert "delphi.cmu.edu" in url
@@ -121,7 +123,9 @@ class TestFlusurvClient:
     def test_passes_locations_param(self):
         from grasp.client import flusurv_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             flusurv_fetch(["CA", "OH"], "202001")
             params = mock_get.call_args[1]["params"]
             assert "CA" in params["locations"]
@@ -130,7 +134,9 @@ class TestFlusurvClient:
     def test_passes_epiweeks_param(self):
         from grasp.client import flusurv_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             flusurv_fetch(["network_all"], "202001-202026")
             params = mock_get.call_args[1]["params"]
             assert params["epiweeks"] == "202001-202026"
@@ -146,22 +152,21 @@ class TestFlusurvClient:
     def test_raises_on_api_error(self):
         from grasp.client import flusurv_fetch
 
-        with patch(
-            "requests.Session.get",
-            return_value=_mock_delphi_response([], result=-2),
+        mock_resp = _mock_delphi_response([], result=-2)
+        mock_resp.json.return_value["message"] = "no results found"
+        with (
+            patch("requests.Session.get", return_value=mock_resp),
+            pytest.raises(ValueError, match="Delphi flusurv API error"),
         ):
-            # Override message to something meaningful
-            mock_resp = _mock_delphi_response([], result=-2)
-            mock_resp.json.return_value["message"] = "no results found"
-            with patch("requests.Session.get", return_value=mock_resp):
-                with pytest.raises(ValueError, match="Delphi flusurv API error"):
-                    flusurv_fetch(["network_all"], "999999")
+            flusurv_fetch(["network_all"], "999999")
 
     def test_caches_identical_requests(self):
         from grasp.client import flusurv_fetch
 
         rows = [{"location": "network_all", "epiweek": 202001, "rate_overall": 5.3}]
-        with patch("requests.Session.get", return_value=_mock_delphi_response(rows)) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response(rows)
+        ) as mock_get:
             flusurv_fetch(["network_all"], "202001")
             flusurv_fetch(["network_all"], "202001")
             assert mock_get.call_count == 1
@@ -169,7 +174,9 @@ class TestFlusurvClient:
     def test_cache_miss_on_different_locations(self):
         from grasp.client import flusurv_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             flusurv_fetch(["network_all"], "202001")
             flusurv_fetch(["CA"], "202001")
             assert mock_get.call_count == 2
@@ -177,7 +184,9 @@ class TestFlusurvClient:
     def test_cache_miss_on_different_epiweeks(self):
         from grasp.client import flusurv_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             flusurv_fetch(["network_all"], "202001")
             flusurv_fetch(["network_all"], "202002")
             assert mock_get.call_count == 2
@@ -185,7 +194,9 @@ class TestFlusurvClient:
     def test_clear_cache_forces_refetch(self):
         from grasp.client import clear_cache, flusurv_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             flusurv_fetch(["network_all"], "202001")
             clear_cache()
             flusurv_fetch(["network_all"], "202001")
@@ -195,13 +206,16 @@ class TestFlusurvClient:
 class TestFluviewClient:
     def setup_method(self):
         import grasp.client as _client
+
         _client._CACHE.clear()
         _client._SESSION = None
 
     def test_fluview_calls_correct_endpoint(self):
         from grasp.client import fluview_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             fluview_fetch(["nat"], "202001")
             url = mock_get.call_args[0][0]
             assert "fluview" in url
@@ -210,7 +224,9 @@ class TestFluviewClient:
     def test_fluview_does_not_call_fluview_clinical(self):
         from grasp.client import fluview_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             fluview_fetch(["nat"], "202001")
             url = mock_get.call_args[0][0]
             # Must not hit the clinical endpoint
@@ -219,7 +235,9 @@ class TestFluviewClient:
     def test_fluview_passes_regions_param(self):
         from grasp.client import fluview_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             fluview_fetch(["nat", "ca"], "202001")
             params = mock_get.call_args[1]["params"]
             assert "nat" in params["regions"]
@@ -228,7 +246,9 @@ class TestFluviewClient:
     def test_fluview_clinical_calls_correct_endpoint(self):
         from grasp.client import fluview_clinical_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             fluview_clinical_fetch(["nat"], "202001")
             url = mock_get.call_args[0][0]
             assert "fluview_clinical" in url
@@ -236,7 +256,9 @@ class TestFluviewClient:
     def test_fluview_caches_requests(self):
         from grasp.client import fluview_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             fluview_fetch(["nat"], "202001")
             fluview_fetch(["nat"], "202001")
             assert mock_get.call_count == 1
@@ -244,15 +266,19 @@ class TestFluviewClient:
     def test_fluview_clinical_caches_requests(self):
         from grasp.client import fluview_clinical_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             fluview_clinical_fetch(["nat"], "202001")
             fluview_clinical_fetch(["nat"], "202001")
             assert mock_get.call_count == 1
 
     def test_fluview_separate_cache_from_flusurv(self):
-        from grasp.client import fluview_fetch, flusurv_fetch
+        from grasp.client import flusurv_fetch, fluview_fetch
 
-        with patch("requests.Session.get", return_value=_mock_delphi_response([])) as mock_get:
+        with patch(
+            "requests.Session.get", return_value=_mock_delphi_response([])
+        ) as mock_get:
             fluview_fetch(["nat"], "202001")
             flusurv_fetch(["network_all"], "202001")
             # Different endpoints → different cache keys → 2 calls
@@ -264,20 +290,63 @@ class TestFluviewClient:
 # =============================================================================
 
 _ILI_SAMPLE = [
-    {"region": "nat", "epiweek": 202001, "wili": 5.9, "ili": 6.2, "num_ili": 88731, "num_patients": 1426691, "num_providers": 2970},
-    {"region": "nat", "epiweek": 202002, "wili": 4.1, "ili": 4.3, "num_ili": 75000, "num_patients": 1400000, "num_providers": 2900},
-    {"region": "ca",  "epiweek": 202001, "wili": 4.9, "ili": 4.9, "num_ili": 5000,  "num_patients": 100000,  "num_providers": 200},
+    {
+        "region": "nat",
+        "epiweek": 202001,
+        "wili": 5.9,
+        "ili": 6.2,
+        "num_ili": 88731,
+        "num_patients": 1426691,
+        "num_providers": 2970,
+    },
+    {
+        "region": "nat",
+        "epiweek": 202002,
+        "wili": 4.1,
+        "ili": 4.3,
+        "num_ili": 75000,
+        "num_patients": 1400000,
+        "num_providers": 2900,
+    },
+    {
+        "region": "ca",
+        "epiweek": 202001,
+        "wili": 4.9,
+        "ili": 4.9,
+        "num_ili": 5000,
+        "num_patients": 100000,
+        "num_providers": 200,
+    },
 ]
 
 _CLINICAL_SAMPLE = [
-    {"region": "nat", "epiweek": 202001, "total_specimens": 65177, "total_a": 5645, "total_b": 9664, "percent_positive": 23.5, "percent_a": 8.7, "percent_b": 14.8},
-    {"region": "nat", "epiweek": 202002, "total_specimens": 60717, "total_a": 6109, "total_b": 7928, "percent_positive": 23.1, "percent_a": 10.1, "percent_b": 13.1},
+    {
+        "region": "nat",
+        "epiweek": 202001,
+        "total_specimens": 65177,
+        "total_a": 5645,
+        "total_b": 9664,
+        "percent_positive": 23.5,
+        "percent_a": 8.7,
+        "percent_b": 14.8,
+    },
+    {
+        "region": "nat",
+        "epiweek": 202002,
+        "total_specimens": 60717,
+        "total_a": 6109,
+        "total_b": 7928,
+        "percent_positive": 23.1,
+        "percent_a": 10.1,
+        "percent_b": 13.1,
+    },
 ]
 
 
 class TestFluviewSDK:
     def setup_method(self):
         import grasp.client as _client
+
         _client._CACHE.clear()
 
     def test_get_fluview_ili_defaults_to_nat(self):
@@ -319,7 +388,9 @@ class TestFluviewSDK:
     def test_get_fluview_clinical_defaults_to_nat(self):
         from grasp.sdk import get_fluview_clinical
 
-        with patch("grasp.sdk.fluview_clinical_fetch", return_value=_CLINICAL_SAMPLE) as mock_fetch:
+        with patch(
+            "grasp.sdk.fluview_clinical_fetch", return_value=_CLINICAL_SAMPLE
+        ) as mock_fetch:
             get_fluview_clinical()
             assert mock_fetch.call_args[0][0] == ["nat"]
 
@@ -365,19 +436,45 @@ class TestFluviewSDK:
 # =============================================================================
 
 _SAMPLE_RECORDS = [
-    {"location": "network_all", "season": "2019-20", "epiweek": 201940, "rate_overall": 0.1},
-    {"location": "network_all", "season": "2019-20", "epiweek": 201952, "rate_overall": 4.5},
-    {"location": "network_all", "season": "2019-20", "epiweek": 202001, "rate_overall": 5.3},
-    {"location": "network_all", "season": "2018-19", "epiweek": 201840, "rate_overall": 0.2},
-    {"location": "network_all", "season": "2018-19", "epiweek": 201852, "rate_overall": 3.1},
-    {"location": "CA",          "season": "2019-20", "epiweek": 201940, "rate_overall": 0.3},
-    {"location": "CA",          "season": "2019-20", "epiweek": 202001, "rate_overall": 4.9},
+    {
+        "location": "network_all",
+        "season": "2019-20",
+        "epiweek": 201940,
+        "rate_overall": 0.1,
+    },
+    {
+        "location": "network_all",
+        "season": "2019-20",
+        "epiweek": 201952,
+        "rate_overall": 4.5,
+    },
+    {
+        "location": "network_all",
+        "season": "2019-20",
+        "epiweek": 202001,
+        "rate_overall": 5.3,
+    },
+    {
+        "location": "network_all",
+        "season": "2018-19",
+        "epiweek": 201840,
+        "rate_overall": 0.2,
+    },
+    {
+        "location": "network_all",
+        "season": "2018-19",
+        "epiweek": 201852,
+        "rate_overall": 3.1,
+    },
+    {"location": "CA", "season": "2019-20", "epiweek": 201940, "rate_overall": 0.3},
+    {"location": "CA", "season": "2019-20", "epiweek": 202001, "rate_overall": 4.9},
 ]
 
 
 class TestFlusurvSDK:
     def setup_method(self):
         import grasp.client as _client
+
         _client._CACHE.clear()
 
     def _patch_fetch(self, records=_SAMPLE_RECORDS):
@@ -386,7 +483,9 @@ class TestFlusurvSDK:
     def test_get_flusurv_net_defaults_to_network_all(self):
         from grasp.sdk import get_flusurv_net
 
-        with patch("grasp.sdk.flusurv_fetch", return_value=_SAMPLE_RECORDS) as mock_fetch:
+        with patch(
+            "grasp.sdk.flusurv_fetch", return_value=_SAMPLE_RECORDS
+        ) as mock_fetch:
             get_flusurv_net()
             locations_arg = mock_fetch.call_args[0][0]
             assert locations_arg == ["network_all"]
@@ -394,14 +493,18 @@ class TestFlusurvSDK:
     def test_get_flusurv_net_accepts_string_location(self):
         from grasp.sdk import get_flusurv_net
 
-        with patch("grasp.sdk.flusurv_fetch", return_value=_SAMPLE_RECORDS) as mock_fetch:
+        with patch(
+            "grasp.sdk.flusurv_fetch", return_value=_SAMPLE_RECORDS
+        ) as mock_fetch:
             get_flusurv_net(locations="CA")
             assert mock_fetch.call_args[0][0] == ["CA"]
 
     def test_get_flusurv_net_accepts_list_locations(self):
         from grasp.sdk import get_flusurv_net
 
-        with patch("grasp.sdk.flusurv_fetch", return_value=_SAMPLE_RECORDS) as mock_fetch:
+        with patch(
+            "grasp.sdk.flusurv_fetch", return_value=_SAMPLE_RECORDS
+        ) as mock_fetch:
             get_flusurv_net(locations=["CA", "OH"])
             assert mock_fetch.call_args[0][0] == ["CA", "OH"]
 
@@ -486,8 +589,12 @@ class TestFlusurvSDK:
             rows_2019 = summarize_flusurv_by_location(season="2019-20")
             rows_2018 = summarize_flusurv_by_location(season="2018-19")
             # network_all 2019-20 peak is 5.3, 2018-19 peak is 3.1
-            peak_2019 = next(r for r in rows_2019 if r["location"] == "network_all")["peak_rate"]
-            peak_2018 = next(r for r in rows_2018 if r["location"] == "network_all")["peak_rate"]
+            peak_2019 = next(r for r in rows_2019 if r["location"] == "network_all")[
+                "peak_rate"
+            ]
+            peak_2018 = next(r for r in rows_2018 if r["location"] == "network_all")[
+                "peak_rate"
+            ]
             assert peak_2019 == 5.3
             assert peak_2018 == 3.1
 
@@ -501,6 +608,7 @@ class TestGraspCLI:
     def _run(self, *args, **kwargs):
         return subprocess.run(
             [sys.executable, "-m", "grasp", *args],
+            check=False,
             capture_output=True,
             text=True,
             cwd=SRC,
@@ -585,6 +693,7 @@ class TestFlusurvIntegration:
 
     def setup_method(self):
         import grasp.client as _client
+
         _client._CACHE.clear()
 
     def test_fetch_network_all_returns_data(self):
@@ -597,8 +706,17 @@ class TestFlusurvIntegration:
         from grasp.sdk import get_flusurv_net
 
         rows = get_flusurv_net(locations="network_all", season="2019-20")
-        required = {"location", "season", "epiweek", "rate_overall", "rate_flu_a", "rate_flu_b"}
-        assert required.issubset(rows[0].keys()), f"Missing fields: {required - rows[0].keys()}"
+        required = {
+            "location",
+            "season",
+            "epiweek",
+            "rate_overall",
+            "rate_flu_a",
+            "rate_flu_b",
+        }
+        assert required.issubset(rows[0].keys()), (
+            f"Missing fields: {required - rows[0].keys()}"
+        )
 
     def test_response_has_age_rate_fields(self):
         from grasp.sdk import get_flusurv_net
@@ -651,8 +769,18 @@ class TestFlusurvIntegration:
 
     def test_cli_by_season_produces_valid_output(self):
         result = subprocess.run(
-            [sys.executable, "-m", "grasp", "flusurv", "by-season",
-             "--location", "network_all", "-f", "json"],
+            [
+                sys.executable,
+                "-m",
+                "grasp",
+                "flusurv",
+                "by-season",
+                "--location",
+                "network_all",
+                "-f",
+                "json",
+            ],
+            check=False,
             capture_output=True,
             text=True,
             cwd=SRC,
@@ -665,8 +793,18 @@ class TestFlusurvIntegration:
 
     def test_cli_by_location_produces_valid_output(self):
         result = subprocess.run(
-            [sys.executable, "-m", "grasp", "flusurv", "by-location",
-             "--season", "2019-20", "-f", "json"],
+            [
+                sys.executable,
+                "-m",
+                "grasp",
+                "flusurv",
+                "by-location",
+                "--season",
+                "2019-20",
+                "-f",
+                "json",
+            ],
+            check=False,
             capture_output=True,
             text=True,
             cwd=SRC,
@@ -679,8 +817,20 @@ class TestFlusurvIntegration:
 
     def test_cli_data_csv_output(self):
         result = subprocess.run(
-            [sys.executable, "-m", "grasp", "flusurv", "data",
-             "--location", "network_all", "--season", "2019-20", "-f", "csv"],
+            [
+                sys.executable,
+                "-m",
+                "grasp",
+                "flusurv",
+                "data",
+                "--location",
+                "network_all",
+                "--season",
+                "2019-20",
+                "-f",
+                "csv",
+            ],
+            check=False,
             capture_output=True,
             text=True,
             cwd=SRC,
@@ -698,6 +848,7 @@ class TestFluviewIntegration:
 
     def setup_method(self):
         import grasp.client as _client
+
         _client._CACHE.clear()
 
     def test_fluview_ili_national_returns_data(self):
@@ -711,8 +862,18 @@ class TestFluviewIntegration:
 
         rows = get_fluview_ili(regions="nat", epiweeks="202001")
         assert len(rows) == 1
-        required = {"region", "epiweek", "wili", "ili", "num_ili", "num_patients", "num_providers"}
-        assert required.issubset(rows[0].keys()), f"Missing: {required - rows[0].keys()}"
+        required = {
+            "region",
+            "epiweek",
+            "wili",
+            "ili",
+            "num_ili",
+            "num_patients",
+            "num_providers",
+        }
+        assert required.issubset(rows[0].keys()), (
+            f"Missing: {required - rows[0].keys()}"
+        )
 
     def test_fluview_ili_state_level(self):
         from grasp.sdk import get_fluview_ili
@@ -739,9 +900,19 @@ class TestFluviewIntegration:
         from grasp.sdk import get_fluview_clinical
 
         rows = get_fluview_clinical(regions="nat", epiweeks="202001")
-        required = {"region", "epiweek", "total_specimens", "total_a", "total_b",
-                    "percent_positive", "percent_a", "percent_b"}
-        assert required.issubset(rows[0].keys()), f"Missing: {required - rows[0].keys()}"
+        required = {
+            "region",
+            "epiweek",
+            "total_specimens",
+            "total_a",
+            "total_b",
+            "percent_positive",
+            "percent_a",
+            "percent_b",
+        }
+        assert required.issubset(rows[0].keys()), (
+            f"Missing: {required - rows[0].keys()}"
+        )
 
     def test_fluview_clinical_multi_region(self):
         from grasp.sdk import get_fluview_clinical
@@ -762,9 +933,24 @@ class TestFluviewIntegration:
 
     def test_cli_fluview_ili_json(self):
         result = subprocess.run(
-            [sys.executable, "-m", "grasp", "fluview", "ili", "data",
-             "--region", "nat", "--epiweeks", "202001-202005", "-f", "json"],
-            capture_output=True, text=True, cwd=SRC,
+            [
+                sys.executable,
+                "-m",
+                "grasp",
+                "fluview",
+                "ili",
+                "data",
+                "--region",
+                "nat",
+                "--epiweeks",
+                "202001-202005",
+                "-f",
+                "json",
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+            cwd=SRC,
         )
         assert result.returncode == 0, result.stderr
         rows = json.loads(result.stdout)
@@ -774,9 +960,22 @@ class TestFluviewIntegration:
 
     def test_cli_fluview_ili_by_region(self):
         result = subprocess.run(
-            [sys.executable, "-m", "grasp", "fluview", "ili", "by-region",
-             "--epiweeks", "202001-202026", "-f", "json"],
-            capture_output=True, text=True, cwd=SRC,
+            [
+                sys.executable,
+                "-m",
+                "grasp",
+                "fluview",
+                "ili",
+                "by-region",
+                "--epiweeks",
+                "202001-202026",
+                "-f",
+                "json",
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+            cwd=SRC,
         )
         assert result.returncode == 0, result.stderr
         rows = json.loads(result.stdout)
@@ -785,9 +984,24 @@ class TestFluviewIntegration:
 
     def test_cli_fluview_clinical_csv(self):
         result = subprocess.run(
-            [sys.executable, "-m", "grasp", "fluview", "clinical", "data",
-             "--region", "nat", "--epiweeks", "202001-202005", "-f", "csv"],
-            capture_output=True, text=True, cwd=SRC,
+            [
+                sys.executable,
+                "-m",
+                "grasp",
+                "fluview",
+                "clinical",
+                "data",
+                "--region",
+                "nat",
+                "--epiweeks",
+                "202001-202005",
+                "-f",
+                "csv",
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+            cwd=SRC,
         )
         assert result.returncode == 0, result.stderr
         lines = result.stdout.strip().splitlines()

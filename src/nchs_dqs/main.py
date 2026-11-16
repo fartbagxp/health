@@ -57,13 +57,19 @@ def cmd_list(args):
         print(json.dumps(rows, indent=2))
         return
 
-    print(f"{'KEY':<28} {'DATASET ID':<12} {'YEARS':<12} {'SURVEY':<10} {'CHARTED':<8} NAME")
+    print(
+        f"{'KEY':<28} {'DATASET ID':<12} {'YEARS':<12} {'SURVEY':<10} {'CHARTED':<8} NAME"
+    )
     print("-" * 110)
     for r in rows:
         charted = "yes" if r["charted"] else ""
-        print(f"{r['key']:<28} {r['id']:<12} {r['years']:<12} {r['survey']:<10} {charted:<8} {r['name']}")
+        print(
+            f"{r['key']:<28} {r['id']:<12} {r['years']:<12} {r['survey']:<10} {charted:<8} {r['name']}"
+        )
     if args.uncharted:
-        print(f"\n{len(rows)} uncharted dataset(s) — collected-ready but not yet in health-charts.")
+        print(
+            f"\n{len(rows)} uncharted dataset(s) — collected-ready but not yet in health-charts."
+        )
 
 
 def cmd_query(args):
@@ -80,7 +86,7 @@ def cmd_query(args):
             order=args.order,
             limit=args.limit,
         )
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - top-level CLI error handler
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
     if not rows:
@@ -96,11 +102,14 @@ def cmd_trend(args):
         print(f"Trend {socrata_id} ({ds.name})", file=sys.stderr)
     try:
         rows = trend(socrata_id, estimate_type=args.estimate_type, limit=args.limit)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - top-level CLI error handler
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
     if not rows:
-        print("No 'Total' rows found — try `query` with a --where filter.", file=sys.stderr)
+        print(
+            "No 'Total' rows found — try `query` with a --where filter.",
+            file=sys.stderr,
+        )
         sys.exit(1)
     _output_rows(rows, args.format)
 
@@ -120,7 +129,10 @@ def _output_rows(rows: list[dict], format: str):
         print(buf.getvalue(), end="")
     elif format == "table":
         keys = list(rows[0].keys())
-        widths = {k: max(len(k), max((len(str(r.get(k, ""))) for r in rows), default=0)) for k in keys}
+        widths = {
+            k: max(len(k), max((len(str(r.get(k, ""))) for r in rows), default=0))
+            for k in keys
+        }
         header = "  ".join(k.ljust(widths[k]) for k in keys)
         print(header)
         print("-" * len(header))
@@ -143,29 +155,53 @@ def main():
 
     # list
     list_parser = subparsers.add_parser("list", help="List the DQS dataset registry")
-    list_parser.add_argument("-f", "--format", choices=["table", "json"], default="table")
+    list_parser.add_argument(
+        "-f", "--format", choices=["table", "json"], default="table"
+    )
     charted_group = list_parser.add_mutually_exclusive_group()
-    charted_group.add_argument("--charted", action="store_true", help="Only datasets health-charts renders")
-    charted_group.add_argument("--uncharted", action="store_true", help="Only the collected-but-uncharted backlog")
+    charted_group.add_argument(
+        "--charted", action="store_true", help="Only datasets health-charts renders"
+    )
+    charted_group.add_argument(
+        "--uncharted",
+        action="store_true",
+        help="Only the collected-but-uncharted backlog",
+    )
     list_parser.set_defaults(func=cmd_list)
 
     # query
-    query_parser = subparsers.add_parser("query", help="Raw SODA query against a DQS dataset")
-    query_parser.add_argument("dataset_id", help="Registry key (e.g. low-birthweight) or Socrata ID")
+    query_parser = subparsers.add_parser(
+        "query", help="Raw SODA query against a DQS dataset"
+    )
+    query_parser.add_argument(
+        "dataset_id", help="Registry key (e.g. low-birthweight) or Socrata ID"
+    )
     query_parser.add_argument("--where", metavar="CLAUSE", help="SODA $where clause")
-    query_parser.add_argument("--select", metavar="COLS", help="SODA $select clause (backtick-quote `group`)")
+    query_parser.add_argument(
+        "--select", metavar="COLS", help="SODA $select clause (backtick-quote `group`)"
+    )
     query_parser.add_argument("--group", metavar="COLS", help="SODA $group clause")
     query_parser.add_argument("--order", metavar="COL", help="SODA $order clause")
-    query_parser.add_argument("--limit", type=int, default=200, help="Max rows (default: 200)")
-    query_parser.add_argument("-f", "--format", choices=["json", "csv", "table"], default="json")
+    query_parser.add_argument(
+        "--limit", type=int, default=200, help="Max rows (default: 200)"
+    )
+    query_parser.add_argument(
+        "-f", "--format", choices=["json", "csv", "table"], default="json"
+    )
     query_parser.set_defaults(func=cmd_query)
 
     # trend
-    trend_parser = subparsers.add_parser("trend", help="All-persons national trend, oldest→newest")
+    trend_parser = subparsers.add_parser(
+        "trend", help="All-persons national trend, oldest→newest"
+    )
     trend_parser.add_argument("dataset_id", help="Registry key or Socrata ID")
-    trend_parser.add_argument("-e", "--estimate-type", dest="estimate_type", help="Narrow to one measure")
+    trend_parser.add_argument(
+        "-e", "--estimate-type", dest="estimate_type", help="Narrow to one measure"
+    )
     trend_parser.add_argument("--limit", type=int, default=1000)
-    trend_parser.add_argument("-f", "--format", choices=["json", "csv", "table"], default="table")
+    trend_parser.add_argument(
+        "-f", "--format", choices=["json", "csv", "table"], default="table"
+    )
     trend_parser.set_defaults(func=cmd_trend)
 
     args = parser.parse_args()

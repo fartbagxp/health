@@ -15,10 +15,6 @@ Usage:
     uv run python -m cdc_open analyze "Compare obesity rates across southern states"
 """
 
-from cdc_open.datasets import DATASETS
-from cdc_open.sdk import query_dataset
-from cdc_open.tools import TOOLS, execute_tool
-
 import argparse
 import csv
 import io
@@ -28,6 +24,10 @@ import sys
 
 import anthropic
 from dotenv import load_dotenv
+
+from cdc_open.datasets import DATASETS
+from cdc_open.sdk import query_dataset
+from cdc_open.tools import TOOLS, execute_tool
 
 load_dotenv()
 
@@ -59,11 +59,15 @@ def cmd_list(args):
         print("-" * 90)
         for r in rows:
             charted_mark = "yes" if r["charted"] else ""
-            print(f"{r['key']:<25} {r['id']:<12} {r['years']:<14} {charted_mark:<7} {r['name']}")
+            print(
+                f"{r['key']:<25} {r['id']:<12} {r['years']:<14} {charted_mark:<7} {r['name']}"
+            )
             if args.verbose:
                 print(f"  {r['description']}")
         if args.uncharted:
-            print(f"\n{len(rows)} uncharted dataset(s) — collected but not yet in health-charts.")
+            print(
+                f"\n{len(rows)} uncharted dataset(s) — collected but not yet in health-charts."
+            )
 
 
 def cmd_query(args):
@@ -77,7 +81,7 @@ def cmd_query(args):
             order=args.order,
             limit=args.limit,
         )
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - top-level CLI error handler
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 
@@ -169,7 +173,7 @@ def cmd_analyze(args):
                 all_tool_results.extend(rows)
                 if args.verbose:
                     print(f"  → {len(rows)} rows", file=sys.stderr)
-            except Exception as e:
+            except Exception as e:  # noqa: BLE001 - report tool error back to the LLM
                 result_text = f"Error: {e}"
                 if args.verbose:
                     print(f"  → error: {e}", file=sys.stderr)

@@ -20,7 +20,9 @@ def _find_base_state_level(measure_id: int, geo_type_id: int) -> dict | None:
     no demographic split (empty stratificationType)."""
     levels = client.stratification_levels(measure_id, geo_type_id)
     for lvl in levels:
-        if (lvl.get("name") or "").lower() == "state" and not lvl.get("stratificationType"):
+        if (lvl.get("name") or "").lower() == "state" and not lvl.get(
+            "stratificationType"
+        ):
             return lvl
     return levels[0] if levels else None
 

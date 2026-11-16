@@ -26,11 +26,11 @@ from wisqars.datasets import (
     MAPPING_PERIOD_TYPES,
 )
 from wisqars.sdk import (
+    get_injury_census_tract,
+    get_injury_county,
     get_injury_mortality,
     get_injury_national,
     get_injury_state,
-    get_injury_county,
-    get_injury_census_tract,
     query_dataset,
 )
 
@@ -139,8 +139,8 @@ def main():
         description="Query CDC WISQARS injury mortality and violence data",
     )
     sub = parser.add_subparsers(dest="command", required=True)
-    _fmt = dict(choices=["table", "json", "csv"], default="table")
-    _lim = dict(type=int, default=200)
+    _fmt = {"choices": ["table", "json", "csv"], "default": "table"}
+    _lim = {"type": int, "default": 200}
 
     sub.add_parser("list", help="List available datasets").set_defaults(func=cmd_list)
 
@@ -198,7 +198,9 @@ def main():
         "tract", help="Census-tract-level injury/violence data (2022-present)"
     )
     p_tract.add_argument("--state", metavar="STATE", help="State name or 2-digit FIPS")
-    p_tract.add_argument("--tract", metavar="TRACT", help="Census tract GEOID partial match")
+    p_tract.add_argument(
+        "--tract", metavar="TRACT", help="Census tract GEOID partial match"
+    )
     p_tract.add_argument(
         "--intent",
         choices=["All_Homicide", "Drug_OD"],
@@ -222,6 +224,6 @@ def main():
     args = parser.parse_args()
     try:
         args.func(args)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 - top-level CLI error handler
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)

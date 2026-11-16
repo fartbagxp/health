@@ -53,9 +53,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from wonder.client import WonderClient  # noqa: E402
-from wonder.queries._final_cache import read_final_cache, write_final_cache  # noqa: E402
-from wonder.queries._merge_guard import require_complete  # noqa: E402
+from wonder.client import WonderClient
+from wonder.queries._final_cache import read_final_cache, write_final_cache
+from wonder.queries._merge_guard import require_complete
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -120,12 +120,19 @@ def parse_rows(client: WonderClient, xml: str, provisional: bool) -> list[dict]:
         totals[(int(year_match.group(1)), category)] += int(deaths)
 
     return [
-        {"year": year, "category": category, "deaths": deaths, "provisional": provisional}
+        {
+            "year": year,
+            "category": category,
+            "deaths": deaths,
+            "provisional": provisional,
+        }
         for (year, category), deaths in totals.items()
     ]
 
 
-def run_query(client: WonderClient, dataset_id: str, query_file: Path, provisional: bool) -> list[dict]:
+def run_query(
+    client: WonderClient, dataset_id: str, query_file: Path, provisional: bool
+) -> list[dict]:
     print(f"  -> [{dataset_id}] {query_file.name} ...", flush=True)
     try:
         xml = client.execute_query_file(str(query_file))
@@ -160,13 +167,17 @@ def write_csv(records: list[dict], out_path: Path) -> None:
         writer = csv.writer(f)
         writer.writerow(["year", "category", "deaths", "provisional"])
         for rec in records:
-            writer.writerow([
-                rec["year"],
-                rec["category"],
-                rec["deaths"],
-                str(rec["provisional"]).lower(),
-            ])
-    print(f"  [ok] {out_path.name}  ({len(records)} rows  |  years {years[0]}-{years[-1]})")
+            writer.writerow(
+                [
+                    rec["year"],
+                    rec["category"],
+                    rec["deaths"],
+                    str(rec["provisional"]).lower(),
+                ]
+            )
+    print(
+        f"  [ok] {out_path.name}  ({len(records)} rows  |  years {years[0]}-{years[-1]})"
+    )
 
 
 def print_summary(records: list[dict]) -> None:
@@ -174,7 +185,9 @@ def print_summary(records: list[dict]) -> None:
     lookup = {(r["year"], r["category"]): r for r in records}
 
     col_w = 12
-    header = f"{'Year':<6}" + "".join(f"{c.capitalize():>{col_w}}" for c in ("obesity", "diabetes"))
+    header = f"{'Year':<6}" + "".join(
+        f"{c.capitalize():>{col_w}}" for c in ("obesity", "diabetes")
+    )
     print(header)
     print("-" * len(header))
     for yr in years:
@@ -183,7 +196,14 @@ def print_summary(records: list[dict]) -> None:
             rec = lookup.get((yr, c))
             val = f"{rec['deaths']:,}" if rec else "-"
             row += f"{val:>{col_w}}"
-        prov = " *" if any(lookup.get((yr, c), {}).get("provisional") for c in ("obesity", "diabetes")) else ""
+        prov = (
+            " *"
+            if any(
+                lookup.get((yr, c), {}).get("provisional")
+                for c in ("obesity", "diabetes")
+            )
+            else ""
+        )
         print(row + prov)
     print("\n* provisional")
 
@@ -194,7 +214,7 @@ def main() -> None:
         "--refresh-final",
         action="store_true",
         help="Re-query WONDER for the final 1999-2020 data instead of reusing "
-             "the cached snapshot (use only if CDC restates the historical series).",
+        "the cached snapshot (use only if CDC restates the historical series).",
     )
     args = parser.parse_args()
 
@@ -223,14 +243,20 @@ def main() -> None:
         )
     else:
         d77_records = run_query(
-            client, "D77", QUERIES_DIR / "obesity-diabetes-deaths-by-year-1999-2020-req.xml", False
+            client,
+            "D77",
+            QUERIES_DIR / "obesity-diabetes-deaths-by-year-1999-2020-req.xml",
+            False,
         )
         print(f"  (waiting {RATE_LIMIT_SLEEP}s for rate limit ...)", flush=True)
         time.sleep(RATE_LIMIT_SLEEP)
 
     # D176 (provisional, 2021+) — always re-fetched; these counts get revised.
     d176_records = run_query(
-        client, "D176", QUERIES_DIR / "obesity-diabetes-deaths-by-year-2018-2024-req.xml", True
+        client,
+        "D176",
+        QUERIES_DIR / "obesity-diabetes-deaths-by-year-2018-2024-req.xml",
+        True,
     )
 
     # A partial failure (e.g. one query hitting a WONDER 429 and returning [])
@@ -240,7 +266,9 @@ def main() -> None:
         ("D176 (provisional, 2021+)", d176_records),
     )
 
-    print(f"\nMerging: D77 for 1999-{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+")
+    print(
+        f"\nMerging: D77 for 1999-{D77_PREFERRED_THROUGH}, D176 for {D77_PREFERRED_THROUGH + 1}+"
+    )
     merged = merge(d77_records, d176_records)
     print(f"Total merged rows: {len(merged)}\n")
 

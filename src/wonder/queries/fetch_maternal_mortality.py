@@ -51,9 +51,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from wonder.client import WonderClient  # noqa: E402
-from wonder.queries._final_cache import read_final_cache, write_final_cache  # noqa: E402
-from wonder.queries._merge_guard import require_complete  # noqa: E402
+from wonder.client import WonderClient
+from wonder.queries._final_cache import read_final_cache, write_final_cache
+from wonder.queries._merge_guard import require_complete
 
 QUERIES_DIR = Path(__file__).parent
 OUTPUT_DIR = PROJECT_ROOT / "data" / "raw" / "wonder"
@@ -63,8 +63,8 @@ RATE_LIMIT_SLEEP = 16
 
 QUERY_FILES = [
     # (dataset_id, path, preferred_for_years_from)
-    ("D76",  QUERIES_DIR / "maternal-mortality-by-year-1999-2020-req.xml",  None),
-    ("D158", QUERIES_DIR / "maternal-mortality-by-year-2018-2024-req.xml",  2018),
+    ("D76", QUERIES_DIR / "maternal-mortality-by-year-1999-2020-req.xml", None),
+    ("D158", QUERIES_DIR / "maternal-mortality-by-year-2018-2024-req.xml", 2018),
 ]
 
 # D158 is preferred from 2018 onward (more current final methodology)
@@ -109,12 +109,14 @@ def parse_rows(client: WonderClient, xml: str) -> list[dict]:
         population = cells[2].get_numeric_value() if len(cells) > 2 else None
         crude_rate = cells[3].get_numeric_value() if len(cells) > 3 else None
 
-        records.append({
-            "year": year,
-            "deaths": deaths,
-            "population": population,
-            "crude_rate": crude_rate,
-        })
+        records.append(
+            {
+                "year": year,
+                "deaths": deaths,
+                "population": population,
+                "crude_rate": crude_rate,
+            }
+        )
     return records
 
 
@@ -157,13 +159,17 @@ def write_csv(records: list[dict], out_path: Path) -> None:
         writer = csv.writer(f)
         writer.writerow(["year", "deaths", "population", "crude_rate_per_100k_pop"])
         for rec in records:
-            writer.writerow([
-                rec["year"],
-                "" if rec["deaths"] is None else int(rec["deaths"]),
-                "" if rec["population"] is None else int(rec["population"]),
-                "" if rec["crude_rate"] is None else rec["crude_rate"],
-            ])
-    print(f"  ✓ {out_path.name}  ({len(records)} rows  |  years {years[0]}–{years[-1]})")
+            writer.writerow(
+                [
+                    rec["year"],
+                    "" if rec["deaths"] is None else int(rec["deaths"]),
+                    "" if rec["population"] is None else int(rec["population"]),
+                    "" if rec["crude_rate"] is None else rec["crude_rate"],
+                ]
+            )
+    print(
+        f"  ✓ {out_path.name}  ({len(records)} rows  |  years {years[0]}–{years[-1]})"
+    )
 
 
 def main() -> None:
@@ -172,7 +178,7 @@ def main() -> None:
         "--refresh-final",
         action="store_true",
         help="Re-query WONDER for the final 1999–2017 data instead of reusing "
-             "the cached snapshot (use only if CDC restates the historical series).",
+        "the cached snapshot (use only if CDC restates the historical series).",
     )
     args = parser.parse_args()
 
@@ -213,11 +219,17 @@ def main() -> None:
     # A partial failure (e.g. one query hitting a WONDER 429 and returning [])
     # must abort rather than silently write a truncated CSV missing an era.
     require_complete(
-        (f"D76 (final, 1999–{D158_PREFERRED_FROM - 1})", d76_records, D158_PREFERRED_FROM - 1),
+        (
+            f"D76 (final, 1999–{D158_PREFERRED_FROM - 1})",
+            d76_records,
+            D158_PREFERRED_FROM - 1,
+        ),
         (f"D158 ({D158_PREFERRED_FROM}+)", d158_records),
     )
 
-    print(f"\nMerging: D76 for 1999–{D158_PREFERRED_FROM - 1}, D158 for {D158_PREFERRED_FROM}+")
+    print(
+        f"\nMerging: D76 for 1999–{D158_PREFERRED_FROM - 1}, D158 for {D158_PREFERRED_FROM}+"
+    )
     merged = merge(d76_records, d158_records)
     print(f"Total merged rows: {len(merged)}")
 

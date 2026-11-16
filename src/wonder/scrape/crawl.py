@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 CDC WONDER Link Crawler
 
@@ -20,15 +19,15 @@ Output:
     data/raw/wonder/links.csv - CSV with columns: url, page_name, title, years, source_url
 """
 
-import re
 import csv
-import time
 import logging
-import requests
-
-from bs4 import BeautifulSoup
+import re
+import time
 from collections import deque
 from urllib.parse import urljoin, urlparse
+
+import requests
+from bs4 import BeautifulSoup
 
 logging.basicConfig(
     level=logging.INFO,
@@ -52,7 +51,7 @@ HEADERS = {
 def is_wonder_html(url: str) -> bool:
     try:
         u = urlparse(url)
-    except Exception:
+    except ValueError:
         return False
     if not u.scheme or not u.netloc:
         return False
@@ -100,7 +99,7 @@ def page_title(html: str) -> str:
             return title.strip()
         h1 = soup.find("h1")
         return h1.text.strip() if h1 else ""
-    except Exception:
+    except Exception:  # noqa: BLE001 - title is best-effort
         return ""
 
 

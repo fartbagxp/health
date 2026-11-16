@@ -14,7 +14,7 @@ Example:
 
 from typing import Any
 
-from nssp.client import DelphiClient, SIGNALS, GEO_TYPES, _current_epiweek
+from nssp.client import GEO_TYPES, SIGNALS, DelphiClient, _current_epiweek
 
 _client: DelphiClient | None = None
 

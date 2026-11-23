@@ -49,7 +49,11 @@ uv run python -m grasp flusurv data --location network_all --season 2022-23 -f t
 ### Python SDK
 
 ```python
-from grasp.sdk import get_flusurv_net, summarize_flusurv_by_season, summarize_flusurv_by_location
+from grasp.sdk import (
+    get_flusurv_net,
+    summarize_flusurv_by_season,
+    summarize_flusurv_by_location,
+)
 
 # All data for network, full history
 records = get_flusurv_net()  # defaults: location=["network_all"], all epiweeks
@@ -191,6 +195,21 @@ records = get_fluview_clinical(
 | `percent_positive` | % specimens positive       |
 | `percent_a`        | % positive that are type A |
 | `percent_b`        | % positive that are type B |
+
+### Persisted regional series
+
+`uv run python -m grasp.export` writes `data/processed/grasp/flu_percent_positive.csv`
+(weekly, 2016-17 onward) for National plus the four Census regions. Regions are
+built by summing specimens and positives across Census divisions (`cen1`–`cen9`)
+and recomputing percent positive. The weekly CDC Open Data workflow runs it.
+
+| Column             | Description                                        |
+| ------------------ | -------------------------------------------------- |
+| `week_end`         | MMWR week-ending Saturday                          |
+| `region`           | National, Northeast, Midwest, South, West          |
+| `total_specimens`  | Clinical-lab specimens tested                      |
+| `total_positive`   | Influenza A + B positive                           |
+| `percent_positive` | `total_positive / total_specimens × 100`           |
 
 ---
 

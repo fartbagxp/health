@@ -51,7 +51,7 @@ only small derived slices tracked here (see section 10).
 | 3 | **NCHS DQS** (Health, US) | `nchs_dqs` | data.cdc.gov SODA | 28 across 17 topics | ✅ `data/raw/dqs/` | Sat 15:00, weekly | 2024 (annual source) |
 | 4 | **WISQARS** | `wisqars` | data.cdc.gov SODA | 5 | ✅ `data/raw/wisqars/` | Sat 15:00, weekly | 2026-03 (provisional monthly) |
 | 5 | **NCI SEER** | `seer` | SEER\*Explorer JSON | 70+ cancer sites | ✅ `data/raw/seer/` | 1st of month 15:00 | 2024 (annual source) |
-| 6 | **ATSDR GRASP / FluView** | `grasp` | gis.cdc.gov + CMU Delphi | 4 (hantavirus, ILINet, clinical labs, FluSurv-NET) | ❌ live-only | on demand | live |
+| 6 | **ATSDR GRASP / FluView** | `grasp` | gis.cdc.gov + CMU Delphi | 4 (hantavirus, ILINet, clinical labs, FluSurv-NET) | ⚠️ clinical-lab % positive persisted; rest live-only | on demand | live |
 | 7 | **NSSP** (ED visits) | `nssp` | CMU Delphi Epidata | 4 pathogens (COVID/flu/RSV/combined) | ❌ live-only | on demand | live |
 | 8 | **NIS** (immunization) | `nis` | CDC FTP fixed-width `.dat` | NIS-Child + NIS-Teen | ❌ live-stream | on demand | live |
 | 9 | **EPHT** (environmental tracking) | `epht` | ephtracking.cdc.gov REST/JSON | 867 measures; 8 curated for state-level archive | 🚧 discovery ✅, archive pending token | not yet scheduled | live |

@@ -175,6 +175,30 @@ Weekly provisional case counts from the National Notifiable Diseases Surveillanc
 | `nndss_sti_gonorrhea` | NNDSS Table 1M: Gonorrhea        | `vx8v-gfyf` | 2014–present |
 | `nndss_sti_syphilis`  | NNDSS Table 1HH: Syphilis        | `6ie8-bpiy` | 2014–present |
 
+### Flu Vaccine Effectiveness (scraped)
+
+CDC publishes seasonal flu vaccine effectiveness (VE) from the U.S. Flu VE Network
+only as an HTML table on [Seasonal Flu Vaccine Effectiveness Studies](https://www.cdc.gov/flu-vaccines-work/php/effectiveness-studies/index.html),
+with no Socrata dataset. `fetch_flu_ve.py` scrapes it to `data/raw/cdc_open/flu_vaccine_effectiveness.csv`,
+one row per season from 2004–05 onward. The weekly CDC Open Data workflow refreshes it.
+
+| Column                | Description                                                         |
+| --------------------- | ------------------------------------------------------------------- |
+| `season`              | e.g. `2024-25`                                                      |
+| `season_start_year`   | e.g. `2024`                                                         |
+| `ve_pct`              | Adjusted overall VE (%), blank for 2020–21 (not estimated)          |
+| `ci_low`, `ci_high`   | 95% CI; a CI that includes 0 isn't statistically significant        |
+| `patients`            | Patients used in the VE calculation                                 |
+| `study_sites`         | States in the network that season                                   |
+| `reference`           | Citation as shown on the page                                       |
+| `preliminary`         | `True` for the latest seasons CDC marks as preliminary              |
+| `published`           | `False` for 2008–09 (never published) and 2020–21 (no estimate)     |
+| `includes_inpatients` | `True` for 2004–05 to 2010–11, when the network also enrolled inpatients |
+
+```bash
+uv run python -m cdc_open.fetch_flu_ve
+```
+
 ### Foodborne Pathogens (BEAM)
 
 CDC's [BEAM Dashboard](https://data.cdc.gov/resource/jbhn-e8xn) tracks isolates of _Bacteria, Enterics, Ameba, and Mycotics_ — primarily Campylobacter, Salmonella, Shigella, STEC, and Vibrio — by month, state, source type (Human/Animal/Food), source site, and serotype.
@@ -313,6 +337,7 @@ rows = query_dataset(
 
 # Raw Socrata query by dataset ID
 from cdc_open.client import CdcOpenClient
+
 client = CdcOpenClient()
 rows = client.query(
     dataset_id="bi63-dtpu",

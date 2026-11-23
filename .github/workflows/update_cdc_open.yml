@@ -48,6 +48,10 @@ jobs:
         run: |
           uv run python -m cdc_open.fetch_epidemic_trends
 
+      - name: Scrape CDC flu vaccine effectiveness by season
+        run: |
+          uv run python -m cdc_open.fetch_flu_ve
+
       - name: Aggregate wastewater data into weekly rollups
         run: |
           uv run python -m cdc_open.aggregate

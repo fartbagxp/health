@@ -531,3 +531,51 @@ class TestAggregateSeries:
         assert rows == [
             {"sample_collect_date": "2023-01-23", "pcr_target_flowpop_lin": "150.0"}
         ]
+
+
+# ── fetch_flu_ve: CDC flu vaccine effectiveness table ─────────────────────────
+
+_VE_HTML = """
+<table class="table table-bordered">
+  <tr><td></td><td>2009 – 10</td></tr>
+  <tr><td>Adj. Overall VE (%)</td><td>56</td></tr>
+</table>
+<table class="table table-bordered">
+  <tr><th>Influenza Season †</th><th>Reference</th><th>Study Site(s)</th>
+      <th>No. of Patients ‡</th><th>Adjusted Overall VE (%)</th><th>95% CI ¶</th></tr>
+  <tr><td>2008–09*†</td><td>Unpublished</td><td>WI, MI</td><td>6,713</td><td>41</td><td>30, 50</td></tr>
+  <tr><td>2004–05*</td><td>Belongia 2009</td><td>WI</td><td>762</td><td>10</td><td>-36, 40</td></tr>
+  <tr><td>2020–21**</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr>
+  <tr><td>2025–26 ††</td><td>Maloney 2026</td><td>MN, WI</td><td>135,422</td><td>36</td><td>33, 39</td></tr>
+</table>
+"""
+
+
+def test_parse_ve_table_picks_season_table_and_flags():
+    from cdc_open.fetch_flu_ve import parse_ve_table
+
+    rows = {r["season"]: r for r in parse_ve_table(_VE_HTML)}
+    assert list(rows) == ["2004-05", "2008-09", "2020-21", "2025-26"]
+
+    assert rows["2004-05"]["ve_pct"] == 10
+    assert (rows["2004-05"]["ci_low"], rows["2004-05"]["ci_high"]) == (-36, 40)
+    assert rows["2004-05"]["includes_inpatients"] is True
+    assert rows["2004-05"]["published"] is True
+
+    assert rows["2008-09"]["published"] is False
+    assert rows["2008-09"]["patients"] == 6713
+
+    gap = rows["2020-21"]
+    assert gap["ve_pct"] is None and gap["published"] is False
+    assert gap["includes_inpatients"] is False and gap["study_sites"] == ""
+
+    latest = rows["2025-26"]
+    assert latest["preliminary"] is True and latest["published"] is True
+    assert latest["includes_inpatients"] is False
+
+
+def test_parse_ve_table_missing_raises():
+    from cdc_open.fetch_flu_ve import parse_ve_table
+
+    with pytest.raises(ValueError):
+        parse_ve_table("<table><tr><td>nothing</td></tr></table>")

@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "src/cdc_open/**.py"
+      - "src/grasp/export.py"
       - ".github/workflows/update_cdc_open.yml"
   schedule:
     - cron: "0 14 * * 6" # At 14:00 UTC on Saturday
@@ -25,7 +26,7 @@ jobs:
           persist-credentials: true
 
       - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        uses: astral-sh/setup-uv@1db35dd8eee11c5894872e0b383ae6c406cf738d # v10.4.0
         with:
           version: "latest"
 
@@ -51,6 +52,10 @@ jobs:
         run: |
           uv run python -m cdc_open.aggregate
 
+      - name: Export FluView clinical-lab flu percent positive (national + Census regions)
+        run: |
+          uv run python -m grasp.export
+
       - name: Commit and push changes
         run: |
           git status
@@ -68,7 +73,7 @@ jobs:
             git rm --cached --ignore-unmatch "$f" >/dev/null 2>&1 || true
           done
 
-          git add data/raw/cdc_open/ data/raw/resp/ data/processed/cdc_open/
+          git add data/raw/cdc_open/ data/raw/resp/ data/processed/cdc_open/ data/processed/grasp/
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update of CDC Open Data on $(date +'%Y-%m-%d')"
             git pull --rebase origin main

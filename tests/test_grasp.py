@@ -1007,3 +1007,47 @@ class TestFluviewIntegration:
         lines = result.stdout.strip().splitlines()
         assert len(lines) == 6  # header + 5 rows
         assert "percent_positive" in lines[0]
+
+
+# ── grasp.export: flu percent positive ────────────────────────────────────────
+
+
+def test_mmwr_week_end():
+    from grasp.export import mmwr_week_end
+
+    assert mmwr_week_end(202001).isoformat() == "2020-01-04"
+    assert mmwr_week_end(202053).isoformat() == "2021-01-02"
+    assert mmwr_week_end(202101).isoformat() == "2021-01-09"
+    assert mmwr_week_end(202546).isoformat() == "2025-11-15"
+
+
+def test_export_flu_percent_positive_sums_divisions(tmp_path, monkeypatch):
+    import csv
+
+    from grasp import export
+
+    fake = {
+        "nat": [
+            {"epiweek": 202546, "total_specimens": 300, "total_a": 30, "total_b": 0}
+        ],
+        "cen1": [
+            {"epiweek": 202546, "total_specimens": 100, "total_a": 5, "total_b": 5}
+        ],
+        "cen2": [
+            {"epiweek": 202546, "total_specimens": 100, "total_a": 0, "total_b": 10}
+        ],
+        "cen9": [
+            {"epiweek": 202546, "total_specimens": None, "total_a": 1, "total_b": 0}
+        ],
+    }
+    monkeypatch.setattr(export, "_fetch_region", lambda r, _ew: fake.get(r, []))
+
+    export.export_flu_percent_positive(tmp_path)
+
+    with (tmp_path / "flu_percent_positive.csv").open() as f:
+        rows = {r["region"]: r for r in csv.DictReader(f)}
+    assert set(rows) == {"National", "Northeast"}
+    assert rows["Northeast"]["week_end"] == "2025-11-15"
+    assert rows["Northeast"]["total_specimens"] == "200"
+    assert rows["Northeast"]["total_positive"] == "20"
+    assert rows["Northeast"]["percent_positive"] == "10.0"

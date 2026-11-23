@@ -1,0 +1,23 @@
+season,season_start_year,ve_pct,ci_low,ci_high,patients,study_sites,reference,preliminary,published,includes_inpatients
+2004-05,2004,10,-36,40,762,WI,Belongia 2009,False,True,True
+2005-06,2005,21,-52,59,346,WI,Belongia 2009,False,True,True
+2006-07,2006,52,22,70,871,WI,Belongia 2009,False,True,True
+2007-08,2007,37,22,49,1914,WI,Belongia 2011,False,True,True
+2008-09,2008,41,30,50,6713,"WI, MI, NY, TN",Unpublished,False,False,True
+2009-10,2009,56,23,75,6757,"WI, MI, NY, TN",Griffin 2011,False,True,True
+2010-11,2010,60,53,66,4757,"WI, MI, NY, TN",Treanor 2011,False,True,True
+2011-12,2011,47,36,56,4771,"WI, MI, PA, TX, WA",Ohmit 2014,False,True,False
+2012-13,2012,49,43,55,6452,"WI, MI, PA, TX, WA",McLean 2014,False,True,False
+2013-14,2013,52,44,59,5999,"WI, MI, PA, TX, WA",Gaglani 2016,False,True,False
+2014-15,2014,19,10,27,9311,"WI, MI, PA, TX, WA",Zimmerman 2016,False,True,False
+2015-16,2015,48,41,55,6879,"WI, MI, PA, TX, WA",Jackson 2017,False,True,False
+2016-17,2016,40,32,46,7410,"WI, MI, PA, TX, WA",Flannery 2018,False,True,False
+2017-18,2017,38,31,43,8436,"WI, MI, PA, TX, WA",Rolfes 2019,False,True,False
+2018-19,2018,29,21,35,10041,"WI, MI, PA, TX, WA",Flannery 2019,False,True,False
+2019-20,2019,39,32,44,8845,"WI, MI, PA, TX, WA",Tenforde 2021,False,True,False
+2020-21,2020,,,,,,,False,False,False
+2021-22,2021,36,21,48,4312,"CA, MI, PA, TN, TX, WA, WI",Price 2022,False,True,False
+2022-23,2022,30,-9,54,2561,"MI, PA, TX, WA, AZ, MO, OH",Chung 2024,False,True,False
+2023-24,2023,44,36,51,9061,"AZ, MI, MO, PA, OH, TX, WA",Chung 2025,False,True,False
+2024-25,2024,56,54,58,139558,"MN, WI, UT, CA, OR, WA, IN, CO",Frutos 2025,True,True,False
+2025-26,2025,36,33,39,135422,"MN, WI, UT, CA, OR, WA, IN, CO",Maloney 2026,True,True,False
